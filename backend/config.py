@@ -27,5 +27,6 @@ class Settings:
     # Agent 设置
     MAX_RESPONSE_LENGTH: int = int(os.getenv("MAX_RESPONSE_LENGTH", "2000"))
     STREAM_DELAY: float = float(os.getenv("STREAM_DELAY", "0.2"))
+    AGENT_TIMEOUT: float = float(os.getenv("AGENT_TIMEOUT", "120.0"))
 
 settings = Settings() 

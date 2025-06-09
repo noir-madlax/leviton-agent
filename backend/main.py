@@ -36,22 +36,25 @@ def init_agent():
     global agent, init_error
     try:
         logger.info("开始初始化 Agent...")
-        from smolagents import CodeAgent, OpenAIServerModel, DuckDuckGoSearchTool
+        from smolagents import CodeAgent, OpenAIServerModel
         
         logger.info(f"使用模型: {settings.MODEL_ID}")
         model = OpenAIServerModel(
-            model_id="openai/gpt-4o",
+            model_id="google/gemini-2.5-flash-preview-05-20",
             api_base="https://openrouter.ai/api/v1",
-            api_key=settings.API_KEY,
+            api_key=settings.API_KEY
         )
         
         logger.info("初始化工具...")
-        search_tool = DuckDuckGoSearchTool()
+        # search_tool = DuckDuckGoSearchTool()
         product_tool = ProductQueryTool()
         review_tool = ReviewQueryTool()
         
         logger.info("创建 CodeAgent...")
-        agent = CodeAgent(tools=[search_tool, product_tool, review_tool], model=model)
+        agent = CodeAgent(
+            tools=[ product_tool, review_tool], 
+            model=model
+            )
         
         logger.info("Agent 初始化成功，包含以下工具:")
         logger.info("- DuckDuckGoSearchTool: 网络搜索")
@@ -87,8 +90,29 @@ async def stream_agent_response(query: str):
         # 发送开始信号
         yield f"data: {json.dumps({'status': 'started', 'message': '开始处理查询...'}, ensure_ascii=False)}\n\n"
         
-        # 运行代理任务
-        result = await asyncio.to_thread(agent.run, query)
+        # 发送调试信息
+        yield f"data: {json.dumps({'status': 'debug', 'message': '准备调用 agent.run...'}, ensure_ascii=False)}\n\n"
+        
+        try:
+            # 运行代理任务，设置超时
+            logger.info("正在调用 agent.run...")
+            result = await asyncio.wait_for(
+                asyncio.to_thread(agent.run, query),
+                timeout=settings.AGENT_TIMEOUT
+            )
+            logger.info(f"agent.run 执行完成，结果类型: {type(result)}")
+            
+            # 发送调试信息
+            yield f"data: {json.dumps({'status': 'debug', 'message': f'agent.run 执行完成，结果类型: {type(result).__name__}'}, ensure_ascii=False)}\n\n"
+            
+        except asyncio.TimeoutError:
+            logger.error(f"agent.run 执行超时 ({settings.AGENT_TIMEOUT}秒)")
+            yield f"data: {json.dumps({'status': 'error', 'error': f'Agent 执行超时 ({settings.AGENT_TIMEOUT}秒)'}, ensure_ascii=False)}\n\n"
+            return
+        except Exception as agent_error:
+            logger.error(f"agent.run 执行失败: {agent_error}")
+            yield f"data: {json.dumps({'status': 'error', 'error': f'Agent 执行失败: {str(agent_error)}'}, ensure_ascii=False)}\n\n"
+            return
         
         # 发送进度信息
         yield f"data: {json.dumps({'status': 'processing', 'message': '正在分析结果...'}, ensure_ascii=False)}\n\n"
