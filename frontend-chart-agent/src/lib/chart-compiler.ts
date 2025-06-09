@@ -92,19 +92,11 @@ export function validateChartCode(code: string): { valid: boolean; error?: strin
     }
   }
 
-  // 检查是否包含必要的导入
-  if (!code.includes('from \'recharts\'')) {
-    return {
-      valid: false,
-      error: '代码必须从 recharts 导入组件',
-    };
-  }
-
   // 检查是否有导出的组件
-  if (!code.includes('export default')) {
+  if (!code.includes('export default') && !code.includes('const DynamicChart') && !code.includes('const Chart')) {
     return {
       valid: false,
-      error: '代码必须包含 export default 导出',
+      error: '代码必须包含 export default 导出或定义 DynamicChart/Chart 组件',
     };
   }
 
