@@ -1,0 +1,1383 @@
+{
+  "category_definitions": {
+    "physical_categories": {
+      "Button Interface": {
+        "definition": "Customer feedback about button design, layout, functionality, and user interaction including button size, positioning, tactile response, and operational behavior, e.g. button layout changes, on/off buttons, scene selection buttons, touch-activated interfaces, tactile feedback"
+      },
+      "Magnetic Mounting": {
+        "definition": "Customer experiences with magnetic attachment systems and holding strength for mounting and positioning, e.g. magnet holding strength, magnetic mount performance"
+      },
+      "Visual Appearance": {
+        "definition": "Customer perceptions of overall aesthetic design, visual appeal, and style including modern look, sleekness, and general attractiveness, e.g. modern sleek design, clean appearance, beautiful look, aesthetically pleasing"
+      },
+      "Physical Dimensions": {
+        "definition": "Customer feedback about size, fit, and spatial requirements including compatibility with electrical boxes and wall mounting considerations, e.g. compact size, optimal depth, fits existing box, takes up space"
+      },
+      "Mounting Hardware": {
+        "definition": "Physical components for installation including screws, plates, and mounting systems, e.g. mounting screws, snap-on cover plate, metal mounting plate"
+      },
+      "OUT_OF_SCOPE": {
+        "definition": "Aspects that are too vague, generic, or unclear to categorize meaningfully into specific physical categories"
+      },
+      "Build Construction": {
+        "definition": "Customer evaluation of overall manufacturing quality, structural integrity, and assembly including sturdiness and craftsmanship, e.g. well-made construction, solidly built, flimsy feel, coming apart"
+      },
+      "Material Quality": {
+        "definition": "Customer assessment of materials used in construction including durability, feel, and perceived quality of plastics and other components, e.g. cheap plastic, polycarbonate construction, sturdy materials, high quality materials"
+      },
+      "Slider Controls": {
+        "definition": "Customer experiences with sliding mechanisms for dimming and control adjustment including smoothness, responsiveness, and operational feel, e.g. smooth slider movement, stiff slider operation, grinding feel, detent characteristics"
+      },
+      "Wiring Configuration": {
+        "definition": "Customer experiences with electrical connections, wire management, and installation requirements including wire colors, connection methods, and space constraints, e.g. wire routing difficulty, connection types, neutral wire requirements"
+      },
+      "Cover Plates": {
+        "definition": "Customer feedback about face plates, wall plates, and covers including fit, attachment, color matching, and included accessories, e.g. difficult to snap on, color mismatch, included wall plates"
+      },
+      "Hardware Components": {
+        "definition": "Physical mounting and assembly parts including screws, brackets, and mechanical fasteners, e.g. cheap mounting screws that strip easily, came with no mounting screws, installation screws included"
+      },
+      "Color Matching": {
+        "definition": "Customer feedback about color accuracy, consistency, and matching expectations for device appearance, e.g. off-white instead of white, color matching issues"
+      },
+      "Switch Mechanism": {
+        "definition": "Customer feedback about the physical operation of switching components including rocker switches, toggle mechanisms, and operational sound and feel, e.g. smooth operation, loud clicking, squeaking, positive click feedback"
+      },
+      "Touch Interface": {
+        "definition": "Customer feedback about touch-sensitive controls and touch plate functionality including responsiveness and ease of use, e.g. touch plate dimming, touch responsiveness, unintended activation"
+      },
+      "Indicator Lighting": {
+        "definition": "Customer experiences with LED indicators, status lights, and visual feedback systems including brightness, visibility, and operational status, e.g. LED indicator lights, status light brightness, green indicator behavior"
+      },
+      "Product Packaging": {
+        "definition": "Physical packaging condition and presentation including wrapping, box condition, and shipping protection, e.g. come individually wrapped, box crushed, boxes looked very beat up"
+      },
+      "Cord Design": {
+        "definition": "Customer experiences with cord length, configuration, and connection requirements for corded devices, e.g. cord length adequacy, multiple cord requirements"
+      },
+      "Surface Quality": {
+        "definition": "Physical surface conditions and appearance defects of switch components, e.g. black smudge stain that cannot be cleaned, burn marks appear on switch"
+      },
+      "Wiring Configuration and Connections": {
+        "definition": "Wire arrangements, connection methods, and electrical requirements for proper installation and operation, e.g. neutral requirements, wire colors, connection types"
+      },
+      "LED Indicator and Lighting Features": {
+        "definition": "Built-in LED lights, indicators, and illumination features that provide visual feedback or navigation assistance, e.g. night mode, brightness levels, flickering issues"
+      },
+      "Switch Actuation Mechanism": {
+        "definition": "Physical operation methods including buttons, toggles, rockers, and sliders that users interact with to control the switch, e.g. push buttons, sliding dimmers, rocker switches"
+      },
+      "Packaging and Documentation": {
+        "definition": "Product packaging quality, included components, and installation instructions, e.g. missing documentation, packaging condition, clear instructions"
+      },
+      "Packaging Quality": {
+        "definition": "Physical condition of packaging, included components, and protection during shipping, e.g. damaged packaging with parts outside, missing screws, switches arrived broken"
+      },
+      "Visual Appearance and Aesthetics": {
+        "definition": "Color, finish, design elements, and visual appeal that affect the switch's integration with home decor, e.g. color options, modern design, discoloration"
+      },
+      "Structural Durability": {
+        "definition": "Overall build quality, material strength, and long-term structural integrity, e.g. sturdy construction, well-made materials, cheaply built, falls apart after installation"
+      },
+      "Slider Functionality": {
+        "definition": "Physical operation characteristics of dimmer sliders including smoothness and range of motion, e.g. smooth operation, stiff movement, doesn't slide to end"
+      },
+      "Button Operation": {
+        "definition": "Physical interaction experience with buttons and rockers including pressure sensitivity and activation requirements, e.g. hard to press, requires precise pressing, good tension, crisp feel"
+      },
+      "Size and Fit": {
+        "definition": "Physical dimensions and compatibility with standard electrical boxes and wall plates, e.g. fits standard switch box, larger than standard control unit, deep dimensions requiring sufficient space"
+      },
+      "Installation Compatibility": {
+        "definition": "Physical fit and mounting requirements within electrical boxes and wall configurations, e.g. fits in old work boxes, mounting flush issues, box depth requirements"
+      },
+      "Mounting and Installation": {
+        "definition": "Physical attachment methods, mounting hardware, and how the device secures to walls or existing switches, e.g. doesn't stay attached well, easy to pull off wall, clamps over light switch"
+      },
+      "LED Indicators": {
+        "definition": "Light indicators for switch visibility and status including brightness and positioning, e.g. small LED indicator dot, LED bright enough to see in dark, pinpoint LED light to illuminate switch location"
+      },
+      "Wiring Terminals": {
+        "definition": "Connection points and wiring methods including screw terminals, wire attachments, and compatibility, e.g. screw terminals instead of wire connections, back-wiring capability, difficult to use with 12 gauge wire"
+      },
+      "Switch Click and Button Feel": {
+        "definition": "Tactile feedback quality and responsiveness of switches and buttons, e.g. click feel is awesome and snappy, mushy buttons, robust ON/OFF switch with positive snap"
+      },
+      "Color Options": {
+        "definition": "Available colors and color accuracy of switches and components, e.g. white color, almond color instead of advertised white, three different faceplate color options"
+      },
+      "Adjustment Wheels": {
+        "definition": "Small calibration wheels for fine-tuning switch settings and ranges, e.g. small adjustment wheel for calibration, low limit adjustment wheel, adjustment wheel doesn't change much"
+      },
+      "Physical Size and Fit": {
+        "definition": "Dimensional compatibility with standard electrical boxes and wall plates, e.g. too big for standard wall plates, perfect fit with standard boxes, bulky compared to other switches"
+      },
+      "Visual Design": {
+        "definition": "Overall aesthetic appearance, style, and visual appeal of switches including modern, traditional, sleek, or decorator looks, e.g. clean and modern looking, classic style ideal for traditional homes, sleek appearance"
+      },
+      "Packaging Condition": {
+        "definition": "Physical condition and completeness of product packaging and included components, e.g. heavily used switch with missing cover, packaged well in mint condition"
+      },
+      "Build Quality and Construction": {
+        "definition": "Overall structural integrity, material quality, and manufacturing robustness, e.g. high quality construction, cheaply built, feels solid and not cheap"
+      },
+      "Indicator Lights": {
+        "definition": "Visual indicators including LED lights, colors, and visibility features, e.g. blue LED indicates functioning, LED makes it easy to find at night, red color indicator light"
+      },
+      "Color and Finish": {
+        "definition": "Color accuracy, finish quality, and color matching with other switches or decor, e.g. color not as pictured, matte look and feel, appears gray instead of white"
+      },
+      "Rocker Switch Mechanisms": {
+        "definition": "Physical rocker and paddle switching components including feel, durability, and operation, e.g. rocker is stiff to turn on/off, plastic hinge breaks off easily, wider switch paddle"
+      },
+      "Toggle Mechanisms": {
+        "definition": "Toggle switch components and their physical operation characteristics, e.g. does not toggle smoothly, shorter toggle than standard switches, no on/off words on toggle"
+      },
+      "Product Certification": {
+        "definition": "Safety certifications, compliance markings, and regulatory approvals indicated on the product, e.g. UL certification, safety markings"
+      },
+      "Rotary Controls": {
+        "definition": "Knobs and dials for switch operation including size, appearance, and turning mechanisms, e.g. large knob sticking out, twist on knob, rotary knob covers hole beautifully"
+      },
+      "Included Components and Accessories": {
+        "definition": "Physical items packaged with the product including plates, hardware, and connectors, e.g. come with matching plate covers, wire lever nuts included, quality hardware"
+      },
+      "Wire Configuration": {
+        "definition": "Specific wiring setup requirements and wire identification for proper electrical connection, e.g. red wire needed, wire labels, ground wire requirements, neutral wire setup"
+      },
+      "Visual Aesthetics": {
+        "definition": "Overall appearance, design style, and visual appeal of switches including modern looks, sleek designs, and aesthetic attractiveness, e.g. unique appearance, good visual appearance, sleek looking design, elegant and beautiful design"
+      },
+      "Color and Finish Options": {
+        "definition": "Aspects related to available colors, color accuracy, finish types, and color matching with other fixtures, e.g. gray color matches well, not true white appears gray, brown color available, matte finish"
+      },
+      "Build Quality and Materials": {
+        "definition": "Aspects concerning the overall construction quality, materials used, and perceived durability of the product, e.g. feels premium, cheap plasticky feel, heavy-duty build, all plastic construction"
+      },
+      "Button and Control Interface": {
+        "definition": "Physical buttons, controls, and user interface elements for operating the switch including their tactile feel and responsiveness, e.g. on/off buttons, dimmer controls, physical buttons, toggle mechanisms"
+      },
+      "Faceplate and Cover Components": {
+        "definition": "Removable or interchangeable covers, faceplates, and mounting plates that affect switch appearance and installation, e.g. missing faceplates, color options, pop-off issues"
+      },
+      "Specialized Controls": {
+        "definition": "Advanced control mechanisms and adjustment features, e.g. dimming range control wheel, slider movement resistance"
+      },
+      "Surface Characteristics": {
+        "definition": "Physical surface properties affecting cleaning and maintenance, e.g. smooth surfaces for cleaning, embossed textures, scratch resistance"
+      },
+      "Mounting and Installation Hardware": {
+        "definition": "Aspects concerning physical mounting features, screw holes, brackets, and installation components, e.g. no screw holes in back for mounting, screw holes do not lineup well, missing installation hardware"
+      },
+      "Safety Certifications": {
+        "definition": "Official safety and compliance certifications that validate product safety standards, e.g. UL certification, ETL certification, FCC certification, zero safety certifications"
+      },
+      "Component Accessories": {
+        "definition": "Included parts, interchangeable elements, and accessory components, e.g. interchangeable switch handles, multiple color faceplates"
+      },
+      "Structural Mounting Features": {
+        "definition": "Physical mounting tabs, ears, and structural elements that affect installation compatibility and fit, e.g. mounting ears, structural tabs"
+      },
+      "Slider Mechanisms": {
+        "definition": "Sliding controls specifically used for dimming or adjustment functions, e.g. dimming slide, small slider, smooth slider operation"
+      },
+      "Internal Components": {
+        "definition": "Internal parts and mechanisms that can affect functionality or installation, e.g. plug cover inside, control pieces, rocker mechanisms, center plastic support"
+      },
+      "Multi-Switch Configuration": {
+        "definition": "Switches with multiple controls or functions combined in a single unit, e.g. dimmer with on/off switch, fan speed controls, dual switch arrangements"
+      },
+      "Terminal Connections": {
+        "definition": "Physical terminal screws, connection points, and electrical connection hardware for wire attachment, e.g. terminal screws, connection terminals, grounding screws"
+      },
+      "Manufacturing Origin": {
+        "definition": "Country or location where the product was manufactured or assembled as indicated on product labeling, e.g. Made in China, Assembled in Mexico"
+      },
+      "Touchscreen Interface": {
+        "definition": "Digital display screens, touchscreen controls, and electronic visual interfaces integrated into the switch, e.g. touchscreen displays, digital interfaces"
+      },
+      "Wire Connection Mechanisms": {
+        "definition": "Physical design and functionality of wire attachment systems and terminals, e.g. push-in slots not holding, backstab connections, screw terminals"
+      },
+      "Color and Finish Quality": {
+        "definition": "Color accuracy, finish consistency, and coating quality affecting visual matching, e.g. off-white that looks dirty, brass finish like spray paint, color matching issues"
+      },
+      "Face Plates": {
+        "definition": "Cover plates and their attachment mechanisms, e.g. face can be easily changed by snapping, extremely difficult to snap in place"
+      },
+      "Power Specifications": {
+        "definition": "Electrical power ratings, capacity limits, and performance specifications related to the switch's electrical handling capabilities, e.g. wattage ratings, power capacity"
+      },
+      "Wire Connection Compatibility": {
+        "definition": "Compatibility with different wire gauges and connection methods, e.g. accepts 14 gauge only, too small for 12 gauge wire, push-in limitations"
+      },
+      "Switch Operation Mechanism": {
+        "definition": "Physical operation of switching components including rocker action, toggle function, and mechanical responsiveness, e.g. rocker rocks in the frame before engaging, rocker too firm to push, completely silent operation"
+      },
+      "Visual Indicator Lights": {
+        "definition": "LED lights, status indicators, and illuminated elements that provide visual feedback or help locate switches in dark conditions, e.g. LED indicator lights, status LEDs, illuminated toggles"
+      },
+      "Color Matching and Consistency": {
+        "definition": "Color accuracy and consistency across products and expected standards, e.g. white not matching other products, yellowish tone, off-white appearance"
+      },
+      "Internal Electronics and Components": {
+        "definition": "Electronic components, chips, capacitors, and internal mechanisms that control switch functionality, e.g. defective mechanisms, chip compatibility, capacitor failures"
+      },
+      "Physical Durability": {
+        "definition": "Long-term structural reliability and resistance to breaking, cracking, or component failure during use, e.g. frame breaks in middle, paddle pops out, switch fell apart during installation"
+      },
+      "Installation Fit": {
+        "definition": "How well components align and mount during installation including wall mounting and component alignment, e.g. flush wall mounting, proper fit, cover plate alignment, smaller than wall opening"
+      },
+      "Component Reliability": {
+        "definition": "Reliability of individual mechanical parts and hardware components, e.g. screw retention, actuator function, adjustment wheel operation, hinge components"
+      },
+      "Product Condition Issues": {
+        "definition": "Physical damage, defects, or condition problems affecting product integrity, e.g. damaged packaging, burnt wires, crooked alignment"
+      },
+      "Specialized Features": {
+        "definition": "Unique physical features and specialized functionality beyond basic switching, e.g. night light border, flicker control wheel, minimum brightness dial"
+      },
+      "Mounting Tabs and Hardware": {
+        "definition": "Physical mounting components including tabs, screws, and attachment mechanisms, e.g. thick tabs preventing switch plate covers from laying flat, flimsy tabs that are too weak"
+      },
+      "Adjustment Controls": {
+        "definition": "Physical controls for customizing switch behavior including wheels, slides, and internal settings, e.g. dimming wheels, brightness adjustment, internal calibration"
+      },
+      "Included Components": {
+        "definition": "Additional parts and accessories that come with the product, e.g. comes with cover plates, missing install instructions and screws, comes complete with wall plates"
+      },
+      "Audible Feedback": {
+        "definition": "Sound characteristics produced during switch operation including clicks and relay noises, e.g. satisfying clicks, loud relay sounds, operational noise levels"
+      },
+      "Terminal Design": {
+        "definition": "Electrical connection points and wiring attachment methods including screw terminals and wire leads, e.g. screw terminal configuration, push-in connections, wire lead attachments"
+      },
+      "Night Light Features": {
+        "definition": "Built-in illumination features that provide visibility when the switch is off or in standby mode, e.g. locator lights, LED indicators, colored lighting elements"
+      },
+      "Tactile and Audio Feedback": {
+        "definition": "Aspects related to the physical sensations and sounds produced during switch operation, e.g. definite tactile feedback, hollow click sound, smooth operation, loud when clicking"
+      },
+      "Wiring Connections": {
+        "definition": "Terminal types, wire connection methods, and electrical connection quality, e.g. screw terminals, push-in connections, loose terminals"
+      },
+      "Knob Characteristics": {
+        "definition": "Physical properties and attachment mechanisms of rotary control knobs on dimmer switches, e.g. knob security, protrusion distance, shape variations"
+      },
+      "Cover Plates and Faceplates": {
+        "definition": "Aspects related to the cover plates, faceplates, and their fit, alignment, and functionality, e.g. high quality plate, cover plate wouldn't snap on, face plate keeps falling off"
+      },
+      "Electrical Wiring": {
+        "definition": "Wire connections, wiring configurations, and electrical connection requirements for proper installation and operation, e.g. wire connections, neutral wire requirements, wiring configurations"
+      },
+      "Illumination Features": {
+        "definition": "Built-in lighting for visibility and location finding, e.g. green indicator lights, glow in dark features, LED indicators"
+      },
+      "Switch Plate Design": {
+        "definition": "Overall aesthetic design, style, and visual appearance of the switch face plate including paddle, rocker, and decorative elements, e.g. paddle design, rocker style, decorative appearance"
+      },
+      "Toggle Operation": {
+        "definition": "Physical movement and positioning characteristics of toggle switches including travel distance and positioning accuracy, e.g. toggle movement range, sticking issues, positioning problems"
+      },
+      "Audio Feedback": {
+        "definition": "Sound characteristics during switch operation, e.g. loud clicking sounds, sharp hollow clicks, secure click sounds"
+      },
+      "Button and Switch Operation": {
+        "definition": "Aspects concerning the physical buttons, switches, and their operational characteristics including feel and responsiveness, e.g. physical buttons work great, switches feel nice to press, takes more force than regular switch"
+      },
+      "Material Composition": {
+        "definition": "Base materials used in construction and their perceived quality impact on user experience, e.g. plastic construction, cheap plastic materials, low quality plastic feel"
+      },
+      "Construction Quality": {
+        "definition": "Overall build integrity, material robustness, and manufacturing precision affecting durability, e.g. solid construction, flimsy build, well put together, manufactured incorrectly"
+      },
+      "Screw Quality and Fit": {
+        "definition": "Physical characteristics and functionality of mounting screws including length and reliability, e.g. screws too short, breaking during installation, missing screws"
+      },
+      "LED Indicator Design": {
+        "definition": "Physical placement, appearance, and characteristics of LED lights and indicators, e.g. LED position on switch, brightness level, status light behavior"
+      },
+      "Switch Housing": {
+        "definition": "Physical casing, housing alignment, and structural shell that contains the switch components, e.g. switch casing, housing alignment"
+      },
+      "Color Quality": {
+        "definition": "Specific color accuracy and consistency of switch components, including white tones and color matching issues, e.g. not true white but off-white, nice clean bright white, white LED color"
+      },
+      "Operational Sound": {
+        "definition": "Noise levels and sound characteristics during switch operation, e.g. click noise when turned on, too loud and tinny sounding, quiet switch tap"
+      },
+      "Switch Mechanism Feel": {
+        "definition": "Tactile feedback and operational feel of the switch activation mechanism, e.g. mushy and cheap feeling, satisfying positive click, stiff toggle, springy pop"
+      },
+      "Operational Feedback": {
+        "definition": "Audible and tactile responses during switch operation that indicate proper function, e.g. audible click, satisfying click feel, switching sound"
+      },
+      "Specialized Components": {
+        "definition": "Aspects concerning unique or specialized physical components and features specific to advanced switch functionality, e.g. adjustment lever for minimum dim setting, little metal heat sink fins, moodlight ring"
+      },
+      "Color Accuracy": {
+        "definition": "Consistency and accuracy of product colors, particularly white variations and color matching with existing switches, e.g. not white like they should be, bone color instead of white, off-white/cream color, shadow of white but not entirely white"
+      },
+      "Physical Dimensions and Fit": {
+        "definition": "Size specifications, depth measurements, and compatibility with electrical boxes and wallplates, e.g. compact size, box fit issues, standard dimensions"
+      },
+      "Plug Configuration": {
+        "definition": "Physical plug design, orientation, and electrical connection format for plug-in type switches, e.g. plug orientation, prong configuration"
+      },
+      "Indicator Lights and Visual Feedback": {
+        "definition": "Aspects concerning LED indicators, backlighting, and visual status feedback features, e.g. illuminated symbol when off, indicator light turns off when screws tightened, has lights and glow feature"
+      },
+      "Surface Durability": {
+        "definition": "Resistance to physical damage and wear on visible surfaces, e.g. scratched surface, poor plastic finish that scratches easily"
+      },
+      "Dimmer Controls": {
+        "definition": "Slider mechanisms and adjustment controls specific to dimming functionality, e.g. dimmer slider with adjustable positions, razor-thin slider hard to grasp"
+      },
+      "Switch Operation": {
+        "definition": "Mechanical function and feel of the main switching mechanism including paddles and rockers, e.g. paddle switch design, rocker switch component, lacks satisfying click"
+      },
+      "Build Durability": {
+        "definition": "Long-term construction reliability and ability to withstand regular use and wear, e.g. feels like it will last many flips, durable with children using them, expected to last for years"
+      },
+      "Touch and Capacitive Features": {
+        "definition": "Aspects related to touchscreen functionality and capacitive touch capabilities, e.g. LCD touchscreen, capacitive touch feature, feels like phone touchscreen, vertical touch sensor"
+      },
+      "Wall Plate Design and Aesthetics": {
+        "definition": "Visual design characteristics and styling of wall plates including appearance and configuration, e.g. sandwich style design, clean modern look, screwless faceplate"
+      },
+      "Wall Plate Fit and Alignment": {
+        "definition": "How well wall plates align with walls and other components, including gaps, flush mounting, and proper positioning, e.g. sticking out from wall, alignment gaps, not sitting flush"
+      },
+      "Material Quality and Durability": {
+        "definition": "Physical material characteristics including strength, feel, and longevity of construction materials, e.g. high-quality plastic vs flimsy cheap plastic, cracking over time"
+      },
+      "Surface Condition and Finish": {
+        "definition": "Physical surface quality and condition including damage and texture, e.g. scratches and dings, rough texture, worn packaging"
+      },
+      "Switch Operation Feel": {
+        "definition": "Tactile experience and mechanical feel when operating switches and toggles, e.g. satisfying toggle feel, spongy operation, resistance when pushing"
+      },
+      "Internal Mechanical Parts": {
+        "definition": "Internal components, mechanisms, and structural elements that enable switch operation and functionality, e.g. internal parts, switch mechanisms, pivot points"
+      },
+      "Tactile Feedback": {
+        "definition": "Physical click sounds, tactile response, and mechanical feedback provided during switch operation, e.g. click mechanisms, tactile response"
+      },
+      "Switch Shape Design": {
+        "definition": "Physical form factor and geometric design of the switching elements, e.g. hourglass shape, paddle shape, large switch design"
+      },
+      "Sound During Operation": {
+        "definition": "Audible characteristics when switches are operated or functioning, e.g. audible clicks, silent operation, loud switching sounds"
+      },
+      "LED Illumination Performance": {
+        "definition": "Brightness, color, and reliability of LED lighting features, e.g. very bright to extremely dim variation, flickering, illumination fails, cool white color"
+      },
+      "LED Illumination": {
+        "definition": "Built-in lighting features including indicator lights, night lights, and illumination quality, e.g. gentle brightness level, non-uniform light distribution, built-in LED night light"
+      },
+      "Housing Fit": {
+        "definition": "Physical fit and clearance issues with the switch housing and enclosure, e.g. clearance between housing and bolt heads, front case won't close, gaps at top"
+      },
+      "Light Sensor Functionality": {
+        "definition": "Performance and sensitivity characteristics of ambient light detection features, e.g. requires lot of light to keep nightlight off, sensitivity cannot be adjusted"
+      },
+      "Tactile Operation Feel": {
+        "definition": "Physical sensation and feedback during switch operation and control adjustment, e.g. smooth mechanism, satisfying click, slider movement smoothness"
+      },
+      "Internal Mounting Components": {
+        "definition": "Internal structural components used for securing the switch within electrical boxes including carriers and mounting mechanisms, e.g. plastic carriers, internal mounting systems"
+      }
+    },
+    "performance_categories": {
+      "Smart Home Integration": {
+        "definition": "Aspects related to connecting and syncing switches with smart home systems, apps, and wireless protocols, e.g. Philips Hue app connectivity, HomeKit pairing, Zigbee bridge compatibility"
+      },
+      "Operational Reliability": {
+        "definition": "Aspects concerning consistent day-to-day performance and dependability of switch operation, e.g. always working when activated, consistent response, no operational problems"
+      },
+      "Product Durability": {
+        "definition": "Aspects concerning the long-term physical integrity and lifespan of the switch, e.g. resistance to breaking, longevity over years, structural failure resistance"
+      },
+      "Dimming Performance": {
+        "definition": "Aspects specifically about the quality and effectiveness of light dimming capabilities, e.g. smooth dimming operation, precise brightness control, full dimming range"
+      },
+      "Customization Capabilities": {
+        "definition": "Aspects related to personalizing switch functions, scenes, and automation features, e.g. button customization, scene programming, home automation setup"
+      },
+      "User Experience": {
+        "definition": "Aspects about the overall ease and intuitiveness of using the switch, e.g. user-friendly operation, learning curve, operational simplicity"
+      },
+      "Device Compatibility": {
+        "definition": "Aspects about how well switches work with different bulb types, electrical configurations, and equipment, e.g. LED bulb compatibility, wattage ratings, multi-way setups"
+      },
+      "Installation Process": {
+        "definition": "Aspects concerning the ease and complexity of physically installing and wiring the switch, e.g. straightforward installation, wiring requirements, setup complexity"
+      },
+      "Adjustability Features": {
+        "definition": "Aspects about fine-tuning and calibration options for switch performance, e.g. minimum level adjustment, sensitivity settings, operational parameters"
+      },
+      "Build Quality": {
+        "definition": "Aspects related to the physical construction quality and materials of the switch, e.g. sturdy construction, high-quality materials, well-built components"
+      },
+      "Core Functionality": {
+        "definition": "Aspects about basic switch operations like turning lights on/off and maintaining proper electrical function, e.g. reliable switching, maintaining connections, basic electrical performance"
+      },
+      "Visual Appearance": {
+        "definition": "Aspects related to the aesthetic design and visual integration of the switch, e.g. matching decor, attractive design, color coordination"
+      },
+      "Light Control Performance": {
+        "definition": "Aspects about controlling light brightness levels and maintaining lighting consistency, e.g. brightness maintenance, light level control, illumination management"
+      },
+      "Noise Issues": {
+        "definition": "Aspects concerning unwanted sounds produced by the switch during operation, e.g. buzzing sounds, humming noise, quiet operation"
+      },
+      "Advanced Features": {
+        "definition": "Aspects about special or enhanced capabilities beyond basic switching, e.g. memory functions, timed shutoff, brightness range, connectivity options"
+      },
+      "Electrical Safety": {
+        "definition": "Aspects concerning electrical hazards and safety incidents with the switch, e.g. overheating, electrical failures, safety malfunctions"
+      },
+      "Flickering Issues": {
+        "definition": "Aspects specifically about unwanted light flickering problems and visual disturbances, e.g. LED flickering, intermittent light fluctuation, strobe effects"
+      },
+      "Fan Control Performance": {
+        "definition": "Aspects specifically about controlling ceiling fan speed and operation, e.g. fan speed adjustment, fan motor control, fan-specific functionality"
+      },
+      "Product Value": {
+        "definition": "Aspects concerning the cost-effectiveness and worth of the switch relative to its features, e.g. price-to-feature ratio, value proposition, cost justification"
+      },
+      "Response Time": {
+        "definition": "Aspects about the speed of switch response when activated, e.g. immediate activation, delay between input and response, lag time"
+      },
+      "Basic Functionality": {
+        "definition": "Core operational performance of switches including on/off operation, general working condition, and fundamental switch behavior, e.g. works great, not working, malfunctioning, defective"
+      },
+      "Dimming Range Control": {
+        "definition": "The ability to smoothly adjust light brightness across the full spectrum from very dim to maximum brightness, e.g. great dimming range, dims all the way down properly, limited to 75% maximum brightness"
+      },
+      "Voice Control Integration": {
+        "definition": "Compatibility and responsiveness with voice assistant platforms for hands-free operation, e.g. Alexa commands, Google Assistant integration, voice recognition accuracy"
+      },
+      "Bulb Compatibility": {
+        "definition": "How well switches work with different types of light bulbs and fixtures, e.g. works with LEDs, incompatible with smart bulbs"
+      },
+      "Product Longevity": {
+        "definition": "How long products continue to function before failure or degradation, e.g. failed after months, lasted years, stopped working"
+      },
+      "Heat Management": {
+        "definition": "Temperature control and overheating issues during operation, e.g. gets hot during use, overheating shutdowns"
+      },
+      "Smart Integration": {
+        "definition": "Compatibility and functionality with smart home systems, voice assistants, and automation platforms, e.g. works with SmartThings Hub, integrates with Alexa, no double-tap automations"
+      },
+      "Wireless Connectivity": {
+        "definition": "Stability and reliability of wireless connections including WiFi, Zigbee, and network connectivity issues, e.g. go offline regularly, connected easily, disconnects frequently"
+      },
+      "Response Speed": {
+        "definition": "Quickness of switch response to commands and input including activation delay, e.g. light turns on instantly without delay, quickly turns light off/on"
+      },
+      "Timer Functionality": {
+        "definition": "Performance of built-in timer features for controlling connected devices like fans or lights, e.g. bottom switch is timer, fan timer works great, runs fan with timer button"
+      },
+      "Manufacturing Quality": {
+        "definition": "The consistency and condition of products as received from the manufacturer, e.g. defective units, used products shipped as new, broken components"
+      },
+      "Long Term Durability": {
+        "definition": "Reliability and performance over extended periods of use including failure rates and longevity, e.g. working great for few years, failed after six months, rock solid system"
+      },
+      "Purchase Value": {
+        "definition": "Customer perception of cost-effectiveness and worth relative to price paid, e.g. good value for money, worth the price"
+      },
+      "Dimming Quality": {
+        "definition": "Performance of light level adjustment including smoothness and range, e.g. dimming range, flickering issues, brightness control accuracy"
+      },
+      "Light Flickering": {
+        "definition": "Issues with lights flickering or strobing during operation, e.g. bulbs flicker when dimming, flicker-free operation"
+      },
+      "Operational Noise": {
+        "definition": "Sound levels during switch operation including buzzing and humming, e.g. silent operation, buzzing noise, electrical sounds"
+      },
+      "Overall Reliability": {
+        "definition": "General dependability and consistent performance across all basic functions over time, e.g. works flawlessly, consistent operation, general functionality"
+      },
+      "Remote Control Range": {
+        "definition": "Effective operating distance for wireless remote functionality, e.g. works at 30 feet, spotty signal at close range"
+      },
+      "Installation Experience": {
+        "definition": "Ease and success of physical installation process, e.g. easy installation, installation difficulties, falls apart during install"
+      },
+      "Signal Quality": {
+        "definition": "Wireless signal strength and interference issues affecting performance, e.g. metal box interference, receiver orientation affects performance"
+      },
+      "Indicator Visibility": {
+        "definition": "Clarity and brightness of status lights and visual indicators, e.g. pilot light too dim, hard to see in daylight"
+      },
+      "Cleanability": {
+        "definition": "Customer experience with cleaning and maintaining the switch appearance, e.g. difficult to clean, collects dirt and grime"
+      },
+      "Memory and Timer Features": {
+        "definition": "Advanced functionality like remembering settings and scheduling capabilities, e.g. returns to last level, timer doesn't allow dimming"
+      },
+      "Physical Durability": {
+        "definition": "How well the product's physical components withstand regular use and handling over time, e.g. rocker switches breaking, handles wearing out, mechanical failure"
+      },
+      "Dimming Function": {
+        "definition": "The operational capability and quality of light level adjustment features, e.g. brightness levels available, flicker-free operation, control precision"
+      },
+      "Electrical Compatibility": {
+        "definition": "How well the product works with different electrical configurations, lighting types, and other electrical components, e.g. LED compatibility, 3-way circuits, voltage requirements"
+      },
+      "Installation Ease": {
+        "definition": "How straightforward and simple the physical installation process is for customers, e.g. easy to install, fits in existing switch box, compatible with three-way circuits"
+      },
+      "Wire Connection": {
+        "definition": "Quality and reliability of electrical wire connections and termination methods, e.g. secure wire connection, eliminates need for wire bending, concern about push-in connection reliability"
+      },
+      "Physical Fit": {
+        "definition": "How well switches fit with wall plates, switch boxes, and existing electrical configurations, e.g. prevents switch plate covers from laying flat, saves space in switch box, fits in existing canopy"
+      },
+      "Device Pairing": {
+        "definition": "Process of connecting and syncing switches with controllers, hubs, or wireless systems, e.g. paired straight away, pairing is extremely difficult, switch synced quickly"
+      },
+      "Wireless Range": {
+        "definition": "Distance capabilities and signal strength for wireless communication between switches and controllers, e.g. works 200 feet away, barely made it to house, excellent range"
+      },
+      "LED Flickering Issues": {
+        "definition": "Problems or solutions related to LED light flickering when used with dimmer switches, e.g. prevents LED flickering, causes lights to flicker, flickering with dimmable bulbs"
+      },
+      "Electrical Noise": {
+        "definition": "Audible buzzing or humming sounds produced during operation, e.g. no buzzing with LED bulbs, LEDs buzz when dimmed, quiet operation"
+      },
+      "Memory and Recovery Features": {
+        "definition": "How well the switch remembers settings and recovers from power interruptions, e.g. won't remember last dimmer setting, normally OFF after power cycle, hub takes minutes to come back online"
+      },
+      "Fade Transition Effects": {
+        "definition": "Aspects concerning smooth lighting transitions during turn-on and turn-off operations, e.g. fade-out effects, ramp-down functionality, delayed shut-off features"
+      },
+      "Multi-Way Switching": {
+        "definition": "Performance aspects related to 3-way switch functionality and multi-switch configurations, e.g. 3-way operation, multiple switch recognition"
+      },
+      "Bulb Type Compatibility": {
+        "definition": "How well the switch works with different types of light bulbs and technologies, e.g. works with various LED bulb types, picky about brand of bulb, LED technology compatibility"
+      },
+      "Smart Features": {
+        "definition": "Mobile app functionality and software-based controls, e.g. app interface, customization options, software reliability"
+      },
+      "Physical Controls": {
+        "definition": "Tactile experience and mechanical operation of buttons, switches, and sliders, e.g. button pressure, switch action feel, control responsiveness"
+      },
+      "Power Capacity": {
+        "definition": "Ability to handle specified electrical loads and wattage requirements, e.g. maximum wattage handling, load capacity performance"
+      },
+      "Power Management": {
+        "definition": "Performance aspects related to power handling and electrical performance, e.g. power outage recovery, voltage sensitivity, current handling"
+      },
+      "Circuit Configuration Support": {
+        "definition": "Ability to work in different wiring configurations and setups, e.g. works single pole and 3-way, 3-way control didn't work, works in standard or 3-way configuration"
+      },
+      "LED Light Compatibility": {
+        "definition": "Performance specifically with LED lighting systems and fixtures, e.g. eliminates LED flicker, works well with various LED fixtures, will not work well with non-dimmable bulbs"
+      },
+      "Physical Installation": {
+        "definition": "Ease and complexity of physically mounting and wiring the device during setup, e.g. straightforward wire setup, difficult alignment, orientation issues"
+      },
+      "Dimming Range and Precision": {
+        "definition": "Quality of light dimming control including range, smoothness, and adjustment capabilities, e.g. wide dimming range, precise control, linear dimming"
+      },
+      "Tactile Operation": {
+        "definition": "Customer experience with the physical feel and force required when operating the product controls, e.g. smooth operation, needing to press hard, feeling nice when operating"
+      },
+      "Audio Feedback": {
+        "definition": "Sound characteristics during switch operation, e.g. clicking noise, operational quietness, audible feedback"
+      },
+      "Light Quality Issues": {
+        "definition": "Aspects concerning unwanted visual or auditory effects during switch operation, e.g. LED flickering, electrical buzzing, humming noises"
+      },
+      "Functional Reliability": {
+        "definition": "Customer feedback about consistent day-to-day operation and whether the product performs its intended functions dependably, e.g. switches dying, working flawlessly, turning on automatically, high failure rates"
+      },
+      "Electrical Capacity": {
+        "definition": "Power handling capabilities and electrical performance limits, e.g. wattage ratings, motor compatibility, load capacity"
+      },
+      "Installation Process Difficulty": {
+        "definition": "Ease or complexity of the installation procedure including instructions and setup requirements, e.g. straightforward installation, wiring complexity, setup challenges"
+      },
+      "Setup Instructions": {
+        "definition": "Quality and clarity of provided setup documentation and guidance, e.g. instructions are inaccurate, instructions were very clear, lacking detail"
+      },
+      "User Interface Experience": {
+        "definition": "Quality and usability of mobile apps and control interfaces, e.g. intuitive apps, confusing interfaces, language display issues"
+      },
+      "Smart Device Connectivity": {
+        "definition": "Aspects related to connecting and maintaining connections with smart home platforms and wireless networks, e.g. WiFi connectivity, Alexa pairing, network stability"
+      },
+      "Product Lifespan": {
+        "definition": "Customer feedback about how long the product continues to function before failure or degradation, e.g. failed after 18 months, lasted 12 years, stopped working after 2 days"
+      },
+      "Physical Build Quality": {
+        "definition": "Aspects related to the tactile feel, construction quality, and physical robustness of the device, e.g. cheap feeling operation, flimsy feel on wall, solid construction"
+      },
+      "Physical Switch Reliability": {
+        "definition": "Performance of manual/physical switch operation including responsiveness and mechanical durability, e.g. switch not responding, physical buttons failing, mechanical wear"
+      },
+      "Switch Physical Feel": {
+        "definition": "Customer experiences with the tactile quality and mechanical operation of the physical switch components, e.g. loose and cheap feel, satisfying click, smooth operation"
+      },
+      "Aesthetic Integration": {
+        "definition": "Aspects related to visual appearance and how well the device matches existing decor and fixtures, e.g. color matching with outlet covers, modern appearance, fingerprint resistance"
+      },
+      "Physical Installation Fit": {
+        "definition": "How well the product physically fits into existing electrical boxes and mounting configurations, e.g. fitting in gang boxes, wire clearance, mounting depth requirements"
+      },
+      "Safety Concerns": {
+        "definition": "Product safety issues and potential hazards, e.g. fire risks, electrical safety, hazardous malfunctions"
+      },
+      "Product Defects": {
+        "definition": "Manufacturing flaws and out-of-box failures that prevent normal operation, e.g. dead on arrival units, electrical shorts, complete non-functionality from purchase"
+      },
+      "Built-in Lighting": {
+        "definition": "Performance of integrated LED indicators or night lights, e.g. illumination quality, light sensitivity, indicator brightness"
+      },
+      "Core Switch Operation": {
+        "definition": "Basic on/off switching functionality and mechanical operation, e.g. manual control, switch toggling, physical button response"
+      },
+      "Visual Design": {
+        "definition": "Aesthetic appearance and visual integration with other devices, e.g. color matching, design consistency, visual appeal"
+      },
+      "Multi Location Control": {
+        "definition": "Aspects related to controlling lights from multiple switch locations and 3-way or 4-way configurations, e.g. 3-way setup issues, multi-location dimming capability"
+      },
+      "Basic Power Control": {
+        "definition": "Core on/off switching functionality and power delivery reliability for standard lighting control, e.g. lights not turning on, switches failing to turn off, random power cycling, maintaining basic switch operation"
+      },
+      "Physical Usability": {
+        "definition": "Ease of physical interaction and operation for end users in daily use, e.g. low activation force, easy operation, appropriate toggle resistance"
+      },
+      "LED Compatibility": {
+        "definition": "Performance aspects related to proper functioning with LED lighting systems, e.g. LED bulb compatibility, lighting performance with LEDs"
+      },
+      "WiFi Connectivity": {
+        "definition": "Network connection stability and reliability for smart switches, e.g. stays connected to WiFi, drops network connection daily, can't connect out of the box"
+      },
+      "Switch Position Stability": {
+        "definition": "Ability of switches to maintain their set position without unwanted movement, e.g. switches don't stay in set position, automatically flip back to off, randomly turn themselves off"
+      },
+      "Physical Switch Operation": {
+        "definition": "How the physical switch mechanism functions including smoothness, clicking, and positioning, e.g. smooth operation, switches won't toggle into place, won't click fully into position"
+      },
+      "Device Durability": {
+        "definition": "Long-term physical and operational lifespan under normal usage conditions, e.g. years of reliable service, resistance to wear, expected brand longevity"
+      },
+      "Operational Noise Level": {
+        "definition": "The amount of audible sound the product generates during normal operation, e.g. buzzing sounds, humming noise, clicking sounds"
+      },
+      "Physical Operation Feel": {
+        "definition": "Tactile feedback and mechanical response quality during physical switch operation, e.g. solid click feel, smooth paddle action, button responsiveness, mechanical build quality"
+      },
+      "Electrical Interference": {
+        "definition": "Aspects concerning unwanted electrical effects on other devices or circuits, e.g. circuit interference, harmonic issues, noise generation"
+      },
+      "Touch Interface Responsiveness": {
+        "definition": "Customer feedback specifically about touch-based control sensitivity and ease of use, e.g. very responsive to touch, takes practice to get used to, not as easy to finely control as slider"
+      },
+      "Remote Control Performance": {
+        "definition": "Effectiveness and reliability of wireless remote control functionality, e.g. pico remote working 35-40% of the time, remote is useless, repeaters have limited range"
+      },
+      "Software Experience": {
+        "definition": "User experience with setup software, apps, and installation guidance, e.g. terrible software experience, showing countless errors, worst install experience"
+      },
+      "Electrical Performance": {
+        "definition": "Technical electrical operation including noise, buzzing, hesitation, and power delivery characteristics, e.g. no hum, buzz when switched on, hesitates when turning on, performs well"
+      },
+      "Heat Generation": {
+        "definition": "Amount of heat produced during operation and thermal management effectiveness, e.g. running cool, excessive heating, normal warmth levels"
+      },
+      "Load Compatibility": {
+        "definition": "Ability to work properly with different types and capacities of lighting loads, e.g. LED compatibility, high wattage handling, fluorescent support"
+      },
+      "Response Performance": {
+        "definition": "Performance aspects related to speed and reliability of device response to commands, e.g. command execution delay, response consistency"
+      },
+      "Remote Control Operation": {
+        "definition": "The performance and reliability of wireless remote control functionality, e.g. range effectiveness, button response, signal reliability"
+      },
+      "Mobile App Experience": {
+        "definition": "Quality and usability of companion mobile applications for device control and setup, e.g. easy app setup, app functionality issues, user interface quality"
+      },
+      "Basic Operation": {
+        "definition": "Core on/off switching functionality and general performance, e.g. turning lights on and off, basic switch operation"
+      },
+      "Switch Response Time": {
+        "definition": "How quickly the product responds to user inputs and commands for turning lights on or off, e.g. activation delays, immediate response, switching lag"
+      },
+      "Product Defect Rate": {
+        "definition": "The frequency of non-functional or faulty units received by customers, e.g. dead on arrival, manufacturing defects, batch quality issues"
+      },
+      "Network Connection Stability": {
+        "definition": "Customer experiences with maintaining stable WiFi and internet connectivity over time, e.g. switches losing connection after months, disconnecting frequently, or maintaining consistent network access"
+      },
+      "Power Sensitivity": {
+        "definition": "Aspects related to how switches respond to power fluctuations, outages, and electrical variations, e.g. power fluctuation damage, startup issues after outages"
+      },
+      "Safety Performance": {
+        "definition": "Fire hazards, overheating, and electrical safety concerns during operation, e.g. overheating issues, fire hazards, electrical sparking"
+      },
+      "Customization Options": {
+        "definition": "Availability and ease of personalizing device settings and appearance, e.g. programmable features, interface lighting options, button configuration flexibility"
+      },
+      "Multi Switch Configuration": {
+        "definition": "Aspects related to performance in three-way switch setups and multi-switch installations, e.g. 3-way operation consistency, switch coordination, setting maintenance"
+      },
+      "Network Connectivity": {
+        "definition": "Aspects related to establishing and maintaining WiFi connections, pairing with routers, and network stability, e.g. WiFi connection drops, pairing difficulties, router compatibility"
+      },
+      "Power Control Accuracy": {
+        "definition": "Precise delivery and control of electrical power to connected lights, e.g. not sending power despite connection, won't turn lights all the way off, works as advertised"
+      },
+      "Smart Device Compatibility": {
+        "definition": "Integration and performance with smart home ecosystems and voice assistants, e.g. works well with Alexa, compatible with Apple HomeKit, works with Lutron Aurora"
+      },
+      "App Performance": {
+        "definition": "Functionality and reliability of companion mobile applications for smart switches, e.g. app works flawlessly, MyLeviton app connection automatic"
+      },
+      "Dimming Range": {
+        "definition": "The span of light intensity adjustment available from brightest to dimmest settings, e.g. minimum brightness levels, LED compatibility, adjustment granularity"
+      },
+      "Smart Features Setup": {
+        "definition": "Ease of configuring smart functionality and connecting to apps or networks, e.g. quick app setup, easy Alexa integration, WiFi connection difficulties"
+      },
+      "Advanced Smart Features": {
+        "definition": "Specialized smart functionality beyond basic on/off control, e.g. power monitoring, double-tap sensing, acting as Zigbee repeater, LED control"
+      },
+      "Light Fixture Compatibility": {
+        "definition": "Performance with different bulb types and fixture configurations including unwanted electrical effects, e.g. LED flickering when off, compatibility with incandescent bulbs, voltage leakage to fixtures"
+      },
+      "Multi-Way Configuration": {
+        "definition": "Performance when used in three-way or multi-location switching setups, e.g. working as three-way switch, incompatibility with conventional three-way switches"
+      },
+      "Value Proposition": {
+        "definition": "Cost-effectiveness and pricing considerations relative to product performance, e.g. price comparisons, value for money assessments"
+      },
+      "LED Indicator Function": {
+        "definition": "Built-in LED indicator performance including visibility, functionality, and reliability over time, e.g. indicator brightness adequacy, LED failure, location visibility in darkness"
+      },
+      "Installation Requirements": {
+        "definition": "Aspects concerning physical installation challenges, space constraints, and wiring requirements, e.g. tight switchbox fit, ground wire requirements, installation complexity"
+      },
+      "Privacy and Data": {
+        "definition": "Aspects related to data collection, storage location, and privacy permissions required by smart switches, e.g. invasive app permissions, data stored in foreign countries"
+      },
+      "OUT_OF_SCOPE": {
+        "definition": "Aspects that are too vague, generic, or unclear to categorize meaningfully"
+      },
+      "Product Reliability": {
+        "definition": "Aspects related to consistent product functionality and operational dependability over time, e.g. device lockups, unresponsiveness, premature failures, switches stopping working"
+      },
+      "Setup and Configuration": {
+        "definition": "Initial device pairing, network setup, and configuration processes, e.g. pairing ease, setup time, configuration options"
+      },
+      "Indicator Light Performance": {
+        "definition": "Performance aspects related to built-in indicator or pilot light functionality, e.g. indicator brightness, pilot light operation"
+      },
+      "Physical Switch Quality": {
+        "definition": "Performance aspects related to the tactile feel and mechanical operation of physical switch components, e.g. button action quality, rocker switch feel, switching force"
+      },
+      "Signal Range": {
+        "definition": "Performance aspects related to wireless communication distance and signal strength, e.g. connection range limitations, signal reliability at distance"
+      },
+      "Control Precision": {
+        "definition": "Accuracy and responsiveness of dimming adjustments and settings, e.g. fine-tuning dimmer levels, sensitivity of controls"
+      },
+      "Humidity Detection Accuracy": {
+        "definition": "How effectively the product senses humidity levels and responds appropriately to environmental moisture changes, e.g. detecting humidity at 65%, activating during showers, false triggering issues"
+      },
+      "Timer Operation": {
+        "definition": "How well automated timing functions work to control device operation duration and scheduling, e.g. 20-minute auto shutoff, hourly cycling, re-sensing capabilities"
+      },
+      "Setup Complexity": {
+        "definition": "How easy or difficult it is to install, configure, and program the product for use, e.g. wiring difficulty, programming simplicity, configuration options"
+      },
+      "Light Flickering Control": {
+        "definition": "The product's ability to prevent or cause unwanted light flickering across different bulb types and fixtures, e.g. eliminating LED flicker, causing fixture interference, maintaining steady illumination"
+      },
+      "Dimming Range Performance": {
+        "definition": "How effectively the product controls light brightness levels across the full dimming spectrum, e.g. smooth transitions, maintaining low levels, dimming range limitations"
+      },
+      "Smart Home Connectivity": {
+        "definition": "How reliably the product connects to and communicates with home automation systems and hubs, e.g. Z-Wave connection, SmartThings integration, network stability"
+      },
+      "Acoustic Performance": {
+        "definition": "Sound-related characteristics during operation including unwanted noise generation, e.g. buzzing from connected lights, humming during dimming, silent operation quality"
+      },
+      "Multi-Way Switch Operation": {
+        "definition": "Performance in 3-way and multi-switch configurations for controlling lights from multiple locations, e.g. 3-way functionality loss, independent switch operation, multi-location control reliability"
+      },
+      "System Response Speed": {
+        "definition": "Customer experiences with how quickly switches respond to commands and inputs, e.g. delays between button presses and activation, slow app response times, or ultra-responsive controls"
+      },
+      "User Interface Visibility": {
+        "definition": "Aspects related to the visibility and illumination of switch indicators and controls in various lighting conditions, e.g. switch visibility in dark rooms, indicator brightness levels"
+      },
+      "LED Bulb Compatibility": {
+        "definition": "Aspects related to performance specifically with LED lighting loads, e.g. LED flickering, buzzing with LEDs, LED load handling"
+      },
+      "Dimming Control Performance": {
+        "definition": "Customer feedback specifically about dimming capabilities and light level adjustment quality, e.g. smooth dimming without flickering, effective brightness range control, or dimming malfunctions and flutter"
+      },
+      "Advanced Configuration Options": {
+        "definition": "Customer feedback about customizable settings and programmable features, e.g. setting minimum/maximum light levels, programming presets, or adjustable dimming ranges"
+      },
+      "Initial Setup Experience": {
+        "definition": "Customer experiences with first-time configuration and pairing processes, e.g. nightmare setup experiences, challenging app connections, or straightforward installation procedures"
+      },
+      "System Integration": {
+        "definition": "Ability to connect and work properly with smart home systems and automation platforms, e.g. HomeAssistant compatibility, Z-wave connectivity, hub pairing"
+      },
+      "Operational Consistency": {
+        "definition": "Reliability of the switch to perform its intended function when activated, e.g. working intermittently, consistent operation every time, high failure rates"
+      },
+      "Current Leakage": {
+        "definition": "Aspects related to unwanted electrical current flow when switches are in off position, e.g. LEDs glowing when off, phantom loads"
+      },
+      "Light Flickering Issues": {
+        "definition": "Aspects concerning unwanted light flickering behavior with various bulb types and dimming levels, e.g. LED flickering at low brightness, flicker elimination"
+      },
+      "Installation Complexity": {
+        "definition": "Aspects related to the difficulty or ease of physically installing switches, including wiring challenges, fitting into electrical boxes, and overall installation process, e.g. difficult to install, easy installation, fitting into electrical box challenges"
+      },
+      "Sound Level": {
+        "definition": "Customer feedback about noise produced during switch operation, e.g. quiet operation, loud click, no clicking sound, humming noise"
+      },
+      "Three Way Switch Function": {
+        "definition": "Aspects specifically related to three-way switch operation and performance, e.g. 3-way switching working, requiring multiple toggles, wiring complications for 3-way"
+      },
+      "Tactile Feedback": {
+        "definition": "Customer experience with the physical feel and responsiveness when operating the switch, e.g. soft switch feel, mushy feel, crisp tactile feel, requires firm press"
+      },
+      "Design Flexibility": {
+        "definition": "Versatility in installation options, mounting configurations, and usage scenarios, e.g. multiple pole configurations, portable mounting options, installation flexibility"
+      },
+      "Software Updates": {
+        "definition": "Customer experiences with firmware and software maintenance, e.g. frequent unnecessary updates, firmware crashes, lack of update support"
+      },
+      "Physical Switch Controls": {
+        "definition": "Customer feedback about manual button and paddle operation independent of smart features, e.g. physical switches not responding while app works, manual operation failures, or reliable tactile controls"
+      },
+      "Audible Noise Problems": {
+        "definition": "Aspects related to unwanted sounds produced by the switch during operation, e.g. buzzing sounds, weird noises, humming, sound like flies"
+      },
+      "Physical Installation Process": {
+        "definition": "Customer feedback about the mechanical installation into wall boxes and electrical connections, e.g. fitting issues with gang boxes, neutral wire complications, or smooth mounting experiences"
+      },
+      "Noise Generation": {
+        "definition": "Customer experiences with sounds produced by the device during operation, e.g. humming when dimmed, silent operation, buzzing problems"
+      },
+      "Physical Deterioration": {
+        "definition": "Physical breakdown of product materials and housing over time, e.g. switches crack, fall apart during installation"
+      },
+      "Multi Switch Coordination": {
+        "definition": "Customer experiences with three-way switch setups and multiple switch installations, e.g. inability to link switches for hallway control or three-way dimmer functionality issues"
+      },
+      "App Control Performance": {
+        "definition": "Functionality of smartphone app control and remote operation capabilities, e.g. app commands work properly, remote control features, grouping abilities"
+      },
+      "Illumination Performance": {
+        "definition": "Customer feedback about the brightness and lighting quality provided by the product's indicator lights or illumination features, e.g. very dim, excellent lighting, hard to see, full brightness"
+      },
+      "Physical Construction Quality": {
+        "definition": "Customer feedback about the structural integrity and build quality of switch components, e.g. paddle rockers coming loose, switches falling apart with minimal use, or being sturdy and reliable"
+      },
+      "Smart Device Pairing": {
+        "definition": "Initial connection process to establish communication between the device and smart home systems, e.g. instant pairing, failed pairing attempts, non-intuitive pairing mode"
+      },
+      "Sound Detection Accuracy": {
+        "definition": "How well the device recognizes and responds to intended sound triggers while filtering out unwanted noise, e.g. clap recognition sensitivity, background noise interference, proximity requirements"
+      },
+      "False Activation Control": {
+        "definition": "The device's ability to prevent unintended activation from non-target sounds or vibrations, e.g. TV noise triggering, cough detection, drawer closing activation"
+      },
+      "Electrical Stability": {
+        "definition": "Consistent electrical operation without unwanted effects like buzzing, flashing, or flickering during normal use, e.g. no buzzing sounds, no light flashing, stable power delivery"
+      },
+      "Batch Failure Rates": {
+        "definition": "Patterns of multiple product failures within purchased sets or over time periods, e.g. all fail in less than a year, 4 out of 6 failed, 10 percent failure rate"
+      },
+      "Button Responsiveness": {
+        "definition": "How quickly and consistently physical controls respond to user input, e.g. press latency, double-press requirements, immediate activation"
+      },
+      "Long Term Reliability": {
+        "definition": "Consistent performance and functionality over extended periods of use, e.g. multi-year operation, performance degradation, failure patterns"
+      },
+      "Battery Performance": {
+        "definition": "The longevity and reliability of battery-powered device operation, e.g. charge duration, replacement frequency, power management"
+      },
+      "Magnetic Attachment": {
+        "definition": "The effectiveness of magnetic mounting systems for securing remote controls or accessories, e.g. hold strength, positioning stability, magnetic interference"
+      },
+      "Manufacturing Consistency": {
+        "definition": "Uniformity and quality control across multiple units, e.g. defect rates, unit-to-unit variation, packaging quality"
+      },
+      "Smart Connectivity Performance": {
+        "definition": "Performance of wireless connectivity features including WiFi connection stability, smart home integration, and network communication reliability, e.g. WiFi disconnection issues, smart home integration, network pairing problems"
+      },
+      "Memory Function": {
+        "definition": "Customer feedback about the switch's ability to remember previous settings, e.g. remembers last dimmer setting, defaults to OFF when power applied"
+      },
+      "Dimming Control": {
+        "definition": "Quality and range of light intensity adjustment capabilities in dimmer switches, e.g. smooth dimming action, poor performance at low levels, humming when dimmed"
+      },
+      "Smart Connectivity": {
+        "definition": "Performance of wireless connections and smart home integrations, e.g. works with Alexa, lost WiFi connection, pairing issues"
+      },
+      "Dimming Speed": {
+        "definition": "Customer experience with how fast or slow the dimming transition occurs, e.g. slow dimming with no instant on/off, fades slowly to off"
+      },
+      "Hub Connectivity": {
+        "definition": "Customer experience connecting the switch to smart home hubs and Z-wave systems, e.g. works great with SmartThings hub, will not connect to hub"
+      },
+      "Configuration Options": {
+        "definition": "Customer experience with available customization and programming features, e.g. limited configuration options, supports pre-staging on-level programming"
+      },
+      "Short Term Reliability": {
+        "definition": "Customer reports of product failures or issues within the first few months of use, e.g. failed after 2 weeks, quit working after 4 months, broke after one month"
+      },
+      "Operational Sound": {
+        "definition": "Noise levels and sound characteristics during switch operation, e.g. clicking sounds, operational noise, sound consistency"
+      },
+      "Wire Connection Issues": {
+        "definition": "Problems specifically with connecting, securing, or managing wires during installation, including wire gauge compatibility and connection mechanisms, e.g. wire clamp tightness, screw spinning without securing wire, wire insertion difficulties"
+      },
+      "User Interface Responsiveness": {
+        "definition": "Speed and reliability of user interactions with the device controls, e.g. touch response delays, switching delays, control sensitivity"
+      },
+      "Customer Support Quality": {
+        "definition": "Quality and responsiveness of manufacturer support services, e.g. support response times, documentation quality, technical assistance"
+      },
+      "Switch Mechanism Reliability": {
+        "definition": "Reliability of the physical switching mechanism including toggle and button responsiveness, e.g. on-off toggle fails frequently, switch stops catching, requires multiple presses"
+      },
+      "Multi Way Configuration": {
+        "definition": "Ability to work in different wiring configurations beyond single pole, e.g. 3-way, 4-way switch applications"
+      },
+      "Build Quality Perception": {
+        "definition": "Customer assessment of the physical construction and materials quality of the switch, e.g. feels cheap, flimsy construction, mushy feeling, poor quality materials"
+      },
+      "Light Output Control": {
+        "definition": "Issues with complete light shutoff and minimum brightness levels, e.g. lights not turning completely off, residual glow, minimum brightness problems"
+      },
+      "Light Output Quality": {
+        "definition": "Characteristics of illumination provided by switches with integrated lighting, including brightness levels and light direction, e.g. LED brightness, light direction control, illumination adequacy"
+      },
+      "Sensor Performance": {
+        "definition": "Functionality of motion detection, light sensing, and other automated sensing features, e.g. motion detector accuracy, photocell sensitivity, day/night sensor performance"
+      },
+      "Electrical Behavior Issues": {
+        "definition": "Abnormal electrical characteristics or safety concerns including voltage leakage, current flow problems, and electrical interference, e.g. voltage on neutral line, current in off position, electrical interference"
+      },
+      "Installation Space Requirements": {
+        "definition": "Physical space challenges during installation including box fit and wire management, e.g. tight electrical boxes, wire space issues, housing size"
+      },
+      "Multi-Circuit Control": {
+        "definition": "Ability to control multiple lighting circuits or complex wiring configurations, e.g. 3-way installation, separate circuit control, single pole operation"
+      },
+      "Brand and Device Compatibility": {
+        "definition": "Interoperability with other manufacturers' devices and smart home systems, e.g. works only with same brand, cross-manufacturer compatibility"
+      },
+      "Visual Indicators": {
+        "definition": "Visibility features and status indication capabilities of the device, e.g. nightlight function, status LEDs, visibility in dark conditions"
+      },
+      "Sensor Functionality": {
+        "definition": "Performance of light sensors and automatic activation features, e.g. ambient light detection, motion sensing accuracy, nightlight operation"
+      },
+      "Switch Responsiveness": {
+        "definition": "The tactile feel and mechanical response of the switch operation including click quality and smoothness, e.g. positive click, smooth action, definitive feedback"
+      },
+      "Operational Noise Levels": {
+        "definition": "Sound generation during normal operation, e.g. makes high pitch buzzing noise, quiet operating, doesn't cure buzzing with LED lights"
+      },
+      "Basic Switching Operation": {
+        "definition": "Core on/off switching functionality and responsiveness, e.g. turns lights on and off as expected, slow to respond, does not turn on/off without precise pressing"
+      },
+      "User Interface Design": {
+        "definition": "Ease of use and intuitiveness of physical controls and interface elements, e.g. clear interface, user-friendly design, easy navigation"
+      },
+      "Device Reliability": {
+        "definition": "Customer experiences with product dependability and consistent operation over time, e.g. device freezing, failure after short periods, long-term reliability, defective units"
+      },
+      "Memory Functions": {
+        "definition": "Ability to remember and restore previous settings, e.g. dimming level memory, setting retention"
+      },
+      "Settings Memory": {
+        "definition": "Ability to remember and restore previous dimming levels and configurations, e.g. returning to last dimming setting after power cycle"
+      },
+      "Initial Setup": {
+        "definition": "First-time device configuration and pairing process with networks and systems, e.g. hub connection speed, app setup difficulty, device pairing complexity"
+      },
+      "Indicator Lighting": {
+        "definition": "Built-in LED indicators and night light functionality, e.g. status lights, night light brightness, automatic lighting features"
+      },
+      "Touch Responsiveness": {
+        "definition": "Physical button and touch interface response quality and reliability, e.g. responsive touch controls, unresponsive buttons, erratic operation"
+      },
+      "Cross Talk Issues": {
+        "definition": "Aspects related to unwanted interference between multiple switches or circuits, e.g. switches affecting each other, unintended dimming, signal interference"
+      },
+      "Firmware Management": {
+        "definition": "Aspects concerning software updates and firmware-related functionality improvements or issues, e.g. firmware update processes, stability improvements, update reliability"
+      },
+      "Visual Appeal": {
+        "definition": "Customer satisfaction with the aesthetic appearance and design of the switch, e.g. looks great, attractive design, visual integration with decor"
+      },
+      "Remote Control Functionality": {
+        "definition": "Performance of app-based and voice control features when physical controls fail or work normally, e.g. Alexa control, WiFi control, app responsiveness"
+      },
+      "Status Accuracy": {
+        "definition": "Aspects related to the switch correctly reporting and maintaining its current state across different control interfaces, e.g. app status mismatches, manual switch detection, state synchronization"
+      },
+      "Electrical Reliability": {
+        "definition": "Consistency of electrical connections and power delivery, e.g. connection stability, intermittent operation, electrical contact quality"
+      },
+      "Network Integration": {
+        "definition": "Wireless connectivity and smart home platform compatibility, e.g. WiFi stability, HomeKit support, Matter compatibility"
+      },
+      "Hardware Components": {
+        "definition": "Quality and performance of physical hardware elements, e.g. screw quality, mounting components, hardware integrity"
+      },
+      "Device Status and Communication": {
+        "definition": "How well the device communicates its status and maintains connection with control systems, e.g. showing offline, status lights, app connectivity"
+      },
+      "Transformer Compatibility": {
+        "definition": "Performance with different types of electrical transformers and low voltage systems, e.g. electronic transformers, magnetic transformers, low voltage LED fixtures"
+      },
+      "Visual Design Integration": {
+        "definition": "Aspects related to how well the switch appearance integrates with existing home decor and other switches, e.g. color matching, aesthetic blending, visual consistency"
+      },
+      "Switch Position Clarity": {
+        "definition": "Ability to easily determine the current on/off state of the switch through visual or tactile feedback, e.g. difficult to realize switch is on or off"
+      },
+      "Smart Device Programming": {
+        "definition": "Initial setup and configuration of smart features and connectivity, e.g. programming is fairly simple, could not be programmed without internet access, pairing was challenging"
+      },
+      "Power Handling": {
+        "definition": "Aspects related to the switch's ability to handle electrical loads and voltage requirements, e.g. wattage capacity, voltage drops under load"
+      },
+      "Night Visibility": {
+        "definition": "Illumination features for locating and using switches in dark conditions, e.g. night light allows switch to be seen in dark, light helps find wall switch at night, light not bright enough to see way into room"
+      }
+    },
+    "use_case_categories": {
+      "Room Specific Applications": {
+        "definition": "Use cases targeting specific rooms and their unique lighting needs, e.g. bedroom use, bathroom use, kitchen use, dining room lighting, closet lighting"
+      },
+      "Accessibility and Convenience": {
+        "definition": "Features that improve ease of use and accessibility for users, e.g. elderly accessibility, guest control, avoiding phone app, nighttime use"
+      },
+      "Lamp and Portable Lighting": {
+        "definition": "Control of table lamps, floor lamps, and other portable lighting fixtures, e.g. bedside lighting, reading lamps, nightstand lamps, desk lamp"
+      },
+      "Ceiling Fan Control": {
+        "definition": "Control systems specifically for ceiling fans and their integrated lighting, e.g. bedroom fan control, bathroom fan and light control, Hunter ceiling fan control"
+      },
+      "Ambient and Scene Lighting": {
+        "definition": "Applications for creating mood lighting, ambiance, and automated lighting scenes, e.g. mood lighting, automation scenes, media room ambient lighting, setting ambiance"
+      },
+      "Night Time Visibility": {
+        "definition": "Applications addressing visibility and navigation in dark conditions without full illumination, e.g. night lighting, finding switches in dark, bathroom night light, walkway lighting"
+      },
+      "Commercial and Rental Properties": {
+        "definition": "Use cases for commercial spaces and rental property applications, e.g. Airbnb properties, high traffic areas, guest control of lights"
+      },
+      "Smart Home Integration": {
+        "definition": "Integration with home automation systems and voice control platforms, e.g. Alexa integration, Google home automation, smart bulb control, app-based remote control"
+      },
+      "Room Specific Lighting": {
+        "definition": "Lighting control for specific rooms and spaces throughout the home, e.g. bedroom lighting, bathroom lighting, kitchen lighting, hallway lighting, dining room lighting"
+      },
+      "Specialty Lighting Applications": {
+        "definition": "Unique or specialized lighting needs beyond standard room illumination, e.g. accent lights, romantic lighting, makeup mirror lighting, Christmas tree lights, string lights"
+      },
+      "LED Lighting Control": {
+        "definition": "Control systems designed for LED lighting installations and fixtures, e.g. LED strip lighting, recessed LED lights, LED puck lights, under cabinet LED lighting"
+      },
+      "Recessed and Can Lighting": {
+        "definition": "Applications specifically for recessed lighting fixtures and can lights, e.g. LED recessed lights, retrofit can lights, downlight control"
+      },
+      "Installation and Renovation": {
+        "definition": "Switch installations during home improvement and construction projects, e.g. house remodeling, renovation projects, switch replacement, electrical installation"
+      },
+      "Whole House Projects": {
+        "definition": "Large-scale electrical installations and comprehensive home automation implementations, e.g. whole house installation, replacing 30+ switches, house renovation, new home installation"
+      },
+      "Replacement and Upgrade": {
+        "definition": "Modernizing existing electrical systems by replacing outdated or broken switches, e.g. replacing toggle switches, updating old switches, fixing broken units"
+      },
+      "Property Development": {
+        "definition": "Applications for new construction, renovation projects, and investment properties, e.g. new home construction, house flips, rental properties, full renovations"
+      },
+      "OUT_OF_SCOPE": {
+        "definition": "Aspects that are too generic, unclear, or don't represent specific use cases"
+      },
+      "Professional Installation Services": {
+        "definition": "Use cases involving professional electricians or contractors performing installations, e.g. client installations, professional installation, electrician installations"
+      },
+      "Low Voltage Device Control": {
+        "definition": "Control applications for small electronic devices and USB-powered equipment, e.g. soldering irons, fans, test equipment, portable lighting"
+      },
+      "Storage and Utility Spaces": {
+        "definition": "Lighting control in closets, pantries, basements and other utility areas, e.g. closet door switch, basement installation, storage room lighting, attic lights"
+      },
+      "Multi Location Control": {
+        "definition": "Control systems that allow operation from multiple locations or rooms, e.g. three-way switches, room to room control, remote control from another room"
+      },
+      "Fixture Type Control": {
+        "definition": "Control of specific lighting fixture types and configurations, e.g. recessed can lights, ceiling fans, chandeliers, wall lamps, candelabra lamps"
+      },
+      "Remote and Mobile Control": {
+        "definition": "Applications requiring wireless control capabilities from mobile devices or remote controls, e.g. smartphone app control, tablet control, portable remote usage"
+      },
+      "Installation Context": {
+        "definition": "Specific installation scenarios and constraints that influence product selection, e.g. older homes without neutral wire, DIY installation, contractor use, retrofit applications"
+      },
+      "Pet and Hobby Applications": {
+        "definition": "Specialized lighting control for pets and hobbies, e.g. reptile heat lamps, bearded dragon basking bulb, heat lamp and mat"
+      },
+      "Garage and Utility Spaces": {
+        "definition": "Lighting control for garages, workshops, and utility areas, e.g. garage lighting, shop dual location control, detached garage lighting"
+      },
+      "Monitoring and Energy Management": {
+        "definition": "Systems that help monitor usage and prevent energy waste, e.g. preventing lights from being left on, attic light monitoring, garage light monitoring"
+      },
+      "Outdoor and Exterior Lighting": {
+        "definition": "Control systems for outdoor lighting applications, e.g. patio lights, garden lights, shed lighting, outdoor deck lighting"
+      },
+      "Specialty Load Control": {
+        "definition": "Control of non-standard electrical loads beyond basic lighting applications, e.g. fan speed control, garbage disposal, heat lamps, waterfall pumps, hot pot control"
+      },
+      "Outdoor and Utility Lighting": {
+        "definition": "Use cases for lighting control in outdoor areas, garages, storage spaces, and utility applications, e.g. detached garage flood lights, dock lights, storage unit lighting, shed to house control"
+      },
+      "Specialized Equipment Control": {
+        "definition": "Control of non-lighting electrical equipment and appliances, e.g. hot water circulator, furnace shutoff, RV water heater, roof de-icer control"
+      },
+      "Multi Location Switching": {
+        "definition": "Use cases requiring control of lights from multiple switch locations using 3-way or 4-way configurations, e.g. 3-way switch configuration, four way light switching, multi-location control"
+      },
+      "LED Compatibility Applications": {
+        "definition": "Specific use cases focused on controlling various types of LED lighting fixtures and bulbs, e.g. LED bulb dimming, dimmable LED ceiling light, LED undercounter lights, low wattage LED compatibility"
+      },
+      "Installation Constraints": {
+        "definition": "Use cases driven by specific installation requirements or physical limitations, e.g. shallow switch box installation, avoiding rewiring, older home with thin walls"
+      },
+      "Home Renovation and Upgrades": {
+        "definition": "Applications for updating existing electrical systems and switches during home improvement projects, e.g. home renovation and electrical updates, replacing beige/almond colored switches, older home upgrades"
+      },
+      "Backup and Reliability": {
+        "definition": "Applications requiring manual operation capabilities and preventing accidental shutoffs, e.g. manual operation during wifi outage, preventing switch from being turned off, independent switch operation"
+      },
+      "Accessibility and Safety": {
+        "definition": "Applications addressing accessibility needs and safety improvements through lighting control, e.g. accessibility for motor control issues, safety improvement, hallway navigation"
+      },
+      "Bathroom Lighting and Ventilation": {
+        "definition": "Bathroom-specific applications including lighting and fan control combinations, e.g. bathroom light and fan control, vanity lighting, moisture control"
+      },
+      "Specialized Fixture Control": {
+        "definition": "Use cases for controlling specific types of lighting fixtures beyond standard bulbs, e.g. ceiling fan light control, track lights, recessed lighting, chandelier lighting"
+      },
+      "Kitchen and Under-Cabinet Lighting": {
+        "definition": "Lighting applications specific to kitchen environments and task lighting, e.g. kitchen counter lighting, under-cabinet LED lighting, kitchen fixture control"
+      },
+      "Outdoor and Security Lighting": {
+        "definition": "External lighting applications for security, landscaping, and outdoor areas, e.g. porch lights, outdoor LED flood lights, yard landscaping automation, security lighting"
+      },
+      "Legacy System Upgrades": {
+        "definition": "Replacing outdated electrical components and modernizing older home wiring systems, e.g. replacing old dimmers, knob and tube wiring, 19th century home wiring, builder grade switches"
+      },
+      "Professional and Commercial Use": {
+        "definition": "Applications in professional settings or commercial-grade installations, e.g. client projects, office installation, high-use applications, commercial grade requirements"
+      },
+      "Specialty String and Decorative Lighting": {
+        "definition": "Control of decorative string lights and specialty lighting installations, e.g. Edison string lights, bistro lights, wedding venue lighting, large outdoor string lights"
+      },
+      "Chandelier and High-Wattage Fixtures": {
+        "definition": "Control of decorative lighting fixtures with multiple bulbs or high power requirements, e.g. chandeliers with 30+ bulbs, large wattage fixtures, multi-bulb LED fixtures"
+      },
+      "Scheduling and Automation": {
+        "definition": "Time-based control, scheduling features, and automated lighting management for convenience and energy savings, e.g. scheduling and scenes, set auto timer for vent fan, scheduling and timers, shower fan timer control"
+      },
+      "Challenging Wiring Situations": {
+        "definition": "Installations in homes with limited or problematic electrical infrastructure, e.g. no neutral wire, old houses with limited wiring, thick ceramic wall plates"
+      },
+      "Aesthetic and Design Matching": {
+        "definition": "Selecting switches to complement interior design and match existing fixtures or decor, e.g. Matching with Fixtures, Wall Contrast, matching decor, modern home aesthetic"
+      },
+      "Residential Renovation Projects": {
+        "definition": "Use cases involving comprehensive home improvement, remodeling, or updating projects, e.g. bathroom renovation, whole house upgrade, home building project, house-wide switch conversion"
+      },
+      "Installation Configuration": {
+        "definition": "Technical installation scenarios and electrical box compatibility requirements, e.g. single pole setup, gang box installation, limited electrical space, metal junction boxes"
+      },
+      "Energy Conservation Applications": {
+        "definition": "Use cases primarily focused on reducing energy consumption through dimming and control, e.g. energy saving, LED efficiency optimization"
+      },
+      "Accessibility and Elderly Assistance": {
+        "definition": "Use cases focused on making lighting control easier for users with physical limitations or age-related needs, e.g. rheumatoid arthritis accessibility, helping elderly neighbors"
+      },
+      "Commercial LED Lighting Systems": {
+        "definition": "Professional or high-capacity LED installations with specialized dimming requirements, e.g. 0-10V dimming systems, LED panel lights, warehouse UFO LEDs, troffer fixtures"
+      },
+      "High Capacity Applications": {
+        "definition": "Use cases involving control of multiple fixtures or high-wattage lighting loads, e.g. chandelier control, multiple recessed fixtures, high-wattage loads, commercial lighting"
+      },
+      "Multi-Location Light Control": {
+        "definition": "Applications requiring control of lights from multiple switch locations or points, e.g. 3-way circuits, multi-location lighting control, hallway control, stairway lighting"
+      },
+      "Smart Home Automation Integration": {
+        "definition": "Applications involving smart home systems, voice control, and automated scheduling, e.g. Alexa integration, Google Home control, IFTTT automation, scheduled lighting"
+      },
+      "Specialty Ambiance Control": {
+        "definition": "Applications for creating specific lighting atmospheres or mood settings, e.g. movie watching ambiance, party time control, low evening lighting"
+      },
+      "Outdoor and Utility Spaces": {
+        "definition": "Lighting control for exterior areas and utility spaces with specific environmental requirements, e.g. garage lighting, shed lighting, patio lights, outdoor protected applications"
+      },
+      "Smart Home Automation": {
+        "definition": "Integration with smart home ecosystems and automated control systems for convenience and connectivity, e.g. voice control through Alexa, app control, HomeKit integration, scheduling and timers"
+      },
+      "Outdoor Applications": {
+        "definition": "Control of exterior lighting and outdoor electrical devices, e.g. porch lighting, patio BBQ lighting, pool lights control, deck lighting"
+      },
+      "Bathroom Applications": {
+        "definition": "Lighting and ventilation control specifically in bathroom environments, e.g. bathroom fan control, bathroom humidity control, master bathroom lighting, washroom use"
+      },
+      "Switch Replacement and Upgrades": {
+        "definition": "Replacement of existing switches and electrical components to improve functionality and appearance, e.g. replacement applications, upgrade from standard toggle switches, replacing old dimmer switches, single pole light switch replacement, replacing old double light switches, replacing old/faded switches"
+      },
+      "Low Voltage and Specialty Lighting": {
+        "definition": "Control of under-cabinet lighting, low voltage systems, and specialty electronic lighting installations, e.g. controlling ELV lighting systems, under cabinet lighting with low voltage led strip, retrofit of existing low voltage lighting, low voltage transformer control, undercabinet lights with electronic transformer"
+      },
+      "LED Technology Applications": {
+        "definition": "Applications specifically focused on controlling LED lighting systems and fixtures, e.g. LED panels, LED strip lights, LED ceiling lights, dimmable LED bulbs"
+      },
+      "Home Renovation and Modernization": {
+        "definition": "Projects focused on updating, upgrading, or modernizing existing home electrical systems and aesthetics, e.g. Smart House Upgrade Projects, home improvements, modernizing/upgrading home switches, modern look upgrade"
+      },
+      "Multi Switch Configurations": {
+        "definition": "Complex switching setups involving multiple switch locations or gang configurations, e.g. 3-way switches, 4-way switches, multiple switches in one gang"
+      },
+      "Ambient Lighting Control": {
+        "definition": "Use cases focused on creating mood, atmosphere, and adjustable lighting environments for comfort and aesthetics, e.g. mood setting, ambiance creation, dimming to low levels, scene control"
+      },
+      "Electrical Infrastructure Compatibility": {
+        "definition": "Compatibility with existing electrical systems, wiring configurations, and infrastructure limitations, e.g. no neutral wire homes, older homes, 15 amp circuit applications, 220V applications, 3-way circuits without neutral wire, solid brick wall homes"
+      },
+      "Kitchen Applications": {
+        "definition": "Lighting and appliance control in kitchen spaces and food preparation areas, e.g. kitchen installation, garbage disposal control, under cabinet lights, pantry automation"
+      },
+      "Property Type Applications": {
+        "definition": "Installations for specific property types with unique requirements or constraints, e.g. rental property installation, vacation_rental_control, new_construction_wiring, old_house_installation"
+      },
+      "LED Dimming Applications": {
+        "definition": "Specific use cases for controlling brightness of LED lighting systems, e.g. dimmable LED bulbs, LED strips, chandelier dimming, under cabinet lighting"
+      },
+      "LED Technology Compatibility": {
+        "definition": "Control of modern LED lighting systems including bulbs, strips, and fixtures with various electronic requirements, e.g. dimming incandescent and LED, modern bulb compatibility, LED light fixtures, dimmable LEDs, controlling LED strip lights with electronic transformer, newer difficult to dim LED fixtures/bulbs"
+      },
+      "Garage Applications": {
+        "definition": "Lighting and equipment control in garage and workshop environments, e.g. garage lighting control, LED shop lights, air compressor control"
+      },
+      "Multi Circuit Management": {
+        "definition": "Control of multiple separate lighting circuits and loads, e.g. separating combined circuits, controlling separate light circuits, same circuit loads versus separate circuit loads"
+      },
+      "Specialty Room Applications": {
+        "definition": "Lighting control for specific room types with unique requirements and usage patterns, e.g. bathroom lighting, nursery lighting, guest rooms, powder rooms, mud rooms"
+      },
+      "Multi-Switch and Gang Configurations": {
+        "definition": "Installation and control of multiple switches in single locations and complex switching arrangements, e.g. replace 3gang and 2gang switches during remodeling, replace two gang switch, control six separate lights from single wall plate, replace row of three switches, multi-gang applications"
+      },
+      "Dark Area Navigation": {
+        "definition": "Applications specifically for locating switches or providing illumination in dark spaces for safety and convenience, e.g. dark room location, finding switch in dark, night light application, dark upstairs hallway"
+      },
+      "Multi-Switch Configuration": {
+        "definition": "Complex electrical configurations requiring multiple switches or specialized wiring arrangements, e.g. 3-way switch application, four_gang_configuration, three way configuration, multi-switch replacement"
+      },
+      "Outdoor Lighting Control": {
+        "definition": "Management of exterior lighting systems for security, convenience, and automation, e.g. porch lights, security lighting, sunset/sunrise automation, outdoor sealed installations"
+      },
+      "Ambiance and Scene Control": {
+        "definition": "Applications focused on creating lighting atmospheres and automated lighting scenes, e.g. dimming for ambiance, TV glare reduction, night light functionality, scene automation"
+      },
+      "Professional and Commercial Applications": {
+        "definition": "Use in work environments, contractor installations, and commercial settings requiring professional-grade control, e.g. professional electrical contractor use, shop switch applications, shop lighting, shop/workshop use, electrician work, contractor work, office upgrades"
+      },
+      "Complex Wiring Configurations": {
+        "definition": "Installation in challenging electrical setups requiring specific switch types or configurations, e.g. 3-way switching, old house wiring, shallow electrical boxes, no neutral wire situations"
+      },
+      "Ambiance and Mood Control": {
+        "definition": "Use cases focused on creating specific lighting atmospheres and adjusting brightness for different activities, e.g. ambiance control, dinner lighting, work and relaxation ambiance, movie room lighting"
+      },
+      "Switch Replacement and Upgrade": {
+        "definition": "Replacing existing switches for modernization, repair, or aesthetic improvement, e.g. replacing cracked switches, upgrade from flip switch, modernizing home, whole home switch replacement"
+      },
+      "High Wattage Applications": {
+        "definition": "Control of high-power lighting and electrical loads requiring robust switching capacity, e.g. 800W loads, 1000W applications, halogen lamps, chandeliers with multiple bulbs"
+      },
+      "Brand and Product Replacement": {
+        "definition": "Replacing specific existing switches or dimmers with new products, often for compatibility or performance reasons, e.g. Replacing GE/Jasco Dimmers, Replacing Lutron Dimmers, replacement for problem switch"
+      },
+      "Room-Specific Lighting Control": {
+        "definition": "Controlling lighting in specific rooms or areas of the home with unique requirements, e.g. bathroom switch replacement, bedroom switches, kitchen circuits, yoga studio lighting"
+      },
+      "LED Lighting Integration": {
+        "definition": "Applications specifically for controlling LED lighting systems and ensuring compatibility with LED technology, e.g. low_amperage_LED_lights, LED_compatibility, LED recessed cans dimming, LED bathroom light control"
+      },
+      "Construction and Renovation": {
+        "definition": "Applications during home building, remodeling, and renovation projects, e.g. new construction replacement, bathroom remodeling, kitchen installation, home flipping projects"
+      },
+      "Home Renovation Projects": {
+        "definition": "Large-scale electrical upgrade projects involving multiple switches and outlets throughout homes, e.g. whole house replacements, modernizing old wiring, remodeling projects"
+      },
+      "Home Renovation and Remodeling": {
+        "definition": "Integration during construction, renovation, and upgrade projects to modernize electrical systems, e.g. home remodeling projects, kitchen remodel, replacing builders grade switches, backsplash switches replacement, home upgrades, house upgrading, bulk installation in new home"
+      },
+      "Specialized Health and Accessibility": {
+        "definition": "Applications addressing specific health needs, accessibility requirements, and user challenges, e.g. migraine relief, infant care, heavy-duty applications for behaviorally challenged users, make switch easy to spot at night, dark location identification"
+      },
+      "Nighttime and Low Light": {
+        "definition": "Applications specifically for nighttime use and low-light visibility, e.g. switch location in dark, night-time lighting, bedtime control, nightlight replacement"
+      },
+      "Specialty Appliance Control": {
+        "definition": "Controlling non-lighting electrical devices and appliances through switch systems, e.g. controlling garbage disposal in kitchen, bathroom fans and ceiling fans, in_ceiling_heater_for_shower"
+      },
+      "Accessibility and Special Needs": {
+        "definition": "Lighting control solutions for users with specific accessibility requirements or unique use cases, e.g. automated alerts for deaf persons, night guidance, easy installation needs"
+      },
+      "Specialty Lighting Control": {
+        "definition": "Control of non-standard lighting applications and decorative elements, e.g. LED strips, neon signs, fairy lights, accent lighting, ambiance setting"
+      },
+      "Appliance Integration": {
+        "definition": "Use cases involving control of heating and warming devices through electrical switches, e.g. wax warmers, coffee warming plates, mini irons"
+      },
+      "Nighttime Navigation": {
+        "definition": "Applications focused on providing low-level illumination for safe movement in dark areas, e.g. basement stairs, hallway navigation, bathroom nightlights, dark room switch location"
+      },
+      "LED Fixture Compatibility": {
+        "definition": "Applications specifically involving LED lighting systems and fixtures requiring compatible control, e.g. LED recessed lights, LED pot lights, LED ceiling fixtures, LED bulb dimming"
+      },
+      "Specific Room Applications": {
+        "definition": "Lighting control needs for particular rooms or areas with unique requirements, e.g. bathroom ceiling lights, kitchen cabinet lighting, bedroom control from bed, laundry room"
+      },
+      "Specialty Fixture Control": {
+        "definition": "Control of specific lighting fixtures and appliances beyond basic room lighting, e.g. ceiling fan control, cabinet lighting, under counter LED lights, outdoor floodlight control"
+      },
+      "LED Compatibility": {
+        "definition": "Specific use with LED lighting technologies and dimming requirements, e.g. dimmable LED control, LED string lights, LED recessed lights, LED rope lights"
+      }
+    }
+  },
+  "generation_info": {
+    "categorization_date": "2025-06-09T05:35:19.191909",
+    "model_used": "claude-sonnet-4-20250514",
+    "total_products_processed": 261
+  }
+}
