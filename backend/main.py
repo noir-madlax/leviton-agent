@@ -31,6 +31,22 @@ app.add_middleware(
 agent = None
 init_error = None
 
+# 辅助函数：读取 prompt 文件并拼接查询
+def prepare_query_with_prompt(query: str) -> str:
+    """读取 prompt 文件并拼接到查询前"""
+    import os
+    prompt_file_path = os.path.join(os.path.dirname(__file__), "prompt", "llm-chart-generation-prompt.md")
+    
+    try:
+        with open(prompt_file_path, 'r', encoding='utf-8') as f:
+            prompt_content = f.read()
+        complete_query = prompt_content + "\n\n" + query
+        logger.info(f"已读取 prompt 文件，总长度: {len(complete_query)} 字符")
+        return complete_query
+    except Exception as e:
+        logger.warning(f"读取 prompt 文件失败: {e}，使用原始查询")
+        return query
+
 # 延迟初始化 smolagents 的 CodeAgent
 def init_agent():
     global agent, init_error
@@ -94,10 +110,13 @@ async def stream_agent_response(query: str):
         yield f"data: {json.dumps({'status': 'debug', 'message': '准备调用 agent.run...'}, ensure_ascii=False)}\n\n"
         
         try:
+            # 准备完整的查询（包含 prompt）
+            complete_query = prepare_query_with_prompt(query)
+            
             # 运行代理任务，设置超时
             logger.info("正在调用 agent.run...")
             result = await asyncio.wait_for(
-                asyncio.to_thread(agent.run, query),
+                asyncio.to_thread(agent.run, complete_query),
                 timeout=settings.AGENT_TIMEOUT
             )
             logger.info(f"agent.run 执行完成，结果类型: {type(result)}")
@@ -225,7 +244,10 @@ async def agent_query(request: dict):
         return {"error": "查询内容不能为空"}
     
     try:
-        result = await asyncio.to_thread(agent.run, query)
+        # 准备完整的查询（包含 prompt）
+        complete_query = prepare_query_with_prompt(query)
+        
+        result = await asyncio.to_thread(agent.run, complete_query)
         return {
             "status": "success",
             "query": query,
