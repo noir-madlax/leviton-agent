@@ -4,9 +4,10 @@ logging.basicConfig(level=logging.INFO)
 
 async def test_agent():
     try:
-        from smolagents import CodeAgent, OpenAIServerModel
+        from smolagents import ToolCollection,CodeAgent, OpenAIServerModel
         from tools import ProductQueryTool, ReviewQueryTool
         from config import settings
+        from mcp import StdioServerParameters
         
         print('开始测试 agent.run...')
         
@@ -16,18 +17,23 @@ async def test_agent():
             api_key=settings.API_KEY,
         )
         
-        product_tool = ProductQueryTool()
-        review_tool = ReviewQueryTool()
+        server_parameters = StdioServerParameters(
+            command="npx",
+            args=["-y", 
+                  "@supabase/mcp-server-supabase@latest",
+                  "--access-token",
+                  "sbp_61270d21f1a75f67ba9aa61f2e6bb7f13d3c8dfe"]
+        )
         
-        agent = CodeAgent(tools=[product_tool, review_tool], model=model, max_steps=settings.MAX_ITERATIONS)
-        
+        tool_collection = ToolCollection.from_mcp(server_parameters, trust_remote_code=True)
+        agent = CodeAgent(tools=[ *tool_collection.tools], model=model, max_steps=settings.MAX_ITERATIONS)
         # 测试查询
-        query = 'Leviton 品牌有哪些产品？'
-        print(f'执行查询: {query}')
-        
-        result = await asyncio.to_thread(agent.run, query)
+        query = "supabase数据库中有哪些表."
+        result = agent.run(query)
+        # result = asyncio.to_thread(agent.run, query)
         print(f'查询结果: {result}')
         print('测试完成')
+
         
     except Exception as e:
         print(f'测试出错: {e}')

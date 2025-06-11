@@ -5,6 +5,7 @@ import asyncio
 import json
 import logging
 from typing import Optional
+from contextlib import asynccontextmanager
 from config import settings
 from tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
 
@@ -12,10 +13,76 @@ from tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test
 logging.basicConfig(level=getattr(logging, settings.LOG_LEVEL))
 logger = logging.getLogger(__name__)
 
+# Agent 和工具集上下文将由 lifespan 管理
+agent = None
+init_error = None
+tool_collection_context = None
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    """在应用启动时初始化 Agent，在关闭时清理资源。"""
+    global agent, init_error, tool_collection_context
+    logger.info("FastAPI 应用启动，开始初始化 Agent...")
+    
+    try:
+        from smolagents import ToolCollection, CodeAgent, OpenAIServerModel
+        from mcp import StdioServerParameters
+        
+        logger.info(f"使用模型: {settings.MODEL_ID}")
+        model = OpenAIServerModel(
+            model_id=settings.MODEL_ID,
+            api_base="https://openrouter.ai/api/v1",
+            api_key=settings.API_KEY
+        )
+        
+        logger.info("初始化工具...")
+        product_tool = ProductQueryTool()
+        review_tool = ReviewQueryTool()
+
+        server_parameters = StdioServerParameters(
+            command="npx",
+            args=["-y", 
+                  "@supabase/mcp-server-supabase@latest",
+                  "--access-token",
+                  "sbp_61270d21f1a75f67ba9aa61f2e6bb7f13d3c8dfe"]
+        )
+
+        logger.info("初始化 ToolCollection...")
+        tool_collection_context = ToolCollection.from_mcp(server_parameters, trust_remote_code=True)
+        # 手动进入上下文
+        tool_collection = tool_collection_context.__enter__()
+
+        all_tools = [product_tool, review_tool, *tool_collection.tools]
+
+        logger.info("创建 CodeAgent...")
+        agent = CodeAgent(
+            tools=all_tools, 
+            model=model,
+            max_steps=settings.MAX_ITERATIONS
+        )
+
+        logger.info(f"Agent 初始化成功，加载的工具: {agent.tools}")
+
+    except Exception as e:
+        init_error = str(e)
+        logger.error(f"Agent 初始化失败: {e}", exc_info=True)
+
+    yield
+
+    logger.info("FastAPI 应用关闭，正在释放资源...")
+    if tool_collection_context:
+        try:
+            tool_collection_context.__exit__(None, None, None)
+            logger.info("工具集资源已释放。")
+        except Exception as e:
+            logger.error(f"释放工具集资源时出错: {e}", exc_info=True)
+
+
 app = FastAPI(
     title="Leviton Agent API",
     description="基于 smolagents 的智能代理 API",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan
 )
 
 # 添加 CORS 中间件
@@ -26,10 +93,6 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
-# 初始化 Agent 变量
-agent = None
-init_error = None
 
 # 辅助函数：读取 prompt 文件并拼接查询
 def prepare_query_with_prompt(query: str) -> str:
@@ -46,49 +109,6 @@ def prepare_query_with_prompt(query: str) -> str:
     except Exception as e:
         logger.warning(f"读取 prompt 文件失败: {e}，使用原始查询")
         return query
-
-# 延迟初始化 smolagents 的 CodeAgent
-def init_agent():
-    global agent, init_error
-    try:
-        logger.info("开始初始化 Agent...")
-        from smolagents import CodeAgent, OpenAIServerModel
-        
-        logger.info(f"使用模型: {settings.MODEL_ID}")
-        model = OpenAIServerModel(
-            model_id="google/gemini-2.5-flash-preview-05-20",
-            api_base="https://openrouter.ai/api/v1",
-            api_key=settings.API_KEY
-        )
-        
-        logger.info("初始化工具...")
-        # search_tool = DuckDuckGoSearchTool()
-        product_tool = ProductQueryTool()
-        review_tool = ReviewQueryTool()
-        
-        logger.info("创建 CodeAgent...")
-        agent = CodeAgent(
-            tools=[ product_tool, review_tool], 
-            model=model,
-            max_steps=settings.MAX_ITERATIONS  # 设置最大迭代次数
-            )
-        
-        logger.info("Agent 初始化成功，包含以下工具:")
-        logger.info("- DuckDuckGoSearchTool: 网络搜索")
-        logger.info("- ProductQueryTool: 商品信息查询")
-        logger.info("- ReviewQueryTool: 评论和方面分析查询")
-        return True
-    except Exception as e:
-        init_error = str(e)
-        logger.error(f"Agent 初始化失败: {e}")
-        return False
-
-# FastAPI 启动事件 - 在应用启动时初始化 Agent
-@app.on_event("startup")
-async def startup_event():
-    """应用启动时执行的初始化操作"""
-    logger.info("FastAPI 应用启动，正在初始化 Agent...")
-    init_agent()
 
 async def stream_agent_response(query: str):
     """
@@ -117,7 +137,7 @@ async def stream_agent_response(query: str):
             # 运行代理任务，设置超时
             logger.info("正在调用 agent.run...")
             result = await asyncio.wait_for(
-                asyncio.to_thread(agent.run, complete_query),
+                asyncio.to_thread(agent.run, query),
                 timeout=settings.AGENT_TIMEOUT
             )
             logger.info(f"agent.run 执行完成，结果类型: {type(result)}")
@@ -170,11 +190,7 @@ async def root():
         "status": "运行中" if agent else "Agent 未初始化",
         "model_id": settings.MODEL_ID,
         "init_error": init_error if init_error else None,
-        "available_tools": [
-            "DuckDuckGoSearchTool - 网络搜索",
-            "ProductQueryTool - 商品信息查询", 
-            "ReviewQueryTool - 评论和方面分析查询"
-        ] if agent else []
+        "available_tools": agent.tools if agent else []
     }
 
 @app.get("/health")
@@ -197,10 +213,10 @@ async def health_check():
 
 @app.get("/init-agent")
 async def initialize_agent():
-    """手动初始化 Agent"""
-    success = init_agent()
+    """手动初始化 Agent (已弃用)"""
     return {
-        "success": success,
+        "success": False,
+        "message": "Agent 初始化已与应用生命周期绑定，此端点已弃用。",
         "agent_ready": agent is not None,
         "init_error": init_error if init_error else None
     }
