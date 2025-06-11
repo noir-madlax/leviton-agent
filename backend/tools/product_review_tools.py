@@ -8,7 +8,7 @@ from smolagents import Tool
 logger = logging.getLogger(__name__)
 
 # 数据文件路径
-DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
+DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 PRODUCTS_FILE = os.path.join(DATA_DIR, "combined_products_with_final_categories.csv")
 REVIEWS_FILE = os.path.join(DATA_DIR, "expanded_review_results.json")
 ASPECT_CATEGORIZATION_FILE = os.path.join(DATA_DIR, "consolidated_aspect_categorization.json")

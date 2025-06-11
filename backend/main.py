@@ -69,7 +69,8 @@ def init_agent():
         logger.info("创建 CodeAgent...")
         agent = CodeAgent(
             tools=[ product_tool, review_tool], 
-            model=model
+            model=model,
+            max_steps=settings.MAX_ITERATIONS  # 设置最大迭代次数
             )
         
         logger.info("Agent 初始化成功，包含以下工具:")
@@ -188,7 +189,9 @@ async def health_check():
         "config": {
             "host": settings.HOST,
             "port": settings.PORT,
-            "debug": settings.DEBUG
+            "debug": settings.DEBUG,
+            "max_iterations": settings.MAX_ITERATIONS,
+            "agent_timeout": settings.AGENT_TIMEOUT
         }
     }
 

@@ -19,7 +19,7 @@ async def test_agent():
         product_tool = ProductQueryTool()
         review_tool = ReviewQueryTool()
         
-        agent = CodeAgent(tools=[product_tool, review_tool], model=model)
+        agent = CodeAgent(tools=[product_tool, review_tool], model=model, max_steps=settings.MAX_ITERATIONS)
         
         # 测试查询
         query = 'Leviton 品牌有哪些产品？'
