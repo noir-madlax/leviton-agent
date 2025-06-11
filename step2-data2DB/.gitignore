@@ -1,0 +1,96 @@
+# 环境变量和配置文件 - 包含敏感信息
+config.env
+*.env
+!*.env.example
+
+# 各子目录中的环境配置文件
+product-main-table/config.env
+review-tables/config.env
+product-review-meta-categorization/config.env
+
+# 数据库连接配置
+**/config.env
+**/.env
+**/database.env
+
+# Python 相关
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# 虚拟环境
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE 配置
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 操作系统生成的文件
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# 日志文件
+*.log
+logs/
+log/
+
+# 临时文件
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# 数据文件 (如果有敏感数据)
+*.csv
+*.json
+!*example*.json
+!*sample*.json
+!*template*.json
+
+# 备份文件
+*.sql.bak
+*.db.bak
+
+# 测试输出
+test_output/
+test_results/
+.coverage
+.pytest_cache/
+
+# Supabase 相关敏感文件
+supabase/.env
+supabase/config.toml
+.supabase/ 
