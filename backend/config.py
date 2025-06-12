@@ -18,6 +18,9 @@ class Settings:
     HF_TOKEN: Optional[str] = os.getenv("HF_TOKEN")
     API_KEY: str = os.getenv("api_key")
     
+    # MCP 设置
+    MCP_ACCESS_TOKEN: str = os.getenv("MCP_ACCESS_TOKEN")
+    
     # CORS 设置
     ALLOWED_ORIGINS: list = os.getenv("ALLOWED_ORIGINS", "*").split(",")
     

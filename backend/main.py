@@ -44,7 +44,7 @@ async def lifespan(app: FastAPI):
             args=["-y", 
                   "@supabase/mcp-server-supabase@latest",
                   "--access-token",
-                  "sbp_61270d21f1a75f67ba9aa61f2e6bb7f13d3c8dfe"]
+                  settings.MCP_ACCESS_TOKEN]
         )
 
         logger.info("初始化 ToolCollection...")

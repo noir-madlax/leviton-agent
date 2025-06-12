@@ -1,5 +1,9 @@
 import asyncio
 import logging
+import os
+from dotenv import load_dotenv
+
+load_dotenv()
 logging.basicConfig(level=logging.INFO)
 
 async def test_agent():
@@ -17,12 +21,16 @@ async def test_agent():
             api_key=settings.API_KEY,
         )
         
+        mcp_access_token = os.getenv("MCP_ACCESS_TOKEN")
+        if not mcp_access_token:
+            raise ValueError("MCP_ACCESS_TOKEN not found in .env file")
+
         server_parameters = StdioServerParameters(
             command="npx",
             args=["-y", 
                   "@supabase/mcp-server-supabase@latest",
                   "--access-token",
-                  "sbp_61270d21f1a75f67ba9aa61f2e6bb7f13d3c8dfe"]
+                  mcp_access_token]
         )
         
         tool_collection = ToolCollection.from_mcp(server_parameters, trust_remote_code=True)
