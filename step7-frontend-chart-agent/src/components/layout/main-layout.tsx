@@ -1,7 +1,7 @@
 'use client';
 
 import { useState } from 'react';
-import { Separator } from '@/components/ui/separator';
+
 import { ChatInterface } from '@/components/chat/chat-interface';
 import { ChartRenderer } from '@/components/charts/chart-renderer';
 

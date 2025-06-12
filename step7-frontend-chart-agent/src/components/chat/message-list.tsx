@@ -20,9 +20,9 @@ export function MessageList({ messages, isLoading }: MessageListProps) {
           <div className="mt-4 text-xs">
             <p>💡 示例问题：</p>
             <ul className="mt-2 space-y-1">
-              <li>• "显示最近6个月的销售趋势"</li>
-              <li>• "对比各产品的销售表现"</li>
-              <li>• "分析用户增长情况"</li>
+              <li>• &ldquo;显示最近6个月的销售趋势&rdquo;</li>
+              <li>• &ldquo;对比各产品的销售表现&rdquo;</li>
+              <li>• &ldquo;分析用户增长情况&rdquo;</li>
             </ul>
           </div>
         </div>
