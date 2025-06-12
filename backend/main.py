@@ -69,7 +69,8 @@ async def lifespan(app: FastAPI):
         # 手动进入上下文
         tool_collection = tool_collection_context.__enter__()
 
-        all_tools = [product_tool, review_tool, *tool_collection.tools]
+        # all_tools = [product_tool, review_tool, *tool_collection.tools]
+        all_tools = [ *tool_collection.tools]
 
         logger.info("创建 CodeAgent...")
         agent = CodeAgent(
@@ -113,19 +114,38 @@ app.add_middleware(
 
 # 辅助函数：读取 prompt 文件并拼接查询
 def prepare_query_with_prompt(query: str) -> str:
-    """读取 prompt 文件并拼接到查询前"""
+    """读取多个 prompt 文件并按顺序拼接到查询前"""
     import os
-    prompt_file_path = os.path.join(os.path.dirname(__file__), "prompt", "llm-chart-generation-prompt.md")
     
-    try:
-        with open(prompt_file_path, 'r', encoding='utf-8') as f:
-            prompt_content = f.read()
-        complete_query = prompt_content + "\n\n" + query
-        logger.info(f"已读取 prompt 文件，总长度: {len(complete_query)} 字符")
-        return complete_query
-    except Exception as e:
-        logger.warning(f"读取 prompt 文件失败: {e}，使用原始查询")
+    prompt_dir = os.path.join(os.path.dirname(__file__), "prompt")
+    # 定义要加载的 prompt 文件及其顺序
+    prompt_files = [
+        "llm-chart-generation-prompt.md",
+        # "database.md",
+        "chart-code-samples.md"
+    ]
+    
+    prompt_contents = []
+    
+    for file_name in prompt_files:
+        prompt_file_path = os.path.join(prompt_dir, file_name)
+        try:
+            with open(prompt_file_path, 'r', encoding='utf-8') as f:
+                prompt_contents.append(f.read())
+            logger.info(f"成功读取 prompt 文件: {file_name}")
+        except FileNotFoundError:
+            logger.warning(f"找不到 prompt 文件: {file_name}，已跳过")
+        except Exception as e:
+            logger.warning(f"读取 prompt 文件 {file_name} 失败: {e}，已跳过")
+
+    if not prompt_contents:
+        logger.warning("所有 prompt 文件都读取失败，将使用原始查询")
         return query
+
+    complete_prompt = "\n\n".join(prompt_contents)
+    complete_query = complete_prompt + "\n\n 用户的问题如下：" + query
+    logger.info(f"已成功拼接 {len(prompt_contents)} 个 prompt 文件，总 prompt 长度: {len(complete_prompt)} 字符")
+    return complete_query
 
 async def stream_agent_response(query: str):
     """
@@ -154,7 +174,7 @@ async def stream_agent_response(query: str):
             # 运行代理任务，设置超时
             logger.info("正在调用 agent.run...")
             result = await asyncio.wait_for(
-                asyncio.to_thread(agent.run, query),
+                asyncio.to_thread(agent.run, complete_query),
                 timeout=settings.AGENT_TIMEOUT
             )
             logger.info(f"agent.run 执行完成，结果类型: {type(result)}")
@@ -283,7 +303,7 @@ async def agent_query(request: dict):
         # 准备完整的查询（包含 prompt）
         complete_query = prepare_query_with_prompt(query)
         
-        result = await asyncio.to_thread(agent.run, query)
+        result = await asyncio.to_thread(agent.run, complete_query)
         return {
             "status": "success",
             "query": query,

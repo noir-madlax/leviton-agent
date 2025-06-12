@@ -14,7 +14,8 @@ class Settings:
     DEBUG: bool = os.getenv("DEBUG", "False").lower() == "true"
     
     # 模型设置
-    MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-flash-preview-05-20")
+    # MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-flash-preview-05-20")
+    MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-pro-preview")
     HF_TOKEN: Optional[str] = os.getenv("HF_TOKEN")
     API_KEY: str = os.getenv("api_key")
     
