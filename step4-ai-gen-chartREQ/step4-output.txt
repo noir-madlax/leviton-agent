@@ -1,0 +1,147 @@
+## All Required Data
+- Negative review text data  
+- Issue severity rating (1-5 scale)  
+- Frequency of mentions for various pain points  
+- Time distribution of issue occurrences  
+- Customer satisfaction rating data (0-100%)  
+- Pain point distribution across different product categories  
+- Trends of pain points over time  
+- Descriptions of customer usage scenarios  
+- Product attribute coverage status  
+- Competitor product feature comparison matrix  
+- Frequency of unmet needs mentions  
+- Satisfaction data for various usage scenarios  
+- Market gap severity rating  
+- Feature coverage rates of different brands  
+- Feature praises in positive reviews  
+- Mention frequencies for various feature characteristics  
+- Customer comparative feedback on competitor products  
+- Brand awareness and loyalty metrics  
+- Data on customer preference trends  
+
+## Dimensions
+
+### Dimension 1: Customer Pain Point Analysis  
+**Core Issue**: Main problems and dissatisfaction customers encounter when using the product  
+
+**Required Data**:  
+- Negative review text data  
+- Issue severity rating (1-5 scale)  
+- Frequency of mentions for various pain points  
+- Time distribution of issue occurrences  
+- Customer satisfaction rating data  
+- Pain point distribution across different product categories  
+- Temporal trends in pain points  
+
+**Chart 1: Pain Point Severity vs. Review Volume Analysis**  
+- **Chart Type**: Scatter plot  
+- **X-axis**: Number of reviews (range: 0-500+)  
+- **Y-axis**: Pain point severity rating (1-5 scale)  
+- **Bubble size**: Number of affected customers  
+- **Data Interpretation**: Identify high-frequency, high-severity key pain points; prioritize issues in the upper-right quadrant  
+- **Data Required for Chart**:  
+  - Pain point categories (categorical data)  
+  - Number of reviews per pain point (numerical data, 0-500+)  
+  - Severity rating per pain point (numerical data, 1-5)  
+  - Number of customers affected per pain point (numerical data)  
+  - Review content related to each pain point (text data)  
+  - Brand and product information per review (categorical data)  
+
+**Chart 2: Comparison of Pain Point Distribution Across Product Categories**  
+- **Chart Type**: Stacked bar chart  
+- **X-axis**: Product categories (Physical characteristics / Performance parameters / User experience / Durability / Ease of installation)  
+- **Y-axis**: Frequency of pain point mentions (range: 0-200+)  
+- **Stack layers**: Levels of severity (1-5 scale)  
+- **Data Interpretation**: Identify which severity levels require the most improvement in each category  
+- **Data Required for Chart**:  
+  - Product categories (categorical data)  
+  - Frequency of pain point mentions per category (numerical data, 0-200+)  
+  - Distribution of severity levels within each category (numerical data, 1-5)  
+  - Customer satisfaction ratings per category and severity level (numerical data, 0-100%)  
+  - Review content related to each category and severity level (text data)  
+  - Percentage distribution of pain points across categories (numerical data, percentage)  
+
+### Dimension 2: Market Gap Analysis  
+**Core Issue**: Misalignment between customer needs and existing product features  
+
+**Required Data**:  
+- Customer usage scenario descriptions  
+- Product attribute coverage status  
+- Competitor product feature comparison matrix  
+- Frequency of unmet needs mentions  
+- Satisfaction data for various usage scenarios  
+- Market gap severity rating  
+- Feature coverage rates for different brands  
+
+**Chart 1: Usage Scenario vs. Product Attribute Matching Analysis**  
+- **Chart Type**: Heatmap matrix  
+- **X-axis**: Product attribute categories (Physical characteristics / Performance parameters / Smart features / Design aspects, etc.)  
+- **Y-axis**: Customer usage scenarios (Home use / Commercial application / Special environments / Technical integration, etc.)  
+- **Cell value**: Frequency of joint mentions  
+- **Data Interpretation**: Identify market gap areas with high demand but low satisfaction  
+- **Data Required for Chart**:  
+  - Product attribute categories (categorical data)  
+  - Customer usage scenarios (categorical data)  
+  - Joint mention counts for each attribute-scenario pair (numerical data)  
+  - Satisfaction ratings for each attribute-scenario pair (numerical data, 0-100%)  
+  - Review content related to each attribute-scenario pair (text data)  
+  - Brand and product information per review (categorical data)  
+  - Demand level for each attribute-scenario pair (numerical data)  
+
+**Chart 2: Market Gap Opportunity Priority Matrix**  
+- **Chart Type**: Bubble chart  
+- **X-axis**: Market demand intensity (based on mention frequency, range: 0-100)  
+- **Y-axis**: Current solution gap level (rating 1-5)  
+- **Bubble size**: Potential market value (composite assessment based on demand volume and competition level)  
+- **Data Interpretation**: Large bubbles in the upper-right quadrant represent the most valuable optimization opportunities  
+- **Data Required for Chart**:  
+  - Market demand intensity per opportunity (numerical data, 0-100)  
+  - Current solution gap level per opportunity (numerical data, 1-5)  
+  - Potential market value per opportunity (numerical data)  
+  - Implementation difficulty level per opportunity (numerical or categorical data)  
+  - Opportunity description (text data)  
+  - Related review content per opportunity (text data)  
+  - Competition level assessment per opportunity (numerical data)  
+  - Demand volume per opportunity (numerical data)  
+
+### Dimension 3: Competitive Advantage Analysis  
+**Core Issue**: Product advantages relative to competitors and areas for improvement  
+
+**Required Data**:  
+- Feature praises in positive reviews  
+- Mention frequencies for various feature characteristics  
+- Customer comparative feedback on competitor products  
+- Comparative feature satisfaction ratings  
+- Brand awareness and loyalty metrics  
+- Competitor product feature coverage matrix  
+- Customer preference trend data  
+
+**Chart 1: Top Praised Features Ranked by Mention Volume**  
+- **Chart Type**: Horizontal bar chart  
+- **X-axis**: Number of mentions (range: 0-300+)  
+- **Y-axis**: Feature categories (Smart control / Appearance design / Ease of installation / Performance stability / Price advantage, etc.)  
+- **Data Interpretation**: Identify core competitive advantages with high mention volume and satisfaction ratings  
+- **Data Required for Chart**:  
+  - Feature categories (categorical data)  
+  - Mention counts per feature (numerical data, 0-300+)  
+  - Satisfaction ratings per feature (numerical data, 0-100%)  
+  - Representative review excerpts for each feature (text data)  
+  - Detailed review content per feature (text data)  
+  - Brand and product information per review (categorical data)  
+  - Positive sentiment intensity per feature mention (numerical data)  
+
+**Chart 2: Product Feature Competitiveness Comparison Matrix**  
+- **Chart Type**: Radar chart  
+- **Axes**: 6-8 key feature dimensions (e.g., Performance / Aesthetic design / Ease of operation / Price competitiveness / After-sales service / Innovative features, etc.)  
+- **Data series**: Target product and 2-3 main competitors  
+- **Value range**: 0-5 (based on combined ratings of customer satisfaction and feature completeness)  
+- **Data Interpretation**: Identify advantage dimensions relative to competitors and areas needing improvement  
+- **Data Required for Chart**:  
+  - Key feature dimensions (categorical data, 6-8 dimensions)  
+  - Combined ratings of target product for all dimensions (numerical data, 0-5)  
+  - Combined ratings of 2-3 competitor products for all dimensions (numerical data, 0-5)  
+  - Customer satisfaction ratings per dimension per product (numerical data)  
+  - Feature completeness evaluations per dimension per product (numerical data)  
+  - Supporting review content for each dimension rating (text data)  
+  - Data source references for each dimension evaluation  
+  - Comparative advantage/disadvantage assessments per dimension (categorical or numerical data)
