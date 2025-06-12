@@ -8,4 +8,6 @@ python-multipart>=0.0.6
 duckduckgo-search>=4.0.0
 python-dotenv>=1.0.0
 openai>=1.0.0
-pandas>=2.0.0 
+pandas>=2.0.0
+arize-phoenix==10.10.0
+openinference-instrumentation-smolagents==0.1.13

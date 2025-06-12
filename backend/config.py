@@ -27,6 +27,10 @@ class Settings:
     # 日志设置
     LOG_LEVEL: str = os.getenv("LOG_LEVEL", "INFO")
     
+    # 监控设置
+    PROJECT_NAME: str = os.getenv("PROJECT_NAME", "Customer-Success")
+    PHOENIX_ENDPOINT: Optional[str] = os.getenv("PHOENIX_ENDPOINT")
+    
     # Agent 设置
     MAX_RESPONSE_LENGTH: int = int(os.getenv("MAX_RESPONSE_LENGTH", "2000"))
     STREAM_DELAY: float = float(os.getenv("STREAM_DELAY", "0.2"))

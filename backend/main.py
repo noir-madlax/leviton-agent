@@ -8,6 +8,8 @@ from typing import Optional
 from contextlib import asynccontextmanager
 from config import settings
 from tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
+from phoenix.otel import register
+from openinference.instrumentation.smolagents import SmolagentsInstrumentor
 
 # 配置日志
 logging.basicConfig(level=getattr(logging, settings.LOG_LEVEL))
@@ -22,6 +24,21 @@ tool_collection_context = None
 async def lifespan(app: FastAPI):
     """在应用启动时初始化 Agent，在关闭时清理资源。"""
     global agent, init_error, tool_collection_context
+
+    # 初始化监控
+    if settings.PHOENIX_ENDPOINT:
+        try:
+            tracer_provider = register(
+                project_name=settings.PROJECT_NAME,
+                endpoint=settings.PHOENIX_ENDPOINT
+            )
+            SmolagentsInstrumentor().instrument(tracer_provider=tracer_provider)
+            logger.info(f"Phoenix 监控已启动，项目: {settings.PROJECT_NAME}, 端点: {settings.PHOENIX_ENDPOINT}")
+        except Exception as e:
+            logger.error(f"Phoenix 监控初始化失败: {e}", exc_info=True)
+    else:
+        logger.warning("未配置 PHOENIX_ENDPOINT，Phoenix 监控未启动。")
+    
     logger.info("FastAPI 应用启动，开始初始化 Agent...")
     
     try:
@@ -266,7 +283,7 @@ async def agent_query(request: dict):
         # 准备完整的查询（包含 prompt）
         complete_query = prepare_query_with_prompt(query)
         
-        result = await asyncio.to_thread(agent.run, complete_query)
+        result = await asyncio.to_thread(agent.run, query)
         return {
             "status": "success",
             "query": query,
