@@ -110,6 +110,115 @@ export default function DynamicChart() {
   }
 ];
 
+// 多图表示例 - 产品市场分析
+const mockMultiChartExample = {
+  chart1: {
+    code: `const painPointData = [
+  { category: '安装困难', reviewCount: 45, severity: 4.2, affectedCustomers: 180 },
+  { category: '产品耐用性', reviewCount: 38, severity: 4.8, affectedCustomers: 150 },
+  { category: '用户体验', reviewCount: 67, severity: 3.5, affectedCustomers: 280 },
+  { category: '性能参数', reviewCount: 23, severity: 4.0, affectedCustomers: 90 },
+  { category: '外观设计', reviewCount: 15, severity: 2.8, affectedCustomers: 60 }
+];
+
+const DynamicChart = () => {
+  return (
+    <ResponsiveContainer width="100%" height={400}>
+      <ScatterChart data={painPointData} margin={{ top: 20, right: 30, left: 20, bottom: 50 }}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis 
+          dataKey="reviewCount" 
+          name="评论数量"
+          label={{ value: '评论数量', position: 'insideBottom', offset: -10 }}
+        />
+        <YAxis 
+          dataKey="severity"
+          name="严重程度"
+          domain={[1, 5]}
+          label={{ value: '严重程度评分', angle: -90, position: 'insideLeft' }}
+        />
+        <Tooltip 
+          formatter={(value, name) => {
+            if (name === 'affectedCustomers') return [\`\${value}人\`, '影响客户数'];
+            if (name === 'severity') return [\`\${value}分\`, '严重程度'];
+            if (name === 'reviewCount') return [\`\${value}条\`, '评论数量'];
+            return [value, name];
+          }}
+          labelFormatter={(label) => \`痛点类别: \${label}\`}
+        />
+        <Legend />
+        <Scatter 
+          dataKey="severity" 
+          fill="#ff6b6b"
+          name="严重程度评分"
+        >
+          {painPointData.map((entry, index) => (
+            <Cell key={\`cell-\${index}\`} 
+              fill={entry.severity > 4 ? '#ff4757' : entry.severity > 3 ? '#ffa502' : '#7bed9f'} 
+            />
+          ))}
+        </Scatter>
+      </ScatterChart>
+    </ResponsiveContainer>
+  );
+};`,
+    explanation: "该散点图展示了客户痛点的严重程度与评论数量的关系。X轴表示每个痛点的评论数量，Y轴表示严重程度评分(1-5分)，点的颜色表示严重程度级别：红色(高严重度>4分)、橙色(中等严重度3-4分)、绿色(低严重度<3分)。",
+    insights: "从图表可以看出：用户体验问题虽然严重程度中等(3.5分)，但评论数量最多(67条)，影响客户最广泛，需要优先关注。产品耐用性问题严重程度最高(4.8分)且评论数量较多，是最需要立即解决的核心痛点。安装困难也是高严重度问题，建议改进安装指导或设计。"
+  },
+  chart2: {
+    code: `const marketGapData = [
+  { opportunity: '智能控制功能', demandIntensity: 85, gapLevel: 4.2, marketValue: 95 },
+  { opportunity: '能耗优化', demandIntensity: 72, gapLevel: 3.8, marketValue: 80 },
+  { opportunity: '多场景适配', demandIntensity: 68, gapLevel: 4.5, marketValue: 75 },
+  { opportunity: '简化安装', demandIntensity: 90, gapLevel: 3.2, marketValue: 88 },
+  { opportunity: '耐用性提升', demandIntensity: 78, gapLevel: 4.8, marketValue: 92 }
+];
+
+const DynamicChart = () => {
+  return (
+    <ResponsiveContainer width="100%" height={400}>
+      <ScatterChart data={marketGapData} margin={{ top: 20, right: 30, left: 20, bottom: 50 }}>
+        <CartesianGrid strokeDasharray="3 3" />
+        <XAxis 
+          dataKey="demandIntensity" 
+          name="市场需求强度"
+          domain={[0, 100]}
+          label={{ value: '市场需求强度', position: 'insideBottom', offset: -10 }}
+        />
+        <YAxis 
+          dataKey="gapLevel"
+          name="解决方案缺口"
+          domain={[1, 5]}
+          label={{ value: '解决方案缺口程度', angle: -90, position: 'insideLeft' }}
+        />
+        <Tooltip 
+          cursor={{ strokeDasharray: '3 3' }}
+          formatter={(value, name) => {
+            if (name === 'marketValue') return [\`\${value}%\`, '市场价值'];
+            if (name === 'gapLevel') return [\`\${value}分\`, '缺口程度'];
+            if (name === 'demandIntensity') return [\`\${value}分\`, '需求强度'];
+            return [value, name];
+          }}
+          labelFormatter={(label) => \`机会点: \${label}\`}
+        />
+        <Legend />
+        <Scatter dataKey="gapLevel" fill="#3742fa" name="解决方案缺口程度">
+          {marketGapData.map((entry, index) => (
+            <Cell 
+              key={\`cell-\${index}\`} 
+              fill={entry.marketValue > 80 ? '#2ed573' : entry.marketValue > 60 ? '#ffa502' : '#ff6348'}
+            />
+          ))}
+        </Scatter>
+      </ScatterChart>
+    </ResponsiveContainer>
+  );
+};`,
+    explanation: "该市场机会优先级矩阵展示了不同优化机会的市场需求强度与当前解决方案缺口的关系。X轴表示市场需求强度(0-100分)，Y轴表示当前解决方案缺口程度(1-5分)，气泡颜色表示潜在市场价值：绿色(高价值>80%)、橙色(中等价值60-80%)、红色(低价值<60%)。",
+    insights: "右上角的高价值机会点最值得投资：多场景适配(需求68分，缺口4.5分)和耐用性提升(需求78分，缺口4.8分)是最有潜力的优化方向。价格竞争力虽然需求最高(95分)，但缺口适中且市场价值相对较低，可能竞争激烈。简化安装需求很高但缺口较小，说明市场已有较好解决方案。"
+  }
+};
+
 export async function POST(request: NextRequest) {
   try {
     const { messages } = await request.json();
@@ -118,33 +227,58 @@ export async function POST(request: NextRequest) {
     // 模拟API延迟
     await new Promise(resolve => setTimeout(resolve, 1500));
     
-    // 根据用户消息简单选择图表类型
-    let chartExample;
     const message = lastMessage.content.toLowerCase();
     
-    if (message.includes('趋势') || message.includes('变化') || message.includes('时间')) {
-      chartExample = mockChartExamples[0]; // 折线图
-    } else if (message.includes('对比') || message.includes('比较') || message.includes('产品')) {
-      chartExample = mockChartExamples[1]; // 柱状图
-    } else if (message.includes('占比') || message.includes('分布') || message.includes('比例')) {
-      chartExample = mockChartExamples[2]; // 饼图
+    // 检查是否需要生成多图表（产品市场分析）
+    const needsMultiChart = message.includes('产品市场分析') || 
+                           message.includes('痛点分析') || 
+                           message.includes('市场机会') ||
+                           message.includes('竞争分析') ||
+                           (message.includes('分析') && (message.includes('多个') || message.includes('维度')));
+    
+    if (needsMultiChart) {
+      // 返回多图表响应
+      const response = {
+        role: 'assistant',
+        content: '我已经为您生成了产品市场分析报告，包含客户痛点分析和市场机会分析两个维度的图表。',
+        chartData: {
+          ...mockMultiChartExample,
+          timestamp: Date.now(),
+          type: 'multiple'
+        }
+      };
+      
+      return NextResponse.json(response);
+      
     } else {
-      // 随机选择一个
-      chartExample = mockChartExamples[Math.floor(Math.random() * mockChartExamples.length)];
-    }
-    
-    const response = {
-      role: 'assistant',
-      content: `我已经根据您的需求生成了一个${chartExample.type === 'line' ? '折线' : chartExample.type === 'bar' ? '柱状' : '饼状'}图表。`,
-      chartData: {
-        code: chartExample.code,
-        explanation: chartExample.explanation,
-        insights: chartExample.insights,
-        timestamp: Date.now()
+      // 返回单图表响应（原有逻辑）
+      let chartExample;
+      
+      if (message.includes('趋势') || message.includes('变化') || message.includes('时间')) {
+        chartExample = mockChartExamples[0]; // 折线图
+      } else if (message.includes('对比') || message.includes('比较') || message.includes('产品')) {
+        chartExample = mockChartExamples[1]; // 柱状图
+      } else if (message.includes('占比') || message.includes('分布') || message.includes('比例')) {
+        chartExample = mockChartExamples[2]; // 饼图
+      } else {
+        // 随机选择一个
+        chartExample = mockChartExamples[Math.floor(Math.random() * mockChartExamples.length)];
       }
-    };
-    
-    return NextResponse.json(response);
+      
+      const response = {
+        role: 'assistant',
+        content: `我已经根据您的需求生成了一个${chartExample.type === 'line' ? '折线' : chartExample.type === 'bar' ? '柱状' : '饼状'}图表。`,
+        chartData: {
+          code: chartExample.code,
+          explanation: chartExample.explanation,
+          insights: chartExample.insights,
+          timestamp: Date.now(),
+          type: 'single'
+        }
+      };
+      
+      return NextResponse.json(response);
+    }
     
   } catch (error) {
     console.error('API Error:', error);
