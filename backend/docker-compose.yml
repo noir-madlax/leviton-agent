@@ -10,7 +10,7 @@ services:
       - HOST=0.0.0.0
       - PORT=8000
       - DEBUG=false
-      - API_KEY=${api_key}
+      - API_KEY=${API_KEY}
       - MAX_ITERATIONS=${MAX_ITERATIONS}
       - MCP_ACCESS_TOKEN=${MCP_ACCESS_TOKEN}
       - PROJECT_NAME=${PROJECT_NAME}

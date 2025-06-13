@@ -17,7 +17,7 @@ class Settings:
     # MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-flash-preview-05-20")
     MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-pro-preview")
     HF_TOKEN: Optional[str] = os.getenv("HF_TOKEN")
-    API_KEY: str = os.getenv("api_key")
+    API_KEY: str = os.getenv("API_KEY")
     
     # MCP 设置
     MCP_ACCESS_TOKEN: str = os.getenv("MCP_ACCESS_TOKEN")
