@@ -11,7 +11,7 @@ import { CompilerResult } from './types';
 export function compileChartCode(chartCode: string): CompilerResult {
   try {
     // 第一步：预处理代码，清理转义字符
-    let cleanedCode = chartCode
+    const cleanedCode = chartCode
       .replace(/\\"/g, '"')      // 修复双重转义的引号
       .replace(/\\'/g, "'")      // 修复双重转义的单引号
       .replace(/\\\\/g, '\\')    // 修复双重转义的反斜杠
