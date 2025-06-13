@@ -104,6 +104,12 @@ export function ChatInterface() {
       
       // 解析JSON数据
       const parsedData = JSON.parse(jsonData);
+      
+      // 添加调试日志
+      console.log('🎯 解析的图表数据:', parsedData);
+      if (parsedData.chart1?.code) {
+        console.log('📊 Chart1 代码片段:', parsedData.chart1.code.substring(0, 200) + '...');
+      }
 
       // 判断是单图表还是多图表
       if (parsedData.chartData) {

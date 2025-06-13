@@ -1,16 +1,17 @@
 import { NextRequest } from 'next/server';
 
-// 模拟延迟函数
+// 后端API配置
+const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
+
+// 模拟延迟函数（保留用于错误处理时的降级）
 function delay(ms: number) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-// Mock图表数据 - 遵循step6-chart-code-samples.md格式
-const mockChartData = {
-  // 单图表示例
-  singleChart: {
-    chartData: {
-      code: `const salesData = [
+// 降级用的Mock图表数据（仅在后端不可用时使用）
+const fallbackMockData = {
+  chartData: {
+    code: `const salesData = [
   { month: 'Jan', sales: 4000, profit: 2400, growth: 12 },
   { month: 'Feb', sales: 3000, profit: 1398, growth: -8 },
   { month: 'Mar', sales: 2000, profit: 9800, growth: 25 },
@@ -34,133 +35,172 @@ const DynamicChart = () => {
     </ResponsiveContainer>
   );
 };`,
-      explanation: "这是一个展示6个月销售和利润趋势的折线图。可以清楚地看到销售额和利润的变化情况，帮助分析业务发展趋势。",
-      insights: "从数据可以看出3月份利润达到峰值9800，而销售额在1月份最高4000。利润和销售额不完全正相关，说明可能存在成本控制的优化空间。5月份销售额下滑较大，需要重点关注。"
-    }
-  },
-
-  // 多图表示例 - 来自step6-chart-code-samples.md
-  multiChart: {
-    chart1: {
-      code: `const painPointData = [
-  { category: '安装困难', reviewCount: 45, severity: 4.2, affectedCustomers: 180 },
-  { category: '产品耐用性', reviewCount: 38, severity: 4.8, affectedCustomers: 150 },
-  { category: '用户体验', reviewCount: 67, severity: 3.5, affectedCustomers: 280 },
-  { category: '性能参数', reviewCount: 23, severity: 4.0, affectedCustomers: 90 },
-  { category: '外观设计', reviewCount: 15, severity: 2.8, affectedCustomers: 60 }
-];
-
-const DynamicChart = () => {
-  return (
-    <ResponsiveContainer width="100%" height={400}>
-      <ScatterChart data={painPointData} margin={{ top: 50, right: 30, left: 40, bottom: 80 }}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis 
-          dataKey="reviewCount" 
-          name="评论数量"
-          label={{ value: '评论数量', position: 'insideBottom', offset: -10 }}
-        />
-        <YAxis 
-          dataKey="severity"
-          name="严重程度"
-          domain={[1, 5]}
-          label={{ value: '严重程度评分', angle: -90, position: 'insideLeft' }}
-        />
-        <Tooltip 
-          formatter={(value, name) => {
-            if (name === 'affectedCustomers') return [\`\${value}人\`, '影响客户数'];
-            if (name === 'severity') return [\`\${value}分\`, '严重程度'];
-            if (name === 'reviewCount') return [\`\${value}条\`, '评论数量'];
-            return [value, name];
-          }}
-          labelFormatter={(label) => \`痛点类别: \${label}\`}
-        />
-        <Legend verticalAlign="top" height={36} />
-        <Scatter 
-          dataKey="severity" 
-          fill="#ff6b6b"
-          name="严重程度评分"
-        >
-          {painPointData.map((entry, index) => (
-            <Cell key={\`cell-\${index}\`} 
-              fill={entry.severity > 4 ? '#ff4757' : entry.severity > 3 ? '#ffa502' : '#7bed9f'} 
-            />
-          ))}
-        </Scatter>
-      </ScatterChart>
-    </ResponsiveContainer>
-  );
-};`,
-      explanation: "该散点图展示了客户痛点的严重程度与评论数量的关系。X轴表示每个痛点的评论数量，Y轴表示严重程度评分(1-5分)，点的颜色表示严重程度级别：红色(高严重度>4分)、橙色(中等严重度3-4分)、绿色(低严重度<3分)。",
-      insights: "从图表可以看出：用户体验问题虽然严重程度中等(3.5分)，但评论数量最多(67条)，影响客户最广泛，需要优先关注。产品耐用性问题严重程度最高(4.8分)且评论数量较多，是最需要立即解决的核心痛点。安装困难也是高严重度问题，建议改进安装指导或设计。"
-    },
-    chart2: {
-      code: `const marketGapData = [
-  { opportunity: '智能控制功能', demandIntensity: 85, gapLevel: 4.2, marketValue: 95 },
-  { opportunity: '能耗优化', demandIntensity: 72, gapLevel: 3.8, marketValue: 80 },
-  { opportunity: '多场景适配', demandIntensity: 68, gapLevel: 4.5, marketValue: 75 },
-  { opportunity: '简化安装', demandIntensity: 90, gapLevel: 3.2, marketValue: 88 },
-  { opportunity: '耐用性提升', demandIntensity: 78, gapLevel: 4.8, marketValue: 92 }
-];
-
-const DynamicChart = () => {
-  return (
-    <ResponsiveContainer width="100%" height={400}>
-      <ScatterChart data={marketGapData} margin={{ top: 50, right: 30, left: 40, bottom: 80 }}>
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis 
-          dataKey="demandIntensity" 
-          name="市场需求强度"
-          domain={[0, 100]}
-          label={{ value: '市场需求强度', position: 'insideBottom', offset: -10 }}
-        />
-        <YAxis 
-          dataKey="gapLevel"
-          name="解决方案缺口"
-          domain={[1, 5]}
-          label={{ value: '解决方案缺口程度', angle: -90, position: 'insideLeft' }}
-        />
-        <Tooltip 
-          cursor={{ strokeDasharray: '3 3' }}
-          formatter={(value, name) => {
-            if (name === 'marketValue') return [\`\${value}%\`, '市场价值'];
-            if (name === 'gapLevel') return [\`\${value}分\`, '缺口程度'];
-            if (name === 'demandIntensity') return [\`\${value}分\`, '需求强度'];
-            return [value, name];
-          }}
-          labelFormatter={(label) => \`机会点: \${label}\`}
-        />
-        <Legend verticalAlign="top" height={36} />
-        <Scatter dataKey="gapLevel" fill="#3742fa" name="解决方案缺口程度">
-          {marketGapData.map((entry, index) => (
-            <Cell 
-              key={\`cell-\${index}\`} 
-              fill={entry.marketValue > 80 ? '#2ed573' : entry.marketValue > 60 ? '#ffa502' : '#ff6348'}
-            />
-          ))}
-        </Scatter>
-      </ScatterChart>
-    </ResponsiveContainer>
-  );
-};`,
-      explanation: "该市场机会优先级矩阵展示了不同优化机会的市场需求强度与当前解决方案缺口的关系。X轴表示市场需求强度(0-100分)，Y轴表示当前解决方案缺口程度(1-5分)，气泡颜色表示潜在市场价值：绿色(高价值>80%)、橙色(中等价值60-80%)、红色(低价值<60%)。",
-      insights: "右上角的高价值机会点最值得投资：多场景适配(需求68分，缺口4.5分)和耐用性提升(需求78分，缺口4.8分)是最有潜力的优化方向。价格竞争力虽然需求最高(95分)，但缺口适中且市场价值相对较低，可能竞争激烈。简化安装需求很高但缺口较小，说明市场已有较好解决方案。"
-    }
+    explanation: "这是一个展示6个月销售和利润趋势的折线图（降级数据）。",
+    insights: "后端连接失败，显示降级数据。请检查后端服务状态。"
   }
 };
 
-// 根据查询内容选择合适的mock数据
-function getMockResponse(query: string) {
-  const lowerQuery = query.toLowerCase();
+// 处理后端SSE流式响应
+async function streamFromBackend(query: string, controller: ReadableStreamDefaultController) {
+  const encoder = new TextEncoder();
   
-  // 检查是否询问多维度分析
-  if (lowerQuery.includes('痛点') || lowerQuery.includes('市场') || lowerQuery.includes('竞争') || 
-      lowerQuery.includes('分析') || lowerQuery.includes('对比') || lowerQuery.includes('多个')) {
-    return mockChartData.multiChart;
+  try {
+    // 调用后端的SSE流式接口
+    const response = await fetch(`${BACKEND_URL}/agent-stream?query=${encodeURIComponent(query)}`, {
+      method: 'GET',
+      headers: {
+        'Accept': 'text/event-stream',
+        'Cache-Control': 'no-cache',
+      },
+    });
+
+    if (!response.ok) {
+      throw new Error(`后端响应错误: ${response.status} ${response.statusText}`);
+    }
+
+    if (!response.body) {
+      throw new Error('后端响应体为空');
+    }
+
+    const reader = response.body.getReader();
+    const decoder = new TextDecoder();
+    let buffer = '';
+
+    try {
+      while (true) {
+        const { value, done } = await reader.read();
+        
+        if (done) {
+          // 处理剩余缓冲区内容
+          if (buffer.trim()) {
+            await processSSEMessage(buffer, controller, encoder);
+          }
+          break;
+        }
+
+        // 将接收到的数据添加到缓冲区
+        buffer += decoder.decode(value, { stream: true });
+        
+        // 按行处理SSE数据
+        const lines = buffer.split('\n');
+        buffer = lines.pop() || ''; // 保留最后一个可能不完整的行
+
+        for (const line of lines) {
+          if (line.trim()) {
+            await processSSEMessage(line, controller, encoder);
+          }
+        }
+      }
+    } finally {
+      reader.releaseLock();
+    }
+
+  } catch (error) {
+    console.error('后端连接失败:', error);
+    // 降级到mock数据
+    controller.enqueue(encoder.encode('⚠️ 后端连接失败，使用降级数据...\n\n'));
+    await delay(500);
+    
+    // 返回降级的mock数据
+    controller.enqueue(encoder.encode('<<<CHART_START>>>\n'));
+    controller.enqueue(encoder.encode('<<<CHART_TYPE:fallback>>>\n'));
+    controller.enqueue(encoder.encode(JSON.stringify(fallbackMockData, null, 2)));
+    controller.enqueue(encoder.encode('\n<<<CHART_END>>>\n\n'));
+    
+    controller.enqueue(encoder.encode(`降级说明：${fallbackMockData.chartData.explanation}\n\n`));
+    controller.enqueue(encoder.encode(`系统提示：${fallbackMockData.chartData.insights}\n`));
   }
+}
+
+// 处理单个SSE消息
+async function processSSEMessage(line: string, controller: ReadableStreamDefaultController, encoder: TextEncoder) {
+  if (!line.trim()) return;
   
-  // 默认返回单图表
-  return mockChartData.singleChart;
+  // SSE格式：data: {json}
+  if (line.startsWith('data: ')) {
+    try {
+      const jsonStr = line.substring(6); // 移除 "data: " 前缀
+      
+      // 跳过特殊标记
+      if (jsonStr === '[DONE]' || jsonStr.includes('[DONE]')) {
+        return;
+      }
+      
+      const data = JSON.parse(jsonStr);
+      
+      // 处理不同类型的后端响应
+      if (data.status === 'error') {
+        controller.enqueue(encoder.encode(`❌ 错误: ${data.error}\n\n`));
+      } else if (data.status === 'started') {
+        controller.enqueue(encoder.encode(`🚀 ${data.message}\n\n`));
+      } else if (data.status === 'processing') {
+        controller.enqueue(encoder.encode(`⚙️ ${data.message}\n\n`));
+      } else if (data.status === 'streaming') {
+        // 检查是否包含图表数据
+        if (data.message && typeof data.message === 'string') {
+          // 尝试解析是否为JSON格式的图表数据
+          if (data.message.startsWith('{') && (data.message.includes('chartData') || data.message.includes('chart1') || data.message.includes('chart2'))) {
+            try {
+              const chartData = JSON.parse(data.message);
+              
+              // 检查是否为有效的图表数据格式
+              const isValidChartData = chartData.chartData || chartData.chart1 || chartData.chart2;
+              
+              if (isValidChartData) {
+                console.log('🎯 检测到图表数据:', chartData);
+                
+                // 添加图表标记
+                controller.enqueue(encoder.encode('<<<CHART_START>>>\n'));
+                controller.enqueue(encoder.encode('<<<CHART_TYPE:backend>>>\n'));
+                controller.enqueue(encoder.encode(JSON.stringify(chartData, null, 2)));
+                controller.enqueue(encoder.encode('\n<<<CHART_END>>>\n\n'));
+                
+                // 添加说明文字
+                if (chartData.chartData) {
+                  // 单图表格式
+                  controller.enqueue(encoder.encode(`📊 图表说明：${chartData.chartData.explanation || '已生成图表'}\n\n`));
+                  controller.enqueue(encoder.encode(`💡 数据洞察：${chartData.chartData.insights || '数据分析完成'}\n\n`));
+                } else {
+                  // 多图表格式
+                  controller.enqueue(encoder.encode('📊 多维度分析图表已生成\n\n'));
+                  if (chartData.chart1) {
+                    controller.enqueue(encoder.encode(`📈 图表1：${chartData.chart1.explanation || '图表1已生成'}\n\n`));
+                    controller.enqueue(encoder.encode(`💡 洞察1：${chartData.chart1.insights || '分析完成'}\n\n`));
+                  }
+                  if (chartData.chart2) {
+                    controller.enqueue(encoder.encode(`📈 图表2：${chartData.chart2.explanation || '图表2已生成'}\n\n`));
+                    controller.enqueue(encoder.encode(`💡 洞察2：${chartData.chart2.insights || '分析完成'}\n\n`));
+                  }
+                }
+                
+                console.log('✅ 图表数据已发送到前端');
+                return; // 图表数据处理完成，不再作为普通消息处理
+              } else {
+                console.log('⚠️ 不是有效的图表数据格式');
+              }
+            } catch (parseError) {
+              console.error('❌ 解析图表数据失败:', parseError);
+            }
+          }
+          
+          // 普通文本消息或解析失败的消息
+          controller.enqueue(encoder.encode(`${data.message}\n\n`));
+        }
+      } else if (data.status === 'completed') {
+        controller.enqueue(encoder.encode(`✅ ${data.message}\n\n`));
+      } else {
+        // 其他未知格式，直接输出
+        controller.enqueue(encoder.encode(`${JSON.stringify(data)}\n\n`));
+      }
+      
+    } catch {
+      // 如果不是有效JSON，可能是普通文本，直接输出
+      controller.enqueue(encoder.encode(`${line}\n\n`));
+    }
+  } else {
+    // 非SSE格式的行，直接输出
+    controller.enqueue(encoder.encode(`${line}\n\n`));
+  }
 }
 
 export async function POST(request: NextRequest) {
@@ -175,55 +215,21 @@ export async function POST(request: NextRequest) {
     const latestMessage = messages[messages.length - 1];
     const query = latestMessage.content || '';
 
+    if (!query.trim()) {
+      return new Response('Empty query', { status: 400 });
+    }
+
     // 创建流式响应
-    const encoder = new TextEncoder();
     const stream = new ReadableStream({
       async start(controller) {
         try {
-          // 模拟思考过程
-          await delay(500);
-          controller.enqueue(encoder.encode('正在分析您的数据需求...\n\n'));
+          // 调用后端流式接口
+          await streamFromBackend(query, controller);
           
-          await delay(800);
-          controller.enqueue(encoder.encode('正在查询相关数据源...\n\n'));
-          
-          await delay(600);
-          controller.enqueue(encoder.encode('正在生成可视化图表...\n\n'));
-          
-          await delay(700);
-          
-          // 根据查询返回相应的图表数据
-          const mockResponse = getMockResponse(query);
-          
-          // 格式化输出 - 添加图表标记
-          controller.enqueue(encoder.encode('<<<CHART_START>>>\n'));
-          controller.enqueue(encoder.encode('<<<CHART_TYPE:analysis>>>\n'));
-          controller.enqueue(encoder.encode(JSON.stringify(mockResponse, null, 2)));
-          controller.enqueue(encoder.encode('\n<<<CHART_END>>>\n\n'));
-          
-          await delay(300);
-          controller.enqueue(encoder.encode('<<<INSIGHTS_START>>>\n'));
-          
-          if (mockResponse.chartData) {
-            // 单图表格式
-            controller.enqueue(encoder.encode(`图表说明：${mockResponse.chartData.explanation}\n\n`));
-            controller.enqueue(encoder.encode(`数据洞察：${mockResponse.chartData.insights}\n`));
-          } else {
-            // 多图表格式
-            controller.enqueue(encoder.encode('多维度分析结果已生成，包含客户痛点分析和市场机会分析两个图表。\n\n'));
-            if (mockResponse.chart1) {
-              controller.enqueue(encoder.encode(`图表1说明：${mockResponse.chart1.explanation}\n\n`));
-              controller.enqueue(encoder.encode(`图表1洞察：${mockResponse.chart1.insights}\n\n`));
-            }
-            if (mockResponse.chart2) {
-              controller.enqueue(encoder.encode(`图表2说明：${mockResponse.chart2.explanation}\n\n`));
-              controller.enqueue(encoder.encode(`图表2洞察：${mockResponse.chart2.insights}\n`));
-            }
-          }
-          
-          controller.enqueue(encoder.encode('<<<INSIGHTS_END>>>\n'));
+          // 完成流式传输
           controller.close();
         } catch (error) {
+          console.error('流式传输错误:', error);
           controller.error(error);
         }
       }

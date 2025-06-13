@@ -10,8 +10,19 @@ import { CompilerResult } from './types';
  */
 export function compileChartCode(chartCode: string): CompilerResult {
   try {
-    // 第一步：JSX编译
-    const compiledCode = transform(chartCode, {
+    // 第一步：预处理代码，清理转义字符
+    let cleanedCode = chartCode
+      .replace(/\\"/g, '"')      // 修复双重转义的引号
+      .replace(/\\'/g, "'")      // 修复双重转义的单引号
+      .replace(/\\\\/g, '\\')    // 修复双重转义的反斜杠
+      .trim();                   // 清理首尾空白
+
+    // 添加调试日志
+    console.log('🔧 原始代码:', chartCode.substring(0, 200) + '...');
+    console.log('✨ 清理后的代码:', cleanedCode.substring(0, 200) + '...');
+
+    // 第二步：JSX编译
+    const compiledCode = transform(cleanedCode, {
       presets: ['react'],
       filename: 'dynamic-chart.jsx',
     }).code;

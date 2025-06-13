@@ -213,7 +213,7 @@ async def stream_agent_response(query: str):
 
         # 将结果分块发送
         if is_valid_json(result):
-            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}"
+            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"
         elif isinstance(result, str):
             # 按句号分割结果，更自然的分块方式
             sentences = result.split('。')
@@ -224,11 +224,11 @@ async def stream_agent_response(query: str):
                         'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
                         'chunk_index': i
                     }                 
-                    yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}"
+                    yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
                     await asyncio.sleep(settings.STREAM_DELAY)  # 控制流速
         else:
             # 如果结果不是字符串，直接发送
-            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}"
+            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"
         
         # 发送完成信号
         yield f"data: {json.dumps({'status': 'completed', 'message': '[DONE]'}, ensure_ascii=False)}\n\n"
