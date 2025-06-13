@@ -1,95 +1,142 @@
 'use client';
 
+import { useChat } from 'ai/react';
 import { useState } from 'react';
-
 import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Send, MessageSquare, TestTube2, ChevronDown, ChevronUp } from 'lucide-react';
-import { MessageList } from './message-list';
-import { ChatMessage } from '@/lib/types';
 import { useChart } from '@/contexts/chart-context';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 
+// 图表数据类型定义
+interface ChartData {
+  code: string;
+  explanation: string;
+  insights: string;
+}
+
+interface SingleChartData {
+  chartData: ChartData;
+  timestamp: number;
+  type: 'single';
+  chartType?: string;
+}
+
+interface MultiChartData {
+  chart1?: ChartData;
+  chart2?: ChartData;
+  chart3?: ChartData;
+  timestamp: number;
+  type: 'multiple';
+  chartType?: string;
+}
+
+type ExtractedChartData = SingleChartData | MultiChartData | null;
+
 export function ChatInterface() {
-  const [messages, setMessages] = useState<ChatMessage[]>([]);
-  const [input, setInput] = useState('');
-  const [isLoading, setIsLoading] = useState(false);
-  const { updateChart, setCompiling } = useChart();
+  const { updateChart, setCompiling, setError } = useChart();
   
   // 测试区域相关状态
   const [testDataOpen, setTestDataOpen] = useState(false);
   const [testInput, setTestInput] = useState('');
   const [testError, setTestError] = useState<string | null>(null);
 
-  // 发送消息函数
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    
-    if (!input.trim() || isLoading) return;
-
-    const userMessage: ChatMessage = {
-      id: Date.now().toString(),
-      role: 'user',
-      content: input.trim(),
-      timestamp: Date.now(),
-    };
-
-    const newMessages = [...messages, userMessage];
-    setMessages(newMessages);
-    setInput('');
-    setIsLoading(true);
-    setCompiling(true);
-
-    try {
-      // 调用API
-      const response = await fetch('/api/chat', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          messages: newMessages,
-        }),
-      });
-
+  // 使用 Vercel AI SDK 的 useChat hook
+  const { 
+    messages, 
+    input, 
+    handleInputChange, 
+    handleSubmit, 
+    isLoading,
+    error 
+  } = useChat({
+    api: '/api/chat',
+    streamProtocol: 'text',
+    onResponse: (response) => {
       if (!response.ok) {
-        throw new Error('API调用失败');
+        setError(`服务器错误: ${response.status}`);
+        return;
       }
-
-      const data = await response.json();
+      setCompiling(true);
+      setError(null);
+    },
+    onFinish: (message) => {
+      setCompiling(false);
       
-      if (data.error) {
-        throw new Error(data.error);
+      // 提取和处理图表数据
+      const chartData = extractChartFromMessage(message.content);
+      if (chartData) {
+        updateChart(chartData);
       }
-
-      const assistantMessage: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        role: 'assistant',
-        content: data.content,
-        timestamp: Date.now(),
-        chartData: data.chartData,
-      };
-
-      setMessages(prev => [...prev, assistantMessage]);
-      
-      if (data.chartData) {
-        updateChart(data.chartData);
-      }
-      
-    } catch (error) {
-      console.error('发送消息失败:', error);
-      const errorMessage: ChatMessage = {
-        id: (Date.now() + 1).toString(),
-        role: 'assistant',
-        content: '抱歉，生成图表时出现了错误。请稍后重试。',
-        timestamp: Date.now(),
-      };
-      setMessages(prev => [...prev, errorMessage]);
-    } finally {
-      setIsLoading(false);
+    },
+    onError: (error) => {
+      setCompiling(false);
+      setError(`连接失败: ${error.message}`);
     }
+  });
+
+  // 提取图表数据的函数
+  function extractChartFromMessage(content: string): ExtractedChartData {
+    try {
+      // 查找图表标记
+      const chartStartIndex = content.indexOf('<<<CHART_START>>>');
+      const chartEndIndex = content.indexOf('<<<CHART_END>>>');
+      
+      if (chartStartIndex === -1 || chartEndIndex === -1) {
+        return null;
+      }
+
+      // 提取图表类型
+      const typeMatch = content.match(/<<<CHART_TYPE:(\w+)>>>/);
+      const chartType = typeMatch ? typeMatch[1] : 'analysis';
+
+      // 提取图表JSON数据
+      const chartSection = content.substring(
+        chartStartIndex + '<<<CHART_START>>>'.length,
+        chartEndIndex
+      );
+      
+      // 移除类型标记，获取纯JSON
+      const jsonStart = chartSection.indexOf('>>>') + 3;
+      const jsonData = chartSection.substring(jsonStart).trim();
+      
+      // 解析JSON数据
+      const parsedData = JSON.parse(jsonData);
+
+      // 判断是单图表还是多图表
+      if (parsedData.chartData) {
+        return {
+          ...parsedData,
+          timestamp: Date.now(),
+          type: 'single' as const,
+          chartType
+        };
+      } else if (parsedData.chart1 || parsedData.chart2) {
+        return {
+          ...parsedData,
+          timestamp: Date.now(),
+          type: 'multiple' as const,
+          chartType
+        };
+      }
+
+      return null;
+    } catch (error) {
+      console.error('解析图表数据失败:', error);
+      setError('图表数据解析失败');
+      return null;
+    }
+  }
+
+  // 发送消息函数
+  const handleFormSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!input.trim() || isLoading) return;
+    
+    setError(null);
+    handleSubmit(e);
   };
 
   // 测试图表渲染函数 - 支持单图表和多图表格式
@@ -105,7 +152,7 @@ export function ChatInterface() {
       // 尝试解析JSON数据
       const parsedData = JSON.parse(testInput);
       
-      let chartDataWithTimestamp;
+      let chartDataWithTimestamp: SingleChartData | MultiChartData;
       
       // 检查是否为多图表格式
       if (parsedData.chart1 || parsedData.chart2) {
@@ -151,7 +198,7 @@ export function ChatInterface() {
 
         // 构建单图表数据
         chartDataWithTimestamp = {
-          ...chartData,
+          ...parsedData,
           timestamp: Date.now(),
           type: 'single' as const,
         };
@@ -163,16 +210,6 @@ export function ChatInterface() {
 
       // 更新图表
       updateChart(chartDataWithTimestamp);
-      
-      // 添加到消息列表
-      const testMessage: ChatMessage = {
-        id: Date.now().toString(),
-        role: 'assistant',
-        content: chartDataWithTimestamp.type === 'multiple' ? '测试多图表已生成' : '测试图表已生成',
-        timestamp: Date.now(),
-        chartData: chartDataWithTimestamp,
-      };
-      setMessages(prev => [...prev, testMessage]);
       
     } catch (error) {
       console.error('解析测试数据失败:', error);
@@ -187,10 +224,16 @@ export function ChatInterface() {
         <div className="flex items-center gap-2 p-4">
           <MessageSquare className="h-5 w-5" />
           <h2 className="font-semibold">AI 数据分析助手</h2>
+          {isLoading && (
+            <div className="flex items-center gap-2 text-sm text-muted-foreground">
+              <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full" />
+              生成中...
+            </div>
+          )}
         </div>
       </div>
       
-      {/* 测试数据输入区域 - 可折叠 */}
+      {/* 测试数据输入区域 - 可折叠，限制最大高度 */}
       <div className="flex-shrink-0 border-b bg-background">
         <div className="p-4">
           <Collapsible open={testDataOpen} onOpenChange={setTestDataOpen}>
@@ -203,110 +246,171 @@ export function ChatInterface() {
                 {testDataOpen ? <ChevronUp className="h-4 w-4" /> : <ChevronDown className="h-4 w-4" />}
               </Button>
             </CollapsibleTrigger>
-            <CollapsibleContent className="space-y-3 mt-3">
-              <div className="space-y-2">
-                <ScrollArea className="h-[250px] w-full border rounded-md">
-                  <Textarea
-                    value={testInput}
-                    onChange={(e) => setTestInput(e.target.value)}
-                    placeholder='粘贴 LLM 返回的 JSON 数据，支持以下格式：
-
-单图表格式：
+            <CollapsibleContent className="mt-4">
+              {/* 限制测试区域最大高度，内容可滚动 */}
+              <div className="max-h-[400px] overflow-y-auto">
+                <div className="space-y-4 pr-2">
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <label className="text-sm font-medium">
+                        输入图表数据 (JSON格式)
+                      </label>
+                      <Button
+                        variant="ghost"
+                        size="sm"
+                        onClick={() => {
+                          setTestInput('');
+                          setTestError(null);
+                        }}
+                        className="text-xs h-6 px-2"
+                      >
+                        清空
+                      </Button>
+                    </div>
+                    
+                    {/* 使用ScrollArea包装Textarea确保长内容可以滚动 */}
+                    <div className="border rounded-md">
+                      <ScrollArea className="h-[200px] w-full">
+                        <Textarea
+                          value={testInput}
+                          onChange={(e) => setTestInput(e.target.value)}
+                          placeholder={`请输入图表数据，例如：
 {
   "chartData": {
-    "code": "React图表代码...",
-    "explanation": "图表说明...",
-    "insights": "数据洞察..."
+    "code": "React组件代码",
+    "explanation": "图表说明",
+    "insights": "数据洞察"
   }
 }
 
-多图表格式：
+或多图表格式：
 {
   "chart1": {
-    "code": "第一个图表代码...",
-    "explanation": "第一个图表说明...",
-    "insights": "第一个图表洞察..."
+    "code": "第一个图表代码",
+    "explanation": "第一个图表说明",
+    "insights": "第一个图表洞察"
   },
   "chart2": {
-    "code": "第二个图表代码...",
-    "explanation": "第二个图表说明...",
-    "insights": "第二个图表洞察..."
+    "code": "第二个图表代码",
+    "explanation": "第二个图表说明", 
+    "insights": "第二个图表洞察"
   }
-}'
-                    className="min-h-[200px] font-mono text-sm border-0 resize-none"
-                  />
-                </ScrollArea>
-                <div className="flex gap-2">
-                  <Button 
-                    onClick={handleTestChart}
-                    className="flex-1"
-                    variant="secondary"
-                  >
-                    <TestTube2 className="h-4 w-4 mr-2" />
-                    测试渲染图表
-                  </Button>
-                  <Button 
-                    onClick={() => {
-                      setTestInput('');
-                      setTestError(null);
-                    }}
-                    variant="outline"
-                  >
-                    清空
-                  </Button>
+}`}
+                          className="min-h-[180px] text-xs font-mono border-0 resize-none focus-visible:ring-0"
+                        />
+                      </ScrollArea>
+                    </div>
+                  </div>
+                  
+                  {testError && (
+                    <Alert variant="destructive">
+                      <AlertDescription>{testError}</AlertDescription>
+                    </Alert>
+                  )}
+                  
+                  {/* 操作按钮区域 - 固定在底部 */}
+                  <div className="flex gap-2 pt-2 border-t bg-background">
+                    <Button onClick={handleTestChart} className="flex-1">
+                      <TestTube2 className="h-4 w-4 mr-2" />
+                      测试渲染图表
+                    </Button>
+                    <Button
+                      variant="outline"
+                      onClick={() => setTestDataOpen(false)}
+                      className="px-4"
+                    >
+                      收起
+                    </Button>
+                  </div>
                 </div>
-                {testError && (
-                  <Alert variant="destructive">
-                    <AlertDescription>{testError}</AlertDescription>
-                  </Alert>
-                )}
               </div>
             </CollapsibleContent>
           </Collapsible>
         </div>
       </div>
 
-      {/* 消息列表区域 - 可滚动，占据剩余空间 */}
+      {/* 消息列表区域 - 占据剩余空间并可滚动 */}
       <div className="flex-1 min-h-0 overflow-hidden">
         <ScrollArea className="h-full">
-          <div className="p-4">
-            <MessageList messages={messages} isLoading={isLoading} />
+          <div className="p-4 space-y-4">
+            {messages.length === 0 && (
+              <div className="text-center text-muted-foreground py-8">
+                <MessageSquare className="h-12 w-12 mx-auto mb-4 opacity-50" />
+                <p className="text-lg font-medium mb-2">欢迎使用 AI 数据分析助手</p>
+                <p className="text-sm">
+                  询问关于数据的任何问题，我会为您生成相应的图表来可视化展示
+                </p>
+                <div className="mt-4 text-xs space-y-1">
+                  <p>• &quot;显示最近6个月的销售趋势&quot;</p>
+                  <p>• &quot;对比各产品的销量表现&quot;</p>
+                  <p>• &quot;分析用户增长情况&quot;</p>
+                  <p>• &quot;产品市场痛点分析&quot;</p>
+                </div>
+              </div>
+            )}
+            
+            {messages.map((message) => (
+              <div
+                key={message.id}
+                className={`flex gap-3 ${
+                  message.role === 'user' ? 'justify-end' : 'justify-start'
+                }`}
+              >
+                <div
+                  className={`max-w-[80%] rounded-lg px-4 py-2 ${
+                    message.role === 'user'
+                      ? 'bg-primary text-primary-foreground'
+                      : 'bg-muted'
+                  }`}
+                >
+                  <div className="whitespace-pre-wrap text-sm">
+                    {message.content}
+                  </div>
+                </div>
+              </div>
+            ))}
+            
+            {/* 添加底部间距，确保最后一条消息不会被输入框遮挡 */}
+            <div className="h-4" />
           </div>
         </ScrollArea>
       </div>
 
-      {/* 输入区域 - 固定在底部 */}
+      {/* 输入框 - 固定在底部 */}
       <div className="flex-shrink-0 border-t bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="p-4">
-          <form onSubmit={handleSubmit} className="flex gap-2">
+          <form onSubmit={handleFormSubmit} className="flex gap-2">
             <Textarea
               value={input}
-              onChange={(e) => setInput(e.target.value)}
-              placeholder="问我关于数据的任何问题..."
-              className="flex-1 min-h-[80px] max-h-[200px] resize-none"
+              onChange={handleInputChange}
+              placeholder="询问关于数据的任何问题..."
+              className="min-h-[40px] max-h-[120px] resize-none"
               disabled={isLoading}
               onKeyDown={(e) => {
                 if (e.key === 'Enter' && !e.shiftKey) {
                   e.preventDefault();
-                  handleSubmit(e);
+                  handleFormSubmit(e);
                 }
               }}
             />
             <Button 
               type="submit" 
-              disabled={!input.trim() || isLoading}
-              className="self-end"
+              size="icon"
+              disabled={isLoading || !input.trim()}
             >
-              {isLoading ? (
-                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-              ) : (
-                <Send className="h-4 w-4" />
-              )}
+              <Send className="h-4 w-4" />
             </Button>
           </form>
-          <p className="text-xs text-muted-foreground mt-2">
+          
+          <p className="text-xs text-muted-foreground mt-2 text-center">
             按 Enter 发送，Shift + Enter 换行
           </p>
+          
+          {error && (
+            <Alert variant="destructive" className="mt-2">
+              <AlertDescription>{typeof error === 'string' ? error : error.message}</AlertDescription>
+            </Alert>
+          )}
         </div>
       </div>
     </div>

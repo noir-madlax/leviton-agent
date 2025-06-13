@@ -229,16 +229,22 @@ export function ChartRenderer() {
             )}
           </div>
         ) : (
-          // 单图表布局（向后兼容）
+          // 单图表布局 - 支持chartData格式和向后兼容
           <Card className="h-full">
             <CardContent className="p-6">
-              <SingleChartRenderer 
-                chartData={{
-                  code: currentChart.code!,
-                  explanation: currentChart.explanation!,
-                  insights: currentChart.insights!
-                }}
-              />
+              {currentChart.chartData ? (
+                // 新格式：{ chartData: { code, explanation, insights } }
+                <SingleChartRenderer 
+                  chartData={currentChart.chartData}
+                />
+              ) : (
+                // 向后兼容：旧的直接属性格式（如果存在）
+                <div className="text-center text-muted-foreground">
+                  <BarChart3 className="h-16 w-16 mx-auto mb-4 opacity-50" />
+                  <p>图表数据格式不正确</p>
+                  <p className="text-sm mt-2">请使用标准的图表数据格式</p>
+                </div>
+              )}
             </CardContent>
           </Card>
         )}
