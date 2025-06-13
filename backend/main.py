@@ -42,7 +42,7 @@ async def lifespan(app: FastAPI):
     logger.info("FastAPI 应用启动，开始初始化 Agent...")
     
     try:
-        from smolagents import ToolCollection, CodeAgent, OpenAIServerModel
+        from smolagents import ToolCollection,ToolCallingAgent, CodeAgent, OpenAIServerModel
         from mcp import StdioServerParameters
         
         logger.info(f"使用模型: {settings.MODEL_ID}")
@@ -76,7 +76,8 @@ async def lifespan(app: FastAPI):
         agent = CodeAgent(
             tools=all_tools, 
             model=model,
-            max_steps=settings.MAX_ITERATIONS
+            max_steps=settings.MAX_ITERATIONS,
+            additional_authorized_imports = ['json']
         )
 
         logger.info(f"Agent 初始化成功，加载的工具: {agent.tools}")
@@ -120,9 +121,7 @@ def prepare_query_with_prompt(query: str) -> str:
     prompt_dir = os.path.join(os.path.dirname(__file__), "prompt")
     # 定义要加载的 prompt 文件及其顺序
     prompt_files = [
-        "llm-chart-generation-prompt.md",
-        # "database.md",
-        "chart-code-samples.md"
+        "agent-prompt-by-step.md"
     ]
     
     prompt_contents = []
@@ -164,9 +163,6 @@ async def stream_agent_response(query: str):
         # 发送开始信号
         yield f"data: {json.dumps({'status': 'started', 'message': '开始处理查询...'}, ensure_ascii=False)}\n\n"
         
-        # 发送调试信息
-        yield f"data: {json.dumps({'status': 'debug', 'message': '准备调用 agent.run...'}, ensure_ascii=False)}\n\n"
-        
         try:
             # 准备完整的查询（包含 prompt）
             complete_query = prepare_query_with_prompt(query)
@@ -194,8 +190,31 @@ async def stream_agent_response(query: str):
         # 发送进度信息
         yield f"data: {json.dumps({'status': 'processing', 'message': '正在分析结果...'}, ensure_ascii=False)}\n\n"
         
+
+
+        def is_valid_json(text: str) -> bool:
+            try:
+                json.loads(text)
+                return True
+            except json.JSONDecodeError:
+                return False
+
+        if is_valid_json(result):
+            logger.info("结果成功解析为 JSON 格式！！！！")
+            result = json.dumps(json.loads(result), ensure_ascii=False)
+        else:
+            logger.info("结果不是有效的 JSON 格式，将作为普通字符串处理")
+
+
+        # 删除结果中的换行符（临时处理）
+        # logger.info(f"去除换行符前 result...{result}")
+        # result = result.replace("\n", "")
+        # logger.info(f"去除换行符后 result...{result}")
+
         # 将结果分块发送
-        if isinstance(result, str):
+        if is_valid_json(result):
+            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}"
+        elif isinstance(result, str):
             # 按句号分割结果，更自然的分块方式
             sentences = result.split('。')
             for i, sentence in enumerate(sentences):
@@ -204,12 +223,12 @@ async def stream_agent_response(query: str):
                         'status': 'streaming',
                         'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
                         'chunk_index': i
-                    }
-                    yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
+                    }                 
+                    yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}"
                     await asyncio.sleep(settings.STREAM_DELAY)  # 控制流速
         else:
             # 如果结果不是字符串，直接发送
-            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"
+            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}"
         
         # 发送完成信号
         yield f"data: {json.dumps({'status': 'completed', 'message': '[DONE]'}, ensure_ascii=False)}\n\n"
