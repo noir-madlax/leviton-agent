@@ -34,7 +34,3 @@ docker-compose*.yml
 
 # Logs
 *.log
-
-# Environment files (will be passed as env vars)
-.env
-.env.local 

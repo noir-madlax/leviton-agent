@@ -10,19 +10,13 @@ services:
       - HOST=0.0.0.0
       - PORT=8000
       - DEBUG=false
-      - MODEL_ID=${MODEL_ID:-google/gemini-2.5-pro-preview}
-      - API_KEY=${API_KEY}
+      - API_KEY=${api_key}
+      - MAX_ITERATIONS=${MAX_ITERATIONS}
       - MCP_ACCESS_TOKEN=${MCP_ACCESS_TOKEN}
+      - PROJECT_NAME=${PROJECT_NAME}
       - PHOENIX_ENDPOINT=${PHOENIX_ENDPOINT}
-      - PROJECT_NAME=${PROJECT_NAME:-Customer-Success}
-      - LOG_LEVEL=${LOG_LEVEL:-INFO}
-      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
-      - MAX_RESPONSE_LENGTH=${MAX_RESPONSE_LENGTH:-2000}
-      - STREAM_DELAY=${STREAM_DELAY:-0.2}
-      - AGENT_TIMEOUT=${AGENT_TIMEOUT:-120.0}
-      - MAX_ITERATIONS=${MAX_ITERATIONS:-10}
     volumes:
-      - ./data:/app/data:rw
+      - agent-data:/app/data
       - agent-logs:/app/logs
     networks:
       - leviton-network
@@ -35,6 +29,8 @@ services:
       start_period: 40s
 
 volumes:
+  agent-data:
+    driver: local
   agent-logs:
     driver: local
 
