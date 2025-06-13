@@ -1,0 +1,43 @@
+version: '3.8'
+
+services:
+  leviton-agent-backend:
+    build: .
+    container_name: leviton-agent-backend
+    ports:
+      - "8000:8000"
+    environment:
+      - HOST=0.0.0.0
+      - PORT=8000
+      - DEBUG=false
+      - MODEL_ID=${MODEL_ID:-google/gemini-2.5-pro-preview}
+      - API_KEY=${API_KEY}
+      - MCP_ACCESS_TOKEN=${MCP_ACCESS_TOKEN}
+      - PHOENIX_ENDPOINT=${PHOENIX_ENDPOINT}
+      - PROJECT_NAME=${PROJECT_NAME:-Customer-Success}
+      - LOG_LEVEL=${LOG_LEVEL:-INFO}
+      - ALLOWED_ORIGINS=${ALLOWED_ORIGINS:-*}
+      - MAX_RESPONSE_LENGTH=${MAX_RESPONSE_LENGTH:-2000}
+      - STREAM_DELAY=${STREAM_DELAY:-0.2}
+      - AGENT_TIMEOUT=${AGENT_TIMEOUT:-120.0}
+      - MAX_ITERATIONS=${MAX_ITERATIONS:-10}
+    volumes:
+      - ./data:/app/data:rw
+      - agent-logs:/app/logs
+    networks:
+      - leviton-network
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+
+volumes:
+  agent-logs:
+    driver: local
+
+networks:
+  leviton-network:
+    driver: bridge 
