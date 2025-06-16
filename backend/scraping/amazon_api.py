@@ -323,13 +323,14 @@ def get_product_details_rainforest(asin: str, amazon_domain: str = "amazon.com")
 
 def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: str = None, url: str = None):
     """
-    Get Amazon bestsellers using Rainforest API.
+    Get bestsellers from Rainforest API.
+    Either category_id or a full url must be provided.
     
     Args:
-        amazon_domain (str): The Amazon domain to use (e.g., 'amazon.com').
-        category_id (str): The ID of the category to get bestsellers for.
-        url (str): The URL of the bestsellers page.
-        
+        amazon_domain (str): The Amazon domain (e.g., "amazon.com").
+        category_id (str, optional): The category ID for bestsellers. Defaults to None.
+        url (str, optional): The full URL to the bestsellers page. Defaults to None.
+
     Returns:
         dict: The JSON response from the API.
     """
@@ -337,22 +338,25 @@ def get_bestsellers_rainforest(amazon_domain: str = "amazon.com", category_id: s
         raise ValueError("RAINFOREST_API_KEY environment variable is required")
 
     if not category_id and not url:
-        raise ValueError("Either 'category_id' or 'url' is required.")
+        raise ValueError("Either 'category_id' or 'url' must be provided.")
 
     params = {
-        "api_key": RAINFOREST_API_KEY,
-        "type": "bestsellers",
-        "amazon_domain": amazon_domain,
+        'api_key': RAINFOREST_API_KEY,
+        'type': 'bestsellers',
+        'amazon_domain': amazon_domain,
     }
-
-    if category_id:
-        params["category_id"] = category_id
+    
     if url:
-        params["url"] = url
+        params['url'] = url
+    elif category_id:
+        params['category_id'] = category_id
 
-    response = requests.get(RAINFOREST_API_URL, params=params)
-    response.raise_for_status()
-    return response.json()
+    try:
+        response = requests.get(RAINFOREST_API_URL, params=params)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        raise Exception(f"Failed to fetch bestsellers: {str(e)}")
 
 def amazon_search(search_term: str, category_id: str, amazon_domain: str = "amazon.com", 
                   sort_by: str = "featured", page: int = 1, exclude_sponsored: bool = True):
@@ -445,4 +449,32 @@ def search_for_category_rainforest(category_name: str) -> Optional[Dict[str, Any
     except requests.exceptions.RequestException as e:
         print(f"Error searching for category '{category_name}' from Rainforest API: {e}")
         return None
+
+def get_products_from_category_rainforest(category_id: str, amazon_domain: str = "amazon.com"):
+    """
+    Get products from a category page using Rainforest API.
+
+    Args:
+        category_id (str): The ID of the category to fetch.
+        amazon_domain (str): The Amazon domain to use.
+
+    Returns:
+        dict: JSON response containing category products.
+    """
+    if not RAINFOREST_API_KEY:
+        raise ValueError("RAINFOREST_API_KEY environment variable is required")
+
+    params = {
+        "api_key": RAINFOREST_API_KEY,
+        "type": "category",
+        "amazon_domain": amazon_domain,
+        "category_id": category_id
+    }
+
+    try:
+        response = requests.get(RAINFOREST_API_URL, params=params)
+        response.raise_for_status()
+        return response.json()
+    except requests.exceptions.RequestException as e:
+        raise Exception(f"Failed to fetch category page: {str(e)}")
 

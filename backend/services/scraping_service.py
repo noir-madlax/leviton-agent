@@ -54,6 +54,8 @@ class ScrapingService:
                 search_term=category_info["search_term"],
                 target_count=max_products,
                 save_dir=self.amazon_dir,
+                url_type=scraping_params.get("url_type"),
+                original_url=url
             )
 
             # 4. If the original URL was a product, ensure its ASIN is in the list.
