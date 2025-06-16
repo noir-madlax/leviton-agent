@@ -1,0 +1,367 @@
+{
+  "product_title": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 250W/Single-Pole or 3-Way, AYCL-253P-WH, White",
+  "product_category": "Toggle Style Dimmer Switches",
+  "total_reviews": 25,
+  "review_analysis": {
+    "phy": {
+      "wattage capacity": {
+        "A@high wattage capacity": {
+          "+": [
+            1
+          ]
+        },
+        "B@250W rated capacity": {
+          "-": [
+            2,
+            13
+          ]
+        },
+        "C@UL rated 250W but performance verified 150W": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "switch type": {
+        "D@wrong switch type TGCL-153P in box": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "color": {
+        "E@white color instead of ivory": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "price": {
+        "F@2x the price of other dimmers": {
+          "-": [
+            7
+          ]
+        },
+        "G@overpriced": {
+          "-": [
+            20
+          ]
+        },
+        "H@less expensive would be preferred": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "size": {
+        "I@fits right into normal switch spot": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "instructions": {
+        "J@clear instructions on how to wire it up": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "quality": {
+        "K@higher quality than competition": {
+          "+": [
+            6,
+            21
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming capability": {
+        "a@good range of dimming that is adjustable": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "b@excellent dimming capability": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "c@dims down to zero": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "d@fine-tuning dimming adjustment": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "e@can be adjusted to dim down all the way without flickering": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "f@cannot dim down all the way with only one 6-watt LED": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "g@lower end of dimmer cycle can be adjusted": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "h@causes lights to flicker occasionally": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@no longer causes lights to flicker": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "j@no flicker": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "noise": {
+        "k@does not whine when at full or dimmed": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "l@does not emit hardly any noise": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "m@silent": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "n@solved buzzing problem": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "heat": {
+        "o@runs cool": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "p@solved heat problem": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "installation": {
+        "q@easy to install": {
+          "+": {
+            "?": [
+              1,
+              2,
+              8
+            ]
+          }
+        }
+      },
+      "operation": {
+        "r@easy to use": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "s@flipping switch to on does not turn on lights": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "t@lights begin to softly pulse after a second or two": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "u@need to turn dimmer to low, flip switch on, then turn to full": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "durability": {
+        "v@failed after one day": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "w@won't work properly with 180W load": {
+          "-": {
+            "B": [
+              13
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "kitchen lighting": {
+        "+": {
+          "?": [
+            0,
+            2
+          ]
+        },
+        "-": {
+          "h": [
+            2
+          ]
+        }
+      },
+      "chandelier with 15 dimmable bulbs": {
+        "+": {
+          "A": [
+            1
+          ]
+        }
+      },
+      "LED bulbs": {
+        "+": {
+          "i": [
+            3
+          ],
+          "?": [
+            5,
+            15,
+            21,
+            22,
+            23,
+            24
+          ]
+        }
+      },
+      "6 LED drivers for outdoor eave lights": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "back patio lights": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "indoor lights": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "12 Aspect LED ultra-thin in basement home office": {
+        "+": {
+          "k": [
+            7
+          ]
+        },
+        "-": {
+          "s,t,u": [
+            7
+          ]
+        }
+      },
+      "14 BR30 LED bulbs in great room": {
+        "+": {
+          "d": [
+            17
+          ]
+        }
+      },
+      "13 Philips LED lights": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "six 19W 6-inch LED lights from TORCHSTAR": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "six 6-watt LEDs": {
+        "+": {
+          "e": [
+            24
+          ]
+        }
+      },
+      "one 6-watt LED": {
+        "-": {
+          "f": [
+            24
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:32.333319"
+}

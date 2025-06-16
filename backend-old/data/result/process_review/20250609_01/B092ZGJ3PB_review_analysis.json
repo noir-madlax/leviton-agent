@@ -1,0 +1,511 @@
+{
+  "product_title": "0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+  "product_category": "Commercial 0-10V Dimmer Switches",
+  "total_reviews": 41,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@large physical dimensions that barely fit in electrical box": {
+          "-": [
+            16,
+            24,
+            25
+          ]
+        }
+      },
+      "build_quality": {
+        "B@lower grade plastic material compared to name brand switches": {
+          "-": [
+            16
+          ]
+        },
+        "C@flimsy plastic construction": {
+          "-": [
+            16
+          ]
+        },
+        "D@well-made construction": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "E@rocker switch component that can break": {
+          "-": [
+            23
+          ]
+        },
+        "F@lacks crisp tactile click when switching": {
+          "-": [
+            16
+          ]
+        },
+        "G@huge rocker paddle for on/off control": {
+          "+": [
+            38
+          ]
+        }
+      },
+      "dimmer_slider": {
+        "H@slider with loose tension at bottom 2-3mm": {
+          "-": [
+            16
+          ]
+        },
+        "I@slider made from flimsy plastic": {
+          "-": [
+            16
+          ]
+        },
+        "J@slider with loose at bottom to tight at top feel": {
+          "-": [
+            25
+          ]
+        },
+        "K@fluent slider for brightness control": {
+          "+": [
+            38
+          ]
+        }
+      },
+      "wiring": {
+        "L@six wires including two red, black, blue, white, and green": {
+          "+": [
+            30
+          ]
+        },
+        "M@markings on back of unit are nonsensical": {
+          "-": [
+            16
+          ]
+        }
+      },
+      "appearance": {
+        "N@unique look that could be plus or minus": {
+          "+": [
+            18
+          ]
+        },
+        "O@clean modern look with included wallplate": {
+          "+": [
+            4
+          ]
+        },
+        "P@nice appearance": {
+          "+": [
+            33
+          ]
+        }
+      },
+      "components": {
+        "Q@missing screws for wall plate": {
+          "-": [
+            39
+          ]
+        },
+        "R@missing all screws in used unit": {
+          "-": [
+            9
+          ]
+        },
+        "S@small hole on lower left front with no LED light": {
+          "-": [
+            25
+          ]
+        },
+        "T@recessed potentiometer on bottom that does nothing": {
+          "-": [
+            25
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@very finicky operation with inconsistent light response": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@0-10V dimming control not working, always gives 0V": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@working flawlessly for two years": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@working flawlessly since installation": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@worked perfectly for installation": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "f@started flickering when slid all the way up": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "g@lights dim and brighten on their own after 2 weeks": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "h@stopped working after 2 weeks with light cycling high then low": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "i@works with no buzzing or flickering": {
+          "+": {
+            "?": [
+              12,
+              20
+            ]
+          }
+        },
+        "j@rocker switch broke in 3 months": {
+          "-": {
+            "E": [
+              23
+            ]
+          }
+        },
+        "k@switch worked but dimmer didn't work": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "l@would buzz when in off position when wired incorrectly": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "m@stopped dimming after couple days": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "n@switch and dimmer function works": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "o@smooth dimming without flickering": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "p@lights go completely off instead of lowest setting at bottom": {
+          "-": {
+            "H": [
+              16
+            ]
+          }
+        },
+        "q@lights flicker then go out at lowest setting": {
+          "-": {
+            "J": [
+              25
+            ]
+          }
+        },
+        "r@dimmer doesn't have smooth feel": {
+          "-": {
+            "J": [
+              25
+            ]
+          }
+        },
+        "s@provides best dimming performance with 5% to 100% range": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "t@controlling full-range dimming with precision": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "u@only turned light on and off, didn't dim": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "installation": {
+        "v@easy to install": {
+          "+": {
+            "?": [
+              3,
+              4,
+              20,
+              22,
+              36,
+              40
+            ]
+          }
+        },
+        "w@installation no more difficult than any other light switch": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "x@not hard to figure out despite nonsensical markings": {
+          "+": {
+            "M": [
+              16
+            ]
+          }
+        },
+        "y@uses up entire depth of junction box": {
+          "-": {
+            "A": [
+              16
+            ]
+          }
+        },
+        "z@hard to fit into box": {
+          "-": {
+            "A": [
+              24
+            ]
+          }
+        },
+        "aa@barely fits in box along with wire nuts": {
+          "-": {
+            "A": [
+              25
+            ]
+          }
+        },
+        "bb@fairly easy to install once figured out instructions": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "cc@works seamlessly with dimmable LED bulbs": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "dd@works with single-pole or 3-way configuration": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "ee@works when light fixture calls for 0-10v dimmer": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ff@works great with 0-10V lights": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "gg@works perfectly with on/off switch built in": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "hh@works exactly like it should": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ii@mostly works with Metalux 2x2' troffer lights": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "jj@works well with three 8 foot LED lights": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "kk@works great with dimmable LED lights": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "ll@didn't work with installed lights": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "mm@couldn't get to work despite electrical experience": {
+          "-": {
+            "?": [
+              32,
+              34
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "commercial_lighting": {
+        "+": {
+          "dd": [
+            3
+          ]
+        },
+        "-": {
+          "?": [
+            5
+          ]
+        }
+      },
+      "residential_lighting": {
+        "+": {
+          "cc,o": [
+            4
+          ],
+          "c": [
+            6
+          ],
+          "hh": [
+            18
+          ],
+          "kk": [
+            35
+          ],
+          "v": [
+            40
+          ]
+        },
+        "-": {
+          "mm": [
+            34
+          ]
+        }
+      },
+      "outdoor_lighting": {
+        "+": {
+          "gg": [
+            13
+          ]
+        },
+        "-": {
+          "h": [
+            19
+          ]
+        }
+      },
+      "basement_lighting": {
+        "+": {
+          "jj": [
+            33
+          ],
+          "kk": [
+            35
+          ]
+        }
+      },
+      "dining_room_lighting": {
+        "-": {
+          "mm": [
+            34
+          ]
+        }
+      },
+      "shower_niche_lighting": {
+        "-": {
+          "m": [
+            37
+          ]
+        }
+      },
+      "troffer_lighting": {
+        "+": {
+          "ii": [
+            25
+          ]
+        }
+      },
+      "parking_lot_lighting": {
+        "-": {
+          "h": [
+            19
+          ]
+        }
+      },
+      "she_shed_lighting": {
+        "+": {
+          "c": [
+            6
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:41.612659"
+}

@@ -1,0 +1,2450 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:39:27.287617",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0BD9CSHXP",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0BD9CSHXP",
+    "title": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 39.49,
+    "rating": 3.9,
+    "reviews_count": 216.0,
+    "category": "Light Switches",
+    "product_segment": "Specialty Environmental Control Switches",
+    "product_url": "https://www.amazon.com/dp/B0BD9CSHXP"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R33J5KIYS58G8J",
+        "text": "It's perfect.",
+        "date": "Reviewed in the United States on May 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "The function. It works like I thought it would.",
+        "userName": "brenda edwards",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RR707DEASRZQ0",
+        "text": "Worked great until it died after a month. Will not buy this brand again",
+        "date": "Reviewed in the United States on May 6, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worked for a month",
+        "userName": "Amikanice",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3BYHHXMOQ43IZ",
+        "text": "Worked well for just under 1 year and then it died. Might try another brand.",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "1 year and then died",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R26JQ6F8WICCLC",
+        "text": "Great addition to the bathroom. People always forget to turn on the fan when they want to shower and then the mirrors are all foggy. This device takes care of that. As soon as you start showering with the moisture in the room, the fan turns on and after some time it turns the fan off. This is a set it and forget it device finally making use of our extra low noise bathroom fan. 5 Stars!",
+        "date": "Reviewed in the United States on March 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Set it and forget it device to finally make use of our extra low noise bathroom fan",
+        "userName": "Pseudomizer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1JSWLD5W4NKKY",
+        "text": "Unfortunately, mine died. It was installed in mid Nov 24 and lasted until mid March 25. It worked great but now seems completely dead. Power is going to it but the led is not illuminated and neither switch is work. I am very disappointed.",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn't Last Long",
+        "userName": "Bryan Dwyer",
+        "numberOfHelpful": 5,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RDZHEPB1XPDLV",
+        "text": "Worked great while it lasted. It always turned on during a shower and kept the bathroom comfortable. But, after 6 months (bought in July), it wasn't turning the fan on any more after a shower. I initially thought it was just not as humid since we were in the middle of winter and I wasn't seeing any humidity on our mirror. But after it started warming up, the moisture was back on the mirror (which extended down past the level of the switch) and it still wasn't turning the fan on. I even changed the sensitivity to the highest setting. The fan works fine when pressing the fan button so there isn't anything wrong with the fan or wiring. Ended up having to pull it out and replace it with another brand.",
+        "date": "Reviewed in the United States on March 5, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lasted less than 6 months!!!",
+        "userName": "J. M. Haro",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3NTJNJ9OIART7",
+        "text": "do not buy - I should have read all the negative reviews, as both of my units went bad after a couple of months. This must be a defective batch",
+        "date": "Reviewed in the United States on March 3, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defect after 6 months",
+        "userName": "Kawai Leung",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R127D27Q4IF65J",
+        "text": "Worked fine for about 8 months then died. The product stopped working completely randomly. Do not recommend.",
+        "date": "Reviewed in the United States on February 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn’t last",
+        "userName": "mtdiy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1E65UIUI1WOH2",
+        "text": "Stopped working after 4 weeks. I had it professionally installed.",
+        "date": "Reviewed in the United States on February 11, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Looks good, doesn't last",
+        "userName": "HobbitFiveOh",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1XQZSAMVQ9QQ6",
+        "text": "Used in two bathrooms that had one fail after a few days and replaced, the replacement failed and replaced with a basic dual switch. Now the one that worked in the second bathroom failed! Going back to a basic dual switch there too! Paid for a professional electrician to install. Expensive lesson.",
+        "date": "Reviewed in the United States on January 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "All three went bad.",
+        "userName": "thrlsekr",
+        "numberOfHelpful": 4,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RPRDX8JO9ZGC4",
+        "text": "It's d-e-d, dead. I read the reviews before purchasing and knew this was a possibility, but also chose to ignore them, thinking the complaints were exaggerated or the installers just didn't know wtf they were doing. Alas, It lasted a mere 69 days before we woke up this morning to find it straight up dead. I guess prior to that, it worked just fine; kicking on about 3 minutes into a steamy shower when I'd forget to turn it on ahead of time... but that doesn't really matter now that it doesn't kick on at all.",
+        "date": "Reviewed in the United States on December 24, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "It was fine. Until it wasn't.",
+        "userName": "Aspen Johnson",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R282N61MI4PJWT",
+        "text": "On the 2nd switch it completely stopped working after 3 months.",
+        "date": "Reviewed in the United States on December 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bought 2, the auto humidity sensor never worked on 1 switch.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R6LRMGXFO837H",
+        "text": "So far this has worked well. A month into using it, it performs exactly as described. I love the auto timer shut off, which was my main need as my spouse often forgot to turn off the fan. The auto humidity sensor seems to work well, as it kicks on automatically.",
+        "date": "Reviewed in the United States on December 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I was looking for",
+        "userName": "kdogg",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3SCNNGJAAOHDK",
+        "text": "Easy to install. I like the setting for humidity and that I can set it to run for a time each hour to keep air fresh!",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great to keep bath humidity lower.",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1O1A4XR4WBKBI",
+        "text": "Unfortunately adding to the \"died prematurely\" pile. Worked great for about 5 months. Their tech/ customer service department claims to be unaware this switch has issues despite the numerous online reviews stating it, and make replacement a painful, long process with rude customer service reps who feel free to hang up on you even if the conversation is polite. I wouldn't support this company.",
+        "date": "Reviewed in the United States on November 7, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Died, poor customer service",
+        "userName": "Jacob",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R2GSAL7PVA74X8",
+        "text": "Absolutely love this switch, it saves having two switches in the wall. When the fan kicks in the green led light comes on.",
+        "date": "Reviewed in the United States on November 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switch",
+        "userName": "Steve Fadden",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61QFgeJ1nxL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1BFUC8OCQ98K2",
+        "text": "I was prepared to be disappointed, and bought this switch merely to meet code. It works so well that now I am going to buy another one for another bathroom in my house that I am not remodeling.",
+        "date": "Reviewed in the United States on November 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Surprisingly Well",
+        "userName": "Joseph Trapp",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3JY5FVAV91YGV",
+        "text": "Replaced a dual fan/light switch with this. I chose this because I wanted a humidity controlled fan but the light needed to be manual on/off only (over the tub). Lots of other humidity fan/light switches are also occupancy sensing for the light. This one was easy to install, and the default settings on the humidity control and time settings are perfect. (Rapid increase over 50% humidity triggers fan, will run for 20 mins). It will also re-sense after 20 mins and run the fan an additional 10 mins if needed. Pushing the fan button will run the fan for 20 mins, which is needed for households with people who would turn it on and let run for hours and hours without a clue and also don't pay the heat bill.",
+        "date": "Reviewed in the United States on October 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and works well",
+        "userName": "JOHN KNOWLES",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1BEUQO9F8RY8L",
+        "text": "I have replaced 5 of these switches between my two bathrooms. They lasted anywhere between 2 weeks to 3 months. I finally gave up on this brand after the 5th one went bad after 2 weeks, both the light switch and fan switch will die at the same time. Don't bother with this one unless you want your family complaining about a restroom with no light.",
+        "date": "Reviewed in the United States on October 14, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Works great while it lasted (for a very short time)",
+        "userName": "Tpoon",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3HEVXNH5HDWX3",
+        "text": "Shame on me for installing it after the return window, product lasted a month before it stopped working.",
+        "date": "Reviewed in the United States on September 17, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Lasted a month",
+        "userName": "Nick Carrizales",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RNQEBVJEYKEZY",
+        "text": "I underestimated how nice this would be. I no longer need to worry about turning on the bathroom fan, and this turns it off automatically too. Absolutely worth the money.",
+        "date": "Reviewed in the United States on September 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and super effective.",
+        "userName": "ps",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R2K2QB2KC17TQQ",
+        "text": "I needed to make room in the switch box in my bathroom for another light, so I used this to combine the fan control along with the built in light. The sensor has been working flawlessly. It accurately detects humidity levels and turns the fan on at the default setting of around 65%. I've had no issues with false triggering, and the sensor has been a reliable addition to my home.",
+        "date": "Reviewed in the United States on September 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "A Smart and Space-Saving Solution",
+        "userName": "applegeek",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3T5C5L6LO31KI",
+        "text": "Worked great for the first 3 weeks. The humidistat worked perfectly turning on and shutting off after the specified time. Then nothing. Totally dead. Called tech support and they sent me an email that I have to ship it to their “quality” department for evaluation. I pulled the switch out and mocked up a test platform to make sure it wasn’t something in my installation, but I still have to ship it back at my expense. 5 year warranty, whoopie if I have to go through this to get a new one that hopefully lasts longer.",
+        "date": "Reviewed in the United States on September 7, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working after 3 weeks",
+        "userName": "Michael",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/715XdE6Ix7L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81AEHYMLNcL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RXZD6FF38HNWQ",
+        "text": "Purchase two of these for my mother's place. One installed in master lasted two weeks, the other in the hall lasted 4 weeks.",
+        "date": "Reviewed in the United States on September 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lasted a month",
+        "userName": "MLMiller",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RP4Z2YBVG4INI",
+        "text": "Its a great find as it has the humidity sensor built in to the switch that controls both the fan and the light. After I figured out how to program it, it worked very well... for 2 weeks and then had to order another one. The second seems to be more durable. Aside from that it works very well and turn on/off when humidity is present. Has been great to have and I have noticed less humidity overall.",
+        "date": "Reviewed in the United States on July 24, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Muli-Functional but potentially not the most durable",
+        "userName": "A to the D",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R25MVKIKELPFC9",
+        "text": "Installed easily. Programmed easily. Worked flawlessly… for a month. And then dead. An expensive mistake.",
+        "date": "Reviewed in the United States on July 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed after one month",
+        "userName": "T. Sinclair",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3JBRD8X53XBHT",
+        "text": "This switch ceased to function after two months of use.",
+        "date": "Reviewed in the United States on June 16, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broke after two months",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R4B2YQ30DFK37",
+        "text": "I installed this and it broke after a couple of weeks.",
+        "date": "Reviewed in the United States on June 16, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Cheap",
+        "userName": "Kelly Youngberg",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R10MJCR7UIJSZ1",
+        "text": "Product stops working after 3 months.",
+        "date": "Reviewed in the United States on June 8, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Works for about 3 months",
+        "userName": "Ingrid H",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R21XX628Q6U55H",
+        "text": "Buyer beware. The switch completely stopped working 4 months after installation and there are no returns or refunds. I contacted the manufacturer and after 2 weeks of considering, they determined that I would need to ship the defective switch to them at my expense so that they could decide if they are willing to replace. This is the last Leviton product I'll be buying, it's not worth the hassle and the products clearly aren't good quality.",
+        "date": "Reviewed in the United States on June 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broke within 4 months and company won't replace",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 5,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R2EBF80IAWCQKS",
+        "text": "Good quality, looks nice, and does its job really well! It’s the only switch I’ve seen that has both a light switch with fan sensor and it’s good. Never turns on randomly like others I’ve used. It turns on when actually necessary. Pricey but I’m happy.",
+        "date": "Reviewed in the United States on May 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect light and fan combo switch!",
+        "userName": "Zack A",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3CXAX4GN21VK",
+        "text": "Bought the switch because it did exactly what I needed. When it works, it works well. Reliability is an issue. First one might have been an open box, but I didn't notice. Amazon exchanged it. Since then, I've had 2 more failures. Leviton has a 5 year warranty on this, so I submitted it for replacement. They've sent me replacements, so that's good, but I'm getting tired of rewiring an old switch back in every time I need it replaced. Replacement is not sent until they receive their old one back, so it takes over a week for each one. If it didn't cost so much, I'd probably go another route, but I'm determined to get my 5 years out of it.",
+        "date": "Reviewed in the United States on May 10, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Unreliable",
+        "userName": "Tom",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RU6L4N4HT5F62",
+        "text": "Not sure why it's asking about Alexa integration? It literally is just a dumb switch for humidity, fan, and light. Single slot, it's very nice and easy to setup/change options while being simple and brain dead easy to use.",
+        "date": "Reviewed in the United States on April 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good easy to use switch.",
+        "userName": "Chris \"Speed Lightning\" Gross",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R29DSWZGF3DRDX",
+        "text": "Bought 2 for both my bathrooms. One quit working, right before the return window but was able to swap for another. Month later went out again, but out of return window. Learned my lesson not gonna try a third time",
+        "date": "Reviewed in the United States on April 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stops working",
+        "userName": "J9",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R18NMXMZOH6QR0",
+        "text": "why sell a product with a burned wire??? Not ok. Then bought another one bc this brand is suppose to be the best and well now here we are, past the return point. Paid $600 to have this switch and an exhaust fan with roof vent installed and today it just stopped working!",
+        "date": "Reviewed in the United States on April 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Used had burnt wire!",
+        "userName": "Jacki",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61giJeILKBL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1IL0QBMXGAZQO",
+        "text": "This works well, it seems to mange the humidity level well.",
+        "date": "Reviewed in the United States on April 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well, did exactly what it was supposed to do",
+        "userName": "J. B.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3CG19SQB9AX6Q",
+        "text": "This is awesome , I was going to put a timer on the fan so it doesn't get , This will shut off after 20 minutes and if the humidity is high enough it will run for another 20 minutes after about 2 minutes off, Or if you forget to turn on the fan when you get in the shower it will turn on when the humidity is high enough, the default settings are high sensitivity 20 minutes run time seems perfect for my small bathroom",
+        "date": "Reviewed in the United States on March 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "will automatically turn off in 20 minutes if the humidity is low enough",
+        "userName": "David J.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51PXhyZUxoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71rN7z9uQgL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R2L0EMB7DKRAGG",
+        "text": "This seemed like a great idea and actually worked great for a little while. I'm on my 2nd switch as the 1st one only worked for about 3 months. I will update on this replacement. **Update After 3rd one did not last 3 weeks gave up!",
+        "date": "Reviewed in the United States on February 27, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does not last",
+        "userName": "Trust me",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RKJ00JY4BLTTG",
+        "text": "Works perfectly",
+        "date": "Reviewed in the United States on February 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome",
+        "userName": "mitchlaw3",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R2QRW09AVUYTGG",
+        "text": "I installed these in our bathrooms. 1 has stopped working after just a few weeks. They are nice for making sure fans are run when they should be but unfortunate there may be reliability issues. Install/removal also takes a little longer switching back and forth from post style switches to this switch with 5 stranded wires and wire nuts. I may try again as the auto on/off is worth it to me.",
+        "date": "Reviewed in the United States on February 18, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "1 of 5 stopped working after 3weeks",
+        "userName": "Jason J DeJong",
+        "numberOfHelpful": 4,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R354U5BOYDEENM",
+        "text": "I bought one of these and worked great for two weeks and then stopped working. I ordered a replacement and it worked two weeks and stopped. I have other timers that are similar but have a neutral wire and they function fine. I had it installed by a good electrician so u know it’s done properly. These apparently are just poorly made or a bad batch.",
+        "date": "Reviewed in the United States on February 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Works for 2 weeks",
+        "userName": "K. Stewart",
+        "numberOfHelpful": 4,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51phpfTJ4tL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1R24ETO1Z11DM",
+        "text": "I'm generally pretty intentional when making purchases and purchased this with the expectation that both the light and the fan were automated. I like this company and I've used a number of their automatic light switches before. The description doesn't say the light is manual, only that the fan is automatic. Furthermore, it says: \"Advanced Sensing Detection Modern look with advanced technology that minimizes false triggers when room is occupied\" Why would a humidity only sensor care if the room is occupied or not? Anyway, the company is fine, the switch is fine (it's chunky but not as chunky as a wifi smart switch, so you need a big, but not huge box) - I'm just super annoyed that I installed this thing and couldn't figure out how the auto light worked only to find out it doesn't have one. Plus pushing the button is way more annoying than flipping a traditional switch. Bleh.",
+        "date": "Reviewed in the United States on February 8, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Light is MANUAL ONLY!! NO OCCUPANCY DETECTION",
+        "userName": "tnum",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3092LYLQOVYFS",
+        "text": "I installed this switch with a fan/light combo fixture and it was very simple to install and set up. I had to pull a new 14/3 romex to replace the 40 year old 14/2 wire original with the house, but connecting this switch was a breeze. The programming instructions are also very easy to understand. The switch functions great, turning on automatically about a minute into a shower, and turning off automatically after the programmed duration. Its a little pricey, but I'm confident this switch will effectively reduce the humidity in this mold-prone bathroom.",
+        "date": "Reviewed in the United States on January 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very user friendly humidity sensor switch",
+        "userName": "Nshi",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R3T8XTCYOR9RE4",
+        "text": "I like this product because it does the work on its own soon as it detects hummidity it turns on the exhaust fan on since my teenage daughter never thinks of turning it on when she takes a 1 hour shower.",
+        "date": "Reviewed in the United States on January 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Israel Renteria",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/614uwkTbusL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "RI26U21ZWNLNZ",
+        "text": "The switch is great and works great but it could be better. Leviton has a good reputation, so I purchased this one but it's still missing like light at the buttons and still waiting on reliability, had it for a month now and it's really good could not find anything better and the competition was a little better but an unknown name, so went for reliability. I'll update on the summer to see how it performs with the humidity here. Worth the purchase, no need for 2 switches and humidity detector for when people forget to turn on the fan is a big plus.",
+        "date": "Reviewed in the United States on January 6, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great switch buttons could be better",
+        "userName": "Damian",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/323b61d8-2348-479d-a549-a49499ba7cec/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1AUDP0S5ADDE5",
+        "text": "Need a non neutral wire set up. Almost exactly what I need. Auto on and auto off for the bathfan is great. Just wish it had an auto off for the light. Durability to be determine not installed long enough to know yet.",
+        "date": "Reviewed in the United States on January 3, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice could use auto light off.",
+        "userName": "mrbasicshark",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1ORKU7MZ8IAZY",
+        "text": "My son kept forgetting to run the fan when he showered so I ordered this switch. It comes on by itself and doesn't take that long to kick on once I have the shower going. Maybe a minute or so. If you turn the fan on manually, the fan will shut off by itself after 20 minute which is nice. A lot of times I'll run the fan then leave for work and don't have to worry about it being on all day. You can change the setting on it to be less sensitive and the amount of time the fan runs but I was fine with the way it came programmed. I was worried it wouldn't be that great especially for how much it cost but it works a lot better than expected Update 4/2025 My first switch stopped working for the fan part of it so I called the customer service and they sent me another one right away. Their custoer service is domestic which is nice. The second switch has been running flawlessly since I've installed it. Glad they stand behind their product. They even had me mail the old switch in so they could see why it failed. They paid the postage and I got the new switch before I got the return postange e mail so getting the new one was not contingent on sending the old one in.",
+        "date": "Reviewed in the United States on December 24, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worth the money",
+        "userName": "jeremiah",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61yZSIt6rVL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R19U95R1HQHH6L",
+        "text": "Love the automatic fan mode! Our bathroom gets so humid and this feature has helped so much and keeps our shower cleaner!",
+        "date": "Reviewed in the United States on December 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best gadget in our house",
+        "userName": "Aubrey",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R34PLX1S1J5VQ4",
+        "text": "Fantastic bathroom switch. The fan can be set to turn off after a set amount of time-- no more fan running throughout the night. Also great that it can be set to automatically sense humidity and turn on if someone forgets. This switch is ideal if you have tenants or kids that forget easily.",
+        "date": "Reviewed in the United States on November 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nifty switch",
+        "userName": "J. Quil",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BD9CSHXP",
+        "productTitle": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 84,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 217,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 17
+          }
+        },
+        "reviewId": "R1H7KTNHCPME42",
+        "text": "Easy installation. Fan comes on and turns off automatically.",
+        "date": "Reviewed in the United States on October 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised.",
+        "userName": "Karin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,278 @@
+{
+  "product_title": "Leviton Decora Smart Switch Z-Wave 800 Series, ZW15S-1RW",
+  "product_category": "Smart Hub Dependent Switches",
+  "total_reviews": 13,
+  "review_analysis": {
+    "phy": {
+      "terminals": {
+        "A@removed screw terminals": {
+          "-": [
+            0
+          ]
+        },
+        "B@wire leads instead of screw terminals": {
+          "-": [
+            5,
+            9
+          ]
+        },
+        "C@long wire leads": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "size": {
+        "D@takes up a lot of room in the box": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "button": {
+        "E@superior sound and feel when physically pressed": {
+          "+": [
+            2
+          ]
+        },
+        "F@paddle switch": {
+          "-": [
+            7,
+            8
+          ]
+        }
+      },
+      "instructions": {
+        "G@missing English instructions in the box": {
+          "-": [
+            5
+          ]
+        },
+        "H@small manual": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "rating": {
+        "I@rated for 15 Amp outlets": {
+          "+": [
+            3
+          ]
+        },
+        "J@current rating for LED lights considerably higher than alternatives": {
+          "+": [
+            5
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              4,
+              12
+            ]
+          }
+        },
+        "b@doesn't fit in 2-3 1 gang fittings": {
+          "-": {
+            "A,D": [
+              0
+            ]
+          }
+        },
+        "c@gets fairly tight in the box with extra length of wire": {
+          "-": {
+            "B": [
+              9
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "d@works as intended": {
+          "+": {
+            "?": [
+              4,
+              5
+            ]
+          }
+        },
+        "e@will not turn off at times when bottom of paddle is pressed": {
+          "-": {
+            "F": [
+              8
+            ]
+          }
+        },
+        "f@will not turn on at random times": {
+          "-": {
+            "F": [
+              8
+            ]
+          }
+        },
+        "g@doesn't support multi-tap functions": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@buggy when using paddle switch": {
+          "-": {
+            "F": [
+              7
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "i@works well with Z-wave system": {
+          "+": {
+            "?": [
+              1,
+              12
+            ]
+          }
+        },
+        "j@easy to connect with z wave system": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "k@pairing is very fiddly with Smartthings": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "l@unreliable connection": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "m@integrates perfectly with Smartthings": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "n@can't connect to Canada telus Adt": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "setup": {
+        "o@easy to setup": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "range": {
+        "p@too far away for Hub to pick it up": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Samsung SS Z-wave hub": {
+        "+": {
+          "i": [
+            1
+          ]
+        }
+      },
+      "control an outlet with 3-way auxiliary": {
+        "+": {
+          "e": [
+            2
+          ]
+        }
+      },
+      "control standard 15A outlets": {
+        "+": {
+          "I": [
+            3
+          ]
+        }
+      },
+      "front porch light with camera sensor for motion sensing": {
+        "+": {
+          "a,d,o": [
+            4
+          ]
+        }
+      },
+      "basic z-wave switch": {
+        "+": {
+          "d": [
+            5
+          ]
+        }
+      },
+      "3-way circuit": {
+        "-": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "shed installation": {
+        "-": {
+          "p": [
+            6
+          ]
+        }
+      },
+      "controller hub only": {
+        "+": {
+          "?": [
+            7
+          ]
+        }
+      },
+      "home automation Z-wave switches": {
+        "-": {
+          "e,f": [
+            8
+          ]
+        }
+      },
+      "Smartthings integration": {
+        "+": {
+          "m": [
+            10
+          ]
+        }
+      },
+      "ADT security system": {
+        "-": {
+          "n": [
+            11
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:23.122826"
+}

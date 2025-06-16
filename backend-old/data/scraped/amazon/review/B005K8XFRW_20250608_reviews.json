@@ -1,0 +1,2550 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:23:22.986175",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B005K8XFRW",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B005K8XFRW",
+    "title": "Leviton L1461-2C Single-Pole Switch, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 4.35,
+    "rating": 4.6,
+    "reviews_count": 634.0,
+    "category": "Light Switches",
+    "product_segment": "Single Pole Rocker Switches",
+    "product_url": "https://www.amazon.com/dp/B005K8XFRW"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RCYZSMAHSJG42",
+        "text": "No issues.",
+        "date": "Reviewed in the United States on May 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worth it.",
+        "userName": "L. Stevens",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RE437QDRLBJUM",
+        "text": "I bought 2 of these. The light in one of them no longer works.",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Little Light stopped working.",
+        "userName": "HelloHello",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R18MXHWG4J145M",
+        "text": "It’s very useful in areas where darkness is total and when you don’t want to be scratching the walls looking for the switch plus it’s keeps a dimmed light not too bright either to bother you if used in your bedroom",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent lighted switch !",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R18DF56XJA9HRU",
+        "text": "Really happy with this product, I had a couple of rooms that were difficult to locate the light switch at night. TA-DA! Problem solved. works great!",
+        "date": "Reviewed in the United States on May 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "LED lighted tougle switch",
+        "userName": "Rubin",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R38RA10WRNO4ER",
+        "text": "Can't say how long it will last but until it fails it is great. I have a three gang switch in my basement and by feel I kept turning on the wrong light, this glowing switch is much better. White light not like the old dim yellow ones from long ago so if you are looking for nostalgia this won't do. Plenty bright for locating, you couldn't read by it. I used to keep a low wattage light going all the time in the basement just so I could find the light switch now I don't have to.",
+        "date": "Reviewed in the United States on April 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Boyd W. Miles",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3VFF0MMYWLU31",
+        "text": "Help you find that light switch in the dark. Highly recommended.",
+        "date": "Reviewed in the United States on April 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great safety item",
+        "userName": "hogntme",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2VVUJWVHZJ08D",
+        "text": "Worked and looks great, easy install. Thank you",
+        "date": "Reviewed in the United States on April 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice light switch",
+        "userName": "El Guapo",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R29NPCE0Q4AZTF",
+        "text": "This switch started arcing after just a few months and very little use. Now when I turn it ON, I can hear sparks (arcing) inside the switch. This is a serious fire hazard, so I'll be replacing it as soon as I can find something better. And now, after reading the lower-star Ratings, I see that many other people have also had problems with this switch failing.",
+        "date": "Reviewed in the United States on April 1, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very Poor Quality - Fire Hazard",
+        "userName": "Joe",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1P6X5KZT921D2",
+        "text": "works",
+        "date": "Reviewed in the United States on March 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "light",
+        "userName": "Fine2opine",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RZ5FR6GSMKC45",
+        "text": "It worked a few times, then expired. Look elsewhere.",
+        "date": "Reviewed in the United States on March 20, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "R",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RS6VJNPMP1HTS",
+        "text": "Husband bought this switch to replace an old one. Works like a charm. Good price on Amazon too.",
+        "date": "Reviewed in the United States on March 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works like it should.",
+        "userName": "Kathy",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R9J9CC7JUZDG0",
+        "text": "light up and glow in the dark blue is perfect for finding light switches in the dark I love it no more fumbling around trying to find a light switch",
+        "date": "Reviewed in the United States on March 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good to have",
+        "userName": "Latoya moorehouse",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2LP1VFZK0LWAZ",
+        "text": "I bought this illuminated switch for our first floor powder room. When we have guests visiting, this is the restroom that they use. It is a room without a window, so it is dark even in the middle of the day. I found that many of our guests fumble around looking for the light switch, so I installed this. No problem find the switch now. I had looked at my regular big box store for a switch like this one but could not find one. Amazon had what I was looking for at a very low price. My daughter liked it so much she wanted one for her house, as well. I just installed hers today.",
+        "date": "Reviewed in the United States on February 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for the guests",
+        "userName": "D.B.",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R27D3YC85TZM9A",
+        "text": "Installed these in the bathrooms and laundry room. They work great at night. No need for a nightlight in the bathroom. Would likely work well in a child’s room too. Just enough light to take care of business.",
+        "date": "Reviewed in the United States on January 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great night light.",
+        "userName": "Kolrobi",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R207VDKFBM9WJG",
+        "text": "Good replacement switch. Can see in the dark",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "As advertised",
+        "userName": "Ed",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3SMUBLJT998Q6",
+        "text": "Has a cheap feel to the switch. Hard to get the Romex into holder. Almost cut it down to install",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works",
+        "userName": "alan mydland",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1HOCWFMRY9G0S",
+        "text": "I needed a switch for my garage so I could find the light switch. This works well the light switch is bright enough to be seen but not blinding. Easy to install it’s exactly like a regular switch",
+        "date": "Reviewed in the United States on November 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Bright light.",
+        "userName": "RC Stults",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/41iGer44rLL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R153BCI6TRB27Z",
+        "text": "Easy to install and works great",
+        "date": "Reviewed in the United States on November 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Function",
+        "userName": "Randy Carroll",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2HTQT8WEBUZNW",
+        "text": "Installed today. The light came on one time then went out and does not light up again. This item is crap.",
+        "date": "Reviewed in the United States on November 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does no light",
+        "userName": "Ronnie Gamble",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RC9ZXMIIE45U9",
+        "text": "In olden days these contained a neon light, which usually died in a few years. So this is a big improvement in life expectancy. However the switch bat is clear which makes it a bit harder to see from the side. A significant improvement would be to make the switch bat a slightly opaque, so it scattered the light internally; this would make it easier to see from the side. Took off one star for this design deficiency.",
+        "date": "Reviewed in the United States on November 3, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works fine, but could be better",
+        "userName": "BLF609",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RAFTFAC4G0Y0B",
+        "text": "I just painted my stairway a dark color so I wanted to bring something into it to lighten it up a little bit and to be able to see the light switch when it’s dark at night and I need to go downstairs.",
+        "date": "Reviewed in the United States on October 29, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Gives off a good amount of light to see it in a dark stairway.",
+        "userName": "Katrina Conway",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3C1TM2P4EWHX1",
+        "text": "It seems to work good so far. Easy to install. In the off position the switch has more than enough light to find it in the dark. I created a video to demonstrate how the included schematic is wrong. Also of note, if you want to use the quickwire holes in the back without using the screws, you may not be able to, they are very small. I had to double up wires on one of the screws because of this. So far so good. Will update if any problems.",
+        "date": "Reviewed in the United States on October 28, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "Jason",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0ba10ab7-df18-4fe3-b69f-03efa564147d/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R29NLI2JQ8KTI1",
+        "text": "👍",
+        "date": "Reviewed in the United States on October 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "captmack",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3JVV97LWV2Q4X",
+        "text": "Same old generic switch made for fifty years, AOK.",
+        "date": "Reviewed in the United States on October 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Same old generic switch made for fifty years, AOK.",
+        "userName": "tom",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R9RZESQ5SUS9F",
+        "text": "Almost too much light. not like the 3 way switch that didn't throw off any light.",
+        "date": "Reviewed in the United States on October 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Throws off a lot of light",
+        "userName": "Tallion",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3HY92X12H18IG",
+        "text": "Had one of these with a neon bulb in it that did not work with a LED load. This switch works just fine. Nice white glow at night.",
+        "date": "Reviewed in the United States on September 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with LED light fixture",
+        "userName": "Mike M",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1PO67ECSB9KP1",
+        "text": "I like the clear white light. Only wish they were made better. Out of the 2 I bought one of them leaks current when off. Because of this I won't buy this brand again",
+        "date": "Reviewed in the United States on September 18, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Bought 2 of these",
+        "userName": "Cretin",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2YX64234QZ98S",
+        "text": "A great addition to restrooms, closets, and other dark areas where a smart switch wouldn't make sense. Went thru and upgraded most of my light switches. The ones that went replaced with a wifi switch were done with these lit toggle switches. Bought a few of these \"clear\" along with a few of the \"white\" illuminated toggles and these \"clear\" versions definitely POP more.",
+        "date": "Reviewed in the United States on September 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for dark areas",
+        "userName": "Josh McCarthy",
+        "numberOfHelpful": 4,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51rW3Mr7xDL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/615oSZs3kKL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RZ4NWQTYZ2M45",
+        "text": "They work great for me.",
+        "date": "Reviewed in the United States on September 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfect",
+        "userName": "Steveand",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3M7H1P64AWV9R",
+        "text": "Easy to install and just enough light for guests to easily find the switch. I have installed then in all of my bathrooms.",
+        "date": "Reviewed in the United States on August 17, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Lisa Jackson",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R7AG93V2BTSH9",
+        "text": "On my 3rd or 4th switch... they keep failing internally. They'll start to spark and short out internally then just fail. I don't know why I keep buying them; should probably look for something else. These are terrible switches. I have them in my garage because you can see them in the dark. Doesn't do much good when the lights don't turn on.",
+        "date": "Reviewed in the United States on July 16, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't last",
+        "userName": "Eric B.",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R37ENQZBRDB5H0",
+        "text": "I installed this switch in my shed, and was happy with it. Less than a month after installation I flipped it on, and nothing. I flipped it off and on several times, the switch made a crackling sound internally, and the lights flickered, and then went off. The switch itself is still illuminated, but no longer functions as a light switch. I bought this specifically because it was Levithon brand, but it appears that I was bitten. Others may have a different experience, but I can't recommend this product.",
+        "date": "Reviewed in the United States on July 7, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed after less than a month.",
+        "userName": "HLEL",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R175D5P6CQB68N",
+        "text": "Purchased this to use for Panasonic bathroom fan with built-in LED light. When this switch is in \"off\" position - it still leaks enough current to slightly light up the LED light panel in the bathroom fan. I don't know if it is an intended design, but personally I believe it is a needless waste of electricity - I don't need the LED light panel inside the bathroom fan to be always on when I'm not using the bathroom.",
+        "date": "Reviewed in the United States on June 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Light leaks current when in \"off\" position",
+        "userName": "Randomness",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1DBB29LJC3M45",
+        "text": "I've had two of these, and both failed after a few months of _extremely_ light use. The switches probably had fewer than 100 cycles. Garbage, would not buy again.",
+        "date": "Reviewed in the United States on June 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Two switches failed after 6 months",
+        "userName": "Eric",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RZYJH5ZNWJTL4",
+        "text": "This switch took about 5 minutes to install, and the instructions were good. It's bright enough to see in the semi-darkness when I enter the room from a lit hallway, which is what I wanted. It works fine without a ground (which the facility wiring didn't have).",
+        "date": "Reviewed in the United States on June 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product and easy install",
+        "userName": "DLW",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1NE6K2I26FQ6A",
+        "text": "It's a nice switch but the bare wire stab-in ports on the back are for smaller wire than my house wiring so I can't use that feature and I'm not comfortable with striping and wrapping bare wire around the side screw terminals.",
+        "date": "Reviewed in the United States on June 14, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice switch Night lighted wall switch",
+        "userName": "William Krueger",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3KIE84NKD20VH",
+        "text": "This is my second of these switches that I've purchased in the past year. Installed it as the light switch in my garage. I chose the illuminated switch because I don't have windows there, and I was tired of fumbling around searching for the switch in the dark. After about 6 months, the first of these switches stopped working. The switch itself would illuminate, but no matter how many times I flipped the switch, the garage lights would not come on. Troubleshot with a standard switch and the lights worked just fine. Okay, no biggie...things fail. It wasn't too costly, so I'll just buy another one. Second switch was delivered, I installed it. Tried it while still hanging out of the wall by the wires. The switch illuminated, the lights came on when switched. Issue resolved....NOT! Pulled the circuit breaker once again, tucked the wires in, secured the switch and installed the switchplate. Reset the circuit breaker, tried the switch again, all worked just fine. Went in the house and returned to the garage a few minutes later....waitaminnit!!! The switch isn't illuminating! What the...? Jiggled the switch a bit, and it illuminates while in the \"in-between\" position between Off and On, but that is the only time. Now I'm out $10, two switches, that work the exact same way as the original non-illuminated switch. Save your money!",
+        "date": "Reviewed in the United States on May 14, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "A Dud Is A Dud Is A Dud...",
+        "userName": "Randy in Woodstock",
+        "numberOfHelpful": 2,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2HYK1LD9J5OOH",
+        "text": "Description say white but detail is clear/illuminated.",
+        "date": "Reviewed in the United States on May 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Color",
+        "userName": "Thomas G.",
+        "numberOfHelpful": 2,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2AE6ONB68QJV5",
+        "text": "1) The instructions and faceplate both indicate that right side up is with the green ground screw on the bottom right, but THIS IS NOT TRUE. The main photo on the amazon listing shows it right side up (with the green ground screw top left). I hope I can save someone else time and extra wiring. There is no \"on\" or \"off\" label on the switch anywhere. Flipping the switch makes a louder sound and is not as soft feeling as the standard switch I replaced. I prefer the softer, quieter style switch. I included a video for comparison. The regular switch turns on the fan, but hopefully you can still hear/see the difference. When I opened the box, only one of the long screws was attached. At first, I thought the second long screw was missing but then I found it and the plastic screw keeper in the bottom of the box. Just something to be aware of. I wish it only turned on the light when it was dark, but I knew when I bought it that it didn't have that capability. Other than that, it does exactly what I wanted it to do. I have two switches next to each other in the bathroom. I didn't want a night light; I just wanted to be able to find the light switch (and not the fan switch) in the evening without groping the wall, the switches, the blow dryer, etc.",
+        "date": "Reviewed in the United States on May 5, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "IMPORTANT: Right side up is opposite of instructions",
+        "userName": "A. Winslow",
+        "numberOfHelpful": 6,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71YivRDpe3L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81yIhATITRL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/4fa5eda4-8149-4ef7-a066-82a467264c56/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R5JOJRE5A7EWN",
+        "text": "Les pregunto si puedo retornar uno y me lo reemplacen. Pagué x la instalación y uno tiene problemas. Si reemplazo los 2 tendría q pagar confección nuevamente. Puedo mandarles el q tiene problemas ?",
+        "date": "Reviewed in the United States on May 2, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Uno tiene problemas",
+        "userName": "Manuel",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R17W4H2LK8UDQ2",
+        "text": "This product was exactly what i needed. the light isnt too bright so its not annoying in the hallway I would buy this again.",
+        "date": "Reviewed in the United States on April 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what i was looking for",
+        "userName": "Tracey",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R9KAOC2UU8UDS",
+        "text": "Needed in my home theater not bright but si could find switch and the amount of illumation was perfect directly replaces a standard SPST was worried about voltage blead but did not cause a problem",
+        "date": "Reviewed in the United States on March 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "exactly what I was hoping for",
+        "userName": "Ken from Oregon",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1JBHBBW76QGQ8",
+        "text": "You should use some of these when you're in the dark you can't find the switch and you rub your hand over the wall makes for a dark spot around the switch in a while",
+        "date": "Reviewed in the United States on March 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switch",
+        "userName": "John m",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R47SRD0CBWM36",
+        "text": "not much to say other than the switch works well and the illuminated off function is nice to have in my garage to make the switch easy to locate in the dark. it's not bright enough to be a night light or anything, but serves my needs perfectly. also was a cheap easy upgrade",
+        "date": "Reviewed in the United States on March 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "works well",
+        "userName": "Austin Benson",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71GRQVOIJaL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3BG1LVSUWQWOC",
+        "text": "I put this Lighted Leviton L1461-2C switch in my shed so that I can see it in the dark easier! It's so much better than the old amber colored switch that used to be in there before it finally burned out. I can see this thing easily, even when there is extension cords hanging in the way!",
+        "date": "Reviewed in the United States on March 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great in my shed!",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1SRWGXP7MOLHK",
+        "text": "Works as expected (lit when off), but the brightness of the lighting was a bit dim for my likings (minus 1 star). One will certainly be able to find the switch in a dark room, which is fit-for-purpose.",
+        "date": "Reviewed in the United States on February 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Lighted switch, but a bit dim",
+        "userName": "User3712",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1Q4MVIX18EXKB",
+        "text": "Good for what it is",
+        "date": "Reviewed in the United States on February 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Typical",
+        "userName": "old skeezer",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RGWUHR3HS251F",
+        "text": "Let me shine a light on the Leviton Single Pole Illuminated Light Switch - it's like having a polite nightlight for your room! These switches are not just your run-of-the-mill light switches, they are the unsung heroes of my home. Installing these gems was a breeze - even I, a self-proclaimed DIY disaster, managed to do it without a hitch. The instructions were clear and easy to follow, and I had them up and running in a jiffy. The illuminated feature is just perfect - it's not a blinding light, but just enough to help me find the switch without stumbling around in the dark. And let's not forget about the price - these switches are a steal! You get premium quality and convenience without breaking the bank. It's like getting a VIP seat at a budget-friendly price - talk about a win-win! So, if you're tired of playing hide-and-seek with your light switches in the dark, do yourself a favor and grab a few of these Leviton Illuminated Light Switches. Your eyes (and your wallet) will thank you!",
+        "date": "Reviewed in the United States on February 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light Up The Night!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R16CKJ2GQB0ABA",
+        "text": "Our guest bathroom has a cabinet next to the door, where you would expect the normal location for a light switch to be. The switch is along the open door wall. Whenever anyone new is at our house there is the inevitable \"Hey, where's the light switch in here?\" This has proved a simple and effective fix.",
+        "date": "Reviewed in the United States on January 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Solved an issue with our guest bathroom!",
+        "userName": "J. Foglio",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B005K8XFRW",
+        "productTitle": "Leviton L1461-2C Single-Pole Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 148,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 635,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1QQBYOI0TV6ZX",
+        "text": "Works well",
+        "date": "Reviewed in the United States on January 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Finally, a Lighted Switch in the Night",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B005K8XFRW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,465 @@
+{
+  "product_title": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "design": {
+        "A@attractive overall appearance": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "build_quality": {
+        "B@well constructed": {
+          "+": [
+            1
+          ]
+        },
+        "C@solid body feel": {
+          "+": [
+            26
+          ]
+        }
+      },
+      "toggle_switch": {
+        "D@standard paddle switch appearance": {
+          "+": [
+            6
+          ]
+        },
+        "E@toggle functionality": {
+          "+": [
+            1,
+            26
+          ]
+        },
+        "F@softer movement compared to previous version": {
+          "+": [
+            47
+          ]
+        },
+        "G@gets confused and needs multiple presses": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "indicator_light": {
+        "H@small dim warm-white light within toggle for dark visibility": {
+          "+": [
+            1
+          ]
+        },
+        "I@lit switch helpful": {
+          "+": [
+            38
+          ]
+        }
+      },
+      "dimensions": {
+        "J@fits in existing switch boxes without space issues": {
+          "+": [
+            1,
+            26
+          ]
+        },
+        "K@fits in normal switch plate": {
+          "+": [
+            38
+          ]
+        },
+        "L@slightly larger than standard toggle switch": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "mounting_system": {
+        "M@screw system is reassuring": {
+          "+": [
+            26
+          ]
+        },
+        "N@provides slight wiggle room for adjustment": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "screw_alignment": {
+        "O@6/32 holes don't align with multiple gang switches": {
+          "-": [
+            35
+          ]
+        },
+        "P@ground wire blocks upper faceplate screw": {
+          "-": [
+            37,
+            44
+          ]
+        }
+      },
+      "wiring_requirements": {
+        "Q@requires neutral wire connection": {
+          "-": [
+            3,
+            7,
+            13
+          ]
+        }
+      }
+    },
+    "perf": {
+      "wifi_connectivity": {
+        "a@stops responding to WiFi after few months": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@connects well to WiFi": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "c@loses WiFi connectivity during power outages": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@won't connect to WiFi": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "e@only works with 2.4G router not 5G": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "f@pairs right away with 2.4G/5.0G WiFi": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@WiFi setup was a breeze": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "h@on/off and dimming controls very well done": {
+          "+": {
+            "B": [
+              1
+            ]
+          }
+        },
+        "i@dims LED lights with no flutter/flicker": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "j@can dim LED lights down to 6%": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "k@weird flickering especially at low dimmer settings": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "l@dimmer barely made any difference in brightness": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "m@dimmable range not very broad (20-50% effective)": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "n@suddenly failed after 3 years": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "o@worked for 2 weeks then intermittent": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "p@stopped working after return window": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "q@stopped accepting reset commands": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "r@lasted less than 2 years": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "s@stopped working after five months": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "t@failure rate of about 50% after couple weeks": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "u@one stopped working after 3 months": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "v@lights flickering failure": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "w@complete failure": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "x@lasted about 6 months": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "y@just stopped working after few months": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "z@one died in 2 months": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "smart_features": {
+        "aa@switches on/off repeatedly when WiFi goes out": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ab@becomes non-responsive to Alexa commands": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "ac@works flawlessly with Alexa": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ad@easy integration with Google Home": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "ae@works great with Alexa": {
+          "+": {
+            "?": [
+              17,
+              34
+            ]
+          }
+        }
+      },
+      "installation": {
+        "af@install was automatic": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "ag@easy to install": {
+          "+": {
+            "?": [
+              15,
+              42
+            ]
+          }
+        },
+        "ah@works as regular switch": {
+          "+": {
+            "E": [
+              0
+            ]
+          }
+        }
+      },
+      "electrical_issues": {
+        "ai@lights still glow when turned off": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "aj@fried by non-dimmable LED bulbs": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom_lighting": {
+        "+": {
+          "h": [
+            1
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "m": [
+            12
+          ]
+        }
+      },
+      "3_way_switch_setup": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "alexa_voice_control": {
+        "+": {
+          "?": [
+            33,
+            43
+          ]
+        }
+      },
+      "porch_light_scheduling": {
+        "+": {
+          "?": [
+            38,
+            47
+          ]
+        }
+      },
+      "hallway_automation": {
+        "+": {
+          "?": [
+            19
+          ]
+        }
+      },
+      "office_lighting": {
+        "+": {
+          "?": [
+            33
+          ]
+        }
+      },
+      "single_pole_application": {
+        "-": {
+          "?": [
+            45
+          ]
+        }
+      },
+      "LED_recessed_lights": {
+        "-": {
+          "k,l": [
+            48
+          ]
+        }
+      },
+      "smartthings_integration": {
+        "-": {
+          "?": [
+            40
+          ]
+        }
+      },
+      "google_home_integration": {
+        "+": {
+          "ad": [
+            44
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:37.612296"
+}

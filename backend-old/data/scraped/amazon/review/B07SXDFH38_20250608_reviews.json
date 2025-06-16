@@ -1,0 +1,2593 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:27:02.309924",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07SXDFH38",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07SXDFH38",
+    "title": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+    "brand": "Amazon",
+    "model_number": NaN,
+    "price_usd": 18.69,
+    "rating": 4.3,
+    "reviews_count": 1483.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B07SXDFH38"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R7O8WAO1V6XOE",
+        "text": "Switch works well but was somewhat challenging to install. I used it in a dead-end 3-way application and this switch installs differently than a standard 3-way switch. I wasted a lot of time before I figured it out, with the help of YouTube. I've done a lot of electrical work at my house, and I would suggest hiring an electrician if you are not familiar and comfortable wiring.",
+        "date": "Reviewed in the United States on June 6, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Installation can be challenging",
+        "userName": "Ben J",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1Y8HUWB9KMBB1",
+        "text": "Works great!! Can even turn the lights on and off with my phone now. (No idea why I'd want to, but it's pretty cool. Works with 2.4 GHz only.)",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice Dimmer Swithc",
+        "userName": "Kevin Chute",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R2U1DFQCO3MY3W",
+        "text": "Should know that this product Dims led to a certain point",
+        "date": "Reviewed in the United States on February 23, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Won’t dim led lights",
+        "userName": "javier olarte",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1DRQAHLO73WTE",
+        "text": "A few years ago I wired my house with a bunch of these switches. I had a few not working right away but no big deal. Fast-forward a year or two and over half of them didn't dim any more one never goes completely off etc. If you just want a smart on/off switch there mostly ok, but now I'm going to have to buy better switches and water hours of my time swapping them out. I suppose if you just want something to work for a couple years?",
+        "date": "Reviewed in the United States on January 30, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don't waste your time with this garbage",
+        "userName": "Philip Garcia",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RX2KPIPDREU4R",
+        "text": "Pleasantly surprised with these wall switches, easily programmed from the app, and controlled at the switch. The automation provided within Google and Feit app is pretty good and not too difficult to set up ie come on at sunset (rather than a fixed time) and off at a fixed time, or X hours after event. I keep the outside lights on at 40% power for looks and power savings, and when motion is detected on one of the three cameras outside the house, the lights come up to 100% for a period of time, then reset to 40%. Slick!",
+        "date": "Reviewed in the United States on January 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work well, look great",
+        "userName": "G. Farney",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3NKPBVVG2JDTX",
+        "text": "arrived defective ---missing load screw, also the switch's internal screw plate the screw would screw into was missing (nothing but a hole there)",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "arrived defective ---missing load screw",
+        "userName": "the big gig",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1TJMA4R1MXC2M",
+        "text": "I've been using Feit products for years because they just work. Easy setup through the Feit app and perfect integration through Amazon Alexa products. Making schedules, assigning devices to rooms, and creating routines works flawlessly every time. Manual operation is fantastic also, smooth operation and great control over light level. When you set a light level, the switch comes back to the same level after you turn it off and back on, unlike some other dimmers. I just moved into a new home, bought 4 Feit Smart Dimmers, and realized I needed more, so I'm coming back for more. Order Feit these Smart Dimmers, you won't be sorry.",
+        "date": "Reviewed in the United States on November 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Operation With Alexa!",
+        "userName": "Gregg J",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1QIGFF8YLL4QN",
+        "text": "I used these in a home I just sold, but I replaced the halogen lamps with FEIT LED bulbs. It worked just fine. Moved to a new home with those new \"pancake\" LED ceiling fixtures and the dimmer would not turn off the lights completely. A dim glow remained when the switch was set to off. Had to replace it with a Leviton dimmer which worked correctly. 2 stars because it works with Feit bulbs but not some others.",
+        "date": "Reviewed in the United States on November 20, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Will not work with certain new LED lighting fixtures",
+        "userName": "Michael R.",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R25PT4UL9P34GL",
+        "text": "This more about the non-existence of what I want than the functionality of this product. I have a couple dozen Feit smart products throughout my home, mostly color changing lightbulbs. We love them and couldn't be happier with most of them. The problem is with the bathroom lights. I have them set to be a normal white throughout the day and a dim blue at night, but when it comes to turning them on and off we don't want to have to use the app or call out to a voice assistant every time we go in or out of the bathroom, so we just use the switch on the wall. This means that if the bathroom lights aren't on when our day-to-night or vice versa routines are triggered those lights don't get the memo and we're likely to get blinded by bright white light if we have to use the toilet at 2AM unless we remember to turn the lights on, wait for up to a minute for them to get reconnected to Wi-Fi, run the light changing command, and then turn them off again two times everyday. I saw the Lutron Aurora Smart Dimmer and thought my prayers were answered because it just fits over top of the regular switch, keeping it in the on position, and sends its on/off commands to the smart bulbs via Wi-Fi, but, alas, it only works with Philips light bulbs. I thought for sure that Feit would have a similar product because it seems like such an obvious thing but, unfortunately, no such product exists. I figured the next best solution would be to install this switch and set up my routines so that this switch turns on a minute before any change to the bulbs is performed and then turns off again another minute after that. It works fine but having to resort to this inelegant solution is very annoying",
+        "date": "Reviewed in the United States on October 21, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Seemingly Obvious Solution Doesn't Exist for Feit Products",
+        "userName": "CRLx",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R384ORU8Z4A8H0",
+        "text": "Great price for a good wifi dimmer switch. Works via app. Multiple dimming levels.",
+        "date": "Reviewed in the United States on October 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Wifi Dimmer Switch",
+        "userName": "David",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1U06FEEN6VIKY",
+        "text": "You will very often need to use a pigtail neutral wire to make the switch work- especially if there is another hang switch next to your dinner. This should be point out clearly. I wasted line two hours trying to figure this out.",
+        "date": "Reviewed in the United States on October 5, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Pigtail Wire",
+        "userName": "Soroco",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1OSE3SSA5ER96",
+        "text": "Extremely disappointed to find the actual product not in the package. The cover plate was there but not the switch. I knew exactly what I needed and trying to understand how this happened.",
+        "date": "Reviewed in the United States on September 15, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "There was no switch in the package/box",
+        "userName": "MJC",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81fOoyw7bGL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R2G5B0W00OMMR3",
+        "text": "This was once a good device to add into a 3rd party, open source, locally ran smart home system: Home assistant. The company behind the electronics, TUYA, actively cripples their products to dissuade the open-source community having anything to do with their devices. I wanted to use tasmota, an alternative firmware on these. It seems that's out of the question. I'm going to try some switches that come with tasmota from the factory. Feit: Please consider partnering with someone else for your smart devices. If I could flash tasmota on here, I'd love it.",
+        "date": "Reviewed in the United States on September 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Feit Electric? No. It's TUYA trash.",
+        "userName": "M. Woodco",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/713cy+eWUtL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71dPERj4KzL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R2GDV0IJWEIGAS",
+        "text": "So far these are the best I've been able to find. I use these with my SmartLife app for quick activation without even being home. I also use my Alexa and turn on/off lights with voice commands. I even have lights activate by motion sensor through my Ring doorbell. When people walk up to my front door, my interior sconce lights turn on before anyone even rings my doorbell. There are so many options to turn lights on/off when you're away from home.",
+        "date": "Reviewed in the United States on June 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I Just Keep Buying These",
+        "userName": "Ron Edwards",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RGKA0IR1PE7OB",
+        "text": "I installed 2 of these in a standard wall box this evening and it was a breeze to install. Now, I am familiar with doing electrical work so that part was not hard but sometime these smart devices can be a huge pain to set up on your WiFi and phone. I have always gotten other devices to work but it always seems like they take multiple tries or I have to go through a special step (like browsing to the IP of my smart garage door opener to set it up via my phone). In this case it was super easy. After turning the breaker back on and testing the switches to make sure they work. I just needed to hold the switch for 10s until the indicator flashed quickly. From there the switch popped up in the add device workflow in the app and I was able to push the WiFi settings to the switch and manage it. Super easy!",
+        "date": "Reviewed in the United States on April 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to set up!",
+        "userName": "C. M.",
+        "numberOfHelpful": 2,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R2FK8IWOS79K41",
+        "text": "Save yourself a headache and just get a casetta and pico remote",
+        "date": "Reviewed in the United States on April 30, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Overly complicated",
+        "userName": "One and barely done",
+        "numberOfHelpful": 2,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3DSFLI3POIL8I",
+        "text": "We had installed several of these in our new home and decided we needed one more in another bedroom. Very easy to install ourselves and were a perfect match to the others previously installed in home. One great feature is the small light in the switch that allows you to find the switch in the dark. It has multiple levels of dimmer and can be controlled from the app and set up on a timer for ease of use with outdoor porch lights. Makes for easy dusk to dawn timer. We have several Feit products in our home and they do not disappoint.",
+        "date": "Reviewed in the United States on April 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works very well with app",
+        "userName": "Cindy A",
+        "numberOfHelpful": 3,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/519O8x2Xh7L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R16U48XAACBXUJ",
+        "text": "The dimmer works great and I can use voice control to turn the lights on/off and adjust brightness. The key thing is to make sure you do not have your phone set to automatically reconnect to your home network during setup. I would not suggest this for anyone who has never done home wiring.",
+        "date": "Reviewed in the United States on April 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great instructions and seamless Alexa integration",
+        "userName": "Michael Johnson",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R237ASALW9I7UC",
+        "text": "I was able to set up with my network and manage through Google Home. Eventually it went offline and I could no longer bring them back onlone.",
+        "date": "Reviewed in the United States on April 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Off my network and no longer supported by the manufacturer",
+        "userName": "Jerry Wang",
+        "numberOfHelpful": 2,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R26FZ1W8LRZUXI",
+        "text": "Turns my light switches into smart switches and i can control with my voice.",
+        "date": "Reviewed in the United States on March 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Turns your house lights into a smart house.",
+        "userName": "Anthony",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RWVOQAPEYAJH6",
+        "text": "I opened the box from the top by cutting the plastic seals. When I pulled out the insert hooding the switch, I noticed that plastic insert was cracked. I further noticed that one of the small plastic retainers was missing from an installation screw. I could then see that the box had been opened from the bottom. I will install the switch as there doesn’t seem to be any evidence that it might be bad. But very disappointed.",
+        "date": "Reviewed in the United States on March 3, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Used but sold as new",
+        "userName": "PJW",
+        "numberOfHelpful": 2,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71jA60XkYRL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1ONAOKCTMML9R",
+        "text": "First off, I like these switches because they actually have a metal plate instead of a thick plastic plate for mounting in your switch box. This makes it much easier to mount in a two or three Gang Box because the plate is the same thickness as other switches. Secondly, it uses screw terminals instead of wire leads which saves you a lot of space in the switch box. You don't have a bunch of wire nuts in the switch box. If you are wanting to use this in a three-way circuit, you need to read the instructions very carefully. It's not straightforward as you would install a regular three-way. But it works fine. You can use the Feit app, or SmartLife. I had no problem adding them to SmartLife (with my EvaLogik switches) If you have problems setting it up, make sure you do a full reset. I have found that solves most problems.",
+        "date": "Reviewed in the United States on March 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "One of the best",
+        "userName": "Iz, Esquire",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RCPBDY6D73LML",
+        "text": "Works nicely with Alexa and Feit Electri app",
+        "date": "Reviewed in the United States on February 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Robert L. Rhoads",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R8RD9JY7QJ5LX",
+        "text": "Installation was easy based on the instructions. I was already using the Feit app with some other smart devices I bought at Costco, so as soon as I launched the app it detected the new dimmer.",
+        "date": "Reviewed in the United States on February 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy installation, app auto detected the new device",
+        "userName": "Steven Fuller",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3SLOCXS4U7VY",
+        "text": "Hooked up to my Alexa. Able to use voice commands to turn on and dim lights. Able to set timers. Great when I’m watching a movie. There are also switches for visitors to use if they don’t want to use voice commands.",
+        "date": "Reviewed in the United States on February 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product",
+        "userName": "Nick",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1KZMOFBWT1E8M",
+        "text": "Bought these from Menards but wanted to let the home automation community know of their downfall, I have had these switches for few years and they have worked ok. However, when I changed my wifi password, there was nothing I could do to update the switches and get them working again. I have about 60 smart home devices and about 12 of them are wifi based. It was the Fiet and Kasa devices that just would not allow me to update. I tried everything, including removing the devices and attempting to add them. I went through all the established procedures of removing and adding, connecting to their device wifi , making sure devices were close to phone and router, making sure devices were set in the correct pairing mode at least 10 time each. It just doesn't work. If you ever plan on changing your wifi password to ensure to maintain some level of security or if you think that you will need to change your router at some point, avoid these wifi devices and stick with zigbee or z-wave.",
+        "date": "Reviewed in the United States on February 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "If you plan to ever change your wifi password, don't buy",
+        "userName": "Sega",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3M9ROIB9JYLLO",
+        "text": "Turns a 3 way lighting circuit into a 2 way, with 1 of the switches basically bypassed. The \"red/yellow\" terminal is always hot, after wired correctly & bypasses the other switch. Also, the app is garbage, which is where this switch will be going soon. Eaton costs more for a reason.",
+        "date": "Reviewed in the United States on February 8, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "As a journeyman electrician, I've never seen a worse simple device in my 25 years of experience.",
+        "userName": "Me",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R31BZU2MV7RPQP",
+        "text": "When I ordered two of these wifi dimmers I was unsure that they would be compatible with my \"SMART LIFE\" app! But I'm happy to exclaim, they are truly compatible and functional in all aspects of the dimming / on-off functions I was hoping for! These are replacing another brand dimmer that required a brand specific app to operate, and they were unreliable, more times than not they would be \"OFFLINE\" requiring a tedious reconnecting procedure,!!! Very inconvenient and annoying! I haven't experienced any issues with these dimmers!!!",
+        "date": "Reviewed in the United States on February 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well with \"Smart Life\" app!!!",
+        "userName": "Frank M.",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1NNHWGFABND2P",
+        "text": "Evidently many buyers have reported difficulties installing these in a 3-way configuration. I can see why, the instructions are very complex. I installed in a simple 2-way (one switch, on off) and it works fine.",
+        "date": "Reviewed in the United States on January 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Keep it simple",
+        "userName": "John D.",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RPIR9ERY5BVHR",
+        "text": "Agree 2x weeks of daily attempts, still won't sync to app, \"connect another way\" doesn't work. Zero response from customer support email and after 4 hours of the switch being on, it won't turn the lights off. Shuts the switch off but lights stay on. I've had their plug in receptical switches and 2 never connected to the app. Also the app fails often. Feit never fails to disappoint.",
+        "date": "Reviewed in the United States on December 24, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "App sucks, no support and switch is trash",
+        "userName": "oreocreaming",
+        "numberOfHelpful": 2,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R2EDJ3BADQ43SD",
+        "text": "Love the product. Going to change other ones to these around the house. Easy to install and works great. But don’t use wifi light bulbs with the wifi switch. Seems to cancel each other out.",
+        "date": "Reviewed in the United States on December 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome",
+        "userName": "Brandon",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RO17G5H48R9E4",
+        "text": "These smart switches are pretty chancy. I was only able to get them to work as a single pole (I bought them for a 3 way). But even the single pole wiring was a bit more complex than needed. I had two electricians try to install them as a 3 way, always ended up with one switch that couldn't communicate at all. The app is littered with ads and finding support anywhere is scarce. Honestly, try a different brand. So for the Lutron caseta smart dimmers have worked for me in both single and 3 way, and the wiring was 100x easier",
+        "date": "Reviewed in the United States on November 25, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don't risk it",
+        "userName": "Al",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R2FOSQQXKNLD",
+        "text": "My old Intermatic E1010 was too loud and changing its on and off time was too cumbersome. This FEIT box worked as a direct replacement. I do not use dimming, just On/Off on schedule from the phone app. Now nights are quiet and adjusting time is easy. Now if I could figure out \"scenes\" in the app, it might even adjust for sunrise/sunset by itself, maybe, but it is good already as it is.",
+        "date": "Reviewed in the United States on October 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Replaced Intermatic E1010 with this",
+        "userName": "LittleHouseOnTheBelleVue",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1BYGYDUIABUJH",
+        "text": "This would have been great if it continued to function. However, turning off the switch no longer cuts power to the light fixture. It's just permanently on no matter what position the switch is in. I have had to unscrew all the lightbulbs until I replace the switch with something else. I contacted the seller and they have made no response -- apparently unwilling to honor any kind of warranty. Amazon's \"chat with seller\" interface features a button labeled \"Report Seller\", which I would very much like to do, in light of their negligence and failure to stand behind their product, but *that button* doesn't work either. (So now I'm pissed at Amazon in addition to the seller.)",
+        "date": "Reviewed in the United States on October 5, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "ceased to work after four months",
+        "userName": "Binary_pattern",
+        "numberOfHelpful": 3,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R37P8V74MB8X15",
+        "text": "Product as advertised. Works well.",
+        "date": "Reviewed in the United States on September 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "1620Dude",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R2IFNKXC0BKNY9",
+        "text": "Ease of installation was flawless. It's used for nite time and it allows me to go anywhere and feel comfortable that it's on.",
+        "date": "Reviewed in the United States on September 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "The installation wa s flawless",
+        "userName": "Cynthia wright",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3HTDR919NNOPM",
+        "text": "Both of these switches are defective, can't use them with a non Feit switch in a three way set up. There are some posts about how do this, but his solutions did not work for me. Your only option is to use these Feit switches on both sides of your three way set up- which is completely stupid because why would I pay extra to have a dimmer on both sides, when I could have used one?? My return window is closed so I am stuck with this garbage. Should have paid just a little extra and gone with old reliable- Lutron.",
+        "date": "Reviewed in the United States on September 5, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "These are TRASH ! ! ! ! ! !",
+        "userName": "David P.",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R23IIBA7XE863T",
+        "text": "Easy installation, link with alexa..",
+        "date": "Reviewed in the United States on August 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work just fine!!",
+        "userName": "Franklin",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R1YABM3P0C1B0S",
+        "text": "Sent me a used switch that was returned for who knows what reason. Now I have to go out of my way to return it. Complete BS.",
+        "date": "Reviewed in the United States on August 1, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Used",
+        "userName": "paul stack",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71knuN0siSL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RHYGFGUALKFIX",
+        "text": "We intended to install this on most of the ceiling lights in our house. We had no problem with our previous house due to the simpler setups. One useful feature is to have it on a three or four way circuit in our hallway. We tend to forget to turn off some hallway lights and don’t realize it until we get upstairs. It would be great to use Alexa to turn all the downstairs lights off. Unfortunately, these switches requires common and for 3 or 4 way switch setup power and common at the end of the chain for this smart dimmer switch to work. Unfortunately, on our 3 and 4 way setup, there is not enough wires to the end to feed the power and common with the control and ground all the way to the end. Oh well, I don’t think there is any smart switch that does. This can as Feit says work but they didn’t state the requirements. The other thing inconsistent is the dimming. For some reason, the lights does not dim much with some Feit LED dimmable lights made by them. It may work sometimes with more or less bulbs is that circuit. It is very strange. I have not tried enough other brands to see if it is isolated to Feit bulbs. We have a number of Feit bulbs from Costco at a good deal with electric company’s rebates. We like the feature of this smart dimmer otherwise. It is also made by a large company sold at a decent price.",
+        "date": "Reviewed in the United States on July 14, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works, but not perfect",
+        "userName": "Shopper In MA",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RDOTM6YFMAR1I",
+        "text": "I really like these switches, but I wish the company would update loading them. You must set them up on 2.4 meg and most all routers run on 5 meg. So you need to go into the admin settings of your router and switch it to 2.4 in order to set these up. After that you can switch back to 5, and they work fine.",
+        "date": "Reviewed in the United States on June 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works very well.",
+        "userName": "R. Engstrom",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3IATIT0K3N1OO",
+        "text": "Installed with 3-way normal switch. Works like a champ.",
+        "date": "Reviewed in the United States on June 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "3 Way installation",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3N7W08XEM2ZML",
+        "text": "I specifically identified this switch as a great-value candidate for my 3-way installation, with one dimmer and one regular toggle switch. That was accurate - for $20, this switch does a great job! BUT I ended up tearing my hair out for half a day trying to get my wiring right after no matter what I did, the other switch WOULD NOT toggle the light! Luckily I read through the reviews, and one or two alluded to faulty units which worked perfectly except for the remote switch. I requested a replacement, and wouldn't you know, the second switch wired in exactly the same worked perfectly the first time! A couple of tips after this experience: The directions are EXTREMELY adamant that in a 3-way installation, the power MUST come from the OTHER junction box and the load MUST be in THIS junction box. That's not really true. Long story short, the switch requires an always-on (not-switched) line and neutral. The load output obviously has to go to the high side of the light you're controlling. The 'other' side, if a dumb switch, simply needs to toggle line voltage to the \"RED/YLW\" traveler terminal of this switch. Any time the traveler input changes between 0 and 120V, the light will toggle state. In my case, the \"remote\" side just had a 14/3 romex running to it, red-white-black+ground. I wired black to hot and red to the switch terminal on the remote side, then red to traveler on the Feit side. That worked perfectly (after getting rid of the faulty unit!). Had the load been on the remote side, I could have just wired that via the unused white wire. Long story short, as long as you have enough wires in your box to correctly wire LOAD to the output, and toggle 0/120V on the traveler terminal with the \"other\" switch, you're good to go.",
+        "date": "Reviewed in the United States on May 23, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Excellent package BUT BEWARE FAULTY UNITS!",
+        "userName": "alexw",
+        "numberOfHelpful": 3,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RCPWSEC94J22J",
+        "text": "The app is ridiculously complex - Horrid to use. Sorry I ever bought this brand. A misearble app - had several people try to set up - NO LUCK !!!",
+        "date": "Reviewed in the United States on May 23, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Horrible APP - Horrible",
+        "userName": "Babe",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R20CMYJOQX6QF",
+        "text": "The dimmer only has a schedule option....it does NOT have a timer function (like the Feit outdoor smart plug). Disappointed, as this could be easily added within the app like they have with their other products.",
+        "date": "Reviewed in the United States on April 28, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "No Timer function - False Advertising",
+        "userName": "Buyer",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "RSEBO86S808BK",
+        "text": "The description claims it \"makes any bulb smart\", but is incompatible with our light fixture, which has integral LED. Light turns on, then off immediately. Feit customer service confirmed it only works with certain brand lights--THAT SHOULD BE CLEARLY STATED ON THE PACKAGE. I paid an electrician to install--and it took him quite a while, and now I have to have it moved to another switch or replace the fixture. The $18 I paid for it is nothing compared with two electrician visits. The other dimmer I stalled is working just great.",
+        "date": "Reviewed in the United States on April 24, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Doesn't work with just any bulb, as claimed",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R2UUBJ12UP1PMZ",
+        "text": "House built in 1976, fortunately had neutral wires in most of the electrical boxes, so installation was mostly very straightforward. One or two LED bulbs in the house (installed by the previous owner/seller) turned out to not be dimmable, but once they were swapped for dimmable bulbs, everything was perfect. Pairing was mostly first-time, with only one switch (installed a long way from the WiFi router) taking a couple of tries to pair, but ever since pairing, the whole system (I installed a total of seven of these dimmers throughout the house, including one pair wired as a 3-way) has been stable and reliable, responding instantly to both smartphone/app controls as well as voice control though Alexa.",
+        "date": "Reviewed in the United States on April 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dims LED lamps as well as incandescent.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3N397MB0DBZW5",
+        "text": "Purchased this product and installed it properly but kept malfunctioning till I finally realized that I need to use dimmable bulbs. Once I did, been working perfectly. I love it, it works with Alexa beautiful as well. Can’t beat the price nor quality.",
+        "date": "Reviewed in the United States on April 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "USE DIMMABLE BULBS",
+        "userName": "ICE",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R12H26YBAZ7AI3",
+        "text": "I hooked it up and it worked awesome. Only gave it 4/5 stars because it doesn’t work for the fan. If you turn the fan on, then it makes a horrible noise",
+        "date": "Reviewed in the United States on March 29, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works amazing",
+        "userName": "Justin Monroe",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07SXDFH38",
+        "productTitle": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 270,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1485,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 10
+          }
+        },
+        "reviewId": "R3DMK096HUHKOZ",
+        "text": "Very easy to install if you have an aptitude for DIY projects. It's nice to be blocks away or even away and be able to turn on the the foyer light Illuminating the glass panels of the front door. You could schedule it to go on and off any days you want, anytime you want, several times an evening. We don't use Alexa or Google, so we can't talk about integration.",
+        "date": "Reviewed in the United States on March 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "What a convenience to light the front door foyer from the living room",
+        "userName": "RUSS",
+        "numberOfHelpful": 0,
+        "variationId": "B07SXDFH38",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart WiFi Swicth",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,2598 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:18:26.149607",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0894KT8DC",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0894KT8DC",
+    "title": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+    "brand": "meross",
+    "model_number": NaN,
+    "price_usd": 20.79,
+    "rating": 4.4,
+    "reviews_count": 1725.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B0894KT8DC"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3AB5GR3KHRK5X",
+        "text": "I’m pretty frustrated with this brand all around. I updated my previous home with a competitor brand but chose to give this one a try as it’s much more affordable. I started with a 3 way switch and a fan/fan light switch. I was able to get both connected to my google, but both dropped. Really frustrating. The 3 way switch is so basic and right next to my WiFi, so no reason for it to drop. What’s worse is when they do drop, you can’t even flip the lights on manually. Whenever I did have connection issues with previous brand, you could at least still turn things off and on manually. Not super time consuming to swap out switches, but to do so, get them connected to your smart home, have it fail and have to remove and reinstall basic ones, ugh….don’t waste your time. Really wanted to love them.",
+        "date": "Reviewed in the United States on May 4, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Waste of time",
+        "userName": "Corey2one",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1GLMA6QT208SG",
+        "text": "Works very well. Using in HomeKit. Connected quickly and responds quickly. Only on/off no dimming. Only complaint is the size. A little big if you have a crowded box.",
+        "date": "Reviewed in the United States on May 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "👍",
+        "userName": "Fatty",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RQB0RWCKDS6VD",
+        "text": "After installing and using for 2+ years, I would not recommend. These switches often lose their connection and then it is a 2 hour process to get them back in the Meross app. Usually I have to pull the units from the wall to get the QR code. It never is 'found' by the iphone (new on by the way). The pain and aggravation is not worth the few cents saved over getting a lutron caseta or similar. This is the last time and I am replacing the 5 units that I have.",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Loss of connection to network 2+ hours to reconnect.",
+        "userName": "Greg Johnson",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R32OROJ53KNX9L",
+        "text": "The switch works great—easy to set up with Apple Home, and the response time is quick. No issues with connectivity. The only downside is that it’s a bit wide, so it didn’t fit in my gang box. One of the screws adjusts the depth, so be careful when installing. Otherwise, a solid smart switch!",
+        "date": "Reviewed in the United States on January 30, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works Great, But Watch the Fit",
+        "userName": "Pierson Sylvain",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R24J35F70PZQJZ",
+        "text": "Could not download app",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "wendell vaughan",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3JPRVJKBYH9XW",
+        "text": "The problem I have with these, is that if they are disconnected, they are impossible to reconnect. You have to have the AppleHome code, but you would have had to save the paper in the box. There isn't anything on the actual switch itself. Frustrating.",
+        "date": "Reviewed in the United States on January 24, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "One complaint...",
+        "userName": "CJF",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3SA0LE28K2L2",
+        "text": "My patio lights have 2 switches, one in the dining room and one in the bedroom. I use Apple Home, and wiring up this device to one switch worked great. At first, I had it working, but the other switch didn't operate the light. Basically, if the old dumb-switch was off, the Meross didn't work at all. I emailed tech support and they gave me the solution to swap one of the traveler wires with the live wire. Now the Meross still works, and I can operate the light from the dumb switch as well.",
+        "date": "Reviewed in the United States on January 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "A great solution for only replacing one of two 3-way switches",
+        "userName": "Tom P",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R9C3BP6GEZMH8",
+        "text": "Installed 3 years ago in a 4way light. Worked until recently when the switch part you press no longer moves. It’s not an often used switch. There are two other manual switches in the 4way setup that are mostly used. Not surprising though as the switch is very cheaply made. All plastic. The internal switch still works when toggled with HomeKit or another manual switch. Replacing with Lutron which are a lot more expensive but are solid. Also this switch tends to disconnect from the network anytime a wifi AP would restart. Would have to press the little button on the switch for it to rejoin. And occasionally would have to set it up over again in HomeKit and the meross app. Always updated the firmware.",
+        "date": "Reviewed in the United States on December 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broke",
+        "userName": "Jay",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R17GDB20964UT1",
+        "text": "I have tried a few different 3way wifi switches, Homekit specific, and these meross 3way switches simply work out of the box with easy setup. Others are a lot more expensive and have weird wiring or require a special paired second switch. These clearly show how to wire travelers, neutral, live, and ground and work. Pairing is straight forward, and they consistently reconnect without repairing on wifi reboots. My first two lasted 2 years and 3 years respectively. I tried a couple other brands, but I still cannot find anything better. So I just got two more meross switches again. I do hope they last longer this time. Side note: I really hope they eventually come out with Matter over Thread though.",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easiest 3way, short life",
+        "userName": "OH-shopper",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1HZLQEEVFRPZM",
+        "text": "Bought 2, one of them didnt work had a replacement and it worked just fine For one i installed it without neutral wire “connect it to ground” and it worked as expected Connecting it to Apple homekit was a challenge took so much time and several attempts Also you need just 1 to make your stairs light smart the other switch was left as is and fully controllable by voice",
+        "date": "Reviewed in the United States on October 13, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "DOA",
+        "userName": "Sammy M.",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R221U4TSJT2SCR",
+        "text": "As described.. The bar code is a bit oblique, so Apple home app may need help reading it.",
+        "date": "Reviewed in the United States on August 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "As expected",
+        "userName": "David Boyes",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2F9MXCUHQM77V",
+        "text": "If this doesn’t connect to Wi-Fi on the first attempt, it’s impossible to reset the directions provided by the company don’t work power cycling does not work removing it completely from the house letting it sit for five minutes and then reinstalling it does not work. Do not buy this it is not even worth a penny to buy this is if you like being frustrated and then going somewhere else to buy a different switch, this is absolute garbage.",
+        "date": "Reviewed in the United States on August 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Useless",
+        "userName": "Josh Smith",
+        "numberOfHelpful": 2,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61OmqSy+kiL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R313EPVM5KQUV0",
+        "text": "After having this plug installed less than a year. We never got it to work as a “smart” plug. But came home from vacation to find it had burned up. Luckily it did not burn our house down. Please reconsider purchasing this product.",
+        "date": "Reviewed in the United States on July 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "No not purchase this product!!",
+        "userName": "Anita Noll",
+        "numberOfHelpful": 3,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81JtcC41GsL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81LUCESH58L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R81TT7Q79DFN7",
+        "text": "Good: works well once the setup is completed. Bad: takes many attempts to get thru setup process for the first time. Instructions are not clear and they depend on hardware and software versions.",
+        "date": "Reviewed in the United States on July 3, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great Price....no apple hub needed....",
+        "userName": "Nathan Borchetta",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3UFIVPFV6G0V3",
+        "text": "I bought this for homekit as i am starting to add some smart switches. I needed a 3 way switch that could replace a dumb 3 way, but oddly, they were quite hard to find. I found this and one from Kasa. this was the only one which worked with homekit, so i went with it (this is also listed on the apple website). Electrical installation was straightforward. I have a standard wall junction box with a neutral, so it was just a matter of making sure i kept the common wire labeled. Everything connected without an issue and tucked into the box. Setup in the app was weird as you have select the correct version, but version options provided didnt sync up with the label on the box. I selected one (guess) and homekit was fine, but it didnt install in the app. I started over (removed the switch from homekit) and tried the next option. This one worked as it completed the install in the app and then automatically finished the homekit one. a little odd, but worked in the end. i have it for about a week and so far, no issues. i do have a weird issue where sometimes the entire circuit will turn off or encounter a power hiccup, but i do not believe that is this switch as it has happened when i toggling the 4 way dumb switch. WiFi is lost with the this switch, but i am happy to say within a few seconds, the switch is back online. Overall, i like the switch.",
+        "date": "Reviewed in the United States on June 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Really nice 3 way switch",
+        "userName": "ankurbs",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RNZXT0BX8KALO",
+        "text": "I like these Meross light switches. They install easily and are very easy to connect to your network. They work on WiFi and don’t need a hub. You do however need to download the Meross app and create an account. It is free. You connect all of your different types of Meross devices, then on your Amazon Alexa activate the skill and you can do voice commands. You can also connect your Meross account with SmartThings and it works great. Another great feature if you use the three way switch like I do is that you can just leave your second (or third) switches as they are. You don’t need to purchase a second ore remote switch. This saves you money and makes installation much easier as you only change one of the switches… your choice of when you want to change. These do look like up and down toggle switches, but they really are just one push button at the bottom. In other words, you press it like you’re turning it off all the time and it toggles between on and off. You get used to this quickly. I’ve also had other switches that work with the toggle up and down, and some that feel more substantial when you press them, but they can be triple the price of this one. I’ve had quite a few of these Meross switches installed for years, and have only had one fail. I wouldn’t hesitate to use them. I still give them 5 stars.",
+        "date": "Reviewed in the United States on June 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Meross makes good switches for a very good price.",
+        "userName": "Steve - Broadcast Engineer",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71VdsKkHDzL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RILWGGQZAO72M",
+        "text": "I have numerous Meross “smart” items and find them to be reliable and they just work. These wall switches are no exception. They work. Yes - installing these in a wall switch box is a bit of a challenge - boxes are small, cramped and full of wires. Have to fiddle a bit to get everything in but it all fits. Works well with Meross app and Alexa.",
+        "date": "Reviewed in the United States on March 25, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Big Fan Of Meross Products",
+        "userName": "KC Guy",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2MJ309TVIY5KB",
+        "text": "Replacing a 3 way switch for living room fan. The wiring directions are clear and concise. Getting it connected to my Google home was pretty easy with the app. Works great!!!",
+        "date": "Reviewed in the United States on March 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy wiring and wifi connection",
+        "userName": "r. storteboom",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2XN25VBJHBDM2",
+        "text": "This device don’t last every switch I got from this company I had to replace. Garbage!! 🗑️",
+        "date": "Reviewed in the United States on February 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t buy",
+        "userName": "ben berber",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "ROCLKMZ5RYDIA",
+        "text": "It was not obvious where the HomeKit setup code was - it's a tiny sticker on the front of the switch. there is no QR code. This was confusing as the instructions said to look for a QR code on the packaging or the instructions.",
+        "date": "Reviewed in the United States on December 24, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Seems to work",
+        "userName": "Don K.",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61toS4PjJoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71BO7X9WCXL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1AJC8QRNNDRYM",
+        "text": "I got this particular switch because unlike some others, this is a true 3-way switch and only requires replacing one of your two switches. Response time is immediate, and pairing was to HomeKit was extremely easy, just connect to the hotspot provided with your phone and everything is more-less automatic. I’m no electrician, but I was able to install this without any issue. It would probably also work for a 4-way switch configuration too provided the appropriate switch is replaced.",
+        "date": "Reviewed in the United States on December 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great light switch",
+        "userName": "Dan",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RFFMXZ8OR27JE",
+        "text": "Light switch working well with my SmartThings. Very pleased However true test will be during power outages and associated surges.",
+        "date": "Reviewed in the United States on September 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Working great!",
+        "userName": "MTM",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2Z3DY63HWEQHM",
+        "text": "This Meross is amazing. Easy to install had no issue with HomeKit.",
+        "date": "Reviewed in the United States on May 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing",
+        "userName": "Alvino",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R18T8B3DQT7I4Z",
+        "text": "I was thrilled to finally find a smart switch that could work with a 4-way switch, which also happens to be tied in to a GFCI. I'm not an electrician so it took me a little while to figure out how the wiring was originally installed, but once I determined the line wire and figured out what a switch loop is, I was able to get things working.",
+        "date": "Reviewed in the United States on May 21, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Perfectly with 4-Way Switch",
+        "userName": "tharrington3",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R12MHSTSQUFO9O",
+        "text": "I love these products. They just work! No hub. No restrictions on how and when I use my device. I can use apple home kit to control my devices or Amazon Alexa. I love that. I also love how I can control the devices when I am not home from the Meross app. And there is no hub to do this! And they are so cheap!",
+        "date": "Reviewed in the United States on February 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "I love Meross products!",
+        "userName": "KAZY K0REAN",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1I28LVHRV7A63",
+        "text": "The 3-way switch I received had clearly been installed previously. The wires were twisted and there was sticker residue on the sides where a sticker had been removed. I installed it to see how it would function and was pleasantly surprised with how well it worked and integrated with Apple Home. The Alexa integration was not nearly as easy and still does not work well. I planned to return it on principle since I am offended at being sold a used device as new, but decided to suck it up and keep it since it is installed and working. I don't plan to order from this company in the future based on this experience and will give one of the many competitors my business for my next purchase.",
+        "date": "Reviewed in the United States on February 16, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Used sold as new",
+        "userName": "William Mandeville",
+        "numberOfHelpful": 2,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3HUC47Z6MBEK2",
+        "text": "Good quality product I liked and I going’s buy en other",
+        "date": "Reviewed in the United States on February 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2ZJ6J2GT5X0OU",
+        "text": "Using this is very frustrating for the household. Using Meross with a 'dumb' switch in a 3-way configuration is very inconsistent. Often times, it turns on and then turns off immediately from the 'dumb' switch. This on-off failure causes the 'smart' switch to flash amber. Homekit integration is also poor but it could be something with Homekit itself. Very slow to respond to 'hey siri' commands.",
+        "date": "Reviewed in the United States on January 21, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "3-way operation and Homekit usage poor",
+        "userName": "RacerGal",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R36960P5XHT8AE",
+        "text": "Funciona a la perfección",
+        "date": "Reviewed in the United States on January 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Super",
+        "userName": "Hansel torres",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2M8A4N7YTTJ17",
+        "text": "This switch was great for our 3 way hall lights. reacts quickly, easy to install, and good price. Warranty duration is poor for wall mounted item.",
+        "date": "Reviewed in the United States on December 20, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Home automation",
+        "userName": "JJR",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2D3NR91OYVGEA",
+        "text": "Easy to install and set up",
+        "date": "Reviewed in the United States on December 12, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Speediness of delivery",
+        "userName": "Paul Huff",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2OIZ0NA2Q2BBZ",
+        "text": "Hooked it up as instructed, but just wouldn't work. Had to return",
+        "date": "Reviewed in the United States on November 10, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Couldn't get it to work",
+        "userName": "link",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RMH54RXPGG3FK",
+        "text": "Great product. Will buy more in the future",
+        "date": "Reviewed in the United States on August 22, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "joe c",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RC4R41XFSP47U",
+        "text": "This is a copy of my review of the single pole version of these switches. I have been replacing my light switches with these Meross smart Wi-fi wall switches. I got a few to try them out and see how well they work as a replacement for my smart bulbs. The smart bulbs (3 different brands, including the supposed expensive good brand) would keep loosing connection. They would be unresponsive more often than not. I was getting so tired of Siri \"not hearing back from the device\" so I decided to make the switch to smart switches, and boy am I ever glad I did. No more problems with loosing connection since I started using these! Also, some really cool features are as follows: If you are replacing a 3-way switch setup, you only need to replace one of the switches if you use these smart switches. You can set up an automation to make it so that the lights switch off automatically after a set amount of time, or you can make it so that whole groups of lights come on if you switch on one etc. You can use this functionality to effectively make unrelated lights work kind of like they are part of a 3-way light switch. Maybe best of all is there is no longer a problem if somebody switches off the light switch (unlike the dumb smart bulbs that get completely screwed up if somebody accidentally forgets and turns off the switch). I also like how I can decide on a per-switch basis, if I want the little indicator light to work as a night light, a power indicator, or to just stay off (this functionality is accomplished via the Meross app, and that's about all I have used their app for so far, it's easy to add your switches to the Meross app if you have finished setting them up in homekit first). So far I have found these switches to be very reliable. Setup can be done completely through homekit and it works pretty seamlessly. Out of 12 switches so far (both 3-way and single pole) I have only had one that had any hiccups while trying to set it up, and after resetting the device, setup went smoothly on the second try. Please note, these switches require the neutral wire, so they won't work if your house doesn't have neutral wires in the switch boxes. On a side note, I noticed that amazon \"clip to save\" coupons pop up every day or so with these, so don't buy them all at once. Buy them one set per day so you can keep getting that coupon each time!",
+        "date": "Reviewed in the United States on June 24, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "So much better than smart bulbs!",
+        "userName": "Yung Fang Smith",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1W037O03OWLSU",
+        "text": "Works great with Homekit. Easy install video in the application. Doing my house .. changing house from X10 system..",
+        "date": "Reviewed in the United States on May 31, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with Homekit",
+        "userName": "Angel",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3CXFV6IPTZRWW",
+        "text": "Some of the switches have no response once a while",
+        "date": "Reviewed in the United States on May 30, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good overall but…",
+        "userName": "Ben D.",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/41NrPs70UML._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RKCZOJ40QGPR7",
+        "text": "I have installed about 10 meross smart switches in my home. All of them work well with the meross app for remote access. Very easy to install except make sure u take a picture of the switches so you get the correct number in case you need to reinstall then you won’t need to open the wallplate. Installation through meross app is required. Hopefully it works directly with homekit app. All the homekit app compliant switches are lot more expensive than alrxa compatible ones. Meross app is easy and automation via homekit app is easy. I could set the appropriate lighting to turn on or off when the main door is opened or locked etc. However apple home kit is a different story. I have my iPad at home as the hub so I can remote access. Almost everyday when I try to use the HomeKit app it says the switches are “updating“. Takes a while to go online. Probably because it is trying to reach the ipad hub but not sure. Expected better from an appli app. That’s the main disappointment.",
+        "date": "Reviewed in the United States on May 22, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "homekit app poor but otherwise good quality",
+        "userName": "HP2",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R23C4VJWJO8CR3",
+        "text": "Horrible interface with HomeKit. Absolutely the worst setup taking multiple tries, resetting router, restarting iPhone, and nothing seems to work. When you do finally get it setup you will start all over again should there be a powerful failure or you lose internet service temporarily. After complaining to Merros they send you a list of things to to try. Another few hours wasted to get it working again. Now wait for the next failure and start all over again. Mine went into the trash can last week.",
+        "date": "Reviewed in the United States on April 7, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t buy this junk",
+        "userName": "BetaVirus",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RMDPSLWPIZNDZ",
+        "text": "Bought the MSS550 3-way switches 2 pack. When I opened the box, I noticed the switches were dirty and the wires had the tips missing, clearly I got someone else's return. Figured no problem, I can clean it up and install them anyway. After getting one installed, I go to pair it up with Homekit and it is asking for the Homekit code. Well there was no Homekit code printed on the switch! Neither of them had a code. Even after downloading the Meross app, it tells me to find the Homekit code printed on the switch to install. And yes the box actually says \"Works with Apple Homekit\". Disappointingly had to return them.",
+        "date": "Reviewed in the United States on March 23, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Check Homekit compatability!",
+        "userName": "Mario",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R25L97FWE44EFS",
+        "text": "+ Review 1.installation was easy if you have a tester the better, installed wire and wire nuts a plus 2. HomeKit compatibility is a must for me 3. Compatible to almost all Apps (SmartThings is a +) - Review 1. 2.4 G really 2. Newest connectivity not compatible (Matter) MATTER-Matter is a new standard that promises to fix smart home interoperability like NATO, EU, UN Alexa, HomeKit, SmartThings, etc, are all KUMBAYA KUMBAYA-referring to an effort to get opposing interests to reconcile in the name of harmony.",
+        "date": "Reviewed in the United States on February 4, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy Breezy",
+        "userName": "FB",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1OSU9PVT5CIJS",
+        "text": "Hard to find a smart switch that can be installed on a traditional 3-way or 4-way circuit by only replacing one switch. Many other smart switches require you to replace all switches in a 3/4-way circuit.",
+        "date": "Reviewed in the United States on January 13, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "3-way 4-way smart switch, replace only one switch",
+        "userName": "Tokenekie",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3Q3S3XMXIRNWP",
+        "text": "I installed this switch carefully following instructions and it didn’t work. It powered up fine and connected to WiFi, HomeKit, etc. But when I pushed the button or switched it in HomeKit, my lights would flash twice, then glow dimly continuously and never turn fully off. Obviously this was not what it was supposed to do. I disconnected it to keep my house from burning down and emailed customer service - the ONLY way of contacting them. TWO DAYS LATER I get an email response asking for pictures of how I had wired it… as if I had just left it there for two days waiting for their advice. DO NOT BUY THIS SWITCH. Poor quality, even worse customer service.",
+        "date": "Reviewed in the United States on January 11, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective? Junk? Didn’t work, and customer service was no help",
+        "userName": "Michael J Wise",
+        "numberOfHelpful": 2,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R38OFEJP793X7C",
+        "text": "Why they don't have a homekit code in the box is beyond me. Had to take the cover back off for the manual code. It can be difficult to connect but did so within 10 minutes of trying. Then one day some 6 month later I leave the house and see the lights are on. I mean this thing never gets touched. It's set with a scene to come on between sunset and sunrise. Today it won't even act like a normal switch. Cheap feel with lack luster reliability for Meross.",
+        "date": "Reviewed in the United States on December 18, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Died after 6 months",
+        "userName": "CJ",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R348FSZAU2I8D4",
+        "text": "Was able to add it to HomeKit on the first try. Didn’t need to perform a factory reset like others. So far, it performing flawlessly.",
+        "date": "Reviewed in the United States on December 6, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Added to HomeKit on the first try",
+        "userName": "Norman Froelich",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3S0MG4P0B59ZU",
+        "text": "Does not stay connected keeps saying unresponsive/updating. I’ve tried everything from updates through the Meross app. to reinstalling to resetting. It does not play nice with HomeKit, and I cannot get it hooked up to Alexa whatsoever, and I’m very tech-savvy and have and have many things hooked up to both HomeKit and Alexa",
+        "date": "Reviewed in the United States on November 2, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Updating- All the time",
+        "userName": "Jonathan",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RF2CQ6O807UIL",
+        "text": "Had them for about 6 months. Initially they worked great. Gradually they began dropping their WiFi connection more and more often. Had to reset them every few days. I finally gave up, uninstalled them, and replaced with another brand.",
+        "date": "Reviewed in the United States on October 12, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Won't stay connected to WiFi",
+        "userName": "JimFromArizona",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3E626B217UURI",
+        "text": "This switch sucks. It locks up. It resets. It drops from the network. Sometimes you can’t even reset it properly. Replaced all of my Meross switches with Lutron Caseta and couldn’t be happier.",
+        "date": "Reviewed in the United States on September 29, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Absolute junk. Save your time and money.",
+        "userName": "Jason",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RNFVTCH8O5JTY",
+        "text": "After a few hours I managed to connect the switch. After 5 minutes it disconnects and won't reconnect unless I reset it. At least the reset button is accessible.",
+        "date": "Reviewed in the United States on September 15, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Will only stay connected for 5 minutes before needing a reset",
+        "userName": "LSM",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RNLHEIX6XXZNM",
+        "text": "I had bought 6 switches last year and within 12 months, 3 of them stopped working. It is so annoying since first you waste time Installing and then you have to replace those again with better brands. I would say don’t waste money on this piece of junk. Also their customer service isn’t great",
+        "date": "Reviewed in the United States on September 6, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Will stop working in 6 months or 1 years",
+        "userName": "Smihit S.",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0894KT8DC",
+        "productTitle": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 218,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1725,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R4EETCVPQ0B2L",
+        "text": "Works as it should—what more can you ask for?! 👍🏻 Just be sure to use the Meross and Home apps as directed, and you’ll be on your way.",
+        "date": "Reviewed in the United States on August 20, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Top notch HomeKit integration!",
+        "userName": "PJ Pederson",
+        "numberOfHelpful": 0,
+        "variationId": "B0894KT8DC",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: HomeKit Version",
+          "Size: 3 Way Smart Switch 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,2466 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:41:06.267184",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0BQTHBKH3",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0BQTHBKH3",
+    "title": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+    "brand": "ORVIBO",
+    "model_number": NaN,
+    "price_usd": 39.99,
+    "rating": 3.9,
+    "reviews_count": 189.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0BQTHBKH3"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1REY7YWFPHDW6",
+        "text": "Works just fine it’s a nice touch for your friends and family say what the $&@? Is that that’s cool hahaha",
+        "date": "Reviewed in the United States on June 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "12PK-WILD",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3TZW4N54TLHK2",
+        "text": "Bought two of these, and the display is great, and they work well.",
+        "date": "Reviewed in the United States on April 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Touch Screen",
+        "userName": "Ramin Faramarzi",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3V2JPD0K6Z1NP",
+        "text": "I absolutely love this light switch also displays the time and weather",
+        "date": "Reviewed in the United States on April 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "10/10",
+        "userName": "Brylee",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R389O67AHF9TXV",
+        "text": "DO NOT BUY THIS... It finally completely quit with just a blank screen now. First it stopped communicating with any apps, Alexa, etc. Then it stopped giving weather. Now it shows NOTHING and the physical button doesn't do anything. The screen glows, but is just completely blank and inop. Total garbage and was a pain to setup. It never satisfied my needs. Looking elsewhere now for something NOT cheap Chinese junk pushed on me.",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Total piece of junk",
+        "userName": "Santa Claus 🎅",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2FHQ33CE63VJO",
+        "text": "This light switch works great with Alexa. I love that it displays the weather. It is easy to manually turn on/off and dim lights as well. I plan to purchase more!",
+        "date": "Reviewed in the United States on November 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it! Very convenient and works great!",
+        "userName": "Stephanie",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1QR6BKT85OT15",
+        "text": "I like this switch as it give you more futuristic feeling, but twice so far in about a year I had to mess with it, its been stable for a few months now, I still have to play with matter",
+        "date": "Reviewed in the United States on November 21, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works but will get better",
+        "userName": "Don",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1I3XBMSKZRR2",
+        "text": "It started out just as a device to fill a couple of empty outlets (we rerouted lighting in the room but still had power at the outlet) with time and temperature. They did exactly the job I wanted them to. Then we lost both of them at the same time for no apparent reason. Email to \"support\" went unanswered. These are now black faceplates in my walls.",
+        "date": "Reviewed in the United States on October 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Looks like support is dead for this",
+        "userName": "E. Clark",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2KZH6R0EGBQT4",
+        "text": "Looks nice but not reliable. Keep offline all the time. Not worth the investment.",
+        "date": "Reviewed in the United States on October 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lost connection",
+        "userName": "Andre Zanella",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/41ONadu7bdL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3O6N8KWVUR6EA",
+        "text": "I was very impressed with all the features packed into these switches. Weather, clock, multiple choices for display (analogue or digital clock, on-screen display of light on/off status, etc), Matter or WiFi communications, dimming or non-dimming, intercom to one switch or voice broadcast to all, default “on” levels (75% brightness for example), microphone on/off, vacation mode, scenes… impressive and very high tech looking. I don’t have 2 in the same house so I haven’t tested voice quality of the intercom features. I put one in a home I’m selling so it would turn the porch lights on at night & off at sunrise. I went to the house this weekend and it was locked up, displaying “HomeAI” and nothing else. I couldn’t turn on the light locally by the push button and the touch screen was frozen, but it still worked via the app. I tripped the breaker for a minute and it revived again. I hope it continues working! The one thing I wish you could do (and could be done with a firmware upgrade) is have the switch stay on whatever screen you wanted it left on. One switch could be an intercom, one could have the digital slider for dimming, one could display weather, one switch could always display the “Scenes” buttons to control groups of lights, etc… but currently they all default back to the same screen after 15 seconds or so and you have to scroll to your preferred screen. Price is very reasonable for what you get. One “gotcha” to be aware of. Although it supports the universal Matter protocol, it cannot control any other Matter switches except the ORVIBO ones.",
+        "date": "Reviewed in the United States on October 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Feature rich, very nice looking.",
+        "userName": "Shad",
+        "numberOfHelpful": 5,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51uFWzOLeqL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61Wi-HkpxvL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3C5LDBSCHTL3V",
+        "text": "I bought one and ended up return it -- while the hardware looks nice, and the app worked well, it did not integrate in my Google Home / TPLink=Tapo smart home very well. It can be controlled from Google Home just fine, but the whole point of getting it for me was as a scene switch with a flexible display. And that it doesn't do.",
+        "date": "Reviewed in the United States on September 14, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great hardware, but a complex solution with limited integration",
+        "userName": "David",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RYF7HKLK60LSS",
+        "text": "I’ve tried using this outlet for months, it keeps disconnecting, resetting, and basically is a dumb switch. The software is slow. You tap the screen or the physical button, and lights take up to 3 seconds to turn on. The latest firmware is installed and never have I had a good experience with this. Same with their outlet. The products look good but function poorly. Stay away, save your money.",
+        "date": "Reviewed in the United States on August 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Won’t Connect to App on Same Network",
+        "userName": "Mike Kormendy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RPJRVIUDUHA65",
+        "text": "These were exactly as described and are very easy to integrate with your Google Home system! I especially love the intercom feature.",
+        "date": "Reviewed in the United States on July 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "west27",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R345RD5592UIF2",
+        "text": "I went all digital in my house and got this as a light switch and it has so many cool features. One thing I do like is if you were to leave a light on the app will notify you and you can control your lights remotely.",
+        "date": "Reviewed in the United States on June 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Innovative product",
+        "userName": "Ernie Escanio",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3C9V5FF94HQUT",
+        "text": "First of all, I would like to say that I am very well versed in smart home technology and have been an early adopter since Alexa came on the scene. I have integrated light switches, outlets, doorbells, cameras, major appliances, robot vacuums, all forms of motion and tracking sensors, air purifiers, showers, faucets, and even electric doors into my home. I have been able to troubleshoot most any problem from integrating a new piece of technology into my home or office environment. But I have given up on ORVIBO and Mixpad 1. I have spent hours trying to get 8 of these light switches connected to their app and then introduced into my Google Home environment. The first step of getting these devices connected to their own app has proven to be an exceptionally exhausting fail. After connecting one device rather quickly, the remaining 7 won't connect to the app. I get repeated failure messages from their QR codes on each device, try the discovery option as well as the manual addition option. Nothing will get these remaining 7 to connect. The only reason why I gave these devices 2 stars instead of 1 is because I was finally able to connect all directly to Google Home via the Matter protocol. No such luck via Samsung Smartthings or the Orvibo app but at least they are now on my smarthome network directly via Google Home. However, that means most of their nifty functions are completely unusable since I need them connected to the Orvibo app for the broadcasting or other features. If I was able to redo then I would not have wasted my money on these great looking and well-marketed devices. Something is seriously wrong with their SW and discovery process. I wish I could get those hours back of my life that were nothing but excessive frustration with no positive outcome.",
+        "date": "Reviewed in the United States on May 6, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "I really wanted to like these - but regret purchase",
+        "userName": "Dwight",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R289XMX2CE9EY0",
+        "text": "I got led of Amazon and transformer https://www.amazon.com/gp/product/B07MZNMJYP/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&th=1 but dimming doesn't work, plus it flickers when switched on&off",
+        "date": "Reviewed in the United States on May 5, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "It's NOT electronic dimmer!!",
+        "userName": "Chris",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/adc8a306-4bef-480c-851f-0a0f019b9f81/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RXEHJEML09HQZ",
+        "text": "If you are in search of a modern and upscale look for your home, you simply cannot afford to miss out on these smart switches. Trust me, your guests will be amazed by how effortlessly you've managed to elevate the aesthetic appeal of your living space. Not only do these switches look sleek and stylish, but they also come equipped with a range of useful features such as temperature display, weather updates, and clock. Installing these switches will surely add a touch of sophistication to your home décor. Give it a try and you won't regret it!",
+        "date": "Reviewed in the United States on April 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Beautiful",
+        "userName": "Dezeria Honeywell",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3JMSMGYUBURFO",
+        "text": "Everything is working fine. Setup was simple. Sleek device. Difficult to see the physical button for those unfamiliar with it.",
+        "date": "Reviewed in the United States on April 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Working well.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2AV3ZRK20NWQY",
+        "text": "Quality of build is excellent - functionality is as described - extremely fast HomeKit response using matter - I have been kicking the tires on this for months - I ordered 2 more after getting the first one installed I will order a few more - I’m leaving the load unconnected with just wire but on it so I can use these as triggers in home kit works great - so in the kitchen you click lights and homekit turns on the under cabinet, can lights, and dinning area lights all using matter devices and homekit devices absolutely what I needed",
+        "date": "Reviewed in the United States on April 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "HS Tulsa",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61ruuWKT5bL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R11YRW3HWD1FJA",
+        "text": "Very challenging to set up using Matter or AppleHomekit. CANNOT: 1) Select scenes, 2) Change button/display colors, 3) Dim lights without selecting a sub-menu. Website is misleading about scene capabilities.",
+        "date": "Reviewed in the United States on March 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does not select scenes. Many limitations. Difficult setup.",
+        "userName": "Intelligentsia",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2W9YI0LZK078K",
+        "text": "Very deceiving product description, this can only control other Orbivo devices not your existing devices. I wanted to use this to control scenes on my Hue lighting but it cannot be connected to any of my hue lighting as it’s Orbivo specific… Very disappointing as I would have loved to keep it.",
+        "date": "Reviewed in the United States on March 16, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Cannot control your other devices!",
+        "userName": "jarrrett",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1SRMDBVRVQ3BR",
+        "text": "I love having these. I personally love being able to shut them off or turn them on remotely.",
+        "date": "Reviewed in the United States on March 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart home",
+        "userName": "Kyle",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3MWT2C2LYHMDN",
+        "text": "This switch (mixpad d1) with the iPhone app isn’t ready for any use other than a switch. It’s matter capable but can ONLY control its own ORVIBO devices. It cannot handle anything setup in your matter system. It cannot make a scene with your other matter devices. Worst is in the display options on the switch - you can turn on a single button at the bottom of the display - but it can’t be customized or changed to something else (like a scene or automation) - it’s only function can be to turn the switch on. This is INSANE since there is a physical switch right below it. Who needs a digital representation of the physical button????? The app further doesn’t allow ANY customization of the switch. You can only do that on the switch itself. With some software updates this switch could be great as it sets up easily, has a great display and with matter could be a great controller. As it stands now it is the world’s prettiest barely connected smart switch.",
+        "date": "Reviewed in the United States on March 2, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Half Baked - not ready for a true smart home",
+        "userName": "Paul Jakubowski",
+        "numberOfHelpful": 6,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R25F9K2XCY9DOM",
+        "text": "Easy to use app, and you can program lights to come on at certain times and at certain brightness levels. I really like that the weather conditions, outside temperature, and time is displayed. Being able to take a glance to see what the temperature is outside is really convenient. A little tricky setting up, but worth it.",
+        "date": "Reviewed in the United States on February 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice smart switch/dimmer",
+        "userName": "MaverickCoast",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R39NGYPUN04ECX",
+        "text": "Great idea to shrink a tablet and put it in a light switch. Great execution, versatile, connects to home assistant, matter enabled, most convenient solution for 4 way and 3 way (using other switches from orvibo, such as the remote switch that requires nothing but the mechanical flick of the switch to charge and power), intercom, the outstanding feature list goes on, and a responsive team on amazon. Excellent value.",
+        "date": "Reviewed in the United States on February 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it",
+        "userName": "Jason Tata",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1LZCQQDPIWN73",
+        "text": "Upon turning this device on it has two selections, one to fire wall or two to manual boot. Obviously I checked to boot, and this Chinese options menu popped up. Not sure how to fix it or if it happened to anyone else but I’m pretty dissatisfied with my product",
+        "date": "Reviewed in the United States on February 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Faulty product",
+        "userName": "ChrisCao",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51yerUZQrOL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RJHLKPDGPV6EU",
+        "text": "They documentation makes it seem like this should function well as a 3-way dimmer, but it does not. There is a lack of functionality that stops it from working that should be easily fixed by a firmware upgrade, but support is unwillingly to make the effort. Should really be a neat little system, but it falls short of usefulness. Audio quality leaves a lot to be desired as well.",
+        "date": "Reviewed in the United States on February 8, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very disappointing",
+        "userName": "roach",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3KI905PX21HL7",
+        "text": "This is probably the most technically advanced switch I've found. I used it to replace some older technology Insteon switches. This was much better. The things I loved are. 1. That the switch displays device names that make sense and you can easily change it. With the older tech I was using, you had to buy custom engraved keys or use clear keycaps with a label under it. 2. I like that it has a button on the bottom that can be used to turn the main light on or off. 3. You can add control of any other Orvibo switch or Orvibo app scene to the switch. 4. On the main page (screen), you can personalize the page to display several different options that include combinations of the weather, date, time, and main switch button. 5. It supports Matter, but not until it does a firmware update on those I received. What are the main things I didn't like? 1. For installations where you have in a multi-gang box with multi-gang switch plate, the Decora cutout required needs to be larger for this. If there is a brand that fits properly, I'd sure like to know what it is. What this means is you have to file the openings of the plate to properly fit the switch. This can take quite a bit of time to do it properly. For single gang, the switch comes with it's own screwless plate. 2. Response can be a little slow ... noticeably. I have a mix of Matter over WiFi and Matter over Thread switches and I do not have this issue with Matter over Thread ... so perhaps they need to consider moving to that. 3. I've had an issue where some of the switch loose their WiFi connection ... like right now out of 10 switches, two are showing \"No Response\" in the HomeKit app. My router supports a separate IOT network and all of my smart devices are connected to it. So far, the only way to get these switches to reconnect is to either reboot the router or go to the WiFi setup on the switch and turn the WiFi off and then back on. Whenever I have the \"No Response\" error showing in HomeKit, the switch will not respond to Siri commands or via HomeKit on an iPhone. In my experience, Thread just seems more reliable ... so again a Thread version would be great. 4. Lastly, they talk about how to wire the switch for 3-way and basically one switch operates as a 1 way switch connected to the load and the other is simply a remote connected to a hot wire and white wire with the load wire capped off. The issue is there is no way of programming or linking the two switches so the the switch on the bottom of the remote will toggle the main light on/off. In addition, there is a button that appears on the screens that controls power to the load that is not connected to anything. Technical support responded ... and I get there is was a way of hiding that button prior to the Matter firmware upgrade, but it seems no matter what I tried I could not hide it with the Matter firmware. The idea of showing a button on the screen that has no purpose makes this switch unusable as a 3-way in my mind. My old home automation did the same thing, but you could pair the remote switch to give the same appearance as a 3-way. But overall, I really love how this switch looks and the design. I really am not interested in intercom or broadcast modes to didn't test those.",
+        "date": "Reviewed in the United States on January 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Fantastic ... but could be better.",
+        "userName": "Jeff Lines",
+        "numberOfHelpful": 5,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3D5W5QWAJHSDA",
+        "text": "Why not design it so that I can not only talk through it, but also ask it to play Amazon music? Ecobee has a switch that will do this; it literally has echo built in.",
+        "date": "Reviewed in the United States on January 22, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice. But here's a suggestion...",
+        "userName": "Rev. Daniel Carlson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1RG53CYZ8BRUE",
+        "text": "Was supposed to arrive Sunday, but arrived Wednesday, in a flimsy vinyl bag, and one switch’s box was destroyed. Another switch was used. Avoid.",
+        "date": "Reviewed in the United States on January 18, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Arrived late - poorly packaged -one was damaged, another was used",
+        "userName": "LA_Art",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61AULXKv1jL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61tL2xI0mCL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2BICXAO1P69AP",
+        "text": "Worked great and then failed no power or lighting up. No power surge or any reason. Other digital switches working fine in the house. I wouldn’t invest in this switch…won’t last.",
+        "date": "Reviewed in the United States on December 30, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "4 months and fried",
+        "userName": "Matthew Davis",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61aeNCsApLL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3N1FQ1SYSYCGP",
+        "text": "At the moment I purchased two more of these before I knew of issues I was having with the first one. Although a nice product with potential currently its not working for me and the app is having issues. I can get these two to connect with first one on the same network and I'm completely frustrated. I have tried every fix, consulted there customer service who has been responsive but the product is still not working. At this point I'm done with it, and hope they might improve it as I would love to have them but I'm not currently happy. Maybe these are defects, not sure.",
+        "date": "Reviewed in the United States on December 29, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "At the moment",
+        "userName": "Darryl Gardner Harris",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1UPDN12PO1W1C",
+        "text": "A smart switch is a convenient device that allows you to control your appliances remotely. It works well most of the time, but occasionally it may lose connection or fail to respond to your commands.",
+        "date": "Reviewed in the United States on December 28, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Its decent",
+        "userName": "sailesh",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RRW3PDKU57WPS",
+        "text": "The main reason I purchased the switch was to use as a scene selector. I have a 4 button scene selector that works flawlessly but I wanted a touch screen that I could add buttons to and also see the weather on the way out. The weather display works great and the main light turns on and off with Siri and the Home App. Setup in the Home App with Matter support was easy. Problem is you can’t program any scenes for the switch to display from the Home App and I haven’t seen a way for the ORVIBO app to access HomeKit data so that you can create automations and scenes there. Emailed support and haven’t received a reply. It appears the switch isn’t 100% HomeKit compatible, just what you hardwire to the switch, no scenes for Apple user.",
+        "date": "Reviewed in the United States on December 23, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "No Real HomeKit support",
+        "userName": "Danny",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1PUHLLFMAMUJ2",
+        "text": "The physical button stopped working a day after I installed the switch and today the touchscreen button stopped working. Little delay still clicks but my ceiling light is stuck on. Did a factory reset, reboot, nothing. It looks so cool and the onscreen weather and time is awesome by my front door but useless if I can’t control my light fixture.",
+        "date": "Reviewed in the United States on December 17, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "I want to love this thing",
+        "userName": "Christopher S.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RC9ERB40DNBQ6",
+        "text": "The product won’t fit a standard wall plate so if you are using it with a 2 or 3 switch plate it will not fit, only good for single switch applications as it comes with its own larger opening",
+        "date": "Reviewed in the United States on December 13, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Great product but with a flaw",
+        "userName": "Rene",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RO6RQ4BWHNYEA",
+        "text": "Good dimmer. Straightforward to install, and set up with Alexa, but wish is was compatible with Samsung SmartThings, so I could integrate it with SmartThings automations.",
+        "date": "Reviewed in the United States on December 8, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Nice dimmer. Wish it was more compatible.",
+        "userName": "NM74",
+        "numberOfHelpful": 4,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61i-DagkL9L._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RQE0BSYLHYXBC",
+        "text": "These look great, however the screen is far too laggy to be acceptable. They also do not work with three-way switches so take that for what it is. They are about the most bougie light switch you can get, but I probably will not purchase again.",
+        "date": "Reviewed in the United States on December 3, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good build quality but unacceptably laggy for a light switch.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1IHHFKMRRPB9V",
+        "text": "I have literally hundreds of smart devices in my home. This is only the second device that I could not get to connect to my Orbi wifi. The other device was a simple low power temp/humidity device. I tried all of the tricks I know (disabling 5ghz, temp disabling security) but never could get it to work.",
+        "date": "Reviewed in the United States on November 20, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Never could get it to connect to wifi",
+        "userName": "Bryan McMillan",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R27H5WXCGKGDDB",
+        "text": "First switch would turn on, then nothing. Second one never arrived. I would not recommend!!!",
+        "date": "Reviewed in the United States on November 17, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Sent both back would not work.",
+        "userName": "sparkyjoe1",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R16SAIKJZ4WCN0",
+        "text": "Modern look, easy to use and install, high quality, I bought and installed 4 pieces, they work perfectly and quickly",
+        "date": "Reviewed in the United States on November 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Compatibility",
+        "userName": "ldfsdsd",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2MYURA7SKH59J",
+        "text": "Easy to install and its a grat product no problems. The only problem price was good when I purchased two and now the price almost doubled. I wish it would of stayed the same around 50 at the time of purchase it was a good product for the price I payed I would of purchased more .",
+        "date": "Reviewed in the United States on November 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "joe padilla",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R664TTNDLFX5G",
+        "text": "I used this for my dining room, as I have a dimmable chandelier. Hubby was able to install this himself. It works well with my Alexa. It also has its own app but I prefer the Alexa as most of my smart devices run on that. Easier than buying smart bulbs for the chandelier (it takes 12 bulbs). Also this has a longer lifespan than a smart bulb. Overall very happy with this product.",
+        "date": "Reviewed in the United States on October 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Made my dumb switch smart",
+        "userName": "Chrissy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2VM5WQ9C37WGW",
+        "text": "This smart touchscreen dimmer switch is a cutting-edge addition to any smart home setup. Operating on a 2.4GHz WiFi network (not 5GHz), this dimmer light switch offers seamless integration with Home Talk, Alexa, and Google Home, allowing for convenient voice control. The smart touchscreen interface provides an intuitive and user-friendly way to adjust your lighting to your preferred level. The timer and schedule function adds another layer of convenience, allowing you to automate your lighting based on your daily routines. The switch requires a neutral wire for installation and is designed for single pole use. This might require some basic electrical knowledge for installation, but once set up, it offers a sleek and modern aesthetic to any room. Not really much different than installing many standard light switches.",
+        "date": "Reviewed in the United States on October 6, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well with Google Home",
+        "userName": "Grumpy Spud",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2UJQZPRMQQDPG",
+        "text": "***A NEUTRAL WIRE IS REQUIRED FOR INSTALLATION*** thought I would start with that since its important. Next, this switch looks amazing in the wall. The display is really a unique thing, super clear, and super bright. There is a button right below the screen to turn the light on and off or you can do it from the touch screen. All the features in the switches menu system work perfect. You have a few options to set the switches home screen plus a host of options for how you want the switch to work. You can set times, modes, hours of operation plus the app gives you even more options and remote access. The installations was easy. As soon as you apply power to the switch it's in its setup mode and that takes a few minutes, and you are all good to go. The app works well, and Alexa control worked perfect.",
+        "date": "Reviewed in the United States on October 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love this Touchscreen Dimmer Switch!!!!",
+        "userName": "Douglas Scott",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51UPYpV5dHL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61-3MryU27L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/6180Blas0vL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61Cu5pCa-oL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61DBc85Pm6L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61JDEqzTZoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61JWnZ4FfXL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61NHJcRnB0L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61OVw59unML._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61lnQSIBkUL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61vQjbwReZL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61wUV0JrNbL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71scYkvvgXL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71t0trouWOL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81fJstkWfXL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RG9RWUUR6F3AF",
+        "text": "I have two of these connected to dimmable lights in my home. They work great and will definitely be buying more if these continue to last. They're only slightly more expensive than the Z-wave GE/Enbrighten switches I have installed throughout the rest of the house. The only gripe I have is that they are not Smartthings compatible, or at least I was not able to connect them to smartthings. This means I cannot just use smartthings to control everything in my house, I have to go to Alexa to change these light settings. They do respond perfectly to Alexa voice commands so its not really a big deal, but I would have loved to be able to control them via a web interface like I can my other smartthings compatible products.",
+        "date": "Reviewed in the United States on September 21, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Cool little screen at a great price, not Smartthings compatible?",
+        "userName": "Dena",
+        "numberOfHelpful": 4,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2QBFMCT93KDTD",
+        "text": "It does all that I was expecting. Displays the current weather and temp in F. Shows digital or analog time along with the weather. The diming is easy and fluid. My only small issue is understanding the device's App software.... it can be trying at times. Thank goodness for Alexa.",
+        "date": "Reviewed in the United States on August 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "A Straight Forward, Easy to Use Dimmer Switch",
+        "userName": "R Steward",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3RZ6F401N2EGY",
+        "text": "Cannot get their app to connect to other devices (ones that work on Tuya & Smart life). Cannot get Smart Life/Tuya to connect to it, thus I cannot add other switches for it to control. Perhaps the manufacturer can help out with this as I'm trying to get a Moe's dimmer module to pair with it (I'll change my review).",
+        "date": "Reviewed in the United States on July 11, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not compatible with other smart devices!",
+        "userName": "Heather S.",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1ZRUVEILDSKZ8",
+        "text": "If I could afford to have one of these in every room in the house, I definitely would! These are an awesome and small form factor addition to our smart home.. the touchscreen light control was very easy to configure (we use Tuya and Amazon devices, and this synced with those perfectly). The controls on the screen are ultra responsive and bright enough to see even in a well lit room. Configuration was straightforward -- though I'm still working my way through the learning curve on what all capabilities this switch has. I'd love to see integrated control of Amazon's music service as that's becoming very widespread. Other than that, this is an excellent addition and integration to our automated home.",
+        "date": "Reviewed in the United States on June 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Make Automation Great Again!",
+        "userName": "Jason R",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RJWWHORIRDY4X",
+        "text": "This is a really good smart switch. Operation is simple, install was no more difficult than any other light switch, and it looks pretty cool.",
+        "date": "Reviewed in the United States on June 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switxh",
+        "userName": "Osprey",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BQTHBKH3",
+        "productTitle": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 99,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 189,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 52
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 17
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1ZC95WULMLUQE",
+        "text": "I chose this smart dimmer mostly for the ability to control it by voice commands with my Alexa Show devices, and it works great! The unit is very compact for its capabilities and easily works in a single gang box. It was simple to install and relatively easy to integrate it with my existing Alexa devices! I really like the responsiveness of the touchscreen and the color and brightness are also very good. The unit connects to WiFi which enables the Alexa control as well as other features including time, basic weather, and intercom to other similar devices from the same manufacturer. I also like that it can be programmed for different timer, schedule, or automated modes like “vacation” for example. Overall, this is an awesome high quality device and works well with my Alexa system, so it earns top marks from me!",
+        "date": "Reviewed in the United States on June 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome touchscreen dimmer packed with features and works with Alexa!",
+        "userName": "Hogg Wyld",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,444 @@
+{
+  "product_title": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+  "product_category": "Plug-In Portable Dimmer Controls",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Remote has sleek and ergonomic design": {
+          "+": [
+            28
+          ]
+        },
+        "B@Remote is elegant": {
+          "+": [
+            23
+          ]
+        },
+        "C@High quality construction": {
+          "+": [
+            4
+          ]
+        },
+        "D@Not cheap junk that could cause electrical fire": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "Electrical Components": {
+        "E@Lacks short circuit protection": {
+          "-": [
+            43
+          ]
+        },
+        "F@Leaks tiny bit of electricity when powered off": {
+          "-": [
+            8
+          ]
+        },
+        "G@Produces loud electrical whine with lamps": {
+          "-": [
+            46
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Reliability": {
+        "a@Very reliable": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "b@Consistently reliable": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "c@Flawless performance for years": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "d@Never had an issue": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@Most stable automation products": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "f@Incredibly reliable with 60+ devices": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "g@Accurate and consistent": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "h@Didn't last 8 months": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "i@Destroyed by short circuit from 50 cent bulb": {
+          "-": {
+            "E": [
+              43
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "j@Works with various bulb types": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "k@Provides smooth flicker-free dimming": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "l@Does not work with most LED lights": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "m@Causes LEDs to burnout sooner, blink, or not turn off": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "n@Only works with specific bulbs from Lutron's list": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "o@Cannot dim below 50% with most bulbs": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "p@Works well with Feit 100w vintage LED bulb down to 5%": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "q@One bulb turns off completely, other stays on like nightlight": {
+          "-": {
+            "F": [
+              8
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "r@Easy to install": {
+          "+": {
+            "?": [
+              35,
+              45
+            ]
+          }
+        },
+        "s@Fast to install": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "t@Setup in minutes without special tools": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "u@Super-simple to install": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "Connectivity": {
+        "v@Integrates flawlessly with smart home systems": {
+          "+": {
+            "?": [
+              6,
+              42
+            ]
+          }
+        },
+        "w@Works seamlessly with existing infrastructure": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "x@Integrates seamlessly with other Caseta products": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "y@Responds quickly and reliably": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "z@Very responsive with no connection issues": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "aa@Easy to connect to WiFi": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "ab@HomeKit requests are fast and reliable": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ac@No HomeKit support despite logo on product image": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "Advanced Features": {
+        "ad@Lacks advanced options like regular switches": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ae@Cannot trim the light": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "af@Will not completely shut off": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "Sound": {
+        "ag@Produces loud electrical whine with lamps": {
+          "-": {
+            "G": [
+              46
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Smart Home Integration": {
+        "+": {
+          "v": [
+            0,
+            1,
+            3,
+            6,
+            10,
+            12,
+            14,
+            23,
+            28,
+            34,
+            38,
+            40,
+            42
+          ],
+          "w": [
+            1
+          ],
+          "x": [
+            29
+          ],
+          "ab": [
+            39
+          ]
+        },
+        "-": {
+          "ac": [
+            36
+          ]
+        }
+      },
+      "Lamp Control": {
+        "+": {
+          "a": [
+            3
+          ],
+          "k": [
+            28
+          ],
+          "r": [
+            35
+          ],
+          "t": [
+            28
+          ],
+          "u": [
+            39
+          ],
+          "p": [
+            9
+          ],
+          "aa": [
+            41
+          ]
+        },
+        "-": {
+          "o": [
+            9
+          ],
+          "ag": [
+            46
+          ]
+        }
+      },
+      "Fan Control": {
+        "+": {
+          "w": [
+            1
+          ]
+        }
+      },
+      "Bedroom Lighting": {
+        "+": {
+          "u": [
+            39
+          ],
+          "ab": [
+            39
+          ],
+          "aa": [
+            41
+          ]
+        }
+      },
+      "Garage/Shop Lighting": {
+        "+": {
+          "a": [
+            3
+          ]
+        }
+      },
+      "Under Cabinet Lighting": {
+        "+": {
+          "x": [
+            29
+          ],
+          "y": [
+            29
+          ]
+        }
+      },
+      "Outdoor Lighting": {
+        "+": {
+          "?": [
+            49
+          ]
+        }
+      },
+      "Timer Replacement": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "Mobility Assistance": {
+        "+": {
+          "?": [
+            37
+          ]
+        }
+      },
+      "TV Room Lighting": {
+        "+": {
+          "?": [
+            2,
+            48
+          ]
+        }
+      },
+      "Nursery Lighting": {
+        "+": {
+          "C": [
+            4
+          ]
+        }
+      },
+      "Walkway Lighting": {
+        "-": {
+          "i": [
+            43
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:31.721754"
+}

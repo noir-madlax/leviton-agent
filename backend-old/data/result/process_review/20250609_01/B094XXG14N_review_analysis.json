@@ -1,0 +1,487 @@
+{
+  "product_title": "ELEGRP Digital Dimmer Light Switch for 300W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Single Pole/3-Way LED Slide Dimmer Light Switch, Wall Plate Included, UL Listed, 10 Pack, Matte White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "Slide mechanism": {
+        "A@Slide handle becomes loose": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "LED indicator light": {
+        "B@Small LED indicator light that can be turned on or off": {
+          "+": [
+            10,
+            15,
+            32,
+            36
+          ]
+        },
+        "C@Tiny white lights": {
+          "-": [
+            16
+          ]
+        }
+      },
+      "Physical construction": {
+        "D@Falls apart after installation": {
+          "-": [
+            20,
+            30
+          ]
+        },
+        "E@Screws do not stay set": {
+          "-": [
+            30
+          ]
+        },
+        "F@Screw lugs collapse into body of switch": {
+          "-": [
+            21
+          ]
+        },
+        "G@Smaller profile provides more room in electrical box": {
+          "+": [
+            29
+          ]
+        }
+      },
+      "Faceplate": {
+        "H@Fragile/decora faceplate that comes off": {
+          "-": [
+            47
+          ]
+        }
+      },
+      "Electrical connections": {
+        "I@Two straight conductors can be inserted with internal clamp": {
+          "+": [
+            32
+          ]
+        },
+        "J@Line and load terminals take 2 conductors, ground terminal takes one": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "Actuator": {
+        "K@Actuator creates difficulty turning switch on and off": {
+          "-": [
+            47
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming functionality": {
+        "a@Can bring lights down to zero level": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@Does not dim light fixtures properly": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "c@Does not have precise light control": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "d@Sensitivity is not fully linear nor particularly good": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "e@Brightness may vary depending on how many lights are on circuit": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "f@Adjustable lowest level feature": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "LED compatibility": {
+        "g@No flickers on LED lights": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "h@Interferes with LED puck lights when multiple circuits active": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@LED lights flicker with dimmer": {
+          "-": {
+            "?": [
+              9,
+              24,
+              41
+            ]
+          }
+        },
+        "j@Works well with LED applications": {
+          "+": {
+            "?": [
+              15,
+              25,
+              44,
+              45
+            ]
+          }
+        },
+        "k@Not LED compatible": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "Noise generation": {
+        "l@Makes a lot of noise": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "m@Buzzing noise": {
+          "-": {
+            "?": [
+              8,
+              18,
+              37,
+              43
+            ]
+          }
+        },
+        "n@Very noticeable and distracting high pitched electrical hum": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "o@Very loud buzzing": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "p@Slight buzz with high wattage incandescent": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "Flickering issues": {
+        "q@Causes lights to flicker": {
+          "-": {
+            "?": [
+              4,
+              14,
+              16,
+              18,
+              21,
+              26,
+              43
+            ]
+          }
+        },
+        "r@Flickering at certain brightness levels": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "s@No flickering issues with LEDs when min brightness set": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "Response time": {
+        "t@Delay in both on/off and response to changes": {
+          "-": {
+            "?": [
+              7,
+              16
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "u@Every one worked without issues": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "v@Half of switches didn't work": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "w@Some switches don't work": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "x@Switches failing after short time": {
+          "-": {
+            "D": [
+              30,
+              35,
+              39
+            ]
+          }
+        },
+        "y@Only 8 of 10 worked": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "z@All switches worked without failure": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "aa@Easy to install": {
+          "+": {
+            "?": [
+              0,
+              25,
+              45
+            ]
+          }
+        },
+        "ab@No harder to install than any other switch": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "ac@Install becomes difficult/impossible unless inverted": {
+          "-": {
+            "F": [
+              21
+            ]
+          }
+        },
+        "ad@Standard installation": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "ae@Works with 3-way switches": {
+          "+": {
+            "?": [
+              1,
+              11,
+              32
+            ]
+          }
+        },
+        "af@Does not work with triac dimmable accessories": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ag@Works great for all LED applications but not mixed lighting": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "Power rating": {
+        "ah@600 watts rated": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "House installation": {
+        "+": {
+          "u": [
+            1
+          ],
+          "j": [
+            15,
+            25
+          ],
+          "z": [
+            32,
+            45
+          ],
+          "aa": [
+            25
+          ]
+        },
+        "-": {
+          "h": [
+            2
+          ],
+          "v": [
+            3
+          ],
+          "q": [
+            4,
+            14,
+            26
+          ],
+          "x": [
+            7,
+            39
+          ],
+          "w": [
+            23
+          ],
+          "y": [
+            31
+          ],
+          "k": [
+            37
+          ]
+        }
+      },
+      "Renovation projects": {
+        "+": {
+          "?": [
+            36,
+            40
+          ]
+        },
+        "-": {
+          "m": [
+            18
+          ]
+        }
+      },
+      "Bedroom use": {
+        "+": {
+          "B": [
+            15,
+            32
+          ]
+        }
+      },
+      "Hallway and living spaces": {
+        "+": {
+          "B": [
+            32
+          ]
+        }
+      },
+      "Dark room navigation": {
+        "+": {
+          "B": [
+            10,
+            36
+          ]
+        }
+      },
+      "Single pole applications": {
+        "+": {
+          "ab": [
+            16
+          ],
+          "ae": [
+            25
+          ]
+        }
+      },
+      "Double pole applications": {
+        "+": {
+          "ab": [
+            16
+          ]
+        }
+      },
+      "Master bath high wattage lighting": {
+        "-": {
+          "p": [
+            16
+          ]
+        }
+      },
+      "Pantry min/max applications": {
+        "+": {
+          "r": [
+            16
+          ]
+        }
+      },
+      "LED recessed lights": {
+        "-": {
+          "i": [
+            41
+          ]
+        }
+      },
+      "Mixed LED and non-LED lighting": {
+        "-": {
+          "ag": [
+            44
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:39.734007"
+}

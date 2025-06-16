@@ -1,0 +1,1706 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:43:41.263916",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0D3TBK88B",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 4,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0D3TBK88B",
+    "title": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+    "brand": "GE",
+    "model_number": NaN,
+    "price_usd": 44.99,
+    "rating": 4.2,
+    "reviews_count": 152.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Slide Control Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0D3TBK88B"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2BFGR85EN0BJI",
+        "text": "These dimmers are affordable, but if it’s made for incandescent bulbs. If you dim LED more than half, it will turn off completely. If you don’t go all the way the LED will flicker",
+        "date": "Reviewed in the United States on June 4, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Affordable not perfect",
+        "userName": "Tomas Baggio Pereira",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1GO64LEV27WG7",
+        "text": "Worked out fantastic. Excellent product,reasonable price. Very satisfied.",
+        "date": "Reviewed in the United States on May 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Upgrade",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R27XYEPAF3439S",
+        "text": "Work as it should be, but on was the lower switch (though it can be flip upside down but it did not mentioned in the instructions to say if its safe to do so) and the click of the switch is masculine than it should be.",
+        "date": "Reviewed in the United States on May 14, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Masculine click",
+        "userName": "ahhsimon",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RRG1FM33RJR9U",
+        "text": "Works well with recessed lights",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "Leenika Belfield-Martin",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1MLB2KU998EVI",
+        "text": "They don’t work well. When more than 4 lights are on, they start blinking. The sliders are also very bad — they stick and are very difficult to move. I bought 50 of these, and it’s a complete waste.",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "They not working",
+        "userName": "tal",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R15QRPRPE413GT",
+        "text": "If you want a structure fire these are for you",
+        "date": "Reviewed in the United States on May 1, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "Jon Armitage",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3L9FBEVYV10VW",
+        "text": "I didn’t even get to use it yet, the paint inside the house isn’t even fully done, and the slider is already jammed…. So so so so annoying. and I can’t even return them because they are already installed. Waste of money. Look elsewhere. Unable to dim , the reason for the switch in the first place.",
+        "date": "Reviewed in the United States on April 26, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Look elsewhere. Unable to move the dimmer. Its jammed",
+        "userName": "youno",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R20V531KRMAIEH",
+        "text": "These are supposed to work with the Amico lights and they do NOT , they flicker even when you adjusted it, junk do not buy , I missed my return window because my house was not built in time",
+        "date": "Reviewed in the United States on April 19, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "Sher",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3R2FA0A3GGG34",
+        "text": "Quedan hermoso, son de buena calidad y buen precio. Regulan excelente",
+        "date": "Reviewed in the United States on April 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Elegantes y funcionales",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51MnPNU7WSL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2J063HT3E0Q8D",
+        "text": "One of the dimmers was malfunctioning, but all the others had already been installed, making the return process impractical. Poor quality!",
+        "date": "Reviewed in the United States on April 5, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "1 out of 6 Failed",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RG3IBG5HEBWAV",
+        "text": "Excellent",
+        "date": "Reviewed in the United States on March 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Installed 12 and they work great with led cans",
+        "userName": "stoneygreek",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1MRL2G3KMTRNV",
+        "text": "Garbage. Flickering all the time no matter what light bulb you use. I had a 6 pack installed 2. Will remove and throw all to trash. Look for something better that doesn’t flicker.",
+        "date": "Reviewed in the United States on March 10, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Buy something else.",
+        "userName": "Coskun Demiral",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1V6QOYZ1RHYYD",
+        "text": "Poor quality fell apart during installation",
+        "date": "Reviewed in the United States on February 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Extremally low quality, I'm suspired if they are even UL certified",
+        "userName": "Karin V.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3TO73L6HZBNAR",
+        "text": "One of the 6 switches in the box was defective. I would like to get a replacement.",
+        "date": "Reviewed in the United States on February 21, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Defective Switch",
+        "userName": "KB",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RS6KXQP5KWYNN",
+        "text": "I am unhappy with this product for one reason. I ordered the 6-pack and one of the switches came broken. Maybe it was just a single defective item. I didn’t notice this until the rest were installed, so I can’t return the full order. Hopefully the rest will work well.",
+        "date": "Reviewed in the United States on February 20, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Arrived broken",
+        "userName": "Eli Klink",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3BRGSL57L6QGL",
+        "text": "These are cheap 4 out of the six in the box we're not working stay away from this product..",
+        "date": "Reviewed in the United States on February 16, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Don't buy",
+        "userName": "Annette",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RV33BFUN4GH0",
+        "text": "Great light switches dimmer woild Shop here again",
+        "date": "Reviewed in the United States on February 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Steve",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RQ1UXN489FMNY",
+        "text": "Look and work great",
+        "date": "Reviewed in the United States on February 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Changed out old yellowing switch’s",
+        "userName": "david",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3392FWZZMTSML",
+        "text": "Works and look great!",
+        "date": "Reviewed in the United States on February 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Can't beat the price!",
+        "userName": "J Williams",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R70O9J0DI0TW4",
+        "text": "I’m an electrical handyman. I’ve installed these dimmers multiple times without any problems. AND I use this kind and brand of dimmer for diagnosing flickering issues. 👍 They tend to work best with multiple different LED brands of bulbs.",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality and least likely to cause flickering issues in LED bulbs and panels.",
+        "userName": "Placeholder",
+        "numberOfHelpful": 2,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RRY828NU70COV",
+        "text": "These were exactly what I was looking for, and at a better price than other places.",
+        "date": "Reviewed in the United States on January 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "APupek",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1QLUIWJ16E615",
+        "text": "These were easy to install too same. Love the different shades of brightness just all around great product",
+        "date": "Reviewed in the United States on January 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "How bright the lights are",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71wFwo5B4NL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R19BWBV4NEAXTR",
+        "text": "I have only installed 1 and it works great. Loved the full range of dimming. I would have preferred screw clamp terinals vs. wires hanging out because that takes up more room in the box for these connections.",
+        "date": "Reviewed in the United States on January 16, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "polarbearchp",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3RTPSKWIYUHZC",
+        "text": "CONSTANT FLICKERING!!!!! THROW THEM IN THE TRASH!! Not sure these are even code. They are very cheaply built and can easily break. The dimmer is also not built well. It flickers when you dim and the adjuster isn't good enough to resolve this. Also, these are so big that you are left with NO room to fit the wires. I would not buy this again. Customer service dod reach out and offered me a full refund which was greatly appreciated and they asked for feedback. I do hope they improve the product.",
+        "date": "Reviewed in the United States on December 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Never again",
+        "userName": "Teagan S Cobb",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R233SRXCJJ8CT9",
+        "text": "I liked the product!",
+        "date": "Reviewed in the United States on December 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Durable, price is cheap!",
+        "userName": "Reynaldo S.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3VG92RSWTS2QM",
+        "text": "Quality is very poor. Lights flicker when dimming. I wish i could have realized it was the dimmer much sooner. I thought my wiring may have been off. After buying a different brand and replacing it i noticed it was the dimmer. Would not buy again",
+        "date": "Reviewed in the United States on December 10, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lights flicker when dimmed",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RMZ6NL3DT7KOX",
+        "text": "This install was easy but the taps on them can be a problem but overall works well.",
+        "date": "Reviewed in the United States on November 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Like these switches",
+        "userName": "rhbras",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1K2ZRS9DJ1VHR",
+        "text": "Lights flicker when dimming. I figured since they are a fraction of the cost of traditional dimmers. Would not reccomend. If you want to dimmer lights just spend the money on reputable brand dimmers. Would not reccomend",
+        "date": "Reviewed in the United States on November 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Cheaply made. Wouldn't reccomend",
+        "userName": "Nick",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1JMBMBW6W4XVN",
+        "text": "flickering and buzzing noise",
+        "date": "Reviewed in the United States on November 2, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "DOESNT WORK",
+        "userName": "Brody Valentine",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2ZO50GB1YPK7R",
+        "text": "Could not gang 2 side by side no matter what was tried . They need to redesign product to U.S.A. standards.",
+        "date": "Reviewed in the United States on October 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bad fitmant",
+        "userName": "charles coveleski",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2TV73IQ5FNHNW",
+        "text": "When we buy a house, we always change out all the switches. These are my go to, and I Have always been happy I am elated that these were one I could select from. If you read a review that says that their light flickers it’s because they’re not using the appropriate lightbulbs. You need to look on the box to make sure they are dimmable or not. It’s not the fault of the switch! Do not hesitate, these are awesome and for them to include the plates is very cost-effective. They look beautiful and finished!",
+        "date": "Reviewed in the United States on September 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works like a charm",
+        "userName": "LuLingonberry",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3TBK88B",
+        "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 153,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 63
+          },
+          "fourStar": {
+            "percentage": 19
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R50WEO5NNN3ML",
+        "text": "These are high quality single pole or 3-way compatible slide dimmer switches that are made well and come with their matching plate covers. The hardware is also included along with an instructional installation booklet. The dimmer switches remember their settings…once you set them then turn off the switch with the paddle toggle and go to turn it back on it returns to the setting where you last used it ingeniously retaining that last setting. Very convenient where you don’t have to constantly adjust them back to the level you prefer. They are Flicker free and offer silent dimming so there’s no humming noises with these at all. They are Compatible with most bulbs on the market including CFL, incandescent and LED types per the manufacturer…I’m using them with LED lights so I have no way to test the others. Excellent value in this quantity 6 pack, very nice!",
+        "date": "Reviewed in the United States on September 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "6 Pack Slide dimmers",
+        "userName": "1SamIam",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3TBK88B",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71zH9Nw4AnL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3Way",
+          "Color: White",
+          "Number of Items: 6"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 32,
+    "pages_scraped": 4,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

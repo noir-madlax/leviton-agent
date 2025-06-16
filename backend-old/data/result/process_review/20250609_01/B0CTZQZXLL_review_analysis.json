@@ -1,0 +1,210 @@
+{
+  "product_title": "ELEGRP Digital Toggle Dimmer Switch for Dimmable LED, CFL and Incandescent Light Bulbs, Single Pole or 3-Way Toggle LED Dimmer Light Switch, Wall Plate Included, UL Listed, 6 Pack, White",
+  "product_category": "Toggle Style Dimmer Switches",
+  "total_reviews": 10,
+  "review_analysis": {
+    "phy": {
+      "construction": {
+        "A@cheap construction": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "mounting system": {
+        "B@lack slotted mounting adjustments": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "switch orientation": {
+        "C@dimmer installed upside down with high at bottom and low at top": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "build quality": {
+        "D@hi quality product": {
+          "+": [
+            7
+          ]
+        },
+        "E@feel cheap": {
+          "-": [
+            5
+          ]
+        }
+      }
+    },
+    "perf": {
+      "switching response": {
+        "a@second delay when turning on": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "b@does not always turn on when switched": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "lighting behavior": {
+        "c@dim then bright when turning on": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "d@flicker with LED lights": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@occasional flickering that can be fixed with minor adjustment": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "f@lights flicker when adjusting brightness": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "installation": {
+        "g@easy installation for both single pole and 3 way switches": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "h@fairly easy to install": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "i@electrician had issues with 3 way installation but eventually got it working": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "j@struggle with dimmable LED lights even after adjustment": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "k@work with LED lights": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "l@work great with new can built in ceiling lights": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "fitting": {
+        "m@faceplate won't fit in double gang boxes requiring loosening other switches": {
+          "-": {
+            "B": [
+              6
+            ]
+          }
+        }
+      },
+      "adjustment requirement": {
+        "n@have to adjust dimmer to turn on": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "whole house installation": {
+        "+": {
+          "?": [
+            0,
+            1
+          ]
+        },
+        "-": {
+          "A,E": [
+            5
+          ]
+        }
+      },
+      "LED light dimming": {
+        "+": {
+          "k,l": [
+            2,
+            3,
+            8
+          ]
+        },
+        "-": {
+          "d,j": [
+            1
+          ]
+        }
+      },
+      "3 way switch application": {
+        "+": {
+          "g": [
+            7
+          ]
+        },
+        "-": {
+          "i": [
+            0
+          ]
+        }
+      },
+      "double gang box installation": {
+        "-": {
+          "B,m": [
+            6
+          ]
+        }
+      },
+      "bulk replacement projects": {
+        "+": {
+          "?": [
+            2
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:08.281398"
+}

@@ -1,0 +1,1945 @@
+{
+  "scrape_session": {
+    "timestamp": "2025-06-08T23:24:48.936416",
+    "total_asins": 289,
+    "csv_asins": 288,
+    "additional_asins": 6,
+    "successful": 31,
+    "skipped": 258,
+    "errors": 0,
+    "exceptions": 0,
+    "review_coverage_months": 6,
+    "configuration": {
+      "rate_limit_delay": 0.1,
+      "max_concurrent_requests": 32,
+      "scrape_recency_days": 30,
+      "min_review_year": 2010,
+      "max_review_year": 2025
+    }
+  },
+  "results": [
+    {
+      "status": "skipped",
+      "asin": "B07KYW1MQY",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 49 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00P4FGRYO",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 3 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08GF87L3H",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 46 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D9W9627N",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 19 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BD9CSHXP",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B095X5HTLS",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BWBMHCP3",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 8 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08YMBDGZ8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08R9R2C8M",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DBJ9RC3M",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 11 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0015BKZI0",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 16 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07VG9XY46",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 8 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07X47W6LC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B00B363T9O",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00B363T9O_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07LGCYXQ4",
+      "review_count": 9,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07LGCYXQ4_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B07SXDFH38",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0899ZGFT1",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 8 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C3VCN1GV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08YMGCQKY",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 36 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0055VD9HK",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00NG0ELL0",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07RNJ351J",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CK4TM2R9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 14 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09V7HG417",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 46 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DTDFCFW9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 2 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000GAV562",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08CDNTFM3",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B003AVLWGM",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BQ1S49F9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 6 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B06XTD713B",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CT3QK4JP",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 16 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D473QH36",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 18 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07S29S7QD",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08RRM8VH5",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08KDGBKNC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 33 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0897GH1CD",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07WWYQJFR",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D3KP68S7",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BC2MWTR9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000MAUP58",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CTZQZXLL",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 10 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000U3I11C",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 18 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0734VSNGH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 21 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0D14GN918",
+      "review_count": 13,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D14GN918_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CHMQW45X",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08PKMT2DV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B01I24JBNM",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 47 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0F2PHWYZK",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "skipped",
+      "asin": "B0785VL5MJ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C86MJLVH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B082LKCXV9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000U3I0RM",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D62QM98H",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 14 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08SJ3Z8XD",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DXJNJDSH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 18 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B017LRCG38",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00E6KAIHK",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09LLNT3KR",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08YMDL1KQ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 26 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0D3TZJWK1",
+      "review_count": 8,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D3TZJWK1_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C9W2G2V9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 5 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B081ZQWX1F",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0B1LBPWZT",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 11 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0076HPMK8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B094XXG14N",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B073H9Y7SH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08562D7X8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 43 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B008X3CZ6S",
+      "review_count": 10,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B008X3CZ6S_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B0039PZJJK",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B003AUCKLO",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0D12VMWW2",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D12VMWW2_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B099RJ2HRN",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B08GFR5YK9",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08GFR5YK9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B077XDB8FV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0012DMB6A",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07ZYWSH3J",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 26 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B093PVYMZC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 44 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0BSHKS26L",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BSHKS26L_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D66MJPSB",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 5 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00JJY1QG0",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0D95H9F8C",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "skipped",
+      "asin": "B0016LBTO8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B092ZGJ3PB",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 43 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C86LDZLW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 28 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BY29HKMM",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B004DZON2Y",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 4 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0894KT8DC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08CXCHFYC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09JZB8YGJ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00UXR8YTO",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 41 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D2DRSXC1",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 13 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08Q7HX3KV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 31 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0DZM1SF74",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "skipped",
+      "asin": "B0033PSGJQ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00SFGNO54",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DRZ77JQT",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 6 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08VVTYJLC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 10 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0076HPM8A",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0BVKYKKRK",
+      "review_count": 19,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BVKYKKRK_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B07RV6CP7Q",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 13 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B004DZOMRU",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 15 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D3TBK88B",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 32 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09MW38VK7",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 26 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DDL35WNV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 41 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B01M3XJUAD",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000NCTHHW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 28 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09WL82DB2",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BKZP98CN",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C861YTWD",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 11 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CLG1L3N4",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 18 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B087T6N3RZ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07YKFSWJN",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B01N1229L4",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0CW6M3N6C",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CW6M3N6C_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B087TLPYDT",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08MF7QF37",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 6 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07HM6L48C",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0012DNKMO",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0006V5PXK",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DHYJKVX9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 4 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07WS31L87",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000BVZBMU",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DHYRV32Z",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 7 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DKGXY4DL",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000I3WAW0",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 2 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B002DNG3EE",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B002DNG3EE_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DTTB139J",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DG6G2SGZ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 19 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08T1JBD9P",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000ZOJL1U",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000I3UT1Y",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C3VGZ2FM",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0000CGKLR",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07JB37H5Y",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0037NXT3C",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 29 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B002DN8CQ6",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CCND92GN",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 14 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0892HCXGS",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 18 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D7GR3CKW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07BPVRMHC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B01N25GTMW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BX4KH8HV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BVFMFSQV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 40 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08JV93V5X",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 16 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C6NFBM79",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 4 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C6P4NDSV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 22 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07B3LXZJ9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09VS2PHQV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 5 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B093PWTTHC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00NJ298JU",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000BQUUVC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D4YFCTHV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 19 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B085D8M2MR",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 42 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08W8GLPD5",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BVKZLT3B",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 38 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000U3DUZO",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B001EVKA8G",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09X9QG8NV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 34 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00A92MQ38",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C7J4YMSZ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 7 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C3HGGYHG",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00004YUO0",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07X4Z69BV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CQ891PXZ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B002NWTETQ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09482M85Y",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 32 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07JD57RWC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 4 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0B4RZFVJG",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 20 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08JSC41JZ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 36 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B004DZONXI",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B06Y5KN17V",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DS666CFY",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 3 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0DWJHD9G1",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "skipped",
+      "asin": "B073H9Y7SF",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 40 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B01M9JTK3W",
+      "review_count": 17,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01M9JTK3W_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B000U3BV0U",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 22 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DB8DRMWW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09B21W5JD",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08R9S8TDT",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08YLPYYGK",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 26 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00081I0EO",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B098XB2BQ7",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 20 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07WNRVKJJ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BYPDKCD5",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 30 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08YMYC8TD",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 37 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00QXOSTFU",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08JTFN5CN",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B095X5H16X",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B095X5H16X_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B00B2KCFW8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 20 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B002DNAG4W",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07RJ14FBS",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B01AFU1KOY",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CBNX6Q51",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CYB4XW7X",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 11 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00LC9UYVI",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 25 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0814R5PSX",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07V3XB1QG",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D6YRMP1X",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 11 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CN6RV8W8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B000U3HXWA",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08R9JBDHH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B01HIMC7EE",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B07PJTLB7Z",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07PJTLB7Z_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CZKYMVPR",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 36 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CLGCXT96",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B079775ZZQ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B08GF3WQ19",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08GF3WQ19_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B07J9PKNBH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0055TWD2E",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09DV4PSPP",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 46 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B005K8XFRW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09FL9WPGL",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 25 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0865WTH62",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BQTHBKH3",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D3KRJRTN",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 27 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09CKT5B9C",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 29 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08SJ5Q6B9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 42 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B01N8TTXYD",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01N8TTXYD_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CMQKDNDQ",
+      "review_count": 37,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CMQKDNDQ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BSGCHWS5",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 5 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0033PSGAU",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CL1B1LJT",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 10 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07724HNTX",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CW92T9CH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 28 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D1QZ78XT",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 9 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B01LXOG1RL",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01LXOG1RL_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B002RN99TQ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 20 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08CNNGCGB",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 4 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09B9MBXWP",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 23 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0009I7IDA",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 28 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BTMWZH3K",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08428GDS8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BYPD5WPG",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07KZJRQYW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 39 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B01MRXOXWB",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07CKNWGN4",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B082LK16TH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C6ZXF159",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 8 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CYSTBMGJ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 28 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B081S6YXBY",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09MW3C4MM",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 13 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BRDDFP2J",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 10 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07JVLGFYZ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0C7LTX71C",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B002UOXM6I",
+      "review_count": 12,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B002UOXM6I_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B087P3DM42",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07HNFWWZV",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 37 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0DTK1HHN6",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B0D8T97DFN",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "skipped",
+      "asin": "B095X911T8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08Q4F43HT",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 34 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07J9V2QKW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0771BC2YH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09K3HQPYG",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B006UTQCA2",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DPQGHY9D",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00E7N71TO",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 13 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BRNTMFT8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 12 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C89JXCF4",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 27 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07WFLTZDK",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 31 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CB85MGHP",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 8 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B078KH9NNT",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 11 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CT3RFY6K",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 35 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08YM4B957",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 17 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B004DZONJC",
+      "review_count": 17,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B004DZONJC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D7BTM5LP",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 14 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B001067I1W",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "skipped",
+      "asin": "B07FXJFSS2",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 15 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B008X3CH70",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0DCZCVRL8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 3 total reviews available"
+    },
+    {
+      "status": "success",
+      "asin": "B0B4D4JW1B",
+      "review_count": 5,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0B4D4JW1B_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B07HGW8N7R",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00004YUO1",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B082FBXJ1M",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 27 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0D2DQXBC2",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 14 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07MTT9NQW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 1 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09LLY51DL",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0BXDC6F2M",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 32 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B01EZV35QU",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B09HSWR3YG",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0C8NHJ83N",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 15 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0CPJCYQJH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 43 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B0B12HQ8LM",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 19 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B08XH6HRTZ",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B00MXCRAX8",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07S51S7T9",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 19 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07HPBP5Q2",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07GNXMVFP",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B07ZJ7CPJC",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 42 total reviews available"
+    }
+  ]
+}

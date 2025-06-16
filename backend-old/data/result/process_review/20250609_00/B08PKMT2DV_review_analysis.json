@@ -1,0 +1,359 @@
+{
+  "product_title": "Philips Hue Smart Wireless Dimmer Switch V2 (Installation-Free, Exclusive Philips Hue Lights) for Indoor Home Lighting, Livingroom, Bedroom",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 45,
+  "review_analysis": {
+    "phy": {
+      "buttons": {
+        "A@button layout changed between v1 and v2 versions": {
+          "-": [
+            26,
+            39,
+            43
+          ]
+        },
+        "B@top button for on/off": {
+          "-": [
+            23
+          ]
+        },
+        "C@bottom button changed from off to hue function": {
+          "-": [
+            39,
+            43
+          ]
+        },
+        "D@one button for on/off": {
+          "+": [
+            34
+          ]
+        },
+        "E@center rocker for dimming": {
+          "+": [
+            34
+          ]
+        },
+        "F@button for scene selection": {
+          "+": [
+            34
+          ]
+        }
+      },
+      "magnets": {
+        "G@magnets hold remote to mount with perfect strength": {
+          "+": [
+            19
+          ]
+        },
+        "H@magnet holding to housing not as good as v1": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "design": {
+        "I@slim profile": {
+          "+": [
+            21
+          ]
+        },
+        "J@new design looks awesome": {
+          "+": [
+            34
+          ]
+        },
+        "K@design puts features before usability": {
+          "-": [
+            23
+          ]
+        },
+        "L@shape not compatible between versions": {
+          "-": [
+            43
+          ]
+        }
+      },
+      "wall_mount": {
+        "M@wall mount with screw option or 3M adhesive": {
+          "+": [
+            19
+          ]
+        },
+        "N@stick on plate for convenient install": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "battery": {
+        "O@battery lasts very long time upwards of a year": {
+          "+": [
+            14,
+            16
+          ]
+        }
+      },
+      "build_quality": {
+        "P@seems well-made": {
+          "+": [
+            14
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@easy to connect to Philips Hue app": {
+          "+": {
+            "?": [
+              1,
+              2
+            ]
+          }
+        },
+        "b@pairs easy and shows up in Hue app and Apple HomeKit": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "c@impossible to sync with hue bridge": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@works without bridge by pairing remote close to light": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "e@very easy to set up in HUE app and HomeKit": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "f@easy to pair and setup": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "g@installation fails despite following instructions": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "h@works like a breeze with SONOFF Zigbee Dongle": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "i@always works": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "j@works every time": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "k@never have operational problems": {
+          "+": {
+            "I": [
+              21
+            ]
+          }
+        },
+        "l@works perfectly": {
+          "+": {
+            "?": [
+              22,
+              41
+            ]
+          }
+        },
+        "m@buttons need multiple presses when first entering room": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "n@dims perfectly": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "o@dims nicely": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "p@easily dim lights": {
+          "+": {
+            "E": [
+              33
+            ]
+          }
+        }
+      },
+      "customization": {
+        "q@easy connectivity and customizability": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "r@near-infinite variations for switching between lumens": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "s@can customize what each button does": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "t@can cycle through scenes without opening app": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "usability": {
+        "u@have to look and aim for button in dark room": {
+          "-": {
+            "B": [
+              23
+            ]
+          }
+        },
+        "v@keeps getting knocked off wall": {
+          "-": {
+            "H": [
+              26
+            ],
+            "K": [
+              23
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom_lighting": {
+        "+": {
+          "i": [
+            8
+          ],
+          "o": [
+            21
+          ]
+        }
+      },
+      "guest_control": {
+        "+": {
+          "?": [
+            12
+          ]
+        }
+      },
+      "scene_cycling": {
+        "+": {
+          "t": [
+            11
+          ],
+          "s": [
+            32
+          ]
+        }
+      },
+      "smart_home_automation": {
+        "+": {
+          "e": [
+            14
+          ],
+          "h": [
+            20
+          ]
+        }
+      },
+      "rental_rooms_without_switches": {
+        "+": {
+          "d": [
+            38
+          ]
+        }
+      },
+      "lamp_control": {
+        "+": {
+          "k": [
+            21
+          ],
+          "j": [
+            29
+          ]
+        }
+      },
+      "wall_switch_replacement": {
+        "+": {
+          "N": [
+            1
+          ],
+          "M": [
+            19
+          ]
+        }
+      },
+      "ceiling_fan_light_control": {
+        "-": {
+          "?": [
+            10
+          ]
+        }
+      },
+      "avoiding_phone_app_usage": {
+        "+": {
+          "?": [
+            28,
+            29,
+            32
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:01.045516"
+}

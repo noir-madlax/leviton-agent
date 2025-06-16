@@ -1,0 +1,353 @@
+{
+  "product_title": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "construction": {
+        "A@well made": {
+          "+": [
+            2,
+            7
+          ]
+        },
+        "B@cheaply built": {
+          "-": [
+            23
+          ]
+        },
+        "C@durable material": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "connections": {
+        "D@terrible connections": {
+          "-": [
+            23
+          ]
+        },
+        "E@pressure lock feature for wiring convenience": {
+          "+": [
+            26
+          ]
+        }
+      },
+      "tactile_feel": {
+        "F@very good springy pop in up or down position": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "travelers": {
+        "G@shorted travelers with silver screws": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "appearance": {
+        "H@significant marring of the switch": {
+          "-": [
+            41
+          ]
+        }
+      },
+      "packaging": {
+        "I@packaged well": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "labeling": {
+        "J@wrong barcode - single pole switch not 3 way": {
+          "-": [
+            33
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works every time": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@does what it was designed to do": {
+          "+": {
+            "A": [
+              2
+            ]
+          }
+        },
+        "c@works very well": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@worked as expected": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@worked perfectly": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "f@working fine": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "g@works great": {
+          "+": {
+            "?": [
+              9,
+              36
+            ]
+          }
+        },
+        "h@works perfect": {
+          "+": {
+            "?": [
+              10,
+              14
+            ]
+          }
+        },
+        "i@works as advertised": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "j@works as expected": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "k@works perfectly": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "l@work right": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "m@worked fine": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "n@working well": {
+          "+": {
+            "?": [
+              35,
+              38
+            ]
+          }
+        },
+        "o@works well": {
+          "+": {
+            "?": [
+              39,
+              44
+            ]
+          }
+        },
+        "p@worked exactly as described": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "q@works": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "r@did not work": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "s@turns on": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "durability": {
+        "t@should last": {
+          "+": {
+            "A": [
+              2
+            ]
+          }
+        }
+      },
+      "installation": {
+        "u@hard to install to spec": {
+          "-": {
+            "D": [
+              23
+            ]
+          }
+        },
+        "v@easy to install": {
+          "+": {
+            "?": [
+              9,
+              37,
+              38,
+              40,
+              46
+            ]
+          }
+        },
+        "w@simple ten-minute job to replace": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "x@connection of wiring a breeze": {
+          "+": {
+            "E": [
+              26
+            ]
+          }
+        },
+        "y@installed fast": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "defectiveness": {
+        "z@switch was defective": {
+          "-": {
+            "G": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "light_switch_replacement": {
+        "+": {
+          "c": [
+            3
+          ],
+          "e": [
+            5
+          ],
+          "g": [
+            10
+          ],
+          "j": [
+            21
+          ],
+          "q": [
+            44
+          ]
+        },
+        "-": {
+          "r": [
+            43
+          ]
+        }
+      },
+      "laundry_room_light_switch": {
+        "+": {
+          "e": [
+            5
+          ]
+        }
+      },
+      "smart_bulbs_with_dimmer_issue": {
+        "+": {
+          "d": [
+            4
+          ]
+        }
+      },
+      "yacht_switches": {
+        "+": {
+          "h": [
+            14
+          ]
+        }
+      },
+      "three_way_circuit": {
+        "+": {
+          "w": [
+            27
+          ],
+          "n": [
+            35
+          ]
+        }
+      },
+      "living_room_switch": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "outlet_replacement": {
+        "+": {
+          "l": [
+            29
+          ]
+        }
+      },
+      "basic_electrical_wiring": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:23.494261"
+}

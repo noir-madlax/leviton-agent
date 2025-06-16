@@ -1,0 +1,2536 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:38:38.985512",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B081ZQWX1F",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B081ZQWX1F",
+    "title": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+    "brand": "Aqara",
+    "model_number": NaN,
+    "price_usd": 39.99,
+    "rating": 4.3,
+    "reviews_count": 989.0,
+    "category": "Light Switches",
+    "product_segment": "Smart Hub Dependent Switches",
+    "product_url": "https://www.amazon.com/dp/B081ZQWX1F"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3KF4SVUVEU3C8",
+        "text": "Build quality is good but it did not work with Home Assistant via Zigbee Automation correctly. It would turn on and off when commanded, but would also turn on and off depending on the device load. Unsure if this is a device issue or HA issue. I replaced it with another brand.",
+        "date": "Reviewed in the United States on June 6, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Look elsewhere for Home Assistant Integration",
+        "userName": "Teque5",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RAALUY85MTLAO",
+        "text": "I used this with an apple home kit smart home setup. One of my rooms didn’t have a neutral wire, only ground, and the other 2. I got this one because it said it didn’t need a neutral wire and it worked great for a couple of years. Then it died from static electric shock when I went to turn the light on one winter morning. It’s a shame it wasn’t protected from static electricity better.",
+        "date": "Reviewed in the United States on May 3, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works even if you don’t have a neutral wire. Vulnerable to static electricity.",
+        "userName": "Yung Fang Smith",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RJMKQOWU30C1W",
+        "text": "I used this as a smart switch for my pool lights. The wiring for the pool switch did not have a neutral wire, so this was necessary . And since I already had an Aqara hub, it worked wonderfully! Very happy.",
+        "date": "Reviewed in the United States on April 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart switch for my pool lights!",
+        "userName": "Wright Family",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1AZYMAUEYYAW8",
+        "text": "Amazon or the vendor lost the first one I ordered, but this one came overnight. It was easy to connect to the old wiring in my 1902 house. I'd ordered the TAPO TP/Link no-neutral switches first because they were less expensive, but they won't work in this situation. Even though my M3 Hub is downstairs, the switch connected quickly and easily. Yes, this switch is more expensive than others, but if you already have an Aqara ecosystem, this is the way to go for smart wall switches. Next time, I might try a matter-enabled switch. Great job, Aqara.",
+        "date": "Reviewed in the United States on February 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install in old houses with just 1 black and1 white wire",
+        "userName": "Lodestar",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1H3N3DU9W7EWG",
+        "text": "Garbage! Don't bother, especially with Home Assistant. Never stays connected to Zigbee. After connecting many, many times and HA interviewing it just disconnect after 10 or so min. Zero reliability. I have my main Zigbee antenna like 10 feet away with another repeater switch closer. It won't stay connected. In the end I paid smart switch prices for now just a regular switch. DON'T BUY, TRUST ME. TERRIBLE PRODUCT.",
+        "date": "Reviewed in the United States on February 14, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Trash - Won't stay connected to Zigbee",
+        "userName": "J",
+        "numberOfHelpful": 2,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2OGF6YD0SCX9G",
+        "text": "Works like a charm, this model doesn’t have a neutral, my house is older and it doesn’t have a neutral wire. Works perfectly.",
+        "date": "Reviewed in the United States on February 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works like a charm",
+        "userName": "Stevial",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1DK5O65I14WBE",
+        "text": "Good switch for the price. Reliable.",
+        "date": "Reviewed in the United States on February 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as it should",
+        "userName": "averageconsumer",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R27XXBHLO1W7YV",
+        "text": "Update: Aqara came back with an offer to make this right for me. 5 stars, for both the product and support. Aqara makes some fantastic products, and I have bought several over the last few months, but I was very disappointed in this one. This switch did not include the small screws needed to attach the cover plate. I reached out to Aqara support and found they have no process for missing parts / defective products other than returning them to Amazon. I didn’t discover the missing screws until I had the switch installed. As such, I’m not going to pull it out of the wall for a replacement. I’ll just make a trip to the hardware store. Buyer beware: no customer support for Aqara products!",
+        "date": "Reviewed in the United States on January 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Watch for Missing Parts",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R117888PJDZFOP",
+        "text": "I have several of these. The look is clean and they're generally reliable. Once in a while one will go offline which is annoying but easy to fix. The relay click they make is annoying but that's pretty standard in this type of device.",
+        "date": "Reviewed in the United States on January 7, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "My go-to switch for Zigbee, no-neutral wall switches",
+        "userName": "-scott",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2F57SDTZI0FZD",
+        "text": "Easy to install. Works perfectly.",
+        "date": "Reviewed in the United States on December 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very good",
+        "userName": "svn3v",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1XNIVDBN361T0",
+        "text": "The item work excellent",
+        "date": "Reviewed in the United States on November 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent",
+        "userName": "The item work excellent.",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R209ISGIVJQ6S8",
+        "text": "Installation was easy and connecting to Agara app was equally easy. After linking the Aqara app to my Google Home account I was able to turn the switch on/off through voice command. However, I was never able to turn this switch on or off on a schedule through the app. I'm not sure if it's the switch or the app. But I was able to get it to turn on/off for a few days using the Google Home app. But that stopped working. I also tried to set up a schedule through the Alexa app but the switch wouldn't respond to that schedule either. So for me it works with voice control but cannot be turned on and off on a schedule.",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "easy to install, not so easy to program",
+        "userName": "Stanley Nelson",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1UQXB2R2Y1ZG2",
+        "text": "I loved how easy this was to install and how well it works with my home assistant automation. Material quality feels solid, looks good, LED indicators cans be toggled and aren't too bright when enabled. My only minor complaint is that the internal relay clicks pretty loud when toggling. But it's easy to live with.",
+        "date": "Reviewed in the United States on October 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and enroll, but loud relay click",
+        "userName": "Nate St.Clair",
+        "numberOfHelpful": 4,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3T3LZGFFXP2A",
+        "text": "Connect to SmartThings with ease.",
+        "date": "Reviewed in the United States on September 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great with SmartThings",
+        "userName": "gwbuss",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3FC6Y6CI8A8L7",
+        "text": "I purchased this switch back in 2022 and have been using it since then for my kitchen light. I disconnected from my network recently and I was not able to reconnect it now that it requires a aqara hub (it did not before back when I bought it). They changed this and gave no notice so now I have a useless switch that I’ll have to replace. Just by an Amazon basic switch if you’re trying to use it with Alexa. At least then you won’t be required to use third party apps and devices.",
+        "date": "Reviewed in the United States on August 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Changes without notice",
+        "userName": "Bianca",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RU21Y49AQ8GC0",
+        "text": "I’m using this smart switch to work my ceiling kitchen fixture. This does not use a neutral wire which was necessary for me as my house is older and does not have a neutral in the switch wiring box. Three wires to hook up. Line, load and ground. It is necessary to use an Aqara hub. I bought an E1 from Amazon as well, which was the least expensive option. Just follow the setup instructions in each box. The setup was a little clunky as I had to repeat steps a couple of times. You don’t have to turn off your 5G network, just make sure your phone is on a 2.5 during setup. All in all not a bad experience. The switch was packaged well and protected in the box. Very good build quality. I added Aqara Home skill to Alexa and now have voice control with my Echo dot. I’ve tried other less expensive smart switches that didn’t require neutral wires but couldn’t get any others to work with my fixture which has 4 bipin LED tubes. Highly recommended.",
+        "date": "Reviewed in the United States on August 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Well",
+        "userName": "Mo",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2YQ8LIFXA0EK6",
+        "text": "I had some old light switches that controlled my dining table light, and ceiling lights in the lounge that I wanted to incorporate into my smart home. Instead of adding unnecessary traffic on my WiFi network by adding a bunch of WiFi light bulbs, I added a paid of these to the light switches instead. These were easy to swap out, look amazing and operate flawlessly. The pros of doing it this way: * Much lower cost that replacing all the light bulbs with smart light bulbs * Doesn't add unnecessary load on a crowded WiFi network * Maintains the light switch functionality as before - toggles the lights on and off as normal * Avoids issues that might occur if you turned off a light switch with smart bulbs - you'd lose control over them. This problem doesn't exist in this case The cons: * Zigbee device and requires an Aqara Hub - I would recommend the M3, although anything from them will work. You can also use third party Zigbee hubs, and integrate into Home Assistant for example * No neutral comes with a price premium. Ouch!",
+        "date": "Reviewed in the United States on July 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "No neutral, requires a hub - but fantastic quality.",
+        "userName": "Rohan Adarkar",
+        "numberOfHelpful": 8,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3GVG6L96YZT57",
+        "text": "This meant my needs perfectly. However given physical limitations, any smart plug will require power in some manner. Otherwise without neutral you can't power the switch. I had this switch with a light switch with a lamp with smart bulb. Controlling the smart bulb off meant no power to the aqara switch. The solution was to plug in a mesh network hub in the shared outlet. Any device that doesn't power off will work. Power is now completed in the circuit and the aqara won't lose power.",
+        "date": "Reviewed in the United States on May 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Required a plugged in always on device",
+        "userName": "Helene B",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3MUW56UVLAFUN",
+        "text": "Updating my review. After rebuilding my entire zigbee network with zigbee2mqtt, these devices work fine. Minus one star still for making me rebuild my entire zigbee network so these things work.",
+        "date": "Reviewed in the United States on May 11, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "works fine",
+        "userName": "aperson",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2E9CYU88I9LBM",
+        "text": "Works perfectly not complaints. Easy setup",
+        "date": "Reviewed in the United States on March 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great solution",
+        "userName": "Shane",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1F8DX6O93I7UD",
+        "text": "Some switches in my 1960s house have no neutral and no ground (switch loop wiring). This switch works perfectly fine and I was able to add this to Alexa directly and didn’t need the aqare hub or app. I hope this helps anyone that is in the same situation. I did ground mine to metal electrical boxes even though I didn’t have a ground. ---UPDATE--- After using these switches for a couple days, I've realized if you pair these directly to the Echo Zigbee hub, the switch eventually flashes red meaning it lost connection. This red light flashes until its controlled via Alexa voice again and then it eventually times out and will flash red again. To fix this I tried ordering the M2 Hub which fixed the red light issues but also created another issue. If these are connected to the Aqara hub, Alexa doesn't recognize the devices in routines to use them as triggers. They do appear if it is not being used as a trigger. Unfortunately in my case I am using my switches as triggers to turn on other switches/plugs of other brands. It seems like these devices are locked down to keep you in their ecosystem. If you don't mind them blinking red when on, they still work perfectly fine paired directly to the Echo hubs via Zigbee. UPDATE 3———- I was able to figure out how to get this to work correctly the way I wanted. Do not connect directly to Alexa skill, setup your hub and add all your devices and then add the hub into Alexa by the matter code. This always everything to work correctly in routines!! When I linked to Alexa skill and everything was imported 1 by 1 it was causing errors when trying to make certain routines.",
+        "date": "Reviewed in the United States on March 18, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "No neutral no ground no aqara hub - Updated",
+        "userName": "Zach O.",
+        "numberOfHelpful": 9,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3A4MLV3GN2ZQ7",
+        "text": "If you can install updated wiring, do it, but if you can't, this switch should work.",
+        "date": "Reviewed in the United States on March 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Finally, a smart switch for those who still have knob and tube in parts of the house.",
+        "userName": "Benjamin",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2AUZ5UXHL4C3Y",
+        "text": "This switch is awesome as a simple switch and it's okay as a smart switch no neutral required but it does require a hub.",
+        "date": "Reviewed in the United States on February 19, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Smart switch",
+        "userName": "joe",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2ZEU3TYREAAP6",
+        "text": "Being an electrical engineer, I think i am uniquely qualified to confirm that the switch does not work. I spent two hours debugging the switch. It seems that the controller in mine is dead. relay doesn’t click or activate and there is no blue light. disappointing since I have a ton of other peripherals from Aqara that work fine.",
+        "date": "Reviewed in the United States on February 4, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective",
+        "userName": "Ethan A.",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R38QJJCXCWZKYV",
+        "text": "These are straightforward zigbee devices, it exposes the light on/off state, device temperature, LQI, and RSSI. (Note: this is not a dimmer.) Homeassistant (at least via ZHA) just adds it with no issues. It's sort of disappointing that it does not act as a repeater, though, being an always-powered device. That means it will not contribute to the zigbee mesh or provide any improvement in overall connectivity like most powered zigbee devices do.",
+        "date": "Reviewed in the United States on February 3, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well, but does not act as router/repeater",
+        "userName": "qq",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1766CLZELV99M",
+        "text": "1. Los materiales de fabricación se sienten de muy mala calidad. 2. El recorrido del botón es muy corto, por lo que no se siente como un interruptor de calidad. 3. Precio muy alto para lo que ofrece.",
+        "date": "Reviewed in the United States on January 21, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Sensación al tacto poco agradable.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RUXMXJJ6P3YZH",
+        "text": "Previous neutral free smart switch made our hue lights flash like a disco while it was turned off. This one doesn't suffer from that problem. It works great and is reliable so far.",
+        "date": "Reviewed in the United States on January 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with Hue bulbs",
+        "userName": "Paul Murphy",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1HHKHOWEPR0DX",
+        "text": "I can see why these items get returned so often. Poor instructions for Alexa install. I was attempting to connect to Alexa Dot Gen 4 which is a zigbee hub and not use a Aqara HUB. Here is how to get it done. Install the switch per instuctions. Simply wiring as it is shown. The switch should operate manually. I had red light flashing and wasted time trying to install via Aqara App and Alexa. Both run you thru the needing Aqara hub. Push and hold the switch until it turns on blue pairing mode. Now go to your Alexa Dot or other that supports Zigbee and tell it \"Alexa Discover Devices\". Alexa will find It and will pair up with it and give it a name like \"First Light Swith\". Test it in Alexa app and by voice. No where was this mentioned in all the stuff I looked at. I just knew that it had to be put into pairing mode so I held the switch till it happened. Hope this saves someone some time and cuts down on the returns to Aqara for people who are connecting this to Alexa eco-system.",
+        "date": "Reviewed in the United States on December 30, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Connecting to Alexa DOT without Aqara Hub",
+        "userName": "Tracy I.",
+        "numberOfHelpful": 2,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RGTDP1R47AFCL",
+        "text": "Wife installed the light and said it was super easy. I added it the Hubitat. Alexa and Google home both recognize the Hubitat. No motion detection is on this light. Note: Alexa recognizes it as a device but not an event. Had to be a bit inventive to get around that. That a querk between the Hubitat and Alexa. Not the light.",
+        "date": "Reviewed in the United States on December 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Used our Habitat hub.",
+        "userName": "Nazareth",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RLQUJ7Y96CY0R",
+        "text": "I’ve got the hub connected, but it will not find the switch when I try to add it. Finally got it to connect, when the hub is 2 inches away from the switch, otherwise it won’t control or connect. Really disappointed in the quality of this item.",
+        "date": "Reviewed in the United States on December 21, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Will not connect",
+        "userName": "Chris Swann",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R16IXR99F54K0T",
+        "text": "Easy to install. Paired once with Home Assistant / Sky Connect / ZHA, but could never connect to Zigbee after that despite being right next to the coordinator. Also pushing the button only sometimes makes the outlet it's connected to come on, and it turns back off after a few seconds (load is < 1A so I don't think it's overloading). UPDATE: After rewiring to make sure the current has somewhere to go even when \"off\", and re-pairing a couple of times, it is now working well. UPDATE2: Worked for 16 months then suddenly bricked. Reset methods did not work. Some switches can fail and still work as a dumb physical switch, but not this one. (Single Rocker No Neutral)",
+        "date": "Reviewed in the United States on December 7, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Working with my HA",
+        "userName": "Jeffrey Van Epps",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3GZPLCGO9U6PU",
+        "text": "Lasted only 1.5 years and it stopped working.",
+        "date": "Reviewed in the United States on December 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lasted 1.5 year",
+        "userName": "Duk S. Kim",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RX7D7US3NYCIR",
+        "text": "I never realized what a big miss not having a neutral wire would be. I needed my upstairs switches to be \"smart\" so I can control them downstairs. I had such a hard time finding any Smart Switches that did not need a neutral, but these came through and they work like a charm. The Aqara App is pretty straightforward, no setup issues and overall the entire setup is absolutely reliable.",
+        "date": "Reviewed in the United States on November 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "No Neutral wire needed!",
+        "userName": "Randy Sevillano",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R5J3D0V78L4R9",
+        "text": "Worked for two months, now not so much. Switch continually turns my outside lights on. if I turn them off with the physical switch, it turns them immediately back on. If I turn them off with the app, It turns them immediately back on. Now I can deal with a defective product, but customer support with this company is not just bad, it is completely non existent. This is no phone number and they simply don't respond to email. It is too late to send it back t Amazon, so I guess I will just eat the $30.00. Never again.",
+        "date": "Reviewed in the United States on November 16, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Quit working after two months",
+        "userName": "Greg Kreps",
+        "numberOfHelpful": 2,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RTDNKDVWABCQR",
+        "text": "These work OK but tend to get stuck if you press them at certain angles, which causes the switch to become unpaired from Home Assistant and I have to go back and pair it again whenever I finally notice that this has happened. Having Zigbee is really nice but in the end, not worth the extra pairing I have to do every few weeks now with this switch in particular. Also, be aware that if you order the 'no neutral' model and plan to use it with LED lights, it is still sending energy to the fixture even when switched off and some LED fixtures will thus receive enough power to become energized and flicker.",
+        "date": "Reviewed in the United States on November 3, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Button gets stuck at times ; No neutral not great for some LED lights",
+        "userName": "KoiPond",
+        "numberOfHelpful": 4,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RCTFG6BRBMXKJ",
+        "text": "I was very reserved about buying a non neutral switch , I have only one spot in my house that my electrician couldn’t get a neutral wire at the box . I installed it and it worked with my zigbee adapter for home assistant immediately . It’s not as fast as other switches , it takes half a second to react after y power on/off , but now my smart home is complete. Great product , 100% recommended",
+        "date": "Reviewed in the United States on October 24, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly",
+        "userName": "Esteban Burneo",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R34DERMD4733X2",
+        "text": "Stopped working after 1 year and 4 months. The whole reason for doing switched instead of bulbs is the idea that it will last way longer. Should have just used a bulb. Would disconnect at random and was a struggle to get it to connect again.",
+        "date": "Reviewed in the United States on October 3, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped Working After 1 Year and 4 Months",
+        "userName": "Roland E.",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1J2E1S1WRBYDO",
+        "text": "So this switch does support a decoupled “smart bulb” mode, but doesn’t allow direct binding to the bulbs, meaning any decoupled interaction must be mediated by the hub and not by the device itself. A real “half-right as usual” situation.",
+        "date": "Reviewed in the United States on September 16, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Decoupled mode? Yes. Binding? No.",
+        "userName": "Conrad K",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2Z6HR94DBGZC",
+        "text": "Very happy to find no neutral smart switch that works with SmartThings. Scan the little QR code on switch, wire it up, fire up the smart things app, hold the switch down till it flashes blue and you are in business ! I use my smartthings hub with Alexa for voice control and automation.",
+        "date": "Reviewed in the United States on August 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with Smarthings (even if not offically listed for it)",
+        "userName": "Tesla",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3C2YBPPZLWL9K",
+        "text": "This is a great looking switch that is compatible with the Zigbee wireless standard. It was easy to pair and setup in Home Assistant. This unit comes with it's own stranded wires attached, no screw posts. The switch comes with all of the screws and wire nuts necessary to complete the installation. I will definitely be buying more of these.",
+        "date": "Reviewed in the United States on August 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great looking Zigbee switch. Very easy to pair and setup with Home Assistant.",
+        "userName": "Raj W",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2KBGCQPIXELAO",
+        "text": "I am already using Aqara smart home devices in my house, and I added this Smart Light Switch to control my garage lighting. The installation was quick and trouble-free, and within a couple of minutes, I had the switch working as I wanted within my HomeKit system. Function-wise it would get 5-stars... however I am only giving it a 3-star rating overall because the switch itself feels a little cheap. The matte finish looks and feels like unfinished plastic, and the large toggle is a little flimsy feeling when you use it. However I will rarely use it since the garage lighting is normally automated anyways, but I do wish the smart switch was a little more \"finished\" in appearance.",
+        "date": "Reviewed in the United States on July 30, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works as expected, but feels a little cheap",
+        "userName": "James R.",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R25EM8QUUGZM78",
+        "text": "Constantly disconnects from the hub 20 ft. away. Will replace with a different brand.",
+        "date": "Reviewed in the United States on July 8, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very Unreliable",
+        "userName": "viccer",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2IBAGGY1GJ1PP",
+        "text": "I have installed 5 of these switches and use Zigbee2Mqttt with a Sonoff 3.0 coordinator. Each of the switches fall offline about once a month, and the only fix is to factory reset the switch. These are the only problematic devices in my Zigbee network of 60+ devices.",
+        "date": "Reviewed in the United States on June 21, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Doesn't Work Reliably With Zigbee2Mqtt",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RNNYFYT37XC0Q",
+        "text": "I bought 6 of the zigbee switches to use with Zigbee2Mqtt with Home Assistant. Since installing the light switches I've discovered that Aqaras non standard zigbee implementation will cause the light switches to disconnect every few weeks. It's not an issue that is isolated to a single switch, and the rest of my zigbee mesh works fine. The only way to reconnect the switch is to reset it. This issue means that it's a bigger headache than using manual switches and I wouldn't recommend these to HA users.",
+        "date": "Reviewed in the United States on June 15, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Intermittent Disconnections",
+        "userName": "Luke R",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1XSG3G2X87C",
+        "text": "Works perfectly fine if you already have the hub. I do love Aqara products as they are good quality for decent price",
+        "date": "Reviewed in the United States on May 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect for my application",
+        "userName": "ABarna",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R17R913PVL6BFO",
+        "text": "Installed this item in the hopes of bringing smart home features to my daughter’s room. Things seems to be going well so I threw out the boxes. Three weeks later, the damned thing shorted out and tripped the breaker. Now I’m the proud owner of a fire hazard that I can’t return.",
+        "date": "Reviewed in the United States on May 29, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Too dangerous to buy.",
+        "userName": "CM",
+        "numberOfHelpful": 2,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R280U87B8ORJQV",
+        "text": "I got a couple more of these after trying this out. I strictly use HomeKit devices and already had a Aqara hub for a lot of over devices. This light switches are perfect or the areas of my 19th century home that are most out of date and do not have neutral wires.",
+        "date": "Reviewed in the United States on May 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Haven’t found anything else without requiring neutral",
+        "userName": "Citizen",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RHB7TCXPU99XC",
+        "text": "I do not recommend this product at all due it requires a hub and the hub broke the very next day. Save your time and money. There's other Smart Switch (No Neutral) that I would recommend.",
+        "date": "Reviewed in the United States on April 24, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "I don't recommend",
+        "userName": "Jeanette",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3I527G9QF9CY0",
+        "text": "if you're an Apple partisan and use HomeKit for your smart home devices, buy another switch. This one will not connect directly to HomeKit. I have ordered an Aqara hub (another $50 I had to spend). We will see how it works then. Currently, it's simply a rocker switch.",
+        "date": "Reviewed in the United States on April 11, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "misleading - DOES NOT WORK WITH APPLE HOMEKIT",
+        "userName": "Dennis J. Conner",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081ZQWX1F",
+        "productTitle": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 145,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 990,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RVHI5HGJLX5GQ",
+        "text": "Honestly, i hate devices that use open standards of communication but lock you into using their devices only. this can only be paired with their bridge, it is very loud when you turn it on or off and there is a very noticeable flickering of the light.",
+        "date": "Reviewed in the United States on March 9, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "good but loud",
+        "userName": "Michael O.",
+        "numberOfHelpful": 0,
+        "variationId": "B081ZQWX1F",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Wall Switch(No Neutral,Single Rocker)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

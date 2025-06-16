@@ -1,0 +1,181 @@
+{
+  "product_title": "Legrand Pass & Seymour TSDCL303PTCCCV6 Toggle Slide Dimmer CFL/LED/Incandescent, Single-Pole/3-Way, 300W, No De-Rating, White/Light Almond, Ivory (1 Count)",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 8,
+  "review_analysis": {
+    "phy": {
+      "build quality": {
+        "A@poor overall construction quality": {
+          "-": [
+            0
+          ]
+        },
+        "B@meets expected build standards": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "size": {
+        "C@back is smaller than similar dimmers": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "color": {
+        "D@available in light almond color": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "wiring": {
+        "E@has back wire connection (not back-stab)": {
+          "+": [
+            4
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@not functioning after installation": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@works on LEDs and other bulbs": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@meets functionality expectations": {
+          "+": {
+            "B": [
+              5
+            ]
+          }
+        }
+      },
+      "dimming capability": {
+        "d@doesn't dim enough": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "LED compatibility": {
+        "e@causes LED lights to flicker on low settings": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "f@causes immediate flickering at every level with LEDs": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "installation ease": {
+        "g@fits in box more easily": {
+          "+": {
+            "C": [
+              3
+            ]
+          }
+        },
+        "h@easy to swap switches in future": {
+          "+": {
+            "E": [
+              4
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacing older incandescent-only switches": {
+        "+": {
+          "b": [
+            1
+          ]
+        }
+      },
+      "family room lighting with converted LEDs": {
+        "-": {
+          "e": [
+            2
+          ]
+        }
+      },
+      "installation in electrical box": {
+        "+": {
+          "g": [
+            3
+          ]
+        }
+      },
+      "LED can retrofits on porch": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "LED island light in kitchen": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "LED can retrofits in basement": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "three way configuration": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "general light switch replacement": {
+        "+": {
+          "c": [
+            5
+          ]
+        }
+      },
+      "dimming control": {
+        "-": {
+          "d": [
+            6
+          ]
+        }
+      },
+      "controlling 14 x 8 watt LEDs (112 watts total)": {
+        "-": {
+          "f": [
+            7
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:23.237156"
+}

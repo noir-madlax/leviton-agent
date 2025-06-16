@@ -1,0 +1,307 @@
+{
+  "product_title": "MOES [12 Pack] Paddle Rocker Light Switch, Single Pole On/Off 15Amp 120V, Glossy White Decorator, Self Grounding",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 19,
+  "review_analysis": {
+    "phy": {
+      "rocker mechanism": {
+        "A@rocker switch breaks": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "design": {
+        "B@paddle rocker design": {
+          "+": [
+            3
+          ]
+        },
+        "C@sleek, modern design": {
+          "+": [
+            14
+          ]
+        },
+        "D@simple, sleek design": {
+          "+": [
+            16
+          ]
+        },
+        "E@paddle design is smooth": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "appearance": {
+        "F@glossy white finish adds clean, modern touch": {
+          "+": [
+            3
+          ]
+        },
+        "G@look nice": {
+          "+": [
+            10
+          ]
+        },
+        "H@looked great and made apartment look more modern": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "construction": {
+        "I@self-grounding for added safety": {
+          "+": [
+            3
+          ]
+        },
+        "J@feel high-quality, not cheap": {
+          "+": [
+            14
+          ]
+        },
+        "K@satisfying click": {
+          "+": [
+            17
+          ]
+        },
+        "L@ground connection is on the top": {
+          "+": [
+            17
+          ]
+        }
+      },
+      "specifications": {
+        "M@15Amp 120V capacity": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "contact system": {
+        "N@bad contact problem": {
+          "-": [
+            11
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@will not stay on": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@switches have failed": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@did not work from the beginning": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@reliable solution for controlling lights": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@easy operation": {
+          "+": {
+            "B": [
+              3
+            ]
+          }
+        },
+        "f@don't work": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "g@faulty": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "h@went bad after 30 days": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "i@smooth, responsive operation": {
+          "+": {
+            "E": [
+              14
+            ]
+          }
+        },
+        "j@no sticking or flickering issues": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "k@works perfectly": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "l@easy to use": {
+          "+": {
+            "E": [
+              16
+            ]
+          }
+        }
+      },
+      "durability": {
+        "m@durable and built to last": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "n@durable": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "installation": {
+        "o@easy installation": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "p@installation was straightforward": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "q@very easy to install": {
+          "+": {
+            "L": [
+              17
+            ]
+          }
+        },
+        "r@easy to install": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "fit": {
+        "s@fits great in existing setup": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home improvement": {
+        "+": {
+          "o": [
+            2
+          ]
+        }
+      },
+      "light switch replacement": {
+        "+": {
+          "o": [
+            2
+          ]
+        }
+      },
+      "modernizing old switches": {
+        "+": {
+          "o": [
+            2
+          ]
+        }
+      },
+      "controlling lights in home": {
+        "+": {
+          "d,e": [
+            3
+          ]
+        }
+      },
+      "standard electrical needs": {
+        "+": {
+          "M": [
+            3
+          ]
+        }
+      },
+      "larger projects": {
+        "+": {
+          "?": [
+            3
+          ]
+        }
+      },
+      "replacing 30+ switches": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "upgrading switches": {
+        "+": {
+          "?": [
+            9
+          ]
+        }
+      },
+      "construction projects": {
+        "+": {
+          "r": [
+            18
+          ]
+        }
+      },
+      "single-pole switch applications": {
+        "+": {
+          "k,l,s": [
+            16
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:19.829763"
+}

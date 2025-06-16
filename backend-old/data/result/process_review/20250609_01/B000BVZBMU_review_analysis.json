@@ -1,0 +1,436 @@
+{
+  "product_title": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "illumination": {
+        "A@glows in the dark when in off position": {
+          "+": [
+            0
+          ]
+        },
+        "B@has light inside": {
+          "-": [
+            2
+          ]
+        },
+        "C@illumination is barely visible": {
+          "-": [
+            3
+          ]
+        },
+        "D@has tiny dot of light behind switch": {
+          "-": [
+            9
+          ]
+        },
+        "E@lit up around switch stalk base not in it": {
+          "+": [
+            11
+          ]
+        },
+        "F@neon bulb light": {
+          "+": [
+            17,
+            23
+          ]
+        },
+        "G@light barely shows around switch": {
+          "-": [
+            22
+          ]
+        },
+        "H@dim uneven light that pulses/flickers": {
+          "-": [
+            24
+          ]
+        },
+        "I@soft dim glow": {
+          "+": [
+            30
+          ]
+        },
+        "J@light at sides/top of toggle switch from behind": {
+          "+": [
+            37
+          ]
+        },
+        "K@not bright enough illumination": {
+          "-": [
+            45
+          ]
+        },
+        "L@light portion is very dim": {
+          "-": [
+            47
+          ]
+        }
+      },
+      "construction": {
+        "M@well-made compared to hardware store switches": {
+          "+": [
+            4
+          ]
+        },
+        "N@posts are offset on opposite sides": {
+          "+": [
+            8
+          ]
+        },
+        "O@15 amp rated": {
+          "+": [
+            11
+          ]
+        },
+        "P@good quality": {
+          "+": [
+            12
+          ]
+        },
+        "Q@standard size": {
+          "+": [
+            33
+          ]
+        },
+        "R@nice and solid switch": {
+          "+": [
+            43
+          ]
+        },
+        "S@raised rectangular area around switch": {
+          "-": [
+            46
+          ]
+        }
+      },
+      "appearance": {
+        "T@white color matches existing plate cover": {
+          "+": [
+            12
+          ]
+        },
+        "U@metal colored with silver/chrome line": {
+          "+": [
+            43
+          ]
+        },
+        "V@toggle is white with clear plastic framing": {
+          "+": [
+            37
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works as intended": {
+          "+": {
+            "?": [
+              5,
+              10,
+              18,
+              27,
+              31,
+              32,
+              40,
+              42,
+              44
+            ]
+          }
+        },
+        "b@switch failed after 10 months": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "c@light died after 3.5 years but switch still works": {
+          "-": {
+            "B": [
+              2
+            ]
+          }
+        },
+        "d@works without grounding": {
+          "+": {
+            "?": [
+              17,
+              20
+            ]
+          }
+        }
+      },
+      "electrical_performance": {
+        "e@causes LED lights to blink due to current leakage": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "f@causes arcing inside": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "g@neon bulb flickers in off position with LED lights": {
+          "-": {
+            "F": [
+              23
+            ]
+          }
+        },
+        "h@controlled lights flicker when off": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "i@causes LED panel flickering and switch blinking when off": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "j@works fine with LED bulbs without flickering": {
+          "+": {
+            "J": [
+              37
+            ]
+          }
+        },
+        "k@leaks current intermittently in off position": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "l@causes ceiling light to flash weakly": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "installation": {
+        "m@easy to install": {
+          "+": {
+            "?": [
+              6,
+              8,
+              12,
+              16,
+              17,
+              30,
+              33,
+              41
+            ]
+          }
+        },
+        "n@standard installation": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "o@installation lacks clear markings and instructions": {
+          "-": {
+            "?": [
+              28,
+              36
+            ]
+          }
+        },
+        "p@switch plate cover doesn't sit flat": {
+          "-": {
+            "S": [
+              46
+            ]
+          }
+        }
+      },
+      "brightness": {
+        "q@perfect brightness level": {
+          "+": {
+            "A": [
+              0,
+              8,
+              25
+            ]
+          }
+        },
+        "r@too dim": {
+          "-": {
+            "C,D,G,H,L": [
+              3,
+              9,
+              15,
+              22,
+              24,
+              38,
+              47
+            ]
+          }
+        },
+        "s@brightness appropriate for different rooms": {
+          "+": {
+            "I": [
+              12,
+              34
+            ]
+          }
+        },
+        "t@dim but visible in dark": {
+          "+": {
+            "F": [
+              14,
+              17
+            ]
+          }
+        }
+      },
+      "durability": {
+        "u@became loose and floppy over time": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "dark location identification": {
+        "+": {
+          "a,q": [
+            0,
+            1,
+            5,
+            6,
+            7,
+            11,
+            16,
+            19,
+            30,
+            31,
+            32,
+            37,
+            40
+          ]
+        },
+        "-": {
+          "r": [
+            22
+          ]
+        }
+      },
+      "attic use": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "garage use": {
+        "+": {
+          "a,m": [
+            6,
+            20
+          ]
+        }
+      },
+      "bedroom use": {
+        "+": {
+          "s": [
+            12,
+            34
+          ]
+        },
+        "-": {
+          "k": [
+            39
+          ]
+        }
+      },
+      "utility room and den use": {
+        "+": {
+          "a": [
+            12
+          ]
+        }
+      },
+      "shop/workshop use": {
+        "+": {
+          "t": [
+            14,
+            17
+          ]
+        }
+      },
+      "hallway use": {
+        "+": {
+          "a": [
+            11,
+            30
+          ]
+        }
+      },
+      "bathroom use": {
+        "+": {
+          "s": [
+            34,
+            43
+          ]
+        }
+      },
+      "controlling LED lights": {
+        "+": {
+          "j": [
+            37
+          ]
+        },
+        "-": {
+          "e,g,i": [
+            8,
+            23,
+            28,
+            29
+          ]
+        }
+      },
+      "controlling fluorescent lights": {
+        "+": {
+          "a": [
+            23,
+            29
+          ]
+        }
+      },
+      "controlling incandescent lights": {
+        "+": {
+          "a": [
+            23
+          ]
+        }
+      },
+      "replacing old switches": {
+        "+": {
+          "a,m": [
+            10,
+            43
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:35.656901"
+}

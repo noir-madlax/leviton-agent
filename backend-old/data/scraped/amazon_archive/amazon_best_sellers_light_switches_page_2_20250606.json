@@ -1,0 +1,277 @@
+{
+  "responseStatus": "PRODUCT_FOUND_RESPONSE",
+  "responseMessage": "Product successfully found!",
+  "countProducts": 30,
+  "products": [
+    {
+      "position": "#51",
+      "salesMovement": null,
+      "productRating": "3.7 out of 5 stars",
+      "countReview": 4261,
+      "url": "/GE-Switch-Neutral-Required-Bluetooth/dp/B082LKCXV9/ref=zg_bs_g_6291359011_d_sccl_1/131-4636019-3997161?psc=1",
+      "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+      "price": 29.98
+    },
+    {
+      "position": "#52",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 1883,
+      "url": "/Lutron-Wireless-Single-Pole-PD-FSQN-WH-Assistant/dp/B07N1GXM38/ref=zg_bs_g_6291359011_d_sccl_2/131-4636019-3997161?psc=1",
+      "productTitle": "Lutron Caseta Smart Fan Speed Control Switch (Lutron Smart Hub Required), Single-Pole, PD-FSQN-WH, White",
+      "price": 64.95
+    },
+    {
+      "position": "#53",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 755,
+      "url": "/ELEGRP-Replacement-Self-Grounding-Residential-Commercial/dp/B0C3V8TF28/ref=zg_bs_g_6291359011_d_sccl_3/131-4636019-3997161?psc=1",
+      "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (5 Pack, Glossy White)",
+      "price": 11.99
+    },
+    {
+      "position": "#54",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 3925,
+      "url": "/Taymac-2672W-2-Gang-Masque-Decorator/dp/B01MTXSA37/ref=zg_bs_g_6291359011_d_sccl_4/131-4636019-3997161?psc=1",
+      "productTitle": "TayMac 2672W 2-Gang MASQUE Decorator Cover, Toggle, White",
+      "price": 13.72
+    },
+    {
+      "position": "#55",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 1949,
+      "url": "/Leviton-5603-2E-Decora-Residential-Grounding/dp/B0033PSGEQ/ref=zg_bs_g_6291359011_d_sccl_5/131-4636019-3997161?psc=1",
+      "productTitle": "Leviton 5603-2E 15 Amp, 120/277 Volt, Decora Rocker 3-Way AC Quiet Switch, Residential Grade, Grounding, Black",
+      "price": 4.68
+    },
+    {
+      "position": "#56",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 3847,
+      "url": "/Thinkbee-Wireless-Outdoor-Lighting-Waterproof/dp/B0814R5PSX/ref=zg_bs_g_6291359011_d_sccl_6/131-4636019-3997161?psc=1",
+      "productTitle": "Thinkbee Wireless Lights Switch Kit, No Wiring Mini Remote Switch, No WiFi Needed, Outdoor 1969ft Indoor 328ft Remote Control Lighting Fixture for Led Light, Ceiling Lights and Lamps, Waterproof",
+      "price": 15.99
+    },
+    {
+      "position": "#57",
+      "salesMovement": null,
+      "productRating": "4.5 out of 5 stars",
+      "countReview": 1203,
+      "url": "/Inline-Switch-Control-Appliance-Rocker/dp/B08KD3NQKM/ref=zg_bs_g_6291359011_d_sccl_7/131-4636019-3997161?psc=1",
+      "productTitle": "Inline Cord Switch 2 Pack, AC 250V 6A On/Off Lamp Control Appliance Switch Rocker for Table Lamp Desk Bed LED Lights, Black",
+      "price": 6.96
+    },
+    {
+      "position": "#58",
+      "salesMovement": null,
+      "productRating": "4.5 out of 5 stars",
+      "countReview": 621,
+      "url": "/Z-Wave-Switch-ZEN71-Direct-Required/dp/B09698KJH6/ref=zg_bs_g_6291359011_d_sccl_8/131-4636019-3997161?psc=1",
+      "productTitle": "Zooz 800 Series Z-Wave Long Range On/Off Switch ZEN71 800LR, White | Direct 3-Way (No Add-On Switch Needed) | Z-Wave Hub Required",
+      "price": 39.95
+    },
+    {
+      "position": "#59",
+      "salesMovement": null,
+      "productRating": "4.2 out of 5 stars",
+      "countReview": 1168,
+      "url": "/Suraielec-Wireless-Pre-Programmed-Expandable-Receiver/dp/B08R9S8TDT/ref=zg_bs_g_6291359011_d_sccl_9/131-4636019-3997161?psc=1",
+      "productTitle": "Suraielec Wireless Remote Light Switch, No Wiring, No WiFi, 100ft RF Range, Pre-Programmed, Expandable Wireless Wall Switch and Receiver Kit, Remote Control Light Fixture for Lamp, Ceiling Light, Fan",
+      "price": 12.99
+    },
+    {
+      "position": "#60",
+      "salesMovement": null,
+      "productRating": "4.4 out of 5 stars",
+      "countReview": 2132,
+      "url": "/Illuminated-Switch-Decora-Automatic-277Volt/dp/B087TLPYDT/ref=zg_bs_g_6291359011_d_sccl_10/131-4636019-3997161?psc=1",
+      "productTitle": "4 Pack Illuminated Light Switch, Lightswitch with LED Night Light, Automatic On/Off Sensor, Single Pole Switch, 15Amp 120/277Volt,White",
+      "price": 28.88
+    },
+    {
+      "position": "#61",
+      "salesMovement": null,
+      "productRating": "4.5 out of 5 stars",
+      "countReview": 560,
+      "url": "/Tapo-Compatible-Certified-S500-4-Pack/dp/B0DHYLF7PQ/ref=zg_bs_g_6291359011_d_sccl_11/131-4636019-3997161?psc=1",
+      "productTitle": "TP-Link Tapo Smart Light Switch, Single Pole, Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White, Tapo S500(4-Pack)",
+      "price": 42.99
+    },
+    {
+      "position": "#62",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 933,
+      "url": "/MOES-Neutral-Required-Multi-Control-Control/dp/B09H2NRLGR/ref=zg_bs_g_6291359011_d_sccl_12/131-4636019-3997161?psc=1",
+      "productTitle": "MOES 2.4GHz WiFi Wall Touch Smart Switch Neutral Wire Required, 3 Way Multi-Control, Glass Panel Light Switch Work with Smart Life/Tuya App, RF433 Remote Control, Alexa and Google Home White 3 Gang",
+      "price": 26.99
+    },
+    {
+      "position": "#63",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 505,
+      "url": "/Leviton-L5611-2W-Illuminated-Single-Pole-Residential/dp/B08YMBDGZ8/ref=zg_bs_g_6291359011_d_sccl_13/131-4636019-3997161?psc=1",
+      "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch Single-Pole, White, L5611-2W",
+      "price": 10.41
+    },
+    {
+      "position": "#64",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 275,
+      "url": "/ThunderWay-Decorator-Switch-Plates-Residential/dp/B0BW82XZWS/ref=zg_bs_g_6291359011_d_sccl_14/131-4636019-3997161?psc=1",
+      "productTitle": "Thunderway Light Switch with Wall Plates- 3-Way Decorator Electrical On/Off Paddle Rocker Switches, Grounding Screw, 15A 120/277 V, UL Listed, Residential Grade, Glossy White(10 Pack)",
+      "price": 18.69
+    },
+    {
+      "position": "#65",
+      "salesMovement": null,
+      "productRating": "4.4 out of 5 stars",
+      "countReview": 444,
+      "url": "/CML-Decorator-Single-Switch-Warranty/dp/B08KDGBKNC/ref=zg_bs_g_6291359011_d_sccl_15/131-4636019-3997161?psc=1",
+      "productTitle": "CML Single Pole Decorator Light Switch, 20 Pack Rocker Paddle Wall Switch, 15A 120/277V, On/Off Interrupter, UL Listed, White",
+      "price": 28.49
+    },
+    {
+      "position": "#66",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 104,
+      "url": "/CML-Decorator-Self-grounding-Electrical-Interrupter/dp/B0CW92T9CH/ref=zg_bs_g_6291359011_d_sccl_16/131-4636019-3997161?psc=1",
+      "productTitle": "CML Double Rocker Decorator Light Switch, Dual Single Pole Paddle in-Wall Switch, Self-grounding Electrical On/Off Interrupter, 15A 120V, UL Listed, 1 Pack, White",
+      "price": 6.74
+    },
+    {
+      "position": "#67",
+      "salesMovement": null,
+      "productRating": "4.5 out of 5 stars",
+      "countReview": 8996,
+      "url": "/Treatlife-Smart-Light-Switch-Assistant/dp/B07R4MFWCQ/ref=zg_bs_g_6291359011_d_sccl_17/131-4636019-3997161?psc=1",
+      "productTitle": "TREATLIFE Smart Light Switch Single Pole Works with Alexa, Google Home and SmartThings, 2.4GHz WiFi Timer Smart Switch, Neutral Wire Required, No Hub Required, FCC Listed, 4 Pack",
+      "price": 39.99
+    },
+    {
+      "position": "#68",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 873,
+      "url": "/ELEGRP-Decorator-Electrical-Self-grounding-Included/dp/B093PVYMZC/ref=zg_bs_g_6291359011_d_sccl_18/131-4636019-3997161?psc=1",
+      "productTitle": "ELEGRP Decorator Triple Rocker Light Switch, Three Single Pole Electrical Paddle Switch, 15A 120V, in-Wall On/Off Switch, Self-grounding, Wall Plate is Included, UL Listed (1 Pack, Glossy White)",
+      "price": 9.99
+    },
+    {
+      "position": "#69",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 2513,
+      "url": "/Leviton-1451-2WM-Single-Pole-Residential-Grounding/dp/B00004YUO0/ref=zg_bs_g_6291359011_d_sccl_19/131-4636019-3997161?psc=1",
+      "productTitle": "Leviton 1451-2WM 15 Amp, 120 Volt, Toggle Framed Single-Pole Ac Quiet Switch, Residential Grade, Grounding, 10-Pack, White",
+      "price": 7.53
+    },
+    {
+      "position": "#70",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 230,
+      "url": "/GREENCYCLE-Interrupter-120-277V-Grounding-Commercial/dp/B0892HCXGS/ref=zg_bs_g_6291359011_d_sccl_20/131-4636019-3997161?psc=1",
+      "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+      "price": 8.99
+    },
+    {
+      "position": "#71",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 61,
+      "url": "/Tapo-Single-Pole-Compatible-SmartThings-S515/dp/B0DKHCF53T/ref=zg_bs_g_6291359011_d_sccl_21/131-4636019-3997161?psc=1",
+      "productTitle": "TP-Link Tapo Smart Switch, Single-Pole/3-Way/4-Way, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515",
+      "price": 19.99
+    },
+    {
+      "position": "#72",
+      "salesMovement": null,
+      "productRating": "4.1 out of 5 stars",
+      "countReview": 467,
+      "url": "/MOES-Switches-Inteligente-Assistant-Controlgle/dp/B0C3HGGYHG/ref=zg_bs_g_6291359011_d_sccl_22/131-4636019-3997161?psc=1",
+      "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+      "price": 19.99
+    },
+    {
+      "position": "#73",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 405,
+      "url": "/LIDER-Minimalist-Combination-Frameless-LCS2-1P-BK/dp/B0BHP13NCF/ref=zg_bs_g_6291359011_d_sccl_23/131-4636019-3997161?psc=1",
+      "productTitle": "LIDER Minimalist Design Matte Finish Lighted Double Switch, Combination Frameless Decorator Switch with Locator Light, Ground Terminal, Single Pole, 15A 120-277V, UL Listed, LCS2-1P-BK, Black",
+      "price": 14.93
+    },
+    {
+      "position": "#74",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 1235,
+      "url": "/GE-Grounding-Replacement-Kitchen-54172/dp/B002DN8CQ6/ref=zg_bs_g_6291359011_d_sccl_24/131-4636019-3997161?psc=1",
+      "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+      "price": 5.0
+    },
+    {
+      "position": "#75",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 93,
+      "url": "/Wengart-Toggle-120Volt-Residential-Electrical/dp/B0CCND92GN/ref=zg_bs_g_6291359011_d_sccl_25/131-4636019-3997161?psc=1",
+      "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+      "price": 6.79
+    },
+    {
+      "position": "#76",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 887,
+      "url": "/ELEGRP-Double-Toggle-Light-Switch/dp/B093PVWFKG/ref=zg_bs_g_6291359011_d_sccl_26/131-4636019-3997161?psc=1",
+      "productTitle": "ELEGRP Double Toggle Light Switch - 15A, 120V, In-Wall On/Off, Self-grounding, Wall Plate Included, UL Listed (1 Pack, Glossy White)",
+      "price": 9.99
+    },
+    {
+      "position": "#77",
+      "salesMovement": null,
+      "productRating": "4.8 out of 5 stars",
+      "countReview": 1437,
+      "url": "/Legrand-Pass-Seymour-660BKG-Single-Terminal/dp/B000NCTHHW/ref=zg_bs_g_6291359011_d_sccl_27/131-4636019-3997161?psc=1",
+      "productTitle": "Legrand Pass & Seymour 660BKG Trademaster 15 Amp Single Pole Toggle Light Switch, Residential Grade, Black (1 Count)",
+      "price": 3.65
+    },
+    {
+      "position": "#78",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 114,
+      "url": "/SURAIELEC-Wireless-Receiver-Decorator-Required/dp/B0CRKY6XC7/ref=zg_bs_g_6291359011_d_sccl_28/131-4636019-3997161?psc=1",
+      "productTitle": "SURAIELEC Wireless Wall Switch and Receiver Kit, Rocker Switch, 15AMP, 100FT RF Range, Remote Control, Upgrade Antenna Model (Neutral Wire Required)",
+      "price": 21.99
+    },
+    {
+      "position": "#79",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 43,
+      "url": "/Amico-Interrupter-Grounding-Residential-Suitable/dp/B0DCZCVRL8/ref=zg_bs_g_6291359011_d_sccl_29/131-4636019-3997161?psc=1",
+      "productTitle": "Amico 30 Pack Single Pole Light Switch with Wall Plate, UL Listed, 15A 120/277V, On/Off Rocker Paddle Interrupter Wall Switch, Grounding Screw, Residential Grade, Suitable for Home and Business, White",
+      "price": 49.99
+    },
+    {
+      "position": "#80",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 489,
+      "url": "/AIDA-Rocker-Decorator-Self-Grounding-Residential/dp/B0BFCJZZC1/ref=zg_bs_g_6291359011_d_sccl_30/131-4636019-3997161?psc=1",
+      "productTitle": "AIDA 20 Pack 3 Way Switch Decora Switch White, Electric Switches,Light Switch15Amp, 120/277 Volt, 3 Way Rocker Switch, Wall Replacement, Self-Grounding, Residential Grade, UL Listed",
+      "price": 39.99
+    }
+  ]
+}

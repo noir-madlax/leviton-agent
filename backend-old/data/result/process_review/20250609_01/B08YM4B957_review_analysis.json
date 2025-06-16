@@ -1,0 +1,244 @@
+{
+  "product_title": "Leviton L5611-2T 15 Amp Decora LED Illuminated Light Wall Switch, Single-Pole - Light Almond",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 17,
+  "review_analysis": {
+    "phy": {
+      "Light": {
+        "A@Light leaks out from the side of the switch and around the gaps": {
+          "-": [
+            1
+          ]
+        },
+        "B@Light is very dim": {
+          "-": [
+            8,
+            10
+          ]
+        },
+        "C@Light has defectively low illumination": {
+          "-": [
+            12
+          ]
+        },
+        "D@Light is not as bright as previous similar switches": {
+          "-": [
+            13
+          ]
+        },
+        "E@Light provides solid white glow instead of orange flickering": {
+          "+": [
+            16
+          ]
+        },
+        "F@Light is built in": {
+          "+": [
+            7
+          ]
+        },
+        "G@Light has good internal illumination": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "Switch": {
+        "H@Switch paddle should be the only illuminated part": {
+          "-": [
+            1
+          ]
+        },
+        "I@Switch has quieter click but not totally silent": {
+          "-": [
+            16
+          ]
+        },
+        "J@Switch has ground terminal not shown in illustration": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "Color": {
+        "K@Color as advertised": {
+          "+": [
+            3
+          ]
+        },
+        "L@White color not available for purchase": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "Packaging": {
+        "M@Instructions missing, blank box, no model number or product description": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "Appearance": {
+        "N@Gives clean modern look": {
+          "+": [
+            16
+          ]
+        },
+        "O@Light leakage looks sloppy": {
+          "-": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Functionality": {
+        "a@Switch works fine": {
+          "+": {
+            "?": [
+              1,
+              2,
+              4,
+              5,
+              6,
+              11
+            ]
+          }
+        },
+        "b@Switch works perfectly": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "c@Motion sensor works well except occasional false activation": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "d@Illuminated when switch is off": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "e@Easy installation": {
+          "+": {
+            "?": [
+              3,
+              16
+            ]
+          }
+        },
+        "f@Hard to install, requires electrical knowledge": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@Installation challenging in older house with set wires": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "h@Works well unlike cheaper alternatives": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "Light Performance": {
+        "i@Light only sufficient to locate switch in dark": {
+          "-": {
+            "A": [
+              1
+            ]
+          }
+        },
+        "j@Light not bright enough to see way into room": {
+          "-": {
+            "B": [
+              10
+            ]
+          }
+        },
+        "k@Light helps find wall switch at night": {
+          "+": {
+            "F": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Room lighting control": {
+        "+": {
+          "a": [
+            4
+          ]
+        }
+      },
+      "Ceiling fan control": {
+        "+": {
+          "a": [
+            4
+          ]
+        }
+      },
+      "LED light control": {
+        "+": {
+          "b": [
+            4,
+            6
+          ]
+        }
+      },
+      "Locating switch in dark room": {
+        "+": {
+          "k": [
+            1,
+            7
+          ]
+        }
+      },
+      "Night light replacement": {
+        "-": {
+          "i,j": [
+            1,
+            8,
+            10
+          ]
+        }
+      },
+      "Hotel-style lighting": {
+        "-": {
+          "i": [
+            8
+          ]
+        }
+      },
+      "Three-way switching": {
+        "+": {
+          "c": [
+            9
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:06.354351"
+}

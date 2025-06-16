@@ -1,0 +1,366 @@
+{
+  "product_title": "UltraPro 700 Series Z-Wave In-Wall Smart Light Switch with QuickFit™ and SimpleWire™, White Toggle, Works with Google Assistant, Alexa, & SmartThings, Z-Wave Hub Required, Smart Home, 59368",
+  "product_category": "Smart Hub Dependent Switches",
+  "total_reviews": 10,
+  "review_analysis": {
+    "phy": {
+      "instructions": {
+        "A@terrible instructions provided": {
+          "-": [
+            0
+          ]
+        },
+        "B@no directions on finding the app to control on off periods": {
+          "-": [
+            3
+          ]
+        },
+        "C@tells you how to install but not how to control it": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "appearance": {
+        "D@cosmetically looks almost the same as Enbrighten": {
+          "+": [
+            2
+          ]
+        },
+        "E@built-in light feature": {
+          "+": [
+            7,
+            8
+          ]
+        },
+        "F@can change color of the light or turn it off": {
+          "+": [
+            7,
+            8
+          ]
+        }
+      },
+      "build quality": {
+        "G@doesn't scream high-quality": {
+          "-": [
+            9
+          ]
+        },
+        "H@flimsy feeling switches": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "toggle mechanism": {
+        "I@switch stays in the middle position": {
+          "-": [
+            8
+          ]
+        },
+        "J@flick down turns off lights and returns to middle": {
+          "-": [
+            8
+          ]
+        },
+        "K@not the same as the button it tries to imitate": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "wiring": {
+        "L@wires the same as Enbrighten": {
+          "+": [
+            2
+          ]
+        },
+        "M@can hook up line and load wires any way": {
+          "+": [
+            7
+          ]
+        },
+        "N@switch is intelligent enough to determine which is line and which is load": {
+          "+": [
+            7
+          ]
+        }
+      }
+    },
+    "perf": {
+      "pairing": {
+        "a@don't want to pair": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@easy to connect to smart home system": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@easy to connect by adding new security device from hub": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "d@took a couple of retries due to odd Z-Wave security failure": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "range": {
+        "e@range doesn't seem as good as Enbrighten": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "f@had trouble staying connected": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "g@had to move hub to install them": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "responsiveness": {
+        "h@Alexa may say okay but nothing happens until later maybe": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@Smartthings app tries to turn switch on or off and sometimes does eventually": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "j@works flawless every time with hubitat": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "k@state is controllable via Alexa": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "installation": {
+        "l@straightforward to install": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "m@super easy install": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "n@breeze to install": {
+          "+": {
+            "M,N": [
+              7
+            ]
+          }
+        },
+        "o@able to install in 3 minutes": {
+          "+": {
+            "M,N": [
+              7
+            ]
+          }
+        },
+        "p@easy to install": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "q@works great": {
+          "+": {
+            "?": [
+              4,
+              5
+            ]
+          }
+        },
+        "r@just works": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "s@it works": {
+          "+": {
+            "?": [
+              8,
+              9
+            ]
+          }
+        },
+        "t@does what they promised": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "u@have to flick 2 or 3 times to get it right": {
+          "-": {
+            "I,J,K": [
+              8
+            ]
+          }
+        }
+      },
+      "hub dependency": {
+        "v@needs a hub or else it won't work": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "w@Zwave compatible": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "x@Alexa compatible": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart home integration": {
+        "+": {
+          "b": [
+            1,
+            4
+          ]
+        },
+        "-": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "Vivint security system": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "Alexa control": {
+        "+": {
+          "x,k": [
+            1,
+            7,
+            9
+          ]
+        },
+        "-": {
+          "h": [
+            2
+          ]
+        }
+      },
+      "Smartthings system": {
+        "+": {
+          "b": [
+            4
+          ]
+        },
+        "-": {
+          "i": [
+            2
+          ]
+        }
+      },
+      "Ring Alarm Base integration": {
+        "+": {
+          "c,s": [
+            9
+          ]
+        }
+      },
+      "hubitat control": {
+        "+": {
+          "j": [
+            8
+          ]
+        }
+      },
+      "making lights smart": {
+        "+": {
+          "s": [
+            9
+          ]
+        },
+        "-": {
+          "v": [
+            6
+          ]
+        }
+      },
+      "whole house installation": {
+        "-": {
+          "H": [
+            8
+          ]
+        }
+      },
+      "closet installation": {
+        "+": {
+          "t": [
+            8
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:25.420022"
+}

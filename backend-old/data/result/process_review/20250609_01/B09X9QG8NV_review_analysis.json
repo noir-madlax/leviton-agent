@@ -1,0 +1,478 @@
+{
+  "product_title": "TOPGREENER Dimmer Light Switch for 200W Dimmable LED/CFL Lights, Single Pole/3-Way LED Slide Dimmer Switch,Neutral Wire Not Required,TGSDS3-W-6PCS, 6 Pack, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 33,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks good and modern": {
+          "+": [
+            4,
+            23
+          ]
+        },
+        "B@plate is smaller than old one": {
+          "-": [
+            30
+          ]
+        },
+        "C@brighter white borders that don't match regular switches": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "slider": {
+        "D@slide is too short": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "adjustment wheel": {
+        "E@adjustment wheel does nothing": {
+          "-": [
+            3
+          ]
+        },
+        "F@small wheel to set lowest setting does not appear to do much": {
+          "-": [
+            28
+          ]
+        },
+        "G@round dial on right side with no luck adjusting": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "build quality": {
+        "H@low build quality": {
+          "-": [
+            21
+          ]
+        },
+        "I@build quality seems fine": {
+          "+": [
+            13
+          ]
+        },
+        "J@very poor quality": {
+          "-": [
+            14
+          ]
+        },
+        "K@not the highest quality": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "housing": {
+        "L@metal housing": {
+          "+": [
+            18
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming range": {
+        "a@not a lot of adjustability": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@dimming isn't as wide of a range as hoped": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@range of dimming is too less and hard to notice difference at low intensity": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "d@bulbs don't dim as much": {
+          "-": {
+            "D": [
+              13
+            ]
+          }
+        },
+        "e@don't dim dark enough": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "f@barely dimmed the lights": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "g@LED light stays on at very low illumination at lowest setting": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "h@limited dimming range with LED": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "i@limited dimming capability": {
+          "-": {
+            "G": [
+              26
+            ]
+          }
+        },
+        "j@barley dims the light": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "k@on lowest setting the light is still very bright": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "noise": {
+        "l@make a low buzzing sound": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "m@makes an audible humming noise when power is on": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "n@switches buzz while turned on": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "o@buzz could be heard around a corner and 20+ feet away at dimmest setting": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "p@works with no flickering or noise": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "q@LED lights flicker at any power level": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "r@starting to flicker": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "s@still made the lights flicker while using the dimmer": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "t@caused the lights to flash": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "u@2 of the 3 installed flickers badly": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "v@they work": {
+          "+": {
+            "?": [
+              2,
+              21
+            ]
+          }
+        },
+        "w@works great": {
+          "+": {
+            "?": [
+              23,
+              31
+            ]
+          }
+        },
+        "x@dimmer works very well": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "y@works with no flickering or noise": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "z@won't switch on at all": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "aa@come on but the dimmer does nothing": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "ab@just come on full with no dimming": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "ac@turned on but did not dim at all": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "ad@didn't work at all": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "ae@dimmer did not work": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "af@don't work": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ag@didn't dim at all": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "heat generation": {
+        "ah@metal housing got really hot": {
+          "-": {
+            "L": [
+              18
+            ]
+          }
+        },
+        "ai@got even hotter almost couldn't touch it": {
+          "-": {
+            "L": [
+              18
+            ]
+          }
+        }
+      },
+      "durability": {
+        "aj@broke after a few days": {
+          "-": {
+            "J": [
+              14
+            ]
+          }
+        },
+        "ak@failed in less than three months": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "al@25% failure rate": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "defect rate": {
+        "am@3 out of 10 came messed up": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "an@one came defective": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ao@only 4 out of 6 worked": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "ap@only 1 out of 6 worked": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED lighting": {
+        "+": {
+          "x": [
+            10
+          ]
+        },
+        "-": {
+          "q,h": [
+            3,
+            10
+          ]
+        }
+      },
+      "kitchen lights": {
+        "+": {
+          "?": [
+            9
+          ]
+        }
+      },
+      "basement lighting": {
+        "-": {
+          "c": [
+            7
+          ]
+        }
+      },
+      "LED can lights": {
+        "-": {
+          "r": [
+            4
+          ]
+        }
+      },
+      "LED low profile lights": {
+        "-": {
+          "ah": [
+            18
+          ]
+        }
+      },
+      "LED garage light": {
+        "-": {
+          "ai": [
+            18
+          ]
+        }
+      },
+      "dimmable LED lights": {
+        "-": {
+          "s": [
+            11
+          ]
+        }
+      },
+      "LED fixtures": {
+        "+": {
+          "y": [
+            28
+          ]
+        }
+      },
+      "incandescent bulbs": {
+        "+": {
+          "h": [
+            10
+          ]
+        }
+      },
+      "custom home build": {
+        "-": {
+          "al": [
+            6
+          ]
+        }
+      },
+      "retrofit for older home": {
+        "-": {
+          "l,n": [
+            11
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:18.927294"
+}

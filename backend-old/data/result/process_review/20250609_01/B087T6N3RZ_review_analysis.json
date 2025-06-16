@@ -1,0 +1,439 @@
+{
+  "product_title": "2 Pack Illuminated Light Switch,Paddle Rocker Wall Switch with LED Night Light, Automatic On/Off Sensor, Single Pole, 15Amp 120/277Volt, White",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "LED lights": {
+        "A@LED lights provide illumination when switch is off": {
+          "+": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            8,
+            9,
+            20,
+            24,
+            28,
+            33,
+            34,
+            35,
+            41,
+            42,
+            44,
+            45,
+            48
+          ]
+        },
+        "B@LED lights are not very bright": {
+          "-": [
+            6,
+            17,
+            23,
+            36,
+            41
+          ]
+        },
+        "C@LED lights illuminate upward": {
+          "-": [
+            1,
+            8,
+            23,
+            31,
+            45,
+            48
+          ]
+        },
+        "D@LED lights flicker": {
+          "-": [
+            8,
+            24,
+            37
+          ]
+        },
+        "E@LED lights fail or stop working": {
+          "-": [
+            14,
+            21,
+            25,
+            30,
+            38,
+            40,
+            46
+          ]
+        },
+        "F@LED lights are bright enough for navigation": {
+          "+": [
+            22,
+            24,
+            42,
+            45,
+            48
+          ]
+        },
+        "G@LED lights are too bright for bedroom use": {
+          "-": [
+            45
+          ]
+        },
+        "H@LED lights have automatic on/off sensor": {
+          "+": [
+            22,
+            43,
+            45
+          ]
+        }
+      },
+      "Switch mechanism": {
+        "I@Switch has positive click on & off": {
+          "+": [
+            3
+          ]
+        },
+        "J@Switch sounds cheap or empty when flipping": {
+          "-": [
+            24,
+            27
+          ]
+        },
+        "K@Switch breaks or fails mechanically": {
+          "-": [
+            5,
+            13,
+            25,
+            39,
+            40
+          ]
+        },
+        "L@Switch requires screw-in wire connections only": {
+          "-": [
+            17
+          ]
+        },
+        "M@Switch can be installed upside down": {
+          "+": [
+            1,
+            31,
+            45,
+            48
+          ]
+        }
+      },
+      "Build quality": {
+        "N@High-quality switches": {
+          "+": [
+            0,
+            3
+          ]
+        },
+        "O@Cheaply made product": {
+          "-": [
+            17,
+            40
+          ]
+        },
+        "P@Well built switches": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "Appearance": {
+        "Q@Looks very attractive in the home": {
+          "+": [
+            0
+          ]
+        },
+        "R@Modern look & sleek design": {
+          "+": [
+            25,
+            26
+          ]
+        },
+        "S@Fits very well": {
+          "+": [
+            0,
+            24
+          ]
+        }
+      },
+      "Wiring requirements": {
+        "T@Needs 3 wires and ground": {
+          "-": [
+            11
+          ]
+        },
+        "U@Two hots and ground no Neutral hook up": {
+          "-": [
+            47
+          ]
+        }
+      },
+      "Safety certifications": {
+        "V@No safety approvals or certifications": {
+          "-": [
+            18,
+            25
+          ]
+        }
+      },
+      "Voltage leakage": {
+        "W@Switches leak voltage when off": {
+          "-": [
+            18
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Lasts only a few months with frequent use": {
+          "-": {
+            "?": [
+              10,
+              21,
+              25,
+              38
+            ]
+          }
+        },
+        "b@Lasts almost 4 years": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "c@Lasts less than a year": {
+          "-": {
+            "?": [
+              38,
+              40
+            ]
+          }
+        },
+        "d@LED night light lasts very long time when switch stays on 90% of time": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "Installation ease": {
+        "e@Very easy to install": {
+          "+": {
+            "?": [
+              0,
+              19,
+              26,
+              34,
+              43
+            ]
+          }
+        },
+        "f@Installation was a nightmare": {
+          "-": {
+            "T": [
+              11
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "g@Works great as advertised": {
+          "+": {
+            "?": [
+              12,
+              19,
+              26,
+              29,
+              35,
+              41
+            ]
+          }
+        },
+        "h@Switch fails to hold in on position": {
+          "-": {
+            "K": [
+              13
+            ]
+          }
+        },
+        "i@Switch fails in permanently on position": {
+          "-": {
+            "K": [
+              25
+            ]
+          }
+        },
+        "j@Switch needs wiggling to work then fails": {
+          "-": {
+            "K": [
+              30
+            ]
+          }
+        },
+        "k@Switch would not toggle properly": {
+          "-": {
+            "K": [
+              39
+            ]
+          }
+        },
+        "l@Switch has difficulty connecting when turned on": {
+          "-": {
+            "K": [
+              40
+            ]
+          }
+        }
+      },
+      "Light performance": {
+        "m@Provides enough light for navigation in dark": {
+          "+": {
+            "A": [
+              28,
+              44,
+              48
+            ]
+          }
+        },
+        "n@Does not illuminate space in wide angle": {
+          "-": {
+            "B": [
+              17
+            ]
+          }
+        },
+        "o@Functions only as switch locator not nightlight": {
+          "-": {
+            "B": [
+              17,
+              20,
+              32
+            ]
+          }
+        },
+        "p@Provides subtle lighting for small room": {
+          "+": {
+            "A": [
+              24
+            ]
+          }
+        },
+        "q@Too sensitive to slight dimness": {
+          "-": {
+            "H": [
+              25
+            ]
+          }
+        }
+      },
+      "Safety issues": {
+        "r@Creates fire danger with fans due to voltage leakage": {
+          "-": {
+            "W": [
+              18
+            ]
+          }
+        },
+        "s@Flickering causes safety hazard concern": {
+          "-": {
+            "D": [
+              37
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home illumination": {
+        "+": {
+          "A": [
+            0,
+            4,
+            9
+          ]
+        }
+      },
+      "Night light throughout house": {
+        "+": {
+          "A": [
+            0,
+            3,
+            33
+          ]
+        }
+      },
+      "Dark room navigation": {
+        "+": {
+          "m": [
+            7,
+            9,
+            28
+          ]
+        }
+      },
+      "Bathroom night light": {
+        "+": {
+          "F": [
+            24,
+            42,
+            45
+          ]
+        }
+      },
+      "Bedroom use": {
+        "-": {
+          "G": [
+            27,
+            45
+          ]
+        }
+      },
+      "Closet and laundry room": {
+        "+": {
+          "m": [
+            28
+          ]
+        }
+      },
+      "Garage use": {
+        "+": {
+          "?": [
+            27,
+            48
+          ]
+        }
+      },
+      "Hallway lighting": {
+        "+": {
+          "A": [
+            25,
+            33
+          ]
+        }
+      },
+      "Switch location in dark": {
+        "+": {
+          "A": [
+            7,
+            20,
+            43
+          ]
+        }
+      },
+      "Fan control": {
+        "-": {
+          "r": [
+            18
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:36.957173"
+}

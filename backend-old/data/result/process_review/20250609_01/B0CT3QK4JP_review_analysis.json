@@ -1,0 +1,241 @@
+{
+  "product_title": "Lutron Maestro LED+ Dual Dimmer and Timer Switch for Lights or Fans| 75-Watt LED Bulbs/2.5A Fans, Single-Pole | MACL-L3T251-WH | White",
+  "product_category": "Multi-Function Timer Dimmer Switches",
+  "total_reviews": 16,
+  "review_analysis": {
+    "phy": {
+      "depth": {
+        "A@device is deep and generally requires a large electrical box": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "size": {
+        "B@compact design suitable for single gang electrical box": {
+          "+": [
+            1,
+            7
+          ]
+        }
+      },
+      "mounting_hardware": {
+        "C@came with no mounting screws": {
+          "-": [
+            6
+          ]
+        },
+        "D@came with no wire nuts": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "grounding_wire": {
+        "E@grounding wire was broken off and not in the box": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "tabs": {
+        "F@three tabs on the right side were broken off": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "current_leakage": {
+        "G@has leakage current through the device even when off to power control logic": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "wiring": {
+        "H@both switches operate from the same supply": {
+          "+": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_function": {
+        "a@top switch acts as a light dimmer": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@light brightness control works great": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@dimmer functions properly": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@dims light": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "e@dimmer lights won't shut off completely": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "timer_function": {
+        "f@bottom switch is a separate non-dimming timer": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "g@fan timer works great": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@timer functions properly": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "i@runs fan with the timer or on button": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "j@bathroom fan timer is great": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "led_compatibility": {
+        "k@works with LEDs designed for dimming": {
+          "+": {
+            "G": [
+              0
+            ]
+          }
+        },
+        "l@works the same with LEDs as incandescent": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "m@works with LED": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "circuit_requirement": {
+        "n@dimmer and timer must be on the same circuit": {
+          "+": {
+            "H": [
+              0
+            ]
+          }
+        }
+      },
+      "durability": {
+        "o@old one gave out after about 8 years": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom_renovation": {
+        "+": {
+          "B": [
+            1,
+            5
+          ]
+        }
+      },
+      "bathroom_light_and_fan_control": {
+        "+": {
+          "a,f": [
+            2,
+            3,
+            7,
+            8
+          ]
+        }
+      },
+      "single_gang_box_installation": {
+        "+": {
+          "B": [
+            1,
+            5,
+            7
+          ]
+        }
+      },
+      "energy_saving": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "separate_light_and_fan_control": {
+        "+": {
+          "a,f": [
+            5,
+            8
+          ]
+        }
+      },
+      "moisture_control": {
+        "+": {
+          "j": [
+            8,
+            13
+          ]
+        }
+      },
+      "old_house_application": {
+        "+": {
+          "l": [
+            14
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:07.877468"
+}

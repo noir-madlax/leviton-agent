@@ -1,0 +1,2598 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:59:15.657730",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07RJ14FBS",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07RJ14FBS",
+    "title": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+    "brand": "Lutron",
+    "model_number": NaN,
+    "price_usd": 39.95,
+    "rating": 4.6,
+    "reviews_count": 2900.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Hub-Dependent Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B07RJ14FBS"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2788ELPZ1WEYS",
+        "text": "I have three total and have had no issues. I've had my first one for over 4.5 years using it at least twice a day and it's still on the original battery.",
+        "date": "Reviewed in the United States on May 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "No problems",
+        "userName": "LEX",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2R94OAX5XL9OM",
+        "text": "I like these for their functionality but two of these have jammed and stopped working in less than a year of daily use.",
+        "date": "Reviewed in the United States on April 5, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Jam and stop working fairly easily",
+        "userName": "happykins",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RE8MUOTHMNCTU",
+        "text": "We've accumulated a good many of the Philips hue lights. This switch is great for those. Using some kind of voodoo magic it just pops on over the top of your regular light switch. They've held up really well. If this company made the same exact thing except with the center button a little more pronounced, then I would pay for that. Every now and then when you mean to hit just the center button you hit the spinning ring around the outside of it. Not a huge problem but I'm sure other people have big clumsy fingers too.",
+        "date": "Reviewed in the United States on March 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent option for the Philips Hue lights",
+        "userName": "KSL",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R28A801GNUZBWB",
+        "text": "These Lutron dimmers work well if you use them with bulbs that are controlled by the Philips Hue bridge. However, if you are hoping that you can connect directly to Home Assistant and control any of your smart bulbs then you are in for a lot of frustration. The experience is buggy and works inconsistently. They don't claim to be able to do any of that so I am only docking one star.",
+        "date": "Reviewed in the United States on March 28, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well...with caveats",
+        "userName": "travelisthepoint",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3P9ZM17UTDD30",
+        "text": "Easy to setup and install. I will more than likely will have to buy more for my other rooms",
+        "date": "Reviewed in the United States on March 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Like being able to control my lights from the switch",
+        "userName": "Ron Smith",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ZHPMUK7M4HLD",
+        "text": "Can't get it paired with Hue. Reset the switch several times",
+        "date": "Reviewed in the United States on February 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Pairing with Hue doesnt work",
+        "userName": "britelite",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R266JMZKB2XK9W",
+        "text": "Works great for my hue bulbs. I had some trouble with the screws to secure it to a light switch but that could have just been me.",
+        "date": "Reviewed in the United States on February 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Hue",
+        "userName": "Ken",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1QLSD5O1ZJMJH",
+        "text": "Corrected wiring issue in master bath. Our plug no longer turns off with light. Only issue is the dimmer was shipped new in box with defective battery. Once a new battery was installed it works great! Updates: contacted Lutron since battery needs replacing every 3 days. They said they would ship replacement within 2-3 days. That was on 1/29. It’s 2/5 and had to follow up with Lutron. They said it won’t ship until 2/10. In the meantime I have gone through 4 batteries to keep the switch working. Not happy!!!!",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Works great fixed wiring issue with light connected on same circuit as bathroom vantpug.",
+        "userName": "Dgreene88",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51fATc5ArdL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2P0RFQWZVDX5D",
+        "text": "I have Hue bulbs installed throughout my house, and I absolutely love them. However, my home is outfitted with standard wired switches in every room, which can cause a few issues. While voice control is convenient, flipping a light switch when entering a room often feels more natural. Unfortunately, when smart lights are connected to traditional switches, turning the switch off takes the bulbs offline. This makes them unavailable for voice commands, automations, or routines. Worse yet, it disrupts the flow of controlling all the lights in a room—turning the switch back on only reactivates the power, not the smart functionality. This dimmer solves that problem perfectly. It prevents the lights from being accidentally turned off while seamlessly integrating with the existing wall plate. The design is clean and simple, and the installation is straightforward. I explored alternatives like the Hue Dimmer Switch, but it presented a couple of challenges. Using it would require either adding a separate plate alongside my existing switch or rewiring the wall switch to tie the wires together and then installing the Hue Dimmer over it. Both options seemed cumbersome or overly invasive. In contrast, this dimmer offers a much cleaner and more practical solution. There’s also the Hue Wall Switch Module, which serves a similar purpose. However, it requires dismantling the wall switch and connecting wires to achieve functionality, making it more complex to install. Additionally, the Wall Switch Module only provides basic on/off functionality, whereas this Lutron switch offers multiple features, including dimming and switching between scenes. For me, the added versatility of this dimmer makes it the clear winner. If I have one complaint, it’s the price. While I believe the quality and functionality justify the cost, it becomes a bit painful when you need several of these switches throughout the house. A multi-pack—perhaps a 4-pack with a 20% discount—would make it much easier to outfit an entire home without breaking the bank. Overall, this dimmer is a fantastic solution for managing smart lights in a home with traditional switches. It simplifies lighting control, eliminates offline bulb errors, and offers more functionality than other options. While it’s an investment, the convenience and seamless integration make it well worth considering.",
+        "date": "Reviewed in the United States on November 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Solution for Smart Lights and Dumb Switches",
+        "userName": "McMahon",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R19U63AAHNXZ3T",
+        "text": "I pre ordered this thing back in 2019 and it's been used daily in my bedroom. The battery just died in Nov 2024! Luckily I had a spare battery (from car key fob) so hopefully it'll last until 2029. Device is perfect and easy to use by the way.",
+        "date": "Reviewed in the United States on November 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "5 years",
+        "userName": "Glenn",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2YAQNRAI8K9OF",
+        "text": "My living room ceiling fan needed a dimmer switch and I didn't really want to rewire the switch, so I purchased 4 Hue light bulbs and this Aurora bulb dimmer switch. Best idea ever! It was easy to install and program and now I have the dimmer switch I wanted.",
+        "date": "Reviewed in the United States on November 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Moonshadow",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1IE0AJ3VW7R8Y",
+        "text": "Don't bother trying to connect this thing to more than one Philips Smart Lightbulb. You technically can, but it's such a finicky and capricious piece of over-priced tech. I'm returning it because I could not get it to connect/control 3 smart lights.",
+        "date": "Reviewed in the United States on October 20, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Nightmare to set up without Hue Bridge",
+        "userName": "Danny",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R36KBW05OVLK54",
+        "text": "One of the complications with using Hue bulbs controlled via app is that visitors don't have access to the app. They could use Alexa to control the lights, but they don't know the commands or the names of the rooms and bulbs and it's complicated to provide lists. Also, how do they find the list in the dark? Philips makes wall-mounted controls, but I prefer the Lutron control because it mimics standard dimmer light switches. A person walking into a dark room and feeling this switch will know to push it in and/or turn it. We use each switch to control the bedside lamps in a bedroom. We also provide Hue Wireless Smart Light Switch Buttons at each lamp so that guests can control the lamps without getting out of bed or using their voice. Who wants to issue voice commands to Alexa while someone is asleep in the room?",
+        "date": "Reviewed in the United States on October 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "simplifies use of Hue bulbs for visitors",
+        "userName": "jimstoic",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1N7LFLX39HFP8",
+        "text": "The new series of friends of Hue products truly live up to their name. Luton is making it super easy to control every room that I have in the Philips Hue ecosystem. It’s super hard to get someone who doesn’t understand you to get with the taps or with any of the controls that Philips has meticulously tried to introduce. Clearly, Luton understands what Philips is doing, and they live up to the task of making it super super easy to install, integrate into your home apps and are now every room in my house where I have Philips Hue bulbs. I can’t speculate about long-term use since I just installed them, but if they’re even close to what Philips is doing with their accessories, these are a game changer.",
+        "date": "Reviewed in the United States on October 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "An invaluable addition to my philips hue ecosystem.",
+        "userName": "ClipTaxi",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51iXyBcPnxL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61e+nQ66W7L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2VMI93MUU8E41",
+        "text": "Lutron switch has helped in guest not turning off the switch. I have Phillips hue bulbs connected by Bluetooth. And the switch controls the fan and lights. So, now I can control my lights from this switch without losing power to the fan. Great product Great dimmer switch Always connected Easy for guest too.",
+        "date": "Reviewed in the United States on October 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron for the win",
+        "userName": "Ramiro De Rosas",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3C8QHM0WJ8KDX",
+        "text": "I like the dimmer switch but after a while the knob can break off. So now I have to replace it. These are poor engineered. Please fix this issue.",
+        "date": "Reviewed in the United States on August 30, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Expensive and breaks easily",
+        "userName": "Bob T",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61-hP2QpuxL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71z3lou80pL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3D803L3SJRY2W",
+        "text": "Great concept and execution. Works flawlessly as well. Setup is fairly easy but Hue needs to add more functionality into their accessory configurator: need a color palette selection instead of the handful of non-color presets, additional press and hold options, and a single preset for time of day (not the existing on that cycles through with each button press).",
+        "date": "Reviewed in the United States on August 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switch, but needs more functionality",
+        "userName": "DTM",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RCJANEBMB00A4",
+        "text": "It does what they say it does, no complaints. Physically installed in about a minute, and digitally set up in another 3m or so. Looks nice, easy to use. Digital interface gives you all the basic settings you would normally want. No problem with home automation (Alexa or Google). It's a tad pricier than I wish, I think it would be more fairly priced maybe $10 less. But if you're already committed to a smart lighting setup, that's probably not a make or break for most folks.",
+        "date": "Reviewed in the United States on August 6, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good product, if a tad pricey",
+        "userName": "Nate Bragg",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R34UEG5JJR84ZP",
+        "text": "As long as your base station is connected to the router and the Wi-Fi works, this works. I've bought three so far!",
+        "date": "Reviewed in the United States on August 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works even when your Internet is out",
+        "userName": "Nawashi",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RAVC8OW86OHZB",
+        "text": "If you are planning to use it with a Hue hub or bulbs directly, skip this review. I connected it to Home Assistant via zigbee2mqtt, and it’s a mixed experience. First, hardware itself is awesome - it sits on top of the switch and works as intended. But the problem is that it’s stateful. Meaning, if you only control your lights with this device and never through home assistant without this device, it will work fine. But if you change your light state from your HA and then continue using this dimmer, results will be unexpected. It remembers its own state but is not aware of the lights state, and it only sends brightness based on its own state. It doesn’t send click messages or dimming increase/decrease messages, only brightness. So, once you do something with the light from your Home assistant, dimmer state is invalid. I wrote a huge script to handle this. The script remembers last known dimmer brightness and tries to guess what new brightness means - click or something else. If new brightness is 0, it’s the biggest problem- you don’t know if it’s a click or dimming down. Quite possible it’s a click and the user wants to turn the light on if you previously turned the light off with the app but the dimmer thinks it’s on, but could be dimming down as well. There are many other problematic scenarios. I made the script work for most cases but it’s not possible to mitigate them all. I wish the device would just send stateless messages about what was done with it.",
+        "date": "Reviewed in the United States on July 24, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good but be warned",
+        "userName": "Tina",
+        "numberOfHelpful": 6,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61o-UhQqs9L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "ROS3KEI4UZYGA",
+        "text": "This is amazing for Hue bulbs. I have 10 of them at home... Great product, fast and responsive",
+        "date": "Reviewed in the United States on July 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing Item",
+        "userName": "Marc Yorro",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2385LZXCSAOF6",
+        "text": "Easy to set up and use and works well. But feels overpriced by $10 or $20.",
+        "date": "Reviewed in the United States on July 19, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works well but feels so overpriced",
+        "userName": "Ron Michael Zettlemoyer",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1A54BI97L5GVV",
+        "text": "I paired this Zigbee device to a Zi-Stick from Aeotec running on my Home Assistant. It controls groups of lights such as lifx bulbs or other zigbee bulbs fine for the dimmer dial. However it does not register events from button presses. It does sometimes register a button press and works as expected when doing so, but this happens at an unreliable rate maybe 1 in 15 button presses. Either I received a defective product or this just doesn't work or is non-standard zigbee in some way. For the cost of this item I expected it to work flawlessly and reliably.",
+        "date": "Reviewed in the United States on April 14, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Button doesn't work, dimmer dial works",
+        "userName": "Nicholas Stinzianni",
+        "numberOfHelpful": 2,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3QH6QNDCZBKLA",
+        "text": "I've gone through a couple of similar products. The idea is: I have a light switch that controls a ceiling fixture which contains Hue smart bulbs. This covers the switch, locking it in the \"on\" position so the smart bulbs always get power. This button sends on/off and dimming signals to the smart bulbs. It does those things flawlessly! Pros: - it's easy to install (non-destructively - it clamps over a light switch with fitting that you tighten with a screw). - it works really well - the lights respond quickly and reliably. - it's surprisingly low profile. A visitor would be unlikely to realize it's anything more than a standard dimmer switch. Cons: - it's pricey - works for Hue bulbs only. I'd like to be able to control Z-Wave, Matter, SmartThings devices, etc. - in case your home network was down, I wish you could pop the dimmer off the wall and change the switch position without a screwdriver.",
+        "date": "Reviewed in the United States on March 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Reliable and easy to install, just pricey and limited to Hue",
+        "userName": "Christopher D. Garcia",
+        "numberOfHelpful": 5,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3AE0B5OLXXF0G",
+        "text": "The best thing ever. I usually control all my lights through Siri or the home app but this little button is just so simple and natural to use",
+        "date": "Reviewed in the United States on March 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Little but powerful",
+        "userName": "Josemanuel",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3JN37DGGIP2OD",
+        "text": "This is indeed a great idea to mount over a traditional toggle switch. The push on/off and rotary work great. What does not work is selecting “natural light” scene. You can apparently pick any scene, except for that one. Natural Light is the one scene that I most want to use. Apparently that’s a Philips bridge limitation. It was announced over a year ago that Natural Light would be enabled for Aurora switches in 2023…..but it’s 2024 and nothing yet. I guess I’ll keep this, but I’m not sure where I’m going to use it since it won’t work with the scene I use most often.",
+        "date": "Reviewed in the United States on January 25, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Almost - but not good enough",
+        "userName": "David G",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1O1MC9660I716",
+        "text": "An elegant device. Easy to set up. Works reliably to turn a hue bulb (with hub) in the same room on/off. Is it worth the money? Maybe. Edit: rescinding my previous negative comments; the problems I had were due to messed up Hue settings.",
+        "date": "Reviewed in the United States on January 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Updated: not bad",
+        "userName": "J s",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1MLPUOO4KTEZF",
+        "text": "I bought five of these for my house because I loved that they would let the light switch stay but cover it up. And in the end, the ones I have look great (plus Hue products just work better than any other I have tried with Homekit—always respond quickly if you have a hub). HOWEVER, when you get to the final install step and you push the dial onto the mount, it has to go on PERFECTLY balanced and very very gently. The first one I installed didn't go on evenly, the top locked in and the bottom didn't snap, so i pushed on the bottom and the insides just collapsed in a junk pile of innards. The button didn't push, the dial was uneven. Pulled it off tried again, but now it was clearly straight up broken. Before I returned it, I went to install the others... so I took the dial from another box and it snapped perfectly on the mount both sides at once. Okay, 1 for 2... must be an anomaly, right? Next install, gently, bottom snaps in, top doesn't. Pull it off, try again, collapsed. Broken completely. No button push, no blinking light. Everything crushed in. Pulled off again, tried to carefully \"fix it\". Nope. Take another dial, snaps right on, no problem. Next, broke. Next one after that, broke. Uh oh. 2 for 5. Not good. Sent the three back. But bought three more at a brick and mortar to save time. Two broke, one didn't. 3 for 7. Returned the two broken ones. Got two more, one broke, one didn't. 4 for 8. Next, broke. Took it back again. 4 for 9. Next, broke. 4 for 10. But at this point, I had the last one from the store, so I decided to actually fix it this time. Nope. Not a chance. These are cheap, delicate, and incredibly fragile, so it just got worse and worse, until it was not even returnable. At that point, I gave up on having the fifth at all and just swallowed the money—vowing to never get these again and to write a review to help others decide if they are the gambling type or not. I do love the four I successfully installed, but it was very hard to get there and 100% a game of chance on the dial install—which, of course, led to multiple returns and then eating the price of one altogether. So I absolutely cannot recommend these. It's not worth the risk for me to ever go through this again. However, if you really want the end result and you're willing to go through a potential cycle of frustration and wasted time, you may be happy when it's all said and done. Just don't say I didn't warn you.",
+        "date": "Reviewed in the United States on January 3, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Looks great, works well if you have a lucky install, but it is EXTREMELY FRAGILE.",
+        "userName": "Dave U",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2B2REJX6OG25G",
+        "text": "I think \"Friends of Hue\" is an understatement. This device is Hue's Best Friend! It's so easy to set up, I'm shocked at how easy it is. It was so easy that at first I thought \"maybe I did it wrong\", then I thought \"maybe it's bootleg\", and then finally, I pressed the button and turned it left and right. And voilà! Installed in less than 5 minutes. Within that 5 minutes, it took longer for me to find a Phillips screwdriver than to install the device! You will need to read the instructions just to mount the base onto your existing wall switch. But the rest was a piece of cake. The Hue app even has this device right at the top of the Friends of Hue Accessories setup menu! Overall, I highly recommend it. The Hue ecosystem is already expensive on its own so this doesn't really break the bank.",
+        "date": "Reviewed in the United States on December 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Hue's Best Friend!",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2R93GFUY90JSJ",
+        "text": "It took 5 minutes to install total. The second took way less since I already installed one a week ago.",
+        "date": "Reviewed in the United States on December 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "I just got a second one!",
+        "userName": "Adam",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3FYUVQ1LG2Z3B",
+        "text": "So simple to setup and does the job of preventing the switch from being flipped. That it also functions as a switch to turn the light on and off as well as a dimmer knob is great. When leaving the bedroom i can just tap the button instead of saying the commands, but 95% of the time i still just issue commands to the echos",
+        "date": "Reviewed in the United States on December 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great invention. Glad i bought it",
+        "userName": "MeShell B",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61-fZ+OjeLL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/057c1343-c6ec-44b0-a61c-3b6b3b6fae1d/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2D5H6I0Y8P4Y",
+        "text": "Pairing these switches to your Hue Hub can be difficult or super easy, and there’s really no way to tell until you start. It seems like there are at least a couple versions of firmware floating around in the wild, only one of which matches the instructions for pairing. Once paired, they do function well as a replacement light switch, mostly. When I added a new bulb, I had the darndest time trying to get the switch to turn the new bulb on, though it would turn it off just fine. My biggest issue with these switches, besides the cost, is that they don’t really stay attached to the switch toggle all that well. Even when tightened down like crazy, they’re relatively easy to pull off of the wall. Even just tryin to pull the button off of the mount to change the battery will usually pull the mount off with it.",
+        "date": "Reviewed in the United States on December 13, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Cool, but expensive",
+        "userName": "Erik P.",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R346YE10VPR2Y3",
+        "text": "Everyone besides myself in my household ALWAYS flips the switch off for my smart lights making them useless. I bought the Hue lights retrofit kit for my kitchen (6 lights) and ran across this item. My only complaint (very slight complaint) is the dimming feature is a little slow to respond so I have to take off .1 stars making this a 4.9. With that said the ease of install and convenience easily adds .1 stars. I give it a 5 out of 5 stars. I only have 1 switch for my kitchen lights so this was a perfect solution to an annoying problem and a heck of a lot easier than changing the switch out. I would definity buy another if I had 2 light switches. A cheaper option is buying a cover to prevent you from turning the switch off, but this lets you have access to turning on and off the lights and dimming them, plus it looks like it was made for this. It does not control light colors but I have Alexa for that (she is spying on me anyway). I was 100% satisfied with this purchase.",
+        "date": "Reviewed in the United States on December 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "ingenious",
+        "userName": "Mark B.",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3DSFZKR50FF5J",
+        "text": "This works! That's all that matters Cons: When you press the central dial with your palm it is easy to accidentally spin the dimmer switch which causes the light to turn back on - albeit very dim. In that case, it's hard to notice that you accidentally turned it back on slightly because its so dim. So much more touch sensitive and squishy than your standard good ol trusty dimmer switch from before this smart bulb nonsense. Please improve this design and this will be a perfect product",
+        "date": "Reviewed in the United States on November 15, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "It works!",
+        "userName": "catherine",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1QNLB07FXA15N",
+        "text": "This is a performant, thoughtfully designed product. However, the amount of single-use plastic used in the packaging is a crime against all that is holy.",
+        "date": "Reviewed in the United States on October 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Plastic packaging is excessive",
+        "userName": "Ginger Harris",
+        "numberOfHelpful": 2,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71rCm2apl+L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "REVL35RF687B0",
+        "text": "I use this with a Hue fixture and the integration. Was pretty seemless. It was easy to install and has worked really well.",
+        "date": "Reviewed in the United States on October 6, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy installation",
+        "userName": "Garrisho",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R37UIJ52QNGBNH",
+        "text": "The first one I ordered had issues. I had to hold it right next to the zigbee coordinator antenna to have it even attempt to pair, and even then it never worked. I decided maybe I got unlucky as I read so many good reviews and ordered a replacement. I'm glad I did as the new one worked very well and integrated into Home Assistant very nicely. I had to utilize a blueprint designed for this device, but then all the automations worked perfectly. Best of all - my wife can't complain about tape on the wall switch anymore. :) I'll be ordering a few more!",
+        "date": "Reviewed in the United States on October 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Button/Dimmer",
+        "userName": "SamS",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R37YBOOWWKMTFM",
+        "text": "Very easy to install and pair with the bulbs. Looks nice and works great",
+        "date": "Reviewed in the United States on September 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great solution to old switches",
+        "userName": "Jennifer",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2IU7XL9UWQK82",
+        "text": "4/6 of these dimmer switches have buttons that are now inoperable (no movement at all). Even when they were working, about half the time the zigbee bulbs they were assigned to didn't respond (this was not a problem with hue dimmer switches). I would stay away from these and go with another dimmer switch or an wired-in zigbee switch solution.",
+        "date": "Reviewed in the United States on August 19, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Switch for the button breaks within months",
+        "userName": "Matthew Kang",
+        "numberOfHelpful": 2,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RKC05HOZPWTKN",
+        "text": "Easy and reliable to use. Only reason I gave it 4 instead of 5 is that it goes to a scene and dims for a room. Wish it could be assigned to individual bulbs instead of just a room/scene.",
+        "date": "Reviewed in the United States on July 15, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Reliable but limited",
+        "userName": "DMPicone",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2ETZAP2D9A4CU",
+        "text": "The Lutron Aurora Smart Bulb Dimmer Switch is a great way to control your Philips Hue bulbs. It is a simple, easy-to-use switch that allows you to turn your lights on and off, dim them, and create different scenes. The Aurora switch is easy to install, and it works with all Philips Hue bulbs. I love the fact that the Aurora switch allows me to dim my Philips Hue bulbs. This is great for creating a more relaxed atmosphere in my home. I also love the fact that I can create different scenes with the Aurora switch. For example, I have a scene called \"Goodnight\" that dims my lights and turns on my bedroom fan. Overall, I am very happy with the Lutron Aurora Smart Bulb Dimmer Switch. It is a great way to control your Philips Hue bulbs, and it is easy to use. I highly recommend it.",
+        "date": "Reviewed in the United States on July 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "No more switches being manually turned off",
+        "userName": "Daniel Ceja",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RSTIBE0IRSJ63",
+        "text": "I love these!!! Makes it super easy to keep people from flipping switches in my house I don’t want them to use. I’ve paired them with Hue Philips lights and they have been really reliable and easy to use. I’ve been buying them for years, I have a lot these days. Pretty great battery life.",
+        "date": "Reviewed in the United States on June 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love these.",
+        "userName": "CrystalMS",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RBKXLLFTL2R1D",
+        "text": "Set two of these with Hue and they work, until they do not and have to be reset and re-installed… and a few days later… reset and re-installed… and a few days later… and a few days later… and a few days later… and a few days later… and a few days later… and a few days later… and a few days later… and a few days later… and a few days later…",
+        "date": "Reviewed in the United States on May 11, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "In theory good but…",
+        "userName": "Nor Pirzkal",
+        "numberOfHelpful": 2,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RJ5BN28KHOTAW",
+        "text": "Are you like me, a Dad who invested too much $$$ into smart home tech to make life simpler only to want to pull your hair out when your little ones turn off the light switches in the house making you yell at Alexa and not get the result you want?? If this is you then this Lutron light switch solves that lol I bought one of these for our living room Philips Hue lights just to protect my precious Alexa overlord from not giving me the response i want when i ask the simple question to turn off the lights and prevent a device is unresponsive error message. As an added bonus, it can allow you to synch multiple lights to the dimmer switch so you can dim the lights to a low setting in case you want a more hands-on approach to controlling your lights. Simply put, if you own Philips Hue light bulbs then this is the product you need. If you rent and want to get more fancy in your rental then it's a must!",
+        "date": "Reviewed in the United States on April 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Solves a simple but annoying problem with Phillips Hue Smart Lightbulbs.",
+        "userName": "Ricardo Branch",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2W8MKW19XUHKN",
+        "text": "Stopped working. Can’t connect to bridge and won’t reset. Software is up to date. Past window to return.",
+        "date": "Reviewed in the United States on April 16, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working. Doesn’t reset",
+        "userName": "Shicho",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R8JJSGHA41RPD",
+        "text": "Awesome.",
+        "date": "Reviewed in the United States on April 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works.",
+        "userName": "mik",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2Q1QJFUC1NV6X",
+        "text": "These work inconsistently at best, and after four of them, I can say conclusively that they don’t last. Lutron replaced one for me after it died, and then the replacement died a few weeks later. Replaced batteries (which shouldn’t be an issue after only a couple of weeks, plus the white light still blinks when you press or spin it). Just doesn’t really work reliably. Spin it or press the button, and lights don’t come on. Since I end up having to use the Hue app almost all the time anyways, I really wish I wouldn’t have wasted my money on these.",
+        "date": "Reviewed in the United States on March 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Garbage. Don’t waste your money",
+        "userName": "BCV",
+        "numberOfHelpful": 2,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2SD30F1C728VA",
+        "text": "I bought this so there was a physical way to turn my hue lights on, off, and dim them for house/dog sitters who aren’t in our HomeKit Home. You can turn lights on and dim them, but you cannot turn them off. The knob will also not sit flush with any of the four backplates I’ve tried with it. The knob will not turn lights off when it’s fully removed from the backplate either. All of my Lutron caseta switches are flawless, but it seems the Aurora (or at least this one) is a dud",
+        "date": "Reviewed in the United States on March 30, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Cannot turn lights off",
+        "userName": "B",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2U6OZ8GEUXG33",
+        "text": "if you have more than one bulb, not worth it. Not compatible with amazon alexa.",
+        "date": "Reviewed in the United States on March 26, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "just don't",
+        "userName": "Erik",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07RJ14FBS",
+        "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 418,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2900,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ISNM527EVGGD",
+        "text": "Easy install and work",
+        "date": "Reviewed in the United States on March 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great way to manage Hue lights on the wall as well as app",
+        "userName": "Mark",
+        "numberOfHelpful": 0,
+        "variationId": "B07RJ14FBS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Smart Bulb Dimmer",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

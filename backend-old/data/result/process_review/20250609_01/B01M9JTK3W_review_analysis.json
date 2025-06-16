@@ -1,0 +1,262 @@
+{
+  "product_title": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 17,
+  "review_analysis": {
+    "phy": {
+      "wiring_requirements": {
+        "A@requires_separate_neutral_wire": {
+          "-": [
+            0,
+            16
+          ]
+        }
+      },
+      "construction": {
+        "B@mounting_flanges_are_plastic": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "controls": {
+        "C@cal_button_requires_firm_press": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "indicator": {
+        "D@has_locator_light_for_dark_visibility": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "price": {
+        "E@twice_the_price_of_regular_dimmers": {
+          "-": [
+            4
+          ]
+        },
+        "F@pricey_compared_to_other_dimmers": {
+          "-": [
+            3
+          ]
+        },
+        "G@expensive": {
+          "-": [
+            5
+          ]
+        },
+        "H@half_the_cost_of_next_step_down": {
+          "-": [
+            15
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_performance": {
+        "a@eliminates_LED_flickering": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "b@causes_LED_flickering_after_few_weeks": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@works_with_low_voltage_lighting": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@eliminates_LED_buzzing_in_reverse_phase_mode": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@programmable_low_and_high_light_levels": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "f@compatible_with_all_sorts_of_loads": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "g@works_flawlessly_with_high_wattage": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "h@goes_bad_after_few_weeks": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@lasts_5_years": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "j@some_work_others_do_not": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "k@may_or_may_not_turn_on_lights_when_programmed": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "l@does_not_work": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "response_time": {
+        "m@1_to_2_second_delay_turning_on": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "n@4_to_5_second_delay_turning_on": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "installation": {
+        "o@easy_install": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "p@complicated_and_finicky": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "q@programming_requires_appropriate_sized_tool": {
+          "-": {
+            "C": [
+              5
+            ]
+          }
+        }
+      },
+      "durability": {
+        "r@can_be_fried_by_arcing_or_unbalanced_current": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_lighting": {
+        "+": {
+          "a,d,f": [
+            9,
+            5,
+            16
+          ]
+        },
+        "-": {
+          "b": [
+            2
+          ]
+        }
+      },
+      "low_voltage_under_cabinet_lighting": {
+        "+": {
+          "c": [
+            3
+          ]
+        }
+      },
+      "high_wattage_lamps_bulbs": {
+        "+": {
+          "g": [
+            4
+          ]
+        }
+      },
+      "bathroom_lighting_with_tankless_water_heater": {
+        "+": {
+          "d": [
+            5
+          ]
+        }
+      },
+      "hollywood_globe_fixture": {
+        "+": {
+          "d": [
+            5
+          ]
+        }
+      },
+      "general_room_lighting": {
+        "+": {
+          "a,f": [
+            16
+          ]
+        },
+        "-": {
+          "k": [
+            15
+          ]
+        }
+      },
+      "new_construction_wiring": {
+        "-": {
+          "l": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:22.348594"
+}

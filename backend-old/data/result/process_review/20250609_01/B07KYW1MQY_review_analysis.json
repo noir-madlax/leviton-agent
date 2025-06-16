@@ -1,0 +1,358 @@
+{
+  "product_title": "Maxxima LED Dimmer Electrical Light Switch - 3-Way/Single Pole Use, 600 Watt Max, LED and Incandescent Compatible for Dimmable Home Lighting Needs, Wall Plate Cover Included - Almond",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@has shiny finish": {
+          "+": [
+            10
+          ]
+        }
+      },
+      "slider": {
+        "B@slider control mechanism": {
+          "+": [
+            9
+          ],
+          "-": [
+            7
+          ]
+        }
+      },
+      "trim_plate": {
+        "C@trim plate may be narrow for older homes": {
+          "-": [
+            18
+          ]
+        }
+      },
+      "hardware": {
+        "D@mounting and finishing screws are high-quality": {
+          "+": [
+            17
+          ]
+        },
+        "E@switch feels sturdy and well-made": {
+          "+": [
+            17
+          ]
+        }
+      },
+      "wiring": {
+        "F@wires are labeled": {
+          "+": [
+            20
+          ]
+        }
+      },
+      "adjustment_dial": {
+        "G@dial allows setting minimum brightness": {
+          "+": [
+            15
+          ]
+        },
+        "H@adjustable control on the side": {
+          "+": [
+            38
+          ]
+        }
+      },
+      "on_off_switch": {
+        "I@on/off switch at the bottom": {
+          "+": [
+            21
+          ]
+        }
+      },
+      "color": {
+        "J@color is off from light almond shade wanted": {
+          "-": [
+            23
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@units burn out/need replacement": {
+          "-": {
+            "?": [
+              0,
+              1,
+              3
+            ]
+          }
+        },
+        "b@works flawlessly": {
+          "+": {
+            "D,E": [
+              17
+            ]
+          }
+        }
+      },
+      "dimming_range": {
+        "c@fades to off halfway down": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@light dims quickly and is off half way down": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "e@barely changes brightness of bulb": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "f@worst dimming range with only two settings dim and full on": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "g@excellent dimming range": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "h@causes LED light bulbs to flicker": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "i@LEDs flicker until almost full brightness": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "j@flickers with LED": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "k@eliminates flickering LEDs": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "l@flicker issues with certain LED lamps": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "m@flickering badly when slider in middle": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "n@works with LED and incandescent": {
+          "+": {
+            "?": [
+              8,
+              39
+            ]
+          }
+        },
+        "o@works marginally better with incandescent than LED": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "p@works perfectly with specific LED disk lights": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "q@works great with LED recessed lights": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "humming": {
+        "r@makes dimmable LED bulbs hum when below 50%": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "circuit_interference": {
+        "s@shuts down other lights and outlets on same circuit": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "t@other lights on circuit not at full brightness when dimmer off": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "low_light_operation": {
+        "u@don't turn on when set to low light position": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "adjustment": {
+        "v@easy to adjust LED setting": {
+          "+": {
+            "H": [
+              16
+            ]
+          }
+        },
+        "w@can adjust brightness on low position": {
+          "+": {
+            "H": [
+              38
+            ]
+          }
+        },
+        "x@brightness control setup not well described": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_track_lights": {
+        "+": {
+          "?": [
+            2
+          ]
+        },
+        "-": {
+          "c": [
+            2
+          ]
+        }
+      },
+      "LED_dimmable_bulbs": {
+        "+": {
+          "w": [
+            38
+          ]
+        },
+        "-": {
+          "h": [
+            0
+          ]
+        }
+      },
+      "two_way_switch_installation": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "three_way_switch_replacement": {
+        "+": {
+          "?": [
+            7,
+            45
+          ]
+        }
+      },
+      "chandelier_dimming": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "vanity_light_repair": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "ceiling_light_control": {
+        "+": {
+          "?": [
+            23
+          ]
+        }
+      },
+      "dining_room_lighting": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "bathroom_lighting": {
+        "-": {
+          "f": [
+            46
+          ]
+        }
+      },
+      "recessed_lighting": {
+        "+": {
+          "q": [
+            41
+          ]
+        }
+      },
+      "multiple_LED_disk_lights": {
+        "+": {
+          "p": [
+            33
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:02:27.070367"
+}

@@ -1,0 +1,92 @@
+{
+  "product_title": "ENERLITES 20 Amp Toggle Light Switch, 3-Way or Single Pole, 20A 120/277V, Grounding Screw, Heavy Duty Commercial Grade, UL Listed, 83201-W, White",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 5,
+  "review_analysis": {
+    "phy": {
+      "weight": {
+        "A@heavy enough to suggest durability": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "construction quality": {
+        "B@not cheaply made": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "visual condition": {
+        "C@burn marks appear on switch when turned on": {
+          "-": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@seems like it will last": {
+          "+": {
+            "A": [
+              2
+            ]
+          }
+        }
+      },
+      "operation noise": {
+        "b@switch operation is quiet": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "operation feel": {
+        "c@feels right during operation": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "d@works great": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "e@switch is faulty": {
+          "-": {
+            "C": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "light switch installation": {
+        "+": {
+          "d": [
+            4
+          ]
+        },
+        "-": {
+          "e": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:42.177997"
+}

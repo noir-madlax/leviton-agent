@@ -1,0 +1,607 @@
+{
+  "product_title": "Thinkbee Wireless Lights Switch Kit, No Wiring Mini Remote Switch, No WiFi Needed, Outdoor 1969ft Indoor 328ft Remote Control Lighting Fixture for Led Light, Ceiling Lights and Lamps, Waterproof",
+  "product_category": "RF Wireless Remote Control Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "wires": {
+        "A@short wire length": {
+          "-": [
+            7,
+            28
+          ]
+        },
+        "B@thin wire gauge": {
+          "-": [
+            7
+          ]
+        },
+        "C@16 gauge wires on transmitter": {
+          "-": [
+            22
+          ]
+        }
+      },
+      "connectors": {
+        "D@wire lever nuts included": {
+          "+": [
+            19
+          ]
+        },
+        "E@wire connectors not up to code": {
+          "-": [
+            8
+          ]
+        },
+        "F@large connectors": {
+          "-": [
+            47
+          ]
+        },
+        "G@clever wire connectors": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "design": {
+        "H@small size": {
+          "+": [
+            18
+          ]
+        },
+        "I@compact design": {
+          "+": [
+            37
+          ]
+        },
+        "J@very small footprint for both parts": {
+          "+": [
+            32
+          ]
+        },
+        "K@extremely compact design": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "led_indicator": {
+        "L@blue LED indicates transmitter functioning": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "antenna": {
+        "M@external antenna on receiver": {
+          "+": [
+            33
+          ]
+        }
+      },
+      "appearance": {
+        "N@looks nice": {
+          "+": [
+            36
+          ]
+        },
+        "O@good appearance": {
+          "+": [
+            35
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well": {
+          "+": {
+            "?": [
+              0,
+              11
+            ]
+          }
+        },
+        "b@works great": {
+          "+": {
+            "?": [
+              0,
+              3,
+              20,
+              28,
+              34,
+              41,
+              45
+            ]
+          }
+        },
+        "c@worked as intended": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@performed perfectly": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@works as described": {
+          "+": {
+            "?": [
+              7,
+              18
+            ]
+          }
+        },
+        "f@worked out of box": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "g@just work when installed": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "h@keep working over time": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "i@working perfectly for over a month": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "j@works perfectly": {
+          "+": {
+            "?": [
+              25,
+              33
+            ]
+          }
+        },
+        "k@worked line a charm": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "l@function flawlessly": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "m@works like a charm": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "n@did not work at all": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "o@failed": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "p@no funciona": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "q@worked 50% of the time": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "r@barely worked when receiver tugged inside box": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "installation": {
+        "s@easy installation": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "t@easy to install": {
+          "+": {
+            "?": [
+              3,
+              6,
+              11,
+              17
+            ]
+          }
+        },
+        "u@installation is straightforward": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "v@super easy to install": {
+          "+": {
+            "?": [
+              10,
+              24
+            ]
+          }
+        },
+        "w@installed in 2 minutes": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "x@easy to install when replacing light fixture": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "y@very easy to add inline": {
+          "+": {
+            "D": [
+              19
+            ]
+          }
+        },
+        "z@simple install": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "aa@extremely simple and easy to figure out": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "ab@installation pretty easy": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "ac@easy to install and operate": {
+          "+": {
+            "G": [
+              37
+            ]
+          }
+        },
+        "ad@easy to install": {
+          "+": {
+            "?": [
+              39,
+              44
+            ]
+          }
+        },
+        "ae@makes it difficult to tie into romex": {
+          "-": {
+            "A": [
+              7
+            ]
+          }
+        },
+        "af@hard to wire": {
+          "-": {
+            "A": [
+              28
+            ]
+          }
+        }
+      },
+      "pairing": {
+        "ag@paired straight away": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ah@switch synced quickly": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "ai@pairing is extremely difficult": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "aj@very hard to get controller to pair": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "ak@pairing was easy and straightforward": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "range": {
+        "al@works 200 feet away": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "am@works at 150 feet": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "an@excellent range": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "ao@works 450ft away": {
+          "+": {
+            "M": [
+              33
+            ]
+          }
+        },
+        "ap@barely made it to house": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "response": {
+        "aq@light turns on instantly without delay": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "ar@quickly turns light off/on": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "durability": {
+        "as@reliable since day one": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "at@working with zero problems for 3 years": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "au@working great for few years": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "av@yet to change battery on transmitter": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "aw@failed in May after September purchase": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "fit": {
+        "ax@receiver fits in existing canopy": {
+          "+": {
+            "K": [
+              37
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "lighting_control": {
+        "+": {
+          "a": [
+            0
+          ],
+          "b": [
+            3
+          ],
+          "d": [
+            4
+          ],
+          "j": [
+            9,
+            25
+          ],
+          "?": [
+            2
+          ]
+        }
+      },
+      "garden_lights": {
+        "+": {
+          "?": [
+            2
+          ]
+        }
+      },
+      "shed_lighting": {
+        "+": {
+          "b": [
+            3
+          ]
+        }
+      },
+      "single_and_three_way_switches": {
+        "+": {
+          "d": [
+            4
+          ]
+        }
+      },
+      "chandelier_control": {
+        "+": {
+          "?": [
+            9
+          ]
+        }
+      },
+      "light_without_switch": {
+        "+": {
+          "?": [
+            15,
+            26
+          ]
+        }
+      },
+      "outdoor_lighting": {
+        "+": {
+          "b": [
+            20
+          ]
+        }
+      },
+      "attic_fan_control": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "sunroom_lighting": {
+        "+": {
+          "j": [
+            25
+          ]
+        }
+      },
+      "detached_garage_flood_lights": {
+        "+": {
+          "am": [
+            28
+          ]
+        }
+      },
+      "ceiling_fan_light_control": {
+        "+": {
+          "?": [
+            30,
+            31
+          ]
+        }
+      },
+      "bathroom_light": {
+        "+": {
+          "au": [
+            34
+          ]
+        }
+      },
+      "garage_door_opener": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "bedroom_light": {
+        "+": {
+          "?": [
+            42
+          ]
+        }
+      },
+      "storage_unit_lighting": {
+        "+": {
+          "b": [
+            45
+          ]
+        }
+      },
+      "dock_lights": {
+        "+": {
+          "b": [
+            47
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:38.180334"
+}

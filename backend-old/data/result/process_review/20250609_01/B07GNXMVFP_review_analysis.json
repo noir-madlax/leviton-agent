@@ -1,0 +1,576 @@
+{
+  "product_title": "BESTTEN 6 Pack Dimmer Light Switch, LED Dimmer Switch, Single-Pole or 3-Way, for Dimmable LED, Halogen and Incandescent Bulbs, 120V, Wall Plate Included, UL Listed, White",
+  "product_category": "Universal Multi-Load Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "Size/Dimensions": {
+        "A@Electronics box is oversized": {
+          "-": [
+            8
+          ]
+        },
+        "B@Deep profile requiring deep electrical boxes": {
+          "-": [
+            8,
+            11,
+            12
+          ]
+        },
+        "C@Compact design fitting well in older boxes": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "Rocker Switch Design": {
+        "D@Rocker pivots on two small points (1/8\" or less)": {
+          "-": [
+            6
+          ]
+        },
+        "E@Plastic rocker construction prone to breaking": {
+          "-": [
+            6,
+            43
+          ]
+        },
+        "F@Ball bearing component that can fall out when plastic cracks": {
+          "-": [
+            43
+          ]
+        }
+      },
+      "Slider/Dimmer Control": {
+        "G@Sharp edges on dimmer selector": {
+          "-": [
+            10
+          ]
+        },
+        "H@Slider button uncomfortable and can hurt fingers": {
+          "-": [
+            10
+          ]
+        },
+        "I@Satisfying snap mechanism": {
+          "+": [
+            4
+          ]
+        },
+        "J@Appropriate resistance level in dimmer": {
+          "+": [
+            4
+          ]
+        },
+        "K@Slider catches and has spots that don't adjust smoothly": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "Wire Configuration": {
+        "L@Wire positioning and location inconvenient for installation": {
+          "-": [
+            12
+          ]
+        },
+        "M@Labeled wires for easy installation": {
+          "+": [
+            34
+          ]
+        }
+      },
+      "Build Quality": {
+        "N@Lighter weight construction compared to other switches": {
+          "-": [
+            9
+          ]
+        },
+        "O@Good construction quality": {
+          "+": [
+            2
+          ]
+        },
+        "P@Made in China with cheap construction": {
+          "-": [
+            43
+          ]
+        }
+      },
+      "Color/Appearance": {
+        "Q@White color doesn't match standard white switches": {
+          "-": [
+            22,
+            44
+          ]
+        },
+        "R@White color much brighter than typical switches": {
+          "-": [
+            44
+          ]
+        },
+        "S@Good visual appearance": {
+          "+": [
+            20,
+            25
+          ]
+        }
+      },
+      "Metal Frame": {
+        "T@Metal frame too wide for installing units next to each other": {
+          "-": [
+            25
+          ]
+        }
+      },
+      "Flicker Control Mechanism": {
+        "U@Flimsy and imprecise flicker control": {
+          "-": [
+            12
+          ]
+        },
+        "V@Adjustable wheel for configuration": {
+          "+": [
+            11
+          ]
+        },
+        "W@Adjustment dial functionality": {
+          "+": [
+            37
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Flickering Issues": {
+        "a@Causes lights to flicker": {
+          "-": {
+            "?": [
+              0,
+              3,
+              5,
+              30,
+              31,
+              36,
+              37,
+              45,
+              46
+            ]
+          }
+        },
+        "b@Makes other LEDs from same electrical box flicker": {
+          "-": {
+            "?": [
+              23,
+              36
+            ]
+          }
+        },
+        "c@No flickering experienced": {
+          "+": {
+            "?": [
+              7,
+              11,
+              28,
+              47
+            ]
+          }
+        },
+        "d@Impossible to eliminate flicker on multiple fixtures": {
+          "-": {
+            "U": [
+              12
+            ]
+          }
+        }
+      },
+      "Dimming Performance": {
+        "e@Doesn't dim up or down, stays dim": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "f@Low setting not as low as desired but reasonable": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "g@Narrow dimming range": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "h@Wide range of dimming": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "i@Can increase or decrease light amount as needed": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "j@Dimmer function fails": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "k@Jumpy dimming transition": {
+          "-": {
+            "K": [
+              17
+            ]
+          }
+        }
+      },
+      "Reliability/Durability": {
+        "l@Rocker side breaks off after 3-4 months": {
+          "-": {
+            "D,E": [
+              6
+            ]
+          }
+        },
+        "m@Rocker becomes unstable and doesn't turn light on": {
+          "-": {
+            "E": [
+              15
+            ]
+          }
+        },
+        "n@Multiple switches fail within 2 months": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "o@2 units fail within 1 day": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "p@Still work and feel same after half year": {
+          "+": {
+            "I,J": [
+              4
+            ]
+          }
+        },
+        "q@Sometimes doesn't turn on lights": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "r@No tactile click response": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "s@Works 100% as intended with correct bulbs": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Installation Ease": {
+        "t@Very easy to install": {
+          "+": {
+            "?": [
+              3,
+              4
+            ]
+          }
+        },
+        "u@Easy wiring": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "v@Easy to set up minimum threshold": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "w@Difficult to install in anything less than deep box": {
+          "-": {
+            "L": [
+              12
+            ]
+          }
+        },
+        "x@No way to position wires and push switch all the way in": {
+          "-": {
+            "A,B": [
+              8
+            ]
+          }
+        },
+        "y@Easy to replace": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "z@Compatible with various LED bulbs and fixtures": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "aa@Not compatible with some LED recessed lights": {
+          "-": {
+            "?": [
+              19,
+              31,
+              46
+            ]
+          }
+        },
+        "bb@Works with dimmable and non-dimmable bulbs": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "cc@Causes wild noises with non-dimmable bulbs": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "dd@Need to swap out some bulbs in multiple bulb fixtures": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "Quality Control": {
+        "ee@Received used switches with paint and cut wires": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ff@Some units broken out of box": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "gg@Some units don't work out of box": {
+          "-": {
+            "?": [
+              16,
+              35
+            ]
+          }
+        },
+        "hh@Some were open and previously used": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "Buzzing/Humming": {
+        "ii@Dimmers buzz": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "jj@No humming noticed": {
+          "+": {
+            "?": [
+              5,
+              11
+            ]
+          }
+        }
+      },
+      "3-Way Capability": {
+        "kk@3-way capability available": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ll@Works in single and dual pole locations": {
+          "+": {
+            "M": [
+              34
+            ]
+          }
+        }
+      },
+      "Adjustability": {
+        "mm@Presettable sensitivity adjustable": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "nn@Adjustable dimming feature": {
+          "+": {
+            "V": [
+              17
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED Lighting Applications": {
+        "+": {
+          "z": [
+            7
+          ],
+          "c": [
+            28
+          ],
+          "i": [
+            29
+          ]
+        },
+        "-": {
+          "a": [
+            31
+          ],
+          "aa": [
+            19,
+            31,
+            46
+          ],
+          "b": [
+            23
+          ]
+        }
+      },
+      "Can Light Installation": {
+        "-": {
+          "a": [
+            3
+          ]
+        }
+      },
+      "Bathroom Installation": {
+        "-": {
+          "l": [
+            6
+          ]
+        }
+      },
+      "Bedroom Installation": {
+        "-": {
+          "l": [
+            6
+          ]
+        }
+      },
+      "Kitchen Installation": {
+        "-": {
+          "l": [
+            6
+          ]
+        }
+      },
+      "House Rehabilitation Projects": {
+        "+": {
+          "c,z": [
+            7
+          ]
+        }
+      },
+      "Rental Property Use": {
+        "+": {
+          "c,z": [
+            7
+          ]
+        }
+      },
+      "New Home Installation": {
+        "+": {
+          "?": [
+            43
+          ]
+        }
+      },
+      "House Renovation": {
+        "+": {
+          "?": [
+            48
+          ]
+        }
+      },
+      "Solar System Applications": {
+        "+": {
+          "?": [
+            41
+          ]
+        }
+      },
+      "Multiple Fixture Circuits": {
+        "-": {
+          "d": [
+            12
+          ]
+        }
+      },
+      "Ceiling Light Fixtures": {
+        "+": {
+          "i": [
+            29
+          ]
+        }
+      },
+      "Recessed Lighting": {
+        "-": {
+          "aa": [
+            19,
+            31
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:44.297513"
+}

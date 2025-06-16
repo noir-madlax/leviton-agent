@@ -1,0 +1,423 @@
+{
+  "product_title": "Leviton E5601-MW Decora Edge 15 Amp Single Pole Rocker Switch, 10-Pack, White",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@bulky and sometimes tight fit": {
+          "-": [
+            27
+          ]
+        },
+        "B@huge size requiring wallplate compatibility check": {
+          "-": [
+            39
+          ]
+        },
+        "C@too big for standard wall plates to cover": {
+          "-": [
+            47
+          ]
+        }
+      },
+      "tabs": {
+        "D@thick tabs preventing switch plate covers from laying flat": {
+          "-": [
+            2
+          ]
+        },
+        "E@flimsy tabs that are too weak to force outlets flat": {
+          "-": [
+            2
+          ]
+        },
+        "F@tabs that must be snapped off for traditional plates": {
+          "-": [
+            2,
+            9,
+            24,
+            45
+          ]
+        },
+        "G@plastic on tabs interfering with screw tightening": {
+          "-": [
+            2
+          ]
+        },
+        "H@extra plastic on mounting plate causing issues with screwless cover plates": {
+          "-": [
+            34,
+            36
+          ]
+        }
+      },
+      "appearance": {
+        "I@attractive, less severe rocker design": {
+          "+": [
+            19
+          ]
+        },
+        "J@nice clean color and appearance": {
+          "+": [
+            29
+          ]
+        },
+        "K@great looks when installed": {
+          "+": [
+            14,
+            18
+          ]
+        }
+      },
+      "lever_connection_system": {
+        "L@levers on back to secure wires": {
+          "+": [
+            3
+          ]
+        },
+        "M@push in connectors with lever lock": {
+          "+": [
+            18,
+            22
+          ]
+        },
+        "N@locking levers to grasp copper": {
+          "+": [
+            19
+          ]
+        },
+        "O@level locks with beautiful design": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "button_feel": {
+        "P@mushy buttons that click down but soft when pressed up": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "alignment_features": {
+        "Q@interlocking design for ideal spacing": {
+          "+": [
+            19
+          ]
+        },
+        "R@alignment feature for side-by-side installation": {
+          "+": [
+            33
+          ]
+        },
+        "S@easily line up with each other when installing": {
+          "+": [
+            3
+          ]
+        },
+        "T@fit together perfectly when using 2 or more side-by-side": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "material": {
+        "U@request for all metal tabs instead of plastic": {
+          "-": [
+            2
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation_ease": {
+        "a@quick and easy installation": {
+          "+": {
+            "L": [
+              3
+            ],
+            "M": [
+              18
+            ],
+            "N": [
+              19
+            ],
+            "O": [
+              30
+            ],
+            "?": [
+              4,
+              10,
+              12,
+              16,
+              20,
+              21,
+              26,
+              31,
+              38,
+              43,
+              44,
+              46,
+              48
+            ]
+          }
+        },
+        "b@fast installation for large numbers": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "c@saves installation time significantly": {
+          "+": {
+            "?": [
+              4,
+              31,
+              39,
+              45
+            ]
+          }
+        },
+        "d@makes switching out old switches easy": {
+          "+": {
+            "L": [
+              3
+            ],
+            "S": [
+              3
+            ]
+          }
+        }
+      },
+      "wire_connection": {
+        "e@secure wire connection": {
+          "+": {
+            "M": [
+              18
+            ],
+            "N": [
+              19
+            ],
+            "?": [
+              40,
+              41
+            ]
+          }
+        },
+        "f@no exposed wires or contacts": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "g@eliminates need for wire bending and j-hooks": {
+          "+": {
+            "?": [
+              13,
+              41
+            ]
+          }
+        },
+        "h@concern about push-in connection reliability over time": {
+          "-": {
+            "?": [
+              22,
+              23
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "i@works great and reliable": {
+          "+": {
+            "?": [
+              0,
+              8
+            ]
+          }
+        },
+        "j@functions well": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "durability": {
+        "k@uncertain about long-term durability": {
+          "-": {
+            "?": [
+              11,
+              34
+            ]
+          }
+        },
+        "l@rock solid connection that withstands pulling": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "m@prevents switch plate covers from laying flat": {
+          "-": {
+            "D": [
+              2
+            ]
+          }
+        },
+        "n@causes gap with screwless face plates": {
+          "-": {
+            "H": [
+              34
+            ]
+          }
+        },
+        "o@standard wall plates won't cover properly": {
+          "-": {
+            "C": [
+              47
+            ]
+          }
+        },
+        "p@works with screwless wall plates after breaking tabs": {
+          "+": {
+            "F": [
+              24
+            ]
+          }
+        }
+      },
+      "space_efficiency": {
+        "q@saves space in switch box": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_renovation": {
+        "+": {
+          "a": [
+            14,
+            25,
+            30
+          ],
+          "d": [
+            3
+          ],
+          "?": [
+            33
+          ]
+        }
+      },
+      "bathroom_remodeling": {
+        "+": {
+          "O": [
+            30
+          ],
+          "T": [
+            30
+          ]
+        }
+      },
+      "replacing_old_toggle_switches": {
+        "+": {
+          "a": [
+            27
+          ],
+          "A": [
+            27
+          ],
+          "?": [
+            41
+          ]
+        }
+      },
+      "aesthetic_upgrade": {
+        "+": {
+          "I": [
+            19
+          ],
+          "K": [
+            18
+          ],
+          "?": [
+            31
+          ]
+        }
+      },
+      "multi_gang_installations": {
+        "+": {
+          "q": [
+            39
+          ],
+          "R": [
+            33
+          ],
+          "T": [
+            30
+          ]
+        }
+      },
+      "professional_electrical_work": {
+        "+": {
+          "a": [
+            32,
+            46
+          ],
+          "?": [
+            8
+          ]
+        }
+      },
+      "large_scale_switch_replacement": {
+        "+": {
+          "b": [
+            9
+          ],
+          "c": [
+            45
+          ],
+          "?": [
+            18
+          ]
+        }
+      },
+      "screwless_cover_plate_systems": {
+        "-": {
+          "m": [
+            2
+          ],
+          "n": [
+            34
+          ]
+        }
+      },
+      "switched_receptacle_applications": {
+        "-": {
+          "?": [
+            42
+          ]
+        }
+      },
+      "smart_switch_integration": {
+        "+": {
+          "q": [
+            39
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:24.221566"
+}

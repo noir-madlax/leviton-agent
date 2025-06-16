@@ -1,0 +1,2596 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:21:37.733485",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0D3KP68S7",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0D3KP68S7",
+    "title": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+    "brand": "Kasa",
+    "model_number": NaN,
+    "price_usd": 31.99,
+    "rating": 4.4,
+    "reviews_count": 555.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B0D3KP68S7"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1SFD8BZZ48SI3",
+        "text": "It takes a while for me to install it but it worth the effort. I installed it in my main bedroom, so I can turn off the light without get off my bed. It has timer function and I set up a timer for my fan.",
+        "date": "Reviewed in the United States on June 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "smart home!",
+        "userName": "trevor",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RRON006ZMX60N",
+        "text": "I bought this to automate my outdoor lights—seemed simple enough to install. Luckily, I got the 2-pack, or I would’ve thought I was just doing something wrong. I installed both switches, but one of them wouldn’t work at all. I rewired it 4–5 times, consulted ChatGPT, and even went to Lowe’s to get a voltage tester, thinking maybe it was an issue with the wiring or the electrical box (even though the lights worked fine before). After several more rewiring attempts and reinstalling the old switch, I gave up and called Amazon. They gave me a refund and sent a replacement. The new switch arrived the next day, took 10 minutes to install, and worked immediately—so yeah, turns out I was sold a dead switch. Thanks for that.",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "One was defective and took me 3 days of my life and a trip to lowes to figure out",
+        "userName": "Raph850",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1VEX8UTX60R61",
+        "text": "Esa porquerías no sirven",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "E",
+        "userName": "Edwin Murillo",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3O7YUI33XWU1K",
+        "text": "I've never been able to get this Kasa Smart Switch 2-Gang HS200-2 to work, no matter what I try. I've spent hours troubleshooting and it simply refuses to connect to my Wi-Fi. I tried: A 2.4GHz-only network (even disabled 5GHz), Older routers, Multiple resets and power cycles. Each time, the switch broadcasts its default Wi-Fi, and the app claims \"connection successful\"—but it's not. I have to manually connect to the switch’s Wi-Fi, enter my own Wi-Fi credentials, and then it just spins for 10–15 minutes before saying “pairing failed.” and keeps blinking orange and green. I've restarted everything (including the switch and router), reinstalled the app, and even tried different phones—same result. It just won’t connect. This has been a huge waste of time and money. I normally like TP-Link products, but this one is a complete disappointment. Avoid it unless you enjoy endless setup loops and frustration.",
+        "date": "Reviewed in the United States on May 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn’t Connect – Total Waste of Time",
+        "userName": "Henry",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2N5DRTNSKD42C",
+        "text": "Don't buy this crap. They send you old product that they know is faulty.",
+        "date": "Reviewed in the United States on May 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don't buy this crap. They send you old product that they know is faulty.",
+        "userName": "Kyle",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3NTNUC3K0T1RC",
+        "text": "I have installed three of these so far in the house and it works great. Once you get the first Kasa product installed the rest follow suit. The initial one was a little difficult to install but that's just an issue on my part. I have 12 total Kasa smart switches in my house and all work great. Installing two more torrow and hope to install 4 more soon in addition to the Kasa thermostat. Good value for the money as you can see. The Kasa app is easy to use as well and I have had no problems getting the switches to work in the app. If you get an Echo product to go with the switches it makes it even better. Being able to remotely turn off those pesky lights your children left on while trying to run out the door is amazingly convenient. I have had no connectivity issues unlike other reviews. I have a good router and plenty of WiFi coverage in the home so it makes me wonder if the issues with the other reviewers were that they didn't have good coverage in their homes. The dimming feature worked flawless as it was able to dim lights i didn't even know could be dimmed in our home.",
+        "date": "Reviewed in the United States on April 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to Connect",
+        "userName": "Jeremy & Melanie",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3301QMWDG8WF2",
+        "text": "My regular go-to smart lighting switch. Affordable and installs easily. Other brands like GE dies when a rainstorm comes... I've had to change out so many. This one, keeps on working!",
+        "date": "Reviewed in the United States on April 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "A Must buy!",
+        "userName": "J. Sagullo",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3O64OH1GJ5A4Y",
+        "text": "I won’t buy it again. It’s better to just buy smart light bulbs.",
+        "date": "Reviewed in the United States on April 22, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Extremely complex installation.",
+        "userName": "Reviewer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R15CRO47NH8ZQA",
+        "text": "This is great in our house to time our outdoor lights above our garage. I have switch for the garage indoor lights that is not on a timer and then the second switch for the lights outside the house and timed them to go on each night. I am not an electrician but know a little bit and it took me about an hour to install however my current plugs were quite disorganized. I am sure it is much quicker to install but regardless anyone can do it with a little time. Seems to hold up well, I’ve had them for almost a year now with no issues.",
+        "date": "Reviewed in the United States on April 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and use",
+        "userName": "Angela",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R89Y88OV3MISB",
+        "text": "These are amazing, makes life so much easier, if I leave a light on I can turn it off with a push of a button or from the app.",
+        "date": "Reviewed in the United States on April 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "These are amazing",
+        "userName": "Cory",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1XOYJK12M7NPI",
+        "text": "This switch was categorized as a frequently returned item. I gave it a try and found it worked well. The installation was easy. It is compatible with both Google Home and Amazon Alexa. I wish it had a smaller form factor.",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "4 stars",
+        "userName": "Y. J.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RR50RH7HXGHIB",
+        "text": "Update 04/12/25: I was able to get this figured out; this was user-error (Dunning-Kruger). I shouldn't have chosen a two-gang junction box with such a huge bundle of wires in it to get my feet wet with trying to wire in smart-switches. I was trying to wire in the black hot wire into the bundle of black hot wires, but this was wrong. The correct configuration was to just wire in the two black wires coming from the smart switches into the existing two hot wires (and one to the existing ground wire, of course), then unscrew the wire nut from the massive existing bundle of neutral (white) wires, then wire the two (white) neutral wires from my two smart switches into that bundle. Viola, everything worked flawlessly, although I had barely enough to room to jam all that into the junction box. OLD: I checked the description of this product carefully since I have experience with successfully wiring two smart thermostats to three separate air conditioners. I also work for a smart / IoT device company (that involves wiring) in a troubleshooting department, so I felt very comfortable taking on this task myself, although I have only done rudimentary 120v projects. I took off the light switch cover and examined the wiring before making my purchase. Mine had one neutral, one black (hot / line), and one ground, plus one huge bundle of 6 - 8 black (hot / line) wires and one huge bundle of 6 - 8 neutral wires. I photographed the existing wiring to make sure I could return to the existing wiring (just in case). I didn't see anything wrong because the description only mentions requiring a neutral wire, but would later discover it requires two black (hot / line) wires. The existing two switches each had one black, one white, and one neutral connected. They did not have two blacks connected as expected. The wires were connected to a giant mess of wires featuring two huge wire nuts of 6 - 8 white and 6 - 8 black wires each (respectively). First I just attempted to connect the switches as close as possible to the old switches, but this did not work. Flipping the breaker caused the switched outlet connected to a lamp to just flicker and the ceiling fan not to respond. The two smart switches just flashed orange and were unresponsive. Finally, I found the hot wire in the bundle of black wires using a voltage tester, isolated it from the rest, then bundled it into a wire nut with the secondary black wire coming off each switch. Same result. I tried a few more variations, but nothing would work. I'm flying blind on how this junction box / room was wired. I understand the way this junction box was wired is not TPLink's fault, but what is their fault is installation was billed as \"a breeze\" and the requirement of the black wires are happily glossed over. I could have saved 6+ hours of troubleshooting if they had put in the real requirements (two hot/line, one neutral). It seems like TPLink is okay with making some customers miserable wasting their time rather than put in the description how difficult it is for many customers (which you can do an internet search on, which you'll find my issue is not uncommon).",
+        "date": "Reviewed in the United States on April 11, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Can be intimidating if there's a ton of wires in a small junction box on your first experience",
+        "userName": "Nathan",
+        "numberOfHelpful": 2,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/715npJ20OUL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1SSVAUQCWTMB6",
+        "text": "One switch does not work and the one that does work is like rocket science trying to set a schedule. This is the worst app I have ever used for anything. I am throwing both of these away and replacing with the ones at Home Depot which are called Hubspace and are so much better in every way and cheaper.",
+        "date": "Reviewed in the United States on April 3, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Terrible product and even worse app to manage the terrible product",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2Q5TGZHHWH517",
+        "text": "Super easy to install. Connected to Alexa seamlessly and I use the voice controls every day.",
+        "date": "Reviewed in the United States on March 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Life Changing",
+        "userName": "Hayden Fussell",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R18FO8ATIBKW2W",
+        "text": "This is the worst company for product support I have ever encountered. I had a defective product it took over 10 days for them to authorize a return, then they wanted me to pay for shipping.",
+        "date": "Reviewed in the United States on March 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "If you have a problem with this product, save yourself time and headaches return to Amazon.",
+        "userName": "LDecosse",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RELA3FYZSTH2M",
+        "text": "Exactly what I expected and great price too. Easy to install. I only used one of the switches on my existing double switch.",
+        "date": "Reviewed in the United States on March 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "M_user",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1U98O48RW5GNV",
+        "text": "These switches are amazing; out of all I looked at, I can't express myself enough on how easy these are to install, set up, and use.",
+        "date": "Reviewed in the United States on March 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best of the best",
+        "userName": "Mary Ruff",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3BBMLM27IO2IV",
+        "text": "Wow I am glad I got the two set on sale. The first one I installed would not work. The 2nd one would not connect to the wifi I tried 10 or 15 times. Then I went out for a couple of hours came home and it connected on the first try. We will see if it works tonight.",
+        "date": "Reviewed in the United States on March 15, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Hard to connect",
+        "userName": "Sondra",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1PZ1A7UZDS8KL",
+        "text": "Broken out of the box",
+        "date": "Reviewed in the United States on March 12, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broken out of the box",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3EV5FGMEWVNTV",
+        "text": "Love this so unique",
+        "date": "Reviewed in the United States on March 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Get the job done",
+        "userName": "Brittany",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RDTLHD79J3M1O",
+        "text": "I bought these as a replacement for the first set of smart switches I bought for my kitchen / dinning room area. These ones work so much better than the ones I had originally bought. The physical buttons work great and setting them up to the wireless was very simple. The app is very straight forward and easy to use, integration with Alexa was also super easy. If you are trying to decide which one of the hundreds of smart switches out there, you can feel safe choosing these.",
+        "date": "Reviewed in the United States on March 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to Install, Easy to Set Up!",
+        "userName": "Keith",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R16B6IDP7BLMTT",
+        "text": "Wouldn't connect to the app. I spent a week troubleshooting this device, rebooting the Wi-Fi router, splitting Wi-Fi bands, etc. When I contacted customer service, they emailed me an unhelpful AI generated essay of possible solutions I could have found on Google. I followed up and asked for actual assistance, and Kasa has been silent since.",
+        "date": "Reviewed in the United States on March 8, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bad experience",
+        "userName": "Evan",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1JIQCC0LV9OCV",
+        "text": "Never will I ever have to pull in my driveway and see that my three houselights had been on all day. Switch feels premium, app controls are simple to setup. The instructions packet is detailed and is useful when installing.",
+        "date": "Reviewed in the United States on March 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Saving Money Using Automation",
+        "userName": "Jake",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1R4X6VYNSHHMW",
+        "text": "This device is not easy to install, it might need a wallplate spacer. After installation it is very easy to set up with wi-fi. Once it is ready to remove, the device funtion perfectly. Very recommend",
+        "date": "Reviewed in the United States on February 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Box seal well n easy to set up",
+        "userName": "Chun-Wei Sun",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1UJDEY92HQDEP",
+        "text": "One of the 2 switches had an electrical short within the switch. You could hear it when the box was jostled or the wires going into the box were wiggled. Not acceptable for electrical devices such as this.",
+        "date": "Reviewed in the United States on February 23, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective switch",
+        "userName": "Chris Baker",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1B3XBEL34BA5B",
+        "text": "I've installed 14 of these in my home since 2021 and never had a severe failure but before I installed any of them I put in a whole house surge protector. The other things you might want to have are Wago wire nut alternatives which make installation very easy when you have a lot of wires or you are putting in more than 2 switches in a box. I also recommend outlet spacers. The 5-way splicers from Wago are ideal when putting in 4 of these. Wire all grounds neutrals and 1 of the blacks from each switch together outside of the box. You connect the ground, neutral and supply once, then each light/fan and you are done in the box.",
+        "date": "Reviewed in the United States on February 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Install tips - I've had over a dozen for 3 years, no issues.",
+        "userName": "Nigel Tufnel",
+        "numberOfHelpful": 3,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2YMK8KLZ09JAA",
+        "text": "Love these, easy to hook up (full disclosure I am an idiot and even I was able to do it) and works well with my Alexa",
+        "date": "Reviewed in the United States on February 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Super Easy set up",
+        "userName": "marjorie baessler",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1YFVMR22P3DYA",
+        "text": "I love Kasa product and I was so excited for these! We were able to connect them ourselves using the directions Kasa provides but this will require connecting wiring. No need to hire an electrician though, if you do some research and follow kasa’s step by step instructions, you should be able to get it!",
+        "date": "Reviewed in the United States on February 13, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Love Kasa products!!",
+        "userName": "Corina",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1NCZFKJKT7XIM",
+        "text": "Didn’t work",
+        "date": "Reviewed in the United States on February 2, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn’t work",
+        "userName": "steve grant",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RUMNDMBGZNNJ3",
+        "text": "These are great. I am replacing all of the old switches with these. They are super easy to setup. I have three of them up and running without issue.",
+        "date": "Reviewed in the United States on January 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Super Easy - Very Convenient",
+        "userName": "KLM",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3DI62XUORPDWO",
+        "text": "Easy setup and works amazing.",
+        "date": "Reviewed in the United States on January 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works grate",
+        "userName": "Zac",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1VPPI8XTRBSRO",
+        "text": "Live these, gonna put them all through the house.",
+        "date": "Reviewed in the United States on January 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "They work great, easy setup",
+        "userName": "marcus",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1HPLBZ22RVOOR",
+        "text": "Easy to install and set up.",
+        "date": "Reviewed in the United States on January 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switches",
+        "userName": "Christin Barnhart",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2RJG2PKLHKGSL",
+        "text": "If you are running a Mesh WIFI network, with just 2.4 & 5ghz, this switch will not connect, even when you turn off the 5ghz. If the mesh network has 6ghz capability, turn off everything except the 6ghz and then it will connect. After connection, you can turn the 2.4 & 5ghz back on and won't have a problem. If you don't have 6ghz capability, I'd go with a different manufacturer. Otherwise this switch has worked great!",
+        "date": "Reviewed in the United States on January 23, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works Great after Difficult Connection",
+        "userName": "Greg G",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R27JESSTOXGOL5",
+        "text": "Have many of them . Work great",
+        "date": "Reviewed in the United States on January 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Adrian Loya",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R383JXULEQHRA",
+        "text": "These things have made my life so much easier. Forget to turn off the lights? Ask home assistant. Need to turn on the lights and don't want to get up? Easy! Need to automate them to turn on and off at specific times? You betcha. They were easy to install, the switches feel nice to press, they are easy to connect to your network and connect to Google Home, they look premium and the plate is high quality as well. If you are thinking about it just get them. My only downside is that I need to keep buying and installing more every time I remember a light switch that isn't smart.",
+        "date": "Reviewed in the United States on January 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "I will never go back to normal light switches",
+        "userName": "Blue Shark",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R29HMV1OTTBGVM",
+        "text": "Easy to setup.",
+        "date": "Reviewed in the United States on January 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Nightstalker59",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2SLOQUL71TCO4",
+        "text": "This product does not work as smart switch! This item only works manually. KASA also has terrible Customer service is terrible, when sending a text message, reporting this problem they responded with a text they will look into this problem. to this date, Jan. 3, 6 months later I still have not heard back from them: either by text or phone call. BUYER BEWARE!! p.s. I had this installed by a professional.",
+        "date": "Reviewed in the United States on January 3, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Does not work!",
+        "userName": "Rick Noll",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RSD5WRM832TL2",
+        "text": "The switches work and weren’t too bad to get running. I did run into an issue when I tightened the mounting screws. It must have flexed the switch and caused the indicator light to turn off of green . I loosened the screw and it seems to work fine.",
+        "date": "Reviewed in the United States on January 1, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Makes the junction box tight",
+        "userName": "M. Mann",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R31VFUSPLAJB6F",
+        "text": "I’ve been using smart home devices for years and these were easy to set up and have never given me any issues. They install like regular switches so that was not a problem. However, my home was built in the 1970’s and I had to swap out the old 2 gang electrical box for a $5 new one because the switches were too recessed and the cover plate wouldn’t snap on. Changing out the box was easy and I think it’s just an issue with 2 gang boxes being smaller in older homes. I have several Kasa plugs and those have been easy to set up and problem free, so I think that it’s a good brand for an Alexa household.",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "The switches integrate easily and work consistently with Alexa",
+        "userName": "Oelleo",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1LYZSU3SQHQS4",
+        "text": "Love these products and this new addition to my others does not disappoint. I had some difficulty hooking up to my home network but a call to Customer Service fixed the issue!! Great quality for the price.",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Wi-Fi Light Switch",
+        "userName": "Eric P Dennison",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1E2BN16WV8Q1N",
+        "text": "Look good did what I wanted",
+        "date": "Reviewed in the United States on December 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Happy",
+        "userName": "Jim",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2LQ9ICE5Z9CAE",
+        "text": "Fácil de instalar y configurar, es una excelente inversión",
+        "date": "Reviewed in the United States on December 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente y sencillo",
+        "userName": "Excelente entrega",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2OG2RIVVBNIJC",
+        "text": "One of the switches worked but the other would not connect to our Alexa. My husband does maintenance for his profession so he is very familiar with connecting electrical items. He called the company and spent several hours on the phone with them twice trying to get it connected. They finally agreed that their item must be faulty and said they would replace one of the switches. Then they sent us an email saying that we had to register for their warranty to get a replacement. Then they proceeded to tell us that we had to pay the shipping for the replacement item. No acceptable! We are returning through Amazon and will never purchase from this company agagin!",
+        "date": "Reviewed in the United States on December 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Horrible Experience",
+        "userName": "Christine Thomas",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3SFKN7QLCHRFR",
+        "text": "Renz was a help getting the switch set up with my phone. Unfortunately, within minutes of hanging up, the connection was lost and I have been unable to get it to reconnect.",
+        "date": "Reviewed in the United States on December 27, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Stopped working a few minutes after installation",
+        "userName": "impala",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RTDD450NOQ8CG",
+        "text": "I bought the product for outdoor building. It was easy to install and connect to my network.",
+        "date": "Reviewed in the United States on December 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy installation",
+        "userName": "Gene",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1TZGF4YOZO7WF",
+        "text": "The instructions are clear and switches were easy to connect to the app but make sure you install them one at a time or you will never know which one you are working with.",
+        "date": "Reviewed in the United States on December 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and connect",
+        "userName": "Kevin Braun",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1N6JVGBTHAQX",
+        "text": "Me encantó",
+        "date": "Reviewed in the United States on December 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente compra!",
+        "userName": "MARIA EUGENIA PEREZ",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3FNWY5GKJ9QC7",
+        "text": "After my experiences with the KASA app and the TP-link switches… I am 100% sold…",
+        "date": "Reviewed in the United States on December 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best I have used in 8 years",
+        "userName": "Botanist",
+        "numberOfHelpful": 0,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D3KP68S7",
+        "productTitle": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 111,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 558,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3JL2Y1D51JL18",
+        "text": "I originally purchased three individual kasa switches and utilized them in another room in my house. The setup is extremely simple and I found the integration with Alexa was very smooth and they are my go to switches. This set has a specialty cover plate that ensures the two switches sit in perfect alignment and are flush giving a great finished product over using a conventional cover plate and having slight alignment issues with individual switches. While I don’t have an issue these switches are not a conventional on or off type switch but function as push type switches. When off the switch has an illuminated symbol showing it is ready to be operated, when on the symbol is off. I will be purchasing additional Kasa switches as I expand my smart home.",
+        "date": "Reviewed in the United States on December 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great smart switch solution",
+        "userName": "Matthew Brodie",
+        "numberOfHelpful": 2,
+        "variationId": "B0D3KP68S7",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2-Gang",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

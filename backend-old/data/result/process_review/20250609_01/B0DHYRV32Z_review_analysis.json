@@ -1,0 +1,135 @@
+{
+  "product_title": "Feit Electric Dimmer Switch for Dimmable LED Light Bulbs, Single Pole or 3-Way Toggle, Wall Plate and Wire Nut Installation Included, DIM/Toggle/2, 2 Pack",
+  "product_category": "Universal Multi-Load Dimmer Switches",
+  "total_reviews": 7,
+  "review_analysis": {
+    "phy": {
+      "wires": {
+        "A@frayed wires attached from previous owner": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "instructions": {
+        "B@clear instructions": {
+          "+": [
+            2
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works in turning lights on/off": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@did not work for one light switch where old dimmer was working fine": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@did not work as expected in three way configuration": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "d@works as described and as expected": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@works very well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "f@work OK but very sensitive with not much play in the dim": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "g@prevents LED light flickering": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "h@unusable": {
+          "-": {
+            "A": [
+              5
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@easy to put up": {
+          "+": {
+            "B": [
+              2
+            ]
+          }
+        },
+        "j@installed without a hitch": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "single pole installation": {
+        "+": {
+          "j": [
+            1
+          ]
+        }
+      },
+      "three-way installation": {
+        "+": {
+          "j": [
+            1
+          ]
+        },
+        "-": {
+          "c": [
+            0
+          ]
+        }
+      },
+      "LED bathroom light control": {
+        "+": {
+          "g": [
+            4
+          ]
+        }
+      },
+      "general light dimming": {
+        "-": {
+          "f": [
+            3
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:14.286854"
+}

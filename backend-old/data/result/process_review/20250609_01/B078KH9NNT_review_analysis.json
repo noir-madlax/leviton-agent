@@ -1,0 +1,177 @@
+{
+  "product_title": "Leviton Decora 600-Watt Single-Pole/3-Way Universal Rocker Slide Dimmer, White (3-Pack)",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 10,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek looking design": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "packaging": {
+        "B@box was taped shut but the other wasn't": {
+          "-": [
+            0
+          ]
+        },
+        "C@boxes looked very beat up, bottoms open": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "color options": {
+        "D@only white not other colors described": {
+          "-": [
+            3
+          ]
+        },
+        "E@no light almond covers in package": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "faceplates": {
+        "F@faceplates are not included": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "condition": {
+        "G@one of the packs was used": {
+          "-": [
+            0
+          ]
+        },
+        "H@looked like they'd been shorted out": {
+          "-": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@all 3 switches were bad and didn't work": {
+          "-": {
+            "G,H": [
+              0
+            ]
+          }
+        },
+        "b@they all work great": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@one of the 3 switches was defective": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@frequently flicker and/or simply don't turn on until you hit the switch several times": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@working great": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "quality": {
+        "f@quality product from a proven company": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "g@absolute garbage": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "h@very high quality switches": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "i@best quality one you will find": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "safety": {
+        "j@very dangerous to sell something electrical as \"new\" that's used and faulty": {
+          "-": {
+            "G,H": [
+              0
+            ]
+          }
+        }
+      },
+      "specifications": {
+        "k@single pole or 3-way": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "l@programmable, higher wattage rated for all bulb types": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home renovation": {
+        "+": {
+          "b": [
+            1
+          ]
+        }
+      },
+      "replacing ugly dimmers": {
+        "+": {
+          "e": [
+            8
+          ]
+        }
+      },
+      "electrical installation": {
+        "-": {
+          "d": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:14.616004"
+}

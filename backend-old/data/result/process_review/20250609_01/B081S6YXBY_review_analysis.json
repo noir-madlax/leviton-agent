@@ -1,0 +1,486 @@
+{
+  "product_title": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "Size": {
+        "A@Larger than standard light switch": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "Material": {
+        "B@Made of durable material": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "Appearance": {
+        "C@Contemporary tech look": {
+          "+": [
+            6
+          ]
+        },
+        "D@Five rectangular LED segments at top": {
+          "+": [
+            6
+          ]
+        },
+        "E@Perfect slim design": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "LED Light Position": {
+        "F@LEDs located in top of switch toggle": {
+          "+": [
+            20
+          ]
+        },
+        "G@Light mounted on top edge of switch": {
+          "+": [
+            33
+          ]
+        },
+        "H@Light shines from top not bottom": {
+          "-": [
+            44
+          ]
+        }
+      },
+      "Photocell Sensor": {
+        "I@Little hole for photocell sensor": {
+          "+": [
+            6
+          ]
+        },
+        "J@Day/night sensor tiny hole in switch": {
+          "+": [
+            10
+          ]
+        }
+      },
+      "Switch Operation": {
+        "K@Rocker switch in opposite direction than norm": {
+          "-": [
+            19
+          ]
+        },
+        "L@Switches opposite of typical design": {
+          "-": [
+            37
+          ]
+        },
+        "M@On position like normal switch but light illuminates ceiling": {
+          "-": [
+            44
+          ]
+        }
+      },
+      "Wiring": {
+        "N@Screw colors don't match standard": {
+          "-": [
+            18
+          ]
+        },
+        "O@All wires on same side when flipped": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "Build Quality": {
+        "P@Average quality with other switches": {
+          "+": [
+            6
+          ]
+        },
+        "Q@Not spec grade but good for residential": {
+          "+": [
+            6
+          ]
+        },
+        "R@Poor quality mechanics": {
+          "-": [
+            47
+          ]
+        },
+        "S@First switch fell apart during installation": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "Certification": {
+        "T@Not UL Listed": {
+          "-": [
+            17
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Light Brightness": {
+        "a@Incredible amount of light for small area": {
+          "+": {
+            "D": [
+              10
+            ]
+          }
+        },
+        "b@Lights are bright": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@Light not bright, can't see at night": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "d@Not as bright as advertised but still good": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "e@Not very bright": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "f@LED light way too dark, unable to see anything": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "g@LEDs not too bright at night but visible in dark": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "h@Light shines too bright when hung correctly": {
+          "-": {
+            "F,G": [
+              46
+            ]
+          }
+        },
+        "i@Perfect brightness": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "j@Perfect amount of light": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "Light Direction": {
+        "k@Shines up or down": {
+          "+": {
+            "F": [
+              10
+            ]
+          }
+        },
+        "l@Projects light up wall and reflects off ceiling": {
+          "+": {
+            "F": [
+              20
+            ]
+          }
+        },
+        "m@Light illuminates ground when mounted upside down": {
+          "+": {
+            "G": [
+              33
+            ]
+          }
+        },
+        "n@Light blinds when illuminating ceiling": {
+          "-": {
+            "G": [
+              33
+            ]
+          }
+        }
+      },
+      "Sensor Functionality": {
+        "o@Photocell works well": {
+          "+": {
+            "I": [
+              6
+            ]
+          }
+        },
+        "p@Day/night sensor is sensitive": {
+          "+": {
+            "J": [
+              10
+            ]
+          }
+        },
+        "q@Sometimes walking past makes light come on": {
+          "-": {
+            "J": [
+              10
+            ]
+          }
+        },
+        "r@Light sensor not good, turns on at 3pm": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "s@Motion detectors not working": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "t@Sensors not working": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "u@LED night light switches stopped working after four months": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "v@Nightlight part quit working after less than a year": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "w@One appears dimmer than other after few days": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "x@LED lights stopped working about 3 months": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "y@Some switches not working": {
+          "-": {
+            "R": [
+              47
+            ]
+          }
+        }
+      },
+      "Electrical Safety": {
+        "z@Current passing through switch in off position": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "Noise": {
+        "aa@Bit noisy when pushed by finger": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "bb@Very loud": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "cc@Easy to install": {
+          "+": {
+            "?": [
+              3,
+              5,
+              14,
+              17,
+              21,
+              28,
+              34,
+              39,
+              43
+            ]
+          }
+        },
+        "dd@Have to be installed upside down to have LEDs pointing down": {
+          "-": {
+            "F,G": [
+              11
+            ]
+          }
+        },
+        "ee@Need to flip switch to get LED to fire downward": {
+          "-": {
+            "F,G": [
+              42
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "ff@Works as intended": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "gg@Product didn't work": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "hh@Works fine": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ii@One switch was defective": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Stairway Lighting": {
+        "+": {
+          "?": [
+            0,
+            26
+          ]
+        }
+      },
+      "Garage/Dark Areas": {
+        "+": {
+          "?": [
+            0,
+            27,
+            31
+          ]
+        }
+      },
+      "Bathroom Night Light": {
+        "+": {
+          "a,i,j": [
+            9,
+            12,
+            16,
+            19,
+            31,
+            34,
+            36,
+            39,
+            43
+          ]
+        }
+      },
+      "Hallway Lighting": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "Finding Light Switch in Dark": {
+        "+": {
+          "o,p": [
+            6,
+            10,
+            28,
+            42
+          ]
+        }
+      },
+      "Guest Accommodation": {
+        "+": {
+          "i": [
+            28,
+            36
+          ]
+        }
+      },
+      "VRBO Rental": {
+        "+": {
+          "i": [
+            36
+          ]
+        }
+      },
+      "Powder Room": {
+        "+": {
+          "?": [
+            5
+          ]
+        }
+      },
+      "Kitchen Access at Night": {
+        "+": {
+          "j": [
+            39
+          ]
+        }
+      },
+      "Replacement for Night Light": {
+        "-": {
+          "f": [
+            32
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:47.488451"
+}

@@ -1,0 +1,1660 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:57:25.672617",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0BXDC6F2M",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 4,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0BXDC6F2M",
+    "title": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+    "brand": "ThunderWay",
+    "model_number": NaN,
+    "price_usd": 13.99,
+    "rating": 4.5,
+    "reviews_count": 67.0,
+    "category": "Light Switches",
+    "product_segment": "Four Way Multi-Location Control Switches",
+    "product_url": "https://www.amazon.com/dp/B0BXDC6F2M"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R238VP9O571PVJ",
+        "text": "Good quality switch, and a fraction of the price compared to HomeDepot, and others. I needed just one 4 way, but now have a back up incase I need it!",
+        "date": "Reviewed in the United States on April 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality is great, and the price is right!",
+        "userName": "ibucky",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RG6Q0GF9WD8KE",
+        "text": "The function of the switch is not good ya have to push hard to get it were it needs to be",
+        "date": "Reviewed in the United States on February 13, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t recommend",
+        "userName": "Chris mcvey",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R6HE6VZ4WQFVV",
+        "text": "Installed and work great.",
+        "date": "Reviewed in the United States on October 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "4-way light switches",
+        "userName": "Mav",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1VPIRLFZSQJEC",
+        "text": "4-Way Decorator Wall Light Switches looks great, fits well. Easy to use and easy to take care. Made of durable and sturdy solid steel.",
+        "date": "Reviewed in the United States on September 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "4-Way Decorator Wall Light Switches",
+        "userName": "M. L.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R15B7NHZL280S2",
+        "text": "Having recently purchased a new house, I have been making some updates and wanted to replace the standard light switches with paddle switches. With a three switch staircase setup, I was looking for a 4-way switch, I was given the chance to try this one from ThunderWay. At first appearance, these switches look great. Installing was super easy and I found that they controlled the lights perfectly. They respond quickly turning on and off and the switch is very smooth with a definitive click into place when turning on and off. My only small criticism, as demonstrated in my video, is that the switch doesn't sit flush on the bottom. There is a little wiggle room that I have not had with other switches that I have installed in my house. It is a very small thing and not something that people would generally notice but it is something that should be improved. (Note: the crooked seating in the video is not due to the switch but rather the electrical box). All-in-all, I think this is a great option if you are in need of a double pole / 4-way switch, especially given the fact you are given 2 switches for under $20. I will probably replace the face plate with a more stylish, screwless option. But for the price and with its functionality, this is a great option.",
+        "date": "Reviewed in the United States on July 28, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy to install, switches work perfectly, very good option for double pole setups",
+        "userName": "Craig E.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71FjLJCAJWL._SY88.jpg"
+        ],
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0e9a3b62-b4a4-42ce-b0e7-974b714988db/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RPTZ6CTK3BS05",
+        "text": "This is a great set of decorator switches for use in a 3 or 4 way lighting situation. They are made with heavy duty plastic and the back terminals are very easy to use to put your wires into. I would definitely buy these again in the future.",
+        "date": "Reviewed in the United States on July 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great set of decorator switches",
+        "userName": "Maria R",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R7C1P5DQ6XX1B",
+        "text": "Initial observation is that these are solid rock switches, everything looks and works as it should, they have their own cover plates so one less thing to buy. They are also UL certified so a piece of mind in installing these around the house.",
+        "date": "Reviewed in the United States on June 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "No concerns",
+        "userName": "J.B",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3TYNNB8011621",
+        "text": "love having dimmer lights and these were easy to install and look great!",
+        "date": "Reviewed in the United States on May 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "nice dimmer",
+        "userName": "Kalle Beck",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2KCEF4BJHVA8T",
+        "text": "A 2-way switch connects or disconnects between two terminals. A 3-way switch connects the common terminal to either one of the terminals. A 4-way switch connects or disconnects two pairs of terminals. 4-way switch is needed if more than two switches control one light: two switches should be 3-way and all additional ones should be 4-way. Good switches test no continuity between terminals when disconnected and almost 0 ohms when connected. The 4-way switches looks like good quality upon physical examination. They test perfect functionally, as expected. Overall price is reasonable for two switches with cover plates.",
+        "date": "Reviewed in the United States on April 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality 4-way switch",
+        "userName": "GlowingAnt",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1DA7MAMPT2GK0",
+        "text": "The THUNDERWAY 4-way light switches come with faceplates and both are well made. They look great and work well. Price is decent too.",
+        "date": "Reviewed in the United States on April 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality 4-way light switch",
+        "userName": "JN",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2LSNI5TGMCRDC",
+        "text": "My lights started flickering after I installed it (see video). It’s sensitive to touch so there must be loose parts. The wiring diagram is nonsensical with no labels. The drive is not standard Phillips head but appears to be square which means you won’t be able to tighten it properly. Overall this is a fire hazard and Amazon should discontinue sales before someone gets hurt or starts a fire.",
+        "date": "Reviewed in the United States on April 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "DANGEROUS! Do not use",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61KafSA+E4L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61lureRS0WL._SY88.jpg"
+        ],
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ae87d0fc-c80b-4dcd-8c55-7476a6a0c409/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2TQCNHT6SL6LF",
+        "text": "remodelling the basement and getting rid of the old bakelite switches + the sketchy knob and tube wiring that powered them. wanted something simple since this is a pretty involved job and a light switch doesnt need to be one of complicated parts. ordered this particular style because dogs can turn them off and on! life life is great you train your 4 legged buddies to control the lights and close doors........... until you forget to feed them. Material, size and quality of product are all as expected, they wired in easily and when i said let there be light - the dogs gave it a test drive and it was good.",
+        "date": "Reviewed in the United States on April 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "simple light switches",
+        "userName": "Jomama",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1VB8HN03OSLWN",
+        "text": "These are exactly what I needed. Look nice and also feel like good quality.",
+        "date": "Reviewed in the United States on April 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "What do needed.",
+        "userName": "Chad",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3G4NQGJV7WT2C",
+        "text": "These are more sophisticated light switches - they can be used in multiple switch boxes, or as we did, in just one. It installed easily, looks great and works great - what more could you want?",
+        "date": "Reviewed in the United States on April 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light Switches suitable for anywhere",
+        "userName": "mbUtah",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61N7wh-qwfL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/817rHCn8cJL._SY88.jpg"
+        ],
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2G444TEUWM6MJ",
+        "text": "This is an affordable way to upgrade the look of your home. No problem swapping out the plates at all.",
+        "date": "Reviewed in the United States on April 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy and good looking",
+        "userName": "Mysstownsend",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R6VWI01KLYGBW",
+        "text": "Well made switches. They are easy to install and look good. They are a good value.",
+        "date": "Reviewed in the United States on March 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well made",
+        "userName": "Kelley W",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R38UGT71MLETEJ",
+        "text": "Our first venture into decorator wall switches over the standard flip ones. These have a nice feel to them. Easy installation, and the price for this 2-pack is cheaper than the big box store for individual units (comparable to the price you'd pay if you were buying them in bulk, without having to).",
+        "date": "Reviewed in the United States on March 3, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Get 2 at bulk-buy price.",
+        "userName": "FarmMom4",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51z0Dfwox9L._SY88.jpg"
+        ],
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R24PWC3OSR6EFN",
+        "text": "I got these for my hallway that are a 2way light switches. This kit allows me to continue to use my lights how they are, but update the look to a more modern style, and we don't even use these switches since they are controlled by a smart device. Installing was simple, and did not take long to complete. Was able to attached the cover, and the change is better compared to how they previously looked.",
+        "date": "Reviewed in the United States on March 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple change to modernize your switch. Looks amazing",
+        "userName": "Robert",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RUYOLQN7HZL7H",
+        "text": "This is the first time I've seen a grounding screw wire that you can just easily clamp down instead of making the hook end. These four-way switches have a metal back plane. They are the standard common white color. Typical click noise when switching. They come with screw on single gang cover plates. They can be wired with either push in or side wiring.",
+        "date": "Reviewed in the United States on February 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy grounding screw attachment",
+        "userName": "stvrdl",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71aVc9bFYIL._SY88.jpg"
+        ],
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1ERO7YEO5FJLV",
+        "text": "This is a two pack of light switches as well as the accompanying wall plates. I switched out our old light switches because they were very old and showing signs of wear and tare. This was a simple job, pull wires off the old switch and place them in the exact same spot on the new switches. It literally took me less than ten minutes to replace each light switch. It helped that these were the exact same color as well. The difference now is that the old ones had dirt and grime as well as being loose when turning the switch on and off. The new switch very audibly \"clicks\" and is very is also very crisp in its action of pushing the switch on and off. These seem decent for the price they're asking. I woke recommend.",
+        "date": "Reviewed in the United States on February 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Pack of 2 light switches and wall plates",
+        "userName": "Noelle Knight",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71lnI8VPz5L._SY88.jpg"
+        ],
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1S6LMKTAJUDAJ",
+        "text": "This are decent quality 4 way switch and comes in 2 pack at very good price. The material and quality is very good and works great also. Comes with cover plate and is good switches. You have to use this 2 of 3 way switch.",
+        "date": "Reviewed in the United States on February 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent quality 4 way switch with very good price",
+        "userName": "Raj",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RB31S3I6OQNDL",
+        "text": "I rewired the lighting in my basement and needed four switch locations. I used 2 of these switches.They worked perfectly. Another reviewer complained about a 'wiring diagram. If you need a wiring diagram perhaps you shouldn't be installing line voltage switches. A simple continuity or ohmmeter will tell you everything you need to for wiring them. The switches themselves are UL listed. They feel like any other 4-way I have used. The wiring screws tightened down well and held. The price point is very good especially if you need cover plates.",
+        "date": "Reviewed in the United States on February 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good 4-way decora switch",
+        "userName": "tool_nut",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2L3EEE6LU8O5G",
+        "text": "These are good quality switches. Good value for the price. These are 4 way switches but we're just going to use them as replacement switches in a remodel. My husband the electrician says they great for controlling lights from 3 locations also. They have a good feel when you push them up or down. The switch plates are full size, covering the not perfect cutout for the switch.",
+        "date": "Reviewed in the United States on February 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value, nice quality",
+        "userName": "Laura O.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R313PLNJA1EM99",
+        "text": "IN the middle of a major home remodel and the electrician suggested a \"4-way switch\" which actually allows us to control a bank of lights from three locations. Found this on Amazon and he gave the thumbs up. They are going to be installed next week with the majority of the new switches and outlets, but he just looked at them and said they were great - just what he needed. I'll let him do the hard work with the wiring, etc. But I do like the look and feel of the cover plate and the rocker switch itself. As always, lean on the reviews before going in blindly. I am very pleased with this product.",
+        "date": "Reviewed in the United States on January 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Read the reviews - make sure this is the right switch for you!",
+        "userName": "Ruppels",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2EQJXAG2L3C9X",
+        "text": "4 Way switches aren't very common, and the ones in the big box stores are a lot more expensive. If you need only one, i would get one from a big box store since they are about $8, but if you need two and plates, this is a better deal. These are also UL listed and commercial grade so they should have no problem being approved in a project.",
+        "date": "Reviewed in the United States on January 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Much better price than big box stores",
+        "userName": "mountainbiking23",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R34BQ4YCE02C9T",
+        "text": "\"Four way\" switches are used when you have three or more switches controlling one load. These oddly named units from China look and feel much like the lower cost tier ones you can find at local building supply stores. So far they are working fine, but in the future I honestly will stick to buying premium grade units from well-known brands. The labor of changing these things out is more consequential than the purchase cost, so take that into account in your decision.",
+        "date": "Reviewed in the United States on January 21, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "These seem like typical residential quality switches of this type",
+        "userName": "John T. Horner",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1HEJ1V2MDPQZB",
+        "text": "I quickly replaced my old ivory colored toggle style 4 way switches with these nice-looking decorator style switches. Wiring is simple, just pay attention to which terminals are marked in and out as they may have a different orientation to your existing switches. You can clamp your wire ends pushed in straight under the screw terminal, which I must believe is safer than the stab in kind, or you can secure them wrapped under the screw head in the traditional way. The switch has a nice positive click to it, and the cover plate is of good quality, though I prefer the kind with the hidden screws. Easily comparable to the big box store offerings.",
+        "date": "Reviewed in the United States on January 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Quality",
+        "userName": "Len",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3HFZI1X2KRQGZ",
+        "text": "I got these switches for my home just installed one for my kitchen and it works as it should install was simple I just cut the power before for safety. I ended up using the frame from my old switch which is clip on because the ones it comes with would not work for me because of the quartz backsplash to thick screws would not reach.",
+        "date": "Reviewed in the United States on January 16, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "jorge Hernandez",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61EJRQVw1fL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61dWJ0U81KL._SY88.jpg"
+        ],
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R278I103WWA70Z",
+        "text": "A 4-way switch means that you can turn on and off the light from 3 different locations (not 4). If you think about it, a normal one location switch is 2-way (on or off). This one installs and wires like any normal 4-way switch (they provide a wiring diagram on the box), but when you press it to switch it on or off it makes a loud clicking sound and the motion is gritty, like it's going through multiple contacts to reach the final stop. It is possible to leave it in a partially-on position, which is not good. I don't like how it feels and it doesn't give me confidence, but it does work. It is UL listed.",
+        "date": "Reviewed in the United States on January 16, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not a good feeling switch",
+        "userName": "Dan",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RJEOW3FFP5018",
+        "text": "These switches are the same quality as the big boys. They can be backwired. They have a strip gauge. They have a metal strap that run the entire back of the switch, etc... They are UL listed. I don't expect to have any problems with them.",
+        "date": "Reviewed in the United States on January 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Same Quality as the Name Brands",
+        "userName": "NY-Cowboy",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RS73BLZILIP1M",
+        "text": "Wiring 4 way switches is akin to doing advanced calculus!!! I have done numerouse 4 way switches in the past and every time the wiring paths are a mind bender. I am used to a 4 way being labeled as in and out as either the top two terminals are in and bottom out or one side is in and the other out. I didn't see these as being labeled but interestingly enough as I am looking at the pictures for this review, I now see on the back way at the bottom it say IN on one side and Out on the other. As for the switch. It is a good switch. Seems well made. It isn't a silent switch but not really loud either. Just a normal switch sound when you push it. Getting two for the price is a good deal. Comes with basic plates that work but nothing special.",
+        "date": "Reviewed in the United States on January 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Wiring diagram isn't what I wa expecting",
+        "userName": "Sue",
+        "numberOfHelpful": 2,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/612GEsUjeSL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/619YsFYziGL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61B4wZMesnL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61IfBvrEHmL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61r8m90etPL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61yW9EK-3XL._SY88.jpg"
+        ],
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BXDC6F2M",
+        "productTitle": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 32,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 67,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 6
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1AKKQOIAJ4EB0",
+        "text": "There's not too much to say about a switch, either it works or it doesn't. These 4-way switches work fine. The connections are solid. The rocker function \"clicks\" well when pressed. You can pay a lot for a 4-way switch. This two-pack represents a good value in 4-way switches.",
+        "date": "Reviewed in the United States on January 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice 4-way Decorative Switches",
+        "userName": "Nanci",
+        "numberOfHelpful": 0,
+        "variationId": "B0BXDC6F2M",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 32,
+    "pages_scraped": 4,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "product_title": "Single Pole Decorator Light Switch, 15A 120/277V, Paddle Rocker, On/Off Wall Switch, Residential Grade, White, UL/CUL Certified (2-Pack)",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 2,
+  "review_analysis": {
+    "phy": {
+      "construction": {
+        "A@solidly made and not flimsy": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "connections": {
+        "B@both screws and push-in connections on the back": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "compatibility": {
+        "C@use standard screws and decora plates": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "tactile_feedback": {
+        "D@good \"click\" as they switch": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "switching_function": {
+        "b@works as expected": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "fit": {
+        "c@everything fits well": {
+          "+": {
+            "C": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "light switches": {
+        "+": {
+          "b": [
+            0
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:53:41.377485"
+}

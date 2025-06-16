@@ -1,0 +1,382 @@
+{
+  "product_title": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+  "product_category": "Toggle Style Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Noise Level": {
+        "A@Produces loud clicking sounds during operation": {
+          "-": [
+            2,
+            6
+          ]
+        }
+      },
+      "Toggle Switch Design": {
+        "B@Features old school toggle-only design without side slider": {
+          "+": [
+            36,
+            40,
+            45,
+            49
+          ]
+        },
+        "C@Has separate on/off switch and additional small slider switch instead of big dimming toggle": {
+          "-": [
+            23
+          ]
+        }
+      },
+      "Build Quality": {
+        "D@Feels cheap and flimsy with poor construction quality": {
+          "-": [
+            37,
+            48
+          ]
+        },
+        "E@Has tactile and positive switch operation": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "Physical Dimensions": {
+        "F@Fairly large size requiring tight squeeze in metal single gang box": {
+          "-": [
+            36
+          ]
+        },
+        "G@Not ridiculously deep compared to other switches": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "Wiring Connections": {
+        "H@Uses screw terminals instead of wire nuts": {
+          "+": [
+            16
+          ]
+        },
+        "I@Has loose terminals that are hard to wire": {
+          "-": [
+            29
+          ]
+        },
+        "J@Ground screw doesn't drop enough to wrap ground wire": {
+          "-": [
+            21
+          ]
+        },
+        "K@Push-in connections must be locked with screw": {
+          "-": [
+            21
+          ]
+        },
+        "L@Screw holes don't accept standard 6-32 screws": {
+          "-": [
+            41
+          ]
+        }
+      },
+      "Slider Movement": {
+        "M@Dimmer slide moves too easily without resistance": {
+          "-": [
+            12,
+            30,
+            34
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming Performance": {
+        "a@Dims lights smoothly and consistently throughout brightness range": {
+          "+": {
+            "?": [
+              3,
+              8
+            ]
+          }
+        },
+        "b@Causes LED lights to flicker during dimming": {
+          "-": {
+            "?": [
+              4,
+              5,
+              7,
+              14,
+              41,
+              43
+            ]
+          }
+        },
+        "c@Does not flicker with LED lights": {
+          "+": {
+            "?": [
+              25,
+              28,
+              33
+            ]
+          }
+        },
+        "d@Fixes LED flickering issues from old dimmers": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "e@90% of dimming range occurs within briefest toggle movement": {
+          "-": {
+            "M": [
+              34
+            ]
+          }
+        },
+        "f@Reacts extremely slowly requiring glacial pace operation": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "g@Lights don't get as bright with no dimming compared to regular switch": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "h@Tends to raise brightness level when turned on": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "i@Has delay before LED lights turn on": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "j@Performs best with GE LED bulbs, dims as low as halogen": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "k@Stopped working after 2 days": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "l@Failed within 3-45 days": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "m@Broke after little over 1 year": {
+          "-": {
+            "?": [
+              46,
+              47
+            ]
+          }
+        },
+        "n@Failed after 2.5 years": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "o@Works well for over 2 months": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "Basic Functionality": {
+        "p@Works as dimmer switch should": {
+          "+": {
+            "?": [
+              0,
+              1,
+              8,
+              11,
+              17,
+              18,
+              22,
+              25,
+              27,
+              28,
+              33,
+              35,
+              38,
+              39,
+              44
+            ]
+          }
+        },
+        "q@Dimmer function does not work, only turns on/off": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "r@Easy to adjust minimum point with adjustment button": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "s@Easy and simple to install": {
+          "+": {
+            "?": [
+              0,
+              8,
+              9,
+              15,
+              18,
+              27,
+              38,
+              46
+            ]
+          }
+        },
+        "t@Not the easiest to install": {
+          "-": {
+            "J,K": [
+              21
+            ]
+          }
+        },
+        "u@Difficult to wire": {
+          "-": {
+            "I": [
+              29
+            ]
+          }
+        }
+      },
+      "Switch Feel": {
+        "v@Has loose, cheap feel": {
+          "-": {
+            "D": [
+              48
+            ]
+          }
+        },
+        "w@Switch action feels low quality": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "x@Switch is silent": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Bathroom Lighting": {
+        "+": {
+          "p": [
+            0
+          ]
+        }
+      },
+      "General Room Dimming": {
+        "+": {
+          "p": [
+            1,
+            17
+          ]
+        }
+      },
+      "LED Ceiling Fixtures": {
+        "+": {
+          "c,r": [
+            28
+          ]
+        },
+        "-": {
+          "k": [
+            19
+          ]
+        }
+      },
+      "LED Bulb Compatibility": {
+        "+": {
+          "a": [
+            3
+          ]
+        },
+        "-": {
+          "b": [
+            4,
+            5
+          ]
+        }
+      },
+      "Track Lighting": {
+        "+": {
+          "c": [
+            25
+          ]
+        }
+      },
+      "Under Cabinet Lighting": {
+        "-": {
+          "b": [
+            7,
+            48
+          ]
+        }
+      },
+      "Incandescent Floods": {
+        "+": {
+          "p": [
+            36
+          ]
+        }
+      },
+      "Can LEDs and Pendant Lamps": {
+        "-": {
+          "l": [
+            20
+          ]
+        }
+      },
+      "Replacing Old Non-LED Compatible Dimmers": {
+        "+": {
+          "d": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:34.119919"
+}

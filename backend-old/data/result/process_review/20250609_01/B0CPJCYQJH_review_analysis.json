@@ -1,0 +1,530 @@
+{
+  "product_title": "Smart 3 Way Dimmer Switch, Smart WiFi Mesh Dimmable Light Switch Compatible with Alexa, Google Assistant and SmartThings, 2.4GHz Wi-Fi, FCC/ETL Certified, No Hub Required, 1 Pack",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 42,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@switch housing is fairly large": {
+          "-": [
+            1,
+            16,
+            21,
+            33
+          ]
+        },
+        "B@switch is perfect size that fits in regular switch board": {
+          "+": [
+            18
+          ]
+        },
+        "C@too large to fit in switch receptacle": {
+          "-": [
+            12
+          ]
+        },
+        "D@wall is a little small for the switch": {
+          "-": [
+            19
+          ]
+        }
+      },
+      "wiring": {
+        "E@many wires with wire nuts for each": {
+          "-": [
+            1
+          ]
+        },
+        "F@comes with labels for the wires": {
+          "+": [
+            16
+          ]
+        },
+        "G@includes wire connectors": {
+          "+": [
+            27
+          ]
+        },
+        "H@included wire nuts make installation easy": {
+          "+": [
+            29
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "I@lever style activation with bottom push and touch slider in middle": {
+          "+": [
+            21
+          ]
+        },
+        "J@top doesn't move, push bottom to click on/off": {
+          "+": [
+            21
+          ]
+        },
+        "K@satisfying positive click better than springy higher pitch click": {
+          "+": [
+            21
+          ]
+        },
+        "L@tactile feeling feels mushy and cheap": {
+          "-": [
+            34
+          ]
+        },
+        "M@bottom is nice push button with slide finger up/down over lights": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "appearance": {
+        "N@looks cool": {
+          "+": [
+            20
+          ]
+        },
+        "O@looks great in kitchen": {
+          "+": [
+            18
+          ]
+        },
+        "P@brand name embossed on faceplate": {
+          "-": [
+            21
+          ]
+        },
+        "Q@little lamp indicator on switch": {
+          "-": [
+            21
+          ]
+        },
+        "R@screw free wall plate": {
+          "+": [
+            21,
+            27
+          ]
+        },
+        "S@excellent quality attractive switch": {
+          "+": [
+            40
+          ]
+        },
+        "T@would have looked sharp": {
+          "+": [
+            38
+          ]
+        }
+      },
+      "internal_components": {
+        "U@ESP32-C3 chip inside": {
+          "+": [
+            4
+          ]
+        },
+        "V@aluminum cover on back to cool power electronics": {
+          "+": [
+            27
+          ]
+        }
+      },
+      "indicator_lights": {
+        "W@indicator lights follow finger swipe": {
+          "+": [
+            33
+          ]
+        },
+        "X@indicator light glowing green when on, white when off": {
+          "+": [
+            33
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@glitchy and unreliable connection": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@won't reconnect after removal": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@lost Alexa pairing and unable to register again": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@synced effortlessly with Alexa and Google Assistant": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "e@WiFi connectivity is rock solid": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "f@syncing device was smooth process": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "g@connection to Echo ecosystem was easy": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "h@connecting to network was straightforward": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "i@setup to get connected to app is simple": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "response_time": {
+        "j@very slow to turn on light with 1-2 second lag": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "k@manual switch could be more responsive": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "l@switch is responsive": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "dimming_functionality": {
+        "m@dimming feature works smoothly": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "n@dimming works great": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "o@dimming at wall is smooth and stepless": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "p@sliding dimmer is first class with no moving parts": {
+          "+": {
+            "I": [
+              33
+            ]
+          }
+        },
+        "q@caused dimmable LED lights to flutter and flicker when dimmed": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "r@no flickering no matter what dimmer set at": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "s@no way to set maximum and minimum brightness levels": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "3way_functionality": {
+        "t@doesn't respond to 3-way dumb switch": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "u@3-way functionality is great": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "v@works with dumb switch as real 3-way": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "w@can be wired with standard non-smart switches": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "noise": {
+        "x@makes persistent clicking noise when secondary switch turned off": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "power_handling": {
+        "y@healthy load handling capacity 430W incandescent, 250W LED/CFL": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "z@can't handle three light bulbs": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "durability": {
+        "aa@stopped working after 2 months": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "ab@doesn't work with incandescent bulbs": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "ac@works perfect with 3-pendant LED light": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        }
+      },
+      "memory_function": {
+        "ad@dimmer settings holds up well and retrieves original settings": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ae@program feature returns to setting when powered off and back on": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_integration": {
+        "+": {
+          "d": [
+            11,
+            15
+          ],
+          "e": [
+            15
+          ],
+          "g": [
+            23
+          ],
+          "h": [
+            29
+          ]
+        },
+        "-": {
+          "c": [
+            3
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "d": [
+            11,
+            15
+          ],
+          "l": [
+            15
+          ],
+          "?": [
+            20,
+            24,
+            25,
+            27,
+            30,
+            31,
+            32,
+            39
+          ]
+        },
+        "-": {
+          "?": [
+            7
+          ]
+        }
+      },
+      "remote_lighting_control": {
+        "+": {
+          "u": [
+            13
+          ],
+          "?": [
+            24,
+            25
+          ]
+        }
+      },
+      "ambiance_setting": {
+        "+": {
+          "m": [
+            11
+          ],
+          "n": [
+            32
+          ],
+          "?": [
+            15,
+            23,
+            39
+          ]
+        }
+      },
+      "energy_saving": {
+        "+": {
+          "u": [
+            13
+          ]
+        }
+      },
+      "security_simulation": {
+        "+": {
+          "?": [
+            24
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "?": [
+            18,
+            23
+          ]
+        }
+      },
+      "basement_room_control": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "garage_lighting": {
+        "+": {
+          "w": [
+            27
+          ]
+        }
+      },
+      "hallway_lighting": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "bedroom_lighting": {
+        "+": {
+          "?": [
+            39
+          ]
+        }
+      },
+      "stair_lighting": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "dining_room_lighting": {
+        "+": {
+          "?": [
+            23
+          ]
+        }
+      },
+      "TV_watching": {
+        "+": {
+          "n": [
+            32
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:43.390331"
+}

@@ -1,0 +1,658 @@
+{
+  "product_title": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@not too bulky, easy to fit into box": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "appearance": {
+        "B@push top to turn on, bottom to turn off switch with dimmer adjustment on the right": {
+          "+": [
+            10
+          ]
+        },
+        "C@locator light when switch is turned off is very dim": {
+          "+": [
+            10
+          ]
+        },
+        "D@face plate makes the product look amazing": {
+          "+": [
+            20
+          ]
+        }
+      },
+      "color options": {
+        "E@only comes with white switch cover/faceplate": {
+          "-": [
+            15
+          ]
+        },
+        "F@Home Depot packaging includes color change plates": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "wiring": {
+        "G@has wires not screw in": {
+          "+": [
+            35
+          ]
+        },
+        "H@uses pigtails compared to screw terminals": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "packaging": {
+        "I@heavily used switch with missing cover, screws, wiring nuts, and instructions": {
+          "-": [
+            19
+          ]
+        },
+        "J@packaged well in mint condition": {
+          "+": [
+            44
+          ]
+        }
+      }
+    },
+    "perf": {
+      "setup ease": {
+        "a@easy to setup": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@super easy install and set up": {
+          "+": {
+            "?": [
+              4,
+              9
+            ]
+          }
+        },
+        "c@very easy to install with thorough instructions": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "d@easiest install ever, pretty much plug and play": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "e@installing was like night and day, simple instructions that just worked": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "f@super easy install if you have basic electrical ability": {
+          "+": {
+            "?": [
+              35,
+              49
+            ]
+          }
+        },
+        "g@easy to replace old dimmer": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "h@clear and easy to use instructions": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "app functionality": {
+        "i@app is intuitive with decent customization including fade speed control and LED indicator settings": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "j@app seems better than Kasa app": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "k@app detected dimmer via Bluetooth and added without issue": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "l@app has additional controls like max/min bulb intensity": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "m@software allows for lot of adjustment and customization": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "n@many controls for how it dimmed and how far it would dim": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "o@works seamless with the app": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "p@programming is tremendous pain": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "q@horrible connectivity and app, disconnects/goes offline": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "r@bluetooth operation is flawless": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "s@gained Matter support through simple app-based firmware update": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "t@added to Apple HomeKit on first try": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "u@works great with Apple HomeKit": {
+          "+": {
+            "?": [
+              4,
+              14
+            ]
+          }
+        },
+        "v@connected perfectly to Alexa and Google Nest app": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "w@works with Google Assistant just fine": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "x@works great with Matter and Home Assistant over wifi": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "y@QR code tells to contact homeowner, gives up after extended time": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "z@disconnected and will not reconnect": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "aa@kept disconnecting from Alexa in Matter mode": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ab@forgets programming, loses connectivity": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ac@disconnect from internet and randomly turn lights on and off": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ad@constantly lose connectivity": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "ae@does not support Matter out of box, requires beta program and beta firmware": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "af@would not pair with HomeKit via Matter despite troubleshooting": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "ag@connectivity issues during installation": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "ah@not connected to app": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ai@turns on and off by itself": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "dimming performance": {
+        "aj@dims to very low level around 10%": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ak@smooth and customizable turning on and off with no flickering": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "al@can control dimmer intensity through HomeKit": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "am@super fast reaction with nice dimming": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "an@causes lights to flicker even at full power": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "ao@makes light flicker ever so often": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ap@no regula muy bien la luz": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "aq@works perfectly with multiple LEDs where other switches failed": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "ar@will not work with low wattage LED lamp, flashes on and off every 2 seconds": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "durability": {
+        "as@lasted all of 2 months": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "at@switch lasted 3 days until completely stopped working": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "au@had two fail in two years": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "av@lost three switches after working well at first": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "aw@one doesn't work after 2 days": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "quality": {
+        "ax@solid dimmers with excellent quality and smart features": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ay@good product with good quality": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "az@quality seems very good": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ba@excellent quality and features": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "bb@high quality software and instructions": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "bc@no flickering, high quality, best despite extra cost": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "bd@quality was worth the extra $30": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home automation": {
+        "+": {
+          "b": [
+            4
+          ],
+          "t": [
+            8
+          ],
+          "u": [
+            14
+          ],
+          "v": [
+            28
+          ],
+          "w": [
+            38
+          ],
+          "x": [
+            40
+          ],
+          "?": [
+            6,
+            20,
+            27,
+            32,
+            37,
+            41,
+            43,
+            45,
+            46,
+            49
+          ]
+        },
+        "-": {
+          "y": [
+            3
+          ],
+          "z": [
+            5
+          ],
+          "aa": [
+            10
+          ],
+          "ab": [
+            12
+          ],
+          "ac": [
+            24
+          ],
+          "ad": [
+            34
+          ],
+          "ae": [
+            26
+          ],
+          "af": [
+            26
+          ],
+          "q": [
+            47
+          ]
+        }
+      },
+      "dimming lights": {
+        "+": {
+          "aj": [
+            10
+          ],
+          "ak": [
+            30
+          ],
+          "al": [
+            8
+          ],
+          "am": [
+            48
+          ],
+          "?": [
+            41,
+            43,
+            45,
+            46,
+            48
+          ]
+        },
+        "-": {
+          "an": [
+            13
+          ],
+          "ao": [
+            39
+          ],
+          "ap": [
+            42
+          ]
+        }
+      },
+      "replacing old switches": {
+        "+": {
+          "b": [
+            4
+          ],
+          "g": [
+            8
+          ],
+          "?": [
+            1,
+            24,
+            27,
+            28,
+            40,
+            41
+          ]
+        },
+        "-": {
+          "as": [
+            5
+          ],
+          "at": [
+            11
+          ],
+          "au": [
+            18
+          ],
+          "av": [
+            24
+          ],
+          "aw": [
+            39
+          ]
+        }
+      },
+      "exhaust fans": {
+        "+": {
+          "?": [
+            29
+          ]
+        }
+      },
+      "outdoor lighting": {
+        "+": {
+          "?": [
+            45
+          ]
+        }
+      },
+      "vacation mode/security": {
+        "+": {
+          "?": [
+            45,
+            46
+          ]
+        }
+      },
+      "media room ambient lighting": {
+        "+": {
+          "?": [
+            43
+          ]
+        }
+      },
+      "multiple LED control": {
+        "+": {
+          "aq": [
+            21
+          ]
+        }
+      },
+      "low wattage LED compatibility": {
+        "-": {
+          "ar": [
+            16
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:01.930115"
+}

@@ -1,0 +1,2578 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:28:30.112858",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08JTFN5CN",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08JTFN5CN",
+    "title": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+    "brand": "BESTTEN",
+    "model_number": NaN,
+    "price_usd": 14.99,
+    "rating": 4.1,
+    "reviews_count": 247.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Touch Activated Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B08JTFN5CN"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1NB43GDO7U4GS",
+        "text": "Funciona muy bien tanto con bombillas incandescentes como con led \"dimeables\". Buen producto.",
+        "date": "Reviewed in the United States on May 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Un buen regulador de intensidad lumínica.",
+        "userName": "Carlos",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1QV11PXSRXB1U",
+        "text": "They don't work ! One is completely D.O.A. the other when switch is off current is passing through and light is on very dim when you switch it on no change and none of functions work total garbage a waste of time and money very disappointing. Hooked up another brand switch and they work perfectly see video and photos. Definitely got to get my money back for this junk.",
+        "date": "Reviewed in the United States on April 6, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "They don't work !!!",
+        "userName": "SIS",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61YziWhHjhL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61msau4n2CL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71lK+ga6LcL._SY88.jpg"
+        ],
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/4ba7dcb6-d3f5-49f2-9b70-6b0aabbc356b/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R29SR7JUS98Y3W",
+        "text": "Great product ,just make sure the lights are dimmable.",
+        "date": "Reviewed in the United States on February 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great in a ll rooms",
+        "userName": "E.DEZENTJE \"",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1A1T652WS87L",
+        "text": "One of two switches started to occasionally not respond to all inputs after 4 months in service. Very buggy, unusable and of course, out of warranty.",
+        "date": "Reviewed in the United States on January 13, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not Reliable",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R21RNRGGOK2C0E",
+        "text": "Bought it on July 8 and installed that week. Failed on Nov 18.",
+        "date": "Reviewed in the United States on November 24, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Loved it, until it failed.",
+        "userName": "Jason",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RF67WRPJMZZEY",
+        "text": "Beautiful",
+        "date": "Reviewed in the United States on November 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "Shevon Williams",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2AAXI0NJWJUFK",
+        "text": "I used it for a light bulb and stop functioning after a short time!",
+        "date": "Reviewed in the United States on October 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Donot recommend it",
+        "userName": "mark s.",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3EXQNUN3P3EER",
+        "text": null,
+        "date": "Reviewed in the United States on September 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "Bentley Leigh",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/612SJHGwZiL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61IHnNOo2fL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61rE1Q7OEBL._SY88.jpg"
+        ],
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/8b5e128a-5d9f-4be6-857c-b1c961452981/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R6SC29UE4MESP",
+        "text": "I like this",
+        "date": "Reviewed in the United States on August 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Pefect",
+        "userName": "Gregor",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "ROY0FBHS72IG5",
+        "text": "Este producto funciona muy bien y parece de muy buena calidad",
+        "date": "Reviewed in the United States on July 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente calidad!!",
+        "userName": "Nielkalys Guaramata",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R371HVY1J3SA6L",
+        "text": "Don't waste your money on a defective product. Switch stopped working in less than two months.",
+        "date": "Reviewed in the United States on May 27, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dead after 2 months",
+        "userName": "D Reese",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R31PIMLBV1VQFI",
+        "text": "I installed this in our commode room. Great for dimming low at night for those middle of the night bathroom trips. You can make it as bright or dim as you wish. This replaces a much more expensive dimmer switch that had a slide control. The knob ultimately broke off, rendering the previous dimmer useless. The instructions are very helpful and it is very easy to install (although, being the daughter of an electrician probably helped me).",
+        "date": "Reviewed in the United States on May 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Several brightness levels",
+        "userName": "DAR-FL",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2GQ6M60PCDVEU",
+        "text": "I bought two about a year and half ago and they are still working perfectly. One controls a five light chandelier and the other four recessed over the counter lights, both in the kitchen. No flicker. Lights can get very dim at the lowest settings which is nice.",
+        "date": "Reviewed in the United States on May 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Still Working",
+        "userName": "Jake",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RO4K0DTVLZ48A",
+        "text": "Dimmer no longer works.",
+        "date": "Reviewed in the United States on April 24, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Stopped working after 3 months",
+        "userName": "Carlos M Sanchez",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3LEXJ761NR48O",
+        "text": "Purchased 3 , difficult to operate, one goes bright when ever it feels like it 😡",
+        "date": "Reviewed in the United States on February 25, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Difficult to operate, dimmer poor function",
+        "userName": "morris c. benson",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2UC76MDX6JG9K",
+        "text": "It’s good but I wished it would dim with every push. It may just be the lights, idk. But it’s an ok dimmer",
+        "date": "Reviewed in the United States on February 24, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "It’s a good dimmer",
+        "userName": "Taylor",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1UX1YMD455AUP",
+        "text": "Bought in July 2023, worked great until September 2023, then the dimmer functionality failed. Switch unit will work as a relay, or light on/off at 100%, but dimming function is non existent. I tried their power cycle, and hard reset functions, but the dinner is shot. I don’t recommend buying this unit.",
+        "date": "Reviewed in the United States on February 2, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed again",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R140B6ELYZUPT",
+        "text": "Don’t go cheap. These suck. They constantly get stuck in low power mode. Just spend the extra money and buy Lutron or some other known brand.",
+        "date": "Reviewed in the United States on January 3, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "DONT BUY",
+        "userName": "Mead/Kascee Flannell",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2AK7A6TNZ9D0K",
+        "text": "I wish holding the up/down buttons would gradually raise/lower the dimming (analogous to a slider), but nay! If you hold the up/down button for more than a fraction of a second, it jump the maximum or minimum. So you have to stand there and click away until you get the level you need",
+        "date": "Reviewed in the United States on October 24, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "just one problem: bug or feature",
+        "userName": "DrTim",
+        "numberOfHelpful": 2,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2G3BO0U5MZKT0",
+        "text": "Excellent value thank! you and will purchase from you again in the future good business to you.",
+        "date": "Reviewed in the United States on October 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "A+A",
+        "userName": "LightYears",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R26RAFXMLJJL7U",
+        "text": "No instructions",
+        "date": "Reviewed in the United States on October 21, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t buy",
+        "userName": "Brandon Looker",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "REPWVXQCA4HOJ",
+        "text": "Good product",
+        "date": "Reviewed in the United States on October 18, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "Anderson",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2PI71YFF5XX1G",
+        "text": "This dimmer is a complete piece of junk. After 2 months, it is now stuck in dim mode. It will not go brighter that 20%. Do not buy this brand! Pay a little more for quality.",
+        "date": "Reviewed in the United States on October 14, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worst Dimmer Ever - Stuck Dim",
+        "userName": "Lloyd G. Wallace III",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R18U1D1AZW6NLE",
+        "text": "Made light flicker. Trouble shooting directions did not resolve issue. I’ve replace dozen of switches, so this wasn’t my first rodeo. I bought a competing brand and installed it…worked as designed. Also thought it was odd this switch didn’t come with a face plate: steer clear of this switch!",
+        "date": "Reviewed in the United States on September 16, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Did NOT work",
+        "userName": "Verified Purchase",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R25FB40WFNVZ25",
+        "text": "Glad I made this purchase . sleek design. looks fantastic in my remodel . quick delivery & priced well.",
+        "date": "Reviewed in the United States on September 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "love it sleek design",
+        "userName": "Jose Manuel",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2JR1K8U5FRS7H",
+        "text": "Had to replace the first one I bought as it failed to work after about 2 weeks. This isn't a big deal because manufacturing defects happen. But I find the switch itself has a poor \"touch\" turning it up or down, have to click and click. There are nicer usability switches.",
+        "date": "Reviewed in the United States on September 5, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Don't recommend",
+        "userName": "Mark H., Michigan",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2KXG1Z9YG6UFY",
+        "text": "I am changing my review from 1 star to 5 stars. The seller noticed my initial review and offered to send a replacement dimmer. It arrived promptly and I just installed it. The dimmer now works perfectly and operates just I hoped it would. The new dimmer included all required hardware and printed instructions while the first one did not, so it seems the first one I got from Amazon was likely a returned unit that was defective and incomplete. The second one was fine and works well. I appreciate the seller's concern and I now take back my initial review. I am quite satisfied.",
+        "date": "Reviewed in the United States on September 1, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "second time a charm",
+        "userName": "Jeff G",
+        "numberOfHelpful": 3,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RBTGS6OJ86GQR",
+        "text": "Does not work with 3 way switch's (only buy if you are planning on a Single location) Spent a good amount of time going back and forth Trying to use jumper wire supplied to come to the conclusion that this will just not work . Brought a lutron for the 3 way and it worked great no issues",
+        "date": "Reviewed in the United States on August 27, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Does not work with 3 way switch's (only buy if you are planning on a Single location)",
+        "userName": "Review",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2J7677OD2VQF4",
+        "text": "Looks good and work exactly as described, would buy again.",
+        "date": "Reviewed in the United States on July 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R20F97ZPL1LY0V",
+        "text": "Looks good but takes too long to turn on and my bulbs buzz. May not be compatible 4 months in and the dimmers stop working",
+        "date": "Reviewed in the United States on May 2, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Takes awhile to turn on",
+        "userName": "Neville Campbell",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R46K71O3BW1QE",
+        "text": "Easy installation and excellent solution to my problems. Good value.",
+        "date": "Reviewed in the United States on March 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly as advertised",
+        "userName": "RichInDC",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1IBVCBVDUDSKT",
+        "text": null,
+        "date": "Reviewed in the United States on March 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product!",
+        "userName": "Edmundo",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61oRPQlLSGL._SY88.jpg"
+        ],
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2TN76NIFAT60T",
+        "text": "It would be nice if the on/off switch was a little bigger.",
+        "date": "Reviewed in the United States on October 1, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R25U3WZP7TPB2N",
+        "text": "This is a quality dimmer: well designed, quality materials, excellent packaging, clear and detailed instructions and an added bonus- priced about 25% below the well-known name brands for the identical product. Highly recommended.",
+        "date": "Reviewed in the United States on July 25, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great quality at a great price",
+        "userName": "Billy J",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1QIR50ILXSVT9",
+        "text": "Good quality",
+        "date": "Reviewed in the United States on April 30, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality",
+        "userName": "Lew Levy",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1U0X050QO87Z",
+        "text": "Great product! I will buy again!",
+        "date": "Reviewed in the United States on April 29, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality!",
+        "userName": "Catalin B.",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1OX4DQWCVIZIV",
+        "text": "This switch is exactly what we wanted! The dimmer goes from bright, bright to off. And it works with all different kinds of bulbs. And it he lights don’t him flicker. Great purchase!",
+        "date": "Reviewed in the United States on April 2, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Dimmer Switch!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RW9DKBHAUX79L",
+        "text": "Instructions uniquement en anglais... Produit qui n'est pas destiné (ou pas légal) pour le marché canadien. Encore une fois on se fout des lois et du respect de la langue des clients... Pas de félicitations a faire au fabricant, ni au vendeur ni a Amazon de fermer les yeux sur cette situation. De ce fait, je vais probablement retourner le produit.",
+        "date": "Reviewed in Canada on May 31, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "unilingue anglais seulement...",
+        "userName": "Mocte",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RW75SRMCAD6TM",
+        "text": "Installed 3 of these, one failed after a month, one does the hyper flicker, one is working fine.",
+        "date": "Reviewed in Canada on November 8, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Low quality Junk",
+        "userName": "L dog",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3NU4E6YQQFGG2",
+        "text": "Dimmer switch worked great for just under 11 months. It was compact and had nice features, indicator lights, dimmer control, one push on off, etc. So very disappointing it lasted less than an year! Was great price point so I guess you get what you pay for!?",
+        "date": "Reviewed in Canada on November 8, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Failed after just under 11months",
+        "userName": "Ben Lee",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1K9RDR8EG2XGM",
+        "text": "La lumière ne donne maintenant que le tiers de son intensité, que le variateur soit ajusté au maximum ou au minimum. BESTTEN variateur d`intensité numérique a fonctionné correctement pendant 18 mois.",
+        "date": "Reviewed in Canada on September 14, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Défectueux après 18 mois",
+        "userName": "mamie",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R31L1493AUFUA4",
+        "text": "Facilité d’installation et d’utilisation. Génial !",
+        "date": "Reviewed in Canada on August 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Idéal!",
+        "userName": "Patrick Sévigny Gauthier",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3IEH32WG3CAB7",
+        "text": "I bought this to replace a 3 way rocker switch. The switch looks nice and elegant. Both the power switch and dimming controls are push buttons. There is a bank of small LEDs to show the dimming level (8 altogether). The tactile response of the push buttons are crisp, but the dimming electronics is not super responsive. One needs to keep the button pressed for a second or so to change the dimming level. The maximum and minimum brightness can be adjusted since different LED bulbs respond differently. I used the switch to control a linear pendant dining table light with 4 bulbs. I put in LED bulbs from two brands, and their brightness are not the same at the low setting. Installation of the switch is not as straightforward as a mechanical 3-way switch. The way the switch works is not just cutting on or off electricity supply to the bulb. First of all, it needs active and neutral lines to power the electronics. Secondly, it uses the other 3-way rocker switch only as a digital logical gate to control the electronics in the dimmer switch and not to cut power on/off to the load. The installation therefore requires that you know which of the two switches in your circuit connects to the line (power source), and which connects to the load (to the light). You also need to be able to identify the two separate traveller 1 and 2 wires between the 3-way switches. The instructions are clear (available online) but you need to be able to follow the directions correctly. If you plan to do it yourself but are uncomfortable with such installation, this switch is not for you. I have the switch in for 3 weeks and it had been working flawlessly. My wife loves the aesthetic. I read here that some people have issues with the switch failing after a couple of months. I will update this review if it happens to me as well. But so far, I have no problem and like the build and versatility of the switch.",
+        "date": "Reviewed in Canada on July 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Elegant 3-way dimmer switch, read installation instructions before buying if this is for you to DIY",
+        "userName": "Yimco",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2LJKX3IVXEB45",
+        "text": "Une fois installé il fonctionne bien.",
+        "date": "Reviewed in Canada on July 5, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Installation différente des autres gradateurs achetés en magasin au Québec.",
+        "userName": "Lolo",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R157PPGC2LO3GC",
+        "text": "Used for dimming dining room. Works good",
+        "date": "Reviewed in Canada on March 29, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Very good",
+        "userName": "Michael Belleau",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3EH6QS896E33C",
+        "text": "Looks amazing No flickering Easy install",
+        "date": "Reviewed in Canada on January 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3TH9K2U3NZ36C",
+        "text": "great switch with nice led feature. easy to install and great quality.",
+        "date": "Reviewed in Canada on September 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "works great looks great!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3TAROCXCNH53R",
+        "text": "Bought on Amazon in June 23 2023 and the variator stop working after 3 months",
+        "date": "Reviewed in Canada on September 25, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stop working",
+        "userName": "Apa57",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R258LHXDCQAE1J",
+        "text": "Fonctionne comme prévu et offre une grande variété de réglages de gradation.",
+        "date": "Reviewed in Canada on August 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fonctionne comme prévu",
+        "userName": "Tom Biegs",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08JTFN5CN",
+        "productTitle": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 247,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1QPPKI2KYC3MR",
+        "text": "beau look marche très bien",
+        "date": "Reviewed in Canada on July 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Très beau look",
+        "userName": "Client d'Amazon",
+        "numberOfHelpful": 0,
+        "variationId": "B08JTFN5CN",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 1"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

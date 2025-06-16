@@ -1,0 +1,718 @@
+{
+  "product_title": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "internal_parts": {
+        "A@cheap_internal_parts": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "tabs": {
+        "B@little_tab_breaks_during_installation": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "switch_pivot_point": {
+        "C@switch_breaks_at_pivot_point": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "D@switch_physically_fails_to_work": {
+          "-": [
+            3
+          ]
+        },
+        "E@switch_feels_cheap": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "rocker": {
+        "F@rocker_is_very_loose_and_finicky": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "material": {
+        "G@product_is_very_light_giving_impression_of_cheap_material": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "design_type": {
+        "H@received_slim_type_dimmers_not_mentioned_in_description": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "mounting_screws": {
+        "I@mounting_screws_shown_in_image_but_none_provided": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "switch_front_mechanism": {
+        "J@front_switch_mechanism_cracked_and_wouldnt_move": {
+          "-": [
+            22
+          ]
+        }
+      },
+      "color": {
+        "K@color_is_slightly_off_white_compared_to_snow_white_of_typical_wall_plates": {
+          "-": [
+            30
+          ]
+        },
+        "L@color_is_ivory_not_white": {
+          "-": [
+            33
+          ]
+        }
+      },
+      "ears": {
+        "M@large_ears_stick_out_on_both_sides_preventing_installation_of_two_next_to_each_other": {
+          "-": [
+            33
+          ]
+        }
+      },
+      "wire_connection": {
+        "N@prefer_direct_wire_to_side_screws_rather_than_wire_nut_connection": {
+          "-": [
+            33
+          ]
+        }
+      },
+      "switches": {
+        "O@soft_mushy_switches_after_installing": {
+          "-": [
+            36
+          ]
+        }
+      },
+      "finish": {
+        "P@nice_finish": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "gang_plates": {
+        "Q@multiple_gang_plates_dont_fit_flush": {
+          "-": [
+            49
+          ]
+        }
+      }
+    },
+    "perf": {
+      "failure_rate": {
+        "a@all_fail_in_less_than_a_year_some_in_two_weeks": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@one_falls_apart_during_installation": {
+          "-": {
+            "B": [
+              1
+            ]
+          }
+        },
+        "c@all_5_failed_within_3_years": {
+          "-": {
+            "C": [
+              2
+            ]
+          }
+        },
+        "d@3_out_of_6_broken_after_4_years": {
+          "-": {
+            "D": [
+              3
+            ]
+          }
+        },
+        "e@one_switch_completely_failed_after_installation": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "f@one_worked_for_week_another_6_months_two_made_it_over_year": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "g@worked_for_two_weeks_then_failed": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "h@4_out_of_6_failed_and_started_fire": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "i@about_10_percent_of_switches_fail": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "j@4_pieces_malfunction_after_installation_out_of_5": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "k@4_out_of_15_dimmer_sliders_stopped_working": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "l@two_switches_fell_apart_after_8_months": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "dimming_function": {
+        "m@dimmer_fails": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "n@does_not_properly_dim_light": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "o@dimmer_doesnt_work_smoothly_after_installation": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "p@dimming_feature_works_well": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "q@dimmer_slide_sticks": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "r@will_not_start_leds_on_low_setting": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "s@unable_to_control_led_becomes_overpriced_switch": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "t@ones_with_issues_dim_all_way_down_to_nothing_others_dim_to_20_percent": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "u@dimming_function_does_not_work": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "v@dimmer_works_well_with_four_led_lights": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "w@dimmer_is_easy_to_use": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "switching_operation": {
+        "x@lights_still_turn_on_and_off_but_dimmer_fails": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "y@switch_becomes_very_hard_to_use_after_installation": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "z@rocker_takes_little_effort_to_mistakenly_switch_off_when_trying_to_switch_on": {
+          "-": {
+            "F": [
+              9
+            ]
+          }
+        },
+        "aa@2_switches_have_issues_need_to_push_hard_on_top_to_make_light_come_on": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ab@delay_in_turning_on_sometimes_turn_on_after_clicking_few_times": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "ac@would_turn_off_fine_but_had_to_turn_on_off_multiple_times_before_actually_turning_on": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ad@switches_often_fail_to_turn_on_light_when_flipped": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "ae@turning_on_and_off_is_not_smooth": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "af@when_on_min_turning_on_doesnt_work_until_move_button_to_high_light": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "ag@when_dimmer_on_lowest_setting_lights_dont_turn_on": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "ah@wouldnt_turn_on_off_unless_really_flicked_switch_suddenly": {
+          "-": {
+            "O": [
+              36
+            ]
+          }
+        },
+        "ai@need_to_push_toggle_hardly_to_turn_light_on": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "aj@some_dont_click_on_and_off_first_and_second_time": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "electrical_safety": {
+        "ak@arced_when_trying_to_switch_light_on": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "al@sparked_and_arced_then_blew_out_ceiling_lights": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "am@may_get_flickering_with_certain_led_lights_when_dimmed": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "an@flicker_whenever_there_is_surge_in_house_circuit": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "ao@lights_always_flickered": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ap@if_another_light_on_same_circuit_lights_would_flicker": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "aq@could_not_get_these_to_stop_flickering": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "buzzing": {
+        "ar@buzzing_sound_they_made": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "as@cause_fan_motor_to_buzz": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "at@compatible_with_most_wiring_layouts_with_few_exceptions": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "au@handles_3_way_switch_with_no_issue": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "av@not_good_for_led_bulbs_without_at_least_100w_power_draw": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "aw@dont_work_with_led_bulbs": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "ax@may_not_work_well_with_fixture_that_has_many_bulbs": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "ay@goes_from_full_bright_to_full_dim_with_slight_move_of_slider": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "az@when_on_lower_setting_lights_sometimes_randomly_go_out": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "installation": {
+        "ba@easy_to_install_if_have_basic_handy_man_skills": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "bb@easy_to_install": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "bc@install_very_standard": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "bd@installed_easy": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "be@switch_is_easy_to_install": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "bf@simple_installation_instructions": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "bg@easy_hook_up": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "bh@takes_about_10_15_minutes_per_switch": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        }
+      },
+      "appearance": {
+        "bi@look_great": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "bj@dimmers_look_great": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "durability": {
+        "bk@delivered_as_broken_and_not_functional": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "quality": {
+        "bl@feel_very_cheap": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "bm@very_low_quality": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "bn@feel_terrible": {
+          "-": {
+            "O": [
+              36
+            ]
+          }
+        },
+        "bo@cheaply_made": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "led_dimming": {
+        "+": {
+          "p": [
+            7
+          ],
+          "v": [
+            35
+          ],
+          "w": [
+            37
+          ]
+        },
+        "-": {
+          "m,n,o,q,r,s,t,u": [
+            0,
+            1,
+            6,
+            14,
+            16,
+            17,
+            18,
+            34
+          ],
+          "am,aq": [
+            7,
+            39
+          ]
+        }
+      },
+      "house_lighting": {
+        "+": {
+          "ba,bb,bc,bd,be,bf,bg,bh": [
+            7,
+            11,
+            12,
+            20,
+            23,
+            32,
+            35,
+            46
+          ]
+        },
+        "-": {
+          "a,c,d,e,x,y,z,aa,ab,ac,ad,ae,af,ag,ah,ai,aj": [
+            0,
+            2,
+            3,
+            19,
+            6,
+            9,
+            18,
+            20,
+            22,
+            25,
+            28,
+            31,
+            36,
+            44,
+            48
+          ]
+        }
+      },
+      "3_way_circuits": {
+        "+": {
+          "au,bf": [
+            9,
+            32
+          ]
+        }
+      },
+      "tone_down_lights": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "fan_control": {
+        "-": {
+          "as": [
+            42
+          ]
+        }
+      },
+      "house_rebuild_after_fire": {
+        "-": {
+          "i,aj,bo": [
+            48
+          ]
+        }
+      },
+      "replacing_old_switches": {
+        "+": {
+          "bh": [
+            46
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:36.493387"
+}

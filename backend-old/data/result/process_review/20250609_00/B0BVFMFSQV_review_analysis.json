@@ -1,0 +1,362 @@
+{
+  "product_title": "ThunderWay Single Pole Decorator Wall Light Switch with Wall Plate, 15A 120V/277V, On/Off Paddle Switch, Residential Grade - UL Listed, White (10)",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 38,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks sleek": {
+          "+": [
+            1
+          ]
+        },
+        "B@looks great": {
+          "+": [
+            7,
+            17,
+            33
+          ]
+        },
+        "C@looks good": {
+          "+": [
+            18
+          ]
+        },
+        "D@looks modern and beautiful": {
+          "+": [
+            10
+          ]
+        },
+        "E@nice appearance": {
+          "+": [
+            23
+          ]
+        }
+      },
+      "material": {
+        "F@feels sturdy": {
+          "+": [
+            1
+          ]
+        },
+        "G@good material quality": {
+          "+": [
+            3
+          ]
+        },
+        "H@high quality material": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "I@nice feel to the switch": {
+          "+": [
+            1
+          ]
+        },
+        "J@nice feeling switch": {
+          "+": [
+            14
+          ]
+        },
+        "K@nice soft operation that is smooth and quiet": {
+          "+": [
+            15
+          ]
+        },
+        "L@squeaks when pushed": {
+          "-": [
+            6
+          ]
+        },
+        "M@spring inside is loud": {
+          "-": [
+            25
+          ]
+        },
+        "N@rocker clicks quite loudly when pressing on/off": {
+          "-": [
+            28
+          ]
+        }
+      },
+      "cover_plate": {
+        "O@wall plate is included": {
+          "+": [
+            5
+          ]
+        },
+        "P@cheap cover": {
+          "-": [
+            19
+          ]
+        },
+        "Q@faceplate color doesn't match the switch": {
+          "-": [
+            30
+          ]
+        },
+        "R@comes with its own wall plate": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "size": {
+        "S@perfect fit": {
+          "+": [
+            11
+          ]
+        },
+        "T@perfect size": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "grade": {
+        "U@spec grade switch": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "light_feature": {
+        "V@has light touch that elevates the product": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works as expected": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "b@works perfectly": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "c@works as intended": {
+          "+": {
+            "?": [
+              19,
+              36
+            ]
+          }
+        },
+        "d@works as advertised": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "e@just works": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "f@works great": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "g@two switches don't work and caused power outage": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "installation": {
+        "h@easy to install": {
+          "+": {
+            "?": [
+              0,
+              1,
+              4,
+              7,
+              17,
+              28,
+              34,
+              35,
+              36
+            ]
+          }
+        },
+        "i@no trouble installing": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "j@installation went smoothly": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "durability": {
+        "k@working fine so far": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "l@so far so good": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "m@works great so far": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "noise": {
+        "n@smooth and quiet operation": {
+          "+": {
+            "K": [
+              15
+            ]
+          }
+        },
+        "o@squeaks when operated": {
+          "-": {
+            "L": [
+              6
+            ]
+          }
+        },
+        "p@loud spring noise": {
+          "-": {
+            "M": [
+              25
+            ]
+          }
+        },
+        "q@clicks quite loudly": {
+          "-": {
+            "N": [
+              28
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_renovation": {
+        "+": {
+          "h": [
+            13,
+            15,
+            24
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "bedroom_installation": {
+        "+": {
+          "?": [
+            19
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "modular_home_installation": {
+        "+": {
+          "b": [
+            20
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "replacing_old_switches": {
+        "+": {
+          "h": [
+            18,
+            24
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "replacing_timer_switches": {
+        "+": {
+          "?": [
+            37
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "whole_house_replacement": {
+        "+": {
+          "D,V": [
+            10
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "making_house_look_modern": {
+        "+": {
+          "D,V": [
+            10
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "bulk_purchase_for_multiple_projects": {
+        "+": {
+          "?": [
+            25,
+            37
+          ]
+        },
+        "-": {
+          "p": [
+            25
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:53:57.478251"
+}

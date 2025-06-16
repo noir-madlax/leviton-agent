@@ -1,0 +1,180 @@
+{
+  "product_title": "ELEGRP Matte Black 3 Way Decorative Light Switch with Plate, 15Amp, 120-277 Volt, AC Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential Grade, w/Wall Plate, UL Listed (10 Pack)",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 12,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks awesome": {
+          "+": [
+            1
+          ]
+        },
+        "B@looks fancy": {
+          "+": [
+            3
+          ]
+        },
+        "C@modern appearance": {
+          "+": [
+            5,
+            9
+          ]
+        },
+        "D@luxury look": {
+          "+": [
+            6
+          ]
+        },
+        "E@sleek appearance": {
+          "+": [
+            7
+          ]
+        },
+        "F@great and modern look": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "dimensions": {
+        "G@thinner than standard white switches": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "finish": {
+        "H@matte finish that matches covers perfectly": {
+          "+": [
+            11
+          ]
+        },
+        "I@inconsistent finish - trim is gloss black, switch is matte but sparkly, plate cover is matte black but doesn't match": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "components": {
+        "J@missing screws": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "sound": {
+        "K@audible click when switching on/off": {
+          "+": [
+            11
+          ]
+        }
+      },
+      "build_quality": {
+        "L@spot on build quality": {
+          "+": [
+            11
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@not quiet operation": {
+          "-": {
+            "K": [
+              11
+            ]
+          }
+        },
+        "c@clicks to on off position": {
+          "+": {
+            "K": [
+              11
+            ]
+          }
+        },
+        "d@not flimsy switching": {
+          "+": {
+            "K": [
+              11
+            ]
+          }
+        }
+      },
+      "installation": {
+        "e@easy installation": {
+          "+": {
+            "?": [
+              3,
+              7
+            ]
+          }
+        }
+      },
+      "quality_comparison": {
+        "f@superior to big box brands": {
+          "+": {
+            "L": [
+              11
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_modernization": {
+        "+": {
+          "C": [
+            5
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "apartment_upgrade": {
+        "+": {
+          "D": [
+            6
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "updating_old_switches": {
+        "+": {
+          "F": [
+            9
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "bedroom_application": {
+        "-": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "bulk_purchasing_requirement": {
+        "-": {
+          "?": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:10.734143"
+}

@@ -1,0 +1,2199 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:36:38.908854",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08SJ5Q6B9",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08SJ5Q6B9",
+    "title": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 5.65,
+    "rating": 4.7,
+    "reviews_count": 437.0,
+    "category": "Light Switches",
+    "product_segment": "Three Way Multi-Location Control Switches",
+    "product_url": "https://www.amazon.com/dp/B08SJ5Q6B9"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3BUH9XPKLM8UP",
+        "text": "Good fit, quality, functional design. Recommend.",
+        "date": "Reviewed in the United States on April 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Value.",
+        "userName": "Goldie",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2Z9LJS39LYTQV",
+        "text": "Ok Switch , was missing the top box screw . Other wise they look like a great quality product. Highly recommend.",
+        "date": "Reviewed in the United States on April 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "A+",
+        "userName": "Coexist",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RJRNGFJCF21DH",
+        "text": "Bought to replace toggles switches in my house. Works well and have zero regrets.",
+        "date": "Reviewed in the United States on February 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Basic switch that works well",
+        "userName": "Todd",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R128DUHT3ZKKRO",
+        "text": "I replaced all the light switches in my house with these, and I couldn’t be happier! They’re reasonably priced, easy to install, and work perfectly. A great upgrade for a modern look without breaking the bank.",
+        "date": "Reviewed in the United States on December 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Mimi15",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51+Mqi9yCnL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R39NKVXV48Y0RL",
+        "text": "These light switches were simple to install and work really well. They’re much easier to clean and look nicer than the older, traditional switches we used to have. They make a slight click when pressed but nothing that has bothered anyone.",
+        "date": "Reviewed in the United States on December 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Robert N. Jones",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3a54d344-a7e1-4511-bcf6-34485b9a6ddb/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2G8EB6AQCC8D4",
+        "text": "Quality switch. Bought more after installing my first one. Great replacement switches for my 25+ year old switches that were looking faded",
+        "date": "Reviewed in the United States on December 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Beautiful Smooth Finish. Easy to install",
+        "userName": "Louis A. Hoch",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61Wh4USQsjL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RTLDMOPK37RYZ",
+        "text": "this is a well made switch.",
+        "date": "Reviewed in the United States on June 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "well made switch",
+        "userName": "James V.",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2EL9ML2QKJSH2",
+        "text": "These switches work great! Quality part and easy to install.",
+        "date": "Reviewed in the United States on June 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value quality part",
+        "userName": "Jon Vis",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2VYJUEE9XRBCN",
+        "text": "Good quality switch from Leviton. Attractive too.",
+        "date": "Reviewed in the United States on May 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good 3 way switch. Love Leviton products.",
+        "userName": "Richard Chapman",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1AZ2B6YJI1I46",
+        "text": "Was what I expected",
+        "date": "Reviewed in the United States on March 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "Mat T",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2M8ZY5VYOWY4G",
+        "text": "Replacing some old switches, and used a number of these on the 3-way circuits.",
+        "date": "Reviewed in the United States on January 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good 3-way switch",
+        "userName": "Old Engineer",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1BXA706D8CECF",
+        "text": "Does exactly what a 3-way switch should do. Just be sure to review the wiring diagram on the inside of the package. The load post was in a different location than I was used to, so it would be easy to wire it incorrectly.",
+        "date": "Reviewed in the United States on November 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great, Just Be Sure to Review the Wiring Diagram on the Package",
+        "userName": "AFHart",
+        "numberOfHelpful": 2,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RF7XY62ID5IFI",
+        "text": "Leviton is good company and good product. However, seller not so good. This is the last purchase from this seller. See pictures.",
+        "date": "Reviewed in the United States on October 27, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Seller",
+        "userName": "FredM.",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71PCZn0OzFL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71VGSodeA0L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71veaQs5f4L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3B946AW3O39ZC",
+        "text": "outside lights for security",
+        "date": "Reviewed in the United States on October 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "programmable",
+        "userName": "Satisfied",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2UGI5Z6ZYUOLI",
+        "text": "Excellent switch. Function, fit, quality and ease of installation are enough reasons to go with Leviton. Same for their 3 Way dimmer. Both installed in 15 minutes",
+        "date": "Reviewed in the United States on September 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Leviton rocker light switch",
+        "userName": "Update Junk. Worse now",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R362SPWWNH99CR",
+        "text": "This switch from Leviton is easy to install and looks great. Leviton makes some of the best electrical components around.",
+        "date": "Reviewed in the United States on September 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Leviton makes a great product",
+        "userName": "Chad Anderson",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2EDED7N1HS6N4",
+        "text": "they don't last forever, especially in high frequency use (bathrooms)",
+        "date": "Reviewed in the United States on July 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "replacement",
+        "userName": "Robert In Houston",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R6HN6V8F4QXBI",
+        "text": "These switches are GREY, not WHITE!!",
+        "date": "Reviewed in the United States on July 12, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Grey switches labelled White!!",
+        "userName": "Ali",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61182VlRu0L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61X3tq2trwL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3GP5XRNK01SFP",
+        "text": "Replaced a broken switch. Instructions were easy to follow.",
+        "date": "Reviewed in the United States on June 21, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "East to install",
+        "userName": "Mary R",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R10DRAOLEXZEQR",
+        "text": "I took a chance seeing some images appeared to not have the branding on it. It DOES have the name stamped on.",
+        "date": "Reviewed in the United States on April 16, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Brand Stamped",
+        "userName": "Ming",
+        "numberOfHelpful": 7,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1OWRLP8V1Z9MO",
+        "text": "The switches turn the lights on and off. Seem to work great.",
+        "date": "Reviewed in the United States on April 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Turn the lights on.",
+        "userName": "Trebbleshooter",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RO5DV1A6999UW",
+        "text": "Good product",
+        "date": "Reviewed in the United States on March 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Satisfied",
+        "userName": "luis caldas",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2A7Q1IFAWXHVM",
+        "text": "Easy replacement and looks better than the replaced rocker switch",
+        "date": "Reviewed in the United States on January 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fit and Form as expected",
+        "userName": "bprob",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2F9W8VKEWYPRB",
+        "text": "Yup, it turns lights on and off :-)",
+        "date": "Reviewed in the United States on January 1, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works!",
+        "userName": "FYI",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1CXXSYMDQ1P3G",
+        "text": "Top shelf product",
+        "date": "Reviewed in the United States on December 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great line of products",
+        "userName": "tom o. IL",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1ADL3HT385714",
+        "text": "Changed out all the switches in my house and love them",
+        "date": "Reviewed in the United States on December 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Wade posey",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R11TXY4SH3DCD6",
+        "text": "Only received 1 of 4",
+        "date": "Reviewed in the United States on November 9, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Only received 1 of 4",
+        "userName": "T T Smirniotopoulos",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R23UNY9IRP7JUS",
+        "text": "Leviton has quickly become my go to for switches and outlets. Their quality, color, durability and performance places them atop the competition. These switches are awesome! Nice satisfying click, larger surface area and great neutral white color. I find the decora style give a nice modern touch. They are also easier to configure into 2 gang and 3 gang applications. The decora wall plate gives option for light switches, outlets, pass through bristles and fan switches. No more counting wall plates and ending up with a pile of extras. You get just one style of wall plate for your whole project! This is a great option, especially for people adding smart switches to their home.",
+        "date": "Reviewed in the United States on October 16, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Less cowbell, more decora",
+        "userName": "Skyler and Jessica Lewis",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1HD6ZJGNNKONU",
+        "text": "Works as it should.",
+        "date": "Reviewed in the United States on September 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as it should",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2OE4QQR3T8BMU",
+        "text": "Needed to replace the light switches in my apartment. The Orange store is accross town and they cost more there. These are the same as the ones sold there, only less money, and I didn't have to drive across town to get them. So far there are no issues, the swithes are quiet, and work well.",
+        "date": "Reviewed in the United States on August 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Save yourself some time and order them here",
+        "userName": "nickatnite256",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RO8V73XS0ZF0Q",
+        "text": "Fast and good quality",
+        "date": "Reviewed in the United States on March 11, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality",
+        "userName": "Cole Daniel",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R30T8WETD8KFJS",
+        "text": "As described",
+        "date": "Reviewed in Canada on September 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Norm Macdonald",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2HQEE08HJNI0E",
+        "text": "It works as it should ! Overnight delivery👍 and price is great 👌",
+        "date": "Reviewed in Canada on August 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product !",
+        "userName": "Amanie",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RTLPI48G7IMG6",
+        "text": "Bien, mais pas beaucoup de qualité",
+        "date": "Reviewed in Canada on July 15, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Interrupteur",
+        "userName": "Michel Houle",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R6IA4UX13ZWIH",
+        "text": "I bought this because every hardware store in my town was sold out. I spent many years at an electrical contracting business and know Leviton is quality and you pay more for it. (But in ten years it will still work) Anyway, this switch is exactly as advertised. But antimicrobial? It is plastic.",
+        "date": "Reviewed in Canada on April 29, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Antimicrobial?",
+        "userName": "Rick",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R272CVW8DOFY9U",
+        "text": "Easy to install. Price could be lower",
+        "date": "Reviewed in Canada on March 28, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Great buy",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RMO5XX8YZJ6Q4",
+        "text": "Facile d’installation. Il faut s’y connaître en électricité et avoir un fil a 3 voies d’installer. La seule chose qui “m’énerve” c’est qu’il y a une des 2 switchs que lorsque la lumière est allumée, la prise principale est a “off” (par en bas). Je suis certaine que cela s’arrange facilement, mais je n’ai pas pris le temps de regarder et de faire le changement!",
+        "date": "Reviewed in Canada on March 27, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fonctionne bien",
+        "userName": "Johanie",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1X5OMVZVP0YQN",
+        "text": "There is raised lettering on the face of the switch that is not shown in any of the product pictures.",
+        "date": "Reviewed in Canada on March 1, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Switch has Leviton Branding on the Face",
+        "userName": "Anthony K Bergelt",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3CGUD8C7A925K",
+        "text": "Its leviton. Assume the quality is there. it is.",
+        "date": "Reviewed in Canada on January 15, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Leviton -- quality item.",
+        "userName": "Brian",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3HRE6VV8A5PR2",
+        "text": "Little on the pricey side but they work really well, I had to replace two older 3 Way switches and after a couple of months with no issues I decided to go ahead and change a few more in the house. These are pretty good quality and built to last from what I can tell so far. Totally worth it.",
+        "date": "Reviewed in Canada on January 4, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work well and well built",
+        "userName": "Faraz S.",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3PHUOQ1OF2DLO",
+        "text": "I replaced my old 3-way switches with these Decora style switches. However the three screws to tie down the power wires are in a different layout then the old switch, and my wires were not coded to let me know which wire was the hot, and which was the traveler to the other switch, so I had to guess. It took two tries to get it right. Fortunately, as my electrician brother told me later, there was no danger of blowing myself up... the switches would either work, half work, or not work at all depending on where the wires were attached.",
+        "date": "Reviewed in Canada on November 29, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Different topology",
+        "userName": "Daryl S",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ5Q6B9",
+        "productTitle": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 439,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 84
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RL2O149HKDTAZ",
+        "text": "Remplacement d’un autres",
+        "date": "Reviewed in Canada on October 25, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Très dispendieux sur votre site",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08SJ5Q6B9",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 42,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

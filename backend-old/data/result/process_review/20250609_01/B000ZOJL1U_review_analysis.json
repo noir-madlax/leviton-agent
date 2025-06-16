@@ -1,0 +1,291 @@
+{
+  "product_title": "Leviton 5243-W 15 Amp, 120/277 Volt, Duplex Style Two 3-Way Combination Switch, Commercial Grade, White",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 45,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@space-saving design that fits two 3-way switches in one gang box": {
+          "+": [
+            1,
+            3,
+            23,
+            29,
+            30
+          ]
+        }
+      },
+      "housing": {
+        "B@plastic housing with retaining bracket": {
+          "-": [
+            1
+          ]
+        },
+        "C@riveted retaining bracket in rear center": {
+          "-": [
+            1
+          ]
+        },
+        "D@plastic retaining clips for top and bottom bindings": {
+          "-": [
+            1
+          ]
+        },
+        "E@plastic cover that can separate easily": {
+          "-": [
+            27
+          ]
+        }
+      },
+      "construction": {
+        "F@sturdy construction": {
+          "+": [
+            9,
+            33
+          ]
+        },
+        "G@solid feel": {
+          "+": [
+            20,
+            33
+          ]
+        },
+        "H@feels cheap": {
+          "-": [
+            26,
+            28
+          ]
+        },
+        "I@square and sharp switch edges": {
+          "-": [
+            28
+          ]
+        }
+      },
+      "switching_mechanism": {
+        "J@crisp click when switching": {
+          "+": [
+            21,
+            44
+          ]
+        },
+        "K@switches feel hard and cheap when operating": {
+          "-": [
+            26
+          ]
+        },
+        "L@softness at either end of switching motion": {
+          "+": [
+            44
+          ]
+        }
+      },
+      "configuration": {
+        "M@metal tab connecting the two switches": {
+          "+": [
+            15,
+            19,
+            24,
+            27
+          ]
+        },
+        "N@opposite ON positions for top and bottom switches": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "appearance": {
+        "O@bright white color": {
+          "+": [
+            21,
+            32
+          ]
+        },
+        "P@low profile corners": {
+          "-": [
+            41
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works perfectly as intended": {
+          "+": {
+            "?": [
+              0,
+              2,
+              5,
+              10,
+              14,
+              16,
+              18,
+              20,
+              22,
+              31,
+              34,
+              37,
+              38,
+              39
+            ]
+          }
+        },
+        "b@allows control of two separate circuits": {
+          "+": {
+            "A": [
+              2,
+              10,
+              23
+            ]
+          }
+        },
+        "c@housing pops out during installation under wire compression": {
+          "-": {
+            "B,C,D": [
+              1
+            ]
+          }
+        }
+      },
+      "installation": {
+        "d@easy to install": {
+          "+": {
+            "?": [
+              4,
+              8,
+              13,
+              20,
+              22
+            ]
+          }
+        },
+        "e@difficult installation due to housing design issues": {
+          "-": {
+            "B,C,D": [
+              1
+            ]
+          }
+        },
+        "f@requires careful handling of many wires in tight space": {
+          "-": {
+            "A": [
+              1,
+              23
+            ]
+          }
+        }
+      },
+      "durability": {
+        "g@long-lasting performance": {
+          "+": {
+            "F": [
+              33
+            ]
+          }
+        },
+        "h@feels like it won't break easily": {
+          "+": {
+            "L": [
+              44
+            ]
+          }
+        }
+      },
+      "availability": {
+        "i@not available in big box stores": {
+          "+": {
+            "?": [
+              7,
+              9,
+              11,
+              14,
+              17,
+              23,
+              32,
+              38
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "cabinet lighting control": {
+        "+": {
+          "b": [
+            2
+          ]
+        }
+      },
+      "apartment remodeling": {
+        "+": {
+          "a": [
+            5
+          ]
+        }
+      },
+      "creating extra space for timer installation": {
+        "+": {
+          "A": [
+            3
+          ]
+        }
+      },
+      "home remodeling projects": {
+        "+": {
+          "a,O": [
+            21
+          ]
+        }
+      },
+      "replacing broken switches in homes": {
+        "+": {
+          "a": [
+            22,
+            25,
+            37
+          ]
+        }
+      },
+      "controlling separate light circuits": {
+        "+": {
+          "b": [
+            10,
+            23
+          ]
+        }
+      },
+      "old house renovations": {
+        "+": {
+          "a": [
+            19,
+            25
+          ]
+        }
+      },
+      "kitchen lighting installation": {
+        "+": {
+          "a": [
+            35,
+            43
+          ]
+        }
+      },
+      "new construction replacement": {
+        "+": {
+          "g": [
+            33
+          ]
+        }
+      },
+      "avoiding need for bigger electrical box": {
+        "+": {
+          "A": [
+            30
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:13.916831"
+}

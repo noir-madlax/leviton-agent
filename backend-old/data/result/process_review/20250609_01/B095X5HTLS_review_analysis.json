@@ -1,0 +1,580 @@
+{
+  "product_title": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@large body difficult to fit in electrical box": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "design": {
+        "B@sleek white design blends with home decor": {
+          "+": [
+            38
+          ]
+        },
+        "C@compact size fits standard wall box": {
+          "+": [
+            38
+          ]
+        },
+        "D@solidly made construction": {
+          "+": [
+            35
+          ]
+        },
+        "E@nice design appearance": {
+          "+": [
+            35
+          ]
+        }
+      },
+      "led_indicator": {
+        "F@soft LED indicator light not too bright or distracting": {
+          "+": [
+            38
+          ]
+        },
+        "G@cannot change LED color unlike other brands": {
+          "-": [
+            48
+          ]
+        }
+      },
+      "physical_switch": {
+        "H@high quality feel of physical switch and dimmer": {
+          "+": [
+            10
+          ]
+        },
+        "I@gentle tap operation for on/off and brightness control": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "mounting": {
+        "J@does not physically mount well with other switches creating ugly or unsafe mount": {
+          "-": [
+            49
+          ]
+        }
+      },
+      "wiring_terminals": {
+        "K@only one traveler wire terminal instead of standard two": {
+          "-": [
+            37,
+            43
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0,
+              2,
+              9,
+              12,
+              22,
+              32,
+              41,
+              42,
+              46
+            ]
+          }
+        },
+        "b@quick installation taking 5 minutes for first and 2 minutes for second": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "c@surprisingly simple installation process": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "d@hard to install for 3-way requiring rewiring": {
+          "-": {
+            "K": [
+              30
+            ]
+          }
+        },
+        "e@requires rewiring and changing traveler wire configuration": {
+          "-": {
+            "K": [
+              21,
+              30
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "f@pairs automatically with Alexa": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "g@Alexa app immediately recognizes switch": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "h@very easy Alexa setup": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "i@connects to WiFi and links to Alexa without issues": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "j@strong and reliable 2.4 GHz WiFi connection": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "k@stops responding to Alexa for days every few weeks": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "l@unable to pair and setup despite multiple attempts": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "m@Frustration Free setup doesn't work, QR code not recognized": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "n@requires 2.4GHz router not 5GHz": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "o@Alexa won't recognize switch": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "dimming_function": {
+        "p@works flawlessly": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "q@dims just fine with LED bulbs": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "r@excellent dimming function with voice commands": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "s@doesn't dim enough, 1% setting only dims to about 60%": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "t@doesn't dim on verbal commands well": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "u@dimmer does not work with flood lights": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "v@at low settings lights flicker sometimes": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "w@causes buzzing when fixture is lit": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "x@dimming causes switch to throw fault and turn off": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "y@works great and reliable": {
+          "+": {
+            "?": [
+              12,
+              14,
+              31
+            ]
+          }
+        },
+        "z@works beautifully, totally quiet": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "aa@dead on arrival, non-functional": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "ab@defective, turns on randomly by itself": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "ac@intermittent issues and most failed in few months": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "ad@broken, lights blinking after 7 months": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "ae@inconsistent performance, changes dim level without warning": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "af@unreliable, stops responding every few weeks": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "ag@all switches failed around same time after one year": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ah@failed after one year": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "ai@turns on by itself all the time": {
+          "-": {
+            "?": [
+              29,
+              39,
+              42
+            ]
+          }
+        },
+        "aj@keeps turning on by itself without reason": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "3way_operation": {
+        "ak@works perfectly once wiring sorted": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "al@functions well for most things": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "am@wiring was tricky but works perfectly after setup": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "an@standard switch must be toggled twice below 75% brightness": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "ao@remote switch hit and miss": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "ap@did not work properly from beginning": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "aq@never able to get switch to function as designed": {
+          "-": {
+            "K": [
+              37
+            ]
+          }
+        },
+        "ar@no combination of wiring works properly": {
+          "-": {
+            "K": [
+              27
+            ]
+          }
+        },
+        "as@non-smart switch works sometimes, other times needs multiple toggles": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "memory_function": {
+        "at@does not return to previous dim level, always starts at full brightness": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "durability": {
+        "au@hope it lasts a long time": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "av@didn't last long, failed after one year": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_automation": {
+        "+": {
+          "f,g,h,i": [
+            0,
+            9,
+            10,
+            38
+          ],
+          "y": [
+            12,
+            14,
+            31
+          ]
+        },
+        "-": {
+          "k,l": [
+            20,
+            26
+          ]
+        }
+      },
+      "voice_control_with_alexa": {
+        "+": {
+          "f,g,h,r": [
+            0,
+            9,
+            10,
+            38
+          ],
+          "y": [
+            46
+          ]
+        },
+        "-": {
+          "k,t,o": [
+            20,
+            18,
+            41
+          ]
+        }
+      },
+      "replacing_existing_dimmer_switches": {
+        "+": {
+          "a,p": [
+            0,
+            9
+          ],
+          "c": [
+            38
+          ]
+        },
+        "-": {
+          "aa": [
+            4
+          ]
+        }
+      },
+      "3way_switch_installation": {
+        "+": {
+          "ak,al,am": [
+            2,
+            23
+          ],
+          "c": [
+            38
+          ]
+        },
+        "-": {
+          "d,e,an,ao,ap,aq,ar,as": [
+            19,
+            27,
+            30,
+            36,
+            37,
+            44
+          ]
+        }
+      },
+      "ceiling_can_lights_control": {
+        "+": {
+          "h,r": [
+            10
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "led_lighting_control": {
+        "+": {
+          "q": [
+            23
+          ]
+        },
+        "-": {
+          "v,w": [
+            37,
+            44
+          ]
+        }
+      },
+      "flood_lights_control": {
+        "+": {
+          "?": []
+        },
+        "-": {
+          "u": [
+            41
+          ]
+        }
+      },
+      "kitchen_dimmer_replacement": {
+        "+": {
+          "a": [
+            42
+          ]
+        },
+        "-": {
+          "ai,aj": [
+            42
+          ]
+        }
+      },
+      "multiple_room_installation": {
+        "+": {
+          "y": [
+            31
+          ]
+        },
+        "-": {
+          "ac": [
+            16
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:45.190562"
+}

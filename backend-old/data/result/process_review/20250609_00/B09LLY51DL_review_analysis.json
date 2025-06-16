@@ -1,0 +1,499 @@
+{
+  "product_title": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Size": {
+        "A@Switch base is really big making connections difficult to fit in electrical box": {
+          "-": [
+            17,
+            33,
+            41
+          ]
+        }
+      },
+      "Appearance": {
+        "B@Simple, modern sleek look": {
+          "+": [
+            4
+          ]
+        },
+        "C@Look nice": {
+          "+": [
+            30
+          ]
+        },
+        "D@Well made complete set with cover plates and wire nuts": {
+          "+": [
+            47
+          ]
+        },
+        "E@Beautiful instrument and well manufactured": {
+          "+": [
+            26
+          ]
+        }
+      },
+      "Face plate": {
+        "F@Face plate has broken off from the switch": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "Touch interface": {
+        "G@Touch plate for dimming seems awkward - causes unintended dimming level changes": {
+          "-": [
+            35
+          ]
+        },
+        "H@Can slide finger instead of clicking for dimming": {
+          "+": [
+            13
+          ]
+        },
+        "I@Switch responds well to touch": {
+          "+": [
+            3
+          ]
+        },
+        "J@Physical dimmer feature is hit or miss - sometimes registers touch, sometimes doesn't": {
+          "-": [
+            48
+          ]
+        }
+      },
+      "Indicator light": {
+        "K@Light on switch symbol should be brighter when light is on": {
+          "-": [
+            17
+          ]
+        },
+        "L@Status light won't turn on when switch is dead": {
+          "-": [
+            15
+          ]
+        }
+      },
+      "Wiring requirements": {
+        "M@Requires neutral wire": {
+          "+": [
+            4,
+            39,
+            40,
+            47
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming capability": {
+        "a@Not 1-100 percent dimming as advertised - dimmable LED light still insanely bright": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@Dimmest setting not particularly dim - still quite bright": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "c@Don't dim lights far enough down": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "d@Allows dimming to 6% which is excellent": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "e@Will not dim by voice command - only manually": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "f@Very adjustable - can turn brightness up or down by as little as 1%": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "g@Dimmer wouldn't dim with existing non-dimmable lightbulbs": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "h@Work great so far": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "i@Haven't had any issues in two years of use": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "j@After 1 month stopped functioning - 10 units all failed": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "k@3 out of 4 will not re-pair in less than a year": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "l@One of 4 switches stops working after couple of days": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "m@Three switches died in 12 months - go completely dead": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "n@Keep failing and customer service slow with replacements": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "o@50% of 25+ switches failed within 20 months": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "p@Switch keeps turning off after 15 minutes when dimmed to 100%": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "q@Failed in less than 6 months - green light on but button/voice control not working": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "r@Two of four switches failed in less than a year": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "s@Everyone works perfect": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "t@Works as advertised": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "Installation ease": {
+        "u@Easy to install, very simple": {
+          "+": {
+            "?": [
+              2,
+              3,
+              5,
+              9,
+              13,
+              14,
+              36,
+              37,
+              39,
+              42,
+              44,
+              49
+            ]
+          }
+        },
+        "v@Extremely easy to install": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "w@Installation is straightforward with included instructions": {
+          "+": {
+            "?": [
+              39,
+              47
+            ]
+          }
+        }
+      },
+      "Smart connectivity": {
+        "x@Easy to connect to Alexa": {
+          "+": {
+            "?": [
+              3,
+              42,
+              49
+            ]
+          }
+        },
+        "y@Works well with Alexa voice control": {
+          "+": {
+            "?": [
+              9,
+              12
+            ]
+          }
+        },
+        "z@Works well with Google Home": {
+          "+": {
+            "?": [
+              24,
+              45
+            ]
+          }
+        },
+        "aa@Connected to both Alexa and Google": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ab@None would program to work remotely - only manually": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "ac@No longer works with Alexa - integration failed": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "ad@Lost Wi-Fi connection": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "ae@Had trouble registering to simultaneous dual band wifi": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "af@Easy with dedicated 2.4GHz wifi band": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "ag@Integrates easily with Alexa": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "App functionality": {
+        "ah@Works great through the app": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ai@App works well enough": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "aj@Timer doesn't allow dimming": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "ak@Working great with Smart Life app": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "Response time": {
+        "al@Delay before turning on or off when pressing physical button": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "Dimming control precision": {
+        "am@Dimming portion can be finicky to set desired brightness": {
+          "-": {
+            "J": [
+              18
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home lighting control": {
+        "+": {
+          "u": [
+            2
+          ],
+          "i": [
+            5
+          ],
+          "y": [
+            12
+          ],
+          "s": [
+            25
+          ],
+          "t": [
+            30
+          ],
+          "f": [
+            44
+          ]
+        }
+      },
+      "Kids' room lighting management": {
+        "+": {
+          "i": [
+            5
+          ]
+        }
+      },
+      "Kitchen and bathroom lighting": {
+        "+": {
+          "y": [
+            12
+          ]
+        }
+      },
+      "Remote lighting control from other rooms": {
+        "+": {
+          "?": [
+            4,
+            5
+          ]
+        }
+      },
+      "LED high hats dimming": {
+        "+": {
+          "b": [
+            13
+          ]
+        }
+      },
+      "Automation purposes": {
+        "+": {
+          "c": [
+            18
+          ]
+        }
+      },
+      "Special halogen lighting control": {
+        "+": {
+          "ag": [
+            39
+          ]
+        }
+      },
+      "Basement room lighting": {
+        "+": {
+          "ak": [
+            43
+          ]
+        }
+      },
+      "Morning routine lighting": {
+        "+": {
+          "ag": [
+            48
+          ]
+        }
+      },
+      "Multi-switch outlets": {
+        "-": {
+          "?": [
+            45
+          ]
+        }
+      },
+      "End of run electrical configuration": {
+        "-": {
+          "M": [
+            47
+          ]
+        }
+      },
+      "Non-dimmable lightbulbs": {
+        "-": {
+          "g": [
+            34
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:13.648582"
+}

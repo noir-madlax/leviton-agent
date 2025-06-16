@@ -1,0 +1,2444 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:13:28.893759",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B01HIMC7EE",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B01HIMC7EE",
+    "title": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+    "brand": "Baomain",
+    "model_number": NaN,
+    "price_usd": 7.46,
+    "rating": 4.6,
+    "reviews_count": 1519.0,
+    "category": "Light Switches",
+    "product_segment": "Multi-Function Combination Switches",
+    "product_url": "https://www.amazon.com/dp/B01HIMC7EE"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2SBJ3ES82HFRL",
+        "text": "Hasn’t burned my house down yet.",
+        "date": "Reviewed in the United States on May 18, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Very Nice",
+        "userName": "Michael Hancock",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2QD2YAOJ7ITBW",
+        "text": "Overall, this is a great switch so far. For the price you can’t beat the Quality. Install was easy and switch was replaced in about 10 minutes.",
+        "date": "Reviewed in the United States on April 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does what it’s made for",
+        "userName": "Cory Windelspecht",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R24AMJ53YZW1O2",
+        "text": "Works great",
+        "date": "Reviewed in the United States on April 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good price",
+        "userName": "Dr. Motorized bike",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1B016LPZWG3O",
+        "text": "Easy install, but the buttons break easily",
+        "date": "Reviewed in the United States on February 12, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Easy install, buttons break easy",
+        "userName": "Zach scallorn",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RJ5638SJ3WS41",
+        "text": "I use this switch for our bathroom fan that also has a main ceiling light and a nightlight. The quality seems to be good.",
+        "date": "Reviewed in the United States on February 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "The item works as advertised and the price was good.",
+        "userName": "Jon",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1BZCK531AKIMC",
+        "text": "worked perfectly to replace older unavailable 3 stack switch. used for bathroom HLV.",
+        "date": "Reviewed in the United States on February 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "worked perfectly",
+        "userName": "Troy Rizan",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RKWQ361AMUKWF",
+        "text": "I'll be returning this crummy piece of junk. Main issues: 1. Terminal screws are poor quality and do not engage straight blade screw drivers securely. 2. One terminal screw stripped while securing wire. I used a proper amount of torque to fasten the wire, but the screw stripped and now is not safe to use. 3. The plastic paddle switches do not fit well, and one leaves a visible gap when in the OFF position. 4. The feel of the switch action is different in the ON vs OFF positions. It takes more force to switch them off than to switch them on. Very dissatisfied. I'll be returning this turd, and have already ordered a replacement switch from Home Depot: Leviton brand, which is a reputable manufacturer. I should have done this to begin with.",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor quality, defective, unacceptable.",
+        "userName": "John Francis Robin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3RN7F02JU5GT1",
+        "text": "Easy installation and switches seem to work well. Good value.",
+        "date": "Reviewed in the United States on January 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "Herbie W.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61KWVEa0uNL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3ASDPNQADLZNO",
+        "text": "it works but when you turn off the switch it doesnt go all the way back. sometimes you have to make sure it went off.",
+        "date": "Reviewed in the United States on December 18, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Quality is very bad, dont waist your money on this",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RUEJ09AO0AG1D",
+        "text": "Good price and does the job.",
+        "date": "Reviewed in the United States on October 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good to go.",
+        "userName": "Sana Parry",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R273EBPQR0TK36",
+        "text": "Very happy with my purchase.",
+        "date": "Reviewed in the United States on October 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "Susan Baratta",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1S8IKC7ZZ0VT6",
+        "text": "Great",
+        "date": "Reviewed in the United States on October 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "As expected",
+        "userName": "Lisa Keith",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1AYZU5QYZSJA0",
+        "text": "Installed working great",
+        "date": "Reviewed in the United States on August 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "Rebu1956",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2U19X8Z6SJZMM",
+        "text": "Well built, solid. Used for a bathroom light fan and heat fixture that was decades old. Easy to connect wires. Switches work well.",
+        "date": "Reviewed in the United States on August 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with older wiring",
+        "userName": "Rajenkster",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RNQVWHF43EN62",
+        "text": "The button action when you switch it feels cheap and yucky. But like i said the switch completely works. Just feels cheap/janky when you use it. Looks perfect and works perfect. Feels like junk.",
+        "date": "Reviewed in the United States on July 11, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "They work, but...",
+        "userName": "Benjamin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2497SRSZYIVRR",
+        "text": "We ordered this when our bathroom switch stopped working. My husband installed it as soon as it arrived and it is working perfectly as expected. Have not had any issues or problems with this switch so far.",
+        "date": "Reviewed in the United States on July 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "Rebecca",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1HGRGIS6QYB9B",
+        "text": "Mine was broken & this was a perfect replacement!! Great customer service",
+        "date": "Reviewed in the United States on June 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great light switch plate!",
+        "userName": "Adrienne Salisbury",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R320UDFO8T39ME",
+        "text": "Installed myself and buttons work well, doesn't stick.",
+        "date": "Reviewed in the United States on May 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "grace",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2AYNDZ2A7CEPK",
+        "text": "The button snaps on, but soft-closes off (no sharp snap). Wires insert pretty hard, and pull out even harder (difficult to disengage the clamping clip). I ended up going with side-wiring. While it is the lowest cost item with good overall ratings, I don't know how long it will last: many users online say they got 2 bad out of 2, some bought one, got a replacement from Amazon/mfg, had a second subsequent failure, and others got less than 1 year usage before replacing (previous switch in the house lasted 7+ years before cracking through, full failure). The more I think about it, the more I plan to switch to the more expensive one (fortunately, I bought two at the same time, though installed this one as it was a low profile block).",
+        "date": "Reviewed in the United States on May 15, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works but not great quality",
+        "userName": "J. Lin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RR1LMN7TOYS33",
+        "text": "Sturdy frame, works great",
+        "date": "Reviewed in the United States on May 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality material used in construction",
+        "userName": "Sparky",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R30PEKG60J1UMK",
+        "text": "Exactly what we needed and got here QUICKLY ! Will order again .....replaces an old,dated standard triple switch in the master bathroom and looks great ! mi⁸ ....",
+        "date": "Reviewed in the United States on April 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Prompt shipping !",
+        "userName": "dwight dodd",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R332X6PJFPTFL5",
+        "text": "Got this switch all connected and ready to go only to find out it doesn’t work. Unfortunately this discovery was made at 10p when it was too late to go to the store and replace it so had to go without a bathroom light overnight. Do yourself a favor and don’t buy cheap crap on Amazon, just spend the extra at Lowe’s or Home Depot.",
+        "date": "Reviewed in the United States on April 21, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t waste your money",
+        "userName": "Amber K",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1BL8KBQUJVW0C",
+        "text": "I needed a new light switch for my bathroom as mine were getting tired and one switch recently popped out. We replaced the panel with this one, and it works perfectly. I am happy with my purchase.",
+        "date": "Reviewed in the United States on April 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works!",
+        "userName": "Kelli",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2ZPEXBFRY1LAR",
+        "text": "Worked just fine but after only a few months the bottom switch broke and fell off and I just noticed the top one is cracked too. Wasn't able to find a way to contact customer service but it seemed as if it broke way faster than it should have, especially under light use.",
+        "date": "Reviewed in the United States on January 29, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Great for a bit",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71tMbaAZeFL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RHGA2FNCY8K40",
+        "text": "Didn't dislike anything",
+        "date": "Reviewed in the United States on December 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Sw.",
+        "userName": "Grego",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R35UYTEM0OH5DW",
+        "text": "Years ago I bought a bathroom light, vent night light unit. The switch for the light wore out. I looked at the manufacturer's website hoping to order a replacement but learned that the model I had no longer was available. I looked for similar models in the hope of buy a switch for it. They didn't have any. I found this one on Amazon and it works perfectly.",
+        "date": "Reviewed in the United States on December 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Replacement",
+        "userName": "Skip Tribby",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3DS3U1E98LVWB",
+        "text": "center rocker switch only lasted 11 months, normal home usage 2x a day --- switch stuck to \"on.\" Other brand, older designed switch, seems more rigid when moved.",
+        "date": "Reviewed in the United States on December 5, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "broke in 11 months",
+        "userName": "SGarne",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51fQD5SZHzL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3UDA1IA6TDIJ3",
+        "text": "Been using for six months now. No problems at all.",
+        "date": "Reviewed in the United States on December 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple design",
+        "userName": "Frederick A. Weller, Jr.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1X54TYLRJ3HFV",
+        "text": "The switches work. Maybe I am too picky but the holes in the back did not grab the wires well. Also, the feeling of the rocker switch is a little soft. These are picky thinks that only I will notice. If you don't care, buy it! This had a good price when I bought it. Or you can spend a little more on a more premium model.",
+        "date": "Reviewed in the United States on November 7, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Cheap but cheap",
+        "userName": "Anthony",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1DRKEF2JPTIN2",
+        "text": "fasil su intalar",
+        "date": "Reviewed in the United States on September 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "bueno",
+        "userName": "Fructuosa victoria",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3K55IG93ILR16",
+        "text": "Replaced a switch just like this which broke. This one has been installed for months now and works as it should.",
+        "date": "Reviewed in the United States on September 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "60010 family",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3OPNSNBW5DDE9",
+        "text": "I'm using the switch for a DC power switching to some LED light strips. It works great for the purpose, but the screw terminals aren't amazing so I just attached a U-shaped terminal to my wires and it seems to work well. Looks great on the wall. Also functions as a 1:3 splitter for your input wire because it switches them off the same screw terminal.",
+        "date": "Reviewed in the United States on August 9, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works best if you attach terminals to your stranded wire",
+        "userName": "Erin McCarty",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RKFDFXYNW2G0J",
+        "text": "Ordered one, bottom switch broken (just flopped in its seat). Returned/replaced, 2nd one had two broken switches this time. Not quality.",
+        "date": "Reviewed in the United States on July 24, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broken switches twice",
+        "userName": "Joseph Bryan",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2P783LDY5JYXX",
+        "text": "It worked ok but the middle switch broke after less than a year of use",
+        "date": "Reviewed in the United States on July 13, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Worked for a time",
+        "userName": "RANDALL A CREEL II",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2LC6JJCNDRWSW",
+        "text": "I bought this to replace a old one that doesn’t work anymore. It is exact like the old one so that I have no problem to replace it. The only problem I have is the holes for each switch to plug in the copper wire is too small for older house that use lower gauge copper wire so that I have to loop around the screws the old way.",
+        "date": "Reviewed in the United States on June 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good replacement for old triple switch",
+        "userName": "Lee",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3AFCIJCHSC6FD",
+        "text": "Easy to install",
+        "date": "Reviewed in the United States on June 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1RG4UOKTCHAOJ",
+        "text": "I got this to replace a switch from the 70's. Makes things look less dated.",
+        "date": "Reviewed in the United States on May 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great replacement",
+        "userName": "Dan D.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R28EEX0KEYUHVZ",
+        "text": "Easier installation",
+        "date": "Reviewed in the United States on May 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Beautiful switch",
+        "userName": "CESAR HERNANDEZ",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51HdKSSqk2L._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2I88TIXA83TGA",
+        "text": "This is the second one of these that I picked up. The first one of the switches broke after only a couple weeks. I went ahead and exchanged it giving it a second chance and that was a mistake. 5 months later and it broke. Biggest piece of junk. Dont buy.",
+        "date": "Reviewed in the United States on May 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "ymenurse",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R12F3HMJFBFQ2S",
+        "text": "Easy to install if u know what you’re doing",
+        "date": "Reviewed in the United States on March 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice looking",
+        "userName": "kayla adkins",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R36FJYSJD3C3R",
+        "text": "I like it because it doesn't stick out like a regular light switch. It is so easy to walk by and just push it off or push it on 😊",
+        "date": "Reviewed in the United States on March 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Looks much better than a regular light switch",
+        "userName": "T.B.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3CCPCMGCF9F44",
+        "text": "I have ordered before. Easy to install and really updates the look of the wall they’re on. I’m not sure about Alexa integration but will find out soon!",
+        "date": "Reviewed in the United States on March 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Decent quality",
+        "userName": "Melissa T ThomasAmazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2WT9HXP0RFAP0",
+        "text": "The switches work with not problems, They have been in use for 5 month with no issues.",
+        "date": "Reviewed in the United States on February 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as descrived. No issues after 5 months",
+        "userName": "AutoWorld",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RQ6NF3Q89SPUX",
+        "text": "Works great",
+        "date": "Reviewed in the United States on February 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "MH",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2PXRN51FTZ5NS",
+        "text": "Works great",
+        "date": "Reviewed in the United States on January 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switch",
+        "userName": "Suns Boyd",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3TQFDODME7CGP",
+        "text": "Lo use para la cocina",
+        "date": "Reviewed in the United States on January 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fácil de instalar",
+        "userName": "Héctor Pamblanco tardi",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3649HNMO2RGBM",
+        "text": "Simple to install… saves a ton of wall space. High quality toggles.",
+        "date": "Reviewed in the United States on January 8, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Buy it",
+        "userName": "Rock Granzow",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2UKNL2NRLN3PL",
+        "text": "Nice large switches. Easy to work with. Easy to clean. It was not hard to install. We installed ourselves. It has been working well for us for a number of months now. I would purchase this again.",
+        "date": "Reviewed in the United States on December 19, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R14IO12JC44R0",
+        "text": "Works as expected",
+        "date": "Reviewed in the United States on November 19, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "As advertised",
+        "userName": "Steven L.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01HIMC7EE",
+        "productTitle": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 201,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1519,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R141DYZJ27UX9X",
+        "text": "Just as good as the name brand at half the price. Would buy again",
+        "date": "Reviewed in the United States on October 14, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install.",
+        "userName": "sheetrockersrnuts",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

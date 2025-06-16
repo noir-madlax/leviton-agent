@@ -1,0 +1,485 @@
+{
+  "product_title": "Cloudy Bay in Wall Dimmer Switch for LED Light/CFL/Incandescent,3-Way Single Pole Dimmable Slide,600 Watt max,Cover Plate Included",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "Construction Quality": {
+        "A@Poor build quality with gaps developing": {
+          "-": [
+            28
+          ]
+        },
+        "B@Feels low quality and cheap": {
+          "-": [
+            6,
+            24
+          ]
+        },
+        "C@High quality feel": {
+          "+": [
+            4
+          ]
+        },
+        "D@Feels solid": {
+          "+": [
+            40
+          ]
+        },
+        "E@Nice looking appearance": {
+          "+": [
+            22,
+            37
+          ]
+        },
+        "F@Simple design": {
+          "+": [
+            9
+          ]
+        },
+        "G@Perfect size and matches white color": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "Switch Components": {
+        "H@Rocker pivot breaks causing internal arcing": {
+          "-": [
+            29
+          ]
+        },
+        "I@Switch physically comes apart": {
+          "-": [
+            13
+          ]
+        },
+        "J@Toggle switch falls apart when used": {
+          "-": [
+            36
+          ]
+        },
+        "K@Big toggle for on/off control": {
+          "+": [
+            15
+          ]
+        },
+        "L@Slide switch for dimming control": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "Wiring": {
+        "M@Has red and one black wire that doesn't conform to residential wiring": {
+          "-": [
+            7
+          ]
+        },
+        "N@Includes all needed pieces for installation": {
+          "+": [
+            20
+          ]
+        }
+      },
+      "Internal Components": {
+        "O@Thumbwheel dial under cover for dimness adjustment": {
+          "+": [
+            21,
+            31
+          ]
+        },
+        "P@Sensitivity switch for adjustment": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "Instructions": {
+        "Q@Instructions hard to follow with super small diagrams": {
+          "-": [
+            11
+          ]
+        },
+        "R@Installation instructions very easy to understand": {
+          "+": [
+            21
+          ]
+        },
+        "S@Directions not very clear for 3-way switch": {
+          "-": [
+            22
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Failed within a year": {
+          "-": {
+            "?": [
+              0,
+              27
+            ]
+          }
+        },
+        "b@Failed within two years": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "c@Failed after less than a year with limited use": {
+          "-": {
+            "B": [
+              24
+            ]
+          }
+        },
+        "d@Failed relatively quickly": {
+          "-": {
+            "H": [
+              29
+            ]
+          }
+        },
+        "e@Broke through regular use after 4 years": {
+          "-": {
+            "I": [
+              13
+            ]
+          }
+        },
+        "f@Switch exploded": {
+          "-": {
+            "M": [
+              7
+            ]
+          }
+        },
+        "g@Toggle falls apart when tried": {
+          "-": {
+            "J": [
+              36
+            ]
+          }
+        }
+      },
+      "Dimming Performance": {
+        "h@Barely dims with flickering on low": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "i@Does not dim at all": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "j@Dims perfectly": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "k@LED lights dim considerably without flicker": {
+          "+": {
+            "O": [
+              21
+            ]
+          }
+        },
+        "l@Brightness goes from low to high irregularly": {
+          "-": {
+            "O": [
+              31
+            ]
+          }
+        },
+        "m@Light flickers when set to dim": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "n@Perfect brightness control": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "Electrical Performance": {
+        "o@Lights flicker without adjusting dimmer": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "p@Flickering even when turned all the way up": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "q@Flickering started after initial working period": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "r@Constant flickering no matter dial adjustment": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "s@Light comes on immediately": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "t@Delay from clicking switch to light turning on": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "u@Very responsive with no lag": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "Noise Performance": {
+        "v@Extremely loud buzzing noise": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "w@Constant buzzing/humming sound": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "x@Buzzing noise after about a month": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "y@No noise from switch": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "z@Works quietly": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "aa@Very easy to install": {
+          "+": {
+            "N": [
+              2,
+              20
+            ]
+          }
+        },
+        "ab@Easy to install": {
+          "+": {
+            "?": [
+              5,
+              14,
+              27,
+              34,
+              38,
+              42,
+              43,
+              45
+            ]
+          }
+        },
+        "ac@Breeze to install": {
+          "+": {
+            "N": [
+              20
+            ]
+          }
+        },
+        "ad@Installed in minutes": {
+          "+": {
+            "?": [
+              9,
+              37
+            ]
+          }
+        },
+        "ae@Did not work when installed": {
+          "-": {
+            "?": [
+              11,
+              23
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "af@Works perfectly": {
+          "+": {
+            "?": [
+              5,
+              39
+            ]
+          }
+        },
+        "ag@Works great": {
+          "+": {
+            "C": [
+              4
+            ]
+          }
+        },
+        "ah@Works smoothly as intended": {
+          "+": {
+            "?": [
+              34,
+              42
+            ]
+          }
+        },
+        "ai@More reliable than rotary type": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "aj@On/off switch stops working": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ak@No longer switches": {
+          "-": {
+            "I": [
+              13
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Closet Lighting": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "General House Lighting": {
+        "+": {
+          "ag": [
+            4
+          ]
+        }
+      },
+      "Room Lighting with Bright LEDs": {
+        "+": {
+          "j,s": [
+            9
+          ]
+        }
+      },
+      "Dining Room Lighting": {
+        "+": {
+          "n,y,u": [
+            18
+          ]
+        }
+      },
+      "Dining Room Lamp Control": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "Kitchen LED Light Dimming": {
+        "-": {
+          "g": [
+            36
+          ]
+        }
+      },
+      "Hallway Lighting": {
+        "-": {
+          "v,w": [
+            12
+          ]
+        }
+      },
+      "LED Ceiling Lights": {
+        "+": {
+          "k": [
+            21
+          ]
+        }
+      },
+      "3-Way Switch Installation": {
+        "-": {
+          "S": [
+            22
+          ]
+        }
+      },
+      "Replacement for Existing Dimmer": {
+        "+": {
+          "?": [
+            38
+          ]
+        }
+      },
+      "LED Light Compatibility": {
+        "+": {
+          "?": [
+            15,
+            39,
+            41
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:09.263596"
+}

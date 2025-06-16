@@ -1,0 +1,536 @@
+{
+  "product_title": "Lutron Skylark LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs | 150W/Single-Pole or 3-Way | SCL-153P-WH | White",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "packaging": {
+        "A@box had been opened and taped shut on the bottom": {
+          "-": [
+            0
+          ]
+        },
+        "B@missing install instructions and screws": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "appearance": {
+        "C@wrong color": {
+          "-": [
+            26
+          ]
+        },
+        "D@gunk and grime all over it": {
+          "-": [
+            26
+          ]
+        },
+        "E@label is old, worn and falling off": {
+          "-": [
+            26
+          ]
+        },
+        "F@looks good": {
+          "+": [
+            48
+          ]
+        }
+      },
+      "wires": {
+        "G@wires are stripped and worn": {
+          "-": [
+            26
+          ]
+        },
+        "H@wiring in the back": {
+          "+": [
+            33
+          ]
+        },
+        "I@black wire is the traveler": {
+          "+": [
+            28
+          ]
+        }
+      },
+      "switch": {
+        "J@on/off switch could be a little larger": {
+          "-": [
+            13
+          ]
+        },
+        "K@separate on/off switch": {
+          "+": [
+            17
+          ]
+        },
+        "L@toggle switch": {
+          "+": [
+            21
+          ]
+        },
+        "M@tiny switch": {
+          "-": [
+            49
+          ]
+        }
+      },
+      "slider": {
+        "N@slider on the front": {
+          "+": [
+            31
+          ]
+        },
+        "O@slide dimmer on the side": {
+          "+": [
+            49
+          ]
+        },
+        "P@dimmable slider": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "adjustment_knob": {
+        "Q@regulator inside, little blue tab on the left": {
+          "+": [
+            21
+          ]
+        },
+        "R@adjustment knob for led flickering": {
+          "+": [
+            33
+          ]
+        }
+      },
+      "plate": {
+        "S@dimmer does not include the plate that surrounds it": {
+          "-": [
+            35
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@didn't last 3 months": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@durable": {
+          "+": {
+            "?": [
+              22,
+              48
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "c@not compatible with dimmable LEDs": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@works with LED lights": {
+          "+": {
+            "?": [
+              11,
+              18,
+              21,
+              40
+            ]
+          }
+        },
+        "e@compatible with HALO HLB6 recessed canless lights": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "f@works with LED under counter lighting": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "g@works with LED 1x2 panel": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "h@works with LED puck lights": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "flickering_control": {
+        "i@LED lights flashed at low setting": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "j@fixed LED ghosting": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "k@no flickering at all": {
+          "+": {
+            "Q": [
+              21
+            ]
+          }
+        },
+        "l@eliminates flickering": {
+          "+": {
+            "?": [
+              18,
+              25,
+              29,
+              36,
+              41
+            ]
+          }
+        },
+        "m@lights start flickering when dimmed": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "n@doesn't dim correctly": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "o@very smooth dimming": {
+          "+": {
+            "K": [
+              17
+            ]
+          }
+        },
+        "p@perfect ability to control lights from 0-100% brightness": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "q@does not dim much": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "r@adjustable dimming range": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "ease_of_installation": {
+        "s@easy to install": {
+          "+": {
+            "?": [
+              3,
+              5,
+              7,
+              11,
+              12,
+              21,
+              28,
+              33,
+              38,
+              42,
+              44,
+              45
+            ]
+          }
+        },
+        "t@took 15-20 minutes to install": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "u@took less than 10 minutes": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "v@took only minutes": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "w@connecting to thick knob and tube wiring was a breeze": {
+          "+": {
+            "H": [
+              33
+            ]
+          }
+        }
+      },
+      "build_quality": {
+        "x@high end quality": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "y@well built": {
+          "+": {
+            "?": [
+              6,
+              11
+            ]
+          }
+        },
+        "z@quality feel in switch and slider": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "aa@poor quality control": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "ab@works perfectly": {
+          "+": {
+            "?": [
+              6,
+              18
+            ]
+          }
+        },
+        "ac@works great": {
+          "+": {
+            "?": [
+              5,
+              16,
+              21,
+              40,
+              43
+            ]
+          }
+        },
+        "ad@works splendidly": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ae@works like it's supposed to": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "af@did not work": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "ag@stopped working": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "user_interface": {
+        "ah@clear and intuitive interface": {
+          "+": {
+            "P": [
+              42
+            ]
+          }
+        },
+        "ai@user-friendly design": {
+          "+": {
+            "P": [
+              42
+            ]
+          }
+        },
+        "aj@easy to navigate": {
+          "+": {
+            "N": [
+              31
+            ]
+          }
+        },
+        "ak@easier to reach light level": {
+          "+": {
+            "N": [
+              31
+            ]
+          }
+        }
+      },
+      "adjustability": {
+        "al@adjustment to preset minimum low setting": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "am@designed to adjust for flicker": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom_lighting": {
+        "+": {
+          "j": [
+            3
+          ],
+          "ae": [
+            12
+          ],
+          "g": [
+            30
+          ]
+        }
+      },
+      "dining_room_lighting": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "k": [
+            21
+          ]
+        }
+      },
+      "chandelier_lighting": {
+        "+": {
+          "l": [
+            18,
+            29
+          ]
+        }
+      },
+      "LED_ceiling_lights": {
+        "+": {
+          "j": [
+            3
+          ]
+        }
+      },
+      "recessed_lighting": {
+        "+": {
+          "e": [
+            20
+          ]
+        }
+      },
+      "under_counter_lighting": {
+        "+": {
+          "f": [
+            27
+          ]
+        }
+      },
+      "panel_lighting": {
+        "+": {
+          "g": [
+            30
+          ]
+        }
+      },
+      "puck_lights": {
+        "+": {
+          "h": [
+            47
+          ]
+        }
+      },
+      "dimmable_lights_too_bright": {
+        "+": {
+          "?": [
+            38
+          ]
+        }
+      },
+      "replacement_for_old_dimmer": {
+        "+": {
+          "l": [
+            8,
+            12,
+            27,
+            36,
+            37,
+            46
+          ]
+        }
+      },
+      "3-way_switch_application": {
+        "+": {
+          "?": [
+            28,
+            44
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:41.826656"
+}

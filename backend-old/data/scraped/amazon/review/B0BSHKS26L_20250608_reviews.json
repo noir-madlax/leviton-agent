@@ -1,0 +1,2646 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T23:21:01.918483",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0BSHKS26L",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2QU4G4XKSDYRO",
+        "text": "The Lutron Diva Smart Dimmer Switch has been a fantastic addition to my smart home setup. Its classic paddle design with a soft-glow light bar blends seamlessly with my existing decor, and the precise slider allows for easy dimming control. Installation was straightforward, and I appreciated that it doesn't require a neutral wire, making it compatible with older wiring systems. Pairing it with the Lutron Smart Hub enabled effortless control via the app and voice commands through Alexa. The ability to set schedules and scenes adds convenience, and the Smart Away feature provides peace of mind when I'm not home. Overall, it's a reliable and stylish solution for smart lighting control.",
+        "date": "Reviewed in the United States on June 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Seamless Integration and Elegant Design",
+        "userName": "Joseph Blizzard",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/21h+-DtGbLL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2KXL4DH9ELG8H",
+        "text": "Product was defective and I missed the return window",
+        "date": "Reviewed in the United States on May 24, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1BCLDUVN3KZUW",
+        "text": "Easy to follow directions for setup job went well in the 3-way setup. Wi-Fi was simply.",
+        "date": "Reviewed in the United States on May 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy set up",
+        "userName": "Kato",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R21TB8XQP2VYWP",
+        "text": "Work well. A bit spendy. Requires a hub.",
+        "date": "Reviewed in the United States on May 3, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "doobs",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R37EPWZ5PP6WD2",
+        "text": "I love everything Lutron has to offer. I've had their switchs and remotes in my last and current house. This switch is an upgrade in my opinion from original dimmer design. Resembles a more traditional rocker switch with or without dimmer. Looks better when in a gang with none smart switch. Function is also more consistent. Old style was nice but this is upgrade. Do not believe I have ever had an issue with Lutron switch, bridge, or app. Probably about 20 switchs in now so I guess you can say I'm sold.",
+        "date": "Reviewed in the United States on May 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron is an amazing platform. This switch is no exception.",
+        "userName": "Jeff",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61g-2FHa0mL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2QMHK7OS3W4KV",
+        "text": "The outlet plug is great! Linked easily to google, that was the function I really wanted. If this were for an application with a single switch I would have given 5 stars. My issue is that I wanted this to be in a dual gang cover plate with a normal wired switch. This solution has a special cover plate to hold is in place. It will not fit into a standard cove so for now it sits on the counter…",
+        "date": "Reviewed in the United States on April 24, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Love the smart outlet plug, the switch doesn't work how I hoped",
+        "userName": "Mark J Whidden",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "ROIRHMJD9HS7W",
+        "text": "Easy to install and program",
+        "date": "Reviewed in the United States on March 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2SZSR2NZ8L5X7",
+        "text": "I bought two of these. One stopped working after less than two months. Not happy. I gave them 2 stars because the other switch is still working. ;)",
+        "date": "Reviewed in the United States on March 13, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "One of two broke after 2 months",
+        "userName": "Adam B.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RCJ5KTROG1IJL",
+        "text": "Had no issues incorporating this into my Lutron system.",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great!",
+        "userName": "RA",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2BFSAXOESYZE4",
+        "text": "This is a poorly engineered switch. With most LEDs it will leak current and cause them to glow when off, requiring you to buy a $14 part to make them at least turn off, but then they will pulse and flicker when you turn them on, and they still will not dim. There are some specific bulbs that will work with this dimmer, but honestly its not worth it. Absolutely a waste of money, do not buy the dimmers. The normal smart switches (on/off) seem to work just fine...",
+        "date": "Reviewed in the United States on December 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does not work with many dimmable bulbs",
+        "userName": "SG",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2CZU2DEUIMMD4",
+        "text": "I absolutely love these Diva smart dimmer switches! They combine the familiar look of traditional paddle dimmers with the convenience and versatility of smart lighting. The soft-glow light bar and slider make dimming precise and easy to adjust, and the preset feature is so handy—I can turn my lights on exactly how I like them every time. The best part? No neutral wire is needed, so they worked perfectly in my older home without any extra wiring headaches. Pairing them with the Caséta hub opened up even more possibilities, from app control to voice commands with Alexa and Google Assistant. The smart away feature is a fantastic bonus, making my home look lived-in even when I’m not around. If you’re looking for an upgrade to your lighting system, these switches are an absolute must-have!",
+        "date": "Reviewed in the United States on November 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Game-Changer for Smart Lighting!",
+        "userName": "G.P.B.",
+        "numberOfHelpful": 3,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3TVEZIDGJ4OA4",
+        "text": "I ordered 9 of these units from this seller and half of them were used: missing screws, plaster still on them, missing faceplates. If they are going to sell them used they should note it and not charge for new.",
+        "date": "Reviewed in the United States on September 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Product is awesome (when actually new) but these are used mostly",
+        "userName": "Snejenka",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R12VJUY2WBFSRG",
+        "text": "Lutron is the best. I’d give them 5 stars all around. I was shipped someone’s return though. With the wrong item in the box.",
+        "date": "Reviewed in the United States on July 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Received a Return",
+        "userName": "Peter P.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R23WKNRVARYUS8",
+        "text": "I installed this where I didn’t have a neutral wire. It was quick to install.",
+        "date": "Reviewed in the United States on July 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Tom Stone",
+        "numberOfHelpful": 2,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2YJGAF2F56C3W",
+        "text": "(Note: I lightly prefer these over the original smart dimmer.) These are great. I spent years buying less expensive smart switches and plugs...but finally took my own professional advice, spent the money and switched to Lutron's Casseta system throughout the house. I have a pico switch at our front door with \"All lights on\" and \"All lights off\" function. I know Lutron makes the best control products available from my line of work, but now I really understand - it is super user friendly and fast to install and program. There are a few bugs that I'm working out but, the best consumer-grade system by far. Now that everything is dimmed and controlled, I can concentrate on the lighting design of my house without software distraction. Works great with Google home so far.",
+        "date": "Reviewed in the United States on May 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "From an Expert Lighting Designer",
+        "userName": "Sara",
+        "numberOfHelpful": 7,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2PQTATK0JLLH3",
+        "text": "Works well and easy to install!",
+        "date": "Reviewed in the United States on April 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well!",
+        "userName": "AmySP",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2ODDM5PNHF0CS",
+        "text": "No trabaja, no lo puedo sincronizar con el wifi...",
+        "date": "Reviewed in the United States on March 29, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Malo",
+        "userName": "Francisco Quezada",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R25CDN9H451LQ2",
+        "text": "Good product but is glitchy with automations.",
+        "date": "Reviewed in the United States on March 10, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good product but can be glitchy.",
+        "userName": "Jess",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R21LQRCQ50AMFG",
+        "text": "Like all lutron smart home stuff this dimmer works flawlessly. It solved the much needed issues of the old dimmer of being able to turn the lights on without defaulting to full brightness. It also matches the aesthetic of our non-smart lutron dimmers. Couldn't ask for more.",
+        "date": "Reviewed in the United States on February 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "This is the smart dimmer to get.",
+        "userName": "Paul Casper",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RJAYY3LO1ETMF",
+        "text": "I recently embarked on a journey to enhance the lighting in my home and stumbled upon what I now consider a hidden gem: the Lutron Diva Smart Dimmer Switch. Skeptical at first about its potential impact, I was quickly proven wrong. This little gadget has transformed my mundane lighting into an experience that's both functional and atmospheric. The installation process was surprisingly straightforward. I'm no electrician, but the clear instructions and simple design made it easy to integrate the dimmer into my existing setup. The real magic, however, began once I connected it to my home's Wi-Fi network. The ease of controlling my lights through my smartphone was a game-changer. I could adjust brightness levels from anywhere in my home, creating the perfect ambiance for any occasion. What truly sets this dimmer apart is its compatibility with LED lights. It smoothly transitions from bright to dim without any flickering, a common issue I've faced with other dimmers. This feature alone has elevated my evening relaxation routine, allowing me to create a soothing environment that's perfect for winding down. The energy-saving aspect is another highlight. Being environmentally conscious, I appreciate that this smart dimmer switch helps reduce electricity consumption, especially when paired with LED bulbs. It's comforting to know that enhancing my home's ambiance doesn't have to come at the expense of a higher energy bill or a larger carbon footprint. This dimmer switch has redefined my home lighting experience. It offers a perfect blend of convenience, efficiency, and style, seamlessly fitting into my daily life. If you're looking to upgrade your home lighting system, this smart switch is a choice you won't regret. It's more than just a dimmer; it's a small step towards a smarter, more comfortable home.",
+        "date": "Reviewed in the United States on January 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "My Journey to the Perfect Ambiance",
+        "userName": "SneakerDadBod",
+        "numberOfHelpful": 14,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2EFHHTJD2XS26",
+        "text": "So glad Lutron brought the Diva paddle style switch to the Caseta lineup. Even better that it doesn’t require a neutral. Typical smooth Lutron action on the button and dimmer, led light on the dimmer slide is convenient and non-intrusive.",
+        "date": "Reviewed in the United States on January 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switch if you don’t have a neutral.",
+        "userName": "Andy B.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RT5IOXVMKEU5N",
+        "text": "I am immediately in love with this product! I install a lot of switches and fixtures and this by far was the easiest dues to the way it connects to your home wiring. It’s fast and easy installation is only topped by the fact that it worked instantly. The only thing you may not like is that it needs a hub but that only makes it more reliable and if you start with the kit that includes the hub you save a ton of money.",
+        "date": "Reviewed in the United States on December 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Satisfaction Achieved!",
+        "userName": "Love this hat!!!",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R180DG13Z0FBDS",
+        "text": "I recently decided to remove a number of \"builder installed\" Control4 Switches. (Control4 charges you to integrate with Alexa, and you cannot program/schedule yourself) So, unless you have a \"committed\" Control4 setup, you might want to try the Caseta Line. These integrate perfectly with no issue and in my case I had a couple of 3-way and 4-way scenarios and these are perfect solution. Very dependable, impressive products, but, you do pay more.",
+        "date": "Reviewed in the United States on December 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "First Class Products",
+        "userName": "Top Drawer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RG7OR0SYJ5UK9",
+        "text": "Lutron Caseta Diva dimmers are well designed and very reliable. They work well with Amazon Alexa and Apple Siri voice assistants and do not require internet access.",
+        "date": "Reviewed in the United States on November 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron Caseta Diva dimmers",
+        "userName": "CG",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3EKXSEKD4691X",
+        "text": "Product labeled as new, obviously not.",
+        "date": "Reviewed in the United States on November 4, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Used - not new",
+        "userName": "Monstr",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61ekmpniYPL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61o9nJOCR0L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2MU3N4780A6FP",
+        "text": "No neutral wire in my older home means fewer options for adding smart home features. Lutron solves this and makes a great ecosystem. I have Lutron, Wyze, Kasa, etc. so I was not excited about adding another app to run lighting but Lutron makes it easy and reliable. I've used them in other houses so I already had the hub. Installation was easy for me, a DIY'er and the app is easy to program and use.",
+        "date": "Reviewed in the United States on October 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Addition to Old House without Neutral Wire",
+        "userName": "Mystery Trout",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ZQRBYHOS5FMF",
+        "text": "Some people don't like the old Lutron Caseta dimmer switch, because they think it's ugly (like my parents)... They like this Diva switch much better. Lutron Diva Smart switch have the same pairing process like Caseta, and would work similarly. This is also the neutral wire not required version and it's much easier to DIY so you don't have to pay a electrician to install neutral wire on every lights (in case you don't understand... some old houses don't have a neutral wire for the lights, even for a three way light)",
+        "date": "Reviewed in the United States on October 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Lutron Smart Product, as always",
+        "userName": "Steven Z",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1LI1IXYRWG614",
+        "text": "I tried to save money and I ended up paying more! I wish If I bought lutron in the first place. After trying many other brands. They got the best app ever! It never failed and always worked",
+        "date": "Reviewed in the United States on October 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "If you are tired of the smart switches this is your solution",
+        "userName": "Awad",
+        "numberOfHelpful": 4,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f00fa0f6-8bf3-429f-8ce4-9edfd3e2af30/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1U0OPJI1DH03D",
+        "text": "I've been happy with my older Lutron Caseta dimmers (with the four buttons) but I did miss the tactile experience of a proper rocker switch. This one is a great upgrade in user experience and the best option on the market for those of us without neutral wires as far as I can tell. The LED part of the dimmer gives you excellent feedback about light level and looks cool doing it. The tricky part about a smart dimmer with a tactile dimmer control is that you can change the dim level in the app and it can't move the tactile switch. The LED feedback is an elegant solution. I'm glad that I can both get the intuitiveness of a slide dimmer and still program one of my Pico remotes or routines to control the dim level and everything just works. No confusion! I imagine over the coming years I'll be slowly swapping out all our highly used switches with Divas.",
+        "date": "Reviewed in the United States on September 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "An excellent smart dimmer for houses without a neutral wire",
+        "userName": "Grant F",
+        "numberOfHelpful": 11,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1412d7a6-54e9-49fc-ba56-46605c2b8cc4/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RE66L8ZCW4TO9",
+        "text": "I originally bought a bunch of diva led+ non-smart dimmers by accident (DVCL) and was super disappointed because (a) the parts were loose and rattly and (b) when dimming between 30-80% the lights would do bright flashes every 5-10 seconds. I bought just one of this smart version (DVRF) fully expecting it to have the same issues, but was pleasantly surprised that the construction quality is much higher AND dims with no issues. **edit: never mind, it worked flawlessly for a couple days but then the issue of bright flashes in certain dimming range came back.",
+        "date": "Reviewed in the United States on September 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "MUCH better quality than the non smart diva",
+        "userName": "Emissary",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3904BUFM65PN9",
+        "text": "Upgraded a few light switches from Lutron's previous smart dimmer. Love these for the ease of getting lights on, and keeping it to the usually level with the slider. Easy to install, did 2 in about 10 minutes from turning off the breaker to turning it back on.",
+        "date": "Reviewed in the United States on August 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing Smart Dimmer",
+        "userName": "amazon user",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R31NGLYO7DP17T",
+        "text": "very easy to install and app is very easy to use",
+        "date": "Reviewed in the United States on July 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "works great",
+        "userName": "Shaya",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2ADN5A9A35K28",
+        "text": "Terrific product. The Cadillac of the Wi-Fi dimmers.",
+        "date": "Reviewed in the United States on June 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great dimmer!",
+        "userName": "Harry",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1BBTK0JMHD43Y",
+        "text": "I know I saw reviews on this and they were glowing. Not so fast. I got 1 3 way switch plugged in the hub and it. It didn’t even physically turn on and off the switch. If you’re going to be installing it on someone who doesn’t mind spending extra for the hub when they already have a hub for their ring security system or have a apple mini hub. Than ya. Ok. But I have a client that has 5 “hubs already” and they don’t need another one. Go with eve or Meross. Especially if you have tons of switches you’re replacing. Eve for a smart fan and Meross for a cheap but effective and reliable switch for all the switches that are single pole. For example. I have a switch I wanted to turn on and off remotely for my laundry room. A Meross is cheap and works well with both Alexa and HomeKit l.",
+        "date": "Reviewed in the United States on June 2, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "If you’re on an Apple HomeKit",
+        "userName": "Paul09",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RVUY4Q41HGDDT",
+        "text": "Light switch is easy to install and set up in the app. I really like the light indicator built into the switch and the toggle switch style.",
+        "date": "Reviewed in the United States on May 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Nick Doherty",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RSTZ3A1OCBILV",
+        "text": "The wires were frayed, the screws were painted white. Not all of the parts were in the box, and I got this empty box within the box. I know the construction industry is pretty sleazy so maybe that’s the reason. A bunch of switcheroo going on. I’m just a regular homeowner here.",
+        "date": "Reviewed in the United States on May 28, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Used products!",
+        "userName": "Prentiss Jones",
+        "numberOfHelpful": 4,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61bhnKBQoIL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6c0b4904-0f75-4c0a-90da-0ae2832a89c1/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RR21P4IJPSQWC",
+        "text": "A great product. However, it did not come with the included wall plate as advertised. Beware when buying, you may need to get a wall plate separately.",
+        "date": "Reviewed in the United States on May 23, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "DID NOT come with advertised wall plate",
+        "userName": "Kyler Bragg",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1L3TBKGYSKX9T",
+        "text": "Good for DIYs. I installed a 65-switch system in a 5500 sqft house and it’s working perfectly. No issues with hub range and responsiveness to the Lutron iphone app and homekit commands is instantaneous. Make sure you will be under 75 nodes before you start or you will regret not going with one of the more expensive Lutron RF systems (there’s no compatibility between them, so if you need to go bigger, you’ll have to rip and replace everything). Did everything myself - the first junction box was confusing but after examining it more carefully I figured out how the wiring was done in our house and now i can do a switch replacement in under 10 minutes. It’s exactly what I was hoping for and the equipment looks terrific.",
+        "date": "Reviewed in the United States on May 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fantastic system. Well thought out.",
+        "userName": "Seven Seas",
+        "numberOfHelpful": 7,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R24TXPMZZ9ONS5",
+        "text": "Hello, I noticed recently Amazon is selling Diva Smart Dimmer however is not the same model as Model # DVRF-6L-WH-R where it doesn’t come with a pre set switch cover. Model # DVRF-6L-WH-R Allows you to add a switch cover and give you a cleaner look. As seen in the first picture the switch cover is attached and second picture you can add it. Base on the Amazon listing it look like the Leviton light switch cover as seen in the second picture. Hopefully in the future they will release Model # DVRF-6L-WH-R for Amazon.",
+        "date": "Reviewed in the United States on May 10, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not flush like the other model",
+        "userName": "Carlos Sosa",
+        "numberOfHelpful": 2,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61Sg2ti14FL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61VT+f8234L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1MVB19MTFSCWD",
+        "text": "Besides the superior aesthetics, I really like that you can now control high and low trim from the app instead of just on the device. I also like that the physical slide dimmer locks in the tap brightness, regardless of any scene-based brightness that may have been set independently, giving the dimmer a “memory” other caseta dimmers don’t enjoy",
+        "date": "Reviewed in the United States on April 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it!",
+        "userName": "Jeff B.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RTY9MH1PJL4RR",
+        "text": "Rock solid. Much better design than the old Caseta switches. I had 8 light groups in my kitchen which is just ridiculous, so also added a Caseta Pico scene controller button to control them all. It is SO much simpler now to turn lights on and off, and with dimmers on all groups, I can set a different scenes with a lot of control. Currently working my way through replacing ALL light switches in the house with Diva and Claro switches.",
+        "date": "Reviewed in the United States on March 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Installed 20 of these so far. Love them",
+        "userName": "Morten N.",
+        "numberOfHelpful": 7,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/d78e3d04-6cb1-48ee-af75-42405c8c5381/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2Z1UCZIET4PAX",
+        "text": "Super easy to install and compatible with old and new wiring, so it will definitely work. The app is great and it integrates with everything. Looks like classic lutron switches. If these were cheaper I'd replace all my switches with them. But currently it's 2x more than I think is reasonable.",
+        "date": "Reviewed in the United States on March 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Expensive but the best smart switch out there",
+        "userName": "Lawrence",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2598LSIORBF3M",
+        "text": "I wanted to upgrade my bedroom light switch to one that had smart features so I can turn them on either by voice or through the app. I chose the Lutron Diva Smart dimmer because it has the traditional design and style of my existing switches and also didn't require a neutral wire. The installation was super easy. All I had to do was safely remove the old light switch and connect the line, load, and ground wires to the new one. The switch worked instantly after turning on the breaker switch. The dimming slider didn't need to be calibrated either. Also there's very small LEDs on the side that displays the light brightness as you're sliding it up and down. Additionally while the dimmer is not in use, the LEDs light up very dimly as a courtesy/guide light. It's not bothersome at all at night or when the lights are off. In order to use the smart features, you'll need to buy a Lutron hub. It's essentially a small device that connects to your router through an ethernet port. That'll enable the integration with your smart home devices. I've attached the photo of the completed installation here. I think the switch looks great. It has a modern flair with no screws on the mounting plate.",
+        "date": "Reviewed in the United States on March 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Traditional looks with smart features",
+        "userName": "Allen",
+        "numberOfHelpful": 16,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/41wB4ZYpH8L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1UAFQSBJMB359",
+        "text": "TLDR: Replaced the old \"no neutral\" lutron dimmer and it virtually eliminated light fluctuation that I had for 5 years. My dining room is the only switch without a neutral in the box, so I was forced to use the \"no neutral\" PDW-6WCL-WH dimmer paired with an LUT MLC module. At levels under 50%, it created a pretty noticeable fire lighting effect - such that the lights went slightly up and down like a flame. At levels over 50%, it was less noticeable but still present. I figured since this DIVA switch just came out, they may have made some improvements. That turned out to be exceptionally true. It now doesn't have any light fluctuation above 20% and isn't really noticeable until you get below 10% - still nowhere near as bad as the old dimmer was at 100% vs this one even at single digit percentages.",
+        "date": "Reviewed in the United States on March 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Far better than the old PDW-GWCL-WH dimmers",
+        "userName": "Matt",
+        "numberOfHelpful": 4,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R6N9ZY2SVRJ6E",
+        "text": "Excellent, Thank You",
+        "date": "Reviewed in the United States on March 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "sdchrisca",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2NNGJ8ABA9WF1",
+        "text": "At 90CAD, this is far from cheap. Dimming work properly but Ethernet Hub is needed for the smart function. The toggle feel great, I like the way that the dimming control is working. Using the slider to adjust the desired intensity, double click the power on to override it and be at 100%. You can also override the slider from the app. That said, It is not possible to adjust the fade-in / fade-out when turning the light on/off. I don't mind the fade-out but I would like to adjust the fade-in timing especially at 90$. Note: Make sure you have a full size light switch junction box otherwise it won't fit.",
+        "date": "Reviewed in Canada on June 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Better than the Lutron PD-6WCL-WH, but slightly more expensive.",
+        "userName": "Mathieu L",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RUU52K240H7C5",
+        "text": "It does not have a \"favorite intensity \" button but if you press ON twice, the light turns ON at 100%. So, you can set a night/lower brightness with the dimmer slider and press ON twice to get full lighting during the day.",
+        "date": "Reviewed in Canada on April 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product although a little pricey",
+        "userName": "Gilbert S.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1BTL4AOYJ8ORJ",
+        "text": "Doesn't pair correctly with new style paddle dimmer when purchased separately and not used with the Lutron hub, goes directly to full brightness when paddle dimmer is pressed and not the pre set dimmed level, if your using a hub it will update the firmware according to Lutron and it will work correctly, if your not using a hub get the diva dimmer/paddle remote as a kit as its pre programmed, minor issue.",
+        "date": "Reviewed in Canada on February 2, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Does not pair properly with new style paddle dimmer",
+        "userName": "auri",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2BRT15LO800O4",
+        "text": "The item I actually received was the basic unit, even though the listing title, description, and photos all state that this includes the wall plate, no wall plate was included. Deceptive listing.",
+        "date": "Reviewed in Canada on December 27, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Item Shipped Not As Listed/Pictured",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BSHKS26L",
+        "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 511,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RUO10BP0UTV9I",
+        "text": "I have Caseta dimmers throughout my home, and was excited for the Diva line since they are, in my opinion, a better style (because they match most other decora switches). These are easy to install and setup. More importantly, the Lutron control network is extremely stable - I've never had a switch not respond or lose connection.",
+        "date": "Reviewed in Canada on October 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome Smart Dimmers",
+        "userName": "Daniel Brousseau",
+        "numberOfHelpful": 0,
+        "variationId": "B0BSHKS26L",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Diva Smart Dimmer Switch w/Wallplate"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,2565 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:34:47.579961",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B081S6YXBY",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B081S6YXBY",
+    "title": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+    "brand": "SOZULAMP",
+    "model_number": NaN,
+    "price_usd": 18.99,
+    "rating": 4.4,
+    "reviews_count": 2474.0,
+    "category": "Light Switches",
+    "product_segment": "LED Illuminated Indicator Switches",
+    "product_url": "https://www.amazon.com/dp/B081S6YXBY"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2PR13CTFJFEHO",
+        "text": "Does not shine outward into a person's eyes. Make sure you have enough room in the electrical box as this is larger than a standard light switch.",
+        "date": "Reviewed in the United States on June 2, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good 'downlighting' for use near stairways or dark garages.",
+        "userName": "WorldWide Traveler",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3QCQ148O3L5AC",
+        "text": "Product didn't even work.",
+        "date": "Reviewed in the United States on May 10, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "0/10",
+        "userName": "Matthew Martinez",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RZ0J6MWIPUT6S",
+        "text": "WORKS GREAT",
+        "date": "Reviewed in the United States on April 12, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "WORKS GREAT",
+        "userName": "KB3MTU",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RHFHPEY368ST",
+        "text": "Made of durable material. Worked as intended quick dispatch and delivery a bit noisy when push by finger but provide a bit light not enough keep you awake Suttle I certainly recommend this switch easy to install.",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to operate and install",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7540513d-c523-4f1a-af32-563cf00d9c68/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2RT7ZAGX71LE4",
+        "text": "This switch is very nice and the lights are bright.",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch/lights!",
+        "userName": "Marie",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2FKA6MFCBWRAM",
+        "text": "Easy to install, works fine. Of note: the LED light fixture in the powder room I used this in lights just a little. I guess it is below the minimum required to keep it from lighting. However, it only lights a few of its LED diodes not all of them so just a little more light in this very dark room. I purchased several more of these.",
+        "date": "Reviewed in the United States on January 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work as advertised",
+        "userName": "G. Haring",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3EW8F49FNQE1T",
+        "text": "I like the look of this contemporary switch. Other illuminated switches seem to have a black cluster appearance. This has a tech look to it and has five rectangular LED segments at the top that emit white light. I imagine you could put the lights aiming downwards if you prefer with a single pole action would be opposite. It would be great if they made a three-way switch as well. But the photocell on the switch, we can see the little hole for it works well. It is so useful in trying to find a light switch in the dark. Seems to be on average quality with any other switch you can buy in a big box Store. Not spec grade however, good for residential.",
+        "date": "Reviewed in the United States on January 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Innovative, nightlight type switch.",
+        "userName": "Stacey Maciorski",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/614-9lpaniL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61ptk4A+ooL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7ed6c72c-0de3-4961-9049-9bf9ed27d548/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R25TJSQC77UQWH",
+        "text": "They are ok, but the light on them are not bright you can't really see at night.",
+        "date": "Reviewed in the United States on November 8, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Night light switch.",
+        "userName": "denise",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3BCU34QR93DNZ",
+        "text": "This led night light switches stopped working after four months. No customer service number available. One switch stopped working no light.",
+        "date": "Reviewed in the United States on November 3, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not worth your time",
+        "userName": "patrick",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R39IM54JY6XX4L",
+        "text": "We bought this Dec. 2, 2023 and now it’s Sept. 21, 2024, not even a year later, and the nightlight part has already quit working. It was great while it was working. I didn’t have to “hunt” for the light switch when I wanted to turn on the light and, plus, it was a great nightlight for going to the bathroom in the middle of the night. I really expected it to last a lot longer than this, especially with it being electric and not battery operated. Very disappointing!",
+        "date": "Reviewed in the United States on September 22, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Disappointed",
+        "userName": "Julie",
+        "numberOfHelpful": 7,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RF2AGREM0VWYK",
+        "text": "Incredible amount of light for the small area where the lights are. Shines up or down, which is nice so you can orient the switch whichever way you want. The day/night sensor (the tiny hole in the switch) is sensitive. Sometimes walking past will make the light come on, but no big thing. Now I don't have to try to walk around in the dark!",
+        "date": "Reviewed in the United States on September 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome",
+        "userName": "David",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RZ24G0GWJT8PD",
+        "text": "I’m used to light switches installed where pushing to top in turns it on and the lower end to turn the light off. These have to be installed upside down to that to have the LEDs pointing down. They will work well either way.",
+        "date": "Reviewed in the United States on September 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Install was not normal.",
+        "userName": "Doboy",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2CAD4034DV6H4",
+        "text": "A few days after installation one appears dimmer than the other but still they work great. Make sure your electrician installs the correctly, my electrician wasn't paying attention and installed them with the light facing up instead of down the way I wanted. Still, they are a great little night light. I plan to buy more for other areas of the house.",
+        "date": "Reviewed in the United States on August 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I love them...",
+        "userName": "Rashida Clarke",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2LVMO4G3BC6Q2",
+        "text": "Nice for those hallways that need lights or lamps to light up why not light switch’s baby can’t tear off!",
+        "date": "Reviewed in the United States on August 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice-useful product 2 in 1 really",
+        "userName": "Breez",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1QXP795X4IHTY",
+        "text": "Liked the quick shipping and easy installation; provides enough light but not too much; great product",
+        "date": "Reviewed in the United States on July 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy installation",
+        "userName": "Geevee",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2NSWWNP5T1NRH",
+        "text": "We had these installed... they do not have lights... the box stated they had lights... only way to get your money back is to have them uninstalled and send them back... I'm not happy with their solution",
+        "date": "Reviewed in the United States on May 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "These do NOT have lights...",
+        "userName": "C. Hamilton",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/616s-m00tKL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RZ6ADNN09ALRV",
+        "text": "Easy install. Bathroom night light",
+        "date": "Reviewed in the United States on April 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "Peter",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RTND6OXGUD0X6",
+        "text": "Good, Easy to Install but not UL Listed. I have had no issues but in hindsight I would pay more for a UL listed/inspected switch.",
+        "date": "Reviewed in the United States on April 16, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good, Easy to Install but not UL Listed",
+        "userName": "Amazon Mom",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3AVAKKV507RN0",
+        "text": "Usually black to brass neutral to white. This switch doesnt follow that standard.",
+        "date": "Reviewed in the United States on April 9, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "The screw colors dont match standard.",
+        "userName": "John Timathy",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R34FMHLF0JEZK4",
+        "text": "I saw this and thought it would solve the issue we have in our bath. I did not want a night light in the hallway as I like it dark. This worked as it does not have too much light, just the right amount on the wall in the bath. The only thing is you have to get use to the rocker switch being in the opposite direction than the norm. It is a great product and recommend it.",
+        "date": "Reviewed in the United States on March 22, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great device, just what we needed",
+        "userName": "Happy in the Sun",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RJ7IDABOX42SH",
+        "text": "Works great. Not only does it help you find the switch, it is also a nice night light. The light LEDs are located in the top of the switch toggle (see pictures) which projects the light up the wall and reflex off of the ceiling.",
+        "date": "Reviewed in the United States on February 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "works great",
+        "userName": "Hobo Pete",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61+wU2HvgmL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/6199V9pxbbL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71rs6-YMHNL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3IDTJ7MSIEPMF",
+        "text": "Very easy to install and looks great for any room",
+        "date": "Reviewed in the United States on February 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "A must have",
+        "userName": "MT10277",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61kWKSzL7SL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R37ANVY6CJZ19R",
+        "text": "Nice night light",
+        "date": "Reviewed in the United States on January 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switch",
+        "userName": "paula nelson",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R34BQ2KKPYJQP4",
+        "text": "My light switch is in a room that has a skylight but, is very dark at night. I liked this product because i believed it would help at night but not keep the LED lights on all day like some other models (bathroom light switches for instance). My only complaint is that i wish the light sensor was a little better. I sometimes find it on around 3pm when there is enough light in the room. My expectation was that it would only turn on at little (5pm-6pm) to no light. The LED lights are not as bright as advertised but, still good. Actually prefer it because when i get up to use the bathroom at night, the light is not as bright, as say a iphone flash light.",
+        "date": "Reviewed in the United States on January 2, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Not as bright as advertised but, still good.",
+        "userName": "Ivan",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R90SIXIS3LOQW",
+        "text": "Simple to install , no need for a neutral. It passes through the light bulb.",
+        "date": "Reviewed in the United States on December 31, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not very bright",
+        "userName": "TPrivott",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1a757f27-d4c9-4cf2-9060-5046861679aa/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R19ICXQYQLHWXJ",
+        "text": "I love it when what I order from Amazon arrives and is ACTUALLY exactly as expected! I think we've all experienced - at LEAST once - the disappointment that comes of receiving your order and, although it does look like the pictures, just isn't *quite* how you were expecting it to be. So it was very satisfying when it turned out that this one looks like and functions precisely as anticipated. I wholeheartedly believe in giving credit where it's due (not just complaints and dissatisfaction) so I'm giving my 👍👍 two thumbs up and 🫡 solute of approval to the manufacturer as well as yourself, the inquiring, potential customer that this product is 👌 A-OK.",
+        "date": "Reviewed in the United States on December 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly as pictured and described",
+        "userName": "Jess G",
+        "numberOfHelpful": 3,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61i5gnl2CpL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61nmYyw0t4L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1ARE1VWDLBDWG",
+        "text": ":Light switch works great on dark staircase. Works exactly how I needed it to, coming up the stairs of a dark stairway. Plenty of light with dark wood stairs with a bit of reflection.",
+        "date": "Reviewed in the United States on December 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": ":Light switch works great on dark staircase",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R229AFX3UBZW4Y",
+        "text": "These work perfectly when going out to my dark garage.",
+        "date": "Reviewed in the United States on December 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very cool switches for a garage or shop",
+        "userName": "Sam Gordon",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R30A50TDV2CN45",
+        "text": "Bought these for a half bathroom so that guests can easily see the switch. Works pretty good, hope it lasts. Super easy install just like a regular switch.",
+        "date": "Reviewed in the United States on November 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as described!",
+        "userName": "Jose G",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61NWzRh0k6L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RMKVU2RC0EBIE",
+        "text": "Just the right amount of light illuminating the wall for you to see in the dark.",
+        "date": "Reviewed in the United States on November 18, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wonderful way to light your way!",
+        "userName": "Debbie",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R20V9QZK19XN2I",
+        "text": "thanks",
+        "date": "Reviewed in the United States on November 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "thanks",
+        "userName": "andy avila",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2JCJFKJLXOW7N",
+        "text": "To dark making the switch worthless.",
+        "date": "Reviewed in the United States on November 15, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "To Dark",
+        "userName": "Scott M Davis",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3Q1425V3UN4T8",
+        "text": "I installed one switch in a bathroom. Provides enough light at night that we don't have to switch the lights on. Installed the second switch in an alcove where the entry to our garage is, and similarly provides enough light at night when walking around. Very happy with these, as well as the 3-way switches from same manufacturer.",
+        "date": "Reviewed in the United States on November 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wonderful!",
+        "userName": "Howard",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3JJ7SZILE7JXQ",
+        "text": "**buyers beware** The LED light on this switch is way too dark. Unable to see anything. Highly advise to reconsider buying this switch for replacement of an actual night light. Thankfully this does not apply for me, as I need a new switch regardless.",
+        "date": "Reviewed in the United States on October 20, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Switch works but issue with brightness",
+        "userName": "Cody",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/41PoZ7wgZBL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/714xj5qotRL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RDBTBCFIUEA2X",
+        "text": "Love it",
+        "date": "Reviewed in the United States on September 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it",
+        "userName": "Oswalda S. Andre'",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3LCVPA0WS55UC",
+        "text": "Great quality switch. Light is mounted on the top edge of the switch, so you'll want to mount it upside down so that the light illuminates the ground rather than the ceiling which blinds you when you want to switch on the lights.",
+        "date": "Reviewed in the United States on September 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect amount of light for middle of the night. Mount upside down.",
+        "userName": "konyip",
+        "numberOfHelpful": 2,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71VuBy++gpL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1JBVC7U73XO4R",
+        "text": "Have trouble with dark bathroom, these things solved my problem. Now have a decent night light without the expense of an electrician to put in an outlet…so easy to install!",
+        "date": "Reviewed in the United States on August 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love these things",
+        "userName": "Bob Paniagua",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RQDHUFA1XU9MD",
+        "text": "Purchased a two pack of these switches and one was defective and unsafe. My electrician would not install, he said current was passing thru switch in the off position.",
+        "date": "Reviewed in the United States on August 2, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "One switch was defective",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R10VZ3GU54I9VI",
+        "text": "We added these to the bathrooms at our VRBO rental so guests could find their way in the dark in an unfamiliar place. Super easy to install and they provide the perfect glow without being so bright that it disrupts your sleep cycle",
+        "date": "Reviewed in the United States on June 1, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect glow",
+        "userName": "JIl Taylor",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3CLPEE5HHN1AW",
+        "text": "The switches are opposite of how typical switches are designed, this is by design because of the light. It just seems odd. They work well but are very loud.",
+        "date": "Reviewed in the United States on May 24, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Upside down and noisy",
+        "userName": "J. C. Ramsey",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1XHA215O3AGGO",
+        "text": "This seemed like a great buy for the price to help with a dark hallway but the first fell apart when my friend who is a electrician was installing. He said he wouldn't feel comfortable having something like that in his house and advised me to go to the store and buy on other than installing the second one.",
+        "date": "Reviewed in the United States on April 21, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "I really shouldn't be suprised.",
+        "userName": "clark1",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3AYRN4NF9AHBI",
+        "text": "My mom needed a little light, a little something so she could get a drink of water in the middle of the night. This works absolutely perfect. Just enough for her to see the floor in front of her on her way to the kitchen. Best part she doesn't have to turn the light on that she finds too bright. Installation was simple and fit a standard switch cover so I didn't have to buy a new one of those. Can't speak to longevity but I will update if any issues come up. I would recommend these.",
+        "date": "Reviewed in the United States on April 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Cool !",
+        "userName": "Smidgen abides",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R33L1K0EMS35FH",
+        "text": "Perfect slim design. Unobtrusive lights. Perfect brightness.",
+        "date": "Reviewed in the United States on April 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great night light",
+        "userName": "sky",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2JF262BXELRWC",
+        "text": "led lites stopped working about 3 months of use. Save your money not worth the cost.",
+        "date": "Reviewed in the United States on April 2, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "LED lites burn out quickly 3 months",
+        "userName": "Kenneth Funk",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RVCFT2JEH352E",
+        "text": "Our bathroom switches are about a foot down the wall from the door, so we always fumbled to find the switch. Now with this illuminated switch, we can easily find it in the dark. The LEDs aren’t too bright at night (which is a plus), but they’re visible enough to find in the dark. My only issue was getting the LED to fire downward. So I removed the switch from the metal surround and flipped it. Not thrilled about it, since all the wires are on the same side now, but it works the way I want it ¯\\_(ツ)_/¯",
+        "date": "Reviewed in the United States on April 1, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Light Shines “Up” by Default",
+        "userName": "Allen A",
+        "numberOfHelpful": 2,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/619oucTxraL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71Wf0stLiXL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/813HCfVNSrL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RMMXISM6XSONP",
+        "text": "I like it, i put one in each bathroom as a night light",
+        "date": "Reviewed in the United States on March 10, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "easy install",
+        "userName": "Mitch",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2ASEZUWJW679B",
+        "text": "The picture shows night like shining from bottom but the night shines from the top. It’s not installed upside down the on position is like a normal light switch only difference is the night like illuminates towards the ceiling. If you try to reverse it the switch the on position is opposite a normal switch. I should have returned it.",
+        "date": "Reviewed in the United States on January 5, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not what’s advertised",
+        "userName": "Merilyn Gennaro",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61VtBfejMTL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2EYD21I82O9DO",
+        "text": "It's better than a night light.",
+        "date": "Reviewed in the United States on December 28, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wonderful night light",
+        "userName": "MsNuYoRican",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RM44SKD1TBKKO",
+        "text": "Only problem is that the light shines too bright when hung correctly. So hang them upside down. It’s no different than what a 3-way switch is on one end, with it appearing off but it’s switching down to turn lights on",
+        "date": "Reviewed in the United States on September 20, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Hang them upside down to get the light to shine down",
+        "userName": "Lisa",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B081S6YXBY",
+        "productTitle": "2Pack SOZULAMP Illuminated Light Switch-Single Pole Wall Switch with Night Light, 15A 120/277V,3 Wire, Grounding Screw, Glossy White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 182,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2474,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2AZW2IEJDDGWK",
+        "text": "Some of the switches are poor quality mechanics are not good. Sensors are not working. Instructions are not clear. Over all I would not suggest this to anyone",
+        "date": "Reviewed in the United States on August 22, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Motion detectors not working, couple of switches not working",
+        "userName": "Ravi",
+        "numberOfHelpful": 0,
+        "variationId": "B081S6YXBY",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole | 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

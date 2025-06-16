@@ -1,0 +1,326 @@
+{
+  "product_title": "BESTTEN 6 Pack Super Slim Dimmer Switch, Single Pole or 3-Way, Dimmable Light Switch for LED, CFL, Halogen and Incandescent Bulbs, ETL Listed, White",
+  "product_category": "Incandescent Compatible Dimmer Switches",
+  "total_reviews": 34,
+  "review_analysis": {
+    "phy": {
+      "Size": {
+        "A@Slim profile allows fitting multiple dimmers in one box": {
+          "+": [
+            1,
+            23
+          ]
+        },
+        "B@Compact design": {
+          "+": [
+            2
+          ]
+        },
+        "C@Fits in shallow electrical boxes": {
+          "+": [
+            25
+          ]
+        }
+      },
+      "Appearance": {
+        "D@Nice looking design": {
+          "+": [
+            15
+          ]
+        },
+        "E@Does not match standard toggle or rocker switch style": {
+          "-": [
+            19
+          ]
+        }
+      },
+      "Components": {
+        "F@Cheap components used in construction": {
+          "-": [
+            9
+          ]
+        },
+        "G@Fragile construction": {
+          "-": [
+            29
+          ]
+        }
+      },
+      "Controls": {
+        "H@Internal adjustment knob for brightness control": {
+          "+": [
+            5,
+            19,
+            32
+          ]
+        },
+        "I@Tiny side switch for adjustment": {
+          "+": [
+            5
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming Function": {
+        "a@Smooth dimming operation": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Flawless adjustment capability": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "c@Light intensity settings for dimming control": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "d@Flickering occurs during operation": {
+          "-": {
+            "?": [
+              0,
+              2,
+              3,
+              4,
+              6,
+              7,
+              11,
+              18,
+              22,
+              23,
+              24,
+              27,
+              32,
+              33
+            ]
+          }
+        },
+        "e@Cannot adjust properly": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "f@Dim range is non-existent": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "g@Does not really dim effectively": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "h@Problems turning on light at low dim settings": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "i@Functions well consistently": {
+          "+": {
+            "?": [
+              8,
+              16,
+              19,
+              20,
+              21,
+              25,
+              28
+            ]
+          }
+        },
+        "j@Multiple units fail within short timeframe": {
+          "-": {
+            "F": [
+              9
+            ]
+          }
+        },
+        "k@Units stop working after brief period": {
+          "-": {
+            "?": [
+              10,
+              17
+            ]
+          }
+        },
+        "l@Half of switches are broken or faulty": {
+          "-": {
+            "?": [
+              6,
+              12,
+              18
+            ]
+          }
+        },
+        "m@Units burn out": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "n@Severe flashing develops after weeks of use": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "o@Inconsistent energy flow": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "p@Lights cutting on and off": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "q@Works great with LED recessed lights": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "r@Might work well with incandescent but not with LED": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "s@Some LED lights flicker with other brands but not this one": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Installation in electrical boxes": {
+        "+": {
+          "A": [
+            1
+          ],
+          "B": [
+            2
+          ],
+          "C": [
+            25
+          ]
+        }
+      },
+      "Easy installation process": {
+        "+": {
+          "?": [
+            14,
+            15,
+            28,
+            32
+          ]
+        }
+      },
+      "Tricky installation process": {
+        "-": {
+          "?": [
+            5
+          ]
+        }
+      },
+      "Use with LED recessed lights": {
+        "+": {
+          "q": [
+            2
+          ]
+        }
+      },
+      "Use with LED bulbs": {
+        "-": {
+          "r": [
+            30
+          ]
+        }
+      },
+      "Use with small LED bulbs": {
+        "-": {
+          "k": [
+            10
+          ]
+        }
+      },
+      "Use in multiple rooms throughout house": {
+        "+": {
+          "i": [
+            8
+          ]
+        }
+      },
+      "Use in crowded electrical boxes": {
+        "+": {
+          "A": [
+            23
+          ]
+        }
+      },
+      "Use in shallow electrical boxes": {
+        "+": {
+          "C": [
+            25
+          ]
+        }
+      },
+      "Use with chandelier lighting": {
+        "+": {
+          "i": [
+            20
+          ]
+        }
+      },
+      "Use for 3-way lighting circuits": {
+        "-": {
+          "d": [
+            27
+          ]
+        }
+      },
+      "Cost-effective alternative to expensive brands": {
+        "+": {
+          "i": [
+            8,
+            13,
+            19
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:03.436587"
+}

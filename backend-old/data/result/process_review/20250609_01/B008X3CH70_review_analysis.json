@@ -1,0 +1,438 @@
+{
+  "product_title": "Lutron Maestro LED+ Dimmer Switch Kit for Dimmable LED, Halogen and Incandescent Bulbs, 150W/3-Way or Multi-Location, MACL-153M-RHW-WH, White",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "switch button": {
+        "A@difficult to press in just the right way": {
+          "-": [
+            19
+          ]
+        },
+        "B@feels like thin plastic with almost no resistance": {
+          "-": [
+            25
+          ]
+        },
+        "C@chintzy buttons": {
+          "-": [
+            25
+          ]
+        }
+      },
+      "rocker switch": {
+        "D@not a rocker switch, it's a simple pressure switch with no up for on, down for off": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "switches": {
+        "E@feel a bit cheap and squishy to the touch": {
+          "-": [
+            17
+          ]
+        },
+        "F@somewhat flimsy feel": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "size and design": {
+        "G@makes it difficult to fit multiple dimmers/smart-switches side-by-side in a 2 or 3 gang box": {
+          "-": [
+            27
+          ]
+        }
+      },
+      "control light array": {
+        "H@small and not intrusive for dark rooms": {
+          "+": [
+            29
+          ]
+        }
+      },
+      "appearance": {
+        "I@color matches adjacent traditional switches perfectly": {
+          "+": [
+            26
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming functionality": {
+        "a@dims beautifully": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "b@smooth dimming of lights": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "c@snappy to turn on the lights and dim": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "d@control is smooth and even": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "e@work smoothly to dim all fixtures with no flickering": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "f@dims lights really well": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "g@dims well LED spotlights": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "h@work and dim well": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "switching functionality": {
+        "i@brightness changes on its own if you accidentally bump anything": {
+          "-": {
+            "A": [
+              19
+            ]
+          }
+        },
+        "j@often have to stop and push it again when walking by and hitting it": {
+          "-": {
+            "B": [
+              25
+            ]
+          }
+        },
+        "k@switches do sync with each other": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "l@can control the dimmer from either switch": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "m@worked flawlessly every time": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "n@have had these for several years without any problems": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "o@have been using them for several months now and have had zero problems": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "p@they just work and work for a long time": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "q@have a delay when lighting, anywhere from a couple of seconds to 5 or 6 seconds": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "r@frequently they never trigger the light": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "s@at least 25% failure rate": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "t@disconnect from network frequently": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "u@one light randomly turns off at least 50% of the time": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "sensitivity": {
+        "v@do not like being played with, fluctuations in power will kill them": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "w@main switch popped and smelled like burning electric": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "fade functionality": {
+        "x@nice fade out at turn-off": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "y@ramps down when turning off": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "z@delayed shut off is a nice feature": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "aa@can interfere with harmonics of each other or other dimmers if not enough current draw": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "ab@works well with LED lights and older incandescent bulbs": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ac@not meant for tubular fluorescent bulbs": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ad@works great with LEDs": {
+          "+": {
+            "?": [
+              37,
+              38
+            ]
+          }
+        },
+        "ae@control common Sylvania LEDs quite well with no flickering": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "programming": {
+        "af@so many functions and you can program it in so many ways": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "ag@master control programmed to work with mechanical switch causing companion switch issues": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "multi-location capability": {
+        "ah@can be used in 4 way configuration up to 9 locations": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ai@ability to dim from 10 locations with additional secondary switches": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "kitchen lighting": {
+        "+": {
+          "a": [
+            7
+          ],
+          "?": [
+            11
+          ]
+        }
+      },
+      "bedroom lighting with multiple control points": {
+        "+": {
+          "ah": [
+            14
+          ]
+        }
+      },
+      "stairway lighting with LED fixtures": {
+        "+": {
+          "e": [
+            32
+          ]
+        }
+      },
+      "replacing older incandescent dimmers": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "three-way switch replacement": {
+        "+": {
+          "d": [
+            26
+          ],
+          "?": [
+            10,
+            37
+          ]
+        }
+      },
+      "multi-location lighting control": {
+        "+": {
+          "ai": [
+            23
+          ]
+        }
+      },
+      "LED recessed lights": {
+        "+": {
+          "y": [
+            27
+          ]
+        }
+      },
+      "remodel projects": {
+        "+": {
+          "?": [
+            28
+          ]
+        }
+      },
+      "rooms requiring tech-like control": {
+        "+": {
+          "x": [
+            29
+          ]
+        }
+      },
+      "pendant lights with dual switches": {
+        "+": {
+          "?": [
+            16
+          ]
+        }
+      },
+      "companion with dimmable LED bulbs": {
+        "+": {
+          "ab": [
+            18
+          ]
+        }
+      },
+      "cannot be used separately as companion set": {
+        "-": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "cannot pair with normal 3-way switch": {
+        "-": {
+          "?": [
+            24
+          ]
+        }
+      },
+      "complex operation requiring multiple steps": {
+        "-": {
+          "?": [
+            48
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:36.786823"
+}

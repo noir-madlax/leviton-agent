@@ -1,0 +1,2446 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:56:54.894784",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07WWYQJFR",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07WWYQJFR",
+    "title": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+    "brand": "TREATLIFE",
+    "model_number": NaN,
+    "price_usd": 39.99,
+    "rating": 4.6,
+    "reviews_count": 4138.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B07WWYQJFR"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RHEDWO5IZNSNE",
+        "text": "I’ve used Treatlife switches for years. But these switches in four pack have a very different interface in the smartlife app. It’s is very confusing…for example “on” and “off” are replaced by “ switch open” or “switch close” …. What ????? They have different modes when you try to set a schedule have no idea how this works. They need to go back to old software interface. This is awful",
+        "date": "Reviewed in the United States on June 6, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "They changed app interface it’s terrible",
+        "userName": "Paul B",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R27URMSX9ZDTPD",
+        "text": "The switches are a great value for the money. they were easy to install and look very nice. The software could use some improvement although after a little trial and error I was able to connect everything to the network and Alexa recognized the switches immediately. I would suggest to the company that the glow light on the switch should be on when they are off not when they are on. At night it would be nice to see the switches. Other than that I like them.",
+        "date": "Reviewed in the United States on April 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value for a smart switch",
+        "userName": "Michael Gabriele",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R31GFLPUITJ1CW",
+        "text": "Great product easy to install.",
+        "date": "Reviewed in the United States on March 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great light switches",
+        "userName": "M. Vermeulen",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1AWQ5KVNS93FL",
+        "text": "Love the product! I have placed multiple orders in the past. And I’m looking forward to the release of their new dimmer switch! The set up is super easy with their app and devices are easy to manage using it. I’d totally buy more of their products in their future!",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome Product - Have Bought Their Products Multiple Times & Will Continue to Buy More!",
+        "userName": "Vince Bitz",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RLXGOPCU5FAVX",
+        "text": "I purchased and installed these back in June of 2020. It’s time to switch them out. I’m not sure how long a light switch should last but after 4.5 years of heavy use, three of them are no longer functional. All of them stopped working at the same time. They worked very well until they didn’t",
+        "date": "Reviewed in the United States on March 14, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "4.5 years of heavy use",
+        "userName": "Antonio Avila",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RE6N9VUA5H2QF",
+        "text": "Great for the first 3 years then complete failure. I installed this all over my house exactly 3 years ago. Today, within 1 hour, three of the switches went completely dead. No storms or power spikes. Even a physical press does not help. I tested with a voltameter. I happened to have a replacement switch available and it immediately worked instead.",
+        "date": "Reviewed in the United States on February 27, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Built-in obsolescence.",
+        "userName": "Due Diligence",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RQSWB6TI1M5AC",
+        "text": "Easy to install and link to Alexa. I have several of these and they've been working flawlessly.",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "Oldgnusguy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RV6GBGQ2SA339",
+        "text": "When they work, they’re very good. It can be very difficult to pair to your Wi-Fi. And they often fall off the Wi-Fi and it’s virtually impossible to restore them once that happens.",
+        "date": "Reviewed in the United States on January 21, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Unstable",
+        "userName": "William Ray",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1A8DPEKGSVN0S",
+        "text": "We love these switches! They work well with the OEM app and they work with Samsung smarthings, Google home, and more. They are easy to install and easy to add to the OEM app. The size can be a bit large and difficult to fit if you are installing them into a multi gag electrical box, and the require a ground a neutral connection, but if you know what you are doing, you can fit them in no problem and you will love them!",
+        "date": "Reviewed in the United States on January 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing 👏",
+        "userName": "Eric n Amber",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RF25OUSO5MQ6B",
+        "text": "These are great initially, but our switches have been failing a little over 2 years after the first install. 4 switches have died within weeks of each other. We mistakenly bought another set to replace the first failure — it kept disconnecting and needed to be reset until it no longer responded. After we replaced that, 3 others followed and we’ve noticed another start with the same issues. We have Leviton switches in other rooms that have lasted longer without any failure or connectivity issues. Unfortunately, we will probably be stuck with continually replacing these as we are not confident the rest will last.",
+        "date": "Reviewed in the United States on December 29, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Consistent failure after a few years",
+        "userName": "Lyn",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RUXO8YM7R8D0W",
+        "text": "Switch install easy and setup with alexa flawless",
+        "date": "Reviewed in the United States on December 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy setup with alexa",
+        "userName": "kbs",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3790PCBHFN2L7",
+        "text": "New home, installed a total of 18 switches (1-pole, 3-way, dimmers, 3w dimmers). Built in 2020. Loved them at first. Started losing some within 1st year. Now 10/18 are either dead or offline. Most still function as a dumb switch. Not entirely sure of the reason… we do lose power fairly often. Some of the failures occurred upon a power loss so maybe they are sensitive to line spikes/noise. Anyway, I’m now replacing them all and will try a different brand.",
+        "date": "Reviewed in the United States on December 11, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Installed 4 years ago",
+        "userName": "Charles P. Pothier",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1QTNS9BXCS764",
+        "text": "Few of my switches, went bad after just a few months of use. Not the best quality",
+        "date": "Reviewed in the United States on November 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Longevity is not great",
+        "userName": "Sal",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R31SZZ6V9W072A",
+        "text": "The new setup procedure is SO much easier than the old that there is no comparison. They link to Amazon Alexa flawlessly. The only reason that I gave only 4 stars is that previous versions of these switches had reliability issues. I went back to them simply because the price cannot be beaten. If they prove to be more reliable than the old switches then I will up it to 5 stars.",
+        "date": "Reviewed in the United States on November 10, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "WAY easier to set up than older Treatlife switches",
+        "userName": "scotty",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R5TR9EMH17O4Z",
+        "text": "I recently embarked on a large home renovation project and decided to install smart switches for all my lights, ordering 20 TreatLife switches, along with multiple 2-gang and 3-gang wall plates. Unfortunately, this decision turned into the biggest headache of the project. During installation, my electricians discovered that the TreatLife smart 3-way switches didn’t work with the other TreatLife 3-way switches and would need to be paired with non-smart switches. The lights would randomly go to the dimmest setting. Worse, I had no choice in which side the smart switch went on due to existing wiring, leading to awkward placements where smart switches were alone, and non-smart switches were grouped with others—resulting in a messy, unattractive look (see images). I contacted TreatLife, and while each response took a day or more, they finally confirmed that their 3-way smart switches only work with 3-way non-smart switches, WHICH THEY DON’T EVEN MAKE! Not very smart for a ‘smart’ switch company. They offered no solution for the mismatched look, and to top it off, refused to accept returns on the unopened switches that would not work with their other switches as it had been over 30 days. I ultimately found a solution with Lutron Caseta switches, which allow two matching switches on either side of the 3-way configuration through an innovative remote that can be installed to look just like the hard-wired switch while allowing way more flexibility with installation locations since no wiring is needed for the remote side. The result? A seamless, functional setup I love. While it required an additional investment and another electrician visit, the new system is worth every penny. If you want matching switches for your 3-way lights, STAY AWAY FROM TREATLIFE!",
+        "date": "Reviewed in the United States on October 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "If you want matching switches for your 3-way lights, STAY AWAY FROM TREATLIFE!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51-8DzWjzeL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51A1S2yn0oL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51fYiz4P3kL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51ixRidElwL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1ODV01G0UH7E8",
+        "text": "One of my old electrical box was so tight that I couldn't get the switch all the way in. I had to disconnect all the wires and shave the box a bit to get it in all the way. I can't be the only person with this problem, so maybe the switch should be just a little shorter in height. After 6 months one of the switches failed.",
+        "date": "Reviewed in the United States on September 7, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't fit old electrical boxes and one failed after 6 months",
+        "userName": "Bob",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RL85IY1CTD2WU",
+        "text": "Can only control it from the app, will not work by turning in physically.",
+        "date": "Reviewed in the United States on August 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working after 6 months",
+        "userName": "Mark Rapoport",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3NNCGSM591OHK",
+        "text": "These are easy to set up and work well. My only issue is longevity. I have about 18 of these in my house and I have had to replace about 1/3 of them in the 12-24 month age. Some of them die completely, others just lose connection and never reconnect to WiFi. Very frustrating",
+        "date": "Reviewed in the United States on August 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy to set up",
+        "userName": "Seth Sherman",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RI22PV2D214Y2",
+        "text": "I was replacing the light in my garage. I have a fun habit of leaving it on in the evening if I'm working on items or going in and out of the garage a lot. Now I have a simple routine setup so it goes off automatically at 10:00 pm. No more worrying about turning it out at night. Easy to install. Easy to setup. I love it!",
+        "date": "Reviewed in the United States on August 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I was looking for!",
+        "userName": "Adam's Review",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2GF3ZD44HL0C",
+        "text": "Used throughout the house. Works with Google. Easy to install. The switch has a light so that you could locate it easily in the dark.",
+        "date": "Reviewed in the United States on August 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Convenient",
+        "userName": "Huy N.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1V8COQTESQZ2A",
+        "text": "I have 6 of these switches and after every power failure or blip, the switch defaults to ON. So in the spring stormy weather, I come home or wake up to all the lights on. Outside of that, the switch is easy to set up and works as advertised.",
+        "date": "Reviewed in the United States on August 17, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Always On After A Power Failure.",
+        "userName": "Dr Obbins",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RHWV128IA40JV",
+        "text": "After changing my wifi network name, 70% of the TreatLife switches that I had (I had a mix of dimmers and on/off switches) failed to reconnect. I tried restarting my router, uninstalling/reinstalling the app, resetting each individual device, nothing worked. I reached out to customer service and got no response This garbage isn’t worth the box that it comes in",
+        "date": "Reviewed in the United States on August 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Spontaneously stopped working",
+        "userName": "Marc",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R193RC9BDR8FPI",
+        "text": "I have 4 of these switches installed within 20' of the Wifi AP so coverage is good. My Unifi console shows that they stay 100% connected to WiFi so that's not what's causing the problem. However, they continuously cycle between offline and online and this is coming from the Treatlife servers. And automation I scheduled doesn't work most of the time. Support is useless. I have 5 other brands of smart switches in my house and none of the others have any issue.",
+        "date": "Reviewed in the United States on July 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very Unstable. They show offline most of the time.",
+        "userName": "Zgabeartza Iftode",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3S61RX4AAYDRS",
+        "text": "The light in the switch from the single pole to the three-way switches do not match. The three-way switch has slight reddish/orange color compared to the not white on the single pole. The Three way switch the one all the way to the left",
+        "date": "Reviewed in the United States on July 10, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Colors don't match",
+        "userName": "Jack",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/31347rwsqcL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61UjIOLy-bL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1YS8SZPO0WVBX",
+        "text": "Excelletn prodict thta I have bought for m house,,",
+        "date": "Reviewed in the United States on June 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Adapter AC",
+        "userName": "Danish",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RO94JL0QA56JO",
+        "text": "Sólo funcionaron 6 meses y tuve que tirarlos. Perdí todo el dinero. They only worked for 6 months and I had to throw them away. I lost all the money.",
+        "date": "Reviewed in the United States on May 3, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Solo funcionaron 6 meses y tuve que votarlos. They only worked for 6 months.",
+        "userName": "Nelson Hernandez",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2ORD48TANQ9KO",
+        "text": "These were great while they lasted. I bought a dozen for my home. Right around the three year mark they all began to fail one by one. The physical switches start to lose their sensitivity and responsiveness. At this point each switch requires numerous presses in various locations in order for the switch to respond on or off. The company does not stand by their product outside of the warranty period. Here is their email response to my case after providing them with video evidence: “For your case, the switch should be broken. Treatlife stand by 24-month warranty. Your order was placed on April, 2021, which has passed our warranty period. Or if you still have other order?”",
+        "date": "Reviewed in the United States on April 20, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Buyer beware: Systematic failure after 3 years",
+        "userName": "YoYo",
+        "numberOfHelpful": 4,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2PYWNWRFT7EM1",
+        "text": null,
+        "date": "Reviewed in the United States on March 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "100%",
+        "userName": "Exelente para el control de luces exteriores e interiores",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61990lprMWL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1M0UUFDTOF5EC",
+        "text": "I’ve had these switches in 2 of my homes over the last couple of years. Sometimes over time and sometimes right away, eventually your lights will start to flicker because of the quality of the switch. Eventually or right away it allows a tiny bit of power to flow through the switches causing the lights to flicker or sometimes you’ll turn the switch on in one room and lights in another room will come on. I know that it is the switch causing the problem because I am a journeymen electrician and after replacing the switches to regular dimmers they stopped flickering. I like the switches, they work well with Alexa but I wish the quality was a lot better.",
+        "date": "Reviewed in the United States on March 11, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Lights will flicker eventually",
+        "userName": "Randizzle",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2QI3Q6BPVPLOR",
+        "text": "I bought a lot of these switches back in June of 21. At first they worked great. Weren’t the easiest to get working with Alexa but overall functioned. Since then I’ve had to replace many of them. They either lose network connection for no reason or just flat out stop. Like won’t even work by manually pushing the switch. If your house has frequent power hits, forget these completely. They will fry. Where as brands like Kasa and Lutron in my house still work perfectly fine. if you have a lot of them they will take up a crazy amount of your bandwidth on WiFi. The thickness of the switches is an issue in smaller switch boxes. A couple of my boxes where there were numerous wires these switches had to be practically forced into, which caused a couple to not work. Yet again used another brand to fit in those boxes. Just the other day went to replace one that had randomly quit working and the new one won’t program out of the box new. With all that said I won’t ever re buy this brand and will replace with other brands as they fail",
+        "date": "Reviewed in the United States on February 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "In the Long term not worth it",
+        "userName": "Jason",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2K2HA8KVPUXKP",
+        "text": "The switch works okay, easy to install and seems to be well built. But the Alexa skill will not offer ways to create routines for when the switch is turned ON/OFF. You can only create routines, to trigger the switch. But the option is available for google home, which seems odd.",
+        "date": "Reviewed in the United States on February 1, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Will not let you create routines for when the switch is ON/OFF",
+        "userName": "Roberto Caetano",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R105OZ4VP9HF3K",
+        "text": "Espectacular las recomiendo",
+        "date": "Reviewed in the United States on January 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Espectacular",
+        "userName": "Octavio",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R6AZTZYAIG39V",
+        "text": "I have used several smart bulbs in the past and they don’t stay connected and or burn out. In 3 months I have had zero issues with these switches. The extra nice thing is that if someone is visiting and flips the switch, I can still use Alexa or Google to turn it back on or off. I’ve ordered more and my entire house now has these.",
+        "date": "Reviewed in the United States on January 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Much Better than Smart Bulbs",
+        "userName": "Michael Hughes",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1PSN0M68SKLG1",
+        "text": "I purchased wifi switches and I could not get 2 of them to work. A short e-mail to customer service and they answered and replaced them very prompt. I have since purchased their wifi plugs and bulbs. They work great. I will see how long they last but I expect them to work for a long time.",
+        "date": "Reviewed in the United States on December 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Customer Service",
+        "userName": "Candy Harvey",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3U8HBFLXJTMRK",
+        "text": "I bought multiple switches from Treatlife, and installed them throughout the house. The switches just work out of the box. They had a very easy setup via mobile app for connecting the smart switch to wifi, and even integrating them with Alexa. After about a month's use, one of the switches blew up, and I wrote an email to support team. The team was pleasant to work with. They acknowledged and understood my issue and immediately sent me a replacement switch. The new switch worked like a charm. Very happy with the company and their product line. I highly recommend them.",
+        "date": "Reviewed in the United States on December 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Customer Service",
+        "userName": "Josh",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R13DR3LXJG0ZA5",
+        "text": "These work okay once they're installed, but configuring them can be a problem. It took me more than an hour to get it working, and I don't know why it finally started working. The next day, the connected light was flashing and the switch was unresponsive. It won't reset. I couldn't find any support for this problem. I can only conclude that the switch failed in the first 24 hours of service. I don't know why it failed. It's all rather disappointing.",
+        "date": "Reviewed in the United States on December 15, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Difficult to install, Couldn't find support",
+        "userName": "Karla",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RG6SIL46XNHN",
+        "text": "I spent $850 over the course of a year changing all my switches to Treatlife products to manager dozens of recessed can lights, bathroom fans, ceiling fans, etc. With so many switches and kids, I thought it would be great to be able to dim the massive amount of can lights and also control them to keep lights all over the house from being left on. The theory is great but the switches are not. I have fought several to keep them on the network constantly resetting them. Several have been replaced. Several are not working now and I had to put the old toggle switches back into one fixture. I have a mesh network so signal is never a problem. Every time we have a power outage of any sort, many get messed up and have to be reconnected to the network / app. The newest versions I bought as replacements are even harder to get online since they “automated” the process. I have 2 that cannot be synced and are brand new. 3 out of the 4 fan light combination switches have failed. Naturally some that I have the most trouble with are in the basement and I have to go down to turn off one switch out of 3 that my kids left on even after using the app to turn off ALL basement lights. I contacted Treatlife about some of these issues and they wanted me to go thru all the programming steps and tell them what happens at each step. I explained it is not even turning on so I cannot make it do anything. Then they said I must have made a mistake wiring them. I am an engineer and have wired several houses and barns including fixing others mistakes. This is all run around to avoid warranty claims. They won’t stand behind the high failure rate products. My advice is to limit your installations to only devices that benefit from connectivity and avoid the headache and expense of such a buggy system. Definitely not worth the hype for a whole home install. And definitely not worth a wife being upset the lights or ceiling fan is not working.",
+        "date": "Reviewed in the United States on December 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not worth the headache",
+        "userName": "Distracted Engineer",
+        "numberOfHelpful": 4,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1NFSH5NZ2WYBD",
+        "text": "Have had Wemo light switches for about 3 years. They worked just OK. Frequently dropped off line. Every time that the wireless mesh network (eero) updated I had to go and relink all of them. Finally with the latest update, they just refused to link at all. I have been using the Wemo Alexa skill and it is weak at best. I replaced four of them in the garage with these units in about an hour. They set up very easily and QUICKLY. And they work GREAT with Alexa. I ordered four more. No more Wemo. What a pain to maintain them.",
+        "date": "Reviewed in the United States on October 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wonderful switch",
+        "userName": "Robert G. Coach",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2LD5DMCW0UXQ0",
+        "text": "I bought these Feb of 2022 and two of them have already stopped working. I would not recommend them.",
+        "date": "Reviewed in the United States on October 8, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Quality sucks",
+        "userName": "Scott D.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R21R95XPJ8UC8Y",
+        "text": "Worked great easy to install and program.",
+        "date": "Reviewed in the United States on September 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "TreatLife switch’s and plugs",
+        "userName": "David Frye",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3E2ZG212088N6",
+        "text": "Product worked great",
+        "date": "Reviewed in the United States on August 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart switch",
+        "userName": "Arron Botts",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RTLA8XZ1U2PK4",
+        "text": "The only good thing about these switches is that they are very easy to install and they look so much better. But their technology is so bad. None of my switches would connect to wifi. I tried EZ installation with a 2.4 GHZ network. All of my other smart plugs, and smart light bulbs would connect so easily not these switches. I spent 3 days trying to connect the switches to the app. I tried both apps SmartLife and TreatLife. It does not make any difference. I tried AP installation, but the Wifi hotspot that it creates would not even stay on for more than 30 seconds and the app spins for 2 mins and then it shows a generic message. I made a big mistake buying these. I would not recommend buying it to anyone. Please stay away from this product.",
+        "date": "Reviewed in the United States on July 20, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "WORST SWITCHES EVER - DO NOT BUY",
+        "userName": "AkSarkar",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3UT0A4RRP9T3G",
+        "text": "Works great with google, quick and simple to connect and install. Fast. Able to create automations to turn on certain lights based on other triggers. Just what we were looking for.",
+        "date": "Reviewed in the United States on July 18, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what we needed",
+        "userName": "E.T.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RMNCXP5HCSINQ",
+        "text": "After 3 years, I found manual switch no longer works. This happens to all my 3 switches.I read many have the same problem. I found a way to make it work again. I open the Smart Life app, select the switch, go to edit, select “Remove Device”. Select delete and wipe all data. The switch will start blinking, next use the app and add and set up the switch. After that the manual switch works again. Worked for all 3 switches, just not sure how long this fix will work",
+        "date": "Reviewed in the United States on June 23, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Manual switch no longer working - how to fix",
+        "userName": "D. Chieng",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R38HHFD2EG7K2A",
+        "text": "While it works it is great. So far we've had two switches that would begin switching on on their own after about 3 years of normal use. Then they will not turn off even if you press them manually. Only a matter of time before the rest of our switches start doing the same thing.",
+        "date": "Reviewed in the United States on June 14, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Stops Working after 3 years",
+        "userName": "JONOWEN008",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R35B4GZKZC5U71",
+        "text": "Got this switch 2 pack ( 4 each) on Aug 2022. Couple of switches stopped connecting to the Wifi and started operating like a normal switch. Tried reseting the switch. But, no use still behaves the same. Even restarted the breaker switch NO USE. replaced with the new switch works as expected. The Faulty switch behaves the same. the other switches works as expected. Only 2 switch have this behavior and wating for the customer support to have. them replaced.",
+        "date": "Reviewed in the United States on May 2, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working on Wifi Mode",
+        "userName": "Babloo",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RZJ1HCQLMBX2V",
+        "text": "Good product",
+        "date": "Reviewed in the United States on April 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "Delfino Oviedo",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R11J6FXLG8CXQP",
+        "text": "Makes letting the dogs out so much easier.",
+        "date": "Reviewed in the United States on March 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "89matt",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R12IBOISC0CT6L",
+        "text": "These smart switches are working well. I order the 4 pack because we are replacing a few current smart switches with these. Nothing really wrong with the existing switches except for the indicator led (Red for on and Green for off) are failing on random switches. The new ones look good and have a white lit circle when they are turned off. Looks clean and neat. Will buy another 4 pack when these are installed.",
+        "date": "Reviewed in the United States on March 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Second time to order",
+        "userName": "Homer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07WWYQJFR",
+        "productTitle": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1251,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4139,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2HLT3S6YBH77N",
+        "text": "I have about 20 different TreatLife smart switches in my home -- on/off, dimmer, combo fan/light, remote, etc. I have had great success with them and they just work as expected. They all work with the SmartLife app which keeps everything in one app for ease of access. I had a couple of devices fail early after installation but TreatLife was very quick to replace the defective devices. Great products and great customer service -- I will stick with TreatLife for all of my smart home switches and accessories!",
+        "date": "Reviewed in the United States on March 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "I LOVE TreatLife smart devices",
+        "userName": "vdawg",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

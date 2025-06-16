@@ -1,0 +1,2438 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:39:07.925346",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B000U3DUZO",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B000U3DUZO",
+    "title": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 19.2,
+    "rating": 4.7,
+    "reviews_count": 366.0,
+    "category": "Light Switches",
+    "product_segment": "Multi-Function Combination Switches",
+    "product_url": "https://www.amazon.com/dp/B000U3DUZO"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R34UO4XS89LXRJ",
+        "text": "Replaced old bathroom switch! Works great still!",
+        "date": "Reviewed in the United States on May 1, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple and effective 👌",
+        "userName": "trevor",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1CWUAW184V283",
+        "text": "I purchased this switch to replace a faulty one controlling my Panasonic FV-0811VF1 WhisperWarm DC Ventilation Fan/Heater in the bathroom. Despite not being an electrician or a particularly skilled DIYer, I found the installation to be quite straightforward. The terminals on the back of the switch were clearly marked and conveniently matched the wiring of the original, broken switch. It was a simple matter of connecting the wires color to color, and I had the new switch installed within minutes. The switch itself has a firm but not overly stiff feel when toggling it on or off. It feels more substantial than a standard light switch, which gives me confidence in its ability to handle the load of the quiet yet powerful fan and the heater in my Panasonic unit. The standard white color blends seamlessly with the other switches in my bathroom. Given its low price point, the fact that it's rated for the necessary amperage of my Panasonic WhisperWarm fan/heater combo, and that it's UL listed for safety, I'm very pleased with this purchase. It seems durable after a month of use and effectively controls my bathroom fan and heater without any issues. If you need a reliable and easy-to-install switch for a similar application, especially for a unit like the Panasonic WhisperWarm, this is a great option.",
+        "date": "Reviewed in the United States on April 1, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Reliable Switch for High-Amp Bathroom Fan/Heater Combo",
+        "userName": "Harrison Logan",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71L8MgR60mL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/eaab013e-d1bc-48c6-aefd-2f7aa25e1cc1/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R27ELSXJK1MT25",
+        "text": "The screws on these \"commercial\" duty switches have become garbage. The heads strip out easily even when using the correct tools. I am a commercial retired electrician and Leviton is cheaping out. I can only imagine that the inside is also cheap and not what it used to be.",
+        "date": "Reviewed in the United States on January 8, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Screws are Junk",
+        "userName": "Db",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1W2F4FH9H71RN",
+        "text": "Works as described.",
+        "date": "Reviewed in the United States on December 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as expected.",
+        "userName": "cbengall",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3KAEDXVG5HULX",
+        "text": "I used this switch to control the high low settings of an outdoor infrared heater with a 16 amp rating. The heater company wanted four times the price for the same switch. I had it in two days from Amazon for a quarter of the price!",
+        "date": "Reviewed in the United States on July 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Outdoor infrared heater switch",
+        "userName": "jonathan hunting",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2D8SFNQWA9RP0",
+        "text": "Was a little anxious ordering online since I wasn’t sure this was going to be right one needed but worked perfect. Good price.",
+        "date": "Reviewed in the United States on July 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked perfect",
+        "userName": "OKINOK",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RYRUSRPIJRNI7",
+        "text": "I tried another off brand on Amazon that was cheaper and it didn't work. This one works perfectly.",
+        "date": "Reviewed in the United States on July 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "Smeado",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R31XUGI7EW3VJ0",
+        "text": "Installed a combination fan/heater in my bath. This switch was perfect to enable separating the heating portion from the fan portion so that they could be used individually.",
+        "date": "Reviewed in the United States on December 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for the use I needed",
+        "userName": "Noneya B",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1KVHZ7NQF03YD",
+        "text": "I like how you can turn on and off your devices. I needed 20 amp for garbage disposal, and this turns it on, and back off again. Pretty amazing!",
+        "date": "Reviewed in the United States on November 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works like a switch",
+        "userName": "Caleb",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R10EZH4LSUWZC1",
+        "text": "Not much to review. It's does what it's supposed to do. Easy to install and works as intended.",
+        "date": "Reviewed in the United States on September 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switch",
+        "userName": "Infinitinbeyond",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2CGSRKEZIRRCY",
+        "text": "The center of the switch has a rocker tap inside that is held in place by that thin section of plastic that runs across the center of the two switches. That snapped within 2 weeks of use leaving the power engaged on 1 switch. Very poor design with weak plastic as a center support for the two switches. They need to make a better and stronger support in the center for the rocker tabs. I emailed Leviton and they could care less. Stay away from this switch, it can be very dangerous",
+        "date": "Reviewed in the United States on August 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broken within 2 weeks",
+        "userName": "J.B. Hickok",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3PCNBNKP6U9L0",
+        "text": "It works like it was supposed to",
+        "date": "Reviewed in the United States on July 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Electricity",
+        "userName": "cindy dupuis",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2GTWV3ZUJ0JA8",
+        "text": "Worked perfectly",
+        "date": "Reviewed in the United States on June 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Flawless",
+        "userName": "Richie333",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RBTOZMVO0O74H",
+        "text": "I like that it fits in a normal switches place and gives you the option to add either a second light or a fan to a bathroom",
+        "date": "Reviewed in the United States on March 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dual switch",
+        "userName": "J.A.C.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2EJJZ9Z1D586X",
+        "text": "I needed this and my electrician gave thumbs up",
+        "date": "Reviewed in the United States on November 16, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Electrician gave thumbs up",
+        "userName": "Jade",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RC64HJWRJ264U",
+        "text": "I wanted to hardwire some undercabinet lighting in the kitchen, but had a single rocker switch for a light over the kitchen sink and I didn't want to lose the sink light or have both on the same switch. I found Legrand (RCD11WCC6) and Leviton (5627) dual switches to replace single rocker switches. The Legrand rocks up and down, while the Leviton rocks side to side so I used the Leviton for the kitchen application since it is next to an outlet, and the Legrand in the living room because we added a ceiling fan and had to convert two single rocker switches to a single and a double, and the Legrand allowed all three switches to rock in the same direction. Very pleased with the outcome of both.",
+        "date": "Reviewed in the United States on October 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Let me use the sink light and under cabinet lights independently",
+        "userName": "Aepp",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2VD6OH898SIQO",
+        "text": "Wired up fine, no problems. Works great when we needed a double switch for bathroom fan & light with no room for a double box.",
+        "date": "Reviewed in the United States on May 1, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just as needed",
+        "userName": "A. Taylor",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RVTFJU7V8EGEX",
+        "text": "Top rocker tab broke after 1.5 years. Not really commercial grade when it breaks at home. Need to find a longer lasting one",
+        "date": "Reviewed in the United States on April 1, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Didn’t last last 1.5 years",
+        "userName": "Perfect Fate",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1FGF75P0WWI2S",
+        "text": "Bought this and a box as an install for a heater. The heater company’s switch is almost $100. This, the box, and cover plate makes it under $30 for a diy build.",
+        "date": "Reviewed in the United States on March 28, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Much better option",
+        "userName": "AzFranz",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R31QT1EQ6BK2NA",
+        "text": "Like the product. Using it to break one side of a 240 volt heat lamp",
+        "date": "Reviewed in the United States on February 14, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "It was a 20 amp switch which will handle large loads at 120 volts",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R241145PGQRZ2K",
+        "text": "Bought it brand new and it had some smudges and black stuff on it.",
+        "date": "Reviewed in the United States on February 11, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Dirty when it arrived",
+        "userName": "Jani Jackson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2AG350L9NG1XP",
+        "text": "Cheap made-in USA garbage. Nowadays made-in USA is a brand of trash.",
+        "date": "Reviewed in the United States on November 23, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Screw broken in the electrical box!!!",
+        "userName": "BoieYiong L.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2B47MA66GRK52",
+        "text": "I needed the space in a four-gang box to this was the perfect solution. Outrageously priced but when you’re in a bind... they gotcha. This is a great option for ceiling fan and light controls if you have an older fan and don’t want to pull the chain.",
+        "date": "Reviewed in the United States on March 31, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Pricey but perfect",
+        "userName": "Tlarson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/C1t-A85kyIS._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3DNHM5ADJTJKS",
+        "text": "This was great!!! Helps me from adding another box on the wall!!!!!",
+        "date": "Reviewed in the United States on December 18, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product for my recess lights!",
+        "userName": "Richard B",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R17DODFTM2CDYG",
+        "text": "Had one that lasted about a year. Replaced it 3 months ago and it's already dead. Definitely not worth it.",
+        "date": "Reviewed in the United States on October 28, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't last",
+        "userName": "GML",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R28FM6P9RFWLXI",
+        "text": "Regular switch...the price is the best I've found.",
+        "date": "Reviewed in the United States on October 25, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great price",
+        "userName": "Rhonda",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1M7D5P1SJF21V",
+        "text": "Perfect fit to control my dual element outdoor heater",
+        "date": "Reviewed in the United States on October 21, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Control for outdoor patio heater",
+        "userName": "David Y.",
+        "numberOfHelpful": 5,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3DIAVE85WXWFX",
+        "text": "Needed the switch because I had a curio in front of double switch, switched out two singles for this double stacked plus, workEd great",
+        "date": "Reviewed in the United States on October 17, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked for what I needed",
+        "userName": "avidreader",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R24IO7647AMRV1",
+        "text": "When we moved into our new condo, the bathroom lights and fan were wired within 1 switch. Pretty inconvenient if the fan in each bathroom needed to be left on for a longer time to remove condensation or possibly odors. Isn’t that what the purpose of the fan is for? And why have the lights on for that extended time? This switch allowed splitting the lights and the fan each onto their own switch, without having to increase the box size and add a second individual switch.",
+        "date": "Reviewed in the United States on August 24, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked perfectly to split 1 switch into 2.",
+        "userName": "L. Malecha",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1U2WQ9TDI9YK9",
+        "text": "Easy to install and use. Great price as well.",
+        "date": "Reviewed in the United States on August 10, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "The Right Product",
+        "userName": "Anthony P.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R25TXJJYY3F465",
+        "text": "Exactly what I needed. 20 amp switches like this can't be found in stores.",
+        "date": "Reviewed in the United States on August 6, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Max",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2E4VI3N65RHG0",
+        "text": "Great..",
+        "date": "Reviewed in the United States on February 10, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well Built",
+        "userName": "frank x soriano jr",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1H5DO8P8IA0TW",
+        "text": "Good for the money",
+        "date": "Reviewed in the United States on December 15, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good buy",
+        "userName": "gsp",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2ZFKY7QMNDONW",
+        "text": "Just exactly ad described",
+        "date": "Reviewed in the United States on November 12, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just as exactly as described....",
+        "userName": "Sandra M. Groff",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3QCL1CJZXV7UP",
+        "text": "Needed a 20amp double switch to operate a heat lamp/fan in a bathroom of a 40 year old house. Great fit.",
+        "date": "Reviewed in the United States on May 16, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked great for our 40 year old house",
+        "userName": "Brent Richards",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2AYRBGWJZUA0Y",
+        "text": "I needed to control a ceiling fan and light in a bedroom separately with 2 switches instead of one in a single gangbox. This fit and matched my other switches in the house perfectly.",
+        "date": "Reviewed in the United States on April 16, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect replacement for our ceiling fan/light single switch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3IWMQ5LTIA7V9",
+        "text": "Great",
+        "date": "Reviewed in the United States on September 15, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Abigail Baez",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "REAZZK5G06G9R",
+        "text": "work just fine",
+        "date": "Reviewed in the United States on July 16, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Charles Alford",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2Q557KKLHJRWZ",
+        "text": "These switches switch things on and switch things off.",
+        "date": "Reviewed in the United States on April 21, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Jonathan Schlosser",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2S1Z4PSCAOVAF",
+        "text": "Works as suspected",
+        "date": "Reviewed in the United States on September 5, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "B2",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3QIEETW36PHZS",
+        "text": "perfect",
+        "date": "Reviewed in the United States on May 2, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Scott Elliott",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3QFBKUP3MZFY5",
+        "text": "Works perfectly. None of the box stores had a 20 amp comparable.",
+        "date": "Reviewed in the United States on January 1, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Robert S.",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R116KTIO3TNX3C",
+        "text": "No \"Box\" stores in my area had the 20 amp version. I was lucky to find this switch online. Works great for bathroom fan and heater",
+        "date": "Reviewed in the United States on October 30, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great for bathroom fan and",
+        "userName": "Dave",
+        "numberOfHelpful": 5,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2R382NWJ6ZPZ7",
+        "text": "works as described!",
+        "date": "Reviewed in the United States on April 27, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Richard",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RPNUXB5DZ7JCQ",
+        "text": "The Packtage was ripped open and the switch removed from the box and just thrown into the parcel.Never the less the switch works great.",
+        "date": "Reviewed in the United States on December 2, 2015",
+        "rating": "5.0 out of 5 stars",
+        "title": "Never the less the switch works great.",
+        "userName": "Old timer Truckee",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3VEW50594HYFJ",
+        "text": "Very good looking, nice smooth action, and quiet. Easy installation.",
+        "date": "Reviewed in the United States on October 23, 2015",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good solid and quiet switch",
+        "userName": "anonymous",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RYYB68F3HL1UZ",
+        "text": "It gets the job done and works fine.",
+        "date": "Reviewed in the United States on January 28, 2015",
+        "rating": "5.0 out of 5 stars",
+        "title": "Gets the job done.",
+        "userName": "ellissa",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2G5I0L32W0MHC",
+        "text": "When a second switch is needed to do the job without getting too involved this is the way to go. Makes electrical work alot easier that to cxut in a second gem box to mount additional; switcxh",
+        "date": "Reviewed in the United States on May 7, 2013",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well made combination switch",
+        "userName": "Placeholder",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RTZR0X53J283U",
+        "text": "as described",
+        "date": "Reviewed in Canada on October 31, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000U3DUZO",
+        "productTitle": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 50,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 366,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2PKJMVGUGQ5K9",
+        "text": "Using it switch on/off two 20amp infrared heating elements. Worked just as described!",
+        "date": "Reviewed in Canada on October 6, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Rob O.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

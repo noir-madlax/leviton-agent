@@ -1,0 +1,348 @@
+{
+  "product_title": "Feit Electric Wi-Fi Smart Dimmer Light Switch, 3 Pack, White",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 19,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks good": {
+          "+": [
+            13
+          ]
+        },
+        "B@elegant and beautiful design": {
+          "+": [
+            18
+          ]
+        },
+        "C@not the prettiest": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "wiring_design": {
+        "D@no wires coming out of the back": {
+          "+": [
+            14
+          ]
+        },
+        "E@not too deep, fit in electrical box": {
+          "+": [
+            14
+          ]
+        },
+        "F@requires neutral wire": {
+          "+": [
+            8,
+            18
+          ]
+        }
+      },
+      "interface": {
+        "G@dedicated dimming functions": {
+          "+": [
+            14
+          ]
+        },
+        "H@LEDs showing brightness level": {
+          "+": [
+            14
+          ]
+        },
+        "I@slide bar that moves up and down for dimming": {
+          "+": [
+            0
+          ]
+        },
+        "J@blue button for on/off control": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "signal_wire": {
+        "K@red wire used as signal wire between switches": {
+          "+": [
+            4
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy install": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@straightforward to install": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "c@sometimes a little hard to install": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@compatible with single pole or 3-way": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@can create 4-way install": {
+          "+": {
+            "K": [
+              4
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "f@easy to connect to wifi": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "g@sometimes tricky to connect to WiFi": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@easy to set up": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "i@can be easily integrated with Google Home": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "j@dimming is good": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "k@don't dim lights enough, still too bright on lowest setting": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "l@low level is adjustable": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "m@works great": {
+          "+": {
+            "?": [
+              1,
+              2
+            ]
+          }
+        },
+        "n@far more reliable than other brands": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "o@no issues over years of use": {
+          "+": {
+            "?": [
+              4,
+              15
+            ]
+          }
+        },
+        "p@switches didn't work, wouldn't power on": {
+          "-": {
+            "F": [
+              8
+            ]
+          }
+        }
+      },
+      "app_performance": {
+        "q@app can be glitchy at times": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "r@easy download of phone app": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "s@sometimes challenging to program": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "voice_control": {
+        "t@works with Hey Google": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "u@responds to voice commands for on/off and brightness": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "v@compatible with Alexa": {
+          "+": {
+            "?": [
+              2,
+              3,
+              6
+            ]
+          }
+        }
+      },
+      "durability": {
+        "w@other brands failed within a year": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "outdoor_lighting_control": {
+        "+": {
+          "a,i,j": [
+            0
+          ]
+        }
+      },
+      "general_home_lighting": {
+        "+": {
+          "m,t": [
+            1
+          ]
+        }
+      },
+      "alexa_voice_control": {
+        "+": {
+          "v": [
+            2
+          ]
+        }
+      },
+      "basic_switching": {
+        "+": {
+          "h,v": [
+            3
+          ]
+        }
+      },
+      "4_way_switch_installation": {
+        "+": {
+          "e,o": [
+            4
+          ]
+        }
+      },
+      "smart_dimming": {
+        "+": {
+          "j": [
+            5
+          ]
+        }
+      },
+      "wifi_light_switching": {
+        "+": {
+          "f,d,v": [
+            6
+          ]
+        }
+      },
+      "google_voice_control": {
+        "+": {
+          "t,l": [
+            7
+          ]
+        }
+      },
+      "voice_activated_lighting": {
+        "+": {
+          "u": [
+            10
+          ]
+        }
+      },
+      "smart_home_integration": {
+        "+": {
+          "q": [
+            11
+          ]
+        }
+      },
+      "reliable_home_automation": {
+        "+": {
+          "n": [
+            12
+          ]
+        }
+      },
+      "smart_home_solution": {
+        "+": {
+          "b,i": [
+            16
+          ]
+        }
+      },
+      "homes_without_neutral_wire": {
+        "-": {
+          "F": [
+            18
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:25.152108"
+}

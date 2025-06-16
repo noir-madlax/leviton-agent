@@ -1,0 +1,365 @@
+{
+  "product_title": "Meross 3 Way Smart Switch, Smart Light Switch Supports Apple HomeKit, Siri, Alexa, Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch Neutral Wire Required, Remote Control Timer 1 Pack",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@large physical dimensions causing fit issues in electrical boxes": {
+          "-": [
+            1,
+            3
+          ]
+        }
+      },
+      "build_quality": {
+        "B@all plastic construction": {
+          "-": [
+            7
+          ]
+        },
+        "C@cheap construction quality": {
+          "-": [
+            7,
+            42
+          ]
+        }
+      },
+      "button_mechanism": {
+        "D@physical button that no longer moves": {
+          "-": [
+            7
+          ]
+        },
+        "E@single push button at bottom instead of toggle switch": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "homekit_code": {
+        "F@missing homekit code on switch": {
+          "-": [
+            5,
+            38,
+            42
+          ]
+        },
+        "G@tiny sticker homekit code on front of switch": {
+          "+": [
+            19
+          ]
+        },
+        "H@oblique barcode difficult to read": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "wiring": {
+        "I@clear wiring directions and labeling": {
+          "+": [
+            8,
+            17
+          ]
+        }
+      },
+      "reset_button": {
+        "J@accessible reset button": {
+          "+": [
+            47
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@frequent wifi connection drops": {
+          "-": {
+            "?": [
+              0,
+              2,
+              7,
+              45,
+              46
+            ]
+          }
+        },
+        "b@quick wifi reconnection after outages": {
+          "+": {
+            "?": [
+              8,
+              14
+            ]
+          }
+        },
+        "c@impossible to reconnect after disconnection": {
+          "-": {
+            "?": [
+              2,
+              5,
+              11
+            ]
+          }
+        },
+        "d@connects quickly to network": {
+          "+": {
+            "?": [
+              1,
+              15
+            ]
+          }
+        },
+        "e@disconnects after 5 minutes requiring reset": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "response_time": {
+        "f@quick response time": {
+          "+": {
+            "?": [
+              1,
+              3,
+              20
+            ]
+          }
+        },
+        "g@slow response to voice commands": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "h@device failure after 6 months to 3 years": {
+          "-": {
+            "B": [
+              7
+            ],
+            "C": [
+              42,
+              48
+            ]
+          }
+        },
+        "i@occasional unresponsiveness": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "j@device lockup and resets": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "k@burned up after less than a year": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "setup_difficulty": {
+        "l@difficult initial setup process": {
+          "-": {
+            "?": [
+              13,
+              37,
+              41
+            ]
+          }
+        },
+        "m@easy setup process": {
+          "+": {
+            "I": [
+              8,
+              15,
+              17,
+              22
+            ]
+          }
+        }
+      },
+      "homekit_integration": {
+        "n@poor homekit integration with updating issues": {
+          "-": {
+            "?": [
+              36,
+              37,
+              44
+            ]
+          }
+        },
+        "o@excellent homekit integration": {
+          "+": {
+            "?": [
+              43,
+              49
+            ]
+          }
+        }
+      },
+      "3way_functionality": {
+        "p@inconsistent 3way operation with dumb switch": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "q@works well in 3way configuration": {
+          "+": {
+            "?": [
+              6,
+              8,
+              14,
+              20
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "homekit_control": {
+        "+": {
+          "o": [
+            1,
+            3,
+            22,
+            34,
+            43,
+            49
+          ],
+          "m": [
+            6
+          ]
+        },
+        "-": {
+          "n": [
+            27,
+            36,
+            37,
+            44
+          ],
+          "F": [
+            5,
+            38
+          ]
+        }
+      },
+      "3way_switch_replacement": {
+        "+": {
+          "q": [
+            6,
+            8,
+            14,
+            20,
+            29
+          ],
+          "m": [
+            15
+          ]
+        },
+        "-": {
+          "p": [
+            27
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "f": [
+            15
+          ],
+          "d": [
+            17
+          ]
+        },
+        "-": {
+          "g": [
+            27
+          ]
+        }
+      },
+      "remote_control": {
+        "+": {
+          "d": [
+            24,
+            36
+          ]
+        },
+        "-": {
+          "a": [
+            0,
+            2
+          ]
+        }
+      },
+      "4way_switch_configuration": {
+        "+": {
+          "q": [
+            23
+          ],
+          "m": [
+            7
+          ]
+        }
+      },
+      "alexa_integration": {
+        "+": {
+          "d": [
+            15,
+            16
+          ]
+        },
+        "-": {
+          "?": [
+            25,
+            44
+          ]
+        }
+      },
+      "smartthings_integration": {
+        "+": {
+          "d": [
+            15,
+            21,
+            39
+          ]
+        }
+      },
+      "google_home_integration": {
+        "+": {
+          "m": [
+            17
+          ]
+        },
+        "-": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "electrical_box_installation": {
+        "-": {
+          "A": [
+            1,
+            3
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:27.139347"
+}

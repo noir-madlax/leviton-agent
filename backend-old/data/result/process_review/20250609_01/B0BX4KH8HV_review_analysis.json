@@ -1,0 +1,450 @@
+{
+  "product_title": "Lutron Sunnata Touch Dimmer Switch with Wallplate with LED+ Advanced Technology, for LED and Incandescent, 3 Way/Multi Location, STCL-153MW-WH, White",
+  "product_category": "Touch Activated Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@clean and modern looking": {
+          "+": [
+            17,
+            23,
+            46,
+            47,
+            49
+          ]
+        },
+        "B@sleek appearance": {
+          "+": [
+            29,
+            46
+          ]
+        },
+        "C@high-end look": {
+          "+": [
+            14
+          ]
+        },
+        "D@seamless and unobtrusive on wall": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "size": {
+        "E@standard size": {
+          "+": [
+            0
+          ]
+        },
+        "F@small enough to fit into standard single-gang box": {
+          "+": [
+            46
+          ]
+        }
+      },
+      "color": {
+        "G@color exactly as in pictures": {
+          "+": [
+            0
+          ]
+        },
+        "H@good match for other wall switches": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "material": {
+        "I@product material of plastics and metal is very good": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "LED light bar": {
+        "J@LED light bar illuminates for easy to find switch in darkness": {
+          "+": [
+            9,
+            17,
+            22,
+            36,
+            39,
+            44,
+            46,
+            49
+          ]
+        },
+        "K@LED light bar shows dimness level set": {
+          "+": [
+            9,
+            18,
+            29,
+            41,
+            44,
+            46
+          ]
+        },
+        "L@LED light bar is bright when using dimmer but subdued when switch is off": {
+          "+": [
+            41
+          ]
+        }
+      },
+      "touch panel": {
+        "M@touch-sensitive control panel": {
+          "+": [
+            17,
+            37,
+            46,
+            48
+          ]
+        },
+        "N@touch sensor may fail or not respond": {
+          "-": [
+            37
+          ]
+        }
+      },
+      "rocker switch": {
+        "O@momentary rockers that return to center position": {
+          "+": [
+            47
+          ]
+        },
+        "P@both ends are just clicking buttons, not real switching": {
+          "-": [
+            37
+          ]
+        },
+        "Q@silent rocker switch with no hard click": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "wall plate": {
+        "R@screwless wall plate design": {
+          "+": [
+            46,
+            47
+          ]
+        },
+        "S@comes with wall plate included": {
+          "+": [
+            31,
+            39,
+            42,
+            45
+          ]
+        },
+        "T@visible 2-piece design": {
+          "-": [
+            47
+          ]
+        }
+      },
+      "wiring": {
+        "U@labeled wires": {
+          "+": [
+            37
+          ]
+        },
+        "V@does not require neutral wire": {
+          "+": [
+            0,
+            48
+          ]
+        }
+      },
+      "packaging": {
+        "W@switch box falling apart": {
+          "-": [
+            8
+          ]
+        },
+        "X@appeared previously used with loose wire nuts": {
+          "-": [
+            8
+          ]
+        },
+        "Y@came obviously used with burn mark and wire nut marks": {
+          "-": [
+            38
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              1,
+              2,
+              4,
+              18,
+              21,
+              24,
+              27,
+              33,
+              35,
+              39,
+              40,
+              42,
+              46,
+              48
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "b@smooth and precise dimming": {
+          "+": {
+            "?": [
+              22,
+              25,
+              27,
+              29
+            ]
+          }
+        },
+        "c@no flickering with LED lights": {
+          "+": {
+            "?": [
+              13,
+              25,
+              44
+            ]
+          }
+        },
+        "d@some intermittent flickering with 100W equivalent LED bulbs": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "e@works extremely well with incandescent bulbs": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "f@does not dim LED panel fixtures": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "g@soft ramp to on and soft ramp to off": {
+          "+": {
+            "?": [
+              33,
+              41
+            ]
+          }
+        }
+      },
+      "touch_responsiveness": {
+        "h@very responsive to touch": {
+          "+": {
+            "M": [
+              25
+            ]
+          }
+        },
+        "i@can be turned on by simply touching": {
+          "+": {
+            "M": [
+              25
+            ]
+          }
+        },
+        "j@takes practice to get used to touch operation": {
+          "-": {
+            "M": [
+              48
+            ]
+          }
+        },
+        "k@not as easy to finely control as slider": {
+          "-": {
+            "M": [
+              48
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "l@held up with no issues for a month": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "m@works great every time": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "n@turn on randomly at full or partial brightness": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "o@delayed response when turning light on": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "p@didn't work": {
+          "-": {
+            "Y": [
+              38
+            ]
+          }
+        }
+      },
+      "durability": {
+        "q@no plastic track parts to wear or break": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "r@feel confident it will last a long time": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "s@works with 3-way and 4-way setups": {
+          "+": {
+            "?": [
+              5,
+              13,
+              30,
+              48
+            ]
+          }
+        },
+        "t@works great with dimmable LED lights": {
+          "+": {
+            "?": [
+              2,
+              22,
+              30
+            ]
+          }
+        },
+        "u@will only dim LED bulbs that are dimmable": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "residential_lighting": {
+        "+": {
+          "a,b,c,t": [
+            0,
+            1,
+            2,
+            22,
+            25,
+            35,
+            43,
+            45
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "a,b": [
+            7,
+            21
+          ]
+        }
+      },
+      "bathroom_lighting": {
+        "+": {
+          "a,g": [
+            6,
+            45
+          ]
+        }
+      },
+      "bedroom_lighting": {
+        "-": {
+          "P": [
+            26
+          ]
+        }
+      },
+      "staircase_hallway_lighting": {
+        "+": {
+          "a,J": [
+            36
+          ]
+        }
+      },
+      "recessed_LED_lights": {
+        "+": {
+          "a,t": [
+            2
+          ]
+        }
+      },
+      "ceiling_can_lights": {
+        "+": {
+          "a": [
+            21,
+            39
+          ]
+        }
+      },
+      "chandelier_lighting": {
+        "+": {
+          "b": [
+            19
+          ]
+        }
+      },
+      "professional_electrician_use": {
+        "+": {
+          "?": [
+            3,
+            25,
+            28
+          ]
+        }
+      },
+      "smart_home_integration": {
+        "+": {
+          "?": [
+            30,
+            40
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:44.016946"
+}

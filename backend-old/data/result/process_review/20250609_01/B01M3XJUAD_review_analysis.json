@@ -1,0 +1,492 @@
+{
+  "product_title": "Lutron Caseta Original Smart Dimmer Switch Kit, 2 Dimmer Switches, 2 Wall Plates, 2 Pico Remotes, and Smart Hub, Works with Alexa, Apple Home, Google Home, 3 Way, 150W, No Neutral, P-BDG-PKG2W-A",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@modern and clean look with plate covers hiding screw holes": {
+          "+": [
+            22
+          ]
+        },
+        "B@nice flat, sleek modern look": {
+          "+": [
+            36
+          ]
+        },
+        "C@good-looking switches": {
+          "+": [
+            47
+          ]
+        },
+        "D@only comes in white color": {
+          "-": [
+            46
+          ]
+        }
+      },
+      "button_design": {
+        "E@4 buttons that are difficult to hit correctly at night": {
+          "-": [
+            20
+          ]
+        },
+        "F@top button goes to full brightness": {
+          "-": [
+            20
+          ]
+        },
+        "G@middle dim button requires holding to set level": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "wiring": {
+        "H@no neutral wire required": {
+          "+": [
+            17,
+            18,
+            34,
+            39,
+            41
+          ]
+        },
+        "I@only 2 wires on received switches": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "build_quality": {
+        "J@very good/durable build quality": {
+          "+": [
+            2
+          ]
+        },
+        "K@high quality product": {
+          "+": [
+            44
+          ]
+        },
+        "L@received damaged/used product instead of new": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "amperage": {
+        "M@only good for 2 lamps or bulbs with less than 15amp": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "components": {
+        "N@kit lacks bracket required to mount Pico remote": {
+          "-": [
+            10
+          ]
+        },
+        "O@included cheap wire nuts": {
+          "-": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_memory": {
+        "a@does not return to selected dimming setting when switched on": {
+          "-": {
+            "F": [
+              0,
+              20
+            ]
+          }
+        },
+        "b@no dim level memory or way to set default dim level": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "c@dimmer function works well": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "d@works 100% of the time": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@bullet-proof connection and consistent performance": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "f@fast and reliable switches": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "g@almost no lag when using app, remotes, and voice control": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "h@never had a device disconnect": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "i@lights turn on/off instantly whether at home or remotely": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "j@couldn't add commands to control through Harmony app": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "installation": {
+        "k@very easy to install even with no electrical experience": {
+          "+": {
+            "H": [
+              18
+            ]
+          }
+        },
+        "l@easy to install like standard light switch": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "m@install was smooth": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "n@installation quick and easy": {
+          "+": {
+            "H": [
+              34
+            ]
+          }
+        },
+        "o@easier than normal switch install": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "p@will not work with existing 3-way configuration": {
+          "-": {
+            "I": [
+              6
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "q@most compatible with Google, Alexa, and HomeKit": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "r@integrates with every major control system": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "s@works perfectly with google assistant": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "t@easy integration with Home Assistant": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "u@integrates perfectly with Google Home": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "v@allows integration into Apple Homekit": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "w@Pico Remotes not pairable with Homekit": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "setup": {
+        "x@hub connected to router super quickly": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "y@quickest and easiest smart home app setup": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "z@smart bridge installed quickly and easily": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "aa@hub and mobile app easy to set up": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "bb@syncing with google was a breeze": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "cc@pairing with pico remote not straightforward": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "dd@must have dimmable bulbs to work properly": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ee@stuck at 25% brightness with regular bulbs": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ff@fan made weird noise when controlled": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_automation": {
+        "+": {
+          "d,e,f,q,r": [
+            4,
+            5,
+            11,
+            21,
+            42,
+            44
+          ]
+        },
+        "-": {
+          "j": [
+            14
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "s,u,bb": [
+            7,
+            12,
+            23,
+            33,
+            36
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "mobile_app_control": {
+        "+": {
+          "x,y,z,aa": [
+            7,
+            18,
+            22,
+            25,
+            34,
+            47
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "3-way_switch_replacement": {
+        "+": {
+          "?": [
+            19,
+            22
+          ]
+        },
+        "-": {
+          "p": [
+            6,
+            27
+          ]
+        }
+      },
+      "no_neutral_wire_homes": {
+        "+": {
+          "k,n,H": [
+            17,
+            18,
+            22,
+            34,
+            37,
+            39,
+            41
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "scheduling_and_scenes": {
+        "+": {
+          "?": [
+            7,
+            22,
+            25,
+            33,
+            42,
+            48
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "remote_control": {
+        "+": {
+          "?": [
+            22,
+            24,
+            28,
+            34,
+            44,
+            45,
+            47
+          ]
+        },
+        "-": {
+          "cc": [
+            45
+          ]
+        }
+      },
+      "mood_lighting": {
+        "+": {
+          "c": [
+            7,
+            36
+          ]
+        },
+        "-": {
+          "a,b": [
+            0,
+            20,
+            41
+          ]
+        }
+      },
+      "fan_control": {
+        "+": {
+          "?": [
+            36,
+            44
+          ]
+        },
+        "-": {
+          "ff": [
+            49
+          ]
+        }
+      },
+      "older_homes": {
+        "+": {
+          "k,H": [
+            22,
+            24,
+            26,
+            37
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:11.324837"
+}

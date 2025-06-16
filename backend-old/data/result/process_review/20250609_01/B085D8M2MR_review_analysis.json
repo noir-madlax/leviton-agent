@@ -1,0 +1,453 @@
+{
+  "product_title": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, DVCL-153P-WH, White (2-Pack)",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 42,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@decorator style appearance": {
+          "+": [
+            0
+          ]
+        },
+        "B@stylish design": {
+          "+": [
+            15
+          ]
+        },
+        "C@gorgeous appearance": {
+          "+": [
+            16
+          ]
+        },
+        "D@looks great": {
+          "+": [
+            9,
+            25
+          ]
+        },
+        "E@neat appearance": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "build_quality": {
+        "F@durable construction": {
+          "+": [
+            1
+          ]
+        },
+        "G@well built": {
+          "+": [
+            29
+          ]
+        },
+        "H@quality construction": {
+          "+": [
+            11,
+            13
+          ]
+        },
+        "I@cheap plastic feel": {
+          "-": [
+            34
+          ]
+        },
+        "J@hollow sound and feel": {
+          "-": [
+            39
+          ]
+        },
+        "K@cheap feeling overall": {
+          "-": [
+            34,
+            39
+          ]
+        }
+      },
+      "tactile_feedback": {
+        "L@solid click sound": {
+          "+": [
+            17
+          ]
+        },
+        "M@tactile quality feel": {
+          "+": [
+            11
+          ]
+        },
+        "N@loud clicks": {
+          "-": [
+            20,
+            34
+          ]
+        },
+        "O@bad tactile feel": {
+          "-": [
+            34
+          ]
+        }
+      },
+      "adjustment_lever": {
+        "P@LED dimming-range adjustment lever": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "slider_design": {
+        "Q@razor-thin dimming slider hard to grasp": {
+          "-": [
+            39
+          ]
+        },
+        "R@unpleasant to touch slider": {
+          "-": [
+            39
+          ]
+        }
+      },
+      "mounting_features": {
+        "S@breakable wings on sides for fitting": {
+          "+": [
+            16
+          ]
+        },
+        "T@thin fins with screw warping issues": {
+          "-": [
+            39
+          ]
+        }
+      },
+      "size": {
+        "U@requires more space depth": {
+          "-": [
+            36
+          ]
+        },
+        "V@hard to fit in old electric boxes": {
+          "-": [
+            16
+          ]
+        },
+        "W@difficult fitting in multi-switch panels": {
+          "-": [
+            16
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0,
+              5,
+              8,
+              13,
+              22,
+              26,
+              27,
+              31,
+              40
+            ]
+          }
+        },
+        "b@installation problems in old boxes": {
+          "-": {
+            "U,V,W": [
+              16
+            ]
+          }
+        }
+      },
+      "dimming_function": {
+        "c@works as advertised for dimming": {
+          "+": {
+            "?": [
+              2,
+              4,
+              8,
+              15,
+              17
+            ]
+          }
+        },
+        "d@stops LED flickering": {
+          "+": {
+            "?": [
+              3,
+              6,
+              7
+            ]
+          }
+        },
+        "e@fixes buzzing issues": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "f@solves low-dimmed turn-on problem": {
+          "+": {
+            "P": [
+              14
+            ]
+          }
+        },
+        "g@does not dim G4 LED bulbs": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "h@limited dimness percentage": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "i@flickering when other controls adjust": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "j@continuous flickering in dual 3-way setup": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "k@defective dimming function": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "l@slight flickering with some bulbs": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "m@works with LED, halogen, incandescent": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "n@works well with LED recessed lights": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "o@works great with LED bulbs": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "p@only works with screw-in LED bulbs": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "q@no callbacks from installations": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "r@reliable performance": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "s@20-year lifespan": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "t@contact points become erratic over time": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "u@switches shift sideways when failing": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "v@works perfectly": {
+          "+": {
+            "?": [
+              8,
+              27
+            ]
+          }
+        },
+        "w@does not work at all": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "x@doesn't work for 3-way dimming": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "noise": {
+        "y@little noisy with clicking": {
+          "-": {
+            "N": [
+              20
+            ]
+          }
+        },
+        "z@no humming or flickering": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "residential_lighting": {
+        "+": {
+          "a,c": [
+            0,
+            4,
+            8,
+            15
+          ]
+        },
+        "-": {
+          "g,h": [
+            18,
+            19
+          ]
+        }
+      },
+      "kitchen_and_dining_room": {
+        "+": {
+          "c": [
+            4
+          ]
+        }
+      },
+      "LED_recessed_lights": {
+        "+": {
+          "n": [
+            10
+          ]
+        }
+      },
+      "can_lights": {
+        "+": {
+          "d": [
+            7
+          ]
+        }
+      },
+      "circle_lights_low_watts": {
+        "+": {
+          "e": [
+            11
+          ]
+        }
+      },
+      "3-way_switch_applications": {
+        "+": {
+          "v": [
+            27
+          ]
+        },
+        "-": {
+          "x": [
+            32
+          ]
+        }
+      },
+      "single_pole_applications": {
+        "+": {
+          "f": [
+            14
+          ]
+        },
+        "-": {
+          "w": [
+            31
+          ]
+        }
+      },
+      "professional_electrical_work": {
+        "+": {
+          "q": [
+            0
+          ]
+        }
+      },
+      "DIY_installation": {
+        "+": {
+          "a": [
+            14,
+            24
+          ]
+        }
+      },
+      "new_home_construction": {
+        "-": {
+          "i": [
+            21
+          ]
+        }
+      },
+      "G4_LED_bulbs": {
+        "-": {
+          "g": [
+            18
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:33.941824"
+}

@@ -1,0 +1,212 @@
+{
+  "product_title": "YNF Smart Light Switch, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, Voice Control and Timer (4 Pack)",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 11,
+  "review_analysis": {
+    "phy": {
+      "cover": {
+        "A@covers come together as one unit instead of separate individual covers": {
+          "-": [
+            1,
+            7
+          ]
+        }
+      },
+      "connectors": {
+        "B@included connectors are of inferior quality": {
+          "-": [
+            9
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@some switches fail to connect to WiFi system": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@constantly shows no internet connection despite multiple WiFi networks available": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "c@pairs up fast": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "d@easy to connect to WiFi": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "e@easy to connect to Smart Life app": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "f@some switches don't turn lights on or off": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "g@works great": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "h@works well": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "i@works": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "ease_of_use": {
+        "j@easy to use": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "k@easy to install": {
+          "+": {
+            "?": [
+              4,
+              10
+            ]
+          }
+        },
+        "l@wiring is straightforward": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "m@directions were easy to follow": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "integration": {
+        "n@integrates with Alexa": {
+          "+": {
+            "?": [
+              6,
+              8
+            ]
+          }
+        },
+        "o@works with Google Home": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "p@works with Smart Life app": {
+          "+": {
+            "?": [
+              3,
+              8
+            ]
+          }
+        },
+        "q@automatically connects to Alexa": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "value": {
+        "r@good value for money": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "s@inexpensive": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_building": {
+        "+": {
+          "s": [
+            3
+          ]
+        }
+      },
+      "light_control_automation": {
+        "+": {
+          "n": [
+            3
+          ],
+          "o": [
+            3
+          ],
+          "p": [
+            3
+          ]
+        }
+      },
+      "household_member_access": {
+        "+": {
+          "n": [
+            6
+          ]
+        }
+      },
+      "smart_home_addition": {
+        "+": {
+          "n": [
+            8
+          ],
+          "p": [
+            8
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:19.122765"
+}

@@ -1,0 +1,2588 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:44:22.459185",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B079775ZZQ",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B079775ZZQ",
+    "title": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+    "brand": "Kasa",
+    "model_number": NaN,
+    "price_usd": 19.98,
+    "rating": 4.5,
+    "reviews_count": 34098.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B079775ZZQ"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RXIXF9N31R71J",
+        "text": "I've bought 12 TP-Link smart light switches over the past 3-4 years. Two weeks ago, one just stopped working. I figured, okay, stuff happens. But then—boom—another one dies the following week. The day after that? A third one goes out. That’s three failures in under two weeks. Out of curiosity, I checked TP-Link’s website. Surprise, surprise: the warranty is only 1–2 years. Guess what? All three failed right after the warranty expired. These things aren’t defective — they’re engineered to fail once you’re no longer covered. That’s not a coincidence. That’s a planned-obsolescence scam. These smart switches are not “smart”—they’re a stupid waste of money. Regular light switches last 10–20 years, while these overpriced plastic toys can’t even last two. DO NOT BUY these switches. I don’t care how fancy the app is or what brand it is — TP-Link or otherwise. If it needs replacing every couple of years, it’s trash. Stick with old-school switches. They’re cheap, reliable, and they don’t leave you in the dark — literally.",
+        "date": "Reviewed in the United States on June 3, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "TP-Link Smart Switches Are Garbage – Built to Break, Total Scam",
+        "userName": "Barros Family",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R38S2NI1LB6JHA",
+        "text": "I have several of these dimmable smart switches throughout the house, unfortunately the quality is sub-part after experiencing several failures within the first year of use. The issue is that the switch fails to energize the load (connected device/light). It powers on fine, has network connectivity, and can be interacted with via smart device apps, but it doesn't turn on the light. A test with a multi-meter confirms that it fails to actually energize the connection, so the problem isn't downstream from the switch. Online searches confirm this seems to be a common issue with TP-Link switches where the internal relay fails which results in the described issue. I contacted company support who didn't give me any issues with RMA'ing the product, but there's one serious problem. You have to pay to ship them the defective unit... I went to my UPS store with the product packaged & boxed, but the cost to ship was more than the cost of the switch on Amazon, making it not worth the money to RMA because it would be cheaper to just buy another unit than replace the failed one. Because of this scenario, TP-Link is now off of my list for Smart Home devices and all future purchases will be another brand, even if more expensive.",
+        "date": "Reviewed in the United States on May 31, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not worth the return shipping",
+        "userName": "The Jetsons",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R30WKS09R3VNI9",
+        "text": "These failed on me after 2 years and Kasa states they will not replace them because it over the 2 year mark. I have at least 12 of these installed in my home so very disappointing to know Kasa won’t replace their product and at some point I’m going to have to replace their faulty products.",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Fails after 2 years - Kasa won’t replace",
+        "userName": "AshYrach",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RRXGGFKIU7I7E",
+        "text": "Not compatible with Smartlife, had to return.",
+        "date": "Reviewed in the United States on May 27, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Doesn't Work with Smartlife",
+        "userName": "A1ELVIS",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R17DZYHZ3DWUPH",
+        "text": "Work well",
+        "date": "Reviewed in the United States on May 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "It’s working",
+        "userName": "T.Chase",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R389BIH0JRF35A",
+        "text": "In less than a year (5 months) it got burnt out - great quality",
+        "date": "Reviewed in the United States on May 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Crap Quality",
+        "userName": "Sarah",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3JY7L515512OG",
+        "text": "Useless. You set it and it changes on its own right back to full brightness.",
+        "date": "Reviewed in the United States on May 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Useless",
+        "userName": "Disappointed",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R36ANZ2HJ95SNA",
+        "text": "Was easy to install and working for now",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "It's working",
+        "userName": "Anton",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3AVUHCRMWNBHG",
+        "text": "This is my first dimmer version of Kass light switches. My first wiring I reversed the line and load so it didn't work but then I just reversed them. No harm done. Very useful in our family room where we want less light when watching TV. The fade off feature is really fun. I recommend this and with the easy installation it makes a great gift.",
+        "date": "Reviewed in the United States on May 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fun, easy to install",
+        "userName": "Dave Oakland",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2ULWWPABOV6HG",
+        "text": "Dimmers are very good quality for an excellent price. I use them right now to control my kitchen cabinet lights and bathroom lights. I will get more of them for additional rooms. They are very easy to install and app setup is very quick. I recommend. I wish they could work with Apple home kit in the future.",
+        "date": "Reviewed in the United States on May 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Dimmers for an amazing low price",
+        "userName": "Chris P",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61E-jymScIL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/0206a6a3-5143-4d41-8c08-ecb057a43d61/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R5S29HBLA0YEU",
+        "text": "Somehow this product will stop working due to voltage fluctuation at my home causing the switch to brake.",
+        "date": "Reviewed in the United States on May 14, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Switch sensitivity",
+        "userName": "ACDC",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RVMWNORUYUSQV",
+        "text": "This wifi dimmer was easy to install. I installed it in a sealed box outdoors to control some outdoor lights. Works perfectly. and works with smarthings app which is a plus.",
+        "date": "Reviewed in the United States on May 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "easy installation",
+        "userName": "Mike D.",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3OUN93581HB5K",
+        "text": "Turns on and off, cool dimmer too. Thing just works well.",
+        "date": "Reviewed in the United States on May 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works nicely.",
+        "userName": "Chet",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R25KA2TPWKG2QO",
+        "text": "Touch controls are horrendously bad. The cheap-feeling plastic +/- buttons make the light levels jump around without smooth transitions. If you like to fine tune your lighting, this is not the switch for you. Control with the phone is a nice feature.",
+        "date": "Reviewed in the United States on May 6, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Terrible touch controls. Lights don’t adjust smoothly.",
+        "userName": "Anonymous",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1IBSPB6GQ5C6D",
+        "text": "I like the switch and the setup was pretty easy. It’s great being able to control the lights from my phone or with Alexa. The only downside is the slight delay between pressing the switch and the light actually turning on. It’s not a dealbreaker, but it’s noticeable. Other than that, it works well and looks clean on the wall.",
+        "date": "Reviewed in the United States on May 3, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good overall, but there’s a small delay",
+        "userName": "Daniel",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3Q6540T0BVTJF",
+        "text": "Works great. Recommend. Works with google and alexa.",
+        "date": "Reviewed in the United States on May 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Thanks",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2AWUXXLUP11D1",
+        "text": "Have used this HS220 smart switch for about 9 months and experienced it randomly powered off 5-6 times. The mobile app could still connect to the switch, but no commands would turn the light back on. After a few hours, the switch would recover on its own. When it happened again recently, I contacted TP-Link support. The rep quickly acknowledged a known issue with the product and offered a replacement. However, their Standard RMA process requires you to pay for return shipping, wait for them to process the return (3-5 days after receipt), and then they will send out a replacement, leaving you without a switch for weeks. The Advanced RMA options cost $25-$50, much more then the price of a new switch on Amazon. Frustrated by this poor warranty service, I’ve decided to avoid TP-Link products entirely. I’m going to return a recently purchased TP-Link wireless router within its return period, despite it having no issues so far.",
+        "date": "Reviewed in the United States on May 1, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "defect product with poor warranty service",
+        "userName": "WS",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RRLDRVTELQMAV",
+        "text": "great product for smart home ...easy to use...would recommend to others",
+        "date": "Reviewed in the United States on April 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "great product",
+        "userName": "bigaljay",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R327ADGWZX7XUG",
+        "text": "I rarely write reviews, but my experience with TP-Link was so frustrating that I had to speak up and warn others. I bought a brand-new TP-Link smart switch that turned out to be defective. When I contacted support, they required me to remove the switch and ship it back first at my own expense. Only after they receive it will they send a replacement—and they don’t even confirm whether it will be new, used, or refurbished. This process has dragged on for over 20 days, and it’s still not resolved. TP-Link responds to emails once a day, and every time I try to explain the situation, I just get the same generic response. I’ve explained multiple times that removing the switch without having a replacement is unsafe for my kids, but they simply don’t care. All I asked for was a replacement to be sent first along with a prepaid return label. This is standard practice with many companies that value their customers—but not TP-Link. At this point, the cost of returning the switch is almost the same as buying a new one. It’s ridiculous. I’ve wasted weeks dealing with their support and still have no resolution. I’m done with TP-Link. Their support is slow, unhelpful, and inconsiderate. I will never buy from them again and I strongly encourage others to stay far away. Spend a little more with a company that actually backs their products and treats customers with respect.",
+        "date": "Reviewed in the United States on April 20, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Terrible Warranty Experience – Stay Away from TP-Link Products",
+        "userName": "KHOA",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/40219ffb-e658-4737-b0e3-e205cbe44352/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2XZR4KP0BIDAY",
+        "text": "I have several of these now, great quality, easy to install and connect to the wifi",
+        "date": "Reviewed in the United States on April 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "High quality",
+        "userName": "Mary Ruff",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2MGVABKE4YZD1",
+        "text": "This is better than the other reviews have it cracked up to be. I put it in both rooms and its fantastic.",
+        "date": "Reviewed in the United States on April 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great and is inexpensive",
+        "userName": "RondeCasflo",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1E2VO3MG00BOU",
+        "text": "I'm very pleased with these switches. I tried another brand previously and the dimming function was on the face of the switch and I was constantly accidentally changing the brightness when I turned the lights off or on. These switches don't have that problem. The dinner is at the tip of the switch where you won't accidentally touch it. Ons feature of these lights that I really like is the soft on and off. They were pretty simple to set up.",
+        "date": "Reviewed in the United States on April 10, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice switches",
+        "userName": "Kenny A.",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R275PUCOEJFT0B",
+        "text": "I have totally moved away from Wemo and now use only Kasa devices. Wemo in its infinite wisdom no longer supports any of its products unless it’s made for Apple control. What? You get no support unless it’s an Apple Home product leaving everyone else in the dust! I had a Wemo wall dimmer and it stopped working. Contacted Wemo, “sorry we no longer support or manufacture your switch. Good luck!” Wow no support or replacements at all? Unless you have an Apple Home product you are out of luck. Use Kasa as their setup is easy and their products are fully supported.",
+        "date": "Reviewed in the United States on April 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Kasa makes great products with an easy setup!",
+        "userName": "Dennis M",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3SL0MD7CIERGU",
+        "text": "Excelente",
+        "date": "Reviewed in the United States on April 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente",
+        "userName": "Agustín carabajal",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1DBCVXI35NZXR",
+        "text": "It stopped working after 4 months.",
+        "date": "Reviewed in the United States on April 8, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Quality is bad",
+        "userName": "Anker Tsaur",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1ND72T5M28KMC",
+        "text": "I have these smart switches in nearly all my outlets. They work great and connections are relatively easy. You must have a neutral wire available to use these. My only dislike is that to operate these, you must push the bottom of the toggle, for both on and off functions.",
+        "date": "Reviewed in the United States on April 7, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good product.",
+        "userName": "DDD",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RWXE8QKOLWSQD",
+        "text": "Easy to setup, works well",
+        "date": "Reviewed in the United States on April 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RWV8LIPANK62R",
+        "text": "One of the switches would not connect to WiFi. Emailed back and forth with vendor and their fixes would not work. It was concluded the switch was bad. In order for them to replace it, you must send I’d on switch, and sales receipt, but the kicker was, you must pay for and ship the switch tip be returned. Will not be purchasing any more of this product.",
+        "date": "Reviewed in the United States on March 30, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective Switch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R144666R0PMTIK",
+        "text": "I received a defect one. My electrician tried to connect following instructions and attempted reset several times, but it did not work. Physical switch also did not work. Unfortunately, the return window had passed, and I could not return. I contacted TP Link customer support, but the chat bot was no help at all.",
+        "date": "Reviewed in the United States on March 28, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Defect switch",
+        "userName": "SHatem",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R5XTBJHIE4S5O",
+        "text": "Came super fast. Very nice and clean design, easy to integrate with Alexa and install. Only issue I see is the outlet cover. While it’s very nice, it’s just a snap on cover, no screws to secure. It also doesn’t match other outlet covers that I have on the same wall so ended up just using my own.",
+        "date": "Reviewed in the United States on March 28, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Pretty and easy to use",
+        "userName": "Melanie",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3LJL0ZS3VF6E3",
+        "text": "It was great while it worked, but it failed within a year. It continued to respond to Wi-Fi, and it thought it was working, but did not actually control the lights anymore. Very disappointing quality",
+        "date": "Reviewed in the United States on March 25, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Works at first, but fails with a few months",
+        "userName": "Banacek",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1ZBBZAJU6FBMV",
+        "text": "I like the look of getting rid of all those transformers. I put one in my kitchen and one in the bathroom. The only thing to check is to make sure you don't have too many 14 gauge wires in the back of the box or the transformer won't fit.",
+        "date": "Reviewed in the United States on March 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "I like getting rid of all those cell phone chargers.",
+        "userName": "PHOTOMAN225",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R337TWK3HT2R6V",
+        "text": "Worked perfectly for our Alexa and brand new lights! You’re able to choose how bright or dim. Would recommend!",
+        "date": "Reviewed in the United States on March 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Barbara Kalota",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3V1BCB71M8UAB",
+        "text": "Deceptive advertising. The single pack is matter compatible. The three pack is not. There is no way that is an accident.",
+        "date": "Reviewed in the United States on March 19, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Three pack is not Matter compatible",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1YR1P51O2I6EV",
+        "text": "Device HS220 previously used",
+        "date": "Reviewed in the United States on March 14, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Came as used and ripped box",
+        "userName": "Pavel Gershkovich",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RQ4Z82XATQ14O",
+        "text": "This switch worked great to swap out a non-smart dimmer switch. You can easily adjust the percentage of the light to fine tune the dimming",
+        "date": "Reviewed in the United States on March 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great with the app and to dim LED lights",
+        "userName": "W. Nix",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2GKQ5A3EOZ772",
+        "text": "Let me tell you, this \"smart\" dimmer switch is about as smart as a brick. I've spent more time wrestling with its \"local access only\" error than I have actually enjoying dimmed lighting. I'm starting to think \"local access\" is Kasa's fancy way of saying \"you're stuck with a glorified on/off switch.\" \"Works with Alexa and Google Home,\" they said. \"Seamless integration,\" they promised. Lies! All lies! I've reset this thing more times than I've had hot dinners. I've unplugged, replugged, danced a ritualistic jig around my router, and still, it mocks me with its \"local access only\" message. Need a neutral wire? Fine, I get it. But apparently, you also need the patience of a saint and the technical prowess of a NASA engineer to get this thing to work properly. I'm tech-savvy, and this switch has me ready to throw it through a window. Forget about remotely controlling your lights. Forget about setting schedules. Forget about impressing your friends with your \"smart home.\" You'll be too busy cursing Kasa and wondering why you didn't just stick with a dumb, reliable switch. UL Certified? More like UL-timately frustrating. No hub required? More like a hub of endless headaches. Save yourself the trouble and buy something else. Anything else. This switch is a monument to wasted time and shattered expectations. If I could give it zero stars, I would.",
+        "date": "Reviewed in the United States on March 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "One Star - A Masterclass in Frustration",
+        "userName": "nj28sharp",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3VRPFXMFORXGE",
+        "text": "I just love these switches!! I decided to add a few more to my home, however I had difficulty pairing it to my network. I kept getting a \"Pairing Failure\" notification. I have a not had a problem in the past until now. I followed every suggestion to no avail. Even uninstalled/reinstalled the Kasa app and restarted my router multiple times. I changed out the switch thinking it was defective. I decided to try pairing a Smart Plug to rule out my router and had no issues. I finally called tech support and Jonathan R was super helpful and patient! It was a simple fix; turn off Mobile Data. BINGO! I guess that suggestion should be offered in the \"Pairing Failure\" notification. Not sure why it only impacted the switch and not the plug install.",
+        "date": "Reviewed in the United States on March 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switches, pairing was a bit problematic",
+        "userName": "Cyndi Reid",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RF6TQRZGKI3RC",
+        "text": "Bought six of these over the years. All of them lost their link with the app/alexa and dissapeared",
+        "date": "Reviewed in the United States on March 1, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Didn’t last long",
+        "userName": "Jolly R. Blackburn",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R8J1G77E7PGCG",
+        "text": "I purchased a large number of KASA smart switches for my new home, and have generally been satisfied with their operation. Unfortunately, one of the HS220 switches recently failed, after having functioned normally for about 14 months. Once the switch stopped working, the switch itself appeared normal - with the circular light on the switch turning on and off as the switch was depressed. The switch, however, no longer turned the attached 2 LED ceiling lights on or off via any of the 3 modes: depressing the switch, via the KASA App on my phone or via voice commands (Alexa). Resetting the switch did not correct the problem, nor did turning power off at the breaker panel for ~1 minute. Once removed, the body of the switch showed no signs of discoloration that might suggest that any of the internal circuitry had overheated. In contacting KASA for replacement of the switch under their 2-year warranty, I was given various options to return the defective switch - all of which requiring me to spend at least $14.99 (or much more) to replace the failed switch for which I paid $14.96 for when new. The current price for a new HS220 switch on Amazon is $16.99. Since KASA was unwilling to simply provide a no-cost return shipping label, I purchased a new HS220 switch from Amazon, and the new switch is operating normally. I sincerely hope that the remaining 20+ KASA smart switches that I have installed do not exhibit such failures, as I would like to continue to utilize switches from a single manufacturer to simplify operation of my \"smart\" home. It is unfortunate that KASA has little interest in obtaining failed, lower price items (such as switches), both to permit them to understand the root cause of such fails and to retain customer satisfaction and loyalty.",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "KASA Warranty Concern",
+        "userName": "Mark",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2DORD5B4T8A70",
+        "text": "I ordered an had a licensed electrician install multiple smart switches and smart dimmer switches from Kasa. All but one of the switches quickly and efficiently connected to my WiFi network and are working fine. One switch, the HS220 one-way dimmer switch works perfectly manually, but refuses to connect with the WiFi network. I reached out to their tech support team via email (the only option). Over the course of nearly a week, they repeatedly asked me for the same information and never tried to fix the problem. My only resort was to return the switch to Amazon, and obtain and install a new one. Hopefully, that one will work. So, my rating for the peoducts is between 4vans 5 stars. My rating for T-link customer service and tech support is 0 stars. They will waste your time and energy needlessly.",
+        "date": "Reviewed in the United States on February 23, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Product great (when it works), tech support sucks",
+        "userName": "SSachs",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1TTEI2MKEKT5R",
+        "text": "Switch is good and all works great.",
+        "date": "Reviewed in the United States on February 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to control with phone app",
+        "userName": "V P",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R23JIJ86JNRLE2",
+        "text": "I bought 2 of these identical units in one purchase. One of them worked as it should, the other one does not connect to wifi and just blinks red. I emailed for suppot, and the Mfr Support asked for a ridiculous amount of information, then didn't respond. Here's the info they asked, despite me sending the amazon invoice showing I bought 2 of them: TP-Link ID App Version Model and OS of phone Model and Brand of the Router Screenshot of error message, if any. What is the LED status of the device? Please provide Picture of the S/N and hardware version of your device on its back label or on the box. Kindly send us a receipt or invoice for the device, including details such as the name of the store, unit name/price, and date of purchase. These are both hard-wired into my house, so taking a picture of the back will require the electrician to come back out. If you are going to purchase these, take pictures before they are installed, otherwise you're SOL.",
+        "date": "Reviewed in the United States on February 19, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failure out of box, will not connect to wifi.",
+        "userName": "Mel Boldt",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R395TBJDP2XZ29",
+        "text": "Didn’t work. Multiple attempts failed. Instructions non existent except in the app and end with the phone number for tech support. No explanation about using with Alexa.",
+        "date": "Reviewed in the United States on February 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor instructions, app has in app purchases",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1NUSWSWV290",
+        "text": "I bought this switch because my previous dimmer switch caused my dimmable light to flicker when the brightness was turned down to low. This switch, although older, just works! It doesn't have Matter compatibility but it still integrates into my Google Home ecosystem fine, and that's good enough for me. When configured using the Kasa app, double tap, triple tap, and long hold can perform different actions such as double tap to slowly dim over the course of 5 minutes.",
+        "date": "Reviewed in the United States on February 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple and effective",
+        "userName": "Jeffrey",
+        "numberOfHelpful": 2,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2LLSW803GZRQ0",
+        "text": "The product is for outside lights to go on at sunset and go off at sunrise",
+        "date": "Reviewed in the United States on February 15, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Kasa switch",
+        "userName": "Pamela Day",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2YMP6J4M811EC",
+        "text": "Quick installation guide HAS NOTHING ON HOW TO WIRE THE PRODUCT. There is no manual or support to tell you how to wire the product. Just how to set it up. I was replacing TREATLIFE Smart Light Switch, which took me 2 minutes to wire. App sucks, but light switch works. Took the Kasa TP link out and put the Treatlife back in. It took 30 seconds to wire the Treatlife in. All wires are color-coded. Kasa TP link 2 wires and unlabled screws. Might be awesome but I'll never know, Sending it back",
+        "date": "Reviewed in the United States on February 13, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Until I hire an electrician, I'll never know if it works. Sending back!",
+        "userName": "James H. Moss",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2P9YPOH0ONKVC",
+        "text": "I have several smart switches but they aren’t this brand. Got this one because the I have the WiFi extender. Well the switch itself works but it won’t reset to connect to my WiFi. So now I guess I have to buy another. It won’t be this brand again.",
+        "date": "Reviewed in the United States on February 11, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Won’t connect",
+        "userName": "Jessica T.",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2HY0HSZOPACOI",
+        "text": "Works well with echo devices",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works very well with older home wiring",
+        "userName": "Roland",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B079775ZZQ",
+        "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 3661,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 34103,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3OM0U0YMK7W95",
+        "text": "I can't stress how much I hate this switch. I don't want to use a secondary China made and likely monitored app to control a simple switch. Once I wire in a switch I want to be using it in 15 to 20 seconds, not looking to reinvent the wheel. Super disappointed and by the way I'm not disconnecting my VPN either TPLINK. I wouldn't do it for a country I trust, much less the PRC.",
+        "date": "Reviewed in the United States on February 4, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Useless piece of Chinese made junk...",
+        "userName": "Michael A. McNeil",
+        "numberOfHelpful": 0,
+        "variationId": "B079775ZZQ",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

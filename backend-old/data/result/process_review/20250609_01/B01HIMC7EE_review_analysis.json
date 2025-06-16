@@ -1,0 +1,418 @@
+{
+  "product_title": "Baomain Triple Rocker Light Switch, 15A 120V, 3 Switches, Commercial Grade, White",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "buttons": {
+        "A@buttons break easily": {
+          "-": [
+            3,
+            22
+          ]
+        },
+        "B@plastic paddle switches do not fit well with visible gap in OFF position": {
+          "-": [
+            6
+          ]
+        },
+        "C@button snaps on but soft-closes off without sharp snap": {
+          "-": [
+            17
+          ]
+        },
+        "D@rocker switch stuck to on position": {
+          "-": [
+            25
+          ]
+        },
+        "E@switches broken and flopped in seat": {
+          "-": [
+            31
+          ]
+        },
+        "F@nice large switches": {
+          "+": [
+            46
+          ]
+        }
+      },
+      "terminal_screws": {
+        "G@terminal screws are poor quality and do not engage straight blade screw drivers securely": {
+          "-": [
+            6
+          ]
+        },
+        "H@one terminal screw stripped while securing wire": {
+          "-": [
+            6
+          ]
+        },
+        "I@screw terminals aren't amazing": {
+          "-": [
+            30
+          ]
+        }
+      },
+      "wire_connections": {
+        "J@holes in the back did not grab the wires well": {
+          "-": [
+            27
+          ]
+        },
+        "K@wires insert pretty hard and pull out even harder with difficult to disengage clamping clip": {
+          "-": [
+            17
+          ]
+        },
+        "L@holes for each switch to plug in copper wire too small for older house lower gauge copper wire": {
+          "-": [
+            33
+          ]
+        },
+        "M@easy to connect wires": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "construction": {
+        "N@well built and solid": {
+          "+": [
+            12
+          ]
+        },
+        "O@good quality material used in construction with sturdy frame": {
+          "+": [
+            18
+          ]
+        },
+        "P@high quality toggles": {
+          "+": [
+            45
+          ]
+        }
+      },
+      "appearance": {
+        "Q@looks perfect": {
+          "+": [
+            13
+          ]
+        },
+        "R@looks great on the wall": {
+          "+": [
+            30
+          ]
+        },
+        "S@nice looking": {
+          "+": [
+            38
+          ]
+        },
+        "T@looks much better than regular light switch and doesn't stick out": {
+          "+": [
+            39
+          ]
+        },
+        "U@updates the look of the wall": {
+          "+": [
+            40
+          ]
+        },
+        "V@beautiful switch": {
+          "+": [
+            36
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@does what it's made for": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@works great": {
+          "+": {
+            "?": [
+              2,
+              7,
+              12,
+              14,
+              16,
+              18,
+              42,
+              43,
+              46
+            ]
+          }
+        },
+        "c@worked perfectly": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "d@switches seem to work well": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "e@switches work well": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "f@buttons work well and doesn't stick": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "g@works perfectly as expected": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "h@works as advertised": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "i@it works but when you turn off the switch it doesn't go all the way back": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "j@doesn't work": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "k@works as expected": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "l@works as described with no issues after 5 months": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "switch_action": {
+        "m@feel of switch action is different in ON vs OFF positions requiring more force to switch off": {
+          "-": {
+            "B": [
+              6
+            ]
+          }
+        },
+        "n@button action feels cheap and yucky": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "o@feeling of rocker switch is a little soft": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "durability": {
+        "p@bottom switch broke and fell off after few months with top one cracked": {
+          "-": {
+            "A": [
+              22
+            ]
+          }
+        },
+        "q@center rocker switch only lasted 11 months with normal usage": {
+          "-": {
+            "D": [
+              25
+            ]
+          }
+        },
+        "r@middle switch broke after less than year of use": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "s@switches broke after couple weeks and 5 months": {
+          "-": {
+            "E": [
+              37
+            ]
+          }
+        },
+        "t@been using for six months with no problems": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "u@working well for number of months": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        }
+      },
+      "installation": {
+        "v@install was easy": {
+          "+": {
+            "?": [
+              1,
+              3
+            ]
+          }
+        },
+        "w@easy installation": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "x@easier installation": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "y@easy to install": {
+          "+": {
+            "?": [
+              34,
+              38,
+              40,
+              48
+            ]
+          }
+        },
+        "z@simple to install": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "aa@not hard to install": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom_applications": {
+        "+": {
+          "h": [
+            4
+          ],
+          "c": [
+            5
+          ],
+          "b": [
+            12,
+            14
+          ],
+          "k": [
+            24
+          ]
+        },
+        "-": {
+          "j": [
+            20
+          ]
+        }
+      },
+      "replacement_switch": {
+        "+": {
+          "c": [
+            5
+          ],
+          "k": [
+            24
+          ],
+          "?": [
+            29,
+            33,
+            35
+          ]
+        }
+      },
+      "DC_power_switching_LED_strips": {
+        "+": {
+          "b": [
+            30
+          ]
+        }
+      },
+      "kitchen_use": {
+        "+": {
+          "?": [
+            44
+          ]
+        }
+      },
+      "general_lighting_control": {
+        "+": {
+          "b": [
+            2,
+            7,
+            42,
+            43,
+            46
+          ],
+          "a": [
+            1
+          ],
+          "g": [
+            14
+          ],
+          "l": [
+            41
+          ],
+          "k": [
+            47
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:32.067513"
+}

@@ -1,0 +1,240 @@
+{
+  "product_title": "Leviton 54521-2W 20-Amp, 120/277-Volt, Toggle Framed Single-Pole AC Quiet Switch, Commercial Grade, Grounding, White",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 16,
+  "review_analysis": {
+    "phy": {
+      "quality": {
+        "A@very good quality construction": {
+          "+": [
+            0
+          ]
+        },
+        "B@great quality materials": {
+          "+": [
+            0
+          ]
+        },
+        "C@cheaply made construction": {
+          "-": [
+            2
+          ]
+        },
+        "D@heavy-duty build": {
+          "+": [
+            3
+          ]
+        },
+        "E@sturdy appearance": {
+          "+": [
+            5
+          ]
+        },
+        "F@good quality appearance": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "manufacturing": {
+        "G@made in Mexico not USA": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "wiring": {
+        "H@screw install instead of back push ins": {
+          "+": [
+            1
+          ]
+        },
+        "I@no back wiring despite description stating it": {
+          "-": [
+            6
+          ]
+        },
+        "J@terminal screws instead of back-wiring clamps": {
+          "-": [
+            9
+          ]
+        },
+        "K@terminal screws barely long enough for two 12 gauge wires": {
+          "-": [
+            9
+          ]
+        },
+        "L@works with 14 awg wire": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "design": {
+        "M@box noticeably more stout than usual contractor special": {
+          "+": [
+            3
+          ]
+        },
+        "N@nice look for residential application": {
+          "+": [
+            10
+          ]
+        },
+        "O@design forces finger use to flip switch rather than wall slapping": {
+          "+": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "operation": {
+        "a@tight positive action": {
+          "+": {
+            "D": [
+              3
+            ]
+          }
+        },
+        "b@nice tight action": {
+          "+": {
+            "D": [
+              3
+            ]
+          }
+        },
+        "c@good feeling throw when flipping on and off": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "d@very quiet when operated": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@operation is easier and smoother": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "f@operates as one would expect": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "g@broken on arrival": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "durability": {
+        "h@much more durable than magnetic contact switch": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@easy installation": {
+          "+": {
+            "H": [
+              10,
+              11,
+              12
+            ]
+          }
+        },
+        "j@difficult to get two 12-gauge wires properly under terminal screws": {
+          "-": {
+            "K": [
+              9
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "k@works well on 15 amp circuit": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "l@works well in 220V areas": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacement applications": {
+        "+": {
+          "A,B": [
+            0
+          ]
+        }
+      },
+      "heavy-duty applications for behaviorally challenged users": {
+        "+": {
+          "D,a,b,O": [
+            3
+          ]
+        }
+      },
+      "shop switch applications": {
+        "+": {
+          "c": [
+            4
+          ]
+        }
+      },
+      "15 amp circuit applications": {
+        "+": {
+          "k": [
+            5
+          ]
+        }
+      },
+      "220V applications": {
+        "+": {
+          "l": [
+            7
+          ]
+        }
+      },
+      "replacing magnetic contact switches": {
+        "+": {
+          "h,e": [
+            8
+          ]
+        }
+      },
+      "residential applications": {
+        "+": {
+          "N": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:19.270492"
+}

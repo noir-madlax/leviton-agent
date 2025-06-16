@@ -1,0 +1,1895 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:16:57.948122",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08YMYC8TD",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 4,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08YMYC8TD",
+    "title": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 7.82,
+    "rating": 4.5,
+    "reviews_count": 210.0,
+    "category": "Light Switches",
+    "product_segment": "Three Way Multi-Location Control Switches",
+    "product_url": "https://www.amazon.com/dp/B08YMYC8TD"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R24KSEJW9XBVRX",
+        "text": "It is not dim anymore. It is very bright, but it never quits glowing, just a little dimmer when the light is on. This makes it difficult to tell at a glance if the light it is controlling is on or off.",
+        "date": "Reviewed in the United States on May 31, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "The switch is to bright",
+        "userName": "Kelly",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1LVD8GUW691R7",
+        "text": "Good for finding a light in the dark. Not good to remember to turn the light off.",
+        "date": "Reviewed in the United States on March 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Find in the dark",
+        "userName": "Melissa",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3S34R8B4H7J1Q",
+        "text": "Excellent product, looks and works GREAT! Highly recommended for dimly lit areas.",
+        "date": "Reviewed in the United States on March 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "High Quality",
+        "userName": "BadThad",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1QHW0DDQBNHPM",
+        "text": "Appears to work as advertised. The illumination of the switch is not very bright but it's visible at night. I will update on durability as time goes on.",
+        "date": "Reviewed in the United States on February 24, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Basic illuminated 3 way switch works though not that bright.",
+        "userName": "Artsy190",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R20GIT6TL6IPX",
+        "text": "Seems to he of good quality. Installed exactly as the old switch. Wish the switch backlighting was a little brighter but it is sufficient enough for the garage. Overall worth the value.",
+        "date": "Reviewed in the United States on December 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Quality",
+        "userName": "STEVEN M. BROOKS",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R273ENERUHI8B8",
+        "text": "works well",
+        "date": "Reviewed in the United States on November 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "works well",
+        "userName": "Robert J.",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RXCMZ7KVD2K8",
+        "text": "But I liked it so much, I bought another! I’m not sure that the functionality was ever explained, fully in other reviews. When the switch is open (lights are off), there is a fairly bright LED illuminating the translucent switch. When the switch is closed (lights go on) the translucent switch glows just slightly. When it’s “broken” (after a few months of normal use), the switch works fine, but there’s no translucent-switch illumination , at all. That’s when Karl buys another one.",
+        "date": "Reviewed in the United States on September 22, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Unfortunately… the light failed in about six months",
+        "userName": "Karl H.",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3GADV5EBQ03Z3",
+        "text": "Disappointed to find that the light on one of the two that I purchased stopped working after less than one year.",
+        "date": "Reviewed in the United States on September 18, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Light stopped working",
+        "userName": "Jeffrey A Jordan",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RQPBMRJUST98I",
+        "text": "I converted a 3-way switched circuit into a 4-way switched circuit. I wanted to be able to turn the laundry room lights on from within the garage, since that is the way we enter the house the most. Prior to converting the switches, we had to open the door into the laundry room and reach around the corner to flip on the lights. Not always easy as you arrive home from the grocery store and are loaded down with grocery bags going into the house. By having a lighted switch in the garage, it is easy to determine if the laundry room light is on and if not, turn it on. So now, this switch met our need.",
+        "date": "Reviewed in the United States on August 6, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked as expected. I placed this in a 4-way switched circuit. It lights when the lights are off",
+        "userName": "A Project Professor",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R387Q22ZQMWKB3",
+        "text": "I love being able to spot my switches in the dark! Not too bright, just enough that you do not fumble around feeling for a switch",
+        "date": "Reviewed in the United States on July 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "perfect replacement",
+        "userName": "Cherie",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1KG4N6H6QH8NS",
+        "text": "Love it. Very easy to see in the dark.",
+        "date": "Reviewed in the United States on June 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Bright white, easy to find in the dark.",
+        "userName": "A Cortes",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2SC3DG4LLRA4B",
+        "text": "The range for dimming is too touchy it should have the full stroke of the switch seems to only work 1/4 of the stroke",
+        "date": "Reviewed in the United States on June 13, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Dimmer range too close",
+        "userName": "Scott Graham",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3HF0RASKXU59C",
+        "text": "We added this switch so our friends can see where it is in the dark when they come in the garage. It’s a two-way in my configuration and works great. When the line is off the switch lights up nice and bright, but not overly bright.",
+        "date": "Reviewed in the United States on January 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Perfectly",
+        "userName": "Craig Buchanan",
+        "numberOfHelpful": 2,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RVYM3P7M3XD6T",
+        "text": "Great Switch.",
+        "date": "Reviewed in the United States on December 24, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome!",
+        "userName": "Tee",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3DDEUG959MM6U",
+        "text": "Switch is clear with a cool white LED light that is lit when the switch is off. When the switch is on, or in well-lit conditions, it appears gray. If you want a switch that looks white, get the 1463-2W model instead.",
+        "date": "Reviewed in the United States on December 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switch is clear, appears gray when on.",
+        "userName": "bkm83442",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R17XQFGVPFVFAJ",
+        "text": "Purchase this to know where the light switch was when walking into a dark room. It is a nice white light and not too bright. Easy to install and functions perfectly",
+        "date": "Reviewed in the United States on November 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect for dark rooms",
+        "userName": "Chris L",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3POZTFQPILOY3",
+        "text": "During the day this is almost worthless , at night it's ok. Be advised this is not an \"indicator\" or pilot light as it's also on when it's off .",
+        "date": "Reviewed in the United States on October 28, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Poor illumination in day",
+        "userName": "A. J.",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/5a18eaf0-cb1b-4c5f-9865-e8711f64e996/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2F6B2C3SOVUG5",
+        "text": "Used to replace regular switch in dark stairwell. Would recommend, the glow is bright enough for you to locate the switch when it is dark.",
+        "date": "Reviewed in the United States on October 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Highly recommended",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R240EJEHAC9YPZ",
+        "text": "Was super easy to install and the led light makes all the difference when in hallways and you are up before the sun. No fumbling for the switch anymore.",
+        "date": "Reviewed in the United States on August 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "julia",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3UR6MO5ST1WJC",
+        "text": "I like that they're illuminated and even when they're not they're just Nice looking units. The only problem I have is that there are no model number markings on the units but once installed they are very very helpful in areas that are not well lit or complete darknessso that you don't have to go searching for the switch you can see the illuminescence as soon as you're in any field of view from it. these are great items! definitely recommend them.",
+        "date": "Reviewed in the United States on July 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "very neat and useful",
+        "userName": "stew",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R7YYPNUIB3DUY",
+        "text": "I saw this in a hotel bathroom and it makes perfect sense. Why use a nightlight when you can use an illuminated switch to light your way. The light on this is a little dimmer than I hoped but it’s easy to install and don’t need to spend money or power on a nightlight. Nightlights are good for some rooms, not for others. When was the last time you searched for the light in the basement, was that fun? Now you solved that problem lol.",
+        "date": "Reviewed in the United States on June 29, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Could be a tiny bit brighter",
+        "userName": "honorablebunny",
+        "numberOfHelpful": 2,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3DJL543G9OV02",
+        "text": "this pic was during the day in my detached garage with two small windows and the door cracked open. plenty bright at night to find the switch in a dark garage. I wired it as a two way as i didn't need the 3rd connection and when turned on the led goes off. Hope it lasts many years.",
+        "date": "Reviewed in the United States on April 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wired as a two-way switch",
+        "userName": "moosestang",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71Ph2Cm4gqL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R381AN1BO369GY",
+        "text": "Bought to replace an older illumination switch. This one is a lot brighter and easy to locate. It is not as bright as a plug in nightlight but it does give off enough light to see things close in proximity to it and so many times I do not have to turn on the light especially when waking up at night.",
+        "date": "Reviewed in the United States on April 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Makes it easy to locate in the dark.",
+        "userName": "P K",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "ROXL81C96WK0C",
+        "text": "There are others in the other reviews that complain it doesn't light the area well; those folks don't understand it is not intended for that purpose. It only needs enough illumination to be found in the dark. That's it. This is a tad brighter than needed for that. I miss the old warmer color of the older lighted switches. This glows more of a cool white.",
+        "date": "Reviewed in the United States on December 28, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does the job, but misunderstood",
+        "userName": "Truth Seeker",
+        "numberOfHelpful": 9,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1T4WK5IA812P8",
+        "text": "Illuminated light switch function failed after two weeks. The design was changed from earlier models: the holes in the back is the switch will not admit 12 gauge wire (as the predecessor did, then it was made 12 yr. ago!) I guess the specs did not translate well...",
+        "date": "Reviewed in the United States on November 17, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "good price",
+        "userName": "P. A. Cooper",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1U8VVKE63CGY0",
+        "text": "nice 6000k color light",
+        "date": "Reviewed in the United States on October 13, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "nice 6000k light",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R399G0VTV97N0Y",
+        "text": "This light switch was easy to install. It lights up when the 3way light fixture is turned off. But it also is stays illuminated when the light fixture is on. So it’s still a guess if the light downstairs was turned of.",
+        "date": "Reviewed in the United States on September 1, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Illuminated light switch",
+        "userName": "Wayne Wells",
+        "numberOfHelpful": 5,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R319F214060B8H",
+        "text": "Does the job, well built, excellent on/off internal light",
+        "date": "Reviewed in the United States on August 21, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does the job, well built, excellent on/off internal light",
+        "userName": "All Is Well in NJ",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R29JLDQC6W4G2M",
+        "text": "If you just want switches that you can find at night these will work, but if you’re looking for more of a nightlight switch that my pics show on the left hand side pic, which are Hubbell’s, these will not be them. They are very dull and only light up the switch, whereas the ones on the left will light up a small area. Unfortunately we could no longer find the bright ones which we originally bought at Lowes, which no longer sells them, without paying an arm and a leg these days. Disappointed to say the least.",
+        "date": "Reviewed in the United States on July 8, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not what we were looking for",
+        "userName": "Quilting Gal",
+        "numberOfHelpful": 4,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61U7ACUmnoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61i3+AWqfPL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RCXWMWORMKI4C",
+        "text": "I love this switch, I'm a rookie handy woman and it was super easy to install. My kids and husband love that the toggle is bright.",
+        "date": "Reviewed in the United States on May 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "I love it!! Thanks.",
+        "userName": "Faith Peterson",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51kGl8INPWL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61U0KMAkGxL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R7IE8N77MRJ13",
+        "text": "Ok at first installation in Jan 2024. Update sept 2024: Of several ordered, this one failed. Failed out of the box. Has a loose connection to the LED. Twisting the switch and the LED comes on...otherwise gives no output at all. Too late to return, so to the dump it goes! Should have lasted 40 years! Other units worked OK. Not as bright as expected for LED. Too dim.",
+        "date": "Reviewed in the United States on April 13, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not as bright as expected for LED,and FAILED out of the box!",
+        "userName": "tom",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1HYGWN18CSVRU",
+        "text": "Someone took an over exposed picture of this product because these things are extremely dim! You can hardly see them. I was expecting a pretty nice light to be emitted from it, with how cheap and bright LEDs are getting these days but Leviton is still stuck in the past century and only wants to rip people off. This is no brighter than the incandescent bulbs they had in some switches decades ago. I bet the bean counters at Leviton figured they'll save 2-3 cents per switch by going with the most underpowered LED they can, when sending specs to China for manufacturing these. That's why I try to avoid this company. Thanks Leviton, for letting me down once again!",
+        "date": "Reviewed in the United States on November 14, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk! Over-exposed photos. Super dim!",
+        "userName": "Alex",
+        "numberOfHelpful": 2,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1JBFOQ94PMWJZ",
+        "text": "Not as bright as I had hoped. Put in garage so being too bright wasn’t a concern but a desire. Not switches fault but be aware.",
+        "date": "Reviewed in the United States on September 21, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "As advertised but not bright",
+        "userName": "PPPPCCCC",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2B2B7H7MXSQI9",
+        "text": "I have been looking for this nearly 6 months. Leviton and other 3-way illuminated switches always flickered. These do have minimal flicker but not noticeable and compared the competition, they are rock solid. I did take off a star because it could be brighter but for the price, it's plenty good. There is another more expensive one that Leviton sells that is brighter but flickers. Oh well, it's not a perfect world. BTW, it's a very white light and most LED illuminated switches are yellow or orange or even red. White is a bit strange but it's fine.",
+        "date": "Reviewed in the United States on August 31, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Finally a 3 way LED switch that works",
+        "userName": "runbunny84",
+        "numberOfHelpful": 2,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R16VX12DS1GITV",
+        "text": "Looked nice while it worked. Stopped turning lights on and off after 4 days. Put old one back.",
+        "date": "Reviewed in the United States on August 22, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Didn't last 1 week",
+        "userName": "Gerry",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RHWHS3H0MCTB3",
+        "text": "I installed these 3-way switches at the top and bottom the the stairway to control the LED light for the stairway. As you can see from the photos, the switches work correctly, even when controlling an LED light. The light in the switch is bright and white, not a dim yellow like older types. The light in the switch does flicker a tiny bit, but it's not objectionable (at least to me) and well worth it for a switch that works correctly with LED lights.",
+        "date": "Reviewed in the United States on August 1, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works correctly with LED lights",
+        "userName": "S.W.",
+        "numberOfHelpful": 6,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81d8FtomekL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/91T29HQn-BL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMYC8TD",
+        "productTitle": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 37,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 210,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R11PO190MIC236",
+        "text": "Not for use with LED bulbs.",
+        "date": "Reviewed in the United States on July 14, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Not for use with LED bulbs",
+        "userName": "Brooke Knick",
+        "numberOfHelpful": 2,
+        "variationId": "B08YMYC8TD",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 37,
+    "pages_scraped": 4,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

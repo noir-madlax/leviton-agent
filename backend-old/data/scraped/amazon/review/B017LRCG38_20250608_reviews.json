@@ -1,0 +1,2657 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:09:24.029932",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B017LRCG38",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B017LRCG38",
+    "title": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+    "brand": "Lutron",
+    "model_number": NaN,
+    "price_usd": 59.95,
+    "rating": 4.7,
+    "reviews_count": 2972.0,
+    "category": "Light Switches",
+    "product_segment": "Smart Hub Dependent Switches",
+    "product_url": "https://www.amazon.com/dp/B017LRCG38"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3QA4ZSB74XWSQ",
+        "text": "90% off my house is outfitted with lutron caseta light switches. App is easy to use and over all just so convenient (works with alexa and other too). Working on finishing switching out all the switches. Would highly recommend. We had to call customer service once and that was undoubtedly the best customer service experience ever!",
+        "date": "Reviewed in the United States on May 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love Lutron Caseta",
+        "userName": "AG",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R16ZWJGDGIDLSI",
+        "text": "I got it home. I installed it the way they said the switch that turns it on and off worked, but the sensor would never work. Took it back off, checked everything. Put it back on and it never worked. Had electrician, come over? Please I put it in.Still didn't work a lot of money for something that didn't work",
+        "date": "Reviewed in the United States on April 15, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very expensive for not for it not to work",
+        "userName": "Harvey Bennett",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3OVFK9R02IK4W",
+        "text": "I have many of these throughout my house and I give them all a 5 star. However, in the instance of my last install I had problems controlling a rope light. I replaced a basic on/off switch that controls the alcove rope light in my bedroom. Once installed, it turned the alcove rope light on but when the switch was turned off, it turned the light down to about 50% (not totally off). At first I thought it could have been a faulty manufacture, but when I replaced it with an identical Lutron switch, the same half-off phenomenon occurred. Very peculiar. Replacement of a basic on/off wall switch resulted in a totally off light.",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Strange Switch Off Situation",
+        "userName": "TDC Props MidMo",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R147PLV181157L",
+        "text": "The Lutron Caseta Smart Switch delivers on its promise of seamless smart home integration, and as Apple HomeKit users, we’re thrilled with its compatibility and rock-solid performance. Setup was straightforward, and it’s been flawlessly controlling our lights for months without a single hiccup. The app is intuitive, and voice commands via Siri work like a charm. 📱✨ That said, the switch’s design feels a bit dated compared to sleeker, modern Caseta models. The tactile buttons and glossy finish don’t quite match the minimalist vibe of newer smart switches. However, since it’s tucked behind furniture or in less visible spots, the aesthetic isn’t a major issue—just a small nitpick for design-conscious users. Build quality is excellent, and we appreciate how it plays nicely with other smart systems. If you prioritize reliability and smart-home synergy over cutting-edge looks, this switch is a winner. Lutron’s reputation for durability shines here, even if the style isn’t the latest. **4 stars**—it’s a workhorse, not a showpiece! 🔌👍",
+        "date": "Reviewed in the United States on March 4, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Reliable and Smart, But Design Could Use a Refresh 🏠💡",
+        "userName": "Haseeb",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R11BODDN9N2MZ8",
+        "text": "I just installed another one, linked up with my hub about 24hrs later on using/adding to the app and its a little difficult programming, but after one night, was able to solve the issue. They are promot at the 24/7 help line. Love this stuff and the company. Unfortunately it is all internet driven!",
+        "date": "Reviewed in the United States on February 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Smart Swithes",
+        "userName": "G. Harvey",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R37TR2KI03B9JJ",
+        "text": "Got these all over the house now. Control everything with Alexa or I phone. Turn off all the lights before bed with one voice command. Perfect!",
+        "date": "Reviewed in the United States on January 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "deleroius",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3B36EJ3J4EA21",
+        "text": "This was just what we needed to schedule our lights with the google home app. Didn't turn lights off at first but deleted the schedule and added it back in and then did a Test of it and it worked.",
+        "date": "Reviewed in the United States on December 27, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Just what we needed",
+        "userName": "Love my Labs",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2X3DKZJFDXGKT",
+        "text": "I found the switch easy to install and it operates exactly as I expected. I programmed it using a Smart Hub and Motion Detector. I highly recommend Lutron!",
+        "date": "Reviewed in the United States on October 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly!",
+        "userName": "Jeffrey Myer",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2FBSE03JK2BEH",
+        "text": "good",
+        "date": "Reviewed in the United States on October 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron Caseta Smart Lighting Original Switch for Light Bulbs and Fans,",
+        "userName": "Acpinho",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2SD6F0UTE8BG6",
+        "text": "Like the facts it is so easy to install.",
+        "date": "Reviewed in the United States on October 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy installation",
+        "userName": "jimmy huang",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1450FDK88RTLP",
+        "text": "I am looking for a simple WiFi-controllable wall switch that Alexa can set. Thought this one might do it...it say's wireless...but there is no mention of the controller I have to buy too. Also, this would mean making and remembering another remote account with fancy passwords.",
+        "date": "Reviewed in the United States on September 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Requires a separate controller, which is not mentioned on the sales page.",
+        "userName": "William R. Cheswick",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R18WTRK3TNJEOG",
+        "text": "I have Lutron products throughout my house. Love them!",
+        "date": "Reviewed in the United States on August 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "The best!",
+        "userName": "Brian L. Bourdeau",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RG0AWUHYPY3X5",
+        "text": "NO FIT",
+        "date": "Reviewed in the United States on July 8, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "RETURN",
+        "userName": "Gerard",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RX74706KP0SRD",
+        "text": "Some people might feel that needing a hub is a bad thing, but I know from experience these are so much more reliable than wifi switches. I used a network cable to my hub, but you can connect the hub via wifi. Anyway, when I want the lights on, they come on. Period. Big fan.",
+        "date": "Reviewed in the United States on May 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I have a bazillion of these smart switches including dimmers and outdoor versions. They work great.",
+        "userName": "Jeffrey Roy",
+        "numberOfHelpful": 2,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1OU3OCRPIUSOY",
+        "text": "If you’re looking to manage a smart home Lutron is the easiest way. You don’t need a common wire and it will replace your switch rather than add a switch and having to leave power on to a light or fan. Works with HomeKit and Alexa.",
+        "date": "Reviewed in the United States on April 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great HomeKit accessory",
+        "userName": "Jordan F.",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1UTCFZ0E60JJA",
+        "text": "I've been using the Lutron Caseta switches for almost 3 years now. This after going to someone's house that used another solution and got it wrong. He calls out... XXXXX turn on the kitchen light.... nothing... Oh wait, someone turned the switch off. It seemed like half the time, that was the case. I really didn't want a solution that worked 50%. Then I did some research and found other solutions that people had problems and frequently had to re-boot stuff to get it working again. I'm almost at 3 years and it just works! I use these switches for simple on/off lights, I use the fan switches to control all my ceiling fans and I use the dimmer switches on most of my lights so I can control lighting levels, most using scenes and automation including turning my entrance light on when I get home and a light inside. Then 5 minutes later, turn the entrance light off. If someone physically turns the light off manually, no problem, the assistant can still follow the command and turn it on. These are especially good as an investment since they work with most personal assistants.",
+        "date": "Reviewed in the United States on March 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "VERY reliable",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3H4NHPBCQUOUB",
+        "text": "I have never questioned the quality and reliability of the Caseta network. It works as reliably as a finger press but is so much easier. Despite an older tech...it works when others don't. I have been a smart home user for almost two decades and can't recommend this product enough. HomeKit support and easy install make this product stand out, but the reliability makes it shine...or maybe that is the light bulb it turned on 99.999999% of the time.",
+        "date": "Reviewed in the United States on February 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Reliable...reliable and did I say reliable?",
+        "userName": "KPett",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2AX6DDTMXMRK5",
+        "text": "Works well, just like Lutron",
+        "date": "Reviewed in the United States on January 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well, just like Lutron",
+        "userName": "Amzn Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1HECU19JRKZXJ",
+        "text": "Ok I really like the caseta products and have installed several - this is the 2nd or 3rd that i’ve ordered that clearly wasn't new and fortunately it still worked just had to have a prior pairing cleared.",
+        "date": "Reviewed in the United States on January 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great smart switch but watch the seller",
+        "userName": "ES",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R15474EM9WR6M1",
+        "text": "Love these Lutron Caseta switches! Works seamlessly with Apple Home Kit! Love the automation options with these switches.",
+        "date": "Reviewed in the United States on December 21, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Switches",
+        "userName": "Ryan E Langston",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1OOSI9JU2O7LT",
+        "text": "Great for making your regular house into a smart house. Start out slow and add as you can afford them. Soon your whole house will be smart. Super easy app",
+        "date": "Reviewed in the United States on April 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart house",
+        "userName": "ProTek 5150",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1DY5A2Y5G8FM7",
+        "text": "Apple ecosystem and I was hoping to have a hustle with smarthome. This, Eve and a couple other cheaper switches. They logged in. Connected to my Wi-Fi, string and HomeKit right away. This isn’t even found. Via my HomePod mini. I’m returning it. Bad install. Bad connection. Uggh.",
+        "date": "Reviewed in the United States on April 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "I have other light switches.",
+        "userName": "Paul09",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61uaFMKaupL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2RTN7HJ44K54Q",
+        "text": "I wanted to switch a pair of accent lights that frame my garage door so that they would come on at dusk and go off at dawn (thus not run during the day). This switch replaced a standard decora switch. The lights may be turned ON/OFF and this unit works with a hub that along with a phone app allows remote use AND scheduled use. So I have exactly what I want. The lights are scheduled to come on at dusk and go off at dawn and I don't have to remember (especially to switch them off during the day).",
+        "date": "Reviewed in the United States on March 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart lighting that works",
+        "userName": "D.ozzie",
+        "numberOfHelpful": 3,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1Y5T6TO1MICCD",
+        "text": "Very disappointed. The item came in a box that had been taped shut (used). None of the instructions were in English. We returned and will just buy it from the big box store (Home Depot). We like the Lutron and used it in our last home, but we'll go for a NEW one from HD.",
+        "date": "Reviewed in the United States on March 4, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Item was USED (not what we ordered) and instructions were not in English",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R28645EZGQXYHE",
+        "text": "I bought 2 Lutron Caseta switches for my porch lights so I can program them to turn on/off at scheduled times. I have the Caseta switches controlling most of the switches in my home and they work flawlessly. The 2 switches that arrived were already used and the wires were still twisted from being in the wire nuts. Two things here... I'm not paying $60 per switch for used items and I'm not attempting to hook up a switch that some yay-hoo probably fried from hooking it up wrong and decided to return it. Looks like I'll be making a trip to the local hardware store.",
+        "date": "Reviewed in the United States on February 21, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Love the Lutron Caseta Switches But Not Used Ones",
+        "userName": "Jackie D Duncan",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61Tk4YYlacL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/813C71XksBL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81GyxR2-MjL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RHGK83YJDMWA7",
+        "text": "I love these light switches. They're easy to install and they work perfectly with Apple Home Kit. Plus, these look nice on the wall too.",
+        "date": "Reviewed in the United States on January 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "These are great",
+        "userName": "Brandi Easterling Collins",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RX95MAZ9E2KOX",
+        "text": "WARNING: Bought a 3 USED Lutron CASETA Smart switches for the remodel of our lower level in 2021. Thought I could save a few bucks. I had no idea what a crapshoot it would turn into. Finally got the electrical wrapped up this December 2022. Turns out that 1 switch was the Maestro version (non-smart model), another was dead and the last one worked. My Electrican told me before installing them that dead ones are common with USED switches and Outlets. We found that out the hard way how true that is. Unfortunately, we are well beyond the return date. This part is my fault. The person or company who returned these products should have \"the day they deserve\" and Amazon, at the very least, should have made sure the right product was shipped. I'm positive that Amazon doesn't check returns for functionality, but that might be a good idea for some products. DO NOT BUY USED ELECTRICAL SWITCHES UNLESS THEY HAVE BEEN VERIFIED/TESTED!",
+        "date": "Reviewed in the United States on January 22, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don't buy USED electrical switches!!!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R39G7NVPTGJ8BL",
+        "text": "This product is advertised as being compatible with HomeKit, which it is….barely. In order to set up this switch you need Lutron’s ‘bridge’ (an added expense) and that bridge needs to be hard-wired to your router. There is no way to set this up without the bridge hardware. If you have other Lutron products and already own the bridge, this might work for you. If you don’t own a bridge there doesn’t appear to be a way to set this switch up, unlike MANY competitors that don’t have that issue.",
+        "date": "Reviewed in the United States on December 8, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "HomeKit users beware",
+        "userName": "Timothy J. Shank",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2HV4EGSM13G1W",
+        "text": "The small print only available from the instructions in the box tell you the switch does not work with LED strip lights and other \"non-replaceable\" led bulbs. Found out the hard way",
+        "date": "Reviewed in the United States on November 25, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Does not work with all LED lights",
+        "userName": "Sue Bocchicchio",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R36NHNOG0Z324O",
+        "text": null,
+        "date": "Reviewed in the United States on November 4, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "damage",
+        "userName": "AP",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/31UoOk5k0fL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/41SlWT-CBpL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/41X1I9DZFnL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/41sx0wOn4lL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R114AVQWMMRENR",
+        "text": "My home had a $25,000 whole-house Lutron lighting system when I purchased it. The system control unit died 10 years later of a mother-board power failure and could not be repaired by Lutron. Instead of replacing it I spent about $400 on these Casetta switches for a few locations - including my outdoor lighting. I’m happy with these. I’m very unhappy that Lutron would install in any home a top line system with a known obsolescence factor and then not offer a reasonable replacement solution. Boo on Lutron!",
+        "date": "Reviewed in the United States on October 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Outdoor lighting solution",
+        "userName": "DavG",
+        "numberOfHelpful": 5,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RRCDM28HN3DE9",
+        "text": "Read installation instructions and you should not have any issues. I sincerely do not know how I lived without my Lutron switches. Every light and fan switches in my house I’ve converted to Lutron.",
+        "date": "Reviewed in the United States on October 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product!!! 🌟 🌟 🌟 🌟 🌟 🌟 🌟",
+        "userName": "Cooper",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2MN7Y96RLY6RS",
+        "text": "Excellent integration, ease of use and aesthetics",
+        "date": "Reviewed in the United States on October 16, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great as always",
+        "userName": "SkyEye",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R4S9C1TGDKZ8F",
+        "text": "These were far easier to set up than Leviton switches. Pairing was a cinch, and Lutron has many aids and graphics online to guide the user to success and away from electrocution or burning down your house.",
+        "date": "Reviewed in the United States on September 5, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Too easy",
+        "userName": "QRP",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R15TGHMSYCGTS8",
+        "text": "Ive been on a mission replacing all my current switches at home with Lutron Caseta Smart Switches, and I have since grown my project to 18 Caseta switches and counting. I love the brand and the reliability it offers. I haven't had any issues since I've started using the system months ago. I have purchased all the face plates from the Lutron Claro line to complete the look. They are a bit pricey so I purchase them piece by piece. I'm almost complete and so happy I chose Lutron.",
+        "date": "Reviewed in the United States on August 1, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked exactly as its supposed to!",
+        "userName": "LATOYA",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2EDBPZ8UMCSLH",
+        "text": "Switch is very easy to install and, when paired with the Pico Remote, I use it to control a pair of ceiling fans.",
+        "date": "Reviewed in the United States on July 30, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Pairs easily with the Pico Remote",
+        "userName": "RB",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1KQ3989VI50KF",
+        "text": "I power washed the house several weeks ago and forgot to pull the little mini slider turn off on my switch, anyways the yellow Feit Florescent bulb blew, I tried to replace it with an LED bulb however, it would not work. I knew why, there was no common (white) wire on my existing switch. I bought mine many years ago when they came out. As everyone knows the light bulb industry switched from florescent energy saving in favor of LED bulbs. The old tech without the common (white) wire on the switch will not work with the new LED bulbs, so keep that in mind if your in a similar situation like me. The good news was all three Pico remotes I had programmed to this outdoor switch I was able to re-program and they worked beautifully, thank God. Being able to turn on your outdoor lighting when you drive up to a dark driveway at night is a major safety convenience as well as turning on your lighting from your easy chair without getting up is another nice feature.",
+        "date": "Reviewed in the United States on July 27, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "2nd Gereration, Upgraded Switch",
+        "userName": "JJreal",
+        "numberOfHelpful": 3,
+        "variationId": "B017LRCG38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51qnkPDNeiL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61AsbXIzsOL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71pg2H4A8zL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3EHRA8ZLLF77N",
+        "text": "Easy to install. They react to Alexa commands more quickly than Insteon. We have 15 devices installed so far. The only negative I have is the fan control requires 3 wires. The Insteon unit only required 2. So now I have 2 overhead lights with fans that cannot be controlled.",
+        "date": "Reviewed in the United States on June 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent replacement for Insteon system",
+        "userName": "Thomas Waller",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RT76H4MU1VARV",
+        "text": "These are great switches, but I was disappointed in the store sending me one of the two I ordered as a re-packaged unit. It had clearly been installed, uninstalled, then re-sold as new. It was missing two of the 5 wire caps and was not packaged in the original manufacturer box. Will order these again, but likely from a different store.",
+        "date": "Reviewed in the United States on May 26, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Ordered two. One came new, one came re-packaged & missing minor parts.",
+        "userName": "D. Madison",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2P7U2NXJL5GZI",
+        "text": "Only good things",
+        "date": "Reviewed in the United States on April 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing",
+        "userName": "Yoel M.",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3PC9795RXJFQD",
+        "text": "I purchased a second switch after the first one didn’t work. The second one was also bad! I went to Home Depot and guess what it worked perfect. I don’t know where these came from but you better of going to a local Home Depot. Lesson learned!!",
+        "date": "Reviewed in the United States on April 12, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk!!",
+        "userName": "Dennis",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2FCFDZXC3YYG5",
+        "text": "I own a 1985 home that I've recently been trying to add some smart functions. I got hooked into smart home tech after solving a few basic quality of life issues through automation. My next project was lighting. I debated between adding smart bulbs or smart switches and after trialing these Lutron's - the smart switches clearly won. These basic on/off switches are great for locations where you don't want dimming functions. Locations such as fans, fluorescent ballasts, outdoor security lights and the like. They provide simple push on-off capabilities, \"smart\" on/off through the Lutron app and in my case, advanced control using an integration with Home Assistant. It's really cool to see and control the status of my lighting/fans, regardless of where I'm at. Pairing the switches with your Lutron hub was quite intuitive and easy to do. Just press a button while you add the switch in the app. Integration into Home Assistant was equally easy, the native Lutron integration is quite slick. For examples of how I use these switches for advanced automation? If I take a shower, I use humidity values to turn on or off my exhaust fans. I also have motion detection triggering the lighting in my bathrooms, entry way and closets. (No more \"turn the lights off\" from me anymore!) For outdoor lighting, I can now control it based on AI-analyzed security cameras. No more security lights turning on because of snowfall, heavy rain or animals - it's for people only! Install of these is generally fairly easy in most cases. If you understand electrical basics, such as the load wire, the neutral wire and the hot wire(s), they are pretty straight forward to install. 3-way applications get a bit more tricky where you have to use a Pico remote, which seems to make sense so you don't have smart things fighting with each other. Installation requires a few very basic hand tools. For the most part, these are fairly slim and fit into their boxes quite well. I did have some challenges in a couple boxes that had a lot going on, but made it work. I definitely recommend using Wago connectors for your retrofit, they make connections a breeze compared to wire nuts. If you're concerned about electricity or think it's beyond your ability, an electrician should be able to install these without any troubles. I think with smart technology, it's very important to define \"rules\" by which the stuff will operate. These are mine. First, everything has to operate intuitively, like a light switch would. Second, it has to operate without any \"fancy\" server side smarts or network capabilities. Three, it has to integrate with my home automation system of choice as I don't want to be beholden to any particular vendor or app. Generally speaking, these Lutron's satisfy my requirements. If you're in the market for smart switches, these are about as good as they get. I've been really happy with the advanced capabilities it offers the home owner. While they are expensive, a full \"smart\" retrofit with a single platform is going to add value to your home, should you go to sell it. I'm glad to be partnered up with Lutron in my home, they are definitely on the \"recommend\" list.",
+        "date": "Reviewed in the United States on March 6, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great For Retrofitting Smart Features Into 1985 Era Home",
+        "userName": "J. Whiteside",
+        "numberOfHelpful": 21,
+        "variationId": "B017LRCG38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/7138I7cdvlL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1F4PRNOUERNNW",
+        "text": "If you are tired of the dreaded \"No Response\" in HomeKit, these are probably the best switch solution. Combine with a good, solid mesh-wifi network, you will likely never see a failure. More expensive, and require a dreaded bridge for full functionality -- oh so worth it in reduced stress.",
+        "date": "Reviewed in the United States on February 19, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "The most stable HomeKit enabled switch out there...",
+        "userName": "Chris",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R23C0IUGTHY0AT",
+        "text": "Originally I gave this item 5 stars for its ease of installing and setup integration. But now 1.5 years later and the switch already went bad and needs to be replaced.",
+        "date": "Reviewed in the United States on February 3, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Switch went bad",
+        "userName": "Kristin T",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1IPO9QUXV32IC",
+        "text": "I have about 10 of these switches in my house, and they work flawlessly. In the past I tried switches by iDevices, Leviton, Insteon, and others. However, this Lutron one is the best. It works 100% of the time.",
+        "date": "Reviewed in the United States on January 26, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron Caseta is the best!",
+        "userName": "James Astro",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2PK8YNVY3O3G5",
+        "text": "Product was not New. Was obviously something that was returned. Several of the heat sink tabs had been broken off, one of the wires was taped off and there were no screws or wirenuts in the box as other new devices have had. Very disappointing.",
+        "date": "Reviewed in the United States on January 3, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Was not a New Product",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2P5SNY3RIHF9T",
+        "text": "Lutron is rock solid I used their devices throughout my home with no issues",
+        "date": "Reviewed in the United States on November 2, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product",
+        "userName": "Patrick Eligon",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R28V7PSYOYLQX8",
+        "text": null,
+        "date": "Reviewed in the United States on October 20, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Installation very easy",
+        "userName": "Julio Cesar Zaragoza",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/718I9mHSB3L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1B7VEY5DI2OQH",
+        "text": "Enviaron el producto incompleto y sus botones son muy duros",
+        "date": "Reviewed in the United States on July 21, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Se ve horrible y poco delicado",
+        "userName": "Luis Acosta",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/B1Th2fpMreS._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B017LRCG38",
+        "productTitle": "Lutron Caseta Original Smart Switch (Lutron Smart Hub Required), for LED Lights and Fans, 6 Amp, Single-Pole/3-Way, Neutral Required, PD-6ANS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 432,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R92CBBZ1NYA3Y",
+        "text": "This review is more about the Lutron Caseta system. The switch is OK. It works fine. But the Caseta system includes dimmers that cannot remember the last brightness setting!!!! Even the $120 dimmers can only remember a \"favorite\" default setting, as opposed to the last setting. This renders the complete system useless. The previous Lutron Maestro generation could do more; $20 dimmers from other manufacturers can do much better.",
+        "date": "Reviewed in the United States on July 18, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Switch OK, but Caseta System is Broken, Dimmers Can't remember last setting",
+        "userName": "Luis F. Stevens",
+        "numberOfHelpful": 0,
+        "variationId": "B017LRCG38",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

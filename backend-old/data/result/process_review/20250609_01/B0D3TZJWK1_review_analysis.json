@@ -1,0 +1,171 @@
+{
+  "product_title": "Amico 2 Pack Dimmer Light Switch, Single-Pole or 3-Way Compatible Slide Control Dimmer, Suitable for 150W LED Light/CFL/Incandescent and 600W Tungsten Bulb, Wall Plates and Screws Included, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 8,
+  "review_analysis": {
+    "phy": {
+      "build quality": {
+        "A@poor overall construction quality": {
+          "-": [
+            0,
+            5
+          ]
+        },
+        "B@good overall construction quality": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "size": {
+        "C@large size typical of dimmer switches": {
+          "+": [
+            6
+          ]
+        },
+        "D@big back section": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "cover plate": {
+        "E@snap-on design without visible screws": {
+          "+": [
+            6
+          ]
+        },
+        "F@works well for single gang box but may not suit multi-gang boxes": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "wire nuts": {
+        "G@included yellow wire nuts too big for box": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "appearance": {
+        "H@paddle type looks nicer and more modern": {
+          "+": [
+            7
+          ]
+        }
+      }
+    },
+    "perf": {
+      "voltage control": {
+        "a@poor voltage control causing startup issues": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "dimming function": {
+        "b@won't turn on unless dimmer is set high": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@dims properly": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@limited dimming range with 25% minimum": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "e@works reliably": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "f@50% failure rate": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "g@doesn't work despite correct wiring": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "installation fit": {
+        "h@fits but barely with tight space": {
+          "-": {
+            "D": [
+              7
+            ]
+          }
+        },
+        "i@can be tight in boxes but normal for dimmer switches": {
+          "+": {
+            "C": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED lighting": {
+        "+": {
+          "a,b,c": [
+            1
+          ]
+        }
+      },
+      "3-way installation": {
+        "+": {
+          "e": [
+            6
+          ]
+        }
+      },
+      "single pole installation": {
+        "+": {
+          "e": [
+            6
+          ]
+        }
+      },
+      "house-wide switch conversion": {
+        "+": {
+          "h": [
+            7
+          ]
+        }
+      },
+      "professional installation": {
+        "-": {
+          "g": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:42.069303"
+}

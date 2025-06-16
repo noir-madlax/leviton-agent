@@ -1,0 +1,51 @@
+{
+  "product_title": "86 Dimmer Switch 500W Gold Knob Adjusting The Brightness of Light for Living Room Dedicated Dimmer(One Size)",
+  "product_category": "Rotary Knob Dimmer Switches",
+  "total_reviews": 1,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@European build design incompatible with US junction boxes": {
+          "-": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Compatibility": {
+        "a@Does not work with US junction boxes": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@Will not work in United States": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Use in United States": {
+        "-": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "Use with US junction boxes": {
+        "-": {
+          "a": [
+            0
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:05.801145"
+}

@@ -1,0 +1,2458 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:36:56.114069",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07V3XB1QG",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07V3XB1QG",
+    "title": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+    "brand": "TREATLIFE",
+    "model_number": NaN,
+    "price_usd": 49.99,
+    "rating": 4.4,
+    "reviews_count": 2429.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B07V3XB1QG"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1KLL1YEIPLI59",
+        "text": "Not durable. I have installed over 8 of these. All started failing after a couple of years. Some failed even faster. I eventually replaced all with a different brand.",
+        "date": "Reviewed in the United States on May 19, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not durable. Unreliable.",
+        "userName": "HomeGalaxy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2KVULU8RKMSD6",
+        "text": "I installed 30 or so of these Treatlife switches and I’ve switched to Kasra as the Treatlife are all slowly failing. Someone analyzed the failures and came up with a low quality capacitor that is giving out. I don’t recommend these to anyone anymore. They were inexpensive but not in the long run.",
+        "date": "Reviewed in the United States on April 26, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "I don’t recommend Treatlife anymore - too many failures",
+        "userName": "Terry Evander",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R18NRQ81HDQ9OH",
+        "text": "1 of 4 died in less that two years",
+        "date": "Reviewed in the United States on April 15, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Longevity is questionable",
+        "userName": "Todd A. Ethington",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1HY0L0EJJJKRY",
+        "text": "Been using these smart switches for 2 to 3 years. All 20 switches are all used to control lights. Loved them at first BUT like many other reviews they have started to fail. They would mysteriously turn on my lights, and there will be no way to turn them off. They are also not straightforward to setup to be recognized on the app. I just bought another 4-pack of 3-way switches to fix another two failed switches. Judging from the reviews I think I am going to be moving away from TreatLife, if anymore of them fail.",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Disappointed after 2+ years...",
+        "userName": "tmy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1M1U30520WINF",
+        "text": "I have bought quite a few Treatlife switches and smart devices and none of them have lasted longer than 2 years. These are by far the worst smart devices I own. I have purchases, single pole, 3 way, dimmers, fan controllers and all the devices seem to stop working after about 2 years. The plastic is also very poor quality and begins to break down and become very brittle. I recommend going with a more reputable brand for your smart devices.",
+        "date": "Reviewed in the United States on November 15, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very Poor Quality, and Do Not Last Long.",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1AVVZA99XSK9O",
+        "text": "All began to fail. No real longevity which makes and energy saving money obsolete because you have to buy more switchea.",
+        "date": "Reviewed in the United States on October 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "All these began to fail 2 yrs in",
+        "userName": "piquin001",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R35ODMT7DQNGJ0",
+        "text": "I recently embarked on a large home renovation project and decided to install smart switches for all my lights, ordering 20 TreatLife switches, along with multiple 2-gang and 3-gang wall plates. Unfortunately, this decision turned into the biggest headache of the project. During installation, my electricians discovered that the TreatLife smart 3-way switches didn’t work with the other TreatLife 3-way switches and would need to be paired with non-smart switches. The lights would randomly go to the dimmest setting. Worse, I had no choice in which side the smart switch went on due to existing wiring, leading to awkward placements where smart switches were alone, and non-smart switches were grouped with others—resulting in a messy, unattractive look (see images). I contacted TreatLife, and while each response took a day or more, they finally confirmed that their 3-way smart switches only work with 3-way non-smart switches, WHICH THEY DON’T EVEN MAKE! Not very smart for a ‘smart’ switch company. They offered no solution for the mismatched look, and to top it off, refused to accept returns on the unopened switches that would not work with their other switches as it had been over 30 days. I ultimately found a solution with Lutron Caseta switches, which allow two matching switches on either side of the 3-way configuration through an innovative remote that can be installed to look just like the hard-wired switch while allowing way more flexibility with installation locations since no wiring is needed for the remote side. The result? A seamless, functional setup I love. While it required an additional investment and another electrician visit, the new system is worth every penny. If you want matching switches for your 3-way lights, STAY AWAY FROM TREATLIFE!",
+        "date": "Reviewed in the United States on October 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "If you want matching switches for your 3-way lights, STAY AWAY FROM TREATLIFE!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51-8DzWjzeL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51A1S2yn0oL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51fYiz4P3kL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51ixRidElwL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1X3OIOBPIU8KT",
+        "text": "I bought #4 of these three way smart switches in August 2021. #1 switch has failed since last year but I did not replace it because the other 3 way switch for that light is in a convenient location. Then another started being eratic just like how the first one had started and then completely failed. I have tried everything like reseting the switch to add it again but it would not even do that, even tried rewiring but to no avail. looks like they all have a short life of 1.5 to 3 years max because now as of today all #4 switches have failed and I cannot even use them manually to turn on/off the lights, I have to use the manual switch on the other end of the #3way to control the lights. I gave Three star because they are good when they work but don't expect them to last long and you would have to replace them every 2 to 3 years.",
+        "date": "Reviewed in the United States on September 27, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "They start to fail after a years - will last 1 to 3 years",
+        "userName": "N. Desai",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RN0DP9UY0DY3A",
+        "text": "After only 1 year it completely quit working. Replaced with a regular manual switch.",
+        "date": "Reviewed in the United States on September 10, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not a good product.",
+        "userName": "Lyle",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3CCT0VA7RWNDN",
+        "text": "I have 5 of these around my house on 3 way light circuits. I really like them because they are easy to install, respond well to Alexa and are simple to use both manually and via wifi. However, they do not last very long. A regular 3 way switch will last for decades without any problem. I have had to replace 3 of these in 3 years. Two were covered under the warranty; the latest one is one year out of warranty and Treatlife will not replace it. It appears on Alexa ask the Treatlife app as being offline, the indicator light is no longer lit and it will not turn the light off or on manually. Treatlife customer service provided some troubleshooting suggestions but that's all. They will not stand behind their product because it's 1 year out of warranty. Of course, we're not talking about a lot of money but when you're dealing with an electrical device you've got to consider other implications of a failure. Will it simply stop working, as this and the others did, or is there something else wrong that could cause a fire or other damage if it isn't noticed in time. These are \"FCC certified,\" I suppose because they transmit a Wifi signal, but there is no indication of a UL Listing . I will look for better alternatives.",
+        "date": "Reviewed in the United States on September 3, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very nice but then they fail within a few years",
+        "userName": "RKS",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RR4K2FN2XQCDJ",
+        "text": "We like the switches they worked as advertised except one switch started to make the lights flicker then stopped working all together checked wiring and all was tight and good contact but didn't work, replaced and works perfectly with new switch",
+        "date": "Reviewed in the United States on September 2, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not bad but one stopped working",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3THE0XHM8H4A0",
+        "text": "I installed this on a bunch of my outlets. Everything was fine, the app took a bit to get setup but eventually it was all working. The bad news is that after about a year or two, random switches will just stop working. I have other switches by Kasa and Amazon installed at the same time and those have been flawless. Stay away unless you like to replace these every couple of years.",
+        "date": "Reviewed in the United States on August 26, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Great for a limited time, cheap but not worth it",
+        "userName": "JohnnyH",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1VO7HRZL92TJC",
+        "text": "I bought (4) 3-way in 2019 and (4) single in 2020 Spring of last year none of the 3-way worked but all Single Pole did. The 3-ways, I lost 2 within a year and a half, lost another a year later and lost the last one last summer. This purchase was to replace the ones that died, so until I have a chance to see how long they last, I am sticking with 3-stars. If I was judging the Single Pole switch, I would rate them 5 stars as those have worked exactly as expected and have been working for over 4 year with an Alexa interface. *** UPDATE *** When the company read my review, they did offer to replace the switches that went bad, again, I like the look and feel of these switches, so I am hoping to have a better experience with the new ones.",
+        "date": "Reviewed in the United States on August 22, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Need to wait and see",
+        "userName": "Rocco",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R11H4SKDW9JVWJ",
+        "text": "Update on November 2024 Also, how many time I have to reset ALL of the switches every time after the power blinking or power outage??? it makes everything such a 3rd world. I purchased bunches in 2021 for a new contraction house. A few were defectives but they wouldn’t listen to me at first when I called their customer service, I had put my electrician on the phone speaking with them and then finally they agreed to send me replacement. After that, everything was fine for the first 2 years. The function of the switches started get crazy since last year, some switches turn on automatically after power outages or blinking and they can’t be turned off by APP, I have to reset them every single time. If we’re out of town the lights are all on till we get home to reset everything. It gets worse this year, some of them just turn on repeatedly right after I turn them off, I couldn’t turn them off so I had reset those switches and delete them from my APP, when I trying to reset them they were all dead, so I had to replace them from my stock that I purchased 3 years ago, then found out that they were discolored, unless I change the whole panel of switches otherwise the color doesn’t much here and there. So these switches life spans are about 3 years. the switch itself is not expansive but it definitely is expansive for only last 3 years.",
+        "date": "Reviewed in the United States on August 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Review after 3 years",
+        "userName": "en4tiosgw",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51Lm36P5rXL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51W7Y-1rGrL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51ZCpmZurnL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51umnzJ0S5L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61-xI-9rI2L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61ASNFBSP-L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61wuNaXa9jL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1SEYW3Z9DF2UI",
+        "text": "After changing my wifi network name, 70% of the TreatLife switches that I had (I had a mix of dimmers and on/off switches) failed to reconnect. I tried restarting my router, uninstalling/reinstalling the app, resetting each individual device, nothing worked. I reached out to customer service and got no response This garbage isn’t worth the box that it comes in",
+        "date": "Reviewed in the United States on August 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective product, no customer service",
+        "userName": "Marc",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R8KUJD9I9NPY1",
+        "text": "Bought on 2020. 3 of the 4 went bad within past year. 1st one in hallway. Next on garage. Next in basement. I also bought and installed 16 same brand single pole switches which still function great. For some reason these 3 way switches can't be trusted to last.",
+        "date": "Reviewed in the United States on June 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "All went bad after a while",
+        "userName": "D0M",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2AAJHI1XSSKRD",
+        "text": "Didnt know that a company like Treatlife would sell used smart switches . Two out four had wires which are cut, one didn not work at all, the fourth one was not smooth to press and there was dust along all the 4 switches clearly showing it was a used product and no quality check was done. AVOID this. I got an electrician come over to install the switches for which he said he will charge $60 per switch. He installed the first two and when it was time to turn it on it, only 1 worked but required to press hard. So we thought maybe we thought 1 switch was faulty and design of other had problems. So i thought to use the third one and then i saw the cut wires for both of them!! My electrician replaced back the original switches but would still charge me $120. Now even thought TreatLife would accept the return, i paid 2.5 times the cost of this switch without getting any benefit ☹️☹️☹️ And yeah, there was no manual!!!! So just avoid it at all cost. I dont know if i can ever buy a Treatlife product",
+        "date": "Reviewed in the United States on June 21, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Crap and used",
+        "userName": "Rohan",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81J1-u2eBLL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RWEJFY6XHRVLT",
+        "text": "Longevity, it is not ideal to have. I’ve replaced a few switches already, and it keeps disconnecting. I want ease, no issues for long period of time. I’m not feeling that from these switches so I’m going with a new brand completely to see the differences. Worked well at first, but no longer is worth it in my opinion. The switch buzzes while off and then turns on by itself. Not a fan of wasting electricity when it’s pricey already. Don’t need these switches to keep buzzing and then coming back on, on their own.",
+        "date": "Reviewed in the United States on May 25, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Buzzing/offline after 3+ yrs",
+        "userName": "MJR",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1ZF1ZXF2OVO0O",
+        "text": "I’ve had these switches installed for a little over a year and a few of them have stopped working, it’s frustrating because the switches were not cheap. I’m very disappointed with this product.",
+        "date": "Reviewed in the United States on May 22, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stop working",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RB5N3OHD1VBZ2",
+        "text": "I bought several of these smart switches. They only work for 6 months and I had to put them in the trash. They are useless. I lost all the money. Compré varios de estos interruptores inteligentes. Sólo funcionan 6 meses y tuve que tirarlos a la basura. Son inútiles. Perdí todo el dinero.",
+        "date": "Reviewed in the United States on May 3, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "They only work for 6 months and I had to throw them away. Sólo funcionan 6 meses.",
+        "userName": "Nelson Hernandez",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3D4RTS670VJKB",
+        "text": "Installed two of them on 2-way circuit (only one switching location) and they worked, which is the only reason I'm giving the item 2 stars. Installed one on a 3- way circuit (2 switching locations) and one on a 4- way circuit (3 switching locations). The switches worked mechanically, toggled the light on and off manually, and also toggled through the app. However, the app would not show the lights were on, which means if you are remote, you don't know whether they are on or not, and Alexa cannot turn them off since it thinks they are always off. Customer service was useless in helping. Suggested uninstalling and reinstalling from the app, changing light bulbs and switching traveler wires, none of which worked. On my own, I moved the switches from the line side to the load side, and that didn't help. Final say from customer service was \"the switches are incompatible with your 3-way circuit\", which is crap, all 3- way circuits have the same wiring. Ended up replacing the switches with dimmers, which worked just fine. So, their 2-way and 3-way dimmers and 2-way switches work great, but the 3- way switches don't work.",
+        "date": "Reviewed in the United States on March 29, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "2 out of 2 did not work on 3-way and 4-way circuits",
+        "userName": "Bob",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R5ZP8I8DK5IC9",
+        "text": "I loved these initially, I bought 8 of them a mixture of 3-way switches, dimmers/fan, and 3 way dimmers. They would lose connection from time to time but re-sync worked. Now I have a dimmer/fan that will not sync. A 3 way dimmer that won’t turn on and a regular 3 way switch that won’t turn on. They lasted great for a little less than 3 years before just completely not working.",
+        "date": "Reviewed in the United States on March 26, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Hit or miss on quality.",
+        "userName": "Nahyan C.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R17NLG0ORAD7SM",
+        "text": "I used this product with Alexa it’s awesome",
+        "date": "Reviewed in the United States on March 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome",
+        "userName": "DALILA PAREDES",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R263YE33I4EJ0L",
+        "text": "Easy install follow the directions as long as your house wiring is correct. Don't bother with tech support they are of NO help.",
+        "date": "Reviewed in the United States on March 1, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great product crappy tech support",
+        "userName": "Cameron Canterbury",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3KNTCGY0EGD3Y",
+        "text": "I have several treat life switches and bulbs in my home. Recently, the power at my home flickered for a second (not a storm or power surge). One of my 3 way switches no longer functioned. Treat Life replaced the switch for me quickly. I have always had great customer service from this company!",
+        "date": "Reviewed in the United States on February 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Customer Service",
+        "userName": "Coder4Life",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3PCUT80VSDF2L",
+        "text": "I had all the wires necessary for the job but I had one of each switch being 3 4 and a single pole in this three gang. Mostly because of how my house was wired, I had a hard time installing. I tried emailing and sending messages through amazon for customer support without help. I marked hot lines as neutral in 2nd pic (not neutral) End result, they look great and work perfectly. Takes a while to connect in the app.",
+        "date": "Reviewed in the United States on February 24, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Harder to install than I thought. No customer support.",
+        "userName": "Robert",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61eKCXovUnL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71PGDXU1sqL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71j-6DZjZrL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R78ML5UARFB52",
+        "text": "Nice looking and soft",
+        "date": "Reviewed in the United States on February 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2HG733W2DGO0V",
+        "text": "We’ve enjoyed having several TreatLife products for the last 3 years. Most of our home has smart lights and switches throughout, and after an unfortunate 2 wired switches stopped working, we decided to contact customer support. While the team could have easily dismissed our concerns, they thoughtfully asked for every detail to ascertain the problem. When a solve was not apparent, they quickly shipped replacements free of charge. I will definitely continue to recommend TreatLife products, and I’m sure we’ll be a longtime customer.",
+        "date": "Reviewed in the United States on February 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fantastic Customer Service!",
+        "userName": "Chris",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1C4XB8R5NPQTG",
+        "text": "I like the TreatLife line of products, but have had trouble with there three way switches providing proper ON-OFF indication in the app for circuits with longer wiring runs. They always indicate they are off. This makes it impossible to set up automation to turn the lights off or give commands via Alexa, Google,etc. TreatLife doesn’t publish specs on max wiring length. However, I have seen post in home automation threads where works run into the same problem. TreatLife tech support has also confirmed that wire length could prevent issues. TP-Link 3 way switches have the same issue. I had to go with Leviton for my 3 way circuits which requires every switch in the circuit to be changed out and gets pricey. I stil prefer to use TreatLife for all my single pole applications do to the significant cost savings and the products are good.",
+        "date": "Reviewed in the United States on January 29, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Issues with longer circuits",
+        "userName": "S. Harg",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3ETQWG8JGZQ0O",
+        "text": "Great switches for smart house appliances setups",
+        "date": "Reviewed in the United States on January 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Alexa switch",
+        "userName": "Thomas Blackmore",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3CONCR95MUA4C",
+        "text": "Easy to use easy to install. Works like a charm.",
+        "date": "Reviewed in the United States on January 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome Product",
+        "userName": "D-Tup",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RRWPHSOYZ84J5",
+        "text": "I did not realize that Wifi controlled electrical switches had gotten so inexpensive or simple to install. I purchased a 4-pack, but really only was going to install one switch for a light that had a very hard to reach single switch in the back of the garage. That worked so well that I installed the rest from my 4-pack and have ordered more for many different switches all around the property.",
+        "date": "Reviewed in the United States on January 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent!",
+        "userName": "Stephen Metzger",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3JMGZ3TE563DG",
+        "text": "I bought these in October of 2020, and they worked great for 2 1/2 years, but then, one by one, they started glitching, then stopped working altogether, and I can't seem to reset them. I'm going to replace them, but I'll probably look for a different brand.",
+        "date": "Reviewed in the United States on January 14, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Worked great for 2 1/2 years",
+        "userName": "Jonathan Hutchinson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2I2A73SKCUDZS",
+        "text": "If its no good Ill add to this",
+        "date": "Reviewed in the United States on January 3, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Product arrived fast and looks good , now to install.",
+        "userName": "James Bond",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RQ4ENG9V0J20F",
+        "text": "Not only was this product very reliable, but the day it wasn’t, customer service was there and sent me a replacement quickly. They were very helpful and I’ll be looking into other TreatLife products now.",
+        "date": "Reviewed in the United States on January 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Customer Service!",
+        "userName": "Steve",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RSOJNH60VJ33D",
+        "text": "I ordered multiple of same exact model in 2021 and flashed with Tasmota for use with HomeAssistant. Unfortunately, the internals have changed with no model change. The ones bought in 2021 used to have the TYWE3S and now they have WB3S. Latter is not Tasmota flashable. There are some posts of replacing the chip, but that is too much of a hassle. Rating it as 5 star as I assume they work OK with cloud Tuya.",
+        "date": "Reviewed in the United States on December 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Used have the TYWE3S, now has the Now with WB3S. No longer Tasmota compatible",
+        "userName": "SK",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RK0V62VJH404B",
+        "text": "Purchased these to replace standard 3-way switch. They installed easily and worked well at first, but a year later they start to fail. Issue is there comes a time where they no longer accept your pressing the switch to turn ON. You first notice you press to turn ON and 5-seconds later the lights turn OFF. Next, it takes a long press (3-seconds) for the switch to accept the input to turn ON (and you must do the same to turn OFF). Another tell tale sign is asking Alexa to turn ON or OFF, and 5-seconds later the switch performs the opposite. I've replaced these with the KASA brand switch which from my experience have been very dependable.",
+        "date": "Reviewed in the United States on December 16, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Won't last over time",
+        "userName": "Gina D.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RI03HX3SJCCYP",
+        "text": "Absolutely love the Treatlife brand products. I have slowly but surely put these Wi-Fi switches and outlets in my whole house. This new 3-way switch is fantastic. You can use this switch either as a standard single pole or a three-way circuit. It's nice that you can put one at the end of the circuit and use a standard 3-way switch on the other end of the circuit. You do not need to be an electrician to install these, the instructions are easy to follow. They're constantly improving the app at the suggestion of their customer needs. Between the App and Alexa, you can achieve any programming you need. A++",
+        "date": "Reviewed in the United States on December 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Putting these in my whole house!",
+        "userName": "Boooya",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/41EXdeKFg5L._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RGQQPPIG5W6MW",
+        "text": "I spent $850 over the course of a year changing all my switches to Treatlife products to manager dozens of recessed can lights, bathroom fans, ceiling fans, etc. With so many switches and kids, I thought it would be great to be able to dim the massive amount of can lights and also control them to keep lights all over the house from being left on. The theory is great but the switches are not. I have fought several to keep them on the network constantly resetting them. Several have been replaced. Several are not working now and I had to put the old toggle switches back into one fixture. I have a mesh network so signal is never a problem. Every time we have a power outage of any sort, many get messed up and have to be reconnected to the network / app. The newest versions I bought as replacements are even harder to get online since they “automated” the process. I have 2 that cannot be synced and are brand new. 3 out of the 4 fan light combination switches have failed. Naturally some that I have the most trouble with are in the basement and I have to go down to turn off one switch out of 3 that my kids left on even after using the app to turn off ALL basement lights. I contacted Treatlife about some of these issues and they wanted me to go thru all the programming steps and tell them what happens at each step. I explained it is not even turning on so I cannot make it do anything. Then they said I must have made a mistake wiring them. I am an engineer and have wired several houses and barns including fixing others mistakes. This is all run around to avoid warranty claims. They won’t stand behind the high failure rate products. My advice is to limit your installations to only devices that benefit from connectivity and avoid the headache and expense of such a buggy system. Definitely not worth the hype for a whole home install. And definitely not worth a wife being upset the lights or ceiling fan is not working.",
+        "date": "Reviewed in the United States on December 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not worth the headache",
+        "userName": "Distracted Engineer",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3HD5CZ6OB0R91",
+        "text": "Customer service is the best because of all the switches that I have bought from treatlife only one has gone out and they chose to warranty it and replace it and keep me a customer for life. Hard to find companies like that. 5 stars and have my business as long as their products stay high quality. Thanks",
+        "date": "Reviewed in the United States on November 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Customer service is the best",
+        "userName": "Mike R",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2H0E4YBBE474V",
+        "text": "The three-way switch worked as advertised for the first week and then it failed. I did troubleshooting to make sure it was actually the switch. It was so I reached out to the manufacturer. They respond once with troubleshooting tips I did the troubleshooting. There was no further communication form the manufacturer they do not stand behind their product I would avoid this manufacturer.",
+        "date": "Reviewed in the United States on November 17, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "No support",
+        "userName": "Michael Davenport",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1BHECWP0XWB39",
+        "text": "Needed to reinstall switch to another location. Switch did not have rapidly blinking light. Tried resetting switch per installation instructions ( disconnect power to switch,wait 10 sec., reconnect power,hold down reset for 5sec&-->NO BLINKING LIGHT just a solid orange light tried this MANY TIMES. I bought a 4 pack & 3 of them exhibit this behavior DO NOT BUY.",
+        "date": "Reviewed in the United States on November 9, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "3-way Switch will NOT reset",
+        "userName": "J. Pawlak",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2POUO3H00XGNS",
+        "text": "Easy to install, pair easy to the app. Use a different brand wall plate if you have a multi switch location.",
+        "date": "Reviewed in the United States on October 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work great",
+        "userName": "S. W.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3QG4E752CTUQ3",
+        "text": "Dumb switch, not smart and please dont take your time on this crapy product",
+        "date": "Reviewed in the United States on September 25, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Can not connect to wifi. Dump switch! Dont buy",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/618tqkO41GL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81xCMT9iXwL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1380MIIWRI8TV",
+        "text": "I installed these things throughout the house a little over 2 years ago. In the past few months, two of them have failed altogether and will not respond to the programming procedure, so now I will have to replace them. Fortunate that I'm able to do my own electrical work otherwise I'd be paying an electrician to replace some switches. I expect something like this to be good for more than just a few years.",
+        "date": "Reviewed in the United States on August 30, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good, but don't last long",
+        "userName": "TBLong",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1REBB0KMT75FI",
+        "text": "I tried to get support from their help line. I gave them several days to reach me to help. Nothing. I was the electrician for my home, thus know what I’m doing. Lights don’t turn off when scheduled. App makes it difficult to understand if lights are even on or off. Don’t buy.",
+        "date": "Reviewed in the United States on August 22, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn’t fully work. App functionality poor",
+        "userName": "Tmag",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RJ3LLZ91IDX8M",
+        "text": "Purchase these in July 2020 1 went out in early 2023 and another one today .. August 2023 and they make a electrical sound That's a little scary .. also when I got with the seller I warranty was up so I bought another set because I have a lot upstairs and downstairs .. if this continue I will just have to take my loss and swap the switches I'm guessing",
+        "date": "Reviewed in the United States on August 18, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Maybe do not get these",
+        "userName": "halk",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3FKD7OSAUPSSH",
+        "text": "Looking on the company’s site, the 3 -way dimmer (DS02) and 3-way switch (SS02) are compatible but they I cannot get them to work together. There is no wiring diagram attached to the product or on the company’s site. I spoke with the company and they say that all their smart 3 way switch must have only one smart switch as a master switch. The second switch must be mechanical/regular! This is in contract to the installation drawing that show two SS02 (or similar) on the same circuit….. I managed only to operate the dimmer with regular 3-way switch (mechanical).",
+        "date": "Reviewed in the United States on July 23, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t buy! Missing electrical diagram.",
+        "userName": "Ben",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61h1RA6KdIL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1ZOQCJUYZ6H0J",
+        "text": "these are great switches and I have a lot of them installed but one of the switches in this last four pack does not work.",
+        "date": "Reviewed in the United States on July 13, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Great product but one switch did not work",
+        "userName": "Diane",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07V3XB1QG",
+        "productTitle": "TREATLIFE 3 Way Smart Light Switch 4 Pack, 2.4GHz Wi-Fi Smart Switch Works with Alexa and Google Home, Neutral Wire Required, Remote Control, FCC Certified, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 858,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2429,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1SJABPVPE2HG5",
+        "text": "Easy to install",
+        "date": "Reviewed in the United States on July 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "they are what we ordered",
+        "userName": "Marie G.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

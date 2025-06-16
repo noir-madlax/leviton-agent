@@ -1,0 +1,335 @@
+{
+  "product_title": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+  "product_category": "Four Way Multi-Location Control Switches",
+  "total_reviews": 20,
+  "review_analysis": {
+    "phy": {
+      "feel/texture": {
+        "A@rough and clunky feel": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "construction_quality": {
+        "B@low quality construction": {
+          "-": [
+            0
+          ]
+        },
+        "C@well manufactured": {
+          "+": [
+            2
+          ]
+        },
+        "D@well made": {
+          "+": [
+            3
+          ]
+        },
+        "E@cheap but solid": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "appearance": {
+        "F@beautiful appearance": {
+          "+": [
+            4
+          ]
+        },
+        "G@look great": {
+          "+": [
+            4
+          ]
+        },
+        "H@look good and modern": {
+          "+": [
+            11
+          ]
+        },
+        "I@good color": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "wire_connection_design": {
+        "J@back screw wire insert": {
+          "+": [
+            7
+          ]
+        },
+        "K@screws recede into housing": {
+          "-": [
+            9
+          ]
+        },
+        "L@wire insertion holes very difficult": {
+          "-": [
+            9
+          ]
+        },
+        "M@square nut obstructs wire holes": {
+          "-": [
+            14
+          ]
+        },
+        "N@screw secured to square washer inside only": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "rocker_mechanism": {
+        "O@rocker has resistance when pushing": {
+          "-": [
+            12
+          ]
+        },
+        "P@makes loud sound when switching": {
+          "-": [
+            19
+          ]
+        }
+      },
+      "screw_length": {
+        "Q@short screws": {
+          "-": [
+            12
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@immediate failure": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@all switches worked properly": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@switches worked out wonderfully": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "d@work well": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "e@good function": {
+          "+": {
+            "?": [
+              12,
+              15
+            ]
+          }
+        },
+        "f@work like they should": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "g@worked great": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "wire_compatibility": {
+        "h@does not fit #12AWG copper wire without a lot of work": {
+          "-": {
+            "M": [
+              6
+            ]
+          }
+        },
+        "i@made to fit #14AWG copper wire": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "j@14AWG or larger doesn't fit into holes": {
+          "-": {
+            "M": [
+              14
+            ]
+          }
+        }
+      },
+      "wire_connection_performance": {
+        "k@need to pull on wire to make sure clamp tight": {
+          "-": {
+            "J": [
+              7
+            ]
+          }
+        },
+        "l@attaching wires very frustrating": {
+          "-": {
+            "K,L": [
+              9
+            ]
+          }
+        },
+        "m@screw spins without tightening to retain wire": {
+          "-": {
+            "L": [
+              9
+            ]
+          }
+        },
+        "n@can't secure wire to outside": {
+          "-": {
+            "N": [
+              14
+            ]
+          }
+        },
+        "o@push in option took effort": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "installation_ease": {
+        "p@easy installation": {
+          "+": {
+            "C": [
+              2
+            ]
+          }
+        },
+        "q@difficult to handle for beginners": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "r@easy to install": {
+          "+": {
+            "?": [
+              11,
+              18
+            ]
+          }
+        },
+        "s@incredibly frustrating to install": {
+          "-": {
+            "K,L": [
+              9
+            ]
+          }
+        }
+      },
+      "contractor_grade": {
+        "t@not contractor-grade": {
+          "-": {
+            "A,B": [
+              0
+            ]
+          }
+        }
+      },
+      "versatility": {
+        "u@can be used as single pole, 3 way, or 4 way switch": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "professional_electrical_work": {
+        "-": {
+          "a,t": [
+            0
+          ]
+        }
+      },
+      "new_home_construction": {
+        "+": {
+          "F,G": [
+            4
+          ]
+        }
+      },
+      "DIY_home_renovation": {
+        "+": {
+          "c": [
+            5
+          ]
+        }
+      },
+      "older_house_wiring": {
+        "+": {
+          "b": [
+            3
+          ]
+        }
+      },
+      "replacing_toggle_switches": {
+        "+": {
+          "d,H": [
+            11
+          ]
+        }
+      },
+      "three_switch_circuit": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "residential_applications": {
+        "+": {
+          "E": [
+            16
+          ]
+        }
+      },
+      "electrically_challenging_homes": {
+        "+": {
+          "g": [
+            18
+          ]
+        }
+      },
+      "multi_location_control": {
+        "+": {
+          "u": [
+            19
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:24.304205"
+}

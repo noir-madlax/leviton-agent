@@ -1,0 +1,2542 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:35:18.893410",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0039PZJJK",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0039PZJJK",
+    "title": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 5.59,
+    "rating": 4.7,
+    "reviews_count": 824.0,
+    "category": "Light Switches",
+    "product_segment": "High Amperage Rocker Switches",
+    "product_url": "https://www.amazon.com/dp/B0039PZJJK"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2EKU8ELM2BK2P",
+        "text": "Not a 20 amp light switch! This is not a heavy duty switch. Could potentially cause fires because it is misadvertised! Product part number is actually rated for 15 amps. This is NOT a joke!",
+        "date": "Reviewed in the United States on May 1, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not heavy duty 20 amp switch!",
+        "userName": "Dallas",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3F4IK8ZQND2H1",
+        "text": "Worked & fit perfectly.",
+        "date": "Reviewed in the United States on September 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked & fit perfectly.",
+        "userName": "DAK",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3SC3JRQOMFM5S",
+        "text": "It is a Leviton switch so the quality is there and it functions well",
+        "date": "Reviewed in the United States on September 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switches",
+        "userName": "Christopher",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R18IG7R083LO7K",
+        "text": "EXCELLENT",
+        "date": "Reviewed in the United States on August 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "EXCELLENT",
+        "userName": "Vincent G.",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3O53XHT1XXB2N",
+        "text": "Needed two of these to wire a pair of outdoor fans. These are very nice switches and I have covered them with watertight outdoor switch covers that should protect them for the elements. Been in service for one year with out troule",
+        "date": "Reviewed in the United States on March 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Small Job",
+        "userName": "Robert Shaw",
+        "numberOfHelpful": 2,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R101LFK4OHFF0S",
+        "text": "Product was easy to install, and now my lights don't flicker any more.",
+        "date": "Reviewed in the United States on March 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Price, Works Perfectly, Easy to Install",
+        "userName": "Jorge F.",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R27CS0IJA7UV85",
+        "text": "Works great easy to install look great",
+        "date": "Reviewed in the United States on December 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switches",
+        "userName": "robert markgraff",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "REQ1TU7DUIGD7",
+        "text": "I specifically want a switch that is quiet and doesn't click. This is not it",
+        "date": "Reviewed in the United States on November 9, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "This is not quiet",
+        "userName": "Gary",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RV7PKHGVZR338",
+        "text": "Works",
+        "date": "Reviewed in the United States on October 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "james p walsh",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RA305TLCYHGLJ",
+        "text": "As advertised. Top quality. Heavy duty. Needed for the kitchen circuits. Replaced all of the outlets in my house along with screw-less cover plates to modernize the look inside. Used all white and took out the old cream color ones.",
+        "date": "Reviewed in the United States on November 13, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "As advertised. Top quality. Heavy duty",
+        "userName": "Pam",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2UM0LKMPMIAEL",
+        "text": "works as advertised",
+        "date": "Reviewed in the United States on October 19, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "As listed",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2QX82M84AWGJD",
+        "text": "As soon as you undo a screw the backing fumbles around, garbage design, go with something else and save the headache.",
+        "date": "Reviewed in the United States on September 12, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Grounding screws aren’t locked in",
+        "userName": "Nathaniel Sargent",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1NSFQ1ZYTYLR9",
+        "text": "As advertised",
+        "date": "Reviewed in the United States on September 5, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality!",
+        "userName": "vinny m.",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R338GGFMTL997F",
+        "text": "Bought this switch to replace some in my house. Leviton is a good brand and I usually don’t have my issues with their products.",
+        "date": "Reviewed in the United States on June 21, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work Fine",
+        "userName": "T.J.",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1KHKACV8X9UD",
+        "text": "On time and works as advertised",
+        "date": "Reviewed in the United States on December 18, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "As advertised",
+        "userName": "Kickenback",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3UJWGFUJOB84I",
+        "text": "The terminals are NOT back mount. Which is why I bought this expensive outlet. Won't buy any more.",
+        "date": "Reviewed in the United States on November 10, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "NOT back mount",
+        "userName": "Aging Cyclist",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81bUv3A1WeL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2NBCJ4OA5D5BG",
+        "text": "It says it's \"leviton\" but either it's fake or there are serious quality control issues at leviton suddenly. The switch is junk. It has a gross sort of soft clump sound and feel when you activate the switch. It's totally unlike all the other decora rocker switches I've ever seen. They all have the same consistent click sound and feel and you don't realize how consistent all the rocker switches are in the world until you activate this one and hear the little wet cardboard thud it makes. It does technically work as a switch though, I checked.",
+        "date": "Reviewed in the United States on October 5, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "For some reason it doesn't click. More of a soft bump feeling",
+        "userName": "NICK MEALY",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ZEZP4H5YUM5T",
+        "text": "The look and few great. So far so good.",
+        "date": "Reviewed in the United States on October 1, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice product",
+        "userName": "Angel Ortiz",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RKVZ3EATGLN2B",
+        "text": "This is great because it matches almost all decor switches and the momentary contact ensure that the disposal runs only as long as you hold the switch.",
+        "date": "Reviewed in the United States on August 21, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very useful and great for safety",
+        "userName": "Michael D OMeara",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3EWEJXH7SJDQG",
+        "text": "One of the product’s screws needed to connect the electrical wire was not screwed into the threading and could not be tightened. Very disappointed that my electrician needed to return with his own switch to complete the work. I ended up not saving money.",
+        "date": "Reviewed in the United States on April 30, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Leviton switch failed to perform!!!",
+        "userName": "Duckus McQuackus",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1Q6EU998WNYMS",
+        "text": "Bought these before the change. Unfortunately now they emboss their name on the switch which harbors bacteria and viruses. Switches need to be perfectly smooth for cleaning and prevent germs from accumulating. I will not be buying any Leviton products until they fix this. Really bad timing Leviton in making the decision to promote your brand.",
+        "date": "Reviewed in the United States on March 24, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Switch is no longer smooth",
+        "userName": "MJ",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R25PU2K1W0HU3Y",
+        "text": "Its a light switch. What can you say about a light switch LOL It works and was super easy to install. Recommend.",
+        "date": "Reviewed in the United States on September 26, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy peasy",
+        "userName": "D. Shaffer",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/71335DiVhzL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1P7ANRILZQWWT",
+        "text": "I tried the Leviton 5601 which is promoted as a quiet switch, and yet the click on that model is MUCH too loud for my liking! Take a listen to the video posted for that item by Stuart Schwartz on 6/30/20 to have a listen. But, THIS 5621 is the true quiet switch if that's important to you. It has a very nice solid feel. This model handles 20 amps, vs 15 amps on the 5601, but that is not a problem if your true needs are a 15 amp switch. This just means this switch can handle more amperage than the other model. It will work fine for 15 amp circuits. You are paying more for this extra amperage handling ability (beefier insides). It's up to you whether having a true quiet switch is worth the extra money.",
+        "date": "Reviewed in the United States on July 30, 2020",
+        "rating": "4.0 out of 5 stars",
+        "title": "This is the true quiet switch.",
+        "userName": "zigchig25",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1LACFIEGZBTQP",
+        "text": "The switches are okay... they work, they look good... but they just don't FEEL good. Given the cost I would hope for a smoother easier switching mechanism. It's not going to stop me putting them everywhere in my house... I need to get it done! No time for shopping for the perfect switch.",
+        "date": "Reviewed in the United States on July 22, 2020",
+        "rating": "3.0 out of 5 stars",
+        "title": "The mechanism leaves a lot to be desired but they work",
+        "userName": "James Mac Donald",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R37FG121TQYDX0",
+        "text": "great unit have 5",
+        "date": "Reviewed in the United States on June 3, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "good price",
+        "userName": "Keith",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2KICYR1BG9PDL",
+        "text": "The HD switch installed easily and seems to be working properly.",
+        "date": "Reviewed in the United States on March 23, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "2W Paddle Switch",
+        "userName": "TomE",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R5TFR53AVPGDQ",
+        "text": "👍",
+        "date": "Reviewed in the United States on December 30, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "👍",
+        "userName": "Bert",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R32T0GK5QUR0LZ",
+        "text": "This switch has a solid feel to it and installed without trouble",
+        "date": "Reviewed in the United States on September 30, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Feels solid",
+        "userName": "FunGuy",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R21WE1DLOKPET2",
+        "text": "This is an excellent switch. It does its job well and the switch itself is quite silent when turning on or off. Leviton has a good reputation and I have high hopes this switch will live up to it.",
+        "date": "Reviewed in the United States on June 25, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Switch, Quiet Operation",
+        "userName": "Thogar",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RZA4QFAXJV4N8",
+        "text": "what I expected",
+        "date": "Reviewed in the United States on October 31, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "good",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R31RGUU7H5IQSS",
+        "text": "In general, this is a nice commercial-grade switch with back and side wiring. As others have noted, don't back out the side screws too far, or they can become disconnected from the internal nut and there is no way to fix this. They should arrive backed out as far as they should go, don't loosen. I did receive one unit where the screw was disengaged from the nut out of the box; had to send it back to Amazon as defective. Otherwise, 5 stars.",
+        "date": "Reviewed in the United States on October 28, 2018",
+        "rating": "4.0 out of 5 stars",
+        "title": "Careful with side screws",
+        "userName": "Marc S",
+        "numberOfHelpful": 7,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1DR5Y0E72XFBK",
+        "text": "Nice product.",
+        "date": "Reviewed in the United States on August 28, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Naoki O.",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3FTTIYY7ERABN",
+        "text": "Bought two of these for our bathrooms and had no issues installing. I also like the way (slider) the dimmer works.",
+        "date": "Reviewed in the United States on August 28, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "Kevin S.",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R36CH51O2ORKY4",
+        "text": "I had a switch that was getting warm because too many amps were flowing through it. This switch handled the current without getting warm. I then decided to get the source of the high amperage checked and found out it needed to be replaced. Turns out I needed new equipment and not this switch, but I will use it elsewhere in the house because I have some switches that need replacing. This switch operates smoothly and functions perfectly. Some of the switches in my house require an extra little pressure for the click after initially pressing them. Not this one. Just press it on or off and it moves smoothly and works perfectly. I will see how it works over time.",
+        "date": "Reviewed in the United States on July 28, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Handled the amperage the previous switch couldn't",
+        "userName": "Owner",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1NT5UUOOZY2QR",
+        "text": "AOK",
+        "date": "Reviewed in the United States on July 5, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Pete Quigley",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1Y1O5C39CMMLD",
+        "text": "As described.",
+        "date": "Reviewed in the United States on June 13, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "SF",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1KMTZZWU4FK0N",
+        "text": "Works with my in ceiling heater for the shower. It required a 20 amp switch which this product is.",
+        "date": "Reviewed in the United States on June 3, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with my in ceiling heater for the shower",
+        "userName": "R. B.",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1CG3TTT0EHDS9",
+        "text": "Good, heavy-duty switch for a large, in-sink garbage disposal, at a good price.",
+        "date": "Reviewed in the United States on March 30, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Heavy Duty Switch",
+        "userName": "Shop Till You Drop",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2GQLV1IMEQKKI",
+        "text": "Very nice quiet operation and looks!",
+        "date": "Reviewed in the United States on February 18, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice QUIET switch - very happy!",
+        "userName": "Koddee",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RIEUN5VPA226F",
+        "text": "Simple switch to match smart switch next to it",
+        "date": "Reviewed in the United States on February 11, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Matches smart switch",
+        "userName": "M. Gooding",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3DHSG10WIG385",
+        "text": "Great product at a great price",
+        "date": "Reviewed in the United States on January 20, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "Chupacabra",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R7VTQBFKCDGZC",
+        "text": "Nice quality.",
+        "date": "Reviewed in the United States on January 14, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "quick delivery",
+        "userName": "James Orleman",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R27ECL85BBCF3O",
+        "text": "Typical Leviton Quality: Well made and looks great!",
+        "date": "Reviewed in the United States on August 7, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Switch!",
+        "userName": "ParttimeGamer",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3QC6MCO6LHGNC",
+        "text": "AAA",
+        "date": "Reviewed in the United States on June 8, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Tim Clark",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1UYNU3RZS23GR",
+        "text": "Works well and looks good",
+        "date": "Reviewed in the United States on April 19, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "LP Fuh",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2JW2VSLO0L5BI",
+        "text": "Needed a 20 amp switch for the garbage disposal but could not find any local that matched the other switches.",
+        "date": "Reviewed in the United States on June 22, 2014",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Happy",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3FS2W24KFTQYI",
+        "text": "Perfect as a simple switch! Smooth and easy - decora is a nice upgrade over standard switches. Installation is a snap.",
+        "date": "Reviewed in the United States on September 14, 2013",
+        "rating": "5.0 out of 5 stars",
+        "title": "A great switch!",
+        "userName": "Keith",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R25ZE4GIULH5L6",
+        "text": "Great product and price especially for a 20 amp switch.",
+        "date": "Reviewed in Canada on March 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RWF64HZR4EUK5",
+        "text": "Allumer la lumière au dessus de l'évier j'aime",
+        "date": "Reviewed in Canada on December 3, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Le prix",
+        "userName": "Serge Thibodeau",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/717LUNsQNvL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0039PZJJK",
+        "productTitle": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 55,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 825,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R27GW69DZWW9K9",
+        "text": "This is a well constructed rocker assembly with simple yet positive wire connections to the screw/plates I have had overheating issues with the push pin connectors.",
+        "date": "Reviewed in Canada on September 17, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Solid Construction",
+        "userName": "Steve Coffin",
+        "numberOfHelpful": 0,
+        "variationId": "B0039PZJJK",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

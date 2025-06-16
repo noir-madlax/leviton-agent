@@ -1,0 +1,324 @@
+{
+  "product_title": "GE Switch, White, Grounding Toggle 5 Pack, Single Pole, in Wall On/Off Fan & Light Replacement, 15 Amp, for Home, Office & Kitchen, UL Listed, Wallplate not Included, 44034",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 46,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@not real white": {
+          "-": [
+            0
+          ]
+        },
+        "B@white color": {
+          "+": [
+            14,
+            21,
+            33
+          ]
+        },
+        "C@light almond instead of white": {
+          "-": [
+            26
+          ]
+        },
+        "D@brown switches": {
+          "-": [
+            36
+          ]
+        }
+      },
+      "construction": {
+        "E@high quality, robust, strong": {
+          "+": [
+            6
+          ]
+        },
+        "F@sturdy construction": {
+          "+": [
+            19,
+            25
+          ]
+        },
+        "G@very light weight": {
+          "-": [
+            26
+          ]
+        },
+        "H@good quality": {
+          "+": [
+            31,
+            34,
+            38
+          ]
+        }
+      },
+      "screws": {
+        "I@screws strip easily": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "ground_location": {
+        "J@ground on opposite end from original switches": {
+          "-": [
+            18
+          ]
+        }
+      },
+      "wire_connection": {
+        "K@takes good push to get wire in": {
+          "-": [
+            35
+          ]
+        }
+      }
+    },
+    "perf": {
+      "operation": {
+        "a@works perfectly": {
+          "+": {
+            "?": [
+              1,
+              8,
+              18
+            ]
+          }
+        },
+        "b@works as expected": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@works like it should": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@working light switch": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "e@turn lights on and off properly": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "f@one did not work": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "g@worked perfectly": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "h@fit and worked fine": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "i@works great": {
+          "+": {
+            "?": [
+              29,
+              30,
+              33,
+              37,
+              41
+            ]
+          }
+        },
+        "j@work as they should": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "k@work very well": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "l@got lights working again": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "noise": {
+        "m@quiet operation": {
+          "+": {
+            "E": [
+              6
+            ]
+          }
+        },
+        "n@noiselessly": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "durability": {
+        "o@made sturdy to last": {
+          "+": {
+            "F": [
+              25
+            ]
+          }
+        },
+        "p@screw stripped with almost no pressure": {
+          "-": {
+            "I": [
+              26
+            ]
+          }
+        }
+      },
+      "installation": {
+        "q@easy to install": {
+          "+": {
+            "?": [
+              2,
+              9,
+              24,
+              25,
+              31,
+              34,
+              35,
+              36
+            ]
+          }
+        },
+        "r@simple enough to install": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "s@takes good push to get wire in": {
+          "-": {
+            "K": [
+              35
+            ]
+          }
+        },
+        "t@extra time to relocate ground wires": {
+          "-": {
+            "J": [
+              18
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "fix bad switch": {
+        "+": {
+          "a": [
+            1
+          ]
+        }
+      },
+      "bulk purchase": {
+        "+": {
+          "?": [
+            2,
+            14
+          ]
+        }
+      },
+      "replacing old wiring/outlets/switches": {
+        "+": {
+          "a": [
+            8
+          ]
+        }
+      },
+      "light switch": {
+        "+": {
+          "d,e": [
+            9,
+            13
+          ]
+        }
+      },
+      "replace broken switch": {
+        "+": {
+          "h": [
+            15
+          ]
+        }
+      },
+      "changing outlets and wall switches in old home": {
+        "+": {
+          "?": [
+            28
+          ]
+        }
+      },
+      "new installation in portable buildings": {
+        "+": {
+          "?": [
+            32
+          ]
+        }
+      },
+      "replace all switches in 5 rooms": {
+        "+": {
+          "i,q": [
+            33
+          ]
+        }
+      },
+      "replace bad light switches in home": {
+        "+": {
+          "?": [
+            34
+          ]
+        }
+      },
+      "new home owner replacing brown switches": {
+        "+": {
+          "q": [
+            36
+          ]
+        }
+      },
+      "replacement switches": {
+        "+": {
+          "l": [
+            44
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:01.337931"
+}

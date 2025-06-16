@@ -1,0 +1,193 @@
+{
+  "product_title": "Eaton Universal Full Slide Dimmer 120V, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 12,
+  "review_analysis": {
+    "phy": {
+      "connection screws": {
+        "A@factory torqued screws to excessive tightness": {
+          "-": [
+            0
+          ]
+        },
+        "B@screws come all the way out when backed out": {
+          "-": [
+            0
+          ]
+        },
+        "C@limited height under retained screws": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "threaded piece": {
+        "D@moves away from hole when screws are backed out": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "side terminal": {
+        "E@refuses to accept mating screw": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "slide": {
+        "F@gets very dirty when pulling up and down": {
+          "-": [
+            8
+          ]
+        },
+        "G@acts as both switch and dimmer": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "toggle switch": {
+        "H@easy to find": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation difficulty": {
+        "a@extremely difficult to place wire ends under screws": {
+          "-": {
+            "C": [
+              0
+            ]
+          }
+        },
+        "b@easy to install": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "dimming performance": {
+        "c@dims lights just right without background noise or flickering": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@works great": {
+          "+": {
+            "?": [
+              3,
+              6
+            ]
+          }
+        },
+        "e@turns light off completely when fully lowered": {
+          "+": {
+            "G": [
+              5
+            ]
+          }
+        },
+        "f@soft quick gradual light transition from off to full": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "g@flickered off and on same day after installation": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "h@light flashes then comes on when motion detected": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@significant lag before coming on sometimes": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "ease of use": {
+        "j@easy to use": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "cleanliness": {
+        "k@gets very dirty during operation": {
+          "-": {
+            "F": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "controlling dimmable LED lights": {
+        "+": {
+          "c": [
+            1
+          ]
+        },
+        "-": {
+          "g": [
+            4
+          ],
+          "h,i": [
+            9
+          ]
+        }
+      },
+      "wall switch and dimmer replacement": {
+        "+": {
+          "b,e": [
+            5
+          ]
+        },
+        "-": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "motion-activated dimming": {
+        "-": {
+          "h,i": [
+            9
+          ]
+        }
+      },
+      "low cost dimming solution": {
+        "+": {
+          "e": [
+            5
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:24.914788"
+}

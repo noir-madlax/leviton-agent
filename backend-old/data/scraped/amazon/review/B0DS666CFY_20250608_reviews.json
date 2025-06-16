@@ -1,0 +1,178 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:30:15.297491",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0DS666CFY",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 1,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0DS666CFY",
+    "title": "Amico Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, Ivory, 2 Pack",
+    "brand": "GE",
+    "model_number": NaN,
+    "price_usd": 25.99,
+    "rating": 5.0,
+    "reviews_count": 3.0,
+    "category": "Dimmer Switches",
+    "product_segment": "LED Optimized Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0DS666CFY"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DS666CFY",
+        "productTitle": "Amico Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, Ivory, 2 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 100
+          },
+          "fourStar": {
+            "percentage": 0
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R364QFXWHA7NT8",
+        "text": "I ordered the pair of these to replace some fancy dimmers in my dining room that failed recently. These are half the cost of the replacement switches, so I decided to try them. I don't know about their durability/reliability yet. If they last 10 years or so, I think they are worth it. My favorite feature is a little dial inside the cover to set the minimum brightness for the lights being controlled. I assume this has to be adjusted for LEDs vs traditional incandescent lights. It's a nice feature to get it dialed in right. So far, so good with these. Easy install, and they can be used in a 1-way or 3-way setup.",
+        "date": "Reviewed in the United States on June 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "half the price of name brand - working just as well",
+        "userName": "D. J. Organ",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DS666CFY",
+        "productTitle": "Amico Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, Ivory, 2 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 100
+          },
+          "fourStar": {
+            "percentage": 0
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2H5H6VAB0ZNMI",
+        "text": "A dimmer switch that doesn't look out of place versus the usual Decora switches? And works without needing to hold down a button to run through the dimming range to get to the desired brightness? And doesn’t require an app or internet connectivity to work? And has been independently tested for safety and listed by a nationally recognized testing laboratory? Yes, yes, yes, and yes. Its face dimensions are 33mm by 66mm, the same size as the standard Decora switch from the major brand. The dimmer adjustment is on the bottom and stays to whatever was previously set to. No app, no internet, no “smarts”. And UL tested/certified. Additionally, wire nuts, screws, and a screwless faceplate is included. Barring any durability or reliability issues, 5 stars.",
+        "date": "Reviewed in the United States on June 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "UL Listed dimmer switches.",
+        "userName": "Kane L.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71fctRrDY1L._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DS666CFY",
+        "productTitle": "Amico Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, Ivory, 2 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 3,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3,
+        "productRating": "5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 100
+          },
+          "fourStar": {
+            "percentage": 0
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RWD2DQMEDGSC8",
+        "text": "This is a heavy duty switch, and works well. Installation was straightforward and the dimmer works as it should. Good price, and easy to install.",
+        "date": "Reviewed in the United States on May 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer Switch",
+        "userName": "Bubbles, Not Brew",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 3,
+    "pages_scraped": 1,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

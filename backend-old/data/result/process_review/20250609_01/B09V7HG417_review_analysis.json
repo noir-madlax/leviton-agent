@@ -1,0 +1,316 @@
+{
+  "product_title": "ELEGRP Digital Rotating Dimmer Switch for Dimmable LED, CFL and Incandescent Light Lamp Bulbs, Single Pole / 3-Way Rotary Dimmer Switch, Wall Plate Included, UL Listed (1 Pack, Matte White)",
+  "product_category": "Rotary Knob Dimmer Switches",
+  "total_reviews": 43,
+  "review_analysis": {
+    "phy": {
+      "Size/Dimensions": {
+        "A@Shallow depth fitting in one inch box": {
+          "+": [
+            3
+          ]
+        },
+        "B@Low profile design": {
+          "+": [
+            30
+          ]
+        },
+        "C@Compact size fitting well in junction box": {
+          "+": [
+            27
+          ]
+        }
+      },
+      "Knob/Dial": {
+        "D@Large knob sticking out far": {
+          "-": [
+            32
+          ]
+        },
+        "E@White, clean appearance": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "Build Quality": {
+        "F@Flimsy construction compared to older switches": {
+          "-": [
+            37
+          ]
+        },
+        "G@Loose connectors": {
+          "-": [
+            12
+          ]
+        },
+        "H@Left-handed screws not extending far enough": {
+          "-": [
+            13
+          ]
+        },
+        "I@Solid construction": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "Components": {
+        "J@Incomplete or incorrect plate": {
+          "-": [
+            4
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming Performance": {
+        "a@Smooth dimming transitions": {
+          "+": {
+            "?": [
+              18,
+              39
+            ]
+          }
+        },
+        "b@Full range dimming adjustment": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "c@Partial 20% dimming only, not full 100% to zero": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "d@Maximum brightness limited to 75%": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "Flickering Control": {
+        "e@Prevents LED light flickering": {
+          "+": {
+            "?": [
+              0,
+              9,
+              18,
+              19,
+              28,
+              33
+            ]
+          }
+        },
+        "f@Causes light flickering": {
+          "-": {
+            "?": [
+              1,
+              8,
+              23
+            ]
+          }
+        }
+      },
+      "Response Time": {
+        "g@Delay when turning on light": {
+          "-": {
+            "?": [
+              9,
+              15,
+              26,
+              31
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "h@Works perfectly": {
+          "+": {
+            "?": [
+              2,
+              6
+            ]
+          }
+        },
+        "i@Failed to work completely": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "j@Inconsistent light control": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "k@Failed after 3 weeks": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "l@Failed after 2 months": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "m@Killed LED bulbs": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "n@Works well with LED lights": {
+          "+": {
+            "?": [
+              0,
+              16,
+              28,
+              42
+            ]
+          }
+        },
+        "o@Does not work on dimmable LED bulbs": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "p@Easy to install": {
+          "+": {
+            "A": [
+              3
+            ],
+            "?": [
+              6,
+              11,
+              14,
+              19,
+              20,
+              22,
+              29,
+              37,
+              39,
+              41
+            ]
+          }
+        },
+        "q@Cannot install due to screw design": {
+          "-": {
+            "H": [
+              13
+            ]
+          }
+        }
+      },
+      "Features": {
+        "r@Adjustable minimum brightness level": {
+          "+": {
+            "?": [
+              15,
+              16,
+              33,
+              42
+            ]
+          }
+        },
+        "s@Gradual on feature": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "t@3-way switch capability": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Kitchen lighting": {
+        "+": {
+          "e": [
+            0
+          ],
+          "?": [
+            17,
+            34
+          ]
+        }
+      },
+      "LED light bulb replacements": {
+        "+": {
+          "e": [
+            0
+          ]
+        }
+      },
+      "Bedroom lighting": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "Ceiling fan dimmable LED": {
+        "+": {
+          "e": [
+            28
+          ]
+        }
+      },
+      "Kitchen can lights": {
+        "+": {
+          "?": [
+            34
+          ]
+        }
+      },
+      "Ceiling LED lights": {
+        "+": {
+          "e": [
+            33
+          ]
+        }
+      },
+      "Older home with thin walls": {
+        "+": {
+          "B": [
+            30
+          ]
+        }
+      },
+      "Shallow switch box installation": {
+        "+": {
+          "A": [
+            3
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:02:23.856536"
+}

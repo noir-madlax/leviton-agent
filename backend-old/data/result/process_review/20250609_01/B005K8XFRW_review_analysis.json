@@ -1,0 +1,384 @@
+{
+  "product_title": "Leviton L1461-2C Single-Pole Switch, White",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 46,
+  "review_analysis": {
+    "phy": {
+      "Light": {
+        "A@LED light component that illuminates the switch": {
+          "+": [
+            1,
+            2,
+            3,
+            9,
+            11,
+            12,
+            14,
+            18,
+            21,
+            22,
+            24,
+            31,
+            37,
+            38,
+            40,
+            41,
+            42,
+            44
+          ],
+          "-": [
+            0,
+            16,
+            42
+          ]
+        },
+        "B@White/clear light color": {
+          "+": [
+            3,
+            9,
+            22,
+            24,
+            31
+          ],
+          "-": []
+        },
+        "C@Blue glow color": {
+          "+": [
+            9
+          ],
+          "-": []
+        },
+        "D@Light brightness level": {
+          "+": [
+            14,
+            18,
+            21,
+            31,
+            37,
+            38
+          ],
+          "-": [
+            42
+          ]
+        }
+      },
+      "Switch bat/actuator": {
+        "E@Clear switch bat material": {
+          "+": [
+            24
+          ],
+          "-": [
+            17
+          ]
+        }
+      },
+      "Wire connections": {
+        "F@Romex wire holder tightness": {
+          "-": [
+            13
+          ]
+        },
+        "G@Quickwire holes size": {
+          "-": [
+            19
+          ]
+        },
+        "H@Bare wire stab-in ports size": {
+          "-": [
+            32
+          ]
+        }
+      },
+      "Build quality": {
+        "I@Overall construction feel": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "Sound": {
+        "J@Switch operation noise level": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "Screw hardware": {
+        "K@Long screw attachment": {
+          "-": [
+            35
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Light component failure": {
+          "-": {
+            "?": [
+              0,
+              16,
+              23,
+              27,
+              30,
+              33
+            ]
+          }
+        },
+        "b@Switch function failure": {
+          "-": {
+            "?": [
+              6,
+              7,
+              27,
+              28,
+              30,
+              33
+            ]
+          }
+        },
+        "c@Internal arcing/sparking": {
+          "-": {
+            "?": [
+              6,
+              27,
+              28
+            ]
+          }
+        }
+      },
+      "Electrical performance": {
+        "d@Current leakage when off": {
+          "-": {
+            "?": [
+              23,
+              29
+            ]
+          }
+        },
+        "e@LED load compatibility": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "f@Operation without ground wire": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "Visibility": {
+        "g@Findability in dark conditions": {
+          "+": {
+            "A": [
+              1,
+              2,
+              4,
+              9,
+              10,
+              11,
+              12,
+              14,
+              18,
+              24,
+              26,
+              31,
+              37,
+              38,
+              40,
+              41,
+              42,
+              44,
+              45
+            ]
+          }
+        },
+        "h@Side visibility": {
+          "-": {
+            "E": [
+              17
+            ]
+          }
+        }
+      },
+      "Installation ease": {
+        "i@Installation process": {
+          "+": {
+            "?": [
+              5,
+              15,
+              19,
+              26,
+              31,
+              44
+            ]
+          }
+        },
+        "j@Wire connection difficulty": {
+          "-": {
+            "F": [
+              13
+            ],
+            "G": [
+              19
+            ],
+            "H": [
+              32
+            ]
+          }
+        }
+      },
+      "Switch operation": {
+        "k@Switch actuation feel": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "l@Switch operation sound": {
+          "-": {
+            "J": [
+              35
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Bathroom lighting": {
+        "+": {
+          "g": [
+            1,
+            10,
+            11,
+            26,
+            35,
+            45
+          ]
+        },
+        "-": {
+          "d": [
+            29
+          ]
+        }
+      },
+      "Basement lighting": {
+        "+": {
+          "g": [
+            3
+          ]
+        }
+      },
+      "Garage lighting": {
+        "+": {
+          "g": [
+            14,
+            27,
+            33,
+            40
+          ]
+        },
+        "-": {
+          "b": [
+            27,
+            33
+          ]
+        }
+      },
+      "Shed lighting": {
+        "+": {
+          "g": [
+            41
+          ]
+        },
+        "-": {
+          "b": [
+            28
+          ]
+        }
+      },
+      "Stairway lighting": {
+        "+": {
+          "g": [
+            18
+          ]
+        }
+      },
+      "Laundry room lighting": {
+        "+": {
+          "g": [
+            11
+          ]
+        }
+      },
+      "Home theater lighting": {
+        "+": {
+          "g": [
+            38
+          ]
+        }
+      },
+      "Closet lighting": {
+        "+": {
+          "g": [
+            24
+          ]
+        }
+      },
+      "Child's room lighting": {
+        "+": {
+          "g": [
+            11
+          ]
+        }
+      },
+      "Guest areas": {
+        "+": {
+          "g": [
+            10,
+            26,
+            45
+          ]
+        }
+      },
+      "Hallway lighting": {
+        "+": {
+          "g": [
+            37
+          ]
+        }
+      },
+      "Fan control": {
+        "+": {
+          "?": [
+            35
+          ]
+        },
+        "-": {
+          "d": [
+            29
+          ]
+        }
+      },
+      "General replacement switch": {
+        "+": {
+          "?": [
+            8,
+            12,
+            20,
+            25,
+            31,
+            39,
+            43
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:26.369150"
+}

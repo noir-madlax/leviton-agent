@@ -1,0 +1,180 @@
+{
+  "product_title": "TP-Link Tapo Matter Smart Dimmer Switch, Single Pole, Neutral Wiring & 2.4 GHz WiFi Required, Compatible with Alexa, Siri, Google Home, Bixby, UL Certified Light Switch, (4-Pack)",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 6,
+  "review_analysis": {
+    "phy": {
+      "depth": {
+        "A@deeper than standard switch": {
+          "+": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@does not connect with HomeKit": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@disconnects from Google Home daily": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@connects easily to Tapo app": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@connects to Google within 15 minutes total": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@short window for Google Home setup connection": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "multi-switch support": {
+        "f@cannot support multi switch set up for hallways": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "operation": {
+        "g@very smooth operation even on LEDs": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@flickers once when turned off": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@easy to install": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "j@fits wall box without problem": {
+          "+": {
+            "A": [
+              3
+            ]
+          }
+        },
+        "k@fiddly for first switch installation": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "l@subsequent installations take under 10 minutes each": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "programming": {
+        "m@allows programming min and max levels": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "n@allows programming 5 presets": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "o@can set to super low light level": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "p@works exactly as advertised": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "remote control from bed": {
+        "+": {
+          "g": [
+            3
+          ]
+        }
+      },
+      "daily Google Home control": {
+        "-": {
+          "b": [
+            1
+          ]
+        }
+      },
+      "old building installation with 115 year old wiring": {
+        "+": {
+          "p": [
+            5
+          ]
+        }
+      },
+      "LED lighting control": {
+        "+": {
+          "g": [
+            3
+          ]
+        }
+      },
+      "lighting control with multiple new lights": {
+        "-": {
+          "h": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:15.826993"
+}

@@ -1,0 +1,151 @@
+{
+  "product_title": "[20-Pack] PROCURU Decorator Paddle Rocker Light Switch, Single Pole, 3-Wire, Grounding 15A 120V-277V, White, UL Certified, Includes Wall Plate Covers",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 10,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek updated look": {
+          "+": [
+            5
+          ]
+        },
+        "B@great looking": {
+          "+": [
+            6
+          ]
+        },
+        "C@clean look with white brand new switches": {
+          "+": [
+            7
+          ]
+        },
+        "D@matches Leviton switches well": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "sound": {
+        "E@some sound louder than others when turning on/off": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "design": {
+        "F@quality design": {
+          "+": [
+            5
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works great": {
+          "+": {
+            "?": [
+              0,
+              3
+            ]
+          }
+        },
+        "b@do the job": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "c@no issues with the product": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "durability": {
+        "d@super buenos (very good durability)": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@will last for years to come": {
+          "+": {
+            "F": [
+              5
+            ]
+          }
+        },
+        "f@durable": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "installation": {
+        "g@easy install": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "h@easy installation": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home improvement": {
+        "+": {
+          "B,h": [
+            6
+          ]
+        }
+      },
+      "house upgrade": {
+        "+": {
+          "A": [
+            5
+          ],
+          "C": [
+            7
+          ]
+        }
+      },
+      "rental properties": {
+        "+": {
+          "f,c": [
+            8
+          ]
+        }
+      },
+      "remodel jobs": {
+        "+": {
+          "?": [
+            9
+          ]
+        }
+      },
+      "replacing current switches": {
+        "+": {
+          "A": [
+            5
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:11.674392"
+}

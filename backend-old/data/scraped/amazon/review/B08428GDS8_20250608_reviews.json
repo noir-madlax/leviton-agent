@@ -1,0 +1,2549 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:00:37.304350",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08428GDS8",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08428GDS8",
+    "title": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+    "brand": "GE",
+    "model_number": NaN,
+    "price_usd": 38.87,
+    "rating": 4.0,
+    "reviews_count": 414.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Hub-Dependent Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B08428GDS8"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3930LR14MMG93",
+        "text": "I have 9 of the 43080/43082 devices and they go offline regularly, requiring a power cycle. I'm running Home Assistant with 25 total switch/dimmers (zigbee, zwave, and insteon), and these are weakest link in my lighting. I wouldn't buy any more of these, and I don't recommend that you do either!",
+        "date": "Reviewed in the United States on May 2, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Unreliable - go offline requiring power cycling",
+        "userName": "Tan Bronson",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1UN839I5OKKKJ",
+        "text": "Using two types of dimmable LED bulbs neither will dim properly with this switch. When used below 100%. Bulbs will periodically flash 5 times at full brightness. Using both GE and Philips dimmable LED bulbs.",
+        "date": "Reviewed in the United States on March 24, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn't work as expected",
+        "userName": "Eric P.",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2TJLIHEEQJZPV",
+        "text": "I bought the Zigbee version if this dimmer switch because I have a large Zigbee network of devices. So far it's working well but it has one glaring omission compared to the same dimmer from the same company in the ZWave version. On the positive side this dimmer (and it's non-dimmer sibling) with the added remote switch(es) do a really good job of handling 3-way, 4-way etc. wiring configurations. Strangely there are few Zigbee options on the market that do well at this. I'm still buying these to handle that use case in my home and if you don't care about the missing automation feature then I highly recommend it. As an added bonus they come with a light almond paddle you can swap with the white which matches my decor. As to the negative side I don't know why the developers chose to do this but the Zigbee version of this switch only exposes on/off events and does not expose tap events like the ZWave version does. (Note: I do not have the ZWave version so I'm going off forum discussions that say the ZWave version exposes tap events). The lack of tap events means no automation events (scenes etc.) can be triggered on double tap etc. The switch firmware itself also does not go to 100% brightness on a double tap from a previously dimmed setting which many dimmer switches will do. This is what I had hoped to automate in my HA server with tap events but nope, can't do it. This could have been a 5 star product but I have to knock off a star for this omission in home automation support. I don't know if it's possible but I hope the developers add this in a future firmware update and would gladly revise my review if they did.",
+        "date": "Reviewed in the United States on February 3, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works but has a glaring limitation for home automation",
+        "userName": "diamond",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2IV0TODKRB83B",
+        "text": "A bit quirky with respect to how it handles some commands. I was able to make it work but I suggest you get the Z-Wave version instead.",
+        "date": "Reviewed in the United States on January 31, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Get the Z-Wave version instead",
+        "userName": "Kevin Gross",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RQ93T2H84C9C3",
+        "text": "Works like a light switch. Paired flawlessly using a sonoff zigbee coordinator connected to home assistant. Dims, turns off, turns on, etc.. In a 3-way configuration it gets a bit confusing, most 3 way switches have 2 terminals labeled traveler and 1 labeled common... This switch has 2 \"Line/Load\" terminals, 1 traveler, 1 neutral (which is required by the way), plus a ground. I haven't found a way to turn off the blue \"locator\" light, it should in theory be possible but I haven't found a way. It's only illuminated when the lighting is off, not an issue in my application but I can see that being less than ideal in a bedroom. Edit: You can change the locator light options from on (when switch is on or when it's off) to off by pressing up 3 times and down 1 time quickly and cycling through the options.",
+        "date": "Reviewed in the United States on January 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect for Home Assistant",
+        "userName": "M",
+        "numberOfHelpful": 5,
+        "variationId": "B08428GDS8",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51BZsB1m9CL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51b1c8Q02DL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/618dFtY0GOL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R31WJ3W0KL9IB9",
+        "text": "The electrical box had two neutral wires connected with a wire nut. Once I got them un-twisted and firmly seated in the neutral connector of the Enbrighten Zigbee Dimmer, connecting the two travelers and the ground to their sockets was easy. Connecting to my Home Assistant with a Sonoff Zigbee dongle was also easy. Then, a quick check of the dimmer manual to see how to set the blue indicator LED on the dimmer to my liking and I was done. Note that this switch doe not send a second \"off\" signal via zigbee if already off, nor a second \"on\" if already on, which prevents it from triggering double-tap automations.",
+        "date": "Reviewed in the United States on October 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install, easy to use with Home Assistant",
+        "userName": "David P. Oster",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2D1D163BGYD0W",
+        "text": "This is what I've always expected from a \"smart\" device: It looks and works like a standard device. But it also connected to Home Assistant with almost no effort, it's a Zigbee router, and I've got an IKEA remote on another wall for on/off operation of the switch that's located behind the door (always been a pain, that one). Haven't gotten dimming working with the remote I have yet, just basic on/off; but Alexa and Google Assistant paired as soon as Home Assistant saw them. So they work like \"normal\" switches, they work with HA and the voice devices, and give entirely new functionality with no loss of manual usability.",
+        "date": "Reviewed in the United States on October 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Looks like a \"normal\" switch, works with Home Assistant.",
+        "userName": "Gus Altobello Jr",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3IY5OJUCDQYRX",
+        "text": "En mi casa tengo Home Assistant con ZHA y estoy tratando de migrar todo lo que tengo en wi-fi a zigbee así que combre estos para reemplazar unos Shelly Dimmer 2 ya que la caja donde tenía los Shelly estaba muy congestionada por tanto cable y pensé que era una buena idea reemplazarlos por estos que son zigbee y ademas el cableado es más sencillo, pero he tenido varios problemas: Compré dos de estos y hay uno en el que las luces parpadean cuando trato de bajar la intensidad así que no puedo usar el dimmer, sin embargo el otro funciona bien. Se desconectan frecuentemente mientras que unos sonoff mini que tengo en la misma ubicación nuncha lo hacen. No los recomiendo.",
+        "date": "Reviewed in the United States on September 12, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Se desconectan frecuentemente",
+        "userName": "Juan González",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R16P7JUV4ZJHLW",
+        "text": "This was one of the easiest smart switches I've installed so far. Not too deep, great back-connect screw-type connections (work fine with 12 gauge wire) with the ability to daisy chain, and even a rear-screw ground! But I bought it hoping that I could integrate it with my Philips Hue setup, and have the Hue Hub recognize it so I could use HUE multi-tap remotes to control the bathroom Vanity light that's on this circuit. No Can Do. Even though it's Zigbee 3.0, the Hue Hub just would not recognize it. I also tried using the Zigbee Hub in an EERO 6E with an Amazon Alexa smart hub, but the EERO couldn't seem to find it either. I could probably get something like a Hubitat to connect to it, but I just don't want to change over my whole system. I just want a wired wall switch that Philips Hue will recognize semi-natively so I can control the light over the vanity. I did not knock any stars off for not connecting to the Hue Hub, because they never promised it would. Otherwise, it's a great product. Net-Net: I ended up going with some Matter based TP-Link switches and connected them to the Alexa hub, and used the Amazon hub to connect a Hue remote through the Hue Hub to control the bathroom lights. A kludge, but it works.",
+        "date": "Reviewed in the United States on July 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great as a light switch, but ZIGBEE is not recognized by Philips Hue Hub so I can't use it",
+        "userName": "The short guy with big feet",
+        "numberOfHelpful": 6,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RNACE856DZ0JN",
+        "text": "I'm moving away from Z-wave and installing Zigbee switches instead since I have an Echo and can get rid of an extra Z-wave hub from my network. These GE switches work as expected, the installation is not difficult, but it can get a bit tricky since these switches are deeper than regular switches. I just wish these things cost a bit less since I do have quite a few switches to replace.",
+        "date": "Reviewed in the United States on July 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work as expected",
+        "userName": "H. Lin",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3KJZ5WFEF4RPE",
+        "text": "This is one of the cheaper zigbee switches that support dimming. Unfortunately it falls short of the most basic features. If you're looking for a switch to set the dimming/lights on/off it'll work well. Sadly, there's no way to read back the state of the switch. So if someone manually turns the light on/off/dims, you won't be notified that anything changes. As such, it's a write-only switch. I've since bought the Inoveli switch and would HIGHLY recommend that switch in terms of features and quality instead. It's more expensive, but it properly supports read & write, 3-way switches with dumb switches too and hosts a bunch of small configurable tweaks. At the time of writing, it's about $10 more on their website.",
+        "date": "Reviewed in the United States on June 14, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Write-ONLY Zigbee device leaves a gapping hole",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2QEJRIA8ZVHVO",
+        "text": "Edit Dec-2024: The switch failed after six months. Completely dead. Was 5 stars, now 2 stars. ORIGINAL REVIEW BELOW ===================== I had success pairing the dimmer with my Tuya Zigbee hub and the Smart Life App. With power disabled, I installed the switch. Then I turned on the breaker to the lighting circuit and immediately started Smart Life's Zigbee device search. The switch was discovered within a few seconds. On/Off and dimming works fine through the App as well as locally. The Smart Life app correctly updates the reported on/off state when it is controlled locally at the wall switch. But local dimming does not update the dimmer brightness graphic in the app. This is not a deal killer for me, just a nuisance. My existing lighting circuit was controlled by two hallway light switches (typical \"3-way\" installation). So I also installed Enbrighten's optional Add-On Switch #46199, which provides a second location to control the light. Keep in mind that both devices require a neutral wire in the electrical junction boxes. https://www.amazon.com/dp/B07RQ8K25S",
+        "date": "Reviewed in the United States on May 30, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Works with Smart Life App using Tuya Zigbee Hub",
+        "userName": "ThomasBlue 🐕",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R30ZJIH2JWGJKZ",
+        "text": "I've got a couple of these now and, all in all, am pretty pleased with them. Installation is a breeze if you know anything about home wiring (and, honestly, even if you don't.) They even come with a little neutral pigtail for adding to the wire nut that's almost certainly already in the box. Pairing to my Home Assistant was a breeze, and the controls work as expected. My only complaints are that it doesn't support anything beyond on, off, and dimming. There's no way to configure actions for double-tap, tap-and-hold, etc. (Tap-and-hold changes the brightness, but you can't change that.) They're not my favorites (I would rather use Inovelli switches instead) but they're great for blending in with existing paddle-style switches. So if you're looking for some simple smarts without all the bells and whistles, that looks like a normal switch, these are a good bet.",
+        "date": "Reviewed in the United States on May 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and works great with Home Assistant.",
+        "userName": "James Tanner",
+        "numberOfHelpful": 2,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RD2YV0IY2F5O1",
+        "text": "Easy setup. Depending on what type of bulb you're using there is a wide range of settings.",
+        "date": "Reviewed in the United States on May 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Zigbee",
+        "userName": "Dave Van Scyoc",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3MN48KN5CFORK",
+        "text": "After ~3 months of use, the switch stopped responding to physical input, and the light can only be turned on and off using the app. I have tried resetting and reconfiguring the switch to no avail.",
+        "date": "Reviewed in the United States on May 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective after 3 months",
+        "userName": "tricia treacy",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R22EG2CZQNLXF",
+        "text": "I installed this in a non traditional way. So your mileage may vary. But I have had no issues as of yet. Home assistant found it quickly. And after binding it to the LED controller that is also connected to home assistant. I now have the ability to dim/brighten, on/off. I do wish I had a way to change the color temperature. But I didnt want to spend $50-$60 per light switch. So I just added a wireless button to the setup that controls different scenes. But all in all. I am very happy with this purchase. Next will be to purchase one more and the add on for 3 way control. For the price. Its a great way to get into smart switches without spending a ton of money.",
+        "date": "Reviewed in the United States on April 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great price, Easy to Add To Home Assistant (For Me)",
+        "userName": "Keith Haynes",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3JMA4REMHDRXO",
+        "text": "I have a few of these installed in my house. Not only do they work well with LED lighting but also do a good job of expanding my Zigbee mesh network.",
+        "date": "Reviewed in the United States on January 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice dimmer switch for my Zigbee network",
+        "userName": "Terry Wysocki",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "ROPXXXHMWWEU1",
+        "text": "I fried two of these before I located the text in the instructions that says these are not compatible with a standard 3-way/4-way configuration. Not nearly prominent enough considering that these switches have a standard 3-way switch design. They should put a plastic tab in the traveler lug that warns the user that a $22 add on switch is required. The third I installed is not compatible with my lights. They flash when dimmer is set between 5 and 25 percent. The part of the range that is best for mood lighting. Two stars because it is technically my own fault for not thoroughly reading the instructions. Ordered zooz zwave replacements.",
+        "date": "Reviewed in the United States on November 11, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Fried",
+        "userName": "kvl",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R5KV98WC5ESCD",
+        "text": "I replaced a more expensive Wifi based dimmer switch. Since I already have a zigbee wifi network running other smart home accessories it was a no brainer to add this switch, which can now act as a repeater. I do wish it was a little less expensive. It does have intuitive controls, which I welcomed. I would purchase these again to replace and convert other Wifi switches if and when they go bad.",
+        "date": "Reviewed in the United States on November 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy installation and zigbee pairing",
+        "userName": "Astley",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3G1EHA2BG9FTL",
+        "text": "Installs like a regular switch. Tried to get it to connect but it is not yet supported by the enbrighten app which you have to connect to to get it to work with Alexa. So waste of money until it works in the app. Update: Still not supported",
+        "date": "Reviewed in the United States on October 22, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "No supported in app",
+        "userName": "Joshua S Brown",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61tUNQ5g6jL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R24I0OVCTUMHV2",
+        "text": "I have used more than 10 smart lights from Amazon, including some Z wave, & other brands of zigbee light switches. I bought two of these light switches, which were the easiest to install out of all of them, they connected to Home Assistant right away & I couldn't be happier with these switches.",
+        "date": "Reviewed in the United States on July 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easiest Smart Lights!",
+        "userName": "Michael Greenberg",
+        "numberOfHelpful": 2,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1B48NAHJCQZQU",
+        "text": "I tried to use this dimmer with some Halo LED wafer lights, but there was an annoying buzzing sound coming from the dimmer if it was on with brightness was anything other than 100%. It's probably good for other lights, but it's definitely not good for all lights",
+        "date": "Reviewed in the United States on May 26, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Buzzing at brightness below 100%",
+        "userName": "Seth Daniel",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RF25U6D9TFEBG",
+        "text": "Works really good with my lights. Love the fact that I can control them with an app",
+        "date": "Reviewed in the United States on May 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing",
+        "userName": "Ezra",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R272IZ2RPG4F3Y",
+        "text": "I have about 45 Enbrighten Z-Wave light switches in my house and many of them are dimmers. My hub is a SmartThings so it handles both Z-Wave and Zigbee. This Zibgee dimmer connected to my hub just as easily as the Z-Wave switches do, and turned my lights on or off, but there was no dimmer functionality. I swapped out an Enbrighten Z-Wave dimmer switch and it worked perfectly in the same location.",
+        "date": "Reviewed in the United States on January 12, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't Work The Same As The Z-Wave Option",
+        "userName": "Barron Henley",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R39E79XI4DO61R",
+        "text": "First review ever but this is a piece of junk. It is NOT 3-way compatible unless you buy an add on switch. Of course you are not made aware of this until you receive it and read the instructions. It does not even tell you in the instructions what you need, but refers you to a different set of instructions. Now I just have an expensive paper weight. Nice.",
+        "date": "Reviewed in the United States on December 27, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Misleading Buyer Beware",
+        "userName": "Frank Z",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2ALVV3CU4YWZ2",
+        "text": "I have put all my smart home efforts on hold until the price comes down!",
+        "date": "Reviewed in the United States on December 19, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Love the switch… Hate the price",
+        "userName": "Daniel C",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2PY4E0LFIV1X7",
+        "text": "This works great. I have been using it for about a year now and it works great. BTW - I was just looking at the reviews and many on here seem to be fake.",
+        "date": "Reviewed in the United States on December 1, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "works great",
+        "userName": "Ryan",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R381BX6GRWON0R",
+        "text": "These units are zigbee, and dimmable. They do require Neutral wire. My only gripe is price point. It's expensive to swap out 20 units in a household. I also wish Enbrighten had a 'switch' model without the dimmer ability for a cheaper solution. I like that you get both paddle colors, thats a big + , another gripe is the confusion of 'addon' vs basic unit. When you search Amazon you get the Addons offered which do NOT work as a standalone.",
+        "date": "Reviewed in the United States on November 22, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "excellent solution",
+        "userName": "ShuMO",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3OYIE3BEG96D4",
+        "text": "My house has about 40 of these installed, I use 'home assistant' and these will also pair with Alexa 4gen. However the issue is durability, After a while, and this could be anywhere from 3 months to a year the ZigBee will fail and it will not pair up again. This requires me to have 'quick connect' in the box to replace them and spend 30 min to get the automation to work again. I have replaced about half of them over 2 years. I have several that have never given an issue, and others that need to be replaced in weeks/months. I used to run Zwave, and I do have several Zwave items on my network and they never fail. It seems the older Zigbee worked better when GE owned the company, but I am thinking the quality has gone down since ENbrighten has taken over. I would suggest that if you are going to use them, use quick connectors so replacing them is fairly quick. I would also look for cheaper switches, there are several out there that might work better for your specific need if you don't have a huge deployment as I have.",
+        "date": "Reviewed in the United States on November 15, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "durability issues",
+        "userName": "Steve H",
+        "numberOfHelpful": 2,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1UEI058RZ4TXO",
+        "text": "The housing is too large to fit two in one box, will have to retrofit a larger box in the wall. The lights randomly flash when in dimmed mode and the switches hum.",
+        "date": "Reviewed in the United States on November 9, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Easy install and pairing, lights flash and flicker randomly",
+        "userName": "Max Wilson",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RLM0Q4PBESTGV",
+        "text": "I bought these ZigBee dimmer switches to use with an Echo Plus ZigBee hub. Devices connected fine...at first. Within a few days Alexa can no longer communicate with any of the switches. The physical dimmer switch also isn't great. My previous Wi-Fi dimmer switches have dedicated \"dim up\" or \"dim down\" buttons that you can click as many times as needed to reach the desired brightness. This switch requires you to hold the on button to brighten or hold the off button to dim. The problem is you get about 0.001 nanoseconds between the time you press down on the button and when you need to take you finger off. If you miss that window you end up at either maximum brightness or off.",
+        "date": "Reviewed in the United States on October 19, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Device Unresponsive",
+        "userName": "Ld",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R366Y8DZDN7YSO",
+        "text": "Very simple installation, and setting up was quick with Sonoff dongle for Home Assistant.",
+        "date": "Reviewed in the United States on September 22, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple Installation , works great with home asistant",
+        "userName": "Mark k",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2B25ZI1TI9WQU",
+        "text": "Avoid these smart switches at all cost!! First and foremost Jasco Products / GE is the manufacturer of these switches then throws a handful of brand names on them. From my research these switches seemed like a great option for submitting Zigbee 3.0 to go along with my Home Assistant setup. The specifications described on both Amazon and Jasco’s site are inaccurate. The 600w rating is for your standard incandescent lights where as LEDs only having a rating of 300w. I installed 5 of these switches with the max circuit supporting a max of 6 recessed ceiling LEDs with a max wattage of 8w each. The lights would flicker aggressively on dimming, brightening, and just regular use at a dimmed percentage. This only happened on circuits containing 4 or more LEDs. I swapped the switches around, got replacement units, and reached out to Jasco support for firmware updates all with no success. I ended up switching back to some basic dimmer switches in the mean time with zero issues.",
+        "date": "Reviewed in the United States on September 12, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Avoid at all costs!",
+        "userName": "Leo",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3OKYZ76ALJTO8",
+        "text": "I really wanted these to work as they match other rocker switches, have a working dimmer function, and are supposed to connect to a smart hub for Alexa integration. The first one I order worked without the smart features, despite me have a neutral wire. I could manually turn on the switch, but the switch would not go into pair mode whether I reset it manually or disconnected the power to re-cycle it. I even got on the phone with tech support and they confirmed the switch was faulty as it would not enter pairing to make contact with the Enbrighten App or Alexa. I submitted a return and received an exchange two days later...and it's the exact same issue. The light switch will turn the lights on and off, dim them, but will not enter pairing mode when first connecting the switch to power so therefore is not discoverable by bluetooth, the Enbrighten App or Alexa. The led on the switch is supposed to blink indicating it's in pairing mode, and neither switch would start blinking, just three blinks every couple minutes. I wanted to like it, but I've apparently gotten two faulty switches in a row and I'm done with trying their products.",
+        "date": "Reviewed in the United States on August 27, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Two out of two did not function properly. Returned both.",
+        "userName": "Rev",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3CQBMO9APR6TV",
+        "text": "Bought it on Apr 15, 2021. Stopped working today 5/22/22 so It lasted 1 year 1 month and 7 days. How do I a get warranty on this?",
+        "date": "Reviewed in the United States on May 23, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not longer works",
+        "userName": "Zips",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3BXE4MQK0BUJG",
+        "text": "Very well-constructed, nothing cheap about it. I have already had to replace some cheaper Wi-Fi switches. This particular brand has been trouble free. Also no jumper wires, just lugs which provides more room in the outlet box for installation.",
+        "date": "Reviewed in the United States on April 28, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worth the price",
+        "userName": "Joe Picc",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3K0NK8BHCSAKT",
+        "text": "Just purchased a house, and picked up one of these to test, because I'm looking to standardize on a zigbee smart dimmer switch in the future. Unfortunately, it causes some of the worst flickering (strobing, really) I've ever seen in popular LED fixtures. From the top of the range to ~50% or so, my lights just blink and strobe. I tested with a string of six Feit LEDR56/927CA retrofit lights, as well as a string of four in another room. The dimmer was horrible with both. When swapped for a known trustworthy dimmer (Lutron Diva), the lights dim smoothly and beautifully. Finally, I tested in a room with traditional halogen lighting. This dimmer still causes strobing and weird flickering during brightness changes. Disappointed, and sending it back.",
+        "date": "Reviewed in the United States on April 18, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor LED compatibility",
+        "userName": "N. Hatch",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2CII6D9UZ5MO1",
+        "text": "These are great switches. They work perfectly with our Samsung SmartThings Hub. And I would convert all of the switches in our house to these if possible. Unfortunately these have been prohibitively expensive. If they came down to $20 or less per switch, they would be an instant buy for me.",
+        "date": "Reviewed in the United States on April 18, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great zigbee smart light switch",
+        "userName": "merlin4",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RB56JGXI9O4GG",
+        "text": "I had the brilliant idea to standardize on the Enbrighten Smart Dimmer zigbee version and completely regret the decision. We had the prior Z-wave dimmer (same GE Enbrighten brand but just Z-wave and a little older). We have 6 of these low watt LED lights (pictured label) on the circuit. Dimming functions ok but the LEDs flicker horribly during the dim process as well as most of the time. Completely unusable. I’ve replaced once and the problem did not go away. We’ve installed a special ‘diode’ and the problem persists. Don’t waste your money unless you specifically research LED compatibility or just go with Lutron Caseta instead.",
+        "date": "Reviewed in the United States on April 2, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Battle of flickering LEDs - Enbrighten fails to perform",
+        "userName": "Wade Carroll",
+        "numberOfHelpful": 2,
+        "variationId": "B08428GDS8",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71De0MbBymL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2FPSGKI1LCHQZ",
+        "text": "This dimmer switch installed easily but the blue indicator light not the best. First, I was able to cycle it by pressing the on button three times then the off button and it would change from on when light was on or on when light was off each time the procedure was done. Could also cycle one more time to have blue indicator light turn off. After about two weeks the light did not cycle on when the light turned on as programmed. Tried the recycle feature a few times but now the options were on all the time or off all the time. Left it off, not worth replacing but expected a better product for paying over 40 dollars on this.",
+        "date": "Reviewed in the United States on March 6, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Blue indicator light failure",
+        "userName": "Zigbee Switch",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1KITZE9SHQVII",
+        "text": "I bought this to try with my Hubitat Hub. It works fine, but a couple complaints over the UltraPro Z-Wave Plus dimmers that I typically use: The minimum dim level isn't low enough and theres no way to specify when the indicator LED is on or off.",
+        "date": "Reviewed in the United States on March 6, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Work Fine, but Need Some Refinement",
+        "userName": "Brad R",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3VTA828J8UJ16",
+        "text": "I've ordered two of these, and both came in sealed factory boxes. Inside was the switch pictured...",
+        "date": "Reviewed in the United States on February 3, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Check the pictures. You be the judge...",
+        "userName": "Boris",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61jO6F7t2LL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71ANpz-nQLL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71UTsEH6X+L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71sqteLkE-L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RP48FHOORNSJX",
+        "text": "Tried everything I could to pair with Philips Hue but could not get it to work. Even though it is Zigbee Philips will not pair with it. This is the last straw for my Hue Hub - tired of Philips proprietary ecosystem.",
+        "date": "Reviewed in the United States on February 2, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Does not work with Philips Hue Bridge",
+        "userName": "shellshocked",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R17S805LPRW35X",
+        "text": "Got tired of my Wemo Switches disconnecting from the network all the time, totally screwing up my automatons. I just cut the wires off the Wemo switch and used them to connect this switch. It connected to Hubitat soon after the re-energized the power to the house. I have ordered 2 more to replace the other two Wemo switches I have.",
+        "date": "Reviewed in the United States on November 17, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works so far",
+        "userName": "Andrew Madden",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R31D04M4SBI8LQ",
+        "text": "This switch replaced a dimmer that died. The previous dimmer worked great as far as dimming. When I lower the brightness with this switch, the dimmable LED bulbs just flicker - badly. I'm returning this switch for a new dimmer that will work",
+        "date": "Reviewed in the United States on November 14, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't dim properly",
+        "userName": "Stanley Krupowies",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R21HN7KSS1KVIV",
+        "text": "I've used all three generations of GE Embrighten wall switches and this latest one has the best (smallest) form factor and simple easy to use wire connections. As for the Zigbee function, as usual it was quick to connect to my Hubitat Elevation hub and works perfectly. My only complaint is that is doesn't remember the last used dimming setting so when I use the paddle to turn the switch back on, it goes to full brightness. That's why I've rated it 4 stars instead of 5.",
+        "date": "Reviewed in the United States on October 13, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice new smaller form factor and secure connections",
+        "userName": "L. Kupersmith",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R1F1D1QF9OROJD",
+        "text": "The installation was a little complicated but i figured it out. i watched the video and read the instrutions. i can dim the light which i was never able to do before.",
+        "date": "Reviewed in the United States on August 19, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "it works",
+        "userName": "abuali2",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RIT0H4358ORSX",
+        "text": "The dimmer paired easily, but flickers my dimmable LED downlights (Nora NSPEC NOX-43140WW), 4 in a room. I tried two of this same model of dimmers on two different sets of these Nora downlights. Couldn't stop the flickering. These downlights were previously switched with Leviton cloud-based dimmers and worked just fine. I guess I'll have to keep searching for a Zigbee dimmers with better compatibility.",
+        "date": "Reviewed in the United States on August 17, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Easy to pair, not compatible with my dimmers",
+        "userName": "Jason Gabler",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2MTAKAV273EMT",
+        "text": "There's no fade on/fade off.",
+        "date": "Reviewed in the United States on August 3, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not exactly alike to the zwave version",
+        "userName": "Just some guy",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08428GDS8",
+        "productTitle": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 78,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 414,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R2IC3FTK8VEURZ",
+        "text": "Easy to install",
+        "date": "Reviewed in the United States on June 15, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "sasha lalanne",
+        "numberOfHelpful": 0,
+        "variationId": "B08428GDS8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle Dimmer, No Energy"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

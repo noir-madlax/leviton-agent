@@ -1,0 +1,490 @@
+{
+  "product_title": "GHome Smart Dimmer Switch, Single Pole, Neutral Wire Required, 2.4GHz Light Switch WiFi Compatible with Alexa, Google Home, UL Certified,White, 4Pack",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Screw terminals provide space-saving design": {
+          "+": [
+            0
+          ]
+        },
+        "B@Tiny screws included for installation are inconvenient": {
+          "-": [
+            0
+          ]
+        },
+        "C@Looks nicer than other dimmer switches": {
+          "+": [
+            1
+          ]
+        },
+        "D@Plastic tabs that hold switch are too thick causing plate not to sit flush": {
+          "-": [
+            5
+          ]
+        },
+        "E@Switch sits flush to wall": {
+          "+": [
+            11
+          ]
+        },
+        "F@Packaging is new with improved quality": {
+          "+": [
+            20
+          ]
+        },
+        "G@Screw holes are standard size": {
+          "+": [
+            20
+          ]
+        },
+        "H@Product quality is much better than previous versions": {
+          "+": [
+            20
+          ]
+        },
+        "I@On/off toggle is within press of switch as well as dim control": {
+          "-": [
+            33
+          ]
+        },
+        "J@Dimmer slide is too close to on switch": {
+          "-": [
+            23
+          ]
+        },
+        "K@Looks and behaves different than on/off switch of same brand": {
+          "-": [
+            23
+          ]
+        },
+        "L@Built-in LEDs are very bright in dark room": {
+          "-": [
+            47
+          ]
+        },
+        "M@LED indicator off setting does not turn off brightness level LEDs": {
+          "-": [
+            47
+          ]
+        },
+        "N@Green LED power button comes on when switch is off": {
+          "+": [
+            37
+          ]
+        },
+        "O@Only shows tiny white LED at brightness setting when off": {
+          "-": [
+            37
+          ]
+        },
+        "P@Light on switch is really bright and irritating in dark room": {
+          "-": [
+            40
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming": {
+        "a@Only dims LED lights by approximately 75%": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@Dims to about 50% at lowest setting": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "c@Will not dim below 50% even at 1% setting": {
+          "-": {
+            "?": [
+              10,
+              18
+            ]
+          }
+        },
+        "d@Does not significantly dim lights at all": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "e@Does not dim low enough compared to previous switches": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "f@Lowest setting is about 50-60% of full level": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "g@Does not go as low as many other dimmers": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "h@Dimming up and down works properly manually and via voice": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "i@Nice dimming action": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "j@Remembers dimming setting level when turned on again": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "k@Most reliable when compared to other brands": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "l@Works fantastic with no issues since 2021 in 3 different houses": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "m@WiFi feature stops working after couple months": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "n@Switch stays on full and will not dim or shut off after 2 years": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "o@Malfunctions after a while": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "p@One switch was defective right out of box": {
+          "-": {
+            "?": [
+              6,
+              8
+            ]
+          }
+        },
+        "q@One stopped working and cannot be configured or connect to wifi": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "r@Randomly blinks green and turns lights on at full at night": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "s@All switches failed after one year": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "t@Switch does not work when clicked and clicks off/on by itself after 3 years": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "u@Constantly disconnect from internet requiring weekly intervention": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "v@Does not work with Alexa toggle function": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "w@Would not connect despite multiple attempts": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "x@Works as advertised": {
+          "+": {
+            "?": [
+              43,
+              47
+            ]
+          }
+        },
+        "y@Works well with Alexa": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        }
+      },
+      "3-way functionality": {
+        "z@Works perfectly as 3-way switch without requiring accessory device": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "Setup": {
+        "aa@Setup to Alexa and Gosund app is simple and fast": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "ab@Quick to set up with Alexa": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ac@Easy to install and integrate into wifi system": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ad@Super easy installation": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ae@Very easy to install": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "af@Easy to install with helpful wire labels and simple Alexa connection": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "ag@So easy to set up for zero experience level": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "ah@Easy to install and works flawlessly": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ai@Pairs easily and integrates with Google Home app": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "aj@Easy to install and connect": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ak@Relatively easy to install": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "al@Very easy install": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "am@Easy install": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home automation with Alexa": {
+        "+": {
+          "k": [
+            0
+          ],
+          "aa": [
+            0
+          ],
+          "ab": [
+            1
+          ],
+          "y": [
+            46
+          ]
+        },
+        "-": {
+          "v": [
+            37
+          ]
+        }
+      },
+      "Recessed lights dimming": {
+        "+": {
+          "z": [
+            0
+          ]
+        }
+      },
+      "Voice control for lights": {
+        "+": {
+          "ab": [
+            1
+          ]
+        }
+      },
+      "Scheduled lighting control": {
+        "+": {
+          "ab": [
+            1
+          ]
+        }
+      },
+      "Customer installations by electricians": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "Smart home management": {
+        "+": {
+          "ac": [
+            14
+          ]
+        }
+      },
+      "Combination with Linkind dimmable RGB smart bulbs": {
+        "+": {
+          "ag": [
+            21
+          ]
+        }
+      },
+      "Low lighting for evenings and events": {
+        "-": {
+          "c": [
+            24
+          ]
+        }
+      },
+      "Movie watching with low light": {
+        "-": {
+          "f": [
+            28
+          ]
+        }
+      },
+      "Bathroom lighting": {
+        "-": {
+          "I": [
+            33
+          ]
+        },
+        "+": {
+          "?": [
+            42
+          ]
+        }
+      },
+      "Automatic scheduling for outside lights": {
+        "+": {
+          "ai": [
+            38
+          ]
+        }
+      },
+      "Bedroom ceiling fan control": {
+        "-": {
+          "L": [
+            47
+          ]
+        }
+      },
+      "Google Home integration": {
+        "+": {
+          "ai": [
+            38
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:40.224157"
+}

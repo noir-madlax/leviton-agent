@@ -1,0 +1,423 @@
+{
+  "product_title": "Wireless Light Switch and Receiver Kit, 200FT RF Range Remote Control Light Switch, No Rewiring, No Interference, Wireless Wall Switch for Ceiling Light, Fans, Lamps, Pre-Programmed",
+  "product_category": "RF Wireless Remote Control Switches",
+  "total_reviews": 36,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@small size makes it easy to fit into electrical box": {
+          "+": [
+            1,
+            23
+          ]
+        },
+        "B@compact size compared to previous wireless switches": {
+          "+": [
+            22
+          ]
+        },
+        "C@receiver is somewhat large": {
+          "-": [
+            4,
+            19
+          ]
+        },
+        "D@width is 1.37\" whereas spec for switchplate opening is 1.31\"": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "weight": {
+        "E@very light weight": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "build_quality": {
+        "F@well made": {
+          "+": [
+            6
+          ]
+        },
+        "G@build quality seems pretty good": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "appearance": {
+        "H@attractive": {
+          "+": [
+            27
+          ]
+        }
+      },
+      "battery_cover": {
+        "I@difficult to remove battery cover from remote using pick to pry away locking tab": {
+          "-": [
+            21
+          ]
+        }
+      },
+      "mounting_plate": {
+        "J@difficult to separate mounting plate from surface plate": {
+          "-": [
+            21
+          ]
+        },
+        "K@hard to detach wall mount from case": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "wiring_requirements": {
+        "L@requires four wires": {
+          "+": [
+            22,
+            28
+          ]
+        },
+        "M@has wiring diagram right on transmitter": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "physical_switch": {
+        "N@has physical switch right on unit": {
+          "+": [
+            32
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works really well": {
+          "+": {
+            "?": [
+              0,
+              4,
+              7,
+              9,
+              10
+            ]
+          }
+        },
+        "b@works exactly as described": {
+          "+": {
+            "?": [
+              2,
+              5,
+              8,
+              11,
+              18
+            ]
+          }
+        },
+        "c@works flawlessly": {
+          "+": {
+            "?": [
+              7,
+              33
+            ]
+          }
+        },
+        "d@works with no issue at 50 feet range": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "e@works well through exterior walls from house 25ft away": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "f@works while standing in driveway 100ft away": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "g@worked right away without need to pair": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "h@lights turn on instantly with minimal delay": {
+          "+": {
+            "?": [
+              14,
+              16
+            ]
+          }
+        },
+        "i@couldn't get it to work - immediately trips circuit": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "j@strong 200FT RF range": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "k@doesn't interfere with other devices": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "l@remote has good range": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "installation": {
+        "m@easy to install": {
+          "+": {
+            "?": [
+              3,
+              10,
+              15,
+              17,
+              23,
+              26,
+              27,
+              32,
+              33
+            ]
+          }
+        },
+        "n@simple to wire up": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "o@installation was a bit of a struggle with wiring": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "p@receiver fit without a whole lot of hassle": {
+          "+": {
+            "C": [
+              4
+            ]
+          }
+        },
+        "q@easy to fit into electrical box": {
+          "+": {
+            "A": [
+              1,
+              23
+            ]
+          }
+        }
+      },
+      "pairing": {
+        "r@easy pairing - paired within seconds": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "removability": {
+        "s@portable switch is easily removed and replaced from wall mounted back plate": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "t@remote is removable from switch plate": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "flexibility": {
+        "u@can operate on wall or as switch": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "v@can be installed anywhere": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "w@adds a lot of flexibility to setup": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "durability": {
+        "x@plastic bending when trying to separate with tool": {
+          "-": {
+            "K": [
+              13
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "ceiling_fan_control": {
+        "+": {
+          "a": [
+            0,
+            11,
+            26
+          ]
+        }
+      },
+      "outdoor_lighting": {
+        "+": {
+          "b,e,f": [
+            5
+          ]
+        }
+      },
+      "RV_flood_light": {
+        "+": {
+          "c": [
+            7
+          ]
+        }
+      },
+      "patio_decorative_lights": {
+        "+": {
+          "b": [
+            12
+          ]
+        }
+      },
+      "bedroom_and_hallway_lights": {
+        "+": {
+          "h": [
+            14
+          ]
+        }
+      },
+      "bathroom_exhaust_fan_and_light": {
+        "+": {
+          "g,h": [
+            16
+          ]
+        }
+      },
+      "antique_stairwell_light": {
+        "+": {
+          "g": [
+            16
+          ]
+        }
+      },
+      "remodel_in_old_brick_home": {
+        "+": {
+          "m": [
+            17
+          ]
+        }
+      },
+      "modern_light_fixture": {
+        "+": {
+          "b": [
+            18
+          ]
+        }
+      },
+      "remote_light_in_far_reach_area": {
+        "+": {
+          "a": [
+            21
+          ]
+        }
+      },
+      "kitchen_sink_light": {
+        "+": {
+          "b": [
+            28
+          ]
+        }
+      },
+      "Jack_and_Jill_bathroom": {
+        "+": {
+          "b": [
+            28
+          ]
+        }
+      },
+      "garage_lighting": {
+        "+": {
+          "a": [
+            30
+          ]
+        }
+      },
+      "bathroom_light_switch_relocation": {
+        "+": {
+          "b": [
+            31
+          ]
+        }
+      },
+      "places_where_wiring_is_impractical": {
+        "+": {
+          "m": [
+            32
+          ]
+        }
+      },
+      "controlling_lights_from_distance": {
+        "+": {
+          "c,j": [
+            33
+          ]
+        }
+      },
+      "ceiling_fan_with_LED_lights_that_flicker": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:06.738221"
+}

@@ -1,0 +1,279 @@
+{
+  "product_title": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150W/Single-Pole or 3-Way, DVSCCL-153P-SW, Snow",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 16,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@larger than basic switch": {
+          "-": [
+            2
+          ]
+        },
+        "B@deeper than standard rocker switches": {
+          "-": [
+            2
+          ]
+        },
+        "C@deeper offset": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "design": {
+        "D@nice design": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "E@pronounced click when snapping into position between off and on": {
+          "-": [
+            9
+          ]
+        },
+        "F@feels cheap": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "screws": {
+        "G@phillips screws instead of robertson screws": {
+          "-": [
+            15
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@doesn't work": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "b@works great": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@works perfectly": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@reliably turns lights on every time": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "e@doesn't dim lights": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "f@works excellent": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "g@works well": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "h@prevents flickering at low settings when adjusted correctly": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "i@doesn't properly dim LED bulbs": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "j@poor dimming": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "k@able to dim bulbs to very low level while reliably switching on": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "l@has adjustment for minimum dimming level": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "m@LED flickers when below 30% power": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "noise_generation": {
+        "n@buzzing noise when trying to dim from lights and switch": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "o@bulbs hum/buzz a little at low brightness but not much": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "p@causes flicker": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "q@light flickers for a second when turning on": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "installation_difficulty": {
+        "r@takes up valuable space in existing box making pushing wires challenging": {
+          "-": {
+            "A,B": [
+              2
+            ]
+          }
+        },
+        "s@very hard to get switches back in electrical housing box": {
+          "-": {
+            "C": [
+              2
+            ]
+          }
+        },
+        "t@easy to connect to existing power": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "space_consumption": {
+        "u@takes up more space than original switches": {
+          "-": {
+            "A,B": [
+              2
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "remodeled_bathroom": {
+        "+": {
+          "b": [
+            4
+          ]
+        }
+      },
+      "ceiling_mounted_LED_light": {
+        "+": {
+          "h": [
+            5
+          ]
+        }
+      },
+      "Allen_and_Roth_Sloan_6_light_96_inch_dimmable_LED_flexible_track_light": {
+        "+": {
+          "c": [
+            6
+          ]
+        }
+      },
+      "LED_bulbs": {
+        "-": {
+          "i,j,p": [
+            7
+          ]
+        }
+      },
+      "60_watt_equivalent_Great_Value_brand_dimmable_daylight_LED_bulbs": {
+        "+": {
+          "d,k,l": [
+            9
+          ]
+        }
+      },
+      "incandescent_florescent_LED_bulbs": {
+        "+": {
+          "?": [
+            10
+          ]
+        }
+      },
+      "CFL_bulbs": {
+        "-": {
+          "e": [
+            11
+          ]
+        }
+      },
+      "dimmable_LED_lamp": {
+        "+": {
+          "f": [
+            12
+          ]
+        }
+      },
+      "3_gang_box_installation": {
+        "-": {
+          "r,s": [
+            2
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:36.946256"
+}

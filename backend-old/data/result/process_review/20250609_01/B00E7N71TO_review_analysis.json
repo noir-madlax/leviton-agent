@@ -1,0 +1,174 @@
+{
+  "product_title": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 12,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@available in multiple colors": {
+          "+": [
+            2
+          ]
+        },
+        "B@white color instead of light almond": {
+          "-": [
+            4,
+            8
+          ]
+        }
+      },
+      "button": {
+        "C@slightly narrower buttons": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "design": {
+        "D@paddle switch design": {
+          "+": [
+            6
+          ]
+        },
+        "E@screw-less bezel": {
+          "+": [
+            11
+          ]
+        }
+      },
+      "build": {
+        "F@solid and well-made construction": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works great": {
+          "+": {
+            "?": [
+              0,
+              1
+            ]
+          }
+        },
+        "b@works well turning off and on": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "installation": {
+        "c@easy to install": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@fits into existing space": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "quality": {
+        "e@high quality": {
+          "+": {
+            "D": [
+              6
+            ]
+          }
+        },
+        "f@top quality": {
+          "+": {
+            "F": [
+              10
+            ]
+          }
+        },
+        "g@same quality as cheaper alternatives": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "appearance": {
+        "h@looks great": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@modern cool look": {
+          "+": {
+            "E": [
+              11
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "quick replacement without going to town": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "matching decor": {
+        "+": {
+          "A": [
+            2
+          ]
+        }
+      },
+      "controlling garbage disposal in kitchen": {
+        "+": {
+          "b": [
+            11
+          ]
+        }
+      },
+      "pairing with screwless plate to spiff up room": {
+        "+": {
+          "e": [
+            6
+          ]
+        }
+      },
+      "matching other dimmer & timer switches": {
+        "+": {
+          "?": [
+            11
+          ]
+        }
+      },
+      "replacing other switches in house": {
+        "+": {
+          "i": [
+            11
+          ]
+        }
+      },
+      "change from toggles": {
+        "+": {
+          "?": [
+            7
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:16.555023"
+}

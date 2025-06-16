@@ -1,0 +1,138 @@
+{
+  "product_title": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150W/Single-Pole or 3-Way, DVSCCL-153P-MN, Midnight",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 4,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@midnight satin (matte) black finish": {
+          "+": [
+            0,
+            3
+          ]
+        },
+        "B@available in many different colors": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "components": {
+        "C@slide bar": {
+          "-": [
+            1
+          ]
+        },
+        "D@does not include wall plate": {
+          "-": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "compatibility": {
+        "a@works with CFL/LED bulbs": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@works with incandescent recessed lights": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@works with dimmable LED, halogen and incandescent bulbs": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@allows setting dimming thresholds perfectly for LED bulbs": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "durability": {
+        "e@slide bar is delicate": {
+          "-": {
+            "C": [
+              1
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "f@working very well": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "g@enables dimming of LED bulbs": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "h@looks very nice when installed": {
+          "+": {
+            "A": [
+              3
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@easy to install and setup": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "matching fixtures and accessories": {
+        "+": {
+          "A": [
+            0
+          ]
+        }
+      },
+      "dimming LED bulbs for energy saving and mood adjustment": {
+        "+": {
+          "d,g": [
+            2
+          ]
+        }
+      },
+      "kitchen wall installation": {
+        "+": {
+          "h": [
+            3
+          ]
+        }
+      },
+      "use with older dimmers that don't like LED bulbs": {
+        "+": {
+          "d": [
+            2
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:12.138194"
+}

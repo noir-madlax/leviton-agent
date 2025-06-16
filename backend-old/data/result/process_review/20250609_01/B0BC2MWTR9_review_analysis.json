@@ -1,0 +1,478 @@
+{
+  "product_title": "Kasa Smart 3 Way Dimmer Switch KIT, Dimmable Light Switch Compatible with Alexa, Google Assistant and SmartThings, Neutral Wire Needed, 2.4GHz, ETL Certified, No Hub Required, White (KS230 KIT v2)",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "wiring": {
+        "A@requires neutral wire": {
+          "+": [
+            7,
+            8,
+            17,
+            22,
+            43
+          ]
+        },
+        "B@includes wire labels": {
+          "+": [
+            22
+          ]
+        },
+        "C@missing screws and wire caps in used condition": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "appearance": {
+        "D@looks great": {
+          "+": [
+            24,
+            35
+          ]
+        },
+        "E@has ring LED lights that are programmable": {
+          "+": [
+            19
+          ]
+        },
+        "F@stylish": {
+          "+": [
+            22
+          ]
+        }
+      },
+      "design": {
+        "G@main unit and satellite unit configuration": {
+          "+": [
+            21
+          ]
+        },
+        "H@orientation requires satellite to have load going to light": {
+          "+": [
+            19
+          ]
+        },
+        "I@some plates won't work well in multigang box": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "instructions": {
+        "J@best instructions seen for 3 way smart switches": {
+          "+": [
+            24
+          ]
+        },
+        "K@very clear instructions": {
+          "+": [
+            22
+          ]
+        },
+        "L@instructions leave out critical network connection steps": {
+          "-": [
+            34
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@connection issues with Kasa app on phones": {
+          "-": {
+            "?": [
+              0,
+              1,
+              2,
+              3
+            ]
+          }
+        },
+        "b@works perfectly with MacBook Air": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@won't pair with Android or iPhone": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@network change breaks connection": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@loses WiFi connection and won't reconnect": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "f@no issues with connectivity": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "g@easy to integrate with Kasa app": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@reliable WiFi connection without hub": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "i@connects easily via wifi to app": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "j@automatically connected to Alexa": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "installation": {
+        "k@easy installation": {
+          "+": {
+            "A": [
+              4,
+              8,
+              21,
+              22,
+              33,
+              37,
+              43
+            ]
+          }
+        },
+        "l@bit complicated to install": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "m@couldn't get working with professional help": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "n@hard to install if line and load in same junction box": {
+          "-": {
+            "G": [
+              39
+            ]
+          }
+        },
+        "o@super easy install following directions": {
+          "+": {
+            "J,K": [
+              33
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "p@works great": {
+          "+": {
+            "?": [
+              0,
+              4,
+              5,
+              14,
+              30
+            ]
+          }
+        },
+        "q@works very well": {
+          "+": {
+            "?": [
+              6,
+              24
+            ]
+          }
+        },
+        "r@works without issue": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "s@works perfectly": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "t@works as advertised": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "u@works as intended": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "v@poor performance": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "w@reliable": {
+          "+": {
+            "?": [
+              7,
+              8
+            ]
+          }
+        },
+        "x@faulty products don't work": {
+          "-": {
+            "?": [
+              9,
+              18
+            ]
+          }
+        },
+        "y@defective and don't work": {
+          "-": {
+            "?": [
+              31,
+              44
+            ]
+          }
+        },
+        "z@lasted less than a year": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "aa@lights turn on and off randomly": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "ab@switch won't stay off": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "ac@smooth dimming across entire range": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "ad@dimming is awesome and adjustable": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "ae@can control dimming from either switch": {
+          "+": {
+            "G": [
+              22
+            ]
+          }
+        },
+        "af@lights go off at 40% initially but calibratable": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "ag@not compatible with LED lighting": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "ah@not 3 way compatible as described": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "software": {
+        "ai@confusing multiple software apps": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "aj@programming in app is awesome": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ak@day night settings totally customizable": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart home control": {
+        "+": {
+          "p,q,r,s,t,u": [
+            4,
+            5,
+            6,
+            8,
+            12,
+            24,
+            25,
+            30,
+            45
+          ]
+        },
+        "-": {
+          "a,c,x,y": [
+            1,
+            2,
+            9,
+            18,
+            31,
+            44
+          ]
+        }
+      },
+      "voice control with Alexa": {
+        "+": {
+          "ac": [
+            19
+          ]
+        }
+      },
+      "remote control from phone/tablet": {
+        "+": {
+          "h,p": [
+            8,
+            40,
+            46
+          ]
+        }
+      },
+      "scheduling and automation": {
+        "+": {
+          "ak": [
+            8,
+            14,
+            36
+          ]
+        }
+      },
+      "3-way switch replacement": {
+        "+": {
+          "k,G": [
+            7,
+            12,
+            21,
+            25,
+            37
+          ]
+        },
+        "-": {
+          "n": [
+            39
+          ]
+        }
+      },
+      "retrofitting old houses": {
+        "+": {
+          "k": [
+            32
+          ]
+        },
+        "-": {
+          "A": [
+            1,
+            8
+          ]
+        }
+      },
+      "LED lighting control": {
+        "-": {
+          "ag": [
+            20
+          ]
+        }
+      },
+      "parental convenience": {
+        "+": {
+          "p": [
+            40
+          ]
+        }
+      },
+      "mood lighting": {
+        "+": {
+          "ad,ac": [
+            36,
+            40
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:36.915745"
+}

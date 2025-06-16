@@ -1,0 +1,2447 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:05:35.582732",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08SJ3Z8XD",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08SJ3Z8XD",
+    "title": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 3.52,
+    "rating": 4.7,
+    "reviews_count": 702.0,
+    "category": "Light Switches",
+    "product_segment": "Single Pole Rocker Switches",
+    "product_url": "https://www.amazon.com/dp/B08SJ3Z8XD"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RLR1F2PUVTU6Z",
+        "text": "Worked great",
+        "date": "Reviewed in the United States on May 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install. Good quality.",
+        "userName": "G.Wettenstein",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RPUGRAP5W8PNT",
+        "text": "Used to replace a toggle switch for my garbage disposal; which made more sense, looks better and is now antimicrobial.",
+        "date": "Reviewed in the United States on May 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fixed previous owners mistake",
+        "userName": "kelly tucker",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71h5AhQEmAL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2MRAD2OWGDLQ7",
+        "text": "This was easy to set-up. I wanted to update one of my switches to not a dimmer. Previous owner had the fan on a dimmer, and it's just loud. This works exactly as intended. The faceplate I bought, same brand, also worked great",
+        "date": "Reviewed in the United States on April 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to Install",
+        "userName": "Tanya McHenry",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R25V2R4MN6JV0H",
+        "text": "Looks nice i never used found cheaper.ones.somewere else but they were cheap enough I'll buy again if I need them",
+        "date": "Reviewed in the United States on April 1, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice",
+        "userName": "Jennifer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2IW5GH6SARA75",
+        "text": "Works well and gives the house a feel of a updated look",
+        "date": "Reviewed in the United States on March 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works good",
+        "userName": "Kearra",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R37SSJVOHQ2FA2",
+        "text": "Sometimes the hardware stores runs out of what you're looking for but not AMAZON👍😉 this product works, looks great in my kitchen and my wife thinks all new homes should come with them already installed. Late night supper💡🍜😋 never look so good 😂😂",
+        "date": "Reviewed in the United States on March 24, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Time to step up",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1GK9M8I2SQTGF",
+        "text": "Product was very well put together and feels like good quality. It worked very well and was easy to install",
+        "date": "Reviewed in the United States on March 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality",
+        "userName": "Jay",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61iNrjQzmRL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R20PVRDL5VQ8KB",
+        "text": "Good quality. Good value too.",
+        "date": "Reviewed in the United States on March 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality replacement.",
+        "userName": "Richard",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3A1KI1Q5ZE2EH",
+        "text": "Needed a light switch came in quick. No dimming, worth the money.",
+        "date": "Reviewed in the United States on March 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "ANTONIO",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RP5FMEMB61PWU",
+        "text": "I bought them because of the brand name and did not ever want to have any issues. They are decent but the flaw is that they don't remember the last setting. So you have push the buttons ALLOT to make it go back to the dim light that you like from the last time you turned them off .......also, they don't go ALL the way down to very low light (just kind of dim?). I should of read all the reviews before putting them in the entire house. However, they are WAY better than the lights that pair individually (don't get those as there is too many units to lose connection and have to reset)",
+        "date": "Reviewed in the United States on February 27, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Expensive with a big flaw of not remembering the last setting. Get ready to push buttons allot.",
+        "userName": "christine",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1TGW32GNQQQRQ",
+        "text": "The switch does what it suppose to do.",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good switch",
+        "userName": "Edwin T.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R158T9PO7KFCOT",
+        "text": "Looks good and easy to install, no electrician needed. Great finish after a room gets painted.",
+        "date": "Reviewed in the United States on February 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy way to modernize your home",
+        "userName": "Spike",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1LYDEM4I4RM9X",
+        "text": "I can’t believe how affordable these are for how high of a quality as they are. I have swapped a lot of light switches in my years and this one takes the cake for rugged design, ease of installation, attractive finish, and reliable functionality. Now I want to stock up and swap every last one of my cheap “builder’s special” toggle switches to match these.",
+        "date": "Reviewed in the United States on February 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "I didn’t think I could love a light switch",
+        "userName": "Phil",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R21IJK4VENYMF0",
+        "text": "Works as expected",
+        "date": "Reviewed in the United States on February 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as expected",
+        "userName": "Paul Friday",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1Y8381CJS5TE1",
+        "text": "Theses work great for me.",
+        "date": "Reviewed in the United States on February 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Replaced all my switches to these.",
+        "userName": "Mike",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R209HYQFGZCYWV",
+        "text": "This one connects by pushing the wire in the back. I'm not very comfortable with that design but it defintely works and I will keep it.",
+        "date": "Reviewed in the United States on February 8, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good but I like the old fashion twist around the screw style.",
+        "userName": "A. Coops",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R15LVRO48RX2CT",
+        "text": "Great for replacement also easy to install",
+        "date": "Reviewed in the United States on February 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked",
+        "userName": "Rebecca G.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R4U4UE5XHJ5JM",
+        "text": "Easy to install and work great.",
+        "date": "Reviewed in the United States on February 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Brian L.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R13OO85LVD69F3",
+        "text": "Good fit.",
+        "date": "Reviewed in the United States on January 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good fit",
+        "userName": "Consumer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1AZMVRFZC99Y",
+        "text": "If the fixture you're turning on is below the switch, say, by six or so steps on a staircase, the signal doesn't seem to be strong enough and easily interfered with by your hand on the switch or body. I've used this before, where the light was on the ceiling, with no problem.",
+        "date": "Reviewed in the United States on January 29, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Might not be great if you light is lower than the switch",
+        "userName": "Stevie B",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1VYDHT5HPZH7R",
+        "text": "This switch doesn’t work as expected. Very disappointed",
+        "date": "Reviewed in the United States on January 21, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Disappointing",
+        "userName": "Jucy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1I8C3NQ6KDF90",
+        "text": "We had an automatic/motion light timer in our garage that made it super inconvenient if you were in the garage for longer than 30 seconds. This was an excellent replacement and very easy to install. It had clear instructions and is made of quality material. Overall, for the money, it’s excellent and fits perfect. No adjustment for brightness, however he color of the existing light switch matched perfect.",
+        "date": "Reviewed in the United States on January 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent replacement switch",
+        "userName": "Zachary Oyebi",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/d9573821-e4a2-482f-b2db-424a1217bb24/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3UHJBYDB2I73X",
+        "text": "I have enjoyed having a different style outlet . Easy to flip on and off.",
+        "date": "Reviewed in the United States on January 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly.",
+        "userName": "AR.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RPK1MTP7E3SS4",
+        "text": "Great price and exactly what I needed. Well packed, good quality, heavy duty for what its used for.",
+        "date": "Reviewed in the United States on January 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great price",
+        "userName": "Deb S",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2RAFMG3NUPERR",
+        "text": "The Dutch has a hefty and durable feeling.",
+        "date": "Reviewed in the United States on January 1, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality",
+        "userName": "Matthew T. Bereckis",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2T4FETXS33SFL",
+        "text": "Replaced an old switch that shorted out after 14 years. The old one lost that assuring click when being turned on and off over time. Back in business. Very high quality for a reasonable price. And to top it off, Made in USA!",
+        "date": "Reviewed in the United States on December 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Made in USA switch!",
+        "userName": "Tmdc98",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R39K6SU2K5FXGZ",
+        "text": "My switch broke in a bathroom and I needed to replace it. This went up in moments and works great. Good price.",
+        "date": "Reviewed in the United States on December 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great replacement switch",
+        "userName": "Tom",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3NCK78CRD4Y2N",
+        "text": "Good product great customer support",
+        "date": "Reviewed in the United States on November 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great brand",
+        "userName": "Michael R.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1OSERXNQ852XT",
+        "text": "Great light switch",
+        "date": "Reviewed in the United States on November 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switch",
+        "userName": "AEA",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1B76I90AGVWQ5",
+        "text": "This switch looks so sleek and modern. It was easy to install. It's a good name brand that I can trust, and the quality is excellent. Just ordered another one for the room I forgot.",
+        "date": "Reviewed in the United States on November 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great quality",
+        "userName": "DawnR",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2CQ4D53J2K0E8",
+        "text": "Good switch and easy to install.",
+        "date": "Reviewed in the United States on November 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "What I needed",
+        "userName": "John W",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2X1WVJXDDID1H",
+        "text": "We updated our kitchen and baths and went with white plugs and switches. These work great, easy wiring from the back without the need to bend the wires around the screws.",
+        "date": "Reviewed in the United States on October 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked great",
+        "userName": "Kenneth W. Harbin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R33FUMGSFMMPC",
+        "text": "Bought four for a small project. One came with a missing screw but that's not a big deal. Fits well and works well.",
+        "date": "Reviewed in the United States on October 1, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "No complaints",
+        "userName": "Benilda",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RGJT676TDTURH",
+        "text": "Works well",
+        "date": "Reviewed in the United States on September 20, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Light switch",
+        "userName": "Paul B.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RHTIEEJFC1C3F",
+        "text": "They look great once installed",
+        "date": "Reviewed in the United States on September 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great light switches",
+        "userName": "Scott",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3H30SMM4BWMO0",
+        "text": "I was having some issues with my Lutron Caseta Pico switches where the lights would flicker or not go out completely. Electrician said it’s probably the bulbs. Tried new bulbs and same problems. Electrician came back and installed a in line resistor. Still same problems. Most of my other smart switches and outlets are Leviton and work flawlessly. PS I did change out the small battery in the Caseta Pico but that made no difference.",
+        "date": "Reviewed in the United States on September 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "Traveling Guy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1ZPA7NXG7EVO",
+        "text": "Nice and quality switch, very easy to install, I really like the no ground requirement for an old house.",
+        "date": "Reviewed in the United States on September 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Quinn",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R37IURWC84FSTB",
+        "text": "Poor quality switch. It was manufactured incorrectly. The bottom piece under the bracket was broken. Originally before finding this out the wire wouldn’t stay clamped down after screwing it in. I tried looping the wire on to the screw, but couldn’t. The screws aren’t symmetrical to each other and it was too high up. The screw was touching the damaged plastic arch.",
+        "date": "Reviewed in the United States on August 31, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Came damaged",
+        "userName": "Nikolas",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/614SDvNyeVL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61MlRRYNhdL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61jhmEk2--L._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RSPMEXFGKZXR1",
+        "text": "I’ve use this brand for years. They are very good. I highly recommend them",
+        "date": "Reviewed in the United States on August 8, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Very durable",
+        "userName": "Randy Rampersaud",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61VcZ906-FL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2JC1FJ46BVORC",
+        "text": "Installed to replace the old broken one. Hopefully it will last as long as the old one came with the built house",
+        "date": "Reviewed in the United States on June 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good",
+        "userName": "Dayna",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R135KIAT4HRY2V",
+        "text": "This is a good quality light switch. It is compact in size and fits well in a small junction box. Easy to install. My only complaint is that the ground is on the top (in the back) of the switch and not the bottom. This makes for a tight fit if your line and load wires come into the junction box from the top. Will buy again as needed.",
+        "date": "Reviewed in the United States on June 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Compact Size and Fits in a Small Junction Box",
+        "userName": "GregBooks",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2VH1SP38SB3JO",
+        "text": "My home office makeover had me reexamining everything including the light switch. My entire house has beige units but my room needed a white one. After watching just 1 YouTube video (and buying some wire-stripping pliers), I tackled swapping out beige for white in a matter of minutes. Super easy!! Ready to swap out the rest of the ones in my home. Great value for this item especially with the added antimicrobial feature. Note, the plate cover was purchased separately.",
+        "date": "Reviewed in the United States on June 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to Install Even for This Beginner—Ready to Tackle the Whole House Now!",
+        "userName": "Elizabeth S.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/514gyLKKGkL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61UQRbQlgFL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R326NTTMNCBBUB",
+        "text": "The lights in my mother's bathroom all stopped working at the same time. Since we knew the bulbs were good, I told her I'd replace the (38-year-old) switch and see if that fixed the problem. She held the flashlight while I swapped out the old one. We used the \"quickwire\" option since that was how the old switch was done, and the wires went in perfectly. I added a new, larger faceplate to match the switch. It looks really nice (but makes her 38-yo outlet next to it look scruffy, haha). All told, we were in and out of there in under 10 minutes, including the trips to the basement to flip the circiut breaker. And when we were done, the lights worked, yay.",
+        "date": "Reviewed in the United States on June 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "kdea473",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1X0PTPEVYKSDY",
+        "text": "I'm surprised at all the very positive reviews. This should be a simple quality item that lasts for years. In my case, I bought 3, and one of them broke immediately upon installation. The switch internals stopped working. No click, no switching, and the rocker became loose and unattached. I had to go out and buy a replacement locally, and I find that Lutron and Legrand both seem to be better quality than Leviton.",
+        "date": "Reviewed in the United States on May 17, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flimsy and breaks easily",
+        "userName": "George B",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2TWSGV58EIBGR",
+        "text": "Purchased this to replace a broken light switch. I had never done this before, watched 1 youtube video and within just under 5 minutes it was replaced. I have had no issues since it has been installed and requires little to no cleaning. I would recommend this product to others.",
+        "date": "Reviewed in the United States on May 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple to install",
+        "userName": "Jacob Wood",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1XGCXQLM7CK6Y",
+        "text": "Easy Installation",
+        "date": "Reviewed in the United States on April 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product",
+        "userName": "William A. Tripp Sr.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1G0IIXNUBFEBJ",
+        "text": "Works like it should exactly as I needed",
+        "date": "Reviewed in the United States on April 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as expected",
+        "userName": "Little_Flame",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2I6VKK4EWZCHG",
+        "text": "The switch works perfectly and looks good.",
+        "date": "Reviewed in the United States on March 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy hook up",
+        "userName": "Dave",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RR01F012IBGPG",
+        "text": "Replaced an old broken timer wall switch with this simple on off switch. It’s for a back light that really doesn’t require a timer. Works perfectly and looks good on my living room wall.",
+        "date": "Reviewed in the United States on March 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wall switch Works & Looks Great",
+        "userName": "Sue P",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08SJ3Z8XD",
+        "productTitle": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 85,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 702,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2B7OKH50YH3NC",
+        "text": "Like because it's different from what I had",
+        "date": "Reviewed in the United States on March 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wall light switch",
+        "userName": "Tammy Williams",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

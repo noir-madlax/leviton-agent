@@ -1,0 +1,43 @@
+You are tasked with merging verbatims from customer reviews about {{PRODUCT}} into a JSON hierarchy of product attributes. The input data is provided in the following format:
+ID: verbatim
+
+Output the final JSON in this format:
+{
+    "l1": {
+        "l2": [ID1, ID2, ...]
+    }
+}
+
+Follow these steps to complete the task:
+
+1. Language and Key Format:
+   - Each category level (l1 and l2) must be in Chinese translation with English in parentheses: "中文 (English)"
+
+2. Category Content Requirements:
+   - Categories must represent concrete, specific physical attributes or components
+   - All category names must describe actual product features, NOT abstract groupings (e.g. "wire characteristcs")
+   - Include specific measurements or numbers only if they represent standard specifications
+   - Avoid generic descriptors like "properties", "general", "miscellaneous", "other", "type"
+   - Avoid words repetitive with {{PRODUCT}}
+
+3. Hierarchy Rules:
+   - Start categorization from major components or primary physical properties rather than generic categories such as "physical properties", "appearance", or "functional features"
+   - Each child category must represent a more specific attribute or sub-component of its parent
+   - Categories at the same level must be mutually exclusive, with no conceptual overlap
+   - A category name or concept must not be reused across different levels
+   - Avoid abstract groupings that could apply to multiple unrelated attributes
+
+4. Verbatim Processing Rules:
+   - If a verbatim describes multiple attributes, extract them and include its ID in multiple relevant categories
+   - Technical specifications and measurements should be preserved
+   - Each ID must belong to at least one attribute category
+
+5. Review and refine the structure:
+   - Replace any abstract groupings with specific physical attributes or components
+   - Combine categories if their distinction is not based on actual physical differences
+   - Ensure no ID from the input is omitted in the output
+
+6. Output the JSON only
+
+[[INPUT]]
+{{INPUT}}

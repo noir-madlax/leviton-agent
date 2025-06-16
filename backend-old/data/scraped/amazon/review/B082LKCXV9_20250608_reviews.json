@@ -1,0 +1,2600 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:57:43.095952",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B082LKCXV9",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B082LKCXV9",
+    "title": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+    "brand": "Amazon",
+    "model_number": NaN,
+    "price_usd": 29.98,
+    "rating": 3.7,
+    "reviews_count": 4261.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B082LKCXV9"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3OD360WULEJFO",
+        "text": "Don't be fooled not as advertised",
+        "date": "Reviewed in the United States on June 5, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Beware",
+        "userName": "Nick Delaney",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3EEID9XEZH305",
+        "text": "This is a pile of junk. Connects ok, but connected fan ran at maybe 2 revolutions a minute. It was set up as a switch, not alone a dimmer. It's complete trash.",
+        "date": "Reviewed in the United States on May 24, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Hot garbage is better",
+        "userName": "S. S. Johnston",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2B4QA8GGIBZEO",
+        "text": "No neutral wire and non dimmable version. My led bulbs still flicker using the included adaptor or using a load greater than 15W. It might have something to do with how \"clean or consistent\" your power source is.",
+        "date": "Reviewed in the United States on May 18, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not perfect: Seems like manufacturer recommended bulb is needed for perfection",
+        "userName": "L",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R37OH7OB52RSKH",
+        "text": "The remote control is unstable, always goes offline even though the network is stable. Easy to install and set up.",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Always goes offline, error for remote control",
+        "userName": "Edison",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2GME4GBD3L4LH",
+        "text": "I have this switch has been installed 6 months and it loses contact with the modem and needs to be reset every two months. Works good when it's connected but a pain to reset and reconnect. None of my other devices act this way.",
+        "date": "Reviewed in the United States on May 7, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works but has issues.",
+        "userName": "Tom B.",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3VA5FLJN75Y30",
+        "text": "It lasted just over a year and then it stopped working completely. Constantly had connection issues, even though we have a dedicated IoT WiFi that all our other smart devices can see and connect fine to. Unfortunately there are not many option for switches without needing a neutral.",
+        "date": "Reviewed in the United States on May 7, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Died after a year of connection headaches",
+        "userName": "Tiffany K",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R29AJW0I278DZZ",
+        "text": "Works well with Echo device",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Home improvements",
+        "userName": "Roland",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R7WBPQGNRP1GS",
+        "text": "I've had it a year now. It WAS the only game in town for while. Issue withe first one staying connected for longer than a month. Biught a sec9nd one (in case it was simply bad. Nope, after 3 months it just randomly disconnected and had to be reset (determined Fter hours of troubleshooting. Worked fine for another 2 months, then blink. Out again. Its been over a year now and have had to reset it at least 5 times and never at a convenient time (is there ever. Isnt that why we buy smart devices. To stop having to think about them). Thankfully, other vendors have stepped in to fill the need. I will now be replacing this with an Amazon basic or other for 1/3 the cost. Don't waste your money ( or time) on this.",
+        "date": "Reviewed in the United States on April 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "The biggest PITA.",
+        "userName": "Charles",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R235GGU73RQ3BP",
+        "text": "Do not order the no-neutral wire version (I don't know about the other versions), will lose WiFi connection every couple of months and I'll have to reset the breaker that they're on. Funny thing is, the red no-WiFi indicator doesn't indicate they're offline (unless I turn off the WiFi to the whole house). I have tons of other devices, IoT too, and none of them have any issues with the WiFi...and signal strength is fine as they're not far from the AP.",
+        "date": "Reviewed in the United States on March 23, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "No-Neutral Wire loses WiFi constantly",
+        "userName": "Brian Grigg",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2NULBM4A6A32G",
+        "text": "doesn't connect to wifi after power outage, and worse it doesn't just turn off and not work. it goes into some gimpy mode where the lights are like flickering.",
+        "date": "Reviewed in the United States on March 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "i paid 22$ for this and i'm not happy, so at 40+ it's real bad",
+        "userName": "William Schmidt",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2R985O756JVY",
+        "text": "I have a bunch of Cync branded devices, and lots of switches with no neutral available. My first one worked great! The Cync app is pretty terrible, but once I had it in, it showed up in Google Home right away. My next two that I bought were DOA. Can't in good conscious recommend these anymore.",
+        "date": "Reviewed in the United States on March 1, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Quality Control Lacking",
+        "userName": "Todd J.",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R12025FU705H3R",
+        "text": "The switch will not stay connected even though it is in close proximity to my router. It is a constant problem. I am outside of my return window otherwise it would be returned. learn from my mistake and avoid this product.",
+        "date": "Reviewed in the United States on February 21, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "POS - Do Not Purchase",
+        "userName": "Joe",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2FCRLOSG6QKVE",
+        "text": "I bought this to use for my basement lights through Alexa, as whoever originally did the electrical wiring in the house put the basement light switch at the bottom of the steps. 🫤 The directions were easy to follow and I was able to install it with no problems. I downloaded the app and was able to easily connect it to the switch. As the instructions and others have stated, it needs a 2.4 GHz connection to your router (if you have a dual band router, you, or someone you know (friend or service provider), will probably need to split the WiFi bands, which refers to separating the 2.4GHz and 5GHz frequencies on a WiFi network by assigning different network names (SSIDs) to each band, allowing devices to connect to the band that best suits their needs. The switch saw and connected to Alexa right away with no problem. I’m using this with LED bulbs and haven’t had any flickering, as some people have stated. I installed this over three months ago and it’s still working great.",
+        "date": "Reviewed in the United States on January 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I needed!",
+        "userName": "G. Golden",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R1XG1PWNSDXVKK",
+        "text": "My child has a horrible habit of never turning off lights which bothers me to no end. In addition, my laundry room light switch is behind the door making it irritating to turn on or off when my arms are full of laundry. For those reasons, I had 2 requirements 1) a light switch with a motion sensor for my laundry room & light switches that I can control wirelessly/remotely. To accomplish this, I bought multiple different types of Kasa switches. I was able to install the motion sensor light, but because the motion sensor is on the switch itself & the switch is behind a door, the light kept shutting off at the worst times. I was going to just live with it because I was going to install other Kasa light switches, but when I went to install the other switches, I uncovered a large issue that prevented me from installing the Kassa switches. Unfortunately, Kassa switches require neutral wires which didn't work with my house that was wired in the early 2000s, without neutral wires. I researched like crazy to find switches that are wireless, do not need to connect to a hub that is plugged into my wi-fi router, and do not need a neutral wire. My research lead me to this GE Cync switches. So far, I have installed 2 dimmers, 1 switch paired with a remote sensor, 2 switches I configured as 3-way switches, & 3 other standalone switches. I also have 2 more dimmers & additional switches I have yet to install. I found the installation of the switches to be pretty easy. I have little electrical experience, but after installing multiple Cync switches, I am able to install a new switch in under 15 minutes. As soon as I install a new switch, I immediately connect it to my wi-fi. After getting each switch connected to my wi-fi, I then configure all of the switches at the same time in the Cync app. I did have a few hiccups with the Cync app when I configured the first couple of switches, but if I kept the app open, the lights would connect to it after a minute or so. I also had to restart the app a couple of times, but all in all, connecting the switches to the app was pretty simple. What's nice is when you are configuring the switch, the app tells you to look for the flashing green light on the actual switch so that you know exactly which switch you are configuring (super helpful when you are configuring 3-way switches). One thing to note is that you must first set up a room & add your appropriate switches to the room. If you have multiple lights in that room that you want to work independently, you must create a group in that room for each independent light (e.g. My 3-way switch is in my hallway. I set up my hallway as a room & put both switches in the same group so they work with each other. My kitchen has island lights & an over the sink light. I set up my kitchen as a room & put my island lights in 1 group & my sink light in another group... if I hadn't done that, even when I wanted just my sink light to turn on, both my sink & island lights would turn on & off at the same time, regardless of which switch I turned on or off). Now that the switches have been configured in the app, my lights work great using either the app to control them or the switches themselves. Another thing to note is that in homes with older wiring, your lights may flicker after installing the switches. There is a light bulb adapter that comes with each switch & if you use that adapter with your light bulb, the flickering should stop. The downside to the switches is that they are pretty spendy... especially if you must purchase the switches that do not require a neutral wire. The Kasa switches are much more reasonably priced, but again, the Kassa switches all require a neutral wire. However, when all is said & done, if you watch the price of these switches & are able to get them for under $30, I feel they are well worth it! Every time I find them for under $30, I buy as many as I can with my goal being to have either one of their dimmers or one of these switches in every switch in my house!",
+        "date": "Reviewed in the United States on January 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "I Can't Help but Keep Buying More!",
+        "userName": "Suze C",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/6192Xwh4S+L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "RVP6SK8J005WY",
+        "text": "talk about old wiring, I have a house full of it including some old ceramic electrical wiring that's not active. active. it's still in place. so when I wanted to make my front door switch smart so I could control the lights I had no idea what I would find. I found only two wires and no ground which is typical for these old houses which are grounded differently. nevertheless I proceeded And simply tuck the ground wire out of the way and it works perfectly on a front door light with incandescent only bulbs. it connected seamlessly to my Google home. so far so good. Total setup was about 15 minutes. it's important to use the GE software to initially connect to the Smart switch and then you get a choice towards the end to connect to other services such as Alexa or Google home.",
+        "date": "Reviewed in the United States on January 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "I have a 90-year-old house and this is just what I needed",
+        "userName": "S. D. Schwaitzberg",
+        "numberOfHelpful": 2,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/713OrGQzB1L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "RIQZHIZ2QLETK",
+        "text": "Product is not usable at all if you have non-standard bulb connections in your lighting fixture (such as if you have GU24 connection bulbs), which is not made clear anywhere. Product requires you to install standard connection bulb to set up device. If your lighting fixture uses a different type of bulb, product cannot be set up and used. Very disappointed, as they could make this clear prior to purchase.",
+        "date": "Reviewed in the United States on January 4, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't work with GU24 fixtures. Returning.",
+        "userName": "David B.",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "RPV0M7HBF6X25",
+        "text": "I’ve had one installed for a few months now. The included bulb “adapter” that screws underneath a bulb on the circuit and meant to increase load in said circuit to remedy flickering does not work at all and seems to increase flickering. The flickering wreaks havoc on bulbs and I’ve lost several LEDs and CFLs since installing just a few months ago due to the heat associated with these types of bulbs and the flickering. The instructions say there are specific bulbs from GE that will work but I didn’t know that ahead of time and I refuse to be pigeonholed into buying more things with the hope of it working. I’ll be buying an alternative product and taking the hit from this purchase. Awful product. Don’t buy.",
+        "date": "Reviewed in the United States on December 20, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flickers and kills bulbs",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3ESP7K912OWTX",
+        "text": "I’ve tried and tried to like these switches. I got excited when I came across a well known brand that produced a smart on/off switch without the need for a neutral wire. I have an older house without neutral wires to the switches and for a while the Lutron Caseta dimmer switches were all I could find that worked. I have a few of them and have had little to know issues. They work great, but are expensive and I don’t need dimmers for a lot of my switches. I bought multiple no-neutral Cync switches and have had issues from the get-go. First off, installation is hit and miss. Some I installed easily and some took multiple tries before I could get them to set up properly. Next, a “room” HAS to be created for the switch to be set up. The issue with this is that if you have multiple switches and want to group them together in a room but work independently, good luck, it won’t work. Every switch you put in a room will trigger all switches in that room every time you try to use the switch to turn things on/off. So every switch has to have a separate room if you want them to work independently, which is annoying but not a huge deal. Next, the WiFi connection will come in and out constantly, regardless of how close to your router you install them. I researched a ton and found that they only work on a 2.4Ghz, and if you have a dual-band router that can’t be set to only use the 2.4Ghz channel the switches will struggle. Even with a 2.4Ghz range extender I still have connection issues so that won’t completely fix the issue. There is a WiFi indicator but you leave the indicator on, it will blink on and off every time it loses connection and gains it back (which is pretty much constant). They come with little adapters that supposedly help them function properly, but they are bulky and often get in the way if trying to install in a smaller space like an outdoor sconce. Even then they don’t work consistently. I have uninstalled and reinstalled switches over and over, so if you are considering these switches look elsewhere. I promise the activation of them outweighs the cost of better products out there.",
+        "date": "Reviewed in the United States on December 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "You’d think GE could do better… NOPE!",
+        "userName": "Craig",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R34T5H8B0KMWKW",
+        "text": "Silly me,I misunderstood the intention of this, I thought buying a smart switch meant I could use it to control an outlet that is switched. I haven't had luck with it working at all, it disconnects from the WiFi a lot and turns on and off and emits a hum, so I started reading more into it and they only intend this to be a light switch. I'm guessing that's why it has been not working and flashing my led lights that are plugged into the switched outlet. Due to the very specific caveat and from reading other reviews people have problems with them using them for their intended purpose, so for that reason I'm going to have to say these are a 2-3 star.",
+        "date": "Reviewed in the United States on December 2, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "They are made for lights only, not outlets",
+        "userName": "D. Burke",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R1W0ZB50HGZHWL",
+        "text": "My husband spent most of yesterday trying to get this 3 way switch to work. The light it was going to has 3 bulbs. We did have to put in a LED 100 w and the other 2 were 60 w LED to stop the flickering. With the switch off, 1 60w bulb came back on. So we tried it by removing that bulb. Then the other 60w came on with the switch off. We really wanted this to work but it doesn’t truly work with a no neutral 3 way setup. We are going to have to return these switches.",
+        "date": "Reviewed in the United States on December 2, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Did not work for us.",
+        "userName": "Anita Shoemaker",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R1ABM5WIDD04LM",
+        "text": "They disconnect from router all the time half to reset router to pick them back up.",
+        "date": "Reviewed in the United States on November 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "I regret buying these",
+        "userName": "Douglas O Fenn",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R36V0DRFXHQY3K",
+        "text": "completely fake/scammy advertising. this isn’t a switch. it’s a remote control. and you have to use its special adapter on a single bulb. it therefore doesn’t work with ANY switches in my house. not ceiling fan, not pendant lights, not multiple lights, not different sized lights. false advertising. please be EXPLICIT that this is not remotely a normal wall switch.",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "not a normal wall switch. at all.",
+        "userName": "Daniel Chisholm",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2B48HZ9RYUZI7",
+        "text": "Is hard to connect out side of your area",
+        "date": "Reviewed in the United States on November 10, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Searching for service",
+        "userName": "BYRON SAMAYOA",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R36O7O8FWJRLUM",
+        "text": "Product is junk. Do not buy",
+        "date": "Reviewed in the United States on October 25, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Do Not Buy",
+        "userName": "Anthony",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3IJ3CU9ROM6EW",
+        "text": "I had to get these due to lack of neutral wire is some areas, and once they fall off the network, you have to factory reset and totally start over. Which means any routine or layered command you have set up with it all need to be tweaked with as well. Huge headaches. If there was another solution I’d ditch these immediately. Hate them.",
+        "date": "Reviewed in the United States on October 10, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Falls off the network randomly",
+        "userName": "Jaxon",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R1YG6US76M4JIZ",
+        "text": "We have bought plenty of these switches when there was a promotion going on hoping to automate entire home. We specifically need this as it is old home and we don't have access to neutral wire. Somehow we are not greatly convinced with these, sometimes there seems some gaps in their working",
+        "date": "Reviewed in the United States on October 9, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Switches are not consistent",
+        "userName": "KK",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R19QF8WJ6X0P41",
+        "text": "I'm an electrician and my house is old, so my switches don't have neutral wires. I tried connecting these guys to the app and they refuse to stay connected or work. I did a factory reset and made sure the latest firmware was downloaded. Nothing helped. Worthless smart switches. Threw them out, save you're money.",
+        "date": "Reviewed in the United States on September 30, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don't be fooled bec it's GE",
+        "userName": "Rafi",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R21ENH8CXDK28C",
+        "text": "crap ... bricked!!! stop working in less than 3 months, waste of money ... 0 stars",
+        "date": "Reviewed in the United States on September 25, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Crap!!! ... bricked!!! stop working in less than 3 months, waste of money ... 0 stars",
+        "userName": "Phillip D. Prestigomo",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R1HV2E9UUVT7SQ",
+        "text": "I have had this for a couple years now and have given up on it. It required the circuit breaker to be reset every one to two weeks because it loses connectivity to wifi. I just use it like a normal switch that I paid 10x more for.",
+        "date": "Reviewed in the United States on September 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Constantly need to be reset",
+        "userName": "Joel",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "RPK63OVFGO2JF",
+        "text": "i had a halo fan but this switch made it strobe, so i bought a fan with incandescent lights , well it worked until you use the remote to turn off lights and run fan, then it just resets itself , so overall useless, moved to garage and used the included adapter for LED lights and what a surprise it does not work GE you bring bad things to life",
+        "date": "Reviewed in the United States on September 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "not for fans or led lights",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R8EO3NQ7PO15P",
+        "text": "Lo que buscaba .! Facil de instalar",
+        "date": "Reviewed in the United States on September 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "No necesita neutro , perfecto",
+        "userName": "Adrian",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R177QALW8FX67G",
+        "text": "Lo instalé facilmente y hasta el momento funciona bien.",
+        "date": "Reviewed in the United States on September 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Buen producto",
+        "userName": "Rodolfo Nassar",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2OBW908IGBJ95",
+        "text": "Kitchen lights. Software just doesn't work. Thunder storm, WiFi outage, power outage. Takes a week of working with it to get it to work. Just using it as a switch. An expensive switch.",
+        "date": "Reviewed in the United States on August 25, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stops working",
+        "userName": "William",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3BLO797I469HT",
+        "text": "works well, easy to install",
+        "date": "Reviewed in the United States on August 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "works well, easy to install",
+        "userName": "DARWIN A. STALLARD",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R661IWCLQ8RV",
+        "text": "I bought this because my other Kasa switches require a neutral. This didn't. I have a closet light that doesnt have a neutral. Any time I use any routine on any app that involves the light, it will do the command then go into an endless on off finding wifi boot. Then it will say it's connected via Bluetooth and then restart endlessly. I have a mesh system with 2.4 and 5ghz wifi less than 20 ft from this light. ALL other devices I've set up have worked seamlessly This is the first smart device purchase I have regretted. ZERO stars for a product that was half baked.",
+        "date": "Reviewed in the United States on August 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Wifi Connectivity issues!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R29W72CH4698L3",
+        "text": "Easy upgrade for a pool light, as it didn’t have a ground wire. Didn't need the bulb adapter, Cync app seems to work well & also integrates with Amazon Alexa for voice control. I had to put an outdoor cover over it, but working great.",
+        "date": "Reviewed in the United States on August 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart Pool Light",
+        "userName": "Kevin Harding",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/618fIs4wlOL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61FUpiwd9XL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61wBYSFt0uL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "RLWPDKWR2QZMO",
+        "text": "Never worked correctly from day one technical support is useless. Now the switch is basically a brick do yourselves a favor and buy Kasa",
+        "date": "Reviewed in the United States on August 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Garbage",
+        "userName": "Marc Levine",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R6RSVETCUOOES",
+        "text": "Installation & setup is very easy! Love it 😀",
+        "date": "Reviewed in the United States on July 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "easy to install",
+        "userName": "Joan R. Cottrell",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "RHOGZRCUPW035",
+        "text": "What they don’t tell you is you have to use this (ugly) adapter to make this thing work. Not a good look for an all black fixture.",
+        "date": "Reviewed in the United States on July 25, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "What they don’t tell you….",
+        "userName": "Marie M.",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/717UOpCeZAL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3KVDSHC3CF96Z",
+        "text": "I installed a total of three of these switches, this being the only 'no neutral' of the group. Tried with and without their bulb adapter, several different bulbs and types. After multiple resets, retry attempts, leaving it hanging out of the wall etc., I finally figured out what it was doing. These have some sort of bluetooth mesh they can switch to, and no matter what I tried these switches would randomly change from wifi connection to the bluetooth mesh and back. This switch was part of a basement group, on the 'storage' circuit. So, if you turned on the shop light, and this light was connected to the mesh, the storage light would also turn on. After a few minutes it would reconnect to the wifi and turn itself back off. If you turned the storage light on and it was on the mesh, either the shop and/or laundry area light would come on.. then when it would reconnect to wifi those would turn back off. I got so frustrated I put the standard switch back in this location, then noticed the other two would act up occasionally even without this one, although not as frequently. I bought another brand and those work fine in all 3 locations. Going to try to return them all, but because they were installed I'm not sure Amazon will take them back. These are JUNK, do not buy.",
+        "date": "Reviewed in the United States on July 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Unstable 'Mesh' connection of some sort makes these worthless.",
+        "userName": "M. Kane",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2HRL8B1U48W2B",
+        "text": "I had to take off many of the ones i installed and last 2 that were still installed now flicker lights randomly",
+        "date": "Reviewed in the United States on July 22, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worst ever purchase",
+        "userName": "HH",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3W136GLUUCMD6",
+        "text": "This product is terrible, it worked for about 4 months and now it doesn't respond at all with the app, I've reset it and deleted the scenes then re entered all the information, nothing works , it's garbage, don't buy it",
+        "date": "Reviewed in the United States on July 18, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Worked for a short while",
+        "userName": "K A Wilson",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3QJ7LYW7JA8WR",
+        "text": "Switch went in easy and connected to Alexa with no problems, I will order more for my house.",
+        "date": "Reviewed in the United States on July 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switch",
+        "userName": "Tom",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R1S7F0F6E6FHMP",
+        "text": "For those of us trying to \"smart\" modernize on old home built before the 1980's standardization, these are gold! Rather than spend thousands to rewire the house with neutral wiring, I chose these switches that don't require a neutral. Great WiFi reception because they will automatically BlueTooth thru each other to get connectivity from one that has better WiFi. Great compatibility with Alexa and Google Home for automations and routines. Only had one issue with a bulb that needed the included adapter. App is user friendly and allows for customizetion of bulb type used. I have 8 currently on the network with 2 more to be installed soon. Clean design and easy to install.",
+        "date": "Reviewed in the United States on July 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very specialized Smart Switch",
+        "userName": "Slab Slayer",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "RFQYDMIDFDJND",
+        "text": "The light switch Needs to be reset really often it loses connection to the network which requires me unscrewing the whole thing and sometimes rewiring it",
+        "date": "Reviewed in the United States on July 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Constantly resets and requires a full restart",
+        "userName": "Moses",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2PH1XZSZOWKOY",
+        "text": "While it works, you must use the light bulb adapter for full functionality. In my case, I used it with a ceiling fan, so it’s not compatible.",
+        "date": "Reviewed in the United States on July 8, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works But Could Use Improvements",
+        "userName": "sel366",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R3TB2LRSEUDBEF",
+        "text": "I have one light switch with no neutral, and all the other main light switches connected to Kasa smart switches. There are a few options of Smart Light switches which do not need neutral lines, but none are more economcial than the GE Cync. In fact, it's less than half of the Lutron Caseta and dims as well. The switch only has 3 lines, so it's just like hooking up a dumb single pole switch. Hold down the power button to trigger the setup mode, and start up the app. The light is up and running in a few minutes. It offers extra settings like turning on and off at sunset but I'm not interested in that so can't attest to it. It also comes with an addtiional light socket that screws into your traditional socket to allow dimming of bulbs. I have an LED attached so didn't bother. All I wanted was a smart switch I can turn on and off with Alexa. This fit the bill perfectly and has beeen working flawlessly the first couple of days. Using Alexa allowed me to mix and match this with Kasa lights for group routines as well. I am very pleased at this relatively inexpensive smart switch. I've seen reviews of other people saying the light stopped working or started giving them problems after a short while. If that happens I will update this review. But for now, I am thankful for this thing.",
+        "date": "Reviewed in the United States on July 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It does what it says it will",
+        "userName": "Noel",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R2RSKQE82CVZ0M",
+        "text": "This is NOT a smart wifi switch. It is a switch that controls a screw in adapter, complete garbage. Do not buy.",
+        "date": "Reviewed in the United States on July 4, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "NOT a wifi smart switch garbage",
+        "userName": "Larry",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "R1GGX4KXH8W6TE",
+        "text": "Absolute garbage. Went back to the normal switches. The software app to make them “smart” just caused one problem after another. Setting on a sunrise/sunset never worked. And setting specific on/off times never worked. Not to mention you have to set your phone to the smallest font of all time just to be able to read the app.",
+        "date": "Reviewed in the United States on July 2, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Zero point Zero",
+        "userName": "The Sun King",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B082LKCXV9",
+        "productTitle": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 461,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4264,
+        "productRating": "3.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 51
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 19
+          }
+        },
+        "reviewId": "RMWEKWUCL7W9I",
+        "text": "These switches will randomly go offline and randomly dissappear from Alexa. The only way to get them back in is to disconnect the power from them and start over",
+        "date": "Reviewed in the United States on June 20, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Unreliable",
+        "userName": "Richard C.",
+        "numberOfHelpful": 0,
+        "variationId": "B082LKCXV9",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Paddle",
+          "Size: No Neutral Wire Required"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

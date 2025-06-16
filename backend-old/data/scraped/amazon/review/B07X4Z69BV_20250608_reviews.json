@@ -1,0 +1,2582 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:17:53.502478",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07X4Z69BV",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07X4Z69BV",
+    "title": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+    "brand": "Nexete",
+    "model_number": NaN,
+    "price_usd": 20.97,
+    "rating": 4.2,
+    "reviews_count": 1382.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B07X4Z69BV"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2X2RFUC2JM07Y",
+        "text": "Good quality. Functions well.",
+        "date": "Reviewed in the United States on March 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality",
+        "userName": "RamaC",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R15SPCHG2GCNO7",
+        "text": "Si vieran como Alexa prende y apaga las luces de seguro los compran",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Buen articulo",
+        "userName": "Junior flecha",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1PO48YG4BHHE9",
+        "text": "Easy instructions, easy set up, good sensitivity of the push button, but after about 5months the wifi quit and now it is basically a regular switch with led indicators.",
+        "date": "Reviewed in the United States on November 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worked great at first",
+        "userName": "Laura",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/618GiNFxUlL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1XOC18ID3ZIH6",
+        "text": "Buena construcción y funcionamiento",
+        "date": "Reviewed in the United States on November 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente",
+        "userName": "Manuel",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RG6MQVLDFI633",
+        "text": "I loved the switch looks, ease of installation and compactness. However, after 2 months, it died and i can not press any button.",
+        "date": "Reviewed in the United States on September 22, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "It was working beautifully for 2 months then it died",
+        "userName": "Vikas",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R20PTA61P5TXSY",
+        "text": "Smart choice! I bought this for a client who had a unique light switch setup and this worked perfectly!",
+        "date": "Reviewed in the United States on August 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart switch",
+        "userName": "Remie T",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3AYAQMO3XCLMA",
+        "text": "I bought it thinkin my older traditional switch was installed with neutral wired but NO, i didnt have neutral wire on that older switch… this wifi switch to operate NEED neutral wire… was relative easy then to add the neutral wire, routing a wire from the nearest outlet 110v, by the inside wall, to the new switch location.. after that everything was flawless perfect! Buy with confidence!!",
+        "date": "Reviewed in the United States on August 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent! NEUTRAL WIRE REQUIRED",
+        "userName": "Manuelveras15",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b0af27b6-2706-49c8-9963-f13fa5733ef1/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1ZSNNA8P0M9QV",
+        "text": "Second time I am buying this. The first one lasted two years. Easy to install and I was happy with it while it worked. Hope the second one lasts longer",
+        "date": "Reviewed in the United States on July 20, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good price/average quality",
+        "userName": "Ilka Lacle",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2BAX1T0ZDBS0P",
+        "text": "Fit well to an existing electric box, easy to install, easy to configure",
+        "date": "Reviewed in the United States on June 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "A++",
+        "userName": "Erick A. Rivera",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RHLL3CZM8M971",
+        "text": "Two switches in one box. I bought a different brand and had to replace it because it was constantly turning on and off by itself. This brand works flawlessly.",
+        "date": "Reviewed in the United States on May 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works without interference",
+        "userName": "AzogNewOrleans",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R26EBQ78EE89T1",
+        "text": "It was easy to install. Just pull out the old one, twist the wires on...screw it back into the wall, download the app. Turn it on and set it up via the app. Took about 30 minutes tops including app set up.",
+        "date": "Reviewed in the United States on April 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and integrate into my home.",
+        "userName": "Cycleman",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R191FLEXB59WZC",
+        "text": "We have multiple smart switches and plugs, but I needed a dual switch that fit into a single gang so I got this one. It is terrible. I have reconnected it several times and every time is works for a few minutes and then disconnects. I've tried giving it a static IP on the router amd changing the name, but nothing seems to make it work. Maybe I just got a dud...",
+        "date": "Reviewed in the United States on March 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Will not stay connected",
+        "userName": "Ehrin A.",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3CMRFY8HN5JQU",
+        "text": "The switch is constantly disconnecting from the Wi-Fi. My router is not more then 20ft away. Terrible product. More Amazon Chinese crap.",
+        "date": "Reviewed in the United States on March 10, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't stay connected",
+        "userName": "YJ",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R39963IBGJHVPQ",
+        "text": "Well the little lights on the switch buttons their blue but useless.. they are in when the device is on but when the device is off they are also off. To me that's backwards. You need them on lit. When the device they control is off. So you can see the buttons",
+        "date": "Reviewed in the United States on February 25, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not to good",
+        "userName": "Scott G. Mitchell",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R24IWT6N5YHV07",
+        "text": "it does work with Alexa.",
+        "date": "Reviewed in the United States on January 30, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Use the Tuya app to install. I had to switch my band width from 5 to 2.4ghz to have it work.",
+        "userName": "topside",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RYYW8MODX0PL3",
+        "text": "I've installed well over 100 IoT devices, primarily for Alexa integration. I had just tried an Aqara dual switch with no success (the hub read 2 switched but only passed one to Alexa) and this no-name-brand, especially with generic \"Smart Life\" app, had me doubting success. Wow--it hooked up so fast and easy (1 slight issue discussed later), even easier than my go-to TP-Link brand (no dual switch choice though) on both the App and Alexa discovery. Both switches Alexa responsive (no Master/Slave button or Grouping issues). The one minor set-up is that it lost it's set-up mode while I was reading instructions. I still had outlet open so I disconnected hot to reset (otherwise it wanted me to go through entire routine) so I suggest you be willing to add quickly to Smart Life to avoid the pairing timeout. After install I killed and restored the breaker to check its power outage recovery (a weak point for many brands) and it restored admirably. Very surprised and pleased with performance and granted a VERY rare 5 stars by me.",
+        "date": "Reviewed in the United States on January 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I'm Not Easily Impressed--But WOW",
+        "userName": "Ann Harris",
+        "numberOfHelpful": 2,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R156E9Y3SU25F7",
+        "text": "Hard to find 2 smart switches in on single box. Works great. The buttons(?) don’t actually push in. Maybe touch sensitive but works great with alexa",
+        "date": "Reviewed in the United States on December 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Mike M",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71BJnB8e57L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R21SZE8SJ6XW4Q",
+        "text": "I purchased an Amazon brand double switch which wouldn’t stay connected to the WiFi. I exchanged the switch but had the same result. After being discouraged twice I ordered this switch for a last hope. It has not disconnected from the Wi-Fi once. It works every time, no matter where I am on the planet. I will buy from this brand from now on. Highly recommend!",
+        "date": "Reviewed in the United States on December 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Totally awesome switch",
+        "userName": "Brother Bear",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R340NHM3Y7ROPF",
+        "text": "Installed to replace 2 switches, took 1 attempt to finally connect, worked ok for 4 months and now randomly shuts lights off after 15 minutes. Amazon doesn't support returns past 90 days, and product has customer satisfaction guarantee, but there is no customer service. Used web site provided by Amazon to contact them, no one responds in the chat and no response to in page contact for over a month. Basically, throwing your money away with this company. Many more options available with actual product support.",
+        "date": "Reviewed in the United States on November 28, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "horrible product, no customer support",
+        "userName": "bgskyman",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R266MEV25Z068W",
+        "text": "Great product. I use it to control my front lamp post and porch light. Easy on line control. Alexa schedule on off is perfect Highly recommend. 5 Star ⭐️ ⭐️⭐️⭐️⭐️",
+        "date": "Reviewed in the United States on November 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install. Links to Alexa Immediately",
+        "userName": "scott minegar",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/612HWwG3UnL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RZ3QZQ09H762E",
+        "text": "Dejo de funcionar a las pocas semanas, apenas lo use 4 semanas.",
+        "date": "Reviewed in the United States on November 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fallo pronto",
+        "userName": "RENATO",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3FF1UYC8YQ8U6",
+        "text": "Saves steps every day, not having to go to the light switch",
+        "date": "Reviewed in the United States on October 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart house necessity",
+        "userName": "Terry Rowland",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RT2MYMINSQ35X",
+        "text": "Good device for it’s purpose",
+        "date": "Reviewed in the United States on July 3, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice",
+        "userName": "Richard",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1IIEV4I3H6CA",
+        "text": "Es una espectacular compra",
+        "date": "Reviewed in the United States on June 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Súper bueno",
+        "userName": "Angelo",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1JRGAXTJGLY5Z",
+        "text": "Wanted to connect it to my son's echo dot and alarm. Works great and helps him get up on time.",
+        "date": "Reviewed in the United States on June 3, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Karen Pirro",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3GLBUW68DIQY",
+        "text": "Alexa loves it. Works well.",
+        "date": "Reviewed in the United States on May 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well with Alexa.",
+        "userName": "Rasputin",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RIQH9F010U3WP",
+        "text": "It worked great for a year, but suddenly Google Home only sees it as one switch. Cannot control two lights independently. I've performed all the troubleshooting steps the manufacturer recommended (25 years of computer/electronics technician experience, here), to no avail. They eventually stopped responding to me. I cannot recommend this product.",
+        "date": "Reviewed in the United States on April 23, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Google Home only sees one switch",
+        "userName": "Patrick McNeal",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1CQBTWW7U0HCG",
+        "text": "As advertised very good product",
+        "date": "Reviewed in the United States on March 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent product",
+        "userName": "Ivan Borges",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2EDIJHW9V9OES",
+        "text": "The product description should state that this switch needs a neutral wire. This was not stated in the pictures or the information and is delaying the installation of a Smart switch. Please edit your description to include this information.",
+        "date": "Reviewed in the United States on March 20, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Needs Neutral Wire",
+        "userName": "Michael Cronk",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61IZaCKXMwL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1PENMAD5BL54H",
+        "text": "Great value",
+        "date": "Reviewed in the United States on March 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install!",
+        "userName": "Chase",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R47WKLOZQHR4X",
+        "text": "This switch is very responsive and I like that it can be controlled from your phone, google home or buttons.",
+        "date": "Reviewed in the United States on March 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well with google home",
+        "userName": "Dakota",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1321ZIGHT80OB",
+        "text": "Great product",
+        "date": "Reviewed in the United States on March 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "jose",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R329W7UE6FWTE7",
+        "text": "easy to install and works as expected. the package arrived on time, the switche was as pictured, it was easy to install, even in a flat that does not have an earth wire (I connected a wire to the internal metal box), and it started working manually right out of the box. the android app is simple to set up and integrates with Google Home quickly, although it is a bit confusing that 3 switches appear (one for everything, and one for each individual lamp), but you get used to it quickly.",
+        "date": "Reviewed in the United States on February 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "easy to install and works as expected",
+        "userName": "Alejandro J.",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1CIXRYOH2J4SI",
+        "text": "This dual switch would be great if not for poor wifi reception and it doesn't stay connected to wifi network. I used this control my yard landscaping lights so it needed to turn on at night and off in morning. Using a Google Home routine, it would turn on less than half the time. And likewise in morning, it would off less than half the time. This dual switch was mounted next to a Treatlife single switch and replaced a prior Treatlife switch. I never had any issues with these Treatlife switches in over the past year that they were mounted in this same location. So it is not a router wifi problem. This switch is the problem. It's too bad that this dual switch has such a poor wifi interface because I really wanted to put a regular outlet next to this dual switch. I also tried a dual Youngzuth smart switch but it also had poor wifi reception, however it was even worse in that it wouldn't ever automatically reconnect once it lost wifi connection until I manually reset it. I ultimately had to remove this dual switch and a dumb outlet so that I could go back to 2 separate Treatlife smart wifi switches which are working flawlessly right now. The labeling on the back of the switch is incorrect and shows lack of attention to detail in the design. The black wire's Line In is labeled the same text as one of the brown Load1 outputs, hence there are two wires labeled as \"L/Load1\" and one of them is actually the Line In. The other brown wire is correctly labeled \"Load2\".",
+        "date": "Reviewed in the United States on January 24, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Poor wifi reception",
+        "userName": "Christine Roberts",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R4RWABH2NGXCV",
+        "text": "Works exactly as it should. It does use stranded wires as leads for hot neutral and loads so you need wire ties or crim connectors to attach them which requires space. I was able to obtain the space by using it to replace two three way switches and mounting it in a the upstairs location and used the second gang with a blank to hold the wires and ties. I used the former traveler wires marked with white to deliver proper hot and neutral to the downstairs former 3 way locations, along with a porch light switch and put a USB receptacle and a blank in place of the former downstairs 3 ways. Pictures show the switch, next shows the downstairs setup with USB and different switch and in third, I hold up the old style toggle switch cover I replaced. I can now say Alexa, turn on the hall light or Alexa, turn on the living room light. Since this is an older home{1930} I will alert that most consumers would need an electrician to do this installation safely. It is much easier in 1980 and later homes with neutral wires as with most smart switches.",
+        "date": "Reviewed in the United States on January 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works exactly as it should.",
+        "userName": "Norman Harris",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/610euOFcAZL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/616zQu6+SYL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/717cYVTQU9L._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RBC53SX3KIGZZ",
+        "text": "INTEGRACIÓN ÚTIL MEDIOS",
+        "date": "Reviewed in the United States on December 30, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "INTEGRACIÓN ÚTIL",
+        "userName": "Lorena Cevallos",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2T54YVPMQ21DW",
+        "text": "The installation was very easy to install. The sad part is, the wi-fi could not find the wireless switch. I deleted the app multiple times, reinstalled the app and the app could not find the device over multiple tries with no success, at all. The instructions said reset the device to get the light to flash, for the app to sync with the device. I could not find a reset button on the switch. The wireless switch devices can be turned on manually. I decided to work the lights manually and deleted the app from my phone. I read the reviews online and discovered that I was not the only one having trouble with syncing the app with the switch. I will keep the switch and use it manually. My recommendation: Do not purchase this Smart WI-FI Double Light Switch because the app does not work.",
+        "date": "Reviewed in the United States on December 28, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch",
+        "userName": "Handy Man",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3MNV7YI8TE6BQ",
+        "text": "I love these switches easy to install easy to operate. Can be controlled through App or Alexa Highly Recommend A+++",
+        "date": "Reviewed in the United States on December 13, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love these Switches",
+        "userName": "William K.",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3VVJYDHD5B1VB",
+        "text": "We have had this switch for quite some time now and it will just disappear from Smart Life. I have many wifi switches and no other has ever disappeared before. To reconnect it I have to cut power to it at the breaker and then add it back into Smart Life. SL remembers it because it calls it by the names I gave to it once it is added back. When it is connected it works flawlessly.",
+        "date": "Reviewed in the United States on December 7, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Disappears from Smart Life app",
+        "userName": "Ken Inman",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1Q9DNWISWZVGW",
+        "text": "Se calientan, el 3r sw no funciona, y hasta ahora sin respuesta satisfactoria.",
+        "date": "Reviewed in the United States on November 24, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "No recomiendo",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RTHDLLG41VR0K",
+        "text": "It doesn’t turn on very easily by touch, often requiring 4-6 touches/pushes to get it to turn on. This is unacceptable. However, it seemed to work just fine with the app activating on/off. Returned for a refund.",
+        "date": "Reviewed in the United States on November 22, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Difficult To Turn On",
+        "userName": "Walley",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3JD2L8GLQXXTH",
+        "text": "The item is easy to install and works well via touch, however the wifi connection constantly disconnects and the connection from Alexa works for a few days then you have to delete the switch and remove all the wifi settings to relink it. I have only had the switch for a month and have had to reconnect it from scratch to Alexa 3x now. Wifi signal is very strong and all other switches in the same area and even further outside the house in the detached garage work just fine and don’t have this issue. Seems it is an issue with this particular item. All other switches are Kasa Switches. They didn’t make a dual integrated one which is why I purchased this one.",
+        "date": "Reviewed in the United States on October 28, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Disconnects Constantly",
+        "userName": "Chris",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RZUQO4ZBAQ089",
+        "text": "Have one if these that works fine- another won wont connect to the wifi network. No trouble shooting information and zero customer support.",
+        "date": "Reviewed in the United States on October 21, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Wont Connect to wifi",
+        "userName": "Katie K",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RHLRWGO308L5L",
+        "text": "Difficult to program with Alexa and very sensitive to voltages. My opinion is a bad product.",
+        "date": "Reviewed in the United States on October 12, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "My opinion is a bad product.",
+        "userName": "Axel",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R27S24EUXM5JK0",
+        "text": "These are at my dock which has a full signal and over 50 MB per second Internet speed. Anything and everything has great signal there except these. I have to take a pretty good walk into the woods to get to the breaker to switch them off and back on to try to reconnect. Sometimes it works great but most of the time it does not work when I really need it. They are in a metal box but I have put a 1 inch thick plastic extender on the box, drilled holes all over the bottom of the box and I think short of a major electrical job to switch out the boxes I have them in I’m stuck with this problem. I can hold my phone anywhere and everywhere around the switch and I get a full five bars of network signal.",
+        "date": "Reviewed in the United States on October 12, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Frustrating, tired of playing cat and mouse trying to keep that thing connected to my network",
+        "userName": "Bill B.",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R17LAKMUAZ3MYI",
+        "text": "Super easy install and seamless integration using smart life app and Alexa",
+        "date": "Reviewed in the United States on October 8, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Alexa ready walk switch",
+        "userName": "philip schuyler",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51p1pOsF4sL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/57cc11fe-e8e5-4716-a211-3805c45e2511/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1Q1KBKH148OP6",
+        "text": "Funciona perfecto",
+        "date": "Reviewed in the United States on September 6, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Es más bonito instalado que en la foto",
+        "userName": "Juan Carlos Echeverri Naranjo",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RNMV3XQMEKLUB",
+        "text": "Stopped working after two months. It is no more detected in Google or Alexa and used to turn on and off randomly. Latest so update seems to address this issue though. App is also hopeless..",
+        "date": "Reviewed in the United States on September 3, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not a good experience",
+        "userName": "Sanyam Jain",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R7727BNMOODYS",
+        "text": "Facil de instalar, pedi dos y uno de ellos me lo enviaron usado. Piezas faltantes",
+        "date": "Reviewed in the United States on August 16, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Smart house (casa inteligente)",
+        "userName": "Jose",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07X4Z69BV",
+        "productTitle": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 154,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1382,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 9
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3IF0JFZBXVTN6",
+        "text": "These work ALMOST always with the app. And RARELY work connected to Alexa. I have a conglomeration of stuff hooked to Alexa these are the only ones I have trouble with. Ended up throwing them away and replacing them with Kasa. Just got tired of fighting them to work with Alexa, I think almost a yr is a fair trial period. Wish more people posted year later reviews.",
+        "date": "Reviewed in the United States on August 10, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "They work with app, rarely work with Alexa",
+        "userName": "Angie Morrow",
+        "numberOfHelpful": 0,
+        "variationId": "B07X4Z69BV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 1-Pack Double Smart Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

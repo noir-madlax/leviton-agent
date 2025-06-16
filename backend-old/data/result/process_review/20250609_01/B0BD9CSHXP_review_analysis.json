@@ -1,0 +1,343 @@
+{
+  "product_title": "Leviton DHD05-1LW Dual Combination Humidity Sensor with Separate Light Switch, automate Bathroom Exhaust Fan, air Circulation, Moisture Control, Single Pole/Single Pole, ¼ HP, White",
+  "product_category": "Specialty Environmental Control Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks nice and has modern appearance": {
+          "+": [
+            21,
+            30
+          ]
+        },
+        "B@chunky size requiring big switch box": {
+          "-": [
+            41
+          ]
+        }
+      },
+      "button_design": {
+        "C@buttons lack illumination": {
+          "-": [
+            44
+          ]
+        },
+        "D@pushing button is more annoying than flipping traditional switch": {
+          "-": [
+            41
+          ]
+        }
+      },
+      "led_indicator": {
+        "E@green led light comes on when fan kicks in": {
+          "+": [
+            15
+          ]
+        },
+        "F@led not illuminated when dead": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "wiring": {
+        "G@has 5 stranded wires with wire nuts": {
+          "-": [
+            39
+          ]
+        },
+        "H@burnt wire in used product": {
+          "-": [
+            34
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@fails after 1 month or less": {
+          "-": {
+            "?": [
+              1,
+              19,
+              23,
+              25
+            ]
+          }
+        },
+        "b@fails after 2-4 weeks": {
+          "-": {
+            "?": [
+              8,
+              18,
+              22,
+              27,
+              37,
+              40
+            ]
+          }
+        },
+        "c@fails after 2-3 months": {
+          "-": {
+            "?": [
+              6,
+              11,
+              26,
+              28
+            ]
+          }
+        },
+        "d@fails after 4-6 months": {
+          "-": {
+            "?": [
+              5,
+              29
+            ]
+          }
+        },
+        "e@fails after 8 months to 1 year": {
+          "-": {
+            "?": [
+              2,
+              7
+            ]
+          }
+        },
+        "f@completely stops working randomly": {
+          "-": {
+            "?": [
+              4,
+              7,
+              10,
+              18,
+              22,
+              25,
+              26,
+              33
+            ]
+          }
+        },
+        "g@both light and fan switches die simultaneously": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "h@reliability issues with multiple failures": {
+          "-": {
+            "?": [
+              31,
+              37,
+              39
+            ]
+          }
+        }
+      },
+      "humidity_sensing": {
+        "i@accurately detects humidity levels and turns fan on around 65%": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "j@turns on automatically about 1-3 minutes into shower": {
+          "+": {
+            "?": [
+              10,
+              42,
+              46
+            ]
+          }
+        },
+        "k@works well with default sensitivity settings": {
+          "+": {
+            "?": [
+              17,
+              36
+            ]
+          }
+        },
+        "l@no false triggering": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "m@humidity sensor never worked": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "n@stops turning fan on after humidity detection failure": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "timer_function": {
+        "o@automatically shuts off after programmed duration (20 minutes default)": {
+          "+": {
+            "?": [
+              12,
+              17,
+              36,
+              46
+            ]
+          }
+        },
+        "p@re-senses after 20 mins and runs additional 10 mins if needed": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "q@can be set to run for time each hour to keep air fresh": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "light_control": {
+        "r@light is manual only with no occupancy detection": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "installation": {
+        "s@easy to install": {
+          "+": {
+            "?": [
+              13,
+              17,
+              42,
+              49
+            ]
+          }
+        },
+        "t@install/removal takes longer due to wire configuration": {
+          "-": {
+            "G": [
+              39
+            ]
+          }
+        }
+      },
+      "programming": {
+        "u@easy to program and set up": {
+          "+": {
+            "?": [
+              24,
+              32,
+              42
+            ]
+          }
+        },
+        "v@programming instructions are easy to understand": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom_humidity_control": {
+        "+": {
+          "i,j,k,o": [
+            3,
+            12,
+            13,
+            16,
+            17,
+            20,
+            21,
+            35,
+            42,
+            43,
+            47
+          ]
+        },
+        "-": {
+          "m,n": [
+            5,
+            11
+          ]
+        }
+      },
+      "space_saving_switch_combination": {
+        "+": {
+          "?": [
+            15,
+            21,
+            24,
+            30,
+            32
+          ]
+        }
+      },
+      "automatic_fan_operation_for_forgetful_users": {
+        "+": {
+          "j,o": [
+            3,
+            12,
+            43,
+            46,
+            48
+          ]
+        }
+      },
+      "meeting_building_code_requirements": {
+        "+": {
+          "?": [
+            16
+          ]
+        }
+      },
+      "professional_installation": {
+        "+": {
+          "s": [
+            8,
+            9
+          ]
+        },
+        "-": {
+          "a,b": [
+            8,
+            9
+          ]
+        }
+      },
+      "warranty_replacement_process": {
+        "+": {
+          "?": [
+            46
+          ]
+        },
+        "-": {
+          "?": [
+            14,
+            22,
+            29,
+            31
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:28.928471"
+}

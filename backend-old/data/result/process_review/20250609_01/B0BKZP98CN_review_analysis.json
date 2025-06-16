@@ -1,0 +1,438 @@
+{
+  "product_title": "Light Switch, Dimmer Switch with Wireless Remote Control, Single Pole Smart Switch Support 2.4G&5G Compatible with Alexa",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "dimensions": {
+        "A@standard dimmer switch dimensions": {
+          "+": [
+            2
+          ]
+        },
+        "B@bigger than average light switch": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "wire_configuration": {
+        "C@wire leads instead of screw terminals": {
+          "-": [
+            2
+          ]
+        },
+        "D@red wire needed for wiring": {
+          "-": [
+            27
+          ]
+        },
+        "E@wire labels mislabeled on device": {
+          "-": [
+            22,
+            24,
+            35
+          ]
+        }
+      },
+      "build_quality": {
+        "F@light plastic construction": {
+          "-": [
+            22
+          ]
+        },
+        "G@not flush and tight fit": {
+          "-": [
+            22
+          ]
+        },
+        "H@creaks when button pressed": {
+          "-": [
+            22
+          ]
+        },
+        "I@buttons require hard press to the right": {
+          "-": [
+            22
+          ]
+        },
+        "J@well made appearance": {
+          "+": [
+            2,
+            34
+          ]
+        },
+        "K@attractive looking": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "indicator_light": {
+        "L@nice dim light on switch for finding in dark": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "safety_certifications": {
+        "M@zero safety certifications (no UL, ETL, CE)": {
+          "-": [
+            2
+          ]
+        },
+        "N@only FCC certification": {
+          "-": [
+            2
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "A": [
+              2
+            ],
+            "?": [
+              21,
+              25,
+              32
+            ]
+          }
+        },
+        "b@difficult to install": {
+          "-": {
+            "C,E": [
+              22
+            ],
+            "?": [
+              21
+            ]
+          }
+        },
+        "c@wiring instructions incorrect": {
+          "-": {
+            "E": [
+              22,
+              24
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "d@only dims halfway": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@brightness range not adjustable, too dim at full power": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "f@won't dim down to 0%, only to 25-30%": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "g@dimming not smooth": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "h@dimmer not too good": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "noise_issues": {
+        "i@electrical hum": {
+          "-": {
+            "?": [
+              4,
+              40
+            ]
+          }
+        },
+        "j@buzzing noise": {
+          "-": {
+            "?": [
+              8,
+              46,
+              48
+            ]
+          }
+        },
+        "k@continuous noise": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        }
+      },
+      "flickering_issues": {
+        "l@LED flickering": {
+          "-": {
+            "?": [
+              3,
+              28,
+              32,
+              47,
+              48
+            ]
+          }
+        },
+        "m@lights blinking on and off after 10 minutes": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "power_outage_behavior": {
+        "n@defaults to ON after power outage": {
+          "-": {
+            "?": [
+              0,
+              23,
+              30,
+              40
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "o@pairs immediately and works great": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "p@works with 2.4GHz reliably": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "q@doesn't work with Alexa": {
+          "-": {
+            "?": [
+              11,
+              13,
+              19
+            ]
+          }
+        },
+        "r@keeps dropping off Alexa connection": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "s@only works with Alexa, not other apps": {
+          "-": {
+            "?": [
+              30,
+              33
+            ]
+          }
+        },
+        "t@doesn't support 5G despite claims": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "u@doesn't support Google": {
+          "-": {
+            "?": [
+              32,
+              33
+            ]
+          }
+        }
+      },
+      "remote_performance": {
+        "v@remote works great": {
+          "+": {
+            "?": [
+              9,
+              10,
+              13,
+              16,
+              22,
+              36
+            ]
+          }
+        },
+        "w@works 20 feet through concrete wall": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "x@short range": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "y@remote fails to connect frequently": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "z@works out of the box": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "aa@doesn't work out of box": {
+          "-": {
+            "?": [
+              5,
+              31
+            ]
+          }
+        },
+        "ab@stopped working after 5 days past warranty": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ac@blew fuse after 5 minutes": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "ad@outputs 43 volts regardless of setting": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "ae@won't shut off": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom_lighting": {
+        "+": {
+          "o,v": [
+            1
+          ]
+        },
+        "-": {
+          "n": [
+            0
+          ],
+          "i": [
+            40
+          ]
+        }
+      },
+      "master_closet": {
+        "-": {
+          "j,l": [
+            48
+          ]
+        }
+      },
+      "backyard_lighting_control": {
+        "+": {
+          "v": [
+            41
+          ]
+        }
+      },
+      "pendant_light_fixtures": {
+        "+": {
+          "v": [
+            29
+          ]
+        }
+      },
+      "remote_home_control": {
+        "-": {
+          "n,s": [
+            30
+          ]
+        }
+      },
+      "smart_home_conversion": {
+        "+": {
+          "?": [
+            43
+          ]
+        }
+      },
+      "replacing_existing_switch": {
+        "-": {
+          "B": [
+            7
+          ]
+        }
+      },
+      "multiple_switch_situation": {
+        "-": {
+          "B": [
+            7
+          ]
+        }
+      },
+      "3-way_switch_conversion": {
+        "+": {
+          "?": [
+            33,
+            39
+          ]
+        }
+      },
+      "houses_without_recent_wiring": {
+        "-": {
+          "D": [
+            27
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:43.377787"
+}

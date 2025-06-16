@@ -1,0 +1,412 @@
+{
+  "product_title": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@larger than normal switch, takes more room in electrical box": {
+          "+": [
+            5,
+            34
+          ]
+        }
+      },
+      "construction": {
+        "B@sturdy build quality": {
+          "+": [
+            5,
+            36
+          ]
+        },
+        "C@well made": {
+          "+": [
+            7,
+            16
+          ]
+        },
+        "D@heavy duty construction": {
+          "+": [
+            13,
+            36
+          ]
+        },
+        "E@solid construction": {
+          "+": [
+            36
+          ]
+        },
+        "F@commercial quality": {
+          "+": [
+            44
+          ]
+        },
+        "G@cheap appearance": {
+          "-": [
+            48
+          ]
+        }
+      },
+      "wiring_terminals": {
+        "H@has retainers for stranded wires": {
+          "+": [
+            0
+          ]
+        },
+        "I@requires neutral wire for light": {
+          "+": [
+            0,
+            5,
+            21,
+            26,
+            43,
+            44
+          ]
+        }
+      },
+      "light_color": {
+        "J@bright red light": {
+          "+": [
+            5,
+            13
+          ]
+        },
+        "K@orangey-red glow like smoldering coals": {
+          "+": [
+            26
+          ]
+        }
+      },
+      "instructions": {
+        "L@small print, hard to read instructions": {
+          "-": [
+            2,
+            5,
+            16,
+            39
+          ]
+        },
+        "M@easy to understand instructions": {
+          "+": [
+            12,
+            16
+          ]
+        },
+        "N@no instructions included": {
+          "-": [
+            27
+          ]
+        },
+        "O@unclear instructions": {
+          "-": [
+            39
+          ]
+        }
+      },
+      "rating": {
+        "P@20 amp rating": {
+          "+": [
+            5,
+            15,
+            16,
+            39,
+            41
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "A": [
+              3,
+              6,
+              15,
+              28
+            ]
+          }
+        },
+        "b@tricky to hook up lighted switch": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@could not make it work": {
+          "-": {
+            "L": [
+              2
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "d@works great": {
+          "+": {
+            "?": [
+              1,
+              18,
+              21
+            ]
+          }
+        },
+        "e@turns on and off as needed": {
+          "+": {
+            "?": [
+              11,
+              17
+            ]
+          }
+        },
+        "f@does what it's supposed to do": {
+          "+": {
+            "?": [
+              11,
+              46
+            ]
+          }
+        },
+        "g@pilot light only lights when load is off": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "h@does not work with LED lighting": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "i@light does not work": {
+          "-": {
+            "?": [
+              42,
+              49
+            ]
+          }
+        },
+        "j@failed after 7 months": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "k@defective, only worked for seconds": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "light_brightness": {
+        "l@bright enough to see in light or dark": {
+          "+": {
+            "J": [
+              13
+            ]
+          }
+        },
+        "m@bright enough for 110v purposes": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "n@lights up brightly": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "o@bright enough to be noticeable": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "durability": {
+        "p@built to last": {
+          "+": {
+            "B": [
+              5
+            ]
+          }
+        },
+        "q@great durability": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "r@should get good long use": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "wiring_flexibility": {
+        "s@various wiring configurations available": {
+          "+": {
+            "?": [
+              15,
+              16,
+              32
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "attic lights indicator": {
+        "+": {
+          "a": [
+            3,
+            27
+          ]
+        }
+      },
+      "outdoor deck light indicator": {
+        "+": {
+          "d": [
+            6
+          ]
+        }
+      },
+      "hot water circulator control": {
+        "+": {
+          "p,J": [
+            5
+          ]
+        }
+      },
+      "emergency furnace shutoff": {
+        "+": {
+          "M": [
+            12
+          ]
+        }
+      },
+      "exhaust fan indicator": {
+        "+": {
+          "s,M": [
+            16
+          ]
+        }
+      },
+      "AC/DC charger control": {
+        "+": {
+          "d": [
+            18
+          ]
+        }
+      },
+      "basement lights reminder": {
+        "+": {
+          "?": [
+            19
+          ]
+        }
+      },
+      "air compressor indicator": {
+        "+": {
+          "d": [
+            21,
+            39
+          ]
+        }
+      },
+      "pet bed heater control": {
+        "+": {
+          "?": [
+            24
+          ]
+        }
+      },
+      "exterior outlet control": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "furnace service switch": {
+        "+": {
+          "K": [
+            26
+          ]
+        }
+      },
+      "ceiling fan control": {
+        "+": {
+          "A": [
+            34
+          ]
+        }
+      },
+      "roof de-icer control": {
+        "+": {
+          "P": [
+            41
+          ]
+        }
+      },
+      "garage light indicator": {
+        "+": {
+          "F": [
+            44
+          ]
+        }
+      },
+      "bathroom fan indicator": {
+        "+": {
+          "s": [
+            45
+          ]
+        }
+      },
+      "RV water heater control": {
+        "+": {
+          "?": [
+            47
+          ]
+        }
+      },
+      "3-way switch replacement": {
+        "-": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "outdoor ceiling fan control": {
+        "-": {
+          "c": [
+            2
+          ]
+        }
+      },
+      "incandescent lighting only": {
+        "+": {
+          "?": [
+            20
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:30.346161"
+}

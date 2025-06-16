@@ -1,0 +1,492 @@
+{
+  "product_title": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "dimensions": {
+        "A@thicker than normal switches": {
+          "-": [
+            27
+          ]
+        }
+      },
+      "tabs": {
+        "B@thick plastic tabs for box attachment": {
+          "-": [
+            29
+          ]
+        }
+      },
+      "wiring_requirements": {
+        "C@requires four wires in gang box": {
+          "-": [
+            16
+          ]
+        },
+        "D@requires neutral wire": {
+          "+": [
+            18
+          ]
+        },
+        "E@works with 3-wire setup": {
+          "+": [
+            19
+          ]
+        }
+      },
+      "indicator_light": {
+        "F@has indicator light": {
+          "+": [
+            43
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0,
+              5,
+              6,
+              10,
+              11,
+              17,
+              18,
+              20,
+              23,
+              30,
+              33,
+              36,
+              37,
+              40,
+              42,
+              44,
+              45
+            ]
+          }
+        }
+      },
+      "setup": {
+        "b@easy setup with Alexa": {
+          "+": {
+            "?": [
+              0,
+              5,
+              6,
+              23,
+              30,
+              44
+            ]
+          }
+        },
+        "c@fast setup": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "d@connects automatically to Alexa": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "e@works directly with Alexa app without third party app": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "f@does not work": {
+          "-": {
+            "?": [
+              1,
+              3,
+              9,
+              14
+            ]
+          }
+        },
+        "g@works great": {
+          "+": {
+            "?": [
+              4,
+              5,
+              6,
+              25,
+              28
+            ]
+          }
+        },
+        "h@works fine": {
+          "+": {
+            "?": [
+              8,
+              17,
+              38,
+              43
+            ]
+          }
+        }
+      },
+      "wifi_connectivity": {
+        "i@unstable WiFi connection": {
+          "-": {
+            "?": [
+              7,
+              15,
+              24,
+              39
+            ]
+          }
+        },
+        "j@constantly disconnects from WiFi": {
+          "-": {
+            "?": [
+              7,
+              24
+            ]
+          }
+        },
+        "k@reception issues": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "l@connectivity issues close to router": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "m@connects flawlessly": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        }
+      },
+      "durability": {
+        "n@does not last long": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "o@broke after 1 month": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "p@died after 1 month": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "q@died after 1 year": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "r@25% fail rate after 5 months": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "s@100% failure rate within 3 months": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "t@stuck in on position": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "light_control": {
+        "u@dims then brightens lights every 10-15 seconds": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "v@randomly turns lights on": {
+          "-": {
+            "?": [
+              12,
+              44
+            ]
+          }
+        },
+        "w@randomly turns lights off": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "x@comes on at random times": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "y@slow response taking 30 seconds": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "z@fast response with Alexa commands": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "aa@requires iPhone for installation": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ab@not compatible with Android": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ac@cannot be shared with household members": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "ad@only compatible with one smart device": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "power_outage_recovery": {
+        "ae@does not work after power outage": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "af@switches become dead after internet outage": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "app_performance": {
+        "ag@slow on app": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "quality_control": {
+        "ah@inconsistent appearance": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ai@quality control needs help": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "physical_fit": {
+        "aj@difficult fit in multi-gang configuration": {
+          "-": {
+            "A": [
+              27
+            ]
+          }
+        },
+        "ak@normal cover plates do not work": {
+          "-": {
+            "B": [
+              29
+            ]
+          }
+        },
+        "al@needs more space in box": {
+          "-": {
+            "A": [
+              26
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "landscape_lighting": {
+        "+": {
+          "g": [
+            4
+          ]
+        }
+      },
+      "automation": {
+        "-": {
+          "i": [
+            7
+          ]
+        },
+        "+": {
+          "d": [
+            26
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "g": [
+            25,
+            28
+          ]
+        },
+        "-": {
+          "y": [
+            41
+          ]
+        }
+      },
+      "outdoor_lighting": {
+        "+": {
+          "g": [
+            25
+          ]
+        }
+      },
+      "scheduling": {
+        "+": {
+          "d": [
+            26
+          ]
+        }
+      },
+      "remote_control": {
+        "+": {
+          "d": [
+            26
+          ]
+        }
+      },
+      "LED_lights": {
+        "-": {
+          "u": [
+            12
+          ]
+        }
+      },
+      "low_amperage_LED_lights": {
+        "-": {
+          "s": [
+            34
+          ]
+        }
+      },
+      "12_LED_ceiling_lights": {
+        "-": {
+          "?": [
+            24
+          ]
+        }
+      },
+      "outdoor_security_lights": {
+        "+": {
+          "?": [
+            46
+          ]
+        }
+      },
+      "perimeter_lights_with_security_cameras": {
+        "+": {
+          "?": [
+            46
+          ]
+        }
+      },
+      "house_occupation_simulation": {
+        "+": {
+          "?": [
+            47
+          ]
+        }
+      },
+      "single_pole_configuration": {
+        "+": {
+          "a": [
+            40
+          ]
+        }
+      },
+      "four_gang_configuration": {
+        "-": {
+          "aj": [
+            27
+          ]
+        }
+      },
+      "multi_gang_configuration": {
+        "-": {
+          "aj": [
+            27
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:01.194480"
+}

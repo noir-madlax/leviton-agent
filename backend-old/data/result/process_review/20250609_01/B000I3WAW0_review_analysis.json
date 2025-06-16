@@ -1,0 +1,71 @@
+{
+  "product_title": "Legrand Pass & Seymour CSB20AC1WCC8 20 Amp 120/277V Hard Use Specification Grade Toggle Switch, Single Pole, Back and Side Wire, White (1 Count)",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 2,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@white color instead of ivory as described": {
+          "-": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "quality": {
+        "a@higher quality": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "operation": {
+        "b@quiet operating": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "durability": {
+        "c@heavy duty": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "overall_performance": {
+        "d@very good performance": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "regular_purchase": {
+        "+": {
+          "d": [
+            0
+          ]
+        }
+      },
+      "value_purchase": {
+        "+": {
+          "a": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:10.268704"
+}

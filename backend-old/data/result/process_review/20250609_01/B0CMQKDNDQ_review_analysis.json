@@ -1,0 +1,338 @@
+{
+  "product_title": "BESTTEN Super Slim Dimmer Light Switch, Quiet Rocker, Max 300W LED, CFL, 600W Incandescent, Single Pole or 3 Way Dimmable Switch with Screwless Wallplate, ETL Listed, 3 Pack, White",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 36,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Slim/thin profile": {
+          "+": [
+            12,
+            14,
+            20,
+            21,
+            25,
+            26
+          ]
+        },
+        "B@Sleek appearance": {
+          "+": [
+            4,
+            14
+          ]
+        },
+        "C@Lightweight construction": {
+          "+": [
+            28
+          ]
+        },
+        "D@Rocker switch feels flimsy/cheap": {
+          "-": [
+            17,
+            19,
+            28
+          ]
+        },
+        "E@Comes with finishing plate/screwless faceplate": {
+          "+": [
+            12,
+            28
+          ]
+        },
+        "F@Missing cover/faceplate": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "Dimensions": {
+        "G@22mm depth into box": {
+          "+": [
+            25
+          ]
+        }
+      },
+      "Components": {
+        "H@Slider for dimmer": {
+          "-": [
+            17
+          ]
+        },
+        "I@Pre-stripped traveler wire not capped": {
+          "-": [
+            25
+          ]
+        }
+      },
+      "Sound": {
+        "J@Audible click when switched": {
+          "-": [
+            16,
+            27
+          ]
+        },
+        "K@Silent rocker operation": {
+          "+": [
+            14
+          ]
+        },
+        "L@Quiet operation": {
+          "+": [
+            28
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@Easy to install": {
+          "+": {
+            "A": [
+              12,
+              14
+            ],
+            "?": [
+              2,
+              4,
+              10,
+              16
+            ]
+          }
+        },
+        "b@Fits in crowded/limited space junction box": {
+          "+": {
+            "A": [
+              12,
+              14,
+              20,
+              26
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "c@Works well/perfectly": {
+          "+": {
+            "?": [
+              1,
+              3,
+              6,
+              21,
+              24,
+              28
+            ]
+          }
+        },
+        "d@Causes LED lights to flicker": {
+          "-": {
+            "?": [
+              2,
+              8,
+              9,
+              19,
+              22,
+              27,
+              29
+            ]
+          }
+        },
+        "e@Makes buzzing/humming sound": {
+          "-": {
+            "?": [
+              2,
+              29,
+              31
+            ]
+          }
+        },
+        "f@Smooth dimming operation": {
+          "+": {
+            "?": [
+              14,
+              28
+            ]
+          }
+        },
+        "g@Defective/non-functional": {
+          "-": {
+            "H": [
+              17
+            ],
+            "?": [
+              0,
+              9,
+              16,
+              23,
+              31,
+              34
+            ]
+          }
+        },
+        "h@Switch won't stay on/off": {
+          "-": {
+            "?": [
+              9,
+              16
+            ]
+          }
+        },
+        "i@Dimmer doesn't work": {
+          "-": {
+            "?": [
+              31,
+              34
+            ]
+          }
+        },
+        "j@Works with various bulb types": {
+          "+": {
+            "?": [
+              14,
+              24,
+              28
+            ]
+          }
+        },
+        "k@Doesn't work well with certain LED lights": {
+          "-": {
+            "?": [
+              18,
+              27,
+              29
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "l@Failed after months of use": {
+          "-": {
+            "?": [
+              16,
+              35
+            ]
+          }
+        },
+        "m@Unreliable": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "n@Switch comes apart easily": {
+          "-": {
+            "D": [
+              17
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "o@Works for 3-way switching": {
+          "+": {
+            "?": [
+              10,
+              28
+            ]
+          }
+        },
+        "p@Defective for 3-way switching": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "q@No neutral wire needed": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Recessed lighting": {
+        "+": {
+          "c": [
+            7
+          ]
+        }
+      },
+      "LED track lights": {
+        "+": {
+          "c": [
+            24
+          ]
+        }
+      },
+      "Standard LED bulbs": {
+        "+": {
+          "c": [
+            24
+          ]
+        }
+      },
+      "Bedrooms and living areas": {
+        "+": {
+          "f,k": [
+            14
+          ]
+        }
+      },
+      "Creating ambiance": {
+        "+": {
+          "c": [
+            6
+          ]
+        }
+      },
+      "Ceiling lights": {
+        "+": {
+          "c": [
+            7,
+            10
+          ]
+        }
+      },
+      "LED puck lights": {
+        "-": {
+          "d": [
+            9
+          ]
+        }
+      },
+      "Thin recessed lights with built-in LEDs": {
+        "-": {
+          "k": [
+            18
+          ]
+        }
+      },
+      "Older homes with limited electrical box space": {
+        "+": {
+          "b": [
+            14,
+            20
+          ]
+        }
+      },
+      "Metal junction boxes": {
+        "-": {
+          "i": [
+            25
+          ]
+        }
+      },
+      "Standard light fixtures": {
+        "+": {
+          "c": [
+            18
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:04.139558"
+}

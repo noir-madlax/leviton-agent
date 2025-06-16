@@ -1,0 +1,2570 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T23:21:57.288753",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B002DNG3EE",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3VJ1VTOSGMMOS",
+        "text": "Is work great for our electrician",
+        "date": "Reviewed in the United States on June 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Keep on hand",
+        "userName": "Betty Stueve",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2EBM61LTZV637",
+        "text": "Fixes led flicker 100%",
+        "date": "Reviewed in the United States on March 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fixes the led flicker",
+        "userName": "techluck",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3RNLT0FYZ77K",
+        "text": "Has a noticeable delay in turning on lights. When the switch is pressed to turn on the lights, there is a noticeable, a second or two, delay before the lights actually come on. The previous switch , which this one replaced, turned the lights on immediately, with no pause or delay. Not a real problem, just different and slightly annoying.",
+        "date": "Reviewed in the United States on March 18, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Unexpected delayed action",
+        "userName": "George Vandelay",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2ARJ0BKDLK8QB",
+        "text": "Bad flicker with two different brands of LED bulbs.",
+        "date": "Reviewed in the United States on March 16, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flicker",
+        "userName": "PCW",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3J97RKBN0HXVG",
+        "text": "Reasonable price, decent value.works fine.",
+        "date": "Reviewed in the United States on November 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good dimmer switch",
+        "userName": "Lawrence Prince",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R286ENSDCGI8JP",
+        "text": "Although stated it’s LED compatible but it flickers. Very annoying",
+        "date": "Reviewed in the United States on November 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flickers",
+        "userName": "A.B",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R39OISBU41OSCZ",
+        "text": "This switch does a really good job of dimming the old time hunter fans and lights. And, once you get them to that perfect brightness, just push it to turn things off or back on again. It remembers where the lights were dimmed, so they come back on at that same brightness.",
+        "date": "Reviewed in the United States on November 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dims the fan and lights too",
+        "userName": "Phil Jones",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R251M7PRA3HRR0",
+        "text": "Works as described and easy to install",
+        "date": "Reviewed in the United States on November 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Al19945",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RL1X8TR1D84V1",
+        "text": "Exactly what I needed to replace an old one that went out. Easy to install!!!",
+        "date": "Reviewed in the United States on October 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "GE light dimmer switch",
+        "userName": "Teri E. Shaver",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RA3NT6U1N8O5D",
+        "text": "After installing this product according to the instructions, we still have LED flickering. Very disappointed",
+        "date": "Reviewed in the United States on August 27, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Still flickering",
+        "userName": "Nancy",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1A1QQG5157YCW",
+        "text": "The screw holes do not lineup well with other plates, especially if there are multiple light switches in one faceplate. It took me a really long time and I had to stretch it to make it work. The dimmer works all right for vintage LED with filament… flickers a little no matter how much you adjust.",
+        "date": "Reviewed in the United States on August 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Doesn’t fit well",
+        "userName": "Ndya Howard",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R14IKXCYJKZZ3N",
+        "text": "I tested the switch with an ohm meter and at first I thought it was broken. No continuity between any of the poles. Hooked it up and switched it quickly on and off. didn't seem to work. Then I realized there must be some built-in electronics because there is a one second delay between switching it on and the lights turning on. Used incandescent lights. Once one gets used to that it works fine otherwise. Maybe electronics is the way they all are nowadays. That's probably why they are all more pricy that 2-way switches. My old switch has stranded pigtails that made it easy to hook up with wire nuts, This one has holes to insert the wires and screws to tighten them down. The wires come loose very easily so you really need to tighten those screws EXTREMELY tight.",
+        "date": "Reviewed in the United States on July 5, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works differently from the older models",
+        "userName": "Paul",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R361EWAJEMOYBU",
+        "text": "I used this to replace a 3 way light dimmer switch that I blew up when reinstalling a ceiling fan that was not installed properly. I had the Ends of the wires capped off but the wire had some insulation missing that I also had to repair. SWITCH was simple. But the Ceiling fan had to have the mounting box installed from the attic. We all know how much fun that was ! But in the end the fan is sturdy and the light has a 3 way with dimmer.",
+        "date": "Reviewed in the United States on June 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It just works.",
+        "userName": "Dan",
+        "numberOfHelpful": 2,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2YVX5U27MATOM",
+        "text": "I BOUGHT BOTH THESE RHEOSTATS TO REPLACE TWO IN MY HOME. FOOLISH ME I THOUGHT THEY WOULD HAVE CONNECTING WIRES BUT THEY DID NOT! THE SCREWS IN THE RHEAOSTATS WON'T SCREW IN OUT IN ORDER TO CONNECT TO THE WIRES IN THE BOX SO THEY ARE USELESS! I'M NOT IN THE POSITION TO RETURN THEM SO A WASTE OF MONEY AND A HUGE WASTE OF AN HOUR OF MY LIFE!",
+        "date": "Reviewed in the United States on June 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "NEVER, EVER AGAIN!",
+        "userName": "Geno",
+        "numberOfHelpful": 2,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2EO7RQBB4YOVE",
+        "text": "Handles 6, 15W LED bulbs with ease. Solidly built. Doesn’t dim as low as I would like. Admittedly this could be the bulbs. Also, the power on delay is uncomfortably long. Work around is to simply dim the lamps fully to off rather than turning off the switch. Not an option I like. I’m using this dimmer in single and three-way applications. Love the 3-way functionality - dimmer maintains setting even when I turn my room light off or on by a different switch.",
+        "date": "Reviewed in the United States on June 20, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "A Robust Dimmer",
+        "userName": "Forteleza",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2HY39J9NIQNKU",
+        "text": "The item seems okay except there is a 1 to 2 second delay between tapping to turn on lights and the lights actually lighting up. Don’t know the cause, seems safe enough have been using for a couple of months now.",
+        "date": "Reviewed in the United States on June 2, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Okay with delay in lighting",
+        "userName": "Steven W Fox",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3POAT7YSJG2LY",
+        "text": "Works as it should",
+        "date": "Reviewed in the United States on May 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "As advertised",
+        "userName": "Steve Millican",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R8PY8ME3U8FEP",
+        "text": "Liked it. Easy to install.",
+        "date": "Reviewed in the United States on May 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy",
+        "userName": "Charles Carter",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3N658GDUYTAAY",
+        "text": "My living room lights were AGGRESSIVE at night so a dimmer switch was essential. I like this one because it can dial down or push off. I will say there is a very slight delay when you click it on or off, but you get used to it. Seems sturdy and fit nicely into my existing outlet.",
+        "date": "Reviewed in the United States on April 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does exactly what it's supposed to do",
+        "userName": "Jessica H",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1U76OZA2PUS0D",
+        "text": "Works. Mounted right up. Has a slow fade in when first switched on rather than the instant on switch I used to have prior. Works fine, just different.",
+        "date": "Reviewed in the United States on April 18, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Dimmer switch for incandescent lights.",
+        "userName": "S. Tum",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R11HFUZMB57G56",
+        "text": "This was a good replacement for my 50 year old dimmer that was getting worn out. It clicks very smoothly when you turn it on or off. It works with the three way wiring that the lights were wired for and fit my conduit box as well. I am very happy with this switch.",
+        "date": "Reviewed in the United States on April 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smooth working switch.",
+        "userName": "Jim logan",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RMAG4J2RARXCG",
+        "text": "Had to buy a new dimmer because the old one's spring got stuck. I like this one better because it feels better when you turn the knob and click it on and off.",
+        "date": "Reviewed in the United States on April 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "Candice",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R22PW6G9UKY20I",
+        "text": "I bought this to replace a worn-out dimmer switch of the same type. But this one has a 1 to 2 second delay when turning on the light. Long enough to question if it actually clicked on or not. For the first couple days after installing it, I would click it on, pause, then click it again, thinking maybe it didn't work the first time (which would switch it off again). Now I just click it and stand by it shaking my head in anger in the poor craftsmanship of the switch until it finally comes on. It's very aggravating. But it turns off instantly. It's only an issue when turning it on. The old switch didn't do that. The old switch also had a lot more dimming range too. I already knew to never buy a GE appliance, because they only last 4 years tops, but I figured General ELECTRIC would be an ok brand for electric components. It is substantially an all around lesser quality craftsmanship than Leviton dimmer switches. I don't expect it to last even a year (the Leviton switch that it replaced was 12 years old). Plus the knobs that were included were totally different than the ones in the picture, which isn't a big deal, but worth mentioning. I gave it 2 stars instead of 1 because it is a semi-functional device, but it is a very cheaply made switch that I would not recommend wasting your money on. Spend the extra few dollars and get the far superior Leviton switch instead.",
+        "date": "Reviewed in the United States on March 20, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Has a 1 to 2 second delay when turning on.",
+        "userName": "Chaz",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2K32RBODBKKFE",
+        "text": "You don't get the same product as you see in the photo with the wires. You get a different version with screws. I take off 2 stars as the info and photo are not what you get... different product. It seems to work fine, but you don't get what you pay for. I didn't take a photo, it's already in the wall.",
+        "date": "Reviewed in the United States on March 17, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good product, seems to work, definitely not as shown as others have said",
+        "userName": "Adeezl",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1B86SVQJCJJPL",
+        "text": "I got three of these. None of them go to full brightness plus each one has a 1 or 2 second delay. I removed and put others back in.",
+        "date": "Reviewed in the United States on February 22, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Doesn't light up bright",
+        "userName": "Sharon Freeman",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R39921U4B3R4I",
+        "text": "In the late 60s and early 70s, dimmer switches were new technology. I had one that lasted wellinto the 2000s. This is to replace one that went bad. There are screws on either side that can be used to loop the wires around. Neither could be loosened OR tightened. There are slots in the back that also can be used to fasten the wires, but there is no way to lock the wires into the slots. The face is also not recessed, so the cover plate sits proud of the wall. I was disappointed in the design and engineering of this switch. When I turned it on, the bulbs began blinking. I don't know if I got a defect or if this is the way they all are. Either way, It isn't working correctly.",
+        "date": "Reviewed in the United States on February 20, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "They Just Don't Make 'Em The Way They Used To!",
+        "userName": "Anthony C. Guy",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1ZBHPGHPYPCT8",
+        "text": "Seconds delay going from off to on. Irritating. Makes no sense! Who wants that?",
+        "date": "Reviewed in the United States on January 16, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Slow to turn on",
+        "userName": "Ikivoniki",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3T9W6M4S5VQML",
+        "text": "Worked",
+        "date": "Reviewed in the United States on January 9, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Brian",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RVKBDQV4FD409",
+        "text": "Installed and would not work , removed and ordered different one",
+        "date": "Reviewed in the United States on January 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Did not work",
+        "userName": "Debra bradley",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1YAJTQP0IZVAJ",
+        "text": "We absolutely HATE this switch. There is a noticeable delay when you push it on, long enough to make someone think the light is not working at all. Horribly designed circuitry. Will never buy this again. UPDATE: Purchased a LEVITON Trimatron rotary dimmer switch (https://a.co/d/7j02cDp) and it has NO DELAY! Returning the GE switch tomorrow.",
+        "date": "Reviewed in the United States on December 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Long Delay turning on lights. Do not buy!",
+        "userName": "rabble58",
+        "numberOfHelpful": 5,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RO23V8XBKN5Q7",
+        "text": "Not the same switch that is advertised. did not have wire leads on it. Comes on slow like. Car interior light.",
+        "date": "Reviewed in the United States on December 5, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not the same as advertised",
+        "userName": "jared whitwer",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RC81B0QE9XY1P",
+        "text": "Works great with my LED bulbs, easy install. Came with white and ivory knobs.",
+        "date": "Reviewed in the United States on November 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works very well with my LED bulbs",
+        "userName": "DT2",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RGAMKY8XHRDSG",
+        "text": "Item cam in opened box and idk if it had been used or pieces missing. I returned them",
+        "date": "Reviewed in the United States on November 15, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Used",
+        "userName": "balloons88",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1TRNWCPH8C8NY",
+        "text": "Worked great to replace my old dimmer for one that works with LED bulbs",
+        "date": "Reviewed in the United States on November 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I needed",
+        "userName": "Max",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3Q1HP1ON5YY8J",
+        "text": "What I received was different than the pictures on the posting. At first I thought I received the wrong product. When I compared the UPC it was same number. Apparently, this was a cost reduction design. First this was advertised as a 3-way, multiple switch design. It turned out you can use it also for single-switch application. Just have one wire less. It does not come with the wires shown in photo's nor wire nuts. This is where it gets complicated. You have to use the wires you have in the wall and directly connect them to the new dimmer. They actually are pushed into holes and clamped in by tightening the screw terminals. In my case I only have 3 wires and different colors than shown on the dimmer switch. Didn't have a ground wire. I was able to figure out which wires go where, by looking how they were connected to old dimmer switch that had wire nuts. My house is 50 y/o so you might have a different setup. Somone has to change the pictures on posting as they will be different than the old design. Good Luck.",
+        "date": "Reviewed in the United States on October 22, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "A Bit Challenging.",
+        "userName": "oldtechuser",
+        "numberOfHelpful": 6,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R123YUGZSQVOYH",
+        "text": "Product description is clear and instructions easy to follow.",
+        "date": "Reviewed in the United States on September 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent product",
+        "userName": "Tatiana Chang",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R358K76FMDVD26",
+        "text": "The new devices do NOT have wires attached for use with screw nuts, etc. like they did a year or so ago. They have bolts on the side and bottom to attach the wires from your house to the device. If your house is like mine, those wires are extremely difficult to pull/bend (and sometimes too short) which makes installing these quite an undertaking - very tedious, time-consuming.",
+        "date": "Reviewed in the United States on September 3, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not the same devices sold 2 years ago...",
+        "userName": "BGB",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RFVZ9DDYUCL7A",
+        "text": "Exactly what I ordered. Works fine!",
+        "date": "Reviewed in the United States on September 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Product",
+        "userName": "Ken Breeden",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2TTR7KRXSOA8W",
+        "text": "Awesome dimmer works perfect!",
+        "date": "Reviewed in the United States on August 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome dimmer",
+        "userName": "albert isakov",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2SMUHAAZAJUKP",
+        "text": "It works. Nice that they included an extra dial, so you have 1 white and 1 ivory, but they do not include any plate?",
+        "date": "Reviewed in the United States on July 22, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Switch is fine. No plate?",
+        "userName": "ARC",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RZ88VTFV63R5M",
+        "text": "It has great instructions packed with the dimmer. The wires attached to it are plenty long enough for easy wiring.",
+        "date": "Reviewed in the United States on June 24, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RTHDQ1A3D9BL7",
+        "text": "Easy install, good quality",
+        "date": "Reviewed in the United States on June 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "GE 3 way dimmer",
+        "userName": "WME",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3AJ0AV6R48S24",
+        "text": "Got a pair of these for my new basement remodel. I also got 3 regular (non 3 way ones). All 5 switches make a humming/ buzzing sound when the lights are dimmed. The lights are dimmable led and the sounds comes from the switch, not the lights. The 3 way switches cannot dim less than 50% or else the lights start to strobe. Also, if you dim the one switch and go to the second switch you cannot increase the light past where the first switch is set to. Basically making the concept of a 3 way dimmer unless. I guess it's a classic case of you get what you pay for. BTW, I'm a professional maintenance worker who's train in the electrical trade. In my professional opinion these switches are junk.",
+        "date": "Reviewed in the United States on May 25, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "Jim",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3637XR3140T9T",
+        "text": "Good while it lasted. Unfortunately, it only lasted 18 months.",
+        "date": "Reviewed in the United States on April 29, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed after 18 months.",
+        "userName": "mrs bookworm",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1PP2SHJSIU7CX",
+        "text": "It’s analog and LEDs dont like it. Flickering all the time. No modes like a real digital rotary dimmer.",
+        "date": "Reviewed in the United States on March 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not really for LEDs.",
+        "userName": "JKB",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3JBHV3Z0TN6AV",
+        "text": "Replaced broken switch.",
+        "date": "Reviewed in the United States on March 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great dimmer",
+        "userName": "SB Cheek",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RFP4JOM89GN7Q",
+        "text": "Easy to install",
+        "date": "Reviewed in the United States on March 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great p!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R20EV1P5AW8KBP",
+        "text": "I tried with two different model dimmable LEDs. Model 1: Very narrow brightness range, and buzzing sound Model 2: Very narrow brigtness range, and flashing at the highest setting (i.e. it's getting overloaded). I think this is a conevntial dimmer designed before LED bulbs, with 'LED compatible' just slapped on. One thing I realize in retrospect - it should have a little wheel inside to adjust the output range, but does not.",
+        "date": "Reviewed in the United States on March 12, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Doesn't work well with dimmable LEDs",
+        "userName": "bbb0777",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R15JHVMTYGUPU7",
+        "text": "Does what it needs to do, and looks sharp doing it.",
+        "date": "Reviewed in the United States on February 18, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well, looks sharp.",
+        "userName": "Rose",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNG3EE",
+        "productTitle": "GE 3-Way Rotating Dimmer Switch, Push On/Off, Use with Dimmable LED, CFL, and Incandescent Bulbs, Includes Two Knob Colors, UL Listed, White/Light Almond, 18020",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 153,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1L3BGGCBPKVSV",
+        "text": "Good product, good $, and fast delivery. Practical and useful device.",
+        "date": "Reviewed in the United States on January 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Practical and useful device",
+        "userName": "gcb",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNG3EE",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Dimmer Knob"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

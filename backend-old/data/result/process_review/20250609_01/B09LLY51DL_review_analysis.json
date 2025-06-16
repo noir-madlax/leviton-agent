@@ -1,0 +1,454 @@
+{
+  "product_title": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Size": {
+        "A@Switch base is really big making connections difficult to fit in electrical box": {
+          "-": [
+            17,
+            33,
+            41
+          ]
+        }
+      },
+      "Appearance": {
+        "B@Simple, modern sleek look": {
+          "+": [
+            4
+          ]
+        },
+        "C@Look nice": {
+          "+": [
+            30
+          ]
+        },
+        "D@Well made complete set with cover plates and wire nuts": {
+          "+": [
+            47
+          ]
+        },
+        "E@Beautiful instrument and well manufactured": {
+          "+": [
+            26
+          ]
+        }
+      },
+      "Face plate": {
+        "F@Face plate has broken off from the switch": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "Touch interface": {
+        "G@Touch plate for dimming seems awkward - causes unintended dimming level changes": {
+          "-": [
+            35
+          ]
+        },
+        "H@Can slide finger instead of clicking for dimming": {
+          "+": [
+            13
+          ]
+        },
+        "I@Switch responds well to touch": {
+          "+": [
+            3
+          ]
+        },
+        "J@Physical dimmer feature is hit or miss - sometimes registers touch, sometimes doesn't": {
+          "-": [
+            48
+          ]
+        }
+      },
+      "Indicator light": {
+        "K@Light on switch symbol should be brighter when light is on": {
+          "-": [
+            17
+          ]
+        },
+        "L@Status light won't turn on when switch is dead": {
+          "-": [
+            15
+          ]
+        },
+        "M@Green indicator light stays on even when switch stops working": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "Wiring requirements": {
+        "N@Requires neutral wire": {
+          "+": [
+            4,
+            39,
+            40,
+            47
+          ]
+        },
+        "O@Extra pigtails and wire nuts create room issues in electrical box": {
+          "-": [
+            18,
+            41
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@Easy to install": {
+          "+": {
+            "A": [
+              2,
+              3,
+              4,
+              5,
+              9,
+              14,
+              36,
+              37,
+              39,
+              42,
+              44,
+              47,
+              48,
+              49
+            ]
+          }
+        }
+      },
+      "Dimming capability": {
+        "b@Not 1-100 percent dimming as advertised - LED light still insanely bright at lowest setting": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@Dimmest setting not particularly dim - still quite bright": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "d@Don't dim lights far enough down": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "e@Allows dimming to 6% which is excellent": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "f@Very adjustable - can turn brightness up or down by as little as 1%": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "g@Will not dim by voice command - only manually": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "h@Dimmer wouldn't dim with existing non-dimmable lightbulbs": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "i@Stopped functioning after 1 month": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "j@3 out of 4 will not re-pair in less than a year": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "k@One switch stops working after couple of days": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "l@Dies within months - had 3 die in a year": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "m@Failed in less than 6 months": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "n@Keep failing - switches stop working": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "o@Several failed within 6 months, 50% gone in 20 months": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "p@Two of four switches failed in less than a year": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "Overheating": {
+        "q@Keeps turning off after 15 min when dimmed 100% due to overheating": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "Connectivity": {
+        "r@Easy to connect to Alexa": {
+          "+": {
+            "?": [
+              3,
+              13,
+              42,
+              44,
+              46,
+              48,
+              49
+            ]
+          }
+        },
+        "s@Works well with Google": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "t@None would program to work remotely": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "u@No longer works with Alexa as of 2023": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "v@Lost Wi-Fi connection": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "w@Had trouble registering to simultaneous dual band wifi until using dedicated 2.4GHz band": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "Response time": {
+        "x@Delay before turning on or off when pressing physical button": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "Timer function": {
+        "y@Timer doesn't allow dimming": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "Switch function": {
+        "z@Switch function is super easygoing": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "aa@Works great": {
+          "+": {
+            "?": [
+              0,
+              12,
+              14,
+              16,
+              25,
+              39,
+              43,
+              45
+            ]
+          }
+        },
+        "ab@Functions well": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home automation with Alexa": {
+        "+": {
+          "r": [
+            2,
+            3,
+            5,
+            9,
+            12,
+            39,
+            42,
+            44,
+            46,
+            47,
+            48,
+            49
+          ]
+        },
+        "-": {
+          "u": [
+            32
+          ]
+        }
+      },
+      "Home automation with Google": {
+        "+": {
+          "s": [
+            2,
+            24,
+            43,
+            45
+          ]
+        }
+      },
+      "Kids' rooms for remote light control": {
+        "+": {
+          "aa": [
+            5
+          ]
+        }
+      },
+      "Kitchen lighting": {
+        "+": {
+          "aa": [
+            12,
+            48
+          ]
+        }
+      },
+      "Bathroom lighting": {
+        "+": {
+          "aa": [
+            12
+          ]
+        }
+      },
+      "LED high hats": {
+        "+": {
+          "c": [
+            13
+          ]
+        },
+        "-": {
+          "c": [
+            13
+          ]
+        }
+      },
+      "Basement rooms": {
+        "+": {
+          "aa": [
+            43
+          ]
+        }
+      },
+      "Hallway and dining room with multi-switch outlets": {
+        "-": {
+          "?": [
+            45
+          ]
+        }
+      },
+      "Special halogen lighting that can't be changed to smart bulbs": {
+        "+": {
+          "aa": [
+            39
+          ]
+        }
+      },
+      "Upgrading existing light switches": {
+        "+": {
+          "a": [
+            42
+          ]
+        }
+      },
+      "Early morning routines at minimum brightness": {
+        "+": {
+          "f": [
+            48
+          ]
+        }
+      },
+      "Remote control from another room via app": {
+        "+": {
+          "ab": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:37.424008"
+}

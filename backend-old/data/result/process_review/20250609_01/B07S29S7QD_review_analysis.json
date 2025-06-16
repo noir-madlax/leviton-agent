@@ -1,0 +1,473 @@
+{
+  "product_title": "BESTTEN 2 Pack Dimmer Light Switch, Universal Lighting Control, Single Pole or 3 Way, Compatible with LED Dimmable Lamp, CFL, Incandescent, Halogen Bulb, Decorator Wallplate Included, UL Listed, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "Slider": {
+        "A@Tiny slider at the bottom of the switch paddle": {
+          "+": [
+            0
+          ]
+        },
+        "B@Sharp slider dial that can hurt when touched": {
+          "-": [
+            5
+          ]
+        },
+        "C@Easy slide mechanism": {
+          "+": [
+            7
+          ]
+        },
+        "D@Dimmer slider with adjustable positions": {
+          "-": [
+            9,
+            16
+          ]
+        },
+        "E@Dimmer gets stuck slightly on minimum position": {
+          "-": [
+            12
+          ]
+        },
+        "F@Dimmer slide button stands too prominent from switch face": {
+          "-": [
+            31
+          ]
+        },
+        "G@Dimmer bar with halfway position": {
+          "-": [
+            37
+          ]
+        },
+        "H@Slider with halfway position": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "Switch Paddle": {
+        "I@Switch paddle component": {
+          "+": [
+            0
+          ]
+        },
+        "J@Switch paddle with poor plastic finish that scratches easily": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "Color/Appearance": {
+        "K@Very bright white color compared to existing switches": {
+          "-": [
+            3
+          ]
+        },
+        "L@Nice bright white color": {
+          "+": [
+            7
+          ]
+        },
+        "M@Bright white color as expected": {
+          "+": [
+            34
+          ]
+        },
+        "N@Sleek, low-profile design that looks clean and modern": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "Construction": {
+        "O@Light construction but with some durability": {
+          "+": [
+            34
+          ]
+        },
+        "P@Very well made construction": {
+          "+": [
+            35
+          ]
+        },
+        "Q@Switch cracks/breaks after 8 months to a year": {
+          "-": [
+            15
+          ]
+        },
+        "R@Switches broke in half": {
+          "-": [
+            19
+          ]
+        },
+        "S@Switch broke mechanically from normal use": {
+          "-": [
+            40
+          ]
+        },
+        "T@Broke after 3 months with minimal use": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "Plate": {
+        "U@Small size plate that doesn't cover original switch area": {
+          "-": [
+            18
+          ]
+        },
+        "V@Switch plate cover with poor plastic finish": {
+          "-": [
+            17
+          ]
+        },
+        "W@Includes faceplate": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "Adjustment Knob": {
+        "X@Adjustment knob in front for controlling minimum brightness": {
+          "+": [
+            12
+          ]
+        },
+        "Y@Fine tuning wheel available": {
+          "+": [
+            43
+          ]
+        }
+      },
+      "Wiring": {
+        "Z@Three or four wire capability for 3-way or single pole install": {
+          "+": [
+            17
+          ]
+        },
+        "AA@Includes plastic tie off caps": {
+          "+": [
+            12
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@Quick and easy installation": {
+          "+": {
+            "?": [
+              0,
+              6,
+              13,
+              14,
+              34,
+              35,
+              44,
+              47
+            ]
+          }
+        },
+        "b@Straightforward installation instructions": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@Simple to install and versatile": {
+          "+": {
+            "Z": [
+              17,
+              34
+            ]
+          }
+        },
+        "d@Easy install that works without issue": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "Dimming Performance": {
+        "e@Works perfectly with smooth dimming": {
+          "+": {
+            "?": [
+              0,
+              6
+            ]
+          }
+        },
+        "f@Will not dim all the way to off or near it": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "g@Smooth dimming with no flicker": {
+          "+": {
+            "?": [
+              6,
+              13
+            ]
+          }
+        },
+        "h@Dims only about 30% of light output": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "i@Excellent dimming performance": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "j@Works perfectly over entire dimming range without flicker": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "Flickering Issues": {
+        "k@Constant flickering from connected lights": {
+          "-": {
+            "?": [
+              8,
+              9,
+              11,
+              16,
+              21,
+              39,
+              41
+            ]
+          }
+        },
+        "l@No flicker at all with proper bulbs": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "m@Lights flicker when dimmed all the way": {
+          "-": {
+            "D": [
+              16
+            ]
+          }
+        },
+        "n@Lights blink off and on at halfway position": {
+          "-": {
+            "H": [
+              42
+            ]
+          }
+        }
+      },
+      "LED Compatibility": {
+        "o@Not compatible with LED lights": {
+          "-": {
+            "?": [
+              3,
+              32
+            ]
+          }
+        },
+        "p@Works perfectly with LED and incandescent bulbs": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "q@Works with dimmable LED bulbs": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "r@Works perfectly with LED fixtures": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "s@Works great for 8 months to a year then breaks": {
+          "-": {
+            "Q": [
+              15
+            ]
+          }
+        },
+        "t@Failed after 2 weeks": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "u@Failed after several months": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "v@One switch defective out of two": {
+          "-": {
+            "?": [
+              29,
+              46
+            ]
+          }
+        },
+        "w@Switch broke after one month": {
+          "-": {
+            "S": [
+              40
+            ]
+          }
+        },
+        "x@Broke after 3 months": {
+          "-": {
+            "T": [
+              26
+            ]
+          }
+        }
+      },
+      "Functionality Issues": {
+        "y@No light when turned on at less than halfway": {
+          "-": {
+            "G": [
+              37
+            ]
+          }
+        },
+        "z@Dimmer doesn't work at all": {
+          "-": {
+            "?": [
+              20,
+              24,
+              25,
+              27,
+              33
+            ]
+          }
+        },
+        "aa@Finger brushes dimmer when turning off, changing brightness": {
+          "-": {
+            "F": [
+              31
+            ]
+          }
+        },
+        "bb@Gets stuck on minimum position when adjusting": {
+          "-": {
+            "E": [
+              12
+            ]
+          }
+        }
+      },
+      "Sound Issues": {
+        "cc@Hums during operation": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Hallway lighting with bright multi-LED discs": {
+        "+": {
+          "a, e": [
+            0
+          ]
+        }
+      },
+      "Kitchen lighting for mood setting": {
+        "-": {
+          "f": [
+            1
+          ]
+        }
+      },
+      "House flip or rental property": {
+        "+": {
+          "?": [
+            2
+          ]
+        }
+      },
+      "Rooms with LED lights": {
+        "-": {
+          "o": [
+            3
+          ]
+        }
+      },
+      "Guest bathroom lighting": {
+        "-": {
+          "aa": [
+            31
+          ]
+        }
+      },
+      "Home ambiance upgrade": {
+        "+": {
+          "g, p": [
+            13
+          ]
+        }
+      },
+      "Bathroom lighting for morning and bedtime": {
+        "+": {
+          "?": [
+            14
+          ]
+        }
+      },
+      "Kitchen ceiling with six recessed LED fixtures": {
+        "+": {
+          "j": [
+            43
+          ]
+        }
+      },
+      "Living room with four recessed LED fixtures": {
+        "+": {
+          "j": [
+            43
+          ]
+        }
+      },
+      "Recessed ceiling lights": {
+        "-": {
+          "h": [
+            23
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:01.633449"
+}

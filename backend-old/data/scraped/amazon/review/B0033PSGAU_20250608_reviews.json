@@ -1,0 +1,2443 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:56:36.482967",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0033PSGAU",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0033PSGAU",
+    "title": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 11.2,
+    "rating": 4.6,
+    "reviews_count": 662.0,
+    "category": "Light Switches",
+    "product_segment": "Multi-Function Combination Switches",
+    "product_url": "https://www.amazon.com/dp/B0033PSGAU"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RQYMKNDUNEOUJ",
+        "text": "yeah",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "works",
+        "userName": "Jeffery Bell",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1MGO6TNPE92PD",
+        "text": "Light switch works fine, installed it easily. It comes it the amazon bubble mailer nothing else as pictured here. One star less for no product box or other padding.",
+        "date": "Reviewed in the United States on April 27, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Fine",
+        "userName": "dolphin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71R+LJFqytL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71SlI65uoaL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R27IV247QAFM3J",
+        "text": "Only one of the two switches worked and was delivered loose in an amazon bag without original package",
+        "date": "Reviewed in the United States on January 6, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "loose",
+        "userName": "Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R298AENH4KFOGA",
+        "text": "Worked great",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what was pictured",
+        "userName": "Mark Kostovny",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3FCDP72M4JIQ8",
+        "text": "Great!",
+        "date": "Reviewed in the United States on November 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly what I needed",
+        "userName": "Blessed",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2LDTYRVXCN0L",
+        "text": "worked well",
+        "date": "Reviewed in the United States on November 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "good product",
+        "userName": "JPT",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RJHM079STRC4T",
+        "text": "After watching a few YouTube videos, I just wired it the way the previous switch was wired as I had 3 black wires. No wires were color coded which would had helped immensely. Anyway , it fixed the issue and the lights work again!",
+        "date": "Reviewed in the United States on October 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Let there be light!",
+        "userName": "keri m",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RH8O24IS3SYC1",
+        "text": "Didn't work. Total junk",
+        "date": "Reviewed in the United States on June 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Trash",
+        "userName": "J",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3COCSE8TPRU3U",
+        "text": "Working as intended",
+        "date": "Reviewed in the United States on May 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Working as intended",
+        "userName": "David B. Kleiser",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RTWS022I0AKI2",
+        "text": "Ordered \"white\", received \"almond\"...not the end of the world. My neighbor, an actual electrician, offered to replace existing broken switch for me...both switches turn both lights on, no separation of function.",
+        "date": "Reviewed in the United States on May 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't work",
+        "userName": "Pat Chief",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2WNJDFXJ1LUSL",
+        "text": "Fine switch",
+        "date": "Reviewed in the United States on March 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good",
+        "userName": "KelSco",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2F6UL3JBBQE07",
+        "text": "Just what was needed to complete the fix!",
+        "date": "Reviewed in the United States on February 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Done",
+        "userName": "DivemanG",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R36I5J3UCZHHBL",
+        "text": "Easy to install (especially if you call \"the guy\". Works as it's intended.",
+        "date": "Reviewed in the United States on December 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "I have light again",
+        "userName": "Ed Kreczko",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RVGPN2L3O6NR1",
+        "text": "Like it fine and product works great.",
+        "date": "Reviewed in the United States on December 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product, works great.",
+        "userName": "Randy Graham",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2AZW4TB8NRNRU",
+        "text": "worked great and I didn't have to go to store so a win win",
+        "date": "Reviewed in the United States on October 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "worked great",
+        "userName": "edmocon",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RI8XOZ6JX2DQ5",
+        "text": "-I installed this over a month ago, and it seem to be working very well as of now!",
+        "date": "Reviewed in the United States on September 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well!",
+        "userName": "SAM",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R31QB8PP2CQBXO",
+        "text": "We ordered these to redo all the outlets on our main floor. Great quality and very white. Perfect value for the money.",
+        "date": "Reviewed in the United States on September 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Redoing all our outlets, covers, and switches",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RL855G9MAFIKF",
+        "text": "Muy útil y buena calidad",
+        "date": "Reviewed in the United States on September 1, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Compra util",
+        "userName": "Lizam",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R25KR53TGOWG68",
+        "text": "good quality, easy to replace. Replaced older broken piece. It took 25 min.",
+        "date": "Reviewed in the United States on July 18, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "good quality, easy to replace",
+        "userName": "Alik Epelman",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R22L1DND34Y4Y",
+        "text": "Easy way to separate bath light/fan on single switch.",
+        "date": "Reviewed in the United States on July 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality product",
+        "userName": "D",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R30OWPRC3SFTBO",
+        "text": "Awesome",
+        "date": "Reviewed in the United States on April 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome",
+        "userName": "G.D.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RDI0QB3DNDOP7",
+        "text": "I matched the light switch in the wall to the pictures of this light switch on Amazon. And it worked exactly as it should have. (I had bought a double light switch locally, that was similar, but it didn’t work properly). This light switch worked.",
+        "date": "Reviewed in the United States on April 24, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked exactly as it should have.",
+        "userName": "Ken",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3EVSNXGR5AU0Q",
+        "text": "Better price than the big box stores, good quality, and it was delivered to our front step! What more can you ask for?",
+        "date": "Reviewed in the United States on April 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good price Good product",
+        "userName": "April Cline Jones",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R28S1K653WOENG",
+        "text": "I thought this one was to be a quiet off and on switch but it was not, but it works for now.",
+        "date": "Reviewed in the United States on April 2, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "It it a light switch and it was not a quiet one.",
+        "userName": "LYLE (Muley)",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RRAP2ATLGD794",
+        "text": "I installed this light switch very easily. It functions very smoothly! Love it!",
+        "date": "Reviewed in the United States on March 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great quality light switch",
+        "userName": "Spencer K",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ZFRDJYBXB4PP",
+        "text": "solid product",
+        "date": "Reviewed in the United States on February 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "durability",
+        "userName": "f. miller",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1X7QR0RBXO2F",
+        "text": "Bought this double switch combo for my lighting project and worked out just great. Delivery was very quick. Overall happy with the results.",
+        "date": "Reviewed in the United States on January 24, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as expected.",
+        "userName": "Marilyn221",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/618-zvEzeyL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2KHKE7EBXPK69",
+        "text": "Not much to say except that it works as intended. I picked Leviton because it is a known brand & I've used their product.",
+        "date": "Reviewed in the United States on January 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Quality",
+        "userName": "CB",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2UONQVJ93F969",
+        "text": "Its a switch that is easy to install.",
+        "date": "Reviewed in the United States on January 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Switch",
+        "userName": "Gerald",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2001J046N7UJH",
+        "text": "My last switch prog snapped off. I ordered this one worked great and was easy to replace my only gripe is it is kind of stiff but I'm assuming its cause its new. The packaging was just a envelope no protection at all, lost another star for that. Mine wasn't damaged but it could happen. Came very fast and no other issues.",
+        "date": "Reviewed in the United States on December 31, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked great a little stiff",
+        "userName": "Frank",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R140C0ETRR7Y9W",
+        "text": "Bought to replace a switch that had been getting stuck for a while, and this was the perfect replacement. Great product.",
+        "date": "Reviewed in the United States on October 29, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked perfectly.",
+        "userName": "C. J. Vazquez",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1IKQNUWILPMD1",
+        "text": "Ea$y to install replacement.",
+        "date": "Reviewed in the United States on August 19, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice Prime pricè",
+        "userName": "Judge Dean",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3T3VD05KMTCNM",
+        "text": "Worked out",
+        "date": "Reviewed in the United States on July 30, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "What we needed",
+        "userName": "lydia vereide",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2AUFBNR1VHZYA",
+        "text": "Good price. Fast delivery",
+        "date": "Reviewed in the United States on June 23, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good",
+        "userName": "Vladimir Guyvoronsky",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1OXVZVHS2ST7A",
+        "text": "Seems like high quality and was easy to install.",
+        "date": "Reviewed in the United States on May 24, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice",
+        "userName": "road glide",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R22FCAOCO5VSHI",
+        "text": "The description claims it's white, but I was sent beige. No screws.",
+        "date": "Reviewed in the United States on April 19, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "It's not white.",
+        "userName": "Tara Deon",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3G8G4J2D7BHL5",
+        "text": "Worked great. Replaced similar switches installed 50 years ago. I had never seen these before so was thrilled to find replacements.",
+        "date": "Reviewed in the United States on February 19, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Two switches in the space of one.",
+        "userName": "Kelley’s",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2YO1FVHJBBM58",
+        "text": "Very cheap feeling switch. Actuation isn't snappy, extremely mushy feeling, and very sharp edges on plastic. Easy to install, but only offers the screw terminals instead of the slot type termination. All in all, it serves its purpose, but for the price I wish it were a little nicer feeling.",
+        "date": "Reviewed in the United States on January 13, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works, but feels cheap",
+        "userName": "Nathan M",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3KE8HYVF4OQ93",
+        "text": "Easy install works great.",
+        "date": "Reviewed in the United States on January 5, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "Pmizerf",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1GG6FL2VCHHLM",
+        "text": "It is a nice replacement switch.",
+        "date": "Reviewed in the United States on January 4, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fits on a single gang box or ring.",
+        "userName": "Robert Belli",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1H9TB4OEYBCCB",
+        "text": "convenience",
+        "date": "Reviewed in the United States on December 21, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "availability",
+        "userName": "B.Y.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R26G28WPVVON8N",
+        "text": "Had to search far and wide to find a single-gang, double switch that was \"industrial\" grade with the thick switches. This has normal size switches. I use the Lutron Aurora which clamps onto the switch as a dimmer for smart bulbs, and almost all of the switches I came across would be too thick for the Aurora to work. Happy this one works.",
+        "date": "Reviewed in the United States on December 18, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with Lutron Aurora",
+        "userName": "quentin",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61Nh1Pnb5ML._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1PU9HXO54U3TO",
+        "text": "The actuators look and feel a bit cheap. Cheaper/weaker looking plastic, sharp corners on actuator, and action is sticky on one of the switches. Surprised this is from Leviton!?",
+        "date": "Reviewed in the United States on November 13, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works fine but not smooth action.",
+        "userName": "Slkjmpr",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RJOB3XXPFP7EM",
+        "text": "Only had room for 3 switches and couldn't cut into the wall since it was tiled. Purchased this dual switch so I could add another light in the bathroom. Worked out great and the switch uses the same plate style as an outlet.",
+        "date": "Reviewed in the United States on September 24, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great space saver",
+        "userName": "cruiseaddicttp",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1O9JVIWX1QJD",
+        "text": "Great product. Shipping was a nightmare! Nearly 1 month. But, that being said, customer support was great.",
+        "date": "Reviewed in the United States on February 20, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great switch",
+        "userName": "Bro bro",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1J3XCOTL0QRG2",
+        "text": "Works fine; replaced a broken one",
+        "date": "Reviewed in the United States on February 10, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "it's a switch all right!",
+        "userName": "jvinIowee",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R31P4PDQF2FF3Y",
+        "text": "Received wrong product - twice! Should be duplex switch, got duplex receptacle labeled as a switch.",
+        "date": "Reviewed in the United States on July 2, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Receptacle, not switch",
+        "userName": "Todd",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ZQ4XCID54CQP",
+        "text": "This switch was a perfect replacement of the 10 year old one we had. Just what was needed. (Had previously bought a different brand but that didn't quite fit.) Thanks!",
+        "date": "Reviewed in the United States on June 27, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Replacement Switch",
+        "userName": "Allison E. Faulkner",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2C1C25P2SZ7GC",
+        "text": "Great value and easy to install!",
+        "date": "Reviewed in the United States on February 11, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Value",
+        "userName": "Randy Hogin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGAU",
+        "productTitle": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 65,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 663,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RYPR5U6X94Y1P",
+        "text": "Works great",
+        "date": "Reviewed in the United States on January 25, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "Richyrich7777",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

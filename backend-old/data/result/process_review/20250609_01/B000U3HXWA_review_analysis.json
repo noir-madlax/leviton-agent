@@ -1,0 +1,309 @@
+{
+  "product_title": "Leviton 5691-2W 15 Amp, 120/277 Volt, Decora Plus Rocker Single-Pole AC Quiet Switch, Commercial Grade, White",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "Brand stamp/logo": {
+        "A@Vendor name stamped into the plate": {
+          "-": [
+            0,
+            11,
+            19,
+            31,
+            33,
+            36
+          ]
+        }
+      },
+      "Construction": {
+        "B@Solid construction": {
+          "+": [
+            1,
+            3,
+            15,
+            27,
+            37,
+            38
+          ]
+        },
+        "C@Heavy duty frame": {
+          "+": [
+            15
+          ]
+        },
+        "D@Beefier construction than residential switches": {
+          "+": [
+            15
+          ]
+        },
+        "E@Heavy duty contacts": {
+          "+": [
+            15
+          ]
+        },
+        "F@Heavier weight 76g vs residential 47g": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "Color": {
+        "G@Shadow of white but not entirely white": {
+          "-": [
+            8
+          ]
+        },
+        "H@Color slightly off from Luton switch": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "Wiring design": {
+        "I@Made for back wiring": {
+          "+": [
+            25
+          ]
+        },
+        "J@Screws do not go back in once removed": {
+          "-": [
+            25,
+            41
+          ]
+        },
+        "K@Only accommodates one wire per connection": {
+          "-": [
+            30
+          ]
+        }
+      },
+      "Appearance": {
+        "L@Modern and clean look": {
+          "+": [
+            13,
+            32
+          ]
+        },
+        "M@Sleek looking": {
+          "+": [
+            32
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Sound level": {
+        "a@Quiet operation": {
+          "+": {
+            "B": [
+              2,
+              5,
+              20,
+              27,
+              30,
+              34,
+              37
+            ]
+          }
+        },
+        "b@Not silent": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@Loud click, louder than residential version": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "d@No clicking sound": {
+          "+": {
+            "B": [
+              15
+            ]
+          }
+        }
+      },
+      "Tactile feedback": {
+        "e@Soft switch feel": {
+          "-": {
+            "?": [
+              6,
+              8
+            ]
+          }
+        },
+        "f@No distinct click feedback": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "g@Requires firm press": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "h@Mushy feel": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "i@Softer solid sounding click": {
+          "+": {
+            "B": [
+              27
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "j@Should last more than 10k cycles": {
+          "+": {
+            "F": [
+              3
+            ]
+          }
+        },
+        "k@Long lasting 25+ years": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "l@Works perfectly": {
+          "+": {
+            "?": [
+              5,
+              18,
+              42
+            ]
+          }
+        },
+        "m@Solid function and contact": {
+          "+": {
+            "B": [
+              10
+            ]
+          }
+        },
+        "n@Sometimes does not move switch when pressed": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "Cleanability": {
+        "o@Difficult to clean": {
+          "-": {
+            "A": [
+              0,
+              11
+            ]
+          }
+        },
+        "p@Collects dirt and grime": {
+          "-": {
+            "A": [
+              0,
+              11
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Kitchen lighting": {
+        "+": {
+          "B": [
+            1
+          ],
+          "?": [
+            23
+          ]
+        }
+      },
+      "Bathroom lighting": {
+        "+": {
+          "m": [
+            10
+          ],
+          "?": [
+            45
+          ]
+        }
+      },
+      "Bedroom lighting": {
+        "-": {
+          "c": [
+            12
+          ]
+        }
+      },
+      "Office lighting": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "High use applications": {
+        "+": {
+          "j": [
+            3
+          ]
+        }
+      },
+      "Replacing residential grade switches": {
+        "+": {
+          "B,d": [
+            15
+          ],
+          "a": [
+            21
+          ],
+          "D": [
+            38
+          ]
+        }
+      },
+      "Matching Decora smart switches": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "New light fixture installation": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "Three-way switch application": {
+        "+": {
+          "?": [
+            14
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:24.431597"
+}

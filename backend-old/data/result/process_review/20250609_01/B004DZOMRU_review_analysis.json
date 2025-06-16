@@ -1,0 +1,265 @@
+{
+  "product_title": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150W/Single-Pole or 3-Way, DVSCCL-153P-BI, Biscuit",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 15,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@switch is huge behind the faceplate, like 4 times the size of a simple switch": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "heat_sink": {
+        "B@has little metal heat sink fins on the sides": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "wiring_system": {
+        "C@uses 4 wire pigtails instead of screw terminals": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "appearance": {
+        "D@matte finish in color biscuit is classic, elegant": {
+          "+": [
+            11
+          ]
+        },
+        "E@color is a good match for walls": {
+          "+": [
+            12
+          ]
+        },
+        "F@plates don't show screw heads, which improves appearance": {
+          "+": [
+            12
+          ]
+        },
+        "G@item is scratched": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "backlighting": {
+        "H@not back lit": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "button": {
+        "I@having to hold the button so long when you want the light to go 1/2 way on": {
+          "-": [
+            2
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation_difficulty": {
+        "a@not easy to get into the wall box": {
+          "-": {
+            "A": [
+              6
+            ]
+          }
+        },
+        "b@getting the switch wired and into the box very difficult": {
+          "-": {
+            "A,C": [
+              6
+            ]
+          }
+        },
+        "c@easy to install": {
+          "+": {
+            "?": [
+              1,
+              8
+            ]
+          }
+        }
+      },
+      "interference": {
+        "d@heat sink fins can interfere with adjacent switches": {
+          "-": {
+            "B": [
+              6
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "e@works perfect": {
+          "+": {
+            "?": [
+              2,
+              5
+            ]
+          }
+        },
+        "f@didn't dim very far initially": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "g@dims to almost no light with proper bulbs": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "h@works as expected": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "i@works very well": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "j@works perfectly": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "k@wasn't working at all": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "l@works as advertised": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "control_quality": {
+        "m@easy to control": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "durability": {
+        "n@been 6 months and working fine": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "buzzing": {
+        "o@some of the lights started buzzing initially": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "p@no buzzing with proper LED bulbs": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_lighting": {
+        "+": {
+          "c,m": [
+            1
+          ]
+        },
+        "-": {
+          "?": [
+            3
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "dimming_incandescent_and_LED": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "can_lights_with_BR30_bulbs": {
+        "+": {
+          "g": [
+            6
+          ]
+        },
+        "-": {
+          "f,o": [
+            6
+          ]
+        }
+      },
+      "3_way_switch_installation": {
+        "+": {
+          "h": [
+            7
+          ]
+        }
+      },
+      "matching_existing_switches": {
+        "+": {
+          "l": [
+            10
+          ]
+        }
+      },
+      "whole_house_switch_replacement": {
+        "+": {
+          "D": [
+            11
+          ]
+        }
+      },
+      "modern_bulb_compatibility": {
+        "+": {
+          "?": [
+            12
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:26.881369"
+}

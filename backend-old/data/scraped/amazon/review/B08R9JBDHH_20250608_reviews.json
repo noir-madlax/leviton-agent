@@ -1,0 +1,2542 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:42:55.125733",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08R9JBDHH",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08R9JBDHH",
+    "title": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+    "brand": "TREATLIFE",
+    "model_number": NaN,
+    "price_usd": 46.99,
+    "rating": 4.2,
+    "reviews_count": 1643.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Hub-Dependent Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B08R9JBDHH"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2LIAIR8JM5DFQ",
+        "text": "I installed several of these in my house over the past few years. They all fail after a while. Some were faulty out of the box. I stopped replacing the failing one. I switched to a different brand.",
+        "date": "Reviewed in the United States on May 19, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Unreliable. Not durable",
+        "userName": "HomeGalaxy",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R398JMDJPOI785",
+        "text": ".These switches work pretty well. I’ve been using this product for almost 2 years with no huge complaint. They were fairly easy to install (by my brother). The value is also great. I got multiple packs for the different area of my home. Only thing I’ve dislike is reconnecting it once in a while.",
+        "date": "Reviewed in the United States on May 5, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Makes life easy",
+        "userName": "PJ",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1DE4D4Y995QI8",
+        "text": "Started having issues with the switches I installed after 2 years.",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t last long",
+        "userName": "david",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3NKO8CK0TVB0F",
+        "text": "Works really good in my three way set up.",
+        "date": "Reviewed in the United States on March 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very nice",
+        "userName": "Grayson",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R195EOZ3FMJX91",
+        "text": "Works wonders for the house! They look nice too",
+        "date": "Reviewed in the United States on December 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for The House",
+        "userName": "smallli",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2SQ928G6ZT3C7",
+        "text": "I am going to keep this short and simple this 3 way switch is garbage just like their other fan and light dimmer switches. I had 0 problems when first installed. Like it said it can be used with a dumb on off switch. Needing to install just one dimmer. Was working fine for several months and working on app and all. Then all of a sudden it is disconnect from wifi and is red. Tried wifi repair process and it was detected a couple times out of 10x. But app never was able to update the final step of wifi saving. Then the larger issues began. The device would no longer go into wifi paring mode so app cannot find it. No matter removing it from wall, hard reset, nothing worked. I think ok forget it I'll use it as only a dimmer. Works fine for several days. Then the lights started dimming to minimum randomly and maybe shut off. After that, the switch to turn on or off the light had no response, only the dumb switch worked. Following this, the lights started going completely haywire, non stop flickering when it is on for several mins. I was able to turn it off again with dumb switch only. Later that day I was no longer able to turn on or off the light with either switch on the 3 way. This thing is going in the trash! Worked barely for a couple months or so. Only thing from Treatlife are the single pole dimmers worked decently without issues for more than 3 yrs, EVERYTHING ELSE IS GARBAGE!",
+        "date": "Reviewed in the United States on November 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "WOULDNT GO INTO WIFI PAIRING. NOW WOULDNT TURN ON! Treatlife sucks!",
+        "userName": "JL",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R14NOLPHKLKPB2",
+        "text": "Arrived fast one don't work and the other flickers. Very easy to install. Update: they sent a new one everything works 100% very easy to hook up to the smart home",
+        "date": "Reviewed in the United States on November 10, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "1 WORKS FLICKERS 1 D.O.A",
+        "userName": "Bryan D.",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R19QIURWT4GT76",
+        "text": "Does what it's suppose to do!",
+        "date": "Reviewed in the United States on October 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does what it's suppose to do!",
+        "userName": "Leon W",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3N0FSL9HDT6D4",
+        "text": "I've experienced issues with these units over time. After about 2 years, four of them have stopped connecting to Wi-Fi, and one of the relays has failed. Troubleshooting revealed burned-out ESP8266 boards that became very hot when powered. The unit with the failed relay became hot to the touch, which raised safety concerns for me. Unfortunately, these issues occurred outside of the support period. Based on my experience, the durability could be improved, so I recommend considering this when making your purchase.",
+        "date": "Reviewed in the United States on September 30, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Durability and Safety Concerns After 2 Years of Use",
+        "userName": "JD",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2028TMM8O2X7G",
+        "text": "Ok. I purchased multiple DS02 and DS01C3 switches. And, here are the issues: (1) (Which they now mention) The second switch cannot be a powered switch. (ie no light, smarts, nada). When they say it must be a dumb switch, they are saying it must be a \"poled\" up down switch. If you want a night light switch on both ends ... tough. (2) In the ON state both travelers are powered, in the OFF state both travelers are off. This is actually not code for 3 ways, and is the main cause for the issue in (1). But, it also leads to other issues. Basically, if your homes 3way in not a vanilla wiring, you will have issues. There are so many reasons why this is just a bad design. (3) When the DS02 powers on, it dumps up to 120V with mass current briefly on the neutral line. Depending on the line capacitance of your neutral line, and the proximity to other switches, this will cause voltage to leak into the neutral of other smart switches, causing them to briefly power on. If this switch is a treatlife switch, it may continue to pull current of the neutral, wich I suspect is not good for the DS02's life. (ie. they have started to post you can only have 1 treat life switch per breaker because of this issue.) All 3 of these issues are strong reasons to avoid treatlifes 3way switches. And, depending on your home, each of these reasons could pose hazards for your home. Note: None of their switches are UL or ETL certified. Many electricians won't touch these switches (as I found out). Sadly I spend 550$ in switches, and 1K plus trying to get electricians to help solve the issues. I exceeded my return date while trying to get these switches to work. There customer service was \"responsive\", but not helpful. And, they strung me along until the return date was past, then they just disappeared. There are better alternatives out there (ie. like KASA switches both on Amazon and at Home Depot.)",
+        "date": "Reviewed in the United States on September 23, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "TreatLife 3way has several flaws vs other smart switches",
+        "userName": "Ron",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3K9NFSWK6IG9I",
+        "text": "Love these light switch’s! Have them all around my house! You can also use Alexa for them.",
+        "date": "Reviewed in the United States on September 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switch",
+        "userName": "Danilo",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61D3Ffv8VfL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1UBRQLJVP3VU4",
+        "text": "I bought this because it works with 4 way switches but it only worked fine for awhile. A few months in and the manual switches would sometimes work and sometimes not. Would turn on the light with the smart switch and then it would work but not for long. Resetting solved the problem but only for a short time. Now, the manual switches do not work at all and if I turn it on with the smart switch, the light turns off half a minute later.",
+        "date": "Reviewed in the United States on July 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Simple is not reliable",
+        "userName": "Marek Wasilewski",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1958decf-c238-4269-935b-7902dfbb10b1/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3AHNKW9HKD22U",
+        "text": "The packing that the switch came as if someone returned it, this can be seen from the edges that it is all worn out.",
+        "date": "Reviewed in the United States on June 25, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "3 Way Switch - Boxed as if it was a return item.",
+        "userName": "PARIMAL JOSHI",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71+r-DOmxQL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/713vhq6BGxL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/716KzMMajrL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1K5889R4WML2Q",
+        "text": "I love Treatlife switches, I use them in my entire house.",
+        "date": "Reviewed in the United States on April 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switches",
+        "userName": "Matthew Sweat",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R22FK6L357MUGR",
+        "text": "I have other products light smart plugs from this company. They are good, I've had them for years. I bought this switch lights to manage it better, but it is annoying keep pressing on the buttons to dimm lights down or up. They have a different dimmer that you can slide and is easier",
+        "date": "Reviewed in the United States on April 2, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Pressing buttons?",
+        "userName": "ELTON",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3HOIYTCHDAJO9",
+        "text": "Bought this two-pack just over 6 months ago. Over the past several months I’ve started having issues with other light fixtures in the house, NOT powered by these switches and have just determined that these switches send signals through the electrical system in the entire house and cause issues with LED bulbs. I removed them yesterday and every single issue we’ve been having the past several month ls, stopped completely. Don’t waste your money on this junk. The potential for damage is more than just a possibility!",
+        "date": "Reviewed in the United States on March 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Absolute JUNK!",
+        "userName": "Stevekron1",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1ES1ZHJQUCEWW",
+        "text": "Treatlife replaced our switch that failed after 2 years. Customer support was great.",
+        "date": "Reviewed in the United States on March 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great customer support",
+        "userName": "Daniel Bartholomeusz",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RQW2A7M0PSEN7",
+        "text": "This smart switch will remain powered on the lowest setting on one of the travelers when the switch restarts either you push the restart button or when there is a power outage and it restarts when the power comes back. I discovered this when without a reason the light was on in the morning. I check my surveillance camera and after a power outage it happens. I am an Electronics Engineer and a certified electrician. I installed this smart switch with a 3 way non smart switch and before installing this switch, both were non smart switches and worked as should. The condition happens when the non smart 3 way switch is on one of the two positions depending on which terminal the faulty traveler is hook to. In the other position it works as intended but this makes this smart switch work as a single pole switch. I then took this smart switch to do a bench test with the same results. I contacted treatlife support and described the issue but got no solution. I was hoping there was a firmware update that could correct this issue. They offered a full refund for my order. Excellent customer service.",
+        "date": "Reviewed in the United States on February 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It didn't work for me but excellent customer support",
+        "userName": "Otto Chung",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3CAE3H86IYJIL",
+        "text": "These switches do not last. First one I had lost all wifi functionality after a few months and then quit working all together a few weeks later. I thought it may have just been a bad unit, so I bought another to replace it, but now just a couple months later the replacement switch has now lost all wireless functionality. I've tried resetting the switch, but this only re-enables the wireless functionality for a few moments. I have dozens of other smart switches from another brand that use the same Tuya backend, and continue to work fine 3+ years after original install - it appears Treatlife switches are of inferior quality since only this switch is troublesome. For those wondering, the switch is not overloaded as it is controlling only 66W of LED lights (6x 11W bulbs). I don't not recommend Treatlife switches.",
+        "date": "Reviewed in the United States on December 25, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don't last compared to other brands",
+        "userName": "all",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1OPK5P5NMXJ2",
+        "text": "I bought 7 of these, good whild they work I have already had to replace 3,now I have to replace another 2. Piece of garbage.",
+        "date": "Reviewed in the United States on December 24, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Piece of garbage",
+        "userName": "dma3a",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2OM0POCDI72VY",
+        "text": "I spent $850 over the course of a year changing all my switches to Treatlife products to manager dozens of recessed can lights, bathroom fans, ceiling fans, etc. With so many switches and kids, I thought it would be great to be able to dim the massive amount of can lights and also control them to keep lights all over the house from being left on. The theory is great but the switches are not. I have fought several to keep them on the network constantly resetting them. Several have been replaced. Several are not working now and I had to put the old toggle switches back into one fixture. I have a mesh network so signal is never a problem. Every time we have a power outage of any sort, many get messed up and have to be reconnected to the network / app. The newest versions I bought as replacements are even harder to get online since they “automated” the process. I have 2 that cannot be synced and are brand new. 3 out of the 4 fan light combination switches have failed. Naturally some that I have the most trouble with are in the basement and I have to go down to turn off one switch out of 3 that my kids left on even after using the app to turn off ALL basement lights. I contacted Treatlife about some of these issues and they wanted me to go thru all the programming steps and tell them what happens at each step. I explained it is not even turning on so I cannot make it do anything. Then they said I must have made a mistake wiring them. I am an engineer and have wired several houses and barns including fixing others mistakes. This is all run around to avoid warranty claims. They won’t stand behind the high failure rate products. My advice is to limit your installations to only devices that benefit from connectivity and avoid the headache and expense of such a buggy system. Definitely not worth the hype for a whole home install. And definitely not worth a wife being upset the lights or ceiling fan is not working.",
+        "date": "Reviewed in the United States on December 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not worth the headache.",
+        "userName": "Distracted Engineer",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1UJOD3G9JHZXC",
+        "text": "I have had two installed for one year and have not had any issues, it does make a click when turning the on and off even through Alexa. Does not bother me, but it was concerning when first installed. I would purchase again.",
+        "date": "Reviewed in the United States on November 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "1 year review",
+        "userName": "Clynna",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R22U2HPF0E3FSV",
+        "text": "We have TreatLife light switches in bedrooms for fan and light control. No more losing the fan remote. We have outdoor lights in outdoor outlets. On and off by schedule or whenever we want them. And dimmable. We use their elegant and modern switch covers for a clean look. We have color changing bulbs in our office. We have dimmable remote switches in our kitchen and living room for ceiling lights. We love TreatLife and haven’t had any issues setting them up or using them with our iPhones.",
+        "date": "Reviewed in the United States on November 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "We love TreatLife",
+        "userName": "Maggie F",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RQMQE5FZVDYRX",
+        "text": "Nice",
+        "date": "Reviewed in the United States on November 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice",
+        "userName": "Mirna Ramirez",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3JNUTHRA1OBWC",
+        "text": "Because it doesn't work on the load side, it cannot be used in combination with a 3-way presence sensor that must be on the power (hot) side wall position to \"see\" the room to sense.",
+        "date": "Reviewed in the United States on November 5, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Only works on the hot (power) end of the 3-way switch circuit, can't use on the load side",
+        "userName": "dan",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R30AFJ6Y2RBALY",
+        "text": "Switch worked fine for just over two years. Then it came on by itself in the middle of the night and wouldn't turn off physically or by voice. Resetting the circuit breaker made the switch work as a physical switch, but according to Treatlife the \"smart module\" has died. The warrantee has expired, so they're not obliged to do anything, but very disappointed that it didn't last a reasonable amount of time!",
+        "date": "Reviewed in the United States on October 8, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Failed just a few months after warrantee ended",
+        "userName": "Jeanne",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RJIWN2VGSSWYD",
+        "text": "We remodeled last year, and I made the mistake of purchasing a bunch of these for our kitchen, dining room and entryway. They look nice, but unfortunately they NEVER stay connected. You can get them to connect to the wifi but within 24 hours or so they disconnect and are no longer 'smart'. Alexa can't find them, and you have to use them like a standard 'dumb' switch. I have reconnected them hundreds of times, and they just disconnect again- to the point where after 18 months I have given up. It's not like I have 1 bad one. They all do it. And before you suggest that it might be the wifi or the wiring or something, I don't believe it is. I have several other brands of smart switches around the house that stay connected without any issue. It's a pain to go around replacing these, but we have slowly. And guess what, the replacement (from another brand) is staying connected without any issues- and Alexa is controlling it fine. Overall, these were a waste of money and time. I feel irritated when I think about how I've lived with them for the last 18 months and how I have to nag my husband every so often to get him to change one out at a time. He doesn't want to do it, so I just bide my time and ask occasionally and sometimes I get lucky and get once changed out. Anyway, my advice is try something else.",
+        "date": "Reviewed in the United States on September 25, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Really Attractive Dumb Switches",
+        "userName": "California Mom",
+        "numberOfHelpful": 2,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2ZZ6O2TSM7KCD",
+        "text": "Reliable dimming. Used throughout house.",
+        "date": "Reviewed in the United States on September 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Treathouse wifi dimmers work pretty good using Google home",
+        "userName": "cat5alive",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2PDNV31OYY119",
+        "text": "I bought 10 of these Smart Dimmer 3-way switch, installed by electrician. They work as advertised. Only need one Smart 3-way switch for one night, the other switch can be a dumb switch. Sometimes, the dimmer may cause the light to flicker. I have these installed for over 1 year, but lately a few switches started to \"disconnect\". Alexa would say the switch is not responding. Checking the app, said device disconnected and had to re-connect. While the re-connect is successful, it requires the device to be added to Alexa and Google Home again. And I had to re-connect on premise. It defeats the purpose to try to control the lights remotely.",
+        "date": "Reviewed in the United States on September 17, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works as advertised, but lose connection to wifi a few times",
+        "userName": "Wong Hao",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3Q7QVVXIBRDN8",
+        "text": "Loved the product. Had to get a replacement due to issue and replacement was sent and received in less than 5 days even after the time to replace was up due to not getting the light fixture until then. Highly recommend!",
+        "date": "Reviewed in the United States on August 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Replacement needed",
+        "userName": "A",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R70SG3YXFZGCN",
+        "text": "Like the button layout with brightness buttons easy to press and on off still big enough. Can configure in app for the status light (on when switch is on or off). However, this has to be on the line side. It was on the instruction but somewhat buried. Wish it was called out as first thing. Only need one smart 3 way dimmer switch and the other one can be non smart and non dimmer but does need to be 3 way.",
+        "date": "Reviewed in the United States on August 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good smart 3 way dimmer",
+        "userName": "cz",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RYXGU5RH6V63C",
+        "text": "I really enjoyed the new dimmer switches especially pairing the device with Alexa, but all of the sudden one of them stopped working for no reason. I checked all my connections and re-wired it but no luck. The other one is working just fine. I figured the product would last a lot longer. Customer service reached out to me and sent me a new dimmer switch within 5 days free of charge. Definitely changed my mind and they stand by their products. Definitely a good company.",
+        "date": "Reviewed in the United States on August 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Update….Stopped working after 5 months",
+        "userName": "caitlin",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RD1YVZYA7LUUW",
+        "text": "I liked the fact that you only needed one for a 3 way switch, but it kept losing internet connection and now wont hook up at all. I read others complaining about it too. Such a bummer to have to replace and reinstall. I will buy Kasa brand to replace.",
+        "date": "Reviewed in the United States on August 8, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lost Internet connection after 16 months",
+        "userName": "Sally",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1TIYQMOMTRC38",
+        "text": "These switches get deleted from the app time and time again, very not reliable, there costumer service is 0 to non they have no clue what they are doing",
+        "date": "Reviewed in the United States on August 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stay away from this company",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R6KH65UZAO5XI",
+        "text": "On the company’s site it is compatible with 3-way switch SS02. It’s not! Both traveler wires have power at the same time. I cannot figure if this this the way how the switch should work but there is no documents on the company’s site to confirm or to show the wiring configuration. I spoke with the company and found out that all their 3 way switches work only with regular/mechanical switch! One smart switch per circui! But they have a wiring diagram that show how to connect 2 smart switches SS02 on the same circuit….",
+        "date": "Reviewed in the United States on July 23, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t buy this product",
+        "userName": "Ben",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3GSDYBM22EMYZ",
+        "text": "When put aside of other \"white\" products, this one will look yellowish, and it won't be even. If you don't mind that, you should be fine.",
+        "date": "Reviewed in the United States on July 17, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Yellowish tone",
+        "userName": "Lando",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R22FP1S5CRH0V3",
+        "text": "I had it installed by a contractor and it would not connect to my wifi. I had to return it.",
+        "date": "Reviewed in the United States on July 14, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "NO",
+        "userName": "Dee",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1M756C6MIAUT6",
+        "text": "The switch starts to malfunction every other week, so you will need to reset the power again and again. Don’t waste your time and money on this one",
+        "date": "Reviewed in the United States on July 3, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Garbage product",
+        "userName": "Rabi",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RIDQWOM01ZG23",
+        "text": "Had an issue after over a year from purchase and got it resolved quickly with no issues.",
+        "date": "Reviewed in the United States on May 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great customer service!!",
+        "userName": "avlau",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3EPVAUA7CX3NY",
+        "text": "Product alright but not what I needed",
+        "date": "Reviewed in the United States on April 26, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not compatible with kasa switches",
+        "userName": "ANB Electric",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1IXCY71FA5IR9",
+        "text": "I’ve really enjoyed this brand of smart devices. We’ve purchased several of them and they work great. I had trouble with one and they were great to send me a replacement right away. It’s great being able to turn the lights off without going back up the stairs to flip the switch.",
+        "date": "Reviewed in the United States on April 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and it works great!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RP3TBKHGJ6ZW3",
+        "text": "These switches work very well with Alexa and Gosund App. Connections are very simple and fast. Alexa finds them right away. They are controlled by voice through Alexa, in the phone through apps from any location away from home with the Internet or simply by pressing the switch buttons.",
+        "date": "Reviewed in the United States on March 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart three way dimmer switch. Excellent.",
+        "userName": "Vladimir",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R17B17VMC60JJ0",
+        "text": "A year later and I ripped them all up and replaced them with Lutron. Constant problems with these switches. Suddenly starts flashing and cannot turn them off. Happened twice.",
+        "date": "Reviewed in the United States on March 18, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Crappy switches",
+        "userName": "Prasuna Paluru",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RPHFR5SSTEVH2",
+        "text": "These have some nice features for a great price but as you can see in the video, they don’t work reliably. I installed about dozen of these. Three of them have significant problems with operation. They flicker and come on unexpectedly if any other switch on the circuit is used (see video). In this video you can see that this one just won’t come on at all. Customer support blames the installation but I’ve had it checked by two electricians and verified the connections myself. In all of the circuits it works fine with a mechanical switch and even occasionally works with this TreatLife switch. There seems to be a problem with their relay design. I wouldn’t recommend this brand, unless you like flickering and darkness. It’s not worth your time to troubleshoot.",
+        "date": "Reviewed in the United States on March 4, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Nice features but unreliable",
+        "userName": "James F. Huber",
+        "numberOfHelpful": 2,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ef685f21-5189-4927-bf56-2901fe98546a/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R377GAJC0NHAXU",
+        "text": "When I bought these, the description clearly stated these would work for the LOAD side, only for me to find that they are for the LINE side only. The description online has since been changed, but I'm now stuck with three of them because my electrician foolishly tossed the boxes and I cannot return useless switches.",
+        "date": "Reviewed in the United States on March 2, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "BEWARE - Use line side only",
+        "userName": "nhmtnbkr",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R15JIZ10GWX11F",
+        "text": "App logs me out and it disconnected my device from my account. I can't get it added back. I definitely prefer the Kasa items over this.",
+        "date": "Reviewed in the United States on February 11, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "App and support is far less than ideal",
+        "userName": "Mitch Bergman",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R256B3WREKQESJ",
+        "text": "I've ordered and installed a lot of Treatlife smart products in my home. From switches, to plugs, to lights. Great quality and functionality. I've only had one issue, and that was with a faulty 3-way dimmer switch. No questions asked, customer service immediately sent out a replacement. I did first try the recommended steps to ensure the switch was faulty and it wasn't my wiring. My entire house is basically Treatlife products.",
+        "date": "Reviewed in the United States on February 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product, and great customer service",
+        "userName": "Matthew B.",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RBU26VWI9R53O",
+        "text": "As far as we see, this is the only capable 3-way dimmer for Alexa.",
+        "date": "Reviewed in the United States on January 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install, integrate with Alexa, and has great customer service.",
+        "userName": "Kurt O. Haukohl",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R28DWH75DTVZM0",
+        "text": "Installation instructions are terrible. And a typical three-way install one would think that you would have to have two of these switches installed. It cost me an extra hour of electrician time to figure out that is not the case. We both went over the installation instructions and they just are perplexing.",
+        "date": "Reviewed in the United States on January 24, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Poor installation instructions",
+        "userName": "Velvetnose",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08R9JBDHH",
+        "productTitle": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 273,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1643,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R25HGMGTIDYI00",
+        "text": "After going through 3 packs of Kasa switches (all faulty) I ordered this in based on the reviews. After installing they worked as expected. My only complaint: the box is massive and rather than letting you use the cables in the wall they come with pre-attached wires that need to be connected to the existing ones which makes it even bulkier and makes it a pain to fit everything in the box.",
+        "date": "Reviewed in the United States on January 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switches. They actually work",
+        "userName": "ach",
+        "numberOfHelpful": 0,
+        "variationId": "B08R9JBDHH",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 2Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

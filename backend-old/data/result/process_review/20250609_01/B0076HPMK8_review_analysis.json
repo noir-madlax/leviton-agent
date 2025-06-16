@@ -1,0 +1,400 @@
+{
+  "product_title": "Leviton IllumaTech Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, IPL06-10Z, White with Ivory and Light Almond Faceplates",
+  "product_category": "Universal Multi-Load Dimmer Switches",
+  "total_reviews": 46,
+  "review_analysis": {
+    "phy": {
+      "construction": {
+        "A@feels cheaply made with brittle plastic": {
+          "-": [
+            4,
+            11
+          ]
+        },
+        "B@interchangeable color face plates make unit flimsy": {
+          "-": [
+            12
+          ]
+        },
+        "C@comes with 3 different color face plates (white, almond, beige)": {
+          "+": [
+            6,
+            13,
+            39
+          ]
+        },
+        "D@button feels loose and cheap": {
+          "-": [
+            11,
+            17
+          ]
+        },
+        "E@on/off button hangs up and needs wiggling": {
+          "-": [
+            29
+          ]
+        },
+        "F@cover comes off easily": {
+          "-": [
+            30
+          ]
+        },
+        "G@feels well built and solid": {
+          "+": [
+            20,
+            26
+          ]
+        },
+        "H@plastic buttons are thin": {
+          "-": [
+            21
+          ]
+        }
+      },
+      "design": {
+        "I@slider has small travel length": {
+          "-": [
+            30
+          ]
+        },
+        "J@takes up lot of space in junction box": {
+          "-": [
+            24
+          ]
+        },
+        "K@has removable side wings for multi-gang installation": {
+          "+": [
+            17
+          ]
+        },
+        "L@has switch underneath face plate to change INC to LED": {
+          "+": [
+            17
+          ]
+        },
+        "M@has large on/off switch and dimmer for accessibility": {
+          "+": [
+            43
+          ]
+        },
+        "N@mounting plate wing breakaways don't break away": {
+          "-": [
+            18
+          ]
+        }
+      },
+      "wiring": {
+        "O@uses pigtail connector clips instead of screw terminals": {
+          "+": [
+            17
+          ]
+        },
+        "P@wire color coding keeps changing": {
+          "-": [
+            18
+          ]
+        },
+        "Q@has too many wires for some applications": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "documentation": {
+        "R@programming instructions not intuitive": {
+          "-": [
+            13
+          ]
+        },
+        "S@no English instructions provided": {
+          "-": [
+            31
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@does not work at all": {
+          "-": {
+            "?": [
+              0,
+              9
+            ]
+          }
+        },
+        "b@works well and as expected": {
+          "+": {
+            "?": [
+              3,
+              17,
+              20,
+              27,
+              42
+            ]
+          }
+        },
+        "c@on/off switch breaks after one use": {
+          "-": {
+            "A": [
+              4
+            ]
+          }
+        },
+        "d@becomes intermittent after 5 years requiring multiple presses": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@fails to dim lights": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "f@switch becomes intermittent after years of use": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "led_compatibility": {
+        "g@causes LED lights to flicker intermittently especially at 50% brightness": {
+          "-": {
+            "?": [
+              2,
+              10
+            ]
+          }
+        },
+        "h@works well with LED bulbs without flickering": {
+          "+": {
+            "?": [
+              14,
+              28,
+              34,
+              38,
+              40,
+              43,
+              44
+            ]
+          }
+        },
+        "i@compatible with specific TCP LED lights": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "j@only dims about 50% of light output": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "k@can dim LEDs until they go out with no flicker": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "l@lights are delayed coming on after switch is flipped": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "m@maintains same brightness level when turned on/off": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "n@has adjustable minimum brightness threshold": {
+          "+": {
+            "?": [
+              28,
+              40
+            ]
+          }
+        },
+        "o@dims down about 80%": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "p@does not make lights as bright as wanted": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "q@no buzzing sounds from switch": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "installation": {
+        "r@easy to install": {
+          "+": {
+            "?": [
+              3,
+              6,
+              21,
+              32,
+              36
+            ]
+          }
+        },
+        "s@challenging to fit 2 units in double gang box": {
+          "-": {
+            "J": [
+              13
+            ]
+          }
+        },
+        "t@hard to fit in junction box due to size": {
+          "-": {
+            "J": [
+              24
+            ]
+          }
+        },
+        "u@works for 2-way and 3-way circuits": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "v@rewiring into 3-way circuit takes multiple tries": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "durability": {
+        "w@should last a good long time": {
+          "+": {
+            "G": [
+              26
+            ]
+          }
+        },
+        "x@multiple units fail one after another": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "kitchen lighting": {
+        "+": {
+          "h": [
+            2,
+            34
+          ]
+        },
+        "-": {
+          "g": [
+            2
+          ]
+        }
+      },
+      "dining room lighting": {
+        "+": {
+          "h": [
+            14
+          ]
+        }
+      },
+      "LED floodlight control": {
+        "-": {
+          "g": [
+            2
+          ]
+        }
+      },
+      "chandelier dimming": {
+        "+": {
+          "k": [
+            28
+          ]
+        }
+      },
+      "bathroom switch": {
+        "+": {
+          "?": [
+            33
+          ]
+        }
+      },
+      "entrance area ceiling lights": {
+        "+": {
+          "h": [
+            38
+          ]
+        }
+      },
+      "replacement for beige colored switch": {
+        "+": {
+          "r": [
+            3
+          ]
+        }
+      },
+      "retrofit property with matching switches": {
+        "+": {
+          "b": [
+            7
+          ]
+        }
+      },
+      "accessibility for rheumatoid arthritis": {
+        "+": {
+          "M": [
+            43
+          ]
+        }
+      },
+      "repair work": {
+        "+": {
+          "b": [
+            27
+          ]
+        }
+      },
+      "quick replacement without store visit": {
+        "+": {
+          "?": [
+            37
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:02:32.037628"
+}

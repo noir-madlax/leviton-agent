@@ -1,0 +1,484 @@
+{
+  "product_title": "Kasa Smart Switch 2-Gang HS200-2, Single Pole,Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "dimensions": {
+        "A@larger form factor than desired": {
+          "-": [
+            10
+          ]
+        },
+        "B@makes junction box tight": {
+          "-": [
+            38
+          ]
+        },
+        "C@too recessed in older 2-gang electrical boxes": {
+          "-": [
+            39
+          ]
+        }
+      },
+      "appearance": {
+        "D@looks premium": {
+          "+": [
+            35
+          ]
+        },
+        "E@good appearance": {
+          "+": [
+            41
+          ]
+        },
+        "F@perfect alignment and flush finish with specialty cover plate": {
+          "+": [
+            48
+          ]
+        }
+      },
+      "physical_buttons": {
+        "G@physical buttons work great": {
+          "+": [
+            20
+          ]
+        },
+        "H@switches feel nice to press": {
+          "+": [
+            35
+          ]
+        },
+        "I@push type switches instead of conventional on/off": {
+          "+": [
+            48
+          ]
+        }
+      },
+      "indicator_light": {
+        "J@illuminated symbol when off, symbol off when on": {
+          "+": [
+            48
+          ]
+        },
+        "K@indicator light turns off when mounting screws tightened": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "cover_plate": {
+        "L@high quality plate": {
+          "+": [
+            35
+          ]
+        },
+        "M@specialty cover plate ensures perfect alignment": {
+          "+": [
+            48
+          ]
+        },
+        "N@cover plate wouldn't snap on due to recessed switches": {
+          "-": [
+            39
+          ]
+        }
+      },
+      "build_quality": {
+        "O@switch feels premium": {
+          "+": [
+            22
+          ]
+        },
+        "P@great quality for the price": {
+          "+": [
+            40
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              6,
+              8,
+              10,
+              13,
+              15,
+              16,
+              20,
+              23,
+              26,
+              27,
+              29,
+              32,
+              42,
+              45,
+              46
+            ]
+          }
+        },
+        "b@extremely complex installation": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "c@intimidating with many wires in small junction box": {
+          "-": {
+            "B": [
+              11
+            ]
+          }
+        },
+        "d@not easy to install, might need wallplate spacer": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "e@causes mounting issues when tightened": {
+          "-": {
+            "B": [
+              38
+            ]
+          }
+        }
+      },
+      "wifi_connectivity": {
+        "f@easy to connect to WiFi": {
+          "+": {
+            "?": [
+              5,
+              23,
+              45,
+              46
+            ]
+          }
+        },
+        "g@refuses to connect to WiFi despite troubleshooting": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@hard to connect, requires multiple attempts": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "i@wouldn't connect to app": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "j@will not connect on mesh WiFi with 2.4 & 5ghz": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "k@connects on 6ghz mesh networks": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "l@connection lost after setup": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "app_functionality": {
+        "m@app is easy to use": {
+          "+": {
+            "?": [
+              5,
+              20
+            ]
+          }
+        },
+        "n@app controls are simple to setup": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "o@worst app ever used, difficult to set schedule": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "p@straightforward and easy to use app": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "smart_home_integration": {
+        "q@integrates seamlessly with Alexa": {
+          "+": {
+            "?": [
+              13,
+              39
+            ]
+          }
+        },
+        "r@easy integration with Alexa": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "s@smooth integration with Alexa": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "t@compatible with Google Home and Amazon Alexa": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "u@easy to connect to Google Home": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "v@would not connect to Alexa": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "w@works consistently": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "x@no connectivity issues": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "y@holds up well after almost a year": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "z@keeps working during rainstorms": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "aa@14 switches for 3 years with no severe failures": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "ab@works great without issues": {
+          "+": {
+            "?": [
+              29,
+              34,
+              36
+            ]
+          }
+        }
+      },
+      "defects": {
+        "ac@defective, wouldn't work at all": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ad@doesn't work": {
+          "-": {
+            "?": [
+              2,
+              28
+            ]
+          }
+        },
+        "ae@faulty products sent": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "af@broken out of the box": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ag@electrical short within switch": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ah@only works manually, not as smart switch": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "ai@one switch doesn't work": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "aj@stopped working minutes after installation": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "timer_function": {
+        "ak@has timer function": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "al@dimming feature works flawlessly": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom_lighting": {
+        "+": {
+          "ak": [
+            0
+          ]
+        }
+      },
+      "outdoor_lighting_automation": {
+        "+": {
+          "a": [
+            1,
+            8
+          ]
+        },
+        "-": {
+          "ac": [
+            1
+          ]
+        }
+      },
+      "smart_home_automation": {
+        "+": {
+          "f,q": [
+            0,
+            5,
+            13,
+            35
+          ]
+        }
+      },
+      "remote_light_control": {
+        "+": {
+          "m,q": [
+            5,
+            9,
+            35
+          ]
+        }
+      },
+      "kitchen_dinning_room_replacement": {
+        "+": {
+          "a,r": [
+            20
+          ]
+        }
+      },
+      "garage_and_outdoor_lighting_timing": {
+        "+": {
+          "a,ak": [
+            8
+          ]
+        }
+      },
+      "whole_house_smart_switch_replacement": {
+        "+": {
+          "a,w": [
+            29,
+            31,
+            35
+          ]
+        }
+      },
+      "outdoor_building": {
+        "+": {
+          "a,f": [
+            45
+          ]
+        }
+      },
+      "smart_home_expansion": {
+        "+": {
+          "a,s": [
+            48
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:42.886982"
+}

@@ -1,0 +1,439 @@
+{
+  "product_title": "Leviton Decora Smart Dimmer Z-Wave 800 Series, ZW6HD-1RW",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 14,
+  "review_analysis": {
+    "phy": {
+      "Build Quality": {
+        "A@Hardware quality is very poor with cheap plastic materials": {
+          "-": [
+            4
+          ]
+        },
+        "B@Switch feels extremely cheap with lot of slop in mechanism": {
+          "-": [
+            4
+          ]
+        },
+        "C@Build quality is on par with the price, not as good as Lutron but better than Enbrighten/GE": {
+          "+": [
+            5
+          ]
+        },
+        "D@Rock solid construction": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "Physical Controls": {
+        "E@Dedicated dimming buttons separate from main paddle": {
+          "+": [
+            3
+          ]
+        },
+        "F@Pushing the paddles only works every other time or requires pushing really hard": {
+          "-": [
+            4
+          ]
+        },
+        "G@OFF button is unresponsive every 1 out of 20 times": {
+          "-": [
+            5
+          ]
+        },
+        "H@Some dimmers had worse ratio of 1 out of every 4 button presses does nothing": {
+          "-": [
+            5
+          ]
+        },
+        "I@Separate light level adjustment rocker": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "LED Indicators": {
+        "J@Green LED indicator light": {
+          "+": [
+            6,
+            10
+          ]
+        },
+        "K@Fan speed controller switches have slightly brighter indicator light": {
+          "+": [
+            0
+          ]
+        },
+        "L@Green LEDs are configurable but can't change the color": {
+          "-": [
+            4
+          ]
+        },
+        "M@LED status light is not as bright on Amazon switches": {
+          "-": [
+            5
+          ]
+        },
+        "N@Green LED when powered off, green LED to show dimming action, and amber LED when in inclusion mode": {
+          "+": [
+            10
+          ]
+        }
+      },
+      "Wiring": {
+        "O@Pre-wired braided copper pigtails": {
+          "-": [
+            4,
+            10
+          ]
+        },
+        "P@Five wire nuts and leads to make fit in box": {
+          "-": [
+            10
+          ]
+        },
+        "Q@Wire leads instead of wire terminals": {
+          "-": [
+            13
+          ]
+        },
+        "R@Must connect the ground wire or switch will not work": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "Size": {
+        "S@Not any bigger than other dimmers, fits in really old box": {
+          "+": [
+            4
+          ]
+        },
+        "T@Old-school enclosed device with increased fixture depth": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "Appearance": {
+        "U@Nice looking switch": {
+          "+": [
+            6
+          ]
+        },
+        "V@Stylish appearance": {
+          "+": [
+            13
+          ]
+        },
+        "W@Comes with almond faceplate for switching out": {
+          "+": [
+            6
+          ]
+        },
+        "X@Interchangeable face plates to match gray plates": {
+          "+": [
+            10
+          ]
+        },
+        "Y@Look and function just like predecessors with no visual difference": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Reliability": {
+        "a@Commercial grade reliability with virtually flawless performance": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Every single dimmer has reliability issues with daily grief": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@Rock solid performance": {
+          "+": {
+            "D": [
+              1
+            ]
+          }
+        },
+        "d@Unit was delivered dead and doesn't work": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "Responsiveness": {
+        "e@Unresponsive to both paddle presses or Z-Wave commands until power reset": {
+          "-": {
+            "F": [
+              3
+            ]
+          }
+        },
+        "f@Z-wave responds reliably and quickly": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "g@Response time is quick for the dimmer": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@Slow response with definite lag compared to GE switches": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "Status Reporting": {
+        "i@Doesn't show correct status in application, shows on when it's off": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "j@Fails to turn on via Z-Wave but reports it did turn on": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "k@Fails to turn off but reports it did turn off": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "l@Fails to report updated status when turned on or off with paddle": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "m@On/off status inconsistent with SmartThings status": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "Memory Function": {
+        "n@Doesn't remember last brightness, turns on to full when turned off at 20%": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "o@Previous light level setting gets reset to 1% after controller off then physical switch on": {
+          "-": {
+            "?": [
+              7,
+              8
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "p@No single failure over 3 years including extreme temperature exposure": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "q@Materials seem like they would break easily": {
+          "-": {
+            "A": [
+              4
+            ]
+          }
+        }
+      },
+      "Z-Wave Integration": {
+        "r@Easy pairing with z-wave smart start": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "s@Easy to add to Z-Wave compatible alarm panel": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "t@Connected fine to SmartThings after following instructions": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "u@Easy to get connected to SmartThings ecosystem": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "v@Fixes Z-wave live events issue from 600 series": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "Power Management": {
+        "w@Very rarely necessary to reset dimmer by air-gapping power": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "x@Power spike or draw gets back into dimmer when used with fan/light combo": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "Configuration": {
+        "y@Can change Z-Wave parameters per dimmer": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home Automation with Hubitat": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "SmartThings Integration": {
+        "+": {
+          "s, t": [
+            2,
+            6,
+            8
+          ]
+        },
+        "-": {
+          "i, m": [
+            2,
+            8
+          ]
+        }
+      },
+      "Vivint Alarm System Integration": {
+        "+": {
+          "s": [
+            5
+          ]
+        }
+      },
+      "Home Assistant Integration": {
+        "-": {
+          "o": [
+            7
+          ]
+        }
+      },
+      "Extreme Temperature Environments": {
+        "+": {
+          "p": [
+            0
+          ]
+        }
+      },
+      "Outdoor Installation Under Eaves": {
+        "+": {
+          "p": [
+            0
+          ]
+        }
+      },
+      "Fan and Light Combo Control": {
+        "-": {
+          "x": [
+            5
+          ]
+        }
+      },
+      "Tight Electrical Box Installation": {
+        "-": {
+          "O, P, Q": [
+            4,
+            10,
+            13
+          ]
+        }
+      },
+      "Multi-gang Box Installation": {
+        "-": {
+          "T": [
+            10
+          ]
+        }
+      },
+      "Smart House Upgrade Projects": {
+        "-": {
+          "d": [
+            9
+          ]
+        }
+      },
+      "Replacing GE/Jasco Dimmers": {
+        "-": {
+          "h": [
+            8
+          ]
+        }
+      },
+      "Replacing Lutron Dimmers": {
+        "+": {
+          "C": [
+            5
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:42.081044"
+}

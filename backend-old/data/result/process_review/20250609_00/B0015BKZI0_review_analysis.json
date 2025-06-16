@@ -1,0 +1,191 @@
+{
+  "product_title": "Leviton 5226-W WH COMBIN SW SP/PILOT LITE 15A120VAC",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 14,
+  "review_analysis": {
+    "phy": {
+      "wiring": {
+        "A@requires neutral wire connection": {
+          "+": [
+            2,
+            7
+          ]
+        }
+      },
+      "indicator light": {
+        "B@red color": {
+          "+": [
+            2,
+            8
+          ]
+        },
+        "C@narrow slit design": {
+          "-": [
+            12
+          ]
+        },
+        "D@neon light technology": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "switch operation": {
+        "E@operates left and right instead of up and down": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "instructions": {
+        "F@sub-standard quality": {
+          "-": [
+            12
+          ]
+        },
+        "G@do not make neutral wire requirement clear": {
+          "-": [
+            2
+          ]
+        },
+        "H@wiring diagrams done without proper knowledge": {
+          "-": [
+            12
+          ]
+        }
+      }
+    },
+    "perf": {
+      "illumination": {
+        "a@light stays on all the time when wired incorrectly": {
+          "-": {
+            "?": [
+              0,
+              1
+            ]
+          }
+        },
+        "b@light illuminates only when switch is on when wired correctly": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@indicator light hard to see in daylight": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@pilot light is really dim": {
+          "-": {
+            "D": [
+              10
+            ]
+          }
+        },
+        "e@signal light so dim not noticeable from distance": {
+          "-": {
+            "C": [
+              12
+            ]
+          }
+        },
+        "f@brighter more visible light in newer version": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "durability": {
+        "g@expected to last for several lives of future home owners": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "h@works as expected": {
+          "+": {
+            "?": [
+              1,
+              4
+            ]
+          }
+        },
+        "i@works perfectly well after proper installation": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "j@performs intended purpose": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "attic light monitoring": {
+        "+": {
+          "b": [
+            1
+          ],
+          "?": [
+            8,
+            9
+          ]
+        }
+      },
+      "closet light monitoring": {
+        "+": {
+          "b": [
+            2
+          ]
+        }
+      },
+      "garage light monitoring": {
+        "+": {
+          "?": [
+            5
+          ]
+        }
+      },
+      "charger disconnect with indicator": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "preventing lights from being left on": {
+        "+": {
+          "b": [
+            3,
+            5,
+            8
+          ]
+        }
+      },
+      "replacing old switches": {
+        "+": {
+          "h": [
+            1,
+            7
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:03.147376"
+}

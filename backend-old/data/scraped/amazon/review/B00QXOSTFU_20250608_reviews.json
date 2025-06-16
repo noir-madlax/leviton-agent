@@ -1,0 +1,2659 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:06:16.888872",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B00QXOSTFU",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B00QXOSTFU",
+    "title": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+    "brand": "ENERLITES",
+    "model_number": NaN,
+    "price_usd": 17.99,
+    "rating": 4.7,
+    "reviews_count": 7393.0,
+    "category": "Light Switches",
+    "product_segment": "Single Pole Rocker Switches",
+    "product_url": "https://www.amazon.com/dp/B00QXOSTFU"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2URR21UHY5TKN",
+        "text": "Great value",
+        "date": "Reviewed in the United States on March 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value",
+        "userName": "Kitty",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b05602e9-f6f9-495a-a4e3-3feb5fc36a67/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RXWPPS7GGWABD",
+        "text": "It’s good",
+        "date": "Reviewed in the United States on February 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "It’s 👍",
+        "userName": "Nick",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R25SML3QUA71PS",
+        "text": "God switches for a good price",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switches",
+        "userName": "daniel dunsmoor",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R12CPGV1MPSYBT",
+        "text": "Worked on a couple of different outlets, but not all, beware",
+        "date": "Reviewed in the United States on February 4, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Check wiring, not for all",
+        "userName": "MA",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RZ7I99UQOQ9WX",
+        "text": "I did an electrical remodel of a kitchen, den and living room and used these switches for my single contact circuits. These single contact switcher are very good quality. They work well and the hardware is like the hardware from HOMEDEPOT or other switches.",
+        "date": "Reviewed in the United States on January 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best price for the quality. Good quality hardware.",
+        "userName": "Julio Iglesias",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1T5QGO4PRLO62",
+        "text": "I have now changed over all of our indoor light switches to these rocker type. They make a click noise when turned on or off, whether you think that is detriment or not.",
+        "date": "Reviewed in the United States on January 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "direct replacement",
+        "userName": "Max Wood",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3FBNKRWTO33R6",
+        "text": "Didn’t like that some of the switches in the box were defective.",
+        "date": "Reviewed in the United States on December 28, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Some didn’t work",
+        "userName": "Devi",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3I7FBLFBRG3GH",
+        "text": "I knocked a star off just because the sound and feel of the switch leave something to be desired. Slightly too loud and \"tinny\" sounding.",
+        "date": "Reviewed in the United States on November 17, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Does what a switch do",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2RGJ9VY4TFCEU",
+        "text": "Fall in pieces after few months",
+        "date": "Reviewed in the United States on November 5, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "You get what your pay for it",
+        "userName": "timoteo",
+        "numberOfHelpful": 2,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61nANtkAfgL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71XRa8YHteL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71xZdwaniQL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R22BA6RLGE9W1X",
+        "text": "You will replace everyone of these light switches due to the cheap materials used. Manufacture will not warranty.",
+        "date": "Reviewed in the United States on November 4, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Face plate breaks off on all 10 switches, cheap and all 10 will fail in 3 months",
+        "userName": "Roy",
+        "numberOfHelpful": 3,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71IeUhzJALL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2ZPISNIKJD66Z",
+        "text": "👍",
+        "date": "Reviewed in the United States on October 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "👍",
+        "userName": "omar el sous",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3JGXN6W0ZTVC7",
+        "text": "I have rentals and I've had 4 of them fail inside 3 years",
+        "date": "Reviewed in the United States on October 14, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "nice but not the best quality",
+        "userName": "Steven Thomas",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3D6DID6J3LF69",
+        "text": "A pack of rocker switches, what's not to like. They work as advertised",
+        "date": "Reviewed in the United States on September 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "so far all good",
+        "userName": "Angelo",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1LAOBILSB07D0",
+        "text": "We changed out all the light switches in the house when we did a remodel. Two years in, and we already replaced over half of these switches because they all broke or starting to break, like the gap between the plate and the switch itself was getting wide and unsafe. Some just flat out broke. We're not hard on things, just two adults living here. Save your money and time in the long run and buy a better brand, or brand name ones.",
+        "date": "Reviewed in the United States on September 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed within 2 years",
+        "userName": "Riss",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2Z4MXTD3ETGG",
+        "text": "Incredibly LOW QUALITY! These light switches are disappointing. After installation, we had electrical issues and found 2 out of 6 were defective. We had to pay an electrician to replace them with better ones. I'm returning the product and concerned about its safety and quality control. Amazon should reconsider selling these switches.",
+        "date": "Reviewed in the United States on August 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Serious Quality and Safety Concerns",
+        "userName": "Bella",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51F2TUUvxxL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2D8J9AEX491Q",
+        "text": "Easy to install better than what was there",
+        "date": "Reviewed in the United States on August 3, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "DR",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1RRMB1JFF4740",
+        "text": "Operation feels robust",
+        "date": "Reviewed in the United States on July 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switch",
+        "userName": "Marty",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1Q9AC7YFWOCQI",
+        "text": "I wanted to replace my OLD outdated low voltage mmentary Contact touchplate light switches which are very expensive with something more modern without breaking the bank. I easily converted these to momentary contact switches using springs purchased here on Amazon and I LOVE THEM. So easy to convert and instead of paying $39.00 for each new switch I spent around $2.25 for each switch after purchasing the needed springs to make them Momentary Contact. Now Multiply that by 3 TIMES (30 Switches) and I saved close over $1000",
+        "date": "Reviewed in the United States on June 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I needed and saved a lot of GREEN $$",
+        "userName": "Vincent Dunn",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/21Q3fbBOUQL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/c5e27e1c-783c-47b4-8a82-26f91672619c/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RYPA2CPXVXRN8",
+        "text": "The only thing that is disappointing in the rockers is that you have to switch them around in order to get them to work in the off and on position you reverse it in order to get it to work",
+        "date": "Reviewed in the United States on June 1, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "The rock is not as quiet as I would have preferred, but they do work",
+        "userName": "Dr. L. Matt Thompson",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2XA08F8B3CDWV",
+        "text": "Muy buenos y buen precio",
+        "date": "Reviewed in the United States on May 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Buenos",
+        "userName": "Luis",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R210TT6AAWYXZH",
+        "text": "I did not have to leave the house to get it. It works like it’s supposed to.",
+        "date": "Reviewed in the United States on April 28, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "It is a light switch, and it turned on and off",
+        "userName": "Steven R.",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3IHI9W0J0I05S",
+        "text": "Perfect",
+        "date": "Reviewed in the United States on April 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Color and Design",
+        "userName": "William McMaster",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3DOHVQHEM7CNL",
+        "text": "I installed the entire package and had no problems at all.",
+        "date": "Reviewed in the United States on April 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Easy installation",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RX7P73LWFPOZ0",
+        "text": "Having tried a couple of them for a year, have to say the quality seems iffy. One of the switches already popped out and had to be replaced. The switches seem like collected from various sources and put in a box. I say that because the earth connection is at different place for many switches. Still the switches work fine when installed, just don’t expect them to last like the original switches.",
+        "date": "Reviewed in the United States on March 30, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Quality not so good",
+        "userName": "N Z",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R19TBRI5T6B5VW",
+        "text": "These were such a breath of fresh air. My old switches were yellowed and dingy. So gross looking and not fresh. This was easy for me to install (I have some experience). The quality seems great and so does the value.",
+        "date": "Reviewed in the United States on March 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "So refreshing to update my switches!",
+        "userName": "Momof2",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R14CYWUJEHZWM7",
+        "text": "Just what I wanted for replacing our toggle switches to more modern looking paddle/rocker switches.",
+        "date": "Reviewed in the United States on March 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I wanted",
+        "userName": "Scott K",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RONJHAZK7YDP6",
+        "text": "Good product and quick delivery.",
+        "date": "Reviewed in the United States on February 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Value Pack",
+        "userName": "Kerri-Ann McLean",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3FL062BAPWL7F",
+        "text": "It really classes up my house.",
+        "date": "Reviewed in the United States on February 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Johanna McKinley",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RRI3YGKP84V8R",
+        "text": "Was easy to install, looks good, white color matched another switch from Leviton, switch tap is quiet, screws are strong and held the wires well in place. Would buy again.",
+        "date": "Reviewed in the United States on February 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Functions and looks just like a more expensive switch",
+        "userName": "Sunny",
+        "numberOfHelpful": 2,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1BNJIWFE2QFFE",
+        "text": "Product does not have the registered trademark (R) as would be if it were authentic UL listed.",
+        "date": "Reviewed in the United States on February 3, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "No trademark",
+        "userName": "Ming",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R126ARKGQJROQE",
+        "text": "This is a viable switch. Design and functionality is great out of the box. I purchased/installed these in March of 2023, and now on Nov 6th, I've had three switches break. This 3rd one broke today in the same way as the others; the paddle starts to shift and slide to an angle and then eventually pops out completely. I've replied a dozen times, but it will last 2-3 switches and will happen all over again. These 10 switches and the time to install are now a complete waste.",
+        "date": "Reviewed in the United States on November 6, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Doesn't Last / Waste of Time & Money",
+        "userName": "Brett S. Kelly",
+        "numberOfHelpful": 2,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1OVZZ706Y90MA",
+        "text": "I am glad that the color of this switch matches this brand’s wall plate. But it is noisier than the Leviton switch from Home Depot.",
+        "date": "Reviewed in the United States on October 18, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Color matches the plate",
+        "userName": "swejlfdc",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71nP4bVQZpL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RHFG0VVAPLKRL",
+        "text": "Based on initial inspection, the product seems fine. The packaging came busted open. I am amazed they all stayed in the package.",
+        "date": "Reviewed in the United States on October 12, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Product seems fine, packaging is a disaster.",
+        "userName": "RPPhillips",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/713SWAP4NrL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71RJ4Kh9mnL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RE1GWZD6FWYP7",
+        "text": "Pretty cool product especially for the price. My wife and I have bought and sold homes multiple times over 26 years. I like to work on the electrical and like to save a little money too. These switches are as good as an 8 to 10 dollar switch at the box store.",
+        "date": "Reviewed in the United States on October 3, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "These are solid switches",
+        "userName": "Brendon MO",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RRQ12CV3UWG1J",
+        "text": "I've had about 5 of these (out of 30) break off from simple day-to-day use. They are cheaply made, and I'm replacing them each time they break with Leviton switches (made in USA).",
+        "date": "Reviewed in the United States on August 15, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Easy to break",
+        "userName": "R. Bae",
+        "numberOfHelpful": 2,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3A2WDE96T5XWP",
+        "text": "It’s easy to install and we got it right! The only thing it is the “click” when turning on or off! But it’s just a minor thing",
+        "date": "Reviewed in the United States on July 30, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "It would be 5 if it was soft touch!",
+        "userName": "Diana E.",
+        "numberOfHelpful": 5,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2AY3D1GJIMV4Q",
+        "text": "Purchased a pack of 10 to replace around the house. Half way through replacing, 1 out of 10 doesn't work. I'm not going to sit here and troubleshoot as I am too far into replacing them all. Will update on the others as time passes.",
+        "date": "Reviewed in the United States on July 26, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "One bad one",
+        "userName": "Thuy Nguyen",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1R5IIIAHRV7D7",
+        "text": "Excellent replacement for our old outdated switches",
+        "date": "Reviewed in the United States on July 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value",
+        "userName": "DB",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RTYS0ERN7D96E",
+        "text": "Out of the 20 of these that I installed in my house, two were faulty. One didn't have the ground on it, and the other stopped working about a month later and I had to replace it. The others work great, I would purchase again.",
+        "date": "Reviewed in the United States on July 17, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good quality, but a few didn't work correctly",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 5,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1DFLZV9SX5TF0",
+        "text": "Almost all that I have replaced have cracks. These are cheaply made garbage Maybe if you don't have a full house or kids these would be fine .. or if you never actually used the switch. But they wear out from being turned on and off and the button will pop out.",
+        "date": "Reviewed in the United States on July 15, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "Deanna",
+        "numberOfHelpful": 3,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RUIU4SNLHYPWB",
+        "text": "Easy to install. Great price.",
+        "date": "Reviewed in the United States on July 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works just like major brand name.",
+        "userName": "AmazonCustomer",
+        "numberOfHelpful": 2,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R38L0JMDUO2G6L",
+        "text": "I purchased a number of these switches and have had to replace all where regular use is needed with Leviton decora. These are made very poorly and the paddle pops out within a few months. In the picture is the second set of switches I installed from this purchase of 10. Avoid and just get name brand.",
+        "date": "Reviewed in the United States on May 27, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Consistently fail within six months",
+        "userName": "Nichole C.",
+        "numberOfHelpful": 4,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61oFZyHqJKL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1IVJ0X4IHJ7IS",
+        "text": "Overall performance is not very good. How ever great price . Screws tend to strip out when using a cordless screw gun into a plastic box",
+        "date": "Reviewed in the United States on May 25, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Product is okay. Easy installation. As long as you are putting screws in by hand.",
+        "userName": "Max Gutierrez",
+        "numberOfHelpful": 2,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3NMPFN2ADR3H5",
+        "text": "Trying to screw straigh in plate covers is extremely difficult if not perfectly",
+        "date": "Reviewed in the United States on May 5, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor qualitt",
+        "userName": "Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2FQD70CC3CFTG",
+        "text": "Latest 2 years with regular use. Low build quality, keep them in very light areas.",
+        "date": "Reviewed in the United States on April 16, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Low build quality",
+        "userName": "Justin H",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RWXRU1NTP54M2",
+        "text": "I purchased these Enerlites switches as a more economical option to what I had purchased at Home Depot. I cannot comment on the durability, but the quality seems very high and they were easy to install with either screw attachments or wite push in holes. Seems like a good product!",
+        "date": "Reviewed in the United States on March 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very Nice Switch",
+        "userName": "Armen (Hank) Mancini",
+        "numberOfHelpful": 2,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2DTYS1XUOYAPJ",
+        "text": "I needed several of these switches so I bought this package. Although it was more than I needed, it was cheaper than buying them individually. They work great and look good. Now I have extras. Would recommend without hesitation.",
+        "date": "Reviewed in the United States on February 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Value for the Package",
+        "userName": "Bike Rider",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RCME99RGQ954E",
+        "text": "Should have a mixture of single pole and three ways.",
+        "date": "Reviewed in the United States on January 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "Charles D. Bobo",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3IAQ6QYS3MGVN",
+        "text": "Not white, more off white or slightly almond",
+        "date": "Reviewed in the United States on January 22, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not white.",
+        "userName": "sara",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/710P5vS8XML._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00QXOSTFU",
+        "productTitle": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 282,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 7393,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1UCBXLBEH8IH4",
+        "text": "Good items",
+        "date": "Reviewed in the United States on December 24, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good items",
+        "userName": "Sal Hernandez",
+        "numberOfHelpful": 0,
+        "variationId": "B00QXOSTFU",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Wall Plate Not Included",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

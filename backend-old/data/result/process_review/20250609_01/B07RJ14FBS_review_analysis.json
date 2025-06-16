@@ -1,0 +1,464 @@
+{
+  "product_title": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@clean and simple design": {
+          "+": [
+            8
+          ]
+        },
+        "B@low profile appearance": {
+          "+": [
+            23
+          ]
+        },
+        "C@looks nice": {
+          "+": [
+            17,
+            37
+          ]
+        },
+        "D@looks like standard dimmer switch": {
+          "+": [
+            23
+          ]
+        }
+      },
+      "button": {
+        "E@center button not pronounced enough": {
+          "-": [
+            2
+          ]
+        },
+        "F@button breaks off": {
+          "-": [
+            15
+          ]
+        },
+        "G@button becomes inoperable": {
+          "-": [
+            38
+          ]
+        },
+        "H@button doesn't work": {
+          "-": [
+            22,
+            46
+          ]
+        }
+      },
+      "knob": {
+        "I@knob can break off": {
+          "-": [
+            15
+          ]
+        },
+        "J@knob will not sit flush with backplates": {
+          "-": [
+            46
+          ]
+        }
+      },
+      "dial": {
+        "K@spinning ring around center button": {
+          "-": [
+            2
+          ]
+        },
+        "L@dial extremely fragile during installation": {
+          "-": [
+            27
+          ]
+        },
+        "M@touch sensitive and squishy dial": {
+          "-": [
+            33
+          ]
+        }
+      },
+      "mounting": {
+        "N@doesn't stay attached to switch toggle well": {
+          "-": [
+            31
+          ]
+        },
+        "O@easy to pull off wall": {
+          "-": [
+            31
+          ]
+        },
+        "P@pops on over regular light switch": {
+          "+": [
+            2
+          ]
+        },
+        "Q@clamps over light switch non-destructively": {
+          "+": [
+            23
+          ]
+        }
+      },
+      "screws": {
+        "R@trouble with screws to secure to light switch": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "battery": {
+        "S@shipped with defective battery": {
+          "-": [
+            7
+          ]
+        },
+        "T@battery needs replacing every 3 days": {
+          "-": [
+            7
+          ]
+        },
+        "U@original battery lasts over 4.5 years": {
+          "+": [
+            0,
+            9
+          ]
+        }
+      },
+      "packaging": {
+        "V@excessive single-use plastic packaging": {
+          "-": [
+            34
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@no issues over 4.5 years": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@jam and stop working fairly easily": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@held up really well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@works flawlessly": {
+          "+": {
+            "?": [
+              16,
+              23
+            ]
+          }
+        },
+        "e@works inconsistently": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "f@don't last": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "g@works until they do not and need reset": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "h@stopped working and won't reset": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "responsiveness": {
+        "i@lights respond quickly and reliably": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "j@fast and responsive": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "k@dimming feature slow to respond": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "l@zigbee bulbs don't respond about half the time": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        }
+      },
+      "pairing": {
+        "m@pairing with Hue doesn't work": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "n@pairing can be difficult or super easy": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "o@easy to set up and pair": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "p@had to hold next to zigbee coordinator to pair": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "installation": {
+        "q@easy to install": {
+          "+": {
+            "?": [
+              4,
+              10,
+              35,
+              40
+            ]
+          }
+        },
+        "r@straightforward installation": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "s@installed in less than 5 minutes": {
+          "+": {
+            "?": [
+              28,
+              29
+            ]
+          }
+        },
+        "t@physically installed in about a minute": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "u@works well with Hue bridge bulbs": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "v@buggy experience with Home Assistant": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "w@stateful behavior causes issues": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "x@can turn lights on and dim but cannot turn off": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "y@works even when Internet is out": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "durability": {
+        "z@poor engineered": {
+          "-": {
+            "F": [
+              15
+            ]
+          }
+        },
+        "aa@extremely fragile": {
+          "-": {
+            "L": [
+              27
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "controlling Hue lights": {
+        "+": {
+          "u": [
+            2,
+            6,
+            20,
+            40,
+            43
+          ],
+          "j": [
+            20
+          ],
+          "i": [
+            23
+          ]
+        },
+        "-": {
+          "m": [
+            5
+          ],
+          "l": [
+            38
+          ]
+        }
+      },
+      "preventing switch from being turned off": {
+        "+": {
+          "?": [
+            30,
+            32,
+            41,
+            43
+          ]
+        }
+      },
+      "guest control of lights": {
+        "+": {
+          "?": [
+            12,
+            14
+          ]
+        }
+      },
+      "bedroom lighting control": {
+        "+": {
+          "a": [
+            0,
+            9
+          ],
+          "?": [
+            12
+          ]
+        }
+      },
+      "ceiling fan dimmer control": {
+        "+": {
+          "q": [
+            10
+          ]
+        }
+      },
+      "controlling multiple smart lights": {
+        "-": {
+          "?": [
+            11,
+            47
+          ]
+        }
+      },
+      "Home Assistant integration": {
+        "+": {
+          "?": [
+            36
+          ]
+        },
+        "-": {
+          "v": [
+            3
+          ],
+          "w": [
+            19
+          ],
+          "p": [
+            36
+          ]
+        }
+      },
+      "scene control": {
+        "+": {
+          "?": [
+            40
+          ]
+        },
+        "-": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "room lighting control": {
+        "+": {
+          "c": [
+            2
+          ],
+          "?": [
+            13,
+            39
+          ]
+        },
+        "-": {
+          "?": [
+            39
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:43.916633"
+}

@@ -1,0 +1,252 @@
+{
+  "product_title": "TORCHSTAR 0-10V LED Dimmer Switch, Single-Pole or 3-Way Light Switch, 120-277V for Dimmable LED Panel Light Linear Light, ETL Listed, Pack of 2",
+  "product_category": "Commercial 0-10V Dimmer Switches",
+  "total_reviews": 11,
+  "review_analysis": {
+    "phy": {
+      "weight": {
+        "A@weighs close to nothing and feels cheap": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "rocker switch": {
+        "B@has no resistance when pushed and feels mushy": {
+          "-": [
+            2
+          ]
+        },
+        "C@doesn't snap like a normal switch to on/off": {
+          "-": [
+            2
+          ]
+        },
+        "D@can be easily put in between on/off position": {
+          "-": [
+            2
+          ]
+        },
+        "E@has good positive feel when switching on and off": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "slide function": {
+        "F@very smooth": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "size": {
+        "G@doesn't take up as much room in the J-box as other dimmers": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "wiring design": {
+        "H@0-10v (5 wires to the fixture) design": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "packaging": {
+        "I@damaged/missing packing": {
+          "-": [
+            1
+          ]
+        },
+        "J@one switch missing its wrapper": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "instructions": {
+        "K@missing instructions": {
+          "-": [
+            1
+          ]
+        },
+        "L@easy to read instructions": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "rating": {
+        "M@only rated to 6amps": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "certification": {
+        "N@ETL listed but not UL listed": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "adjustment controls": {
+        "O@only one adjustment for minimum brightness": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming range": {
+        "a@only dims to about 40-50%": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "b@only barely dimmed from 100% to 75%": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@only turned fixture down about 10%": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "dimming stability": {
+        "d@lots of fluctuation in the dimming": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "e@switches work fine": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "f@worked as it should": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "g@worked great": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "h@work well": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "i@50% failure rate (only 3 out of 6 switches worked)": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "installation ease": {
+        "j@easy to install": {
+          "+": {
+            "?": [
+              6,
+              7
+            ]
+          }
+        }
+      },
+      "overall quality": {
+        "k@can feel the difference in quality compared to other switches": {
+          "-": {
+            "A": [
+              2
+            ]
+          }
+        },
+        "l@way better for look, feel and function": {
+          "+": {
+            "E,F,O": [
+              10
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED ceiling lights": {
+        "+": {
+          "e": [
+            0
+          ]
+        }
+      },
+      "LED panels and strip lighting for client projects": {
+        "+": {
+          "j,f": [
+            6
+          ]
+        }
+      },
+      "creating light wall": {
+        "+": {
+          "f,j": [
+            7
+          ]
+        }
+      },
+      "controlling LED lights": {
+        "-": {
+          "M": [
+            2
+          ]
+        }
+      },
+      "general lighting control": {
+        "+": {
+          "g": [
+            9
+          ]
+        },
+        "-": {
+          "a,d": [
+            3
+          ],
+          "b": [
+            4
+          ],
+          "c": [
+            5
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:05.733187"
+}

@@ -1,0 +1,250 @@
+{
+  "product_title": "ELECTECK 12 Pack Single Pole Rocker Light Switch, 15A 120/277V, Wallplate Included, UL Certified",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek and modern design": {
+          "+": [
+            21,
+            45
+          ]
+        },
+        "B@off-white/beige color instead of white": {
+          "-": [
+            5
+          ]
+        },
+        "C@look nice/great on wall": {
+          "+": [
+            13,
+            21,
+            38,
+            46
+          ]
+        }
+      },
+      "material": {
+        "D@cheap plastic construction": {
+          "-": [
+            14
+          ]
+        },
+        "E@well made construction": {
+          "+": [
+            28
+          ]
+        },
+        "F@sturdy covers": {
+          "+": [
+            21
+          ]
+        }
+      },
+      "dimensions": {
+        "G@plate smaller than standard size": {
+          "-": [
+            25
+          ]
+        },
+        "H@irregular plate sizes": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "packaging": {
+        "I@wrapped in plastic but scratched": {
+          "-": [
+            24
+          ]
+        }
+      }
+    },
+    "perf": {
+      "sound": {
+        "a@loud clicking noise when switching": {
+          "-": {
+            "?": [
+              4,
+              9,
+              13,
+              25,
+              32
+            ]
+          }
+        },
+        "b@hollow cheap plastic sound": {
+          "-": {
+            "D": [
+              14
+            ]
+          }
+        },
+        "c@great audible click with authority": {
+          "+": {
+            "?": [
+              1,
+              43
+            ]
+          }
+        }
+      },
+      "durability": {
+        "d@withstand heavy use from children": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@cracking after few years": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "f@switches failing within 3 years": {
+          "-": {
+            "?": [
+              18,
+              27
+            ]
+          }
+        },
+        "g@good longevity of contactors": {
+          "+": {
+            "c": [
+              1
+            ]
+          }
+        },
+        "h@flimsy feel on wall after installation": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "i@single pole switches work as advertised": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "j@easy to wipe off": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "k@smooth action, not too easily toggled": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "electrical": {
+        "l@voltage and amp resistance working perfectly": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "m@metal around unit could cause short in metal box": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "modernizing/upgrading home switches": {
+        "+": {
+          "C": [
+            0,
+            20,
+            38,
+            44,
+            47
+          ],
+          "?": [
+            10,
+            16,
+            42
+          ]
+        }
+      },
+      "rental property installation": {
+        "+": {
+          "?": [
+            2,
+            32
+          ]
+        }
+      },
+      "replacement for Alexa switches": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "bathrooms, hallways and kitchens with frequent use by kids": {
+        "+": {
+          "d": [
+            33
+          ]
+        }
+      },
+      "bedroom or bathroom use": {
+        "-": {
+          "a": [
+            13
+          ]
+        }
+      },
+      "quiet nighttime switching": {
+        "-": {
+          "a": [
+            4,
+            13
+          ]
+        }
+      },
+      "upstairs house installation": {
+        "-": {
+          "a": [
+            32
+          ]
+        }
+      },
+      "primary home installation": {
+        "-": {
+          "a": [
+            32
+          ]
+        }
+      },
+      "double or more switch install with metal box": {
+        "-": {
+          "m": [
+            35
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:26.693550"
+}

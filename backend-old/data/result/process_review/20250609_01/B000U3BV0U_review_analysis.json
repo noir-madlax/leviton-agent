@@ -1,0 +1,197 @@
+{
+  "product_title": "Leviton 54504-2W 15-Amp, 120/277-Volt, Toggle Framed 4-Way AC Quiet Switch, Commercial Grade, Grounding, White",
+  "product_category": "Four Way Multi-Location Control Switches",
+  "total_reviews": 21,
+  "review_analysis": {
+    "phy": {
+      "switch paddle": {
+        "A@wider switch paddle": {
+          "+": [
+            6,
+            14
+          ]
+        }
+      },
+      "border": {
+        "B@small border around the switch": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "toggle mechanism": {
+        "C@does not toggle smoothly": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "terminals": {
+        "D@has all the terminals": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "ground screw": {
+        "E@has a ground screw": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "color": {
+        "F@white toggle with ivory body": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "dimensions": {
+        "G@little wider than typical standard switch": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "CSA compliance": {
+        "H@meets CSA": {
+          "+": [
+            15
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works great": {
+          "+": {
+            "?": [
+              1,
+              2,
+              14
+            ]
+          }
+        },
+        "b@works as advertised": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@functions as expected": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "d@works fine": {
+          "+": {
+            "?": [
+              7,
+              12
+            ]
+          }
+        },
+        "e@worked perfectly": {
+          "+": {
+            "?": [
+              9,
+              11
+            ]
+          }
+        },
+        "f@works 100% fine": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "g@stopped working properly after a couple months": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@have to flick the switch multiple times to turn light on/off": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@easy to install": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "j@easy to put on": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "quality": {
+        "k@quality product": {
+          "+": {
+            "?": [
+              2,
+              10
+            ]
+          }
+        },
+        "l@good quality": {
+          "+": {
+            "?": [
+              10,
+              19
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacement": {
+        "+": {
+          "?": [
+            0,
+            6,
+            9
+          ]
+        }
+      },
+      "upstairs hall lights controlled by four switches": {
+        "+": {
+          "e": [
+            9
+          ]
+        }
+      },
+      "multi-location control": {
+        "+": {
+          "a": [
+            14
+          ]
+        }
+      },
+      "bedrooms": {
+        "+": {
+          "f": [
+            17
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:24.786329"
+}

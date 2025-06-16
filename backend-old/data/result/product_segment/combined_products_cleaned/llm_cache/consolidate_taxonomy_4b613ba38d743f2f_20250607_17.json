@@ -1,0 +1,225 @@
+{
+  "timestamp": "2025-06-07T17:33:40.207860",
+  "interaction_type": "consolidate_taxonomy",
+  "cache_key": "4b613ba38d743f2f",
+  "context": {
+    "taxonomy_a_categories": [
+      "Four Way Multi-Location Control Switches",
+      "High Amperage Rocker Switches",
+      "High Amperage Transfer Switches",
+      "Inline Cord Control Switches",
+      "LED Illuminated Indicator Switches",
+      "Motion Sensor Switches",
+      "Multi-Function Combination Switches",
+      "RF Wireless Remote Control Switches",
+      "Single Pole Rocker Switches",
+      "Single Pole Toggle Switches",
+      "Smart Hub Dependent Switches",
+      "Specialty Environmental Control Switches",
+      "Switch Outlet Combination Devices",
+      "Three Way Multi-Location Control Switches",
+      "Timer Control Switches",
+      "WiFi Connected Smart Switches"
+    ],
+    "taxonomy_b_categories": [
+      "Add On Switches",
+      "Combination Switches",
+      "Double Switches",
+      "Four Way Switches",
+      "Single Pole Rocker Switches",
+      "Single Pole Toggle Switches",
+      "Smart Light Switches",
+      "Three Way Switches",
+      "Wireless Remote Switches"
+    ],
+    "expected_a_ids": [
+      "A_0",
+      "A_1",
+      "A_10",
+      "A_11",
+      "A_12",
+      "A_13",
+      "A_14",
+      "A_15",
+      "A_2",
+      "A_3",
+      "A_4",
+      "A_5",
+      "A_6",
+      "A_7",
+      "A_8",
+      "A_9"
+    ],
+    "expected_b_ids": [
+      "B_0",
+      "B_1",
+      "B_2",
+      "B_3",
+      "B_4",
+      "B_5",
+      "B_6",
+      "B_7",
+      "B_8"
+    ],
+    "taxonomy_a_with_ids": {
+      "Single Pole Toggle Switches": {
+        "definition": "Single pole traditional toggle style switches with flip-style actuators for basic on/off lighting control, e.g. standard toggle switches, grounding toggle switches, heavy duty toggle switches, illuminated toggle switches, toggle framed switches",
+        "ids": [
+          "A_0"
+        ]
+      },
+      "Single Pole Rocker Switches": {
+        "definition": "Single pole decorator/rocker style switches with paddle operation for basic on/off lighting control, e.g. standard single pole rocker switches, decorator paddle switches, quiet rocker switches, illuminated rocker switches",
+        "ids": [
+          "A_1"
+        ]
+      },
+      "Three Way Multi-Location Control Switches": {
+        "definition": "Three-way switches that allow control of lighting from two different locations in both rocker and toggle styles, e.g. three-way rocker switches, three-way decorator switches, toggle three way switches",
+        "ids": [
+          "A_2"
+        ]
+      },
+      "Four Way Multi-Location Control Switches": {
+        "definition": "Four-way switches that work with three-way switches to control lighting from three or more locations in both rocker and toggle styles, e.g. four-way rocker switches, four-way decorator switches, paddle four way switches",
+        "ids": [
+          "A_3"
+        ]
+      },
+      "Multi-Function Combination Switches": {
+        "definition": "Switches that combine multiple individual switching functions in a single device, e.g. duplex rocker switches, combination decorator switches, dual rocker switches, triple rocker switches, dual paddle switches, double decorator switches, twin rocker switches",
+        "ids": [
+          "A_4"
+        ]
+      },
+      "High Amperage Rocker Switches": {
+        "definition": "Rocker switches rated for 20 amp or higher current loads, e.g. 20 amp rocker switches, commercial grade high current switches",
+        "ids": [
+          "A_5"
+        ]
+      },
+      "Motion Sensor Switches": {
+        "definition": "Switches with built-in motion detection for automatic operation, e.g. motion sensor switches, occupancy sensor switches, motion activated switches",
+        "ids": [
+          "A_6"
+        ]
+      },
+      "LED Illuminated Indicator Switches": {
+        "definition": "Switches with built-in LED indicators, pilot lights, or locator lights for visibility in dark conditions, e.g. LED illuminated switches, pilot light switches, lighted rocker switches, night light switches, LED indicator switches, locator light switches",
+        "ids": [
+          "A_7"
+        ]
+      },
+      "WiFi Connected Smart Switches": {
+        "definition": "WiFi or Bluetooth enabled switches for remote control and automation via smartphone apps or voice assistants, e.g. smart light switches, connected switches, WiFi light switches, app-controlled switches, voice-activated switches, Zigbee switches",
+        "ids": [
+          "A_8"
+        ]
+      },
+      "RF Wireless Remote Control Switches": {
+        "definition": "RF remote controlled switches without hardwired connections for wireless operation, e.g. wireless remote switches, RF controlled switches, wireless switch kits, battery-operated remote switches",
+        "ids": [
+          "A_9"
+        ]
+      },
+      "Switch Outlet Combination Devices": {
+        "definition": "Devices that combine a light switch with an electrical outlet in a single unit, e.g. toggle switch outlet combos, rocker switch receptacle combinations",
+        "ids": [
+          "A_10"
+        ]
+      },
+      "Inline Cord Control Switches": {
+        "definition": "Switches designed to be installed inline with electrical cords for appliance control, e.g. cord line switches, appliance inline switches, lamp cord switches",
+        "ids": [
+          "A_11"
+        ]
+      },
+      "Smart Hub Dependent Switches": {
+        "definition": "Smart switches requiring separate hub devices for connectivity and automation, e.g. Z-Wave switches, hub-dependent smart switches, protocol-based switches",
+        "ids": [
+          "A_12"
+        ]
+      },
+      "Timer Control Switches": {
+        "definition": "Switches with built-in timing mechanisms for automatic scheduling and specialized control functions, e.g. digital timer switches, programmable switches, astronomic timers, humidity sensor switches",
+        "ids": [
+          "A_13"
+        ]
+      },
+      "Specialty Environmental Control Switches": {
+        "definition": "Switches designed for specific applications or environmental controls beyond basic lighting, e.g. ceiling fan switches, humidity sensor switches, wireless switches",
+        "ids": [
+          "A_14"
+        ]
+      },
+      "High Amperage Transfer Switches": {
+        "definition": "High amperage switches for transferring electrical power between sources, e.g. emergency power transfer switches, non-fused transfer switches",
+        "ids": [
+          "A_15"
+        ]
+      }
+    },
+    "taxonomy_b_with_ids": {
+      "Single Pole Toggle Switches": {
+        "definition": "Single pole light switches with traditional toggle actuators for basic on/off control, e.g. standard toggle switches, commercial grade toggle switches",
+        "ids": [
+          "B_0"
+        ]
+      },
+      "Single Pole Rocker Switches": {
+        "definition": "Single pole light switches with paddle or rocker actuators for basic on/off control, e.g. decorator rocker switches, paddle switches",
+        "ids": [
+          "B_1"
+        ]
+      },
+      "Three Way Switches": {
+        "definition": "Light switches designed for three-way switching configurations to control lights from multiple locations, e.g. 3-way toggle switches, 3-way rocker switches",
+        "ids": [
+          "B_2"
+        ]
+      },
+      "Four Way Switches": {
+        "definition": "Light switches designed for four-way switching configurations in multi-location control setups, e.g. 4-way decorator switches, 4-way paddle switches",
+        "ids": [
+          "B_3"
+        ]
+      },
+      "Double Switches": {
+        "definition": "Light switches with two separate switching mechanisms in a single device for controlling multiple circuits, e.g. duplex switches, combination double switches",
+        "ids": [
+          "B_4"
+        ]
+      },
+      "Smart Light Switches": {
+        "definition": "Light switches with wireless connectivity and smart home integration capabilities, e.g. WiFi switches, Z-Wave switches, Zigbee switches",
+        "ids": [
+          "B_5"
+        ]
+      },
+      "Combination Switches": {
+        "definition": "Light switches combined with additional features or controls in a single device, e.g. switch with LED guide light, fan and light combination controls",
+        "ids": [
+          "B_6"
+        ]
+      },
+      "Add On Switches": {
+        "definition": "Auxiliary switches designed to work with main switches in multi-way configurations, e.g. add-on paddle switches, companion switches",
+        "ids": [
+          "B_7"
+        ]
+      },
+      "Wireless Remote Switches": {
+        "definition": "Light switches that operate without hardwired connections using radio frequency or other wireless technologies, e.g. RF remote switches, wireless switch kits",
+        "ids": [
+          "B_8"
+        ]
+      }
+    }
+  },
+  "prompt": "You are a taxonomy consolidation specialist.\n\n**YOUR TASK:** Consolidate two product taxonomies by identifying similar categories and grouping them together, while preserving the specificity and distinctiveness of each category type.\n\n**INPUT TAXONOMIES:**\n\nTaxonomy A (Current Consolidated):\n{\n  \"Single Pole Toggle Switches\": {\n    \"definition\": \"Single pole traditional toggle style switches with flip-style actuators for basic on/off lighting control, e.g. standard toggle switches, grounding toggle switches, heavy duty toggle switches, illuminated toggle switches, toggle framed switches\",\n    \"ids\": [\n      \"A_0\"\n    ]\n  },\n  \"Single Pole Rocker Switches\": {\n    \"definition\": \"Single pole decorator/rocker style switches with paddle operation for basic on/off lighting control, e.g. standard single pole rocker switches, decorator paddle switches, quiet rocker switches, illuminated rocker switches\",\n    \"ids\": [\n      \"A_1\"\n    ]\n  },\n  \"Three Way Multi-Location Control Switches\": {\n    \"definition\": \"Three-way switches that allow control of lighting from two different locations in both rocker and toggle styles, e.g. three-way rocker switches, three-way decorator switches, toggle three way switches\",\n    \"ids\": [\n      \"A_2\"\n    ]\n  },\n  \"Four Way Multi-Location Control Switches\": {\n    \"definition\": \"Four-way switches that work with three-way switches to control lighting from three or more locations in both rocker and toggle styles, e.g. four-way rocker switches, four-way decorator switches, paddle four way switches\",\n    \"ids\": [\n      \"A_3\"\n    ]\n  },\n  \"Multi-Function Combination Switches\": {\n    \"definition\": \"Switches that combine multiple individual switching functions in a single device, e.g. duplex rocker switches, combination decorator switches, dual rocker switches, triple rocker switches, dual paddle switches, double decorator switches, twin rocker switches\",\n    \"ids\": [\n      \"A_4\"\n    ]\n  },\n  \"High Amperage Rocker Switches\": {\n    \"definition\": \"Rocker switches rated for 20 amp or higher current loads, e.g. 20 amp rocker switches, commercial grade high current switches\",\n    \"ids\": [\n      \"A_5\"\n    ]\n  },\n  \"Motion Sensor Switches\": {\n    \"definition\": \"Switches with built-in motion detection for automatic operation, e.g. motion sensor switches, occupancy sensor switches, motion activated switches\",\n    \"ids\": [\n      \"A_6\"\n    ]\n  },\n  \"LED Illuminated Indicator Switches\": {\n    \"definition\": \"Switches with built-in LED indicators, pilot lights, or locator lights for visibility in dark conditions, e.g. LED illuminated switches, pilot light switches, lighted rocker switches, night light switches, LED indicator switches, locator light switches\",\n    \"ids\": [\n      \"A_7\"\n    ]\n  },\n  \"WiFi Connected Smart Switches\": {\n    \"definition\": \"WiFi or Bluetooth enabled switches for remote control and automation via smartphone apps or voice assistants, e.g. smart light switches, connected switches, WiFi light switches, app-controlled switches, voice-activated switches, Zigbee switches\",\n    \"ids\": [\n      \"A_8\"\n    ]\n  },\n  \"RF Wireless Remote Control Switches\": {\n    \"definition\": \"RF remote controlled switches without hardwired connections for wireless operation, e.g. wireless remote switches, RF controlled switches, wireless switch kits, battery-operated remote switches\",\n    \"ids\": [\n      \"A_9\"\n    ]\n  },\n  \"Switch Outlet Combination Devices\": {\n    \"definition\": \"Devices that combine a light switch with an electrical outlet in a single unit, e.g. toggle switch outlet combos, rocker switch receptacle combinations\",\n    \"ids\": [\n      \"A_10\"\n    ]\n  },\n  \"Inline Cord Control Switches\": {\n    \"definition\": \"Switches designed to be installed inline with electrical cords for appliance control, e.g. cord line switches, appliance inline switches, lamp cord switches\",\n    \"ids\": [\n      \"A_11\"\n    ]\n  },\n  \"Smart Hub Dependent Switches\": {\n    \"definition\": \"Smart switches requiring separate hub devices for connectivity and automation, e.g. Z-Wave switches, hub-dependent smart switches, protocol-based switches\",\n    \"ids\": [\n      \"A_12\"\n    ]\n  },\n  \"Timer Control Switches\": {\n    \"definition\": \"Switches with built-in timing mechanisms for automatic scheduling and specialized control functions, e.g. digital timer switches, programmable switches, astronomic timers, humidity sensor switches\",\n    \"ids\": [\n      \"A_13\"\n    ]\n  },\n  \"Specialty Environmental Control Switches\": {\n    \"definition\": \"Switches designed for specific applications or environmental controls beyond basic lighting, e.g. ceiling fan switches, humidity sensor switches, wireless switches\",\n    \"ids\": [\n      \"A_14\"\n    ]\n  },\n  \"High Amperage Transfer Switches\": {\n    \"definition\": \"High amperage switches for transferring electrical power between sources, e.g. emergency power transfer switches, non-fused transfer switches\",\n    \"ids\": [\n      \"A_15\"\n    ]\n  }\n}\n\nTaxonomy B (New Batch):\n{\n  \"Single Pole Toggle Switches\": {\n    \"definition\": \"Single pole light switches with traditional toggle actuators for basic on/off control, e.g. standard toggle switches, commercial grade toggle switches\",\n    \"ids\": [\n      \"B_0\"\n    ]\n  },\n  \"Single Pole Rocker Switches\": {\n    \"definition\": \"Single pole light switches with paddle or rocker actuators for basic on/off control, e.g. decorator rocker switches, paddle switches\",\n    \"ids\": [\n      \"B_1\"\n    ]\n  },\n  \"Three Way Switches\": {\n    \"definition\": \"Light switches designed for three-way switching configurations to control lights from multiple locations, e.g. 3-way toggle switches, 3-way rocker switches\",\n    \"ids\": [\n      \"B_2\"\n    ]\n  },\n  \"Four Way Switches\": {\n    \"definition\": \"Light switches designed for four-way switching configurations in multi-location control setups, e.g. 4-way decorator switches, 4-way paddle switches\",\n    \"ids\": [\n      \"B_3\"\n    ]\n  },\n  \"Double Switches\": {\n    \"definition\": \"Light switches with two separate switching mechanisms in a single device for controlling multiple circuits, e.g. duplex switches, combination double switches\",\n    \"ids\": [\n      \"B_4\"\n    ]\n  },\n  \"Smart Light Switches\": {\n    \"definition\": \"Light switches with wireless connectivity and smart home integration capabilities, e.g. WiFi switches, Z-Wave switches, Zigbee switches\",\n    \"ids\": [\n      \"B_5\"\n    ]\n  },\n  \"Combination Switches\": {\n    \"definition\": \"Light switches combined with additional features or controls in a single device, e.g. switch with LED guide light, fan and light combination controls\",\n    \"ids\": [\n      \"B_6\"\n    ]\n  },\n  \"Add On Switches\": {\n    \"definition\": \"Auxiliary switches designed to work with main switches in multi-way configurations, e.g. add-on paddle switches, companion switches\",\n    \"ids\": [\n      \"B_7\"\n    ]\n  },\n  \"Wireless Remote Switches\": {\n    \"definition\": \"Light switches that operate without hardwired connections using radio frequency or other wireless technologies, e.g. RF remote switches, wireless switch kits\",\n    \"ids\": [\n      \"B_8\"\n    ]\n  }\n}\n\n**UNDERSTANDING THE INPUT:**\n- Taxonomy A is the existing consolidated taxonomy with categories A_0, A_1, A_2, etc.\n- Taxonomy B is a new batch taxonomy with categories B_0, B_1, B_2, etc.\n- Each category ID represents a specific product category with its own definition\n- Your goal is to consolidate these by grouping similar categories while maintaining their distinctiveness\n\n**CONSOLIDATION INSTRUCTIONS:**\n1. **Identify similar categories** - Group categories from both taxonomies that represent the same or very similar product types based on their definitions\n2. **Preserve specificity** - When consolidating, maintain the specific nature of each category type rather than creating broader, more generic categories\n3. **Create precise names** - Use clear, descriptive names (words separated by spaces) for consolidated categories; each category must represent a SINGULAR, SPECIFIC concept with NO OVERLAP; RENAME categories when needed to make them more distinguishing and specific than the originals\n4. **Include all category IDs** - Each consolidated category contains ALL the original category IDs that belong to the same concept\n5. **Write focused definitions** - Create a precise definition for each consolidated category that clearly describes the specific product type, ending with \"e.g.\" and specific product subtypes (NEVER include brand names, model numbers, or proprietary product line names)\n6. **Ensure completeness** - Every A_* and B_* ID must appear exactly once in the result\n7. **Maintain consistent granularity** - All consolidated categories must be at the same level of specificity\n8. **Ensure mutual exclusivity** - Categories must have clear, non-overlapping boundaries\n\n**CRITICAL RULES:**\n- **Completeness**: Every original category ID must be included exactly once in the \"ids\" arrays\n- **Format**: Return pure JSON only - no explanations or formatting\n- **Consolidation**: Group only categories that represent essentially the same product type - do not force unrelated categories together\n- **Specificity**: Maintain the specific nature of product categories - avoid creating overly broad or generic groupings\n- **Naming**: Use professional, descriptive category names with words separated by spaces; each category must represent ONE specific concept with clear boundaries; IMPROVE original names to be more distinguishing and specific when consolidating\n- **Granularity**: Maintain consistent level of specificity across all consolidated categories\n- **Exclusivity**: Ensure categories are mutually exclusive with no overlap\n- **Definitions**: Each consolidated category must have a \"definition\" field with precise description ending with \"e.g.\" and product subtypes\n\n**EXPECTED OUTPUT FORMAT:**\n{\n  \"Consolidated Category Name 1\": {\n    \"definition\": \"..., e.g. ...\",\n    \"ids\": [\"A_0\", \"B_1\"]\n  },\n  \"Consolidated Category Name 2\": {\n    \"definition\": \"..., e.g. ...\",\n    \"ids\": [\"A_1\"]\n  },\n  \"Consolidated Category Name 3\": {\n    \"definition\": \"..., e.g. ...\",\n    \"ids\": [\"B_0\"]\n  },\n  ...\n}",
+  "response": "```json\n{\n  \"Single Pole Toggle Switches\": {\n    \"definition\": \"Single pole traditional toggle style switches with flip-style actuators for basic on/off lighting control, e.g. standard toggle switches, grounding toggle switches, heavy duty toggle switches, illuminated toggle switches, toggle framed switches, commercial grade toggle switches\",\n    \"ids\": [\"A_0\", \"B_0\"]\n  },\n  \"Single Pole Rocker Switches\": {\n    \"definition\": \"Single pole decorator/rocker style switches with paddle operation for basic on/off lighting control, e.g. standard single pole rocker switches, decorator paddle switches, quiet rocker switches, illuminated rocker switches, decorator rocker switches, paddle switches\",\n    \"ids\": [\"A_1\", \"B_1\"]\n  },\n  \"Three Way Multi-Location Control Switches\": {\n    \"definition\": \"Three-way switches that allow control of lighting from two different locations in both rocker and toggle styles, e.g. three-way rocker switches, three-way decorator switches, toggle three way switches, 3-way toggle switches, 3-way rocker switches\",\n    \"ids\": [\"A_2\", \"B_2\"]\n  },\n  \"Four Way Multi-Location Control Switches\": {\n    \"definition\": \"Four-way switches that work with three-way switches to control lighting from three or more locations in both rocker and toggle styles, e.g. four-way rocker switches, four-way decorator switches, paddle four way switches, 4-way decorator switches, 4-way paddle switches\",\n    \"ids\": [\"A_3\", \"B_3\"]\n  },\n  \"Multi-Function Combination Switches\": {\n    \"definition\": \"Switches that combine multiple individual switching functions in a single device for controlling multiple circuits, e.g. duplex rocker switches, combination decorator switches, dual rocker switches, triple rocker switches, dual paddle switches, double decorator switches, twin rocker switches, duplex switches, combination double switches\",\n    \"ids\": [\"A_4\", \"B_4\"]\n  },\n  \"High Amperage Rocker Switches\": {\n    \"definition\": \"Rocker switches rated for 20 amp or higher current loads, e.g. 20 amp rocker switches, commercial grade high current switches\",\n    \"ids\": [\"A_5\"]\n  },\n  \"Motion Sensor Switches\": {\n    \"definition\": \"Switches with built-in motion detection for automatic operation, e.g. motion sensor switches, occupancy sensor switches, motion activated switches\",\n    \"ids\": [\"A_6\"]\n  },\n  \"LED Illuminated Indicator Switches\": {\n    \"definition\": \"Switches with built-in LED indicators, pilot lights, or locator lights for visibility in dark conditions, e.g. LED illuminated switches, pilot light switches, lighted rocker switches, night light switches, LED indicator switches, locator light switches\",\n    \"ids\": [\"A_7\"]\n  },\n  \"WiFi Connected Smart Switches\": {\n    \"definition\": \"WiFi or Bluetooth enabled switches for remote control and automation via smartphone apps or voice assistants, e.g. smart light switches, connected switches, WiFi light switches, app-controlled switches, voice-activated switches, WiFi switches, Z-Wave switches, Zigbee switches\",\n    \"ids\": [\"A_8\", \"B_5\"]\n  },\n  \"RF Wireless Remote Control Switches\": {\n    \"definition\": \"RF remote controlled switches without hardwired connections for wireless operation, e.g. wireless remote switches, RF controlled switches, wireless switch kits, battery-operated remote switches, RF remote switches\",\n    \"ids\": [\"A_9\", \"B_8\"]\n  },\n  \"Switch Outlet Combination Devices\": {\n    \"definition\": \"Devices that combine a light switch with an electrical outlet in a single unit, e.g. toggle switch outlet combos, rocker switch receptacle combinations\",\n    \"ids\": [\"A_10\"]\n  },\n  \"Inline Cord Control Switches\": {\n    \"definition\": \"Switches designed to be installed inline with electrical cords for appliance control, e.g. cord line switches, appliance inline switches, lamp cord switches\",\n    \"ids\": [\"A_11\"]\n  },\n  \"Smart Hub Dependent Switches\": {\n    \"definition\": \"Smart switches requiring separate hub devices for connectivity and automation, e.g. Z-Wave switches, hub-dependent smart switches, protocol-based switches\",\n    \"ids\": [\"A_12\"]\n  },\n  \"Timer Control Switches\": {\n    \"definition\": \"Switches with built-in timing mechanisms for automatic scheduling and specialized control functions, e.g. digital timer switches, programmable switches, astronomic timers, humidity sensor switches\",\n    \"ids\": [\"A_13\"]\n  },\n  \"Specialty Environmental Control Switches\": {\n    \"definition\": \"Switches designed for specific applications or environmental controls beyond basic lighting, e.g. ceiling fan switches, humidity sensor switches, wireless switches\",\n    \"ids\": [\"A_14\"]\n  },\n  \"High Amperage Transfer Switches\": {\n    \"definition\": \"High amperage switches for transferring electrical power between sources, e.g. emergency power transfer switches, non-fused transfer switches\",\n    \"ids\": [\"A_15\"]\n  },\n  \"Multi-Feature Combination Control Switches\": {\n    \"definition\": \"Light switches combined with additional features or controls in a single device beyond basic switching, e.g. switch with LED guide light, fan and light combination controls\",\n    \"ids\": [\"B_6\"]\n  },\n  \"Add On Auxiliary Switches\": {\n    \"definition\": \"Auxiliary switches designed to work with main switches in multi-way configurations, e.g. add-on paddle switches, companion switches\",\n    \"ids\": [\"B_7\"]\n  }\n}\n```",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_temperature": 0.15,
+  "batch_id": null,
+  "category": null
+}

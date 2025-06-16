@@ -1,0 +1,913 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:48:33.757446",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0DXJNJDSH",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 2,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0DXJNJDSH",
+    "title": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+    "brand": "TREATLIFE",
+    "model_number": NaN,
+    "price_usd": 29.99,
+    "rating": 4.7,
+    "reviews_count": 19.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Handheld Remote Control Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0DXJNJDSH"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R165OW5JMVFJK5",
+        "text": "This 120V single-gang dimmer switch really stands out from the competition due to its included additional remote control, which uniquely does not require a wired connection or junction box. This is a brilliant concept that works seamlessly with the main dimmer switch. Comparing its price to other dimmer switches on the market, I'd place this in the mid to lower price range. Considering that the last dimmer switch I purchased cost around $75 and lacked the convenience of an additional remote, I consider this dimmer to be a great deal.",
+        "date": "Reviewed in the United States on May 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Convenient Wireless Remote!",
+        "userName": "KGM",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RKQZHFK8XYLKL",
+        "text": "I recently purchased this light dimmer, and it has truly exceeded my expectations in terms of design, functionality, and ease of use. What first caught my attention was its appealing design. Unlike other dimmers with small, impractical buttons, this model is both aesthetically pleasing and very functional. The controls are intuitive and user-friendly. The installation process was surprisingly simple. The wires are well-marked, making it easy even for those who are not electrically savvy. The installation diagrams are clear and easy to follow, contributing to a smooth setup. A standout feature of this dimmer is the remote control. It conveniently attaches magnetically to the refrigerator, so it’s always within reach. I’m especially impressed with how well it works from a distance, without needing to point it directly at the device, showcasing excellent connectivity and range. The lighting experience is very enjoyable as well. The light transitions smoothly, turning on and off gradually, which creates a soft, cozy ambiance instead of an abrupt change. In summary, this dimmer switch is a fantastic investment for any home. It combines smart design, easy installation, and a highly functional remote control, offering a superior and customizable lighting experience. I highly recommend it!",
+        "date": "Reviewed in the United States on May 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Intuitive design and remote control.",
+        "userName": "Amateur photographer.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/511k85UFEyL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/6125cVWGGlL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61iUzMG9g-L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61t19j4v31L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61w+TvS9gfL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61xg8wZVWsL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/397f19ed-7846-474e-993e-9cd202bdffd7/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2OLNG47Z992K2",
+        "text": "I recently installed this dimmer switch with a magnetic remote in my home office, and it has completely transformed how I control lighting in the space. The installation was straightforward, thanks to the clear instructions provided. The magnetic remote is a standout feature; I can easily adjust the lighting without leaving my desk, and when not in use, it conveniently attaches to any metal surface, ensuring it's always within reach. The dimming functionality is smooth and precise, allowing me to set the perfect ambiance for work or relaxation. I appreciate that it doesn't require any Wi-Fi or app setup—just simple, reliable control. This switch is ideal for anyone looking to add convenient, wireless lighting control to their space without the complexity of smart home systems.",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Effortless Lighting Control with a Sleek Wireless Touch",
+        "userName": "Humberto Marcano",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RDTKHG1DVW81I",
+        "text": "We are not a Wi-Fi enabled house other than using for streaming videos and Internet on our iPads, iPhones, and computers. I would rather have control over our light switches, and this fits the bill. I love the fact that it’s a remote so that we can put it on the side table to control. The fan has great dimming ability, doesn’t seem to have a problem connecting with the main brain of the fan even though it’s 12 feet high, it functions exactly the way we like it, and it was super easy to install.",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly what I wanted",
+        "userName": "LuLingonberry",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RXEC582YGR78O",
+        "text": "This switch seems to work pretty well! We didn’t realize that it wasn’t a smart switch when we ordered it but that is okay. I had trouble when one of my light bulbs burnt out as the light kept turning off on its own. As soon as a I changed the bulb it has worked fine. Might be a safety feature which is great.",
+        "date": "Reviewed in the United States on May 11, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Not a smart switch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RM8MX5Y65QH19",
+        "text": "Single pole dimmer with a remote = more than one way to turn the light on and off - and change the light level! Brilliant idea!",
+        "date": "Reviewed in the United States on May 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "No more walking across rooms to adjust lighting! Great idea!",
+        "userName": "Diane RWS",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R24G3XES3F6SYN",
+        "text": "This dimmer switch is what I needed it to be. It controls a 5 CCT dimmable flush mount ceiling light in my office. With this switch, I can go from 2700k to 5000k without taking the light down everytime I want a different light setting.",
+        "date": "Reviewed in the United States on May 10, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Dim or bright",
+        "userName": "Zeaux the Diva",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61N21DE-ZML._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R193732PX9YA8H",
+        "text": "I upgraded the ceiling light in my daughter's room and she told me she wanted dimmable bulbs with a remote control, so I ordered this product. If you aren't already aware, dimmer switches like this have a larger-than standard control unit that needs to fit in the box in your wall, so if for some reason you have one of the smaller-than-standard boxes (such as are sometimes used in cabinetry), this will NOT fit in it. Otherwise, it will fit any standard switch box. The unit itself seems very high quality, and has a great fit and finish. It looks great. If you've ever swapped out a switch before you'll have no trouble with this. As to functionality, both the switch itself and the remote control work perfectly and easily. Dimming ability is great, as it should be Just remember you have to have dimmable bulbs/LED lights. Highly recommended!",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "High Quality Dimmer Switch w/ Remote",
+        "userName": "Eric the Viking",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51zCuVSOICL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2JW36CDAWAF4P",
+        "text": "There's no wifi on this, just a physical remote, so if that's what you're looking for, this is a good one. Just don't lose the remote, or put an air tag on it.",
+        "date": "Reviewed in the United States on May 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality (non smart) dimmer with remote",
+        "userName": "sandy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R3G0YU350OSZ1N",
+        "text": "Very good quality normal size dimmer switch with a remote! It's just really functional. It's easy to install but you will need the neutral wire. Its very good at dimming, bright to very low. I was able to replace my dimmer switch which did not work properly in no time. It's a very good value for a dimmer, considering you get a remote. Over all, great product.",
+        "date": "Reviewed in the United States on May 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great dimmer with a remote!",
+        "userName": "AmznCust",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RJC89SG4GIGYM",
+        "text": "quality dimmer switch with good directions. My application was a little different than described in the instructions but it worked just fine. good material and good instructions with a good amount of cautions for the novice electrician.",
+        "date": "Reviewed in the United States on May 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Product",
+        "userName": "Steve C",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R119HQHOAB2YEB",
+        "text": "In any electrical project the most expensive resource is going to be your wire. Saved me a few hundred dollars on wire. I have a 40x40 ft pole barn I wanted to run a 3 way switch into to control the lights and the extra run of wire was going to cost me over $150. Instead I just wired the lights up as a single pole and used this and now I have the same set up I was going for with the ability to control the lights from multiple places but I saved myself tons of $$$. There is a pretty good chance I will lose the remote but I'll deal with that later. For now this is perfect for having switches where I want them without spending a ton on extra wire.",
+        "date": "Reviewed in the United States on May 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great solution to save on all the extra wire costs.",
+        "userName": "Patrick",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1UGDABGAFZLMJ",
+        "text": "This is a great remote-controlled dimmer. I usually use WiFi dimmers, but I wanted something more physical when I’m not on my phone at bedtime. This was a fantastic option. It wasn’t hard to install at all, just know your lead and line wires, and always turn off at the break. The connectivity between the remote and the switch are great, I turned the remote every which way and it worked, as shown in the video. It fit in a tight spot by the door frame. The wall plate makes it look updated and modern. Overall, great product.",
+        "date": "Reviewed in the United States on April 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect product, hits everything you need",
+        "userName": "John P",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6f9a1009-1704-4609-97c3-bb1dad985415/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RA6ALPGRAPRVI",
+        "text": "This is a great dimmer, the functionality is easy to use and having a remote is great since you don't have to get up from bed or chair to turn the light off. I took one star off because installation took longer than thought. The light switch cover did not fit in my electrical box so there was some sawing done to cut through the interior metal. But once that was done, rest of it was straightforward. Recommend!",
+        "date": "Reviewed in the United States on April 24, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Convenient light switch, may require some additional work for installation",
+        "userName": "Jack",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1NJ54715AOLZP",
+        "text": "I bought a lamp that needed a dimmer switch. This product was easy to install and works great. 10/10",
+        "date": "Reviewed in the United States on April 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "DebP",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1ESXHJDH1EC4H",
+        "text": "I replaced my bedroom light with a ceiling fan/light. I wanted to be able to dim the light or even slow the fan a bit. This is incredible for control. Easy to install and easy to use. I had debated getting a smart switch but am very happy with this.",
+        "date": "Reviewed in the United States on April 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "Kate B",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R37PUOE8TN7HH8",
+        "text": "This dimmer switch with a remote is well made and easy to install. Just be sure you have a neutral wire (white), otherwise it will not work. No batteries required. Instructions included.",
+        "date": "Reviewed in the United States on April 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well made, neutral wire required.",
+        "userName": "W & Q",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61WM8HrWRoL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DXJNJDSH",
+        "productTitle": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 27
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RWSRSDQWAGSZJ",
+        "text": "The dimmer switch is easy to install and the remote control has a good range to control the dimming operation from a reasonable distance (in the house). The steps of dimming is quite acceptable.",
+        "date": "Reviewed in the United States on April 16, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy to install and remote control works fine",
+        "userName": "JJ",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 18,
+    "pages_scraped": 2,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

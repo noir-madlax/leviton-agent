@@ -1,0 +1,428 @@
+{
+  "product_title": "ELEGRP Digital Dimmer Light Switch for 300W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Single Pole/3-Way LED Slide Dimmer, Wall Plate Included, UL Listed, 6 Pack, Matte White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "slider": {
+        "A@defective slider mechanism": {
+          "-": [
+            21
+          ]
+        },
+        "B@broken slide handle": {
+          "-": [
+            11
+          ]
+        },
+        "C@lost spring action requiring hard press": {
+          "-": [
+            4
+          ]
+        },
+        "D@gets stuck": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "appearance": {
+        "E@looks good/great": {
+          "+": [
+            5,
+            17
+          ]
+        },
+        "F@pretty looking": {
+          "+": [
+            19
+          ]
+        },
+        "G@perfect look": {
+          "+": [
+            35
+          ]
+        }
+      },
+      "construction": {
+        "H@loose connections everywhere": {
+          "-": [
+            19
+          ]
+        },
+        "I@very cheap quality/made very cheap": {
+          "-": [
+            19
+          ]
+        },
+        "J@low quality": {
+          "-": [
+            33
+          ]
+        },
+        "K@poor quality": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "built-in features": {
+        "L@built in glow light": {
+          "+": [
+            17
+          ]
+        },
+        "M@nightlight": {
+          "+": [
+            34
+          ]
+        },
+        "N@locating light": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "terminals": {
+        "O@screw terminals maddeningly difficult to use": {
+          "-": [
+            20
+          ]
+        }
+      }
+    },
+    "perf": {
+      "flickering": {
+        "a@flickers with LED lights": {
+          "-": {
+            "?": [
+              1,
+              7,
+              8,
+              12,
+              14,
+              15,
+              16,
+              19,
+              23,
+              25,
+              27,
+              28,
+              29,
+              31,
+              33,
+              37,
+              38,
+              40,
+              42,
+              43,
+              46
+            ]
+          }
+        },
+        "b@flickers at high/full brightness": {
+          "-": {
+            "?": [
+              31,
+              43
+            ]
+          }
+        },
+        "c@flickers at about 50% dim": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "d@flickers intermittently after several months": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "e@stops flickering at lowest or highest setting": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "f@reduced flickering performance": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "buzzing": {
+        "g@buzzing sound when turned on": {
+          "-": {
+            "?": [
+              6,
+              8,
+              9,
+              26,
+              28,
+              40
+            ]
+          }
+        },
+        "h@buzzing at max bright": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@buzzing goes away when dimmer is at low": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "j@squealing/buzzing sound when dimmed": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "durability": {
+        "k@stopped working within 2 months": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "l@failed within days of installation": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "m@not durable": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "n@completely failed after less than a dozen uses": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "o@stopped working within 6 months": {
+          "-": {
+            "A,C,D": [
+              4
+            ]
+          }
+        },
+        "p@defect after about a year": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "q@long-life expectation": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "r@works awesome with LED lights": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "s@works great": {
+          "+": {
+            "?": [
+              5,
+              18,
+              47
+            ]
+          }
+        },
+        "t@doesn't turn on lights after initial use": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "u@doesn't dim at all": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "v@CFL bulbs come on full brightness first then adjust": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "w@can achieve very low night light level steadily": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "x@works with right bulb perfectly": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "y@3-way installation doesn't function": {
+          "-": {
+            "?": [
+              20,
+              27
+            ]
+          }
+        }
+      },
+      "installation": {
+        "z@easy to install": {
+          "+": {
+            "?": [
+              10,
+              22,
+              34,
+              45
+            ]
+          }
+        },
+        "aa@fit right into same outlet covers": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED lighting applications": {
+        "+": {
+          "r": [
+            0
+          ]
+        },
+        "-": {
+          "a,g": [
+            1,
+            8,
+            12,
+            14,
+            15,
+            16,
+            28,
+            37
+          ]
+        }
+      },
+      "recessed lighting throughout home": {
+        "+": {
+          "s": [
+            5
+          ]
+        }
+      },
+      "house upgrading": {
+        "-": {
+          "g,m": [
+            9
+          ]
+        }
+      },
+      "contractor work": {
+        "-": {
+          "a": [
+            12
+          ]
+        }
+      },
+      "remodel projects": {
+        "-": {
+          "n": [
+            13
+          ]
+        }
+      },
+      "6 inch LED disk lights": {
+        "-": {
+          "a": [
+            14
+          ]
+        }
+      },
+      "new house with LED canned lighting": {
+        "+": {
+          "s,aa": [
+            18
+          ]
+        }
+      },
+      "house repair work": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "3-way installation": {
+        "-": {
+          "a,y": [
+            20,
+            27
+          ]
+        }
+      },
+      "custom pendant lights with dimmable edison lamps": {
+        "-": {
+          "d": [
+            36
+          ]
+        }
+      },
+      "bulk installation in new home": {
+        "-": {
+          "a": [
+            38
+          ]
+        }
+      },
+      "single pole connections": {
+        "-": {
+          "g,a": [
+            40
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:34.471379"
+}

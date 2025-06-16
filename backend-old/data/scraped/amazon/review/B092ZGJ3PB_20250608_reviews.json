@@ -1,0 +1,2233 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:30:09.751780",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B092ZGJ3PB",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B092ZGJ3PB",
+    "title": "0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+    "brand": "GE",
+    "model_number": NaN,
+    "price_usd": 23.59,
+    "rating": 4.2,
+    "reviews_count": 218.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Commercial 0-10V Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B092ZGJ3PB"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2B131Q60UI4PK",
+        "text": "Would rate at zero but that’s not allowed. Switches are very finicky. Sometimes the lights come on, sometimes they don’t. Sometimes you can turn the switch on and off several times and they work. Do not recommend.",
+        "date": "Reviewed in the United States on May 15, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t buy these",
+        "userName": "Josh Pate",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R61Y0KVFFBX64",
+        "text": "I ordered this a week ago and the dimming control is not working (0-10V) with the slider simulated at up and down at a time but it always hive 0V. I hate myself from ordering this.",
+        "date": "Reviewed in the United States on April 24, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dimming 0-10V defective",
+        "userName": "AlfredJ",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RW0Y44M78PRDH",
+        "text": "I'm sure its great. We never got to use it, but whoever has likes it!",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good deal",
+        "userName": "Beverly Underwood",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1RTHKQWXBHNW5",
+        "text": "Accidentally bought some commercial lights that needed a 0-10v signal for dimming. This was the perfect solution to get them up and running. Easy install and has been working flawlessly",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Matthew Jessup",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R36SLVLKHJUO66",
+        "text": "This LED dimmer switch is a great for lighting control! It works seamlessly with dimmable LED bulbs, providing smooth dimming without flickering. The single-pole or 3-way compatibility adds flexibility, and the included wallplate ensures a clean, modern look. Easy to install and use. Highly recommended!",
+        "date": "Reviewed in the United States on December 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Versatile and Smooth LED Dimmer Switch",
+        "userName": "Tarek ✅",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3CL30RQ2QMQBT",
+        "text": "Yes",
+        "date": "Reviewed in the United States on September 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Deal!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3IGNT773GZZE3",
+        "text": "Trying to return this product",
+        "date": "Reviewed in the United States on August 15, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn’t work with the lights I installed",
+        "userName": "EB",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1NJNTKAZYU6ZB",
+        "text": "I got this dimmer switch two years ago for my wife's she shed. It has been working flawlessly ever since installation. Installation was no more difficult than any other light switch. I have it connected to my 2.4ghz wifi, and control it with Alexa. Easy as can be.",
+        "date": "Reviewed in the United States on August 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart Dimmer Switch",
+        "userName": "JasonVideo",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RW8WBXLI5Z5DL",
+        "text": "Does the job when the light fixture calls for a 0-10v dimmer switch.",
+        "date": "Reviewed in the United States on June 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does the Job",
+        "userName": "maha",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3A6DPPZ62NU6Q",
+        "text": "Why is my photo of a light instead of the wall switch? Well because this is the type of light that this dimmer works with. The dimmer is a 0-10v dimmer. Most dimmer switches reduce the overall 120 voltage down to zero. They lower the voltage on the HOT wire. But this dimmer switch always sends the full voltage on Hot and two other wires send a low voltage of 0-10v. 0 is dimmed all the way (not off) and 10 is full brightness. The light I got was this one: https://amzn.to/4atB7UZ And it works great. I ran power from an outlet up to the switch using Romex and then from the switch you run Romex to the light but also 2 low voltage wires. I made a mess in the wall and ceiling there but that's pretty much how you do it. Easy to patch. 5 stars. This was the least expensive 0-10V dimmer I could find on amazon or anywhere else. All the ones at Home Depot were also more expensive.",
+        "date": "Reviewed in the United States on March 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Looks and works great.",
+        "userName": "Michael",
+        "numberOfHelpful": 5,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/613Jco-x5eL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2JQ6RXZBTSRS9",
+        "text": "I was sent a used unit that was missing all the screws. Device doesn't work and you wasted two days of time. Why would you send a used defective item?",
+        "date": "Reviewed in the United States on March 3, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Used part",
+        "userName": "Paul Riggle",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3OB2HJWZQRQSY",
+        "text": "Product arrived quickly, and has worked pr=erfectly. Thanks!",
+        "date": "Reviewed in the United States on February 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent dimmer",
+        "userName": "qbdata",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1TKUJ29409THC",
+        "text": "Beware if you installed the Troffer LED lights because they require the more expensive higher quality LED switch. The light switch actually has to say it’s for LED Troffer not just LED.Also you have to install an extra low voltage wire.",
+        "date": "Reviewed in the United States on February 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Seems good",
+        "userName": "Dieseldan",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3PTAYKWXVWTHV",
+        "text": "Works as described thus far and has a nice fit for my application. Unlike some, i did not experience any buzzing nor flickering after install .Would buy more if needed. Great value compared to others. Instructions could use improvement but otherwise not too complicated to figure out.",
+        "date": "Reviewed in the United States on January 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice simple switch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61G8nr-3IeL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3FS718ZGU2VOO",
+        "text": "I installed an outdoor LED light and it required a 0-10v dimmer switch to adjust the intensity. This switch works perfectly with the on/off switch built in. Great price and fast delivery.",
+        "date": "Reviewed in the United States on December 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what was needed.",
+        "userName": "Megan",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RB8EW41Z4U7E3",
+        "text": "when you slide it all the way up to make the lights bright, it started flickering, of course the return window was expired, Ill have to order another unit, but it wont be this brand, I am not a testing site.",
+        "date": "Reviewed in the United States on November 8, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "started flickering",
+        "userName": "Mark M.",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RQRG26J0WI2W1",
+        "text": "Worked ok for 2 weeks, then lights began to dim and brighten on their own. Can't return after 30 days, so that means warranty is only good for 30 days. Seems unreasonable for something that should last years.",
+        "date": "Reviewed in the United States on September 4, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Only worked for 2 weeks.",
+        "userName": "Rich C",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1RO5WP4U8RE7R",
+        "text": "First the good, It was relatively easy to install. the markings on the back of the unit are nonsensical, but its not hard to figure out, they have the 3 way leg marked off on one of the 2 red wires, the other red wire is your switch leg, your black is your hot input, and the white and blue are youre gray and purple LV wires for the dimmer function. and if your light supports it it does dim exactly like its supposed to. The bad, This is a UNIT. i had to tuck the WAGO connectors behind the other switch because this thing uses up the entire depth of a junction box for itself. additionally its clearly a much lower grade of plastic than the Leviton switch in the box next to it, that crisp tactile click when switching the light on or off just doesn't exist and the plastics feel flimsy, also the dimmer at the bottom sort of just lets go, theres no tension for the bottom 2 or 3 mm so the lights go completely off instead of down to their lowest setting, i have to keep it about 20% up from the bottom to get the lowest dimmer position without them going completely off. not really sure though if thats intentional or a symptom of the dimmer curve on my lights. but the dimmer itself moves fine but is also made from flimsy plastic. it just doesn't feel as robust as a name brand unit, but for the price point thats to be expected. All in all this switch gets the job done very well and i plan to keep it for the foreseeable future. if i have any issues with it ill edit this review but value for the money is there and while I wouldn't recommend it for a heavy duty applications, for most projects this would be a very good solution.",
+        "date": "Reviewed in the United States on August 29, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Very good for the price",
+        "userName": "JL Griffin",
+        "numberOfHelpful": 4,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3GST2K0KG2IVY",
+        "text": "Great price and nice quality",
+        "date": "Reviewed in the United States on July 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love these",
+        "userName": "eric bankes",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R10DHYCAIB3D73",
+        "text": "I have had this installed for a few months. It works exactly like it should. It has a unqiue look, that could be a plus or minus. The price was good and delivery was convenient. I wouldn't hesitate to buy it again.",
+        "date": "Reviewed in the United States on July 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It's been installed a few months and no issues so far",
+        "userName": "Machining Man",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RGB9EL3RZ8MZH",
+        "text": "I installed it on an LED outside 150-watt parking lot light and it lasted two weeks. I had it installed by a professional and he knew exactly how to install it, so it wasn't the installation, it just stopped working. it the light dims high then low than back over and over! Amazon won't let me return it because it's been more than 30 days the problem was, I had it waiting for the installer for three weeks by the time he installed it, it had started to malfunction. it was already 40 days from the time I bought it.",
+        "date": "Reviewed in the United States on July 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "I installed it and it stopped working",
+        "userName": "Heriberto",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1BGEK6MRP0O8",
+        "text": "This dimmer was easy to install and works well, with no buzzing of the dimmer or the lights. It can be used to replace a single switch or two-switch system. A bright/dim controller allows adjustment of the lights at their minimum. Even at minimum setting the switch powers up the lights. This dimmer can be installed with a regular faceplate and two screws, which come with the package. No further product needs to be purchased in order to install.",
+        "date": "Reviewed in the United States on June 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very satisfied!",
+        "userName": "SHAN",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81f20XZVpUL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R20YQ6ZHI42ML6",
+        "text": "The schematics did not show input AC, then internal switch wiring, finally output connection to devive. Also wiring not clear. Are 4 wires from switch box to the dimmable device required? I did not install due to poor directions.",
+        "date": "Reviewed in the United States on April 2, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Poor schematics",
+        "userName": "David L Crockett",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2CB4DUC1ZVKQD",
+        "text": "easy install .",
+        "date": "Reviewed in the United States on March 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "WORKS GREAT",
+        "userName": "Gregory P.",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R20IT2G8XG99XT",
+        "text": "Junk Rocker Switch broke in 3 months",
+        "date": "Reviewed in the United States on November 24, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "William J Harper",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R18FBVEZJP6RWQ",
+        "text": "Hard to fit into the box, but works as good as the big name brands, You can't find a dimmer like this at Home depot or Lowes. This is the only one available. The others vary the input voltage, this one has a rheostats on the side to hook up to the driver.",
+        "date": "Reviewed in the United States on November 7, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "It's big",
+        "userName": "Jeff Freeman",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2UP2HCMUXVAVS",
+        "text": "The switch showed up on time and had all the parts it said it would have. Installation was pretty straightforward and mostly works with the Metalux 2x2' troffer lights I recently installed. The lights are pretty bright, so I wanted a dimmer (they use the 0-10V dimming scheme, which this product has). It looks nice and includes a faceplate. It is only in white, but I decided for the location, it would work. I have 2 issues: 1. The size of the switch/dimmer just barely fits in the box along with the wire nuts. Smaller would be nice. 2. The biggest issue is that the dimmer is not great. I have a different, major name brand I used in a different area on some of the same lights that has smooth action and cleanly goes from about 10%-100%. The KEYGMA dimmer doesn't have a very smooth feel; it has a loose at the bottom to tight at the top feel as you work the slide up and down. Worse, at the lowest setting the lights flicker then go out. Only after you get the slider up to where it feels like it \"catches\" will the light come on consistently at a dim level then go to full brightness as you push it up. I read the tips and suggestions that talk about a recessed potentiometer on the bottom that was supposed to do something, but it did nothing on my unit. The feel and action of the slider makes the switch feel cheap. Also, there is a small hole on the lower left front that I had assumed was an LED so you could find the switch in the dark. There is no light in that hole, so I guess it is just a hole. A little guide light would be nice. In all, I will continue to use this dimmer because it mostly works and I don't have it in a high use area. However, I will not buy another one and I do not recommend it. In my opinion, if you need a 0-10V dimmer/switch, I would spend the extra $10 and get a better one from a major named brand.",
+        "date": "Reviewed in the United States on September 27, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Works - sort of...",
+        "userName": "JMS",
+        "numberOfHelpful": 2,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2WDDMXRH30EBG",
+        "text": "I personally did not like these.",
+        "date": "Reviewed in the United States on September 26, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Better products available",
+        "userName": "Tyler",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1J3KN853K0NVF",
+        "text": "I got the first one, the switch worked just fine but the dimmer didn't. I tossed it and bought another, same thing. I bought a different brand and it works fine.",
+        "date": "Reviewed in the United States on August 15, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "You get what you pay for",
+        "userName": "Mr Nine",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2MN0153KJQFIX",
+        "text": "I wired it incorrectly at first and it would buzz when in the off position, and on/off were reversed… but with a little help from father in law got it right. Home Depot version was $85 so I was stoked to get this thing for a fraction of the price.",
+        "date": "Reviewed in the United States on July 29, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works.",
+        "userName": "Beetsrimesandlyfe",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3FNSL0RZLS68W",
+        "text": "good item",
+        "date": "Reviewed in the United States on July 23, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked well",
+        "userName": "wolfric",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3M14DI3SBGO8W",
+        "text": "Works great! Highly recommended",
+        "date": "Reviewed in the United States on July 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great price",
+        "userName": "Mark Roy",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R36ONF6QY1X5L2",
+        "text": "We ordered this single or 3 way dimmer switch for our dining room light, which is wired with a 3 way switch (meaning two separate light switches at either side of the room can turn it on or off). I am not yet able to install it for this purpose, because we don't have dimmable LED's yet, but I tried to test it on a single pole switch with an incandescent bulb. I admit, like others, that I found the wiring diagram confusing. There are six wires coming from this Keygma switch--two red, one black, blue, white, and green. The second red wire is identified by label as for 3 way applications, and does not need to be wired for single pole applications. I was unable to correctly configure the remaining wires according to my best understanding of the diagram, to get it to work. I think clearer instructions would help. The switch is ETL (Electrical Testing Laboratories) tested, which is an alternative to the UL (Underwriter's Laboratories) that you also find on many electrical products.",
+        "date": "Reviewed in the United States on April 2, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "dimmer switch for dimmable LED's",
+        "userName": "Rivendell",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3NWE7GHI4QP4P",
+        "text": "Exactly as described",
+        "date": "Reviewed in the United States on March 6, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly as described",
+        "userName": "HomeschoolingMama",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RV5GLP0ORD3UI",
+        "text": "I've been installing plugs, switches, and dimmers for years but I could not get this one to work. Used a different brand and it worked instantly. I don't know if I just got a bad one or what but it didnt dim only turned the light on and off.",
+        "date": "Reviewed in the United States on February 19, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Couldn't get it to work.",
+        "userName": "Gina Marie",
+        "numberOfHelpful": 2,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RHL70FDYTSL00",
+        "text": "Works well looks nice. Used in basement to Dim three 8 foot led lights. Customer used this area to work out and watch TV the full brightness of the LEDs would be a little much so using this dimmer was perfect.",
+        "date": "Reviewed in the United States on February 16, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well looks nice",
+        "userName": "Electrician",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RY60UKWQW0RAO",
+        "text": "My husband is pretty handy with electrical work, but could not get this to work. We have 5 candelabra bulbs in our dining room chandelier which are dimmable LED's. This says it is good for a single switch or 3 way., and I must say the diagram is a bit confusing. He tried to wire it per the diagram, but it didn't work, then he tried every possible combination of wires and it still didn't work. I'm sure an electrician could wire it, but it's not worth $200 to have them come. 3 stars.",
+        "date": "Reviewed in the United States on February 13, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Did not work for me",
+        "userName": "Nitty's Mom",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3PIH3TLHLJ1TN",
+        "text": "I highly recommend this dimmer if you install any dimmable LED lights. The LED panels I purchased were bright enough to cause sunburn (not really) Since it was bright as daylight in my basement I bought this dimmer and it installed very quickly. And it worked on first try.",
+        "date": "Reviewed in the United States on December 29, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great!",
+        "userName": "Kati Hutsell",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2CJKTOGZWLDTH",
+        "text": "This switch was fairly easy to install once we figured out the instructions. Well-made. So far, it's working well.",
+        "date": "Reviewed in the United States on December 23, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "nice dimmer switch",
+        "userName": "Jacquelyn",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1P7AX3U2UTGJT",
+        "text": "As the subject says, stopped dimming the led lights I install for my tile shower Niche. Ive installed 50+ dimmable transformers and never had an issue until purchasing this switch. It also was reversed so down was on and up was off.",
+        "date": "Reviewed in the United States on November 27, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Worked for a couple days then stopped dimming",
+        "userName": "Eric Pfeifle",
+        "numberOfHelpful": 2,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R22JTID2B13VXW",
+        "text": "Provides the best dimming performance for dimmable LED lights is provided by a 0-10V low voltage LED dimmer switch with a dimming range of 5% to 100%. For use with dimmable LED/CFL bulbs up to 150 watts and Incandescent and Halogen lamps up to 600 watts. A huge rocker paddle is used to turn the lights on/off or to a preset level, and a fluent slider is used to brighten/dim the lights to suit various activities. The 0-10V LED dimmer switch is available in single pole and three-way configurations. Controlling full-range dimming with precision",
+        "date": "Reviewed in the United States on November 6, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to use",
+        "userName": "Jon",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R23W7YC0377E1D",
+        "text": "Switch works, dimmer function works. Reason for three stars was missing screws for wall plate.",
+        "date": "Reviewed in the United States on November 1, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works, but missing screws",
+        "userName": "Sam in Nashua, NH",
+        "numberOfHelpful": 2,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/615g-+qS4PL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B092ZGJ3PB",
+        "productTitle": "KEYGMA 0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 43,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 218,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 12
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2DAZONFQSNXHU",
+        "text": "This was easy to install. Works great!",
+        "date": "Reviewed in the United States on August 23, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Teressa Sworsky",
+        "numberOfHelpful": 0,
+        "variationId": "B092ZGJ3PB",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 43,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,472 @@
+{
+  "product_title": "The Original Home Automation Sound Activated Device, On/Off Light Switch, Clap Detection, As Seen On TV",
+  "product_category": "Sound Activated Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@small size helps it blend in": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "outlets": {
+        "B@has two outlets": {
+          "+": [
+            30
+          ]
+        },
+        "C@doesn't take 3 prong plugs": {
+          "-": [
+            30
+          ]
+        }
+      },
+      "sensitivity settings": {
+        "D@has two sensitivity settings": {
+          "+": [
+            39
+          ]
+        },
+        "E@can adjust noise sensitivity to high or low": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "sockets": {
+        "F@second and third sockets function differently": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "away mode": {
+        "G@away mode will trigger with any noise": {
+          "+": [
+            36
+          ]
+        }
+      }
+    },
+    "perf": {
+      "sound detection": {
+        "a@picks up clapping noise easily": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "b@doesn't detect noises well": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "c@doesn't detect noises well especially when near furniture": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "d@requires multiple claps to make it work": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "e@must clap at exact right speed and volume to get it to work": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "f@very loud clap is needed": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "g@hard to clap loud enough to turn on or off": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "h@only worked okay up close with right timing and loud clap": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "i@turned on and off 1 out of maybe every 3, 4 or 5 claps": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "j@almost never clapped on and right back off again": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "k@almost never clapped on or off unless opened door or stood in front": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "l@can't clap fast, has to be one clap pause clap": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "m@doesn't work if TV is on": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "n@has to be no noise for it to work": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "o@thinks it's picking up background noise and does not function": {
+          "-": {
+            "D": [
+              39
+            ]
+          }
+        },
+        "p@only works inconsistently if right next to it": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "q@works great": {
+          "+": {
+            "?": [
+              8,
+              10,
+              27,
+              34
+            ]
+          }
+        },
+        "r@works perfectly": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "s@doesn't work": {
+          "-": {
+            "?": [
+              0,
+              1,
+              4,
+              7,
+              17,
+              21,
+              24,
+              25,
+              29,
+              31,
+              32,
+              39,
+              40,
+              42
+            ]
+          }
+        },
+        "t@inconsistent, didn't always work": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "u@hit and miss": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "v@sometimes good strong clap turns it on, others takes about 6 double claps": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "w@seems to wait to turn on until you get to point of frustration": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "x@stopped working after 20 mins": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "y@temperamental, sometimes comes on sometimes doesn't": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "z@doesn't work as advertised, maybe works after numerous tries": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "aa@sometimes works and sometimes doesn't": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "bb@works ok for few days but after a week problems": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "cc@frustratingly unreliable": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "false activation": {
+        "dd@registers perfectly timed coughs and turns on/off unexpectedly": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ee@goes off when TV is playing": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "ff@odd things like closing drawer or knock on wall or door will turn it on or off": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "gg@turns on when opening end table drawer": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "hh@spontaneously turned on and off": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "ii@randomly chooses to activate by just setting phone on table": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "jj@turns itself on during day for no reason": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "kk@coughing turned light off and on": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "ll@doesn't work for items that have to be turned on/off with buttons like oscillating fan": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "mm@doesn't work for any stand lights": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        }
+      },
+      "durability": {
+        "nn@just works": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom lighting": {
+        "+": {
+          "q": [
+            41
+          ]
+        },
+        "-": {
+          "s": [
+            0
+          ]
+        }
+      },
+      "general lighting control": {
+        "+": {
+          "q": [
+            8,
+            10,
+            27
+          ]
+        },
+        "-": {
+          "s": [
+            1,
+            4,
+            7,
+            17,
+            21,
+            24,
+            25,
+            29,
+            31,
+            32
+          ]
+        }
+      },
+      "elderly assistance": {
+        "+": {
+          "q": [
+            20,
+            35,
+            43
+          ]
+        },
+        "-": {
+          "s": [
+            18
+          ],
+          "p": [
+            39
+          ],
+          "kk": [
+            45
+          ]
+        }
+      },
+      "outdoor string lighting": {
+        "+": {
+          "q": [
+            34
+          ]
+        }
+      },
+      "entertainment for children": {
+        "+": {
+          "q": [
+            34
+          ]
+        }
+      },
+      "nostalgic gift": {
+        "-": {
+          "s": [
+            39
+          ],
+          "cc": [
+            33
+          ]
+        }
+      },
+      "TV control": {
+        "-": {
+          "t": [
+            3
+          ]
+        }
+      },
+      "oscillating fan control": {
+        "-": {
+          "ll": [
+            2
+          ]
+        }
+      },
+      "stand lights": {
+        "-": {
+          "mm": [
+            40
+          ]
+        }
+      },
+      "COPD patient assistance": {
+        "-": {
+          "kk": [
+            45
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:34.423210"
+}

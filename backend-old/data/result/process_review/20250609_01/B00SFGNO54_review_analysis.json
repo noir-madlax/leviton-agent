@@ -1,0 +1,557 @@
+{
+  "product_title": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "white post in cover": {
+        "A@breaks under normal use": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "plastic": {
+        "B@very cheap plastic": {
+          "-": [
+            24
+          ]
+        },
+        "C@cheaply made": {
+          "-": [
+            25
+          ]
+        },
+        "D@plastic piece inside breaks": {
+          "-": [
+            46
+          ]
+        }
+      },
+      "rocker switch": {
+        "E@detachable to select type of lights used": {
+          "+": [
+            13
+          ]
+        },
+        "F@rocker loose, didn't click on/off": {
+          "-": [
+            20
+          ]
+        },
+        "G@bottom of rocker sticks out past dimmer slider": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "dimmer slider": {
+        "H@about 1/8 inch from rocker, should be further away": {
+          "-": [
+            35
+          ]
+        },
+        "I@dimmer slider stuck": {
+          "-": [
+            24
+          ]
+        },
+        "J@does not move easily": {
+          "-": [
+            30
+          ]
+        },
+        "K@operates very smoothly": {
+          "+": [
+            17
+          ]
+        }
+      },
+      "size": {
+        "L@don't use up much electric box space": {
+          "+": [
+            2
+          ]
+        },
+        "M@little smaller due to slider": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "appearance": {
+        "N@looks great": {
+          "+": [
+            10,
+            31
+          ]
+        },
+        "O@looks good": {
+          "+": [
+            34
+          ]
+        },
+        "P@great look": {
+          "+": [
+            29
+          ]
+        },
+        "Q@similar aesthetics": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "built-in LED night light": {
+        "R@small built in LED night light": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "faceplate": {
+        "S@no faceplate included": {
+          "-": [
+            32
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@not durable": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@fails after a while": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@switch failed mechanically after about 1 year": {
+          "-": {
+            "F": [
+              20
+            ]
+          }
+        },
+        "d@broke from pressure of wires in multi-gang box": {
+          "-": {
+            "B": [
+              24
+            ]
+          }
+        },
+        "e@all 3 failed in just about 2 years": {
+          "-": {
+            "D": [
+              46
+            ]
+          }
+        },
+        "f@lasted less than 3 months": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "g@100% reliability": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "buzzing/noise": {
+        "h@buzzes, especially loud when brightness is lower": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "i@no noise": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "j@zero hum or noise when dimming LEDs": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "k@audible click surprisingly loud": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "l@makes light flicker at in-between power levels": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "m@lights occasionally flicker": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "n@light started flickering": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "o@flickers LEDs at low settings": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "p@no flickering": {
+          "+": {
+            "?": [
+              2,
+              23
+            ]
+          }
+        },
+        "q@no flicker": {
+          "+": {
+            "?": [
+              10,
+              44
+            ]
+          }
+        },
+        "r@LED ceiling lights flicker when dimmed below 50%": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "s@dims on low and flickers": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "dimming function": {
+        "t@doesn't dim all the way": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "u@can dim those led bulbs": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "v@dimming function works smoothly": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "w@does not dim very well": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "x@hesitation of light when dimming": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "y@does not dim as low as I would like": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "z@stop dimming after a little while": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "aa@dimmer does not work at all": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "ab@dimmer function stopped working at one year mark": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "ac@good light control": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "ad@dimmer functionality works as expected": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "ae@works a dim perfectly": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "delay": {
+        "af@has a delay": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ag@half second delay not instant on": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "ah@impossible to turn on or off": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "ai@switch did not work": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "aj@works like a charm": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ak@works as advertised": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "al@works great": {
+          "+": {
+            "?": [
+              27,
+              31,
+              36
+            ]
+          }
+        },
+        "am@works perfectly": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "an@works flawlessly": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ao@works properly": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "ap@works well": {
+          "+": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "aq@stopped working": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "overheating protection": {
+        "ar@no self shut down from over heating": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "voltage issues": {
+        "as@leaves small amount of voltage on lights when turned off": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "at@lights stayed on and never fully shut off": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED bulbs": {
+        "+": {
+          "u,p": [
+            2
+          ],
+          "v": [
+            6
+          ],
+          "p": [
+            23
+          ],
+          "j": [
+            40
+          ],
+          "ao": [
+            44
+          ]
+        },
+        "-": {
+          "o": [
+            4
+          ],
+          "at": [
+            8
+          ],
+          "r": [
+            29
+          ]
+        }
+      },
+      "incandescent lamps": {
+        "+": {
+          "?": [
+            37
+          ]
+        }
+      },
+      "recessed lighting": {
+        "+": {
+          "g": [
+            10
+          ],
+          "an": [
+            39
+          ]
+        }
+      },
+      "bathroom lighting": {
+        "+": {
+          "v": [
+            6
+          ]
+        }
+      },
+      "basement lighting": {
+        "+": {
+          "ad": [
+            41
+          ]
+        }
+      },
+      "kitchen/bathroom/hallway": {
+        "-": {
+          "e": [
+            46
+          ]
+        }
+      },
+      "multi-gang box": {
+        "-": {
+          "d": [
+            24
+          ]
+        }
+      },
+      "three way function": {
+        "-": {
+          "as": [
+            16
+          ]
+        }
+      },
+      "rental properties": {
+        "+": {
+          "g": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:39.163203"
+}

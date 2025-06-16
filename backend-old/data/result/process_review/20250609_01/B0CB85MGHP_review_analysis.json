@@ -1,0 +1,186 @@
+{
+  "product_title": "Enbrighten Z-Wave Light Dimmer with QuickFit & SimpleWire, 3-Way Ready, Works with Alexa, Google Assistant, Z Wave Hub Required, Repeater/Range Extender, Smart Switch, White & Almond, 700Series, 58438",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 8,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@newer models have bluer paddles that don't match older white ones": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "paddle": {
+        "B@pull plug under paddle is longer in new model compared to older ones": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "buttons": {
+        "C@buttons require much firmer push than other switches": {
+          "-": [
+            4
+          ]
+        },
+        "D@manual operation uses only bottom half of switch for both on and off": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "indicator light": {
+        "E@blue indicator light goes on and off to indicate switch cycling": {
+          "+": [
+            5
+          ]
+        },
+        "F@started blinking blue after 3 years": {
+          "-": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "compatibility": {
+        "a@works great and connects to alarm system for scene control": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@connects to house Wi-Fi perfectly": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "c@worked fine with everything except LEDs": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@does not support secure inclusion in Home Assistant": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "e@only 3 out of 8 devices still working after 4 years": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "f@2 died in the first year": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "g@worked fine last night but dead today after 3 months": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@never worked again after blinking blue": {
+          "-": {
+            "F": [
+              3
+            ]
+          }
+        }
+      },
+      "operation": {
+        "i@requires multiple presses to work since first press usually isn't hard enough": {
+          "-": {
+            "C": [
+              4
+            ]
+          }
+        },
+        "j@status changed but switch did not turn on lights in multi-way setup": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "k@works fine in single pole setup": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "range": {
+        "l@good range connecting 60 ft from house": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "scene control with alarm system": {
+        "+": {
+          "a": [
+            2
+          ]
+        }
+      },
+      "majority use over on/off switches": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "remote light control in shed 60 ft away": {
+        "+": {
+          "b,l": [
+            7
+          ]
+        }
+      },
+      "multi-way setup with chandelier": {
+        "-": {
+          "j": [
+            6
+          ]
+        }
+      },
+      "single pole setup": {
+        "+": {
+          "k": [
+            6
+          ]
+        }
+      },
+      "LED lighting": {
+        "-": {
+          "c": [
+            3
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:51.611416"
+}

@@ -1,0 +1,430 @@
+{
+  "product_title": "Lutron Maestro Fan Control and Light Dimmer for Dimmable LEDs, Incandescent, and Halogen Bulbs, Single-Pole, MACL-LFQ-WH, White",
+  "product_category": "Fan and Light Combination Dimmer Controls",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Single gang design for dual functions": {
+          "+": [
+            20,
+            38
+          ]
+        },
+        "B@Modern appearance": {
+          "+": [
+            20,
+            29,
+            43
+          ]
+        },
+        "C@Deeper than regular switch": {
+          "-": [
+            23
+          ]
+        },
+        "D@No cover included": {
+          "-": [
+            6,
+            25
+          ]
+        },
+        "E@Small LED indicators for each control": {
+          "+": [
+            7,
+            21
+          ]
+        }
+      },
+      "Wiring": {
+        "F@Hot wire connection difficulty": {
+          "-": [
+            10
+          ]
+        },
+        "G@Requires specific electrical wiring": {
+          "-": [
+            1
+          ]
+        },
+        "H@Supplied wire nuts and screws": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "Components": {
+        "I@Rocker switches for on/off": {
+          "+": [
+            13
+          ]
+        },
+        "J@Side controls for fan speed and dimmer": {
+          "+": [
+            13
+          ]
+        },
+        "K@Pull tab cutoff at bottom": {
+          "+": [
+            28
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@Easy to install": {
+          "+": {
+            "?": [
+              0,
+              2,
+              8,
+              37,
+              39
+            ]
+          }
+        },
+        "b@Installation can be tough": {
+          "-": {
+            "C": [
+              23
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "c@Works well initially then fails": {
+          "-": {
+            "?": [
+              5,
+              11,
+              12,
+              15,
+              26,
+              33,
+              47
+            ]
+          }
+        },
+        "d@Long-term durability": {
+          "+": {
+            "?": [
+              7,
+              19
+            ]
+          }
+        },
+        "e@Switches destroyed by circuit shorts": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "f@Dead on arrival or immediate failure": {
+          "-": {
+            "?": [
+              33,
+              40,
+              41
+            ]
+          }
+        }
+      },
+      "Light Control": {
+        "g@Light dimming works properly": {
+          "+": {
+            "?": [
+              10,
+              23,
+              48
+            ]
+          }
+        },
+        "h@Maintains brightness level": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "i@Light turns off when fan is on": {
+          "-": {
+            "?": [
+              26,
+              28,
+              32,
+              45
+            ]
+          }
+        },
+        "j@Light pops on randomly": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "k@Light flickering and delay issues": {
+          "-": {
+            "?": [
+              31,
+              41
+            ]
+          }
+        },
+        "l@No buzzing with LED bulbs": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "Fan Control": {
+        "m@Fan speed control works well": {
+          "+": {
+            "?": [
+              23,
+              44
+            ]
+          }
+        },
+        "n@Fan works occasionally": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "o@Fan ramps up to high and won't shut off": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "p@Fan makes whining noise and barely spins": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "q@No buzzing at any speed": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "r@Power on/off without changing speed": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "s@Works with Hunter ceiling fans": {
+          "+": {
+            "?": [
+              2,
+              23
+            ]
+          }
+        },
+        "t@Compatibility issues with certain fans": {
+          "-": {
+            "?": [
+              18,
+              22,
+              24,
+              28,
+              31,
+              45
+            ]
+          }
+        },
+        "u@LED bulb compatibility issues": {
+          "-": {
+            "?": [
+              2,
+              9,
+              32
+            ]
+          }
+        },
+        "v@Works great with approved bulbs": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "Features": {
+        "w@Remembers settings": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "x@High range of brightness": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "y@Hold button for timed shutoff": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "z@No WiFi capabilities": {
+          "-": {
+            "?": [
+              4,
+              29
+            ]
+          }
+        }
+      },
+      "Value": {
+        "aa@Expensive for features offered": {
+          "-": {
+            "?": [
+              4,
+              6,
+              11,
+              16,
+              27,
+              29
+            ]
+          }
+        },
+        "ab@Good quality for price": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Bedroom fan control": {
+        "+": {
+          "w,g": [
+            21,
+            42
+          ]
+        },
+        "-": {
+          "c": [
+            11
+          ]
+        }
+      },
+      "Guest room fan control": {
+        "+": {
+          "r,h": [
+            13
+          ]
+        }
+      },
+      "Bathroom fan and light control": {
+        "+": {
+          "A": [
+            14,
+            20
+          ]
+        },
+        "-": {
+          "c": [
+            12
+          ]
+        }
+      },
+      "Living room fan control": {
+        "+": {
+          "g": [
+            49
+          ]
+        }
+      },
+      "Outdoor deck fan control": {
+        "+": {
+          "g": [
+            48
+          ]
+        }
+      },
+      "Hunter ceiling fan control": {
+        "+": {
+          "s,w,g,m,q": [
+            23
+          ]
+        },
+        "-": {
+          "t": [
+            24,
+            28
+          ]
+        }
+      },
+      "Multiple fans in home": {
+        "+": {
+          "d": [
+            7,
+            19
+          ]
+        },
+        "-": {
+          "c,e": [
+            11,
+            34
+          ]
+        }
+      },
+      "Replacement for old switches": {
+        "+": {
+          "g": [
+            0,
+            49
+          ]
+        },
+        "-": {
+          "c": [
+            11
+          ]
+        }
+      },
+      "New fan installation": {
+        "-": {
+          "G": [
+            1
+          ]
+        }
+      },
+      "LED ceiling light control": {
+        "+": {
+          "g": [
+            12
+          ]
+        },
+        "-": {
+          "u": [
+            32
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:39.924714"
+}

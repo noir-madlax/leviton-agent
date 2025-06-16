@@ -1,0 +1,950 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:22:52.654021",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0892HCXGS",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 2,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0892HCXGS",
+    "title": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+    "brand": "greencycle",
+    "model_number": NaN,
+    "price_usd": 8.99,
+    "rating": 4.6,
+    "reviews_count": 230.0,
+    "category": "Light Switches",
+    "product_segment": "Multi-Function Combination Switches",
+    "product_url": "https://www.amazon.com/dp/B0892HCXGS"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2P0W6VS30EGUU",
+        "text": "These worked well for replacing an old double light switch. They're attractive and a good value. I haven't purchased many of this style of paddle switch, so not sure how the build quality matches up with other options out there. The plastic feels good, though a little lighter plastic on the paddles than I would have expected -- and the click sound when switching is a bit sharper (hollow sounding?) than I would prefer (though it makes a very secure click) -- Overall, the switches look and work great -- and seem to have good quality switching mechanisms.",
+        "date": "Reviewed in the United States on May 26, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good switches and great value",
+        "userName": "SteveR",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3IUG5XVK7Z8GM",
+        "text": "I don’t know how to do handy things around the house, but this was really straightforward and easy enough for a total novice to change out. Now I want to change out the rest of the switches in my house.",
+        "date": "Reviewed in the United States on April 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works just as I expected, easy to install",
+        "userName": "Elle",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2T70C2KJQEMS3",
+        "text": "Good",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good",
+        "userName": "Sarah",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R13E2VZNK6SOZW",
+        "text": "Pay a little more and get something of a better grade . This are a sure fire hazard",
+        "date": "Reviewed in the United States on April 10, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Quality",
+        "userName": "Coexist",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3OQ2HRIA1ZD54",
+        "text": "Simple elegant rocker switches. Not much you can say about a light switch other than they worked and simple to install. They fit perfectly!",
+        "date": "Reviewed in the United States on April 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switches!",
+        "userName": "Chaz A",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RP6WC8QWNBZZ",
+        "text": "Switch works as described but switch has a loud click in on/off positions. If you are looking for a quiet switch this isn’t it.",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Loud!",
+        "userName": "Keith",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RRD4600OZPJP4",
+        "text": "Easy install looks modern",
+        "date": "Reviewed in the United States on March 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great upgrade",
+        "userName": "mr ray",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R9VGMAN8IUVLZ",
+        "text": "Seem to be good quality and installed as expected. Good value.",
+        "date": "Reviewed in the United States on February 11, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good quality at a better price",
+        "userName": "AmazonJunky",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2IENNDK8CC66B",
+        "text": "This Greencycle double rocker switch looks great and works smoothly. It’s easy to install, well-built, and perfect for controlling two lights from one spot. A solid choice for home or office upgrades!",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Sleek & Reliable Double Rocker Switch",
+        "userName": "Among us",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R838456GIG18M",
+        "text": "Installed easily and works as intended. I always wanted paddle switches. Affordable pricing as well.",
+        "date": "Reviewed in the United States on January 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Functional",
+        "userName": "axl Huffman",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3FUOCNCUXS5V4",
+        "text": "Good quality and easy to install.",
+        "date": "Reviewed in the United States on December 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality",
+        "userName": "Zheng Liu",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R24LXRUK5A24GQ",
+        "text": "They do what they are supposed to do",
+        "date": "Reviewed in the United States on November 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "They work",
+        "userName": "Joe doucette",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2W0PZ2L09U62O",
+        "text": "These worked great, really well-made and easy to install",
+        "date": "Reviewed in the United States on October 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very happy with the product",
+        "userName": "Arema B.",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1EW1343OJ40BV",
+        "text": "Good quality for the price.",
+        "date": "Reviewed in the United States on June 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality",
+        "userName": "Steph",
+        "numberOfHelpful": 2,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RYD2VLZRD6JBL",
+        "text": "Like them something different",
+        "date": "Reviewed in the United States on March 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switch",
+        "userName": "Tammy Williams",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3C8ZPNVAUQF72",
+        "text": "One of them didn't even need electrical connection to reveal its failure -- the switch paddle would not even stay in the off position. The second worked okay but felt a bit sketchy. I put it in a location where it will very seldom be used.",
+        "date": "Reviewed in the United States on October 31, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "One of two works, but how long?",
+        "userName": "JD",
+        "numberOfHelpful": 2,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3Q73DNOTVK6WW",
+        "text": "needed this style switch to go into wall plates along side kasa smart switches, and in some cases to be the other switch on cares of 3 way circuits where there was no neutral wire. these worked perfect and look nice next to the smart switches.",
+        "date": "Reviewed in the United States on June 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "works as expected",
+        "userName": "AnthonyZ",
+        "numberOfHelpful": 0,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0892HCXGS",
+        "productTitle": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 18,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 232,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1W7LH6EVSF9NN",
+        "text": "Two to a box. The box label states light switches but ink cartridges were in two of the four boxes. All are going back to keep it simple.",
+        "date": "Reviewed in the United States on April 15, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Received ink cartridges",
+        "userName": "AmeliaBadelia",
+        "numberOfHelpful": 2,
+        "variationId": "B0892HCXGS",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pole",
+          "Number of Items: 2"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 18,
+    "pages_scraped": 2,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

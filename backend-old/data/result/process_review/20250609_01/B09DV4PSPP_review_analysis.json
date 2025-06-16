@@ -1,0 +1,631 @@
+{
+  "product_title": "CLOUDY BAY LED Digital Dimmer Switch for LED Light/CFL/Incandescent, Phrase Cut Dimming 600 Watt max,Cover Plate Included,White,2 Pack",
+  "product_category": "Digital Display Dimmer Switches",
+  "total_reviews": 44,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@clean sleek look": {
+          "+": [
+            29
+          ]
+        },
+        "B@nice looking": {
+          "+": [
+            5
+          ]
+        },
+        "C@looks good": {
+          "+": [
+            28,
+            41
+          ]
+        },
+        "D@lacks a quality look": {
+          "-": [
+            41
+          ]
+        }
+      },
+      "build_quality": {
+        "E@feel cheap": {
+          "-": [
+            5,
+            13
+          ]
+        },
+        "F@feels economy": {
+          "-": [
+            24
+          ]
+        },
+        "G@quality of plastic is somewhat delicate not as sturdy": {
+          "-": [
+            32
+          ]
+        },
+        "H@decent quality": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "rocker_switch": {
+        "I@rocker switch feels weak like it will break": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "spring_mechanism": {
+        "J@spring in the on off snapped": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "switch_body": {
+        "K@compacted switch body made it easier to stuff back into crowded switch box": {
+          "+": [
+            40
+          ]
+        },
+        "L@short depth less than an inch behind mounting plate": {
+          "+": [
+            43
+          ]
+        }
+      },
+      "dimmer_slider": {
+        "M@small narrow dimmer slider": {
+          "+": [
+            43
+          ]
+        },
+        "N@dimmer button is super small and sometimes hard to move": {
+          "-": [
+            28
+          ]
+        }
+      },
+      "adjustment_dial": {
+        "O@small dial for setting minimum dim level easily accessible": {
+          "+": [
+            43
+          ]
+        },
+        "P@wheel adjustment to set to light fixture": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "wiring": {
+        "Q@comes with cables already connected": {
+          "-": [
+            1
+          ]
+        },
+        "R@included wire nuts and stripped leads": {
+          "+": [
+            10
+          ]
+        },
+        "S@loose wire on dimmer side": {
+          "-": [
+            34
+          ]
+        }
+      },
+      "packaging": {
+        "T@comes damaged": {
+          "-": [
+            1
+          ]
+        },
+        "U@arrived on time well packed": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "materials": {
+        "V@feels like toxic metals are present": {
+          "-": [
+            6
+          ]
+        }
+      }
+    },
+    "perf": {
+      "response_time": {
+        "a@big lag between switching on and lighting up": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@significant delay in switching and dimming operations": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "c@second or so delay when turning lights on": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "d@small but very noticeable delay when turn on until lights come on": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "e@delay when turning on far too long": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "f@delay on both switches": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "g@delay by nearly 2 sec from clicking switch until turn on": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "h@several second delay from time you flip switch until light comes on": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "i@delay and slow ramp up to turning on lights": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "j@about 2 second delay before they turn on": {
+          "-": {
+            "?": [
+              33,
+              35
+            ]
+          }
+        },
+        "k@full 2 seconds delay before light turns on": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "l@takes over 1 second to turn lights on after hit switch": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "m@device is slow to respond to controller": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "n@creates flicker": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "o@causes light to flicker": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "p@causing lights and fans to flicker": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "q@one flickering so fast looks like strobe light other flickers every 20-30 seconds": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "r@one flickers": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "s@makes lights flicker": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "t@unstably flickering lights": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "u@flicker when light is on low dim": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "v@lights started strobing hard": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "w@experiencing flickering light when dimmed intensity keeps changing on its own": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "x@issues removing flickering even after playing with dial": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "dimming_function": {
+        "y@dimming works fine": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "z@does dim well": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "aa@dimming function smoother and less choppy": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "ab@dimming is chunky": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "durability": {
+        "ac@didn't last 3 months": {
+          "-": {
+            "E": [
+              7
+            ]
+          }
+        },
+        "ad@only use for two months then broken": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ae@only lasted not even one month before stopped working": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "af@after few months causing lights and fans to flicker": {
+          "-": {
+            "E": [
+              5
+            ]
+          }
+        },
+        "ag@switch will not operate after 3 months": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ah@one in guest bathroom no longer working": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ai@went through 2 in less than a month": {
+          "-": {
+            "F,J": [
+              24
+            ]
+          }
+        },
+        "aj@worked for few months then started strobing": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "ak@work half the time work maybe once out of 5 times": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "al@one switch worked fine other was broken": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "am@switch would short and turn off if brushed gently": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "an@dimmer is not working properly": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "ao@dimmer downstairs started dimming few seconds after turning on but brightens to full when slightly dimmed": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "installation": {
+        "ap@easy to hook up": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "aq@install was easy": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ar@install was very simple": {
+          "+": {
+            "R": [
+              10
+            ]
+          }
+        },
+        "as@easy to install": {
+          "+": {
+            "?": [
+              13,
+              15
+            ]
+          }
+        },
+        "at@installation was very easy and straightforward": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "au@easy install": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "av@good match for led under cabinet lighting": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "aw@work great with dimmable LED bulbs": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "ax@works very well for can lights": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ay@great for updating lights with leds": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "az@works great on LED-only and LED+incandescent setups": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "ba@not reliable for LEDs": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "led_lighting": {
+        "+": {
+          "av,aw,ax,ay,az": [
+            8,
+            11,
+            10,
+            37,
+            43
+          ]
+        },
+        "-": {
+          "ba": [
+            26
+          ]
+        }
+      },
+      "ceiling_fans": {
+        "-": {
+          "p": [
+            5
+          ]
+        }
+      },
+      "bedroom_lighting": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "bathroom_lighting": {
+        "-": {
+          "ah": [
+            18
+          ]
+        }
+      },
+      "hallway_lighting": {
+        "-": {
+          "j": [
+            33
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "-": {
+          "ag": [
+            7
+          ]
+        }
+      },
+      "wine_cellar": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "guest_room": {
+        "-": {
+          "aj": [
+            26
+          ]
+        }
+      },
+      "can_lights": {
+        "+": {
+          "ax": [
+            10
+          ]
+        }
+      },
+      "under_cabinet_lighting": {
+        "+": {
+          "av": [
+            8
+          ]
+        }
+      },
+      "spotlight": {
+        "+": {
+          "z": [
+            36
+          ]
+        }
+      },
+      "general_home_lighting": {
+        "+": {
+          "aw": [
+            11
+          ]
+        },
+        "-": {
+          "ai": [
+            24
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:40.643530"
+}

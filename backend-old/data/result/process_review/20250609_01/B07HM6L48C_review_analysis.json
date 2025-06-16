@@ -1,0 +1,350 @@
+{
+  "product_title": "Lutron Caseta 3 Way Smart Dimmer Switch Kit, w/ Wireless 3 way Pico Remote and Bracket, Light Switch for LED Lights, No Neutral Required, P-PKG1WB-WH",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 46,
+  "review_analysis": {
+    "phy": {
+      "buttons": {
+        "A@cheaply made buttons": {
+          "-": [
+            11
+          ]
+        },
+        "B@good feel buttons": {
+          "+": [
+            45
+          ]
+        }
+      },
+      "size": {
+        "C@tiny remote size": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "appearance": {
+        "D@nice looking": {
+          "+": [
+            20
+          ]
+        },
+        "E@looks great": {
+          "+": [
+            21,
+            31
+          ]
+        }
+      },
+      "wiring": {
+        "F@no neutral wire connection needed": {
+          "+": [
+            21,
+            23
+          ]
+        }
+      },
+      "packaging": {
+        "G@opened box": {
+          "-": [
+            12
+          ]
+        },
+        "H@small box not matching picture": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "hardware": {
+        "I@quality hardware": {
+          "+": [
+            2
+          ]
+        },
+        "J@good quality": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "battery": {
+        "K@dead battery on arrival": {
+          "-": [
+            28
+          ]
+        },
+        "L@battery needs changed every 2 years": {
+          "+": [
+            27
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@works perfectly": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@rock solid system": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "c@works every time": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "d@flawless wireless connection": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "e@trips breaker every time": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "f@DOA never worked": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "g@worked for months then blinks nonstop": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "installation": {
+        "h@easy to install": {
+          "+": {
+            "?": [
+              15,
+              17,
+              19,
+              45
+            ]
+          }
+        },
+        "i@not easy to install": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "j@works with LED bulbs": {
+          "+": {
+            "?": [
+              15,
+              42
+            ]
+          }
+        },
+        "k@doesn't work with non-dimmable LED bulbs": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "l@not compatible with Alexa or Google Home": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "m@flicker free LED dimming": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "n@customizable favorite setting": {
+          "+": {
+            "B": [
+              40
+            ]
+          }
+        }
+      },
+      "wireless_range": {
+        "o@works through wall": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "p@30 feet max distance from hub": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "q@works 30 yards distance": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "programming": {
+        "r@programming takes less than 1 minute": {
+          "+": {
+            "?": [
+              10,
+              19
+            ]
+          }
+        }
+      },
+      "durability": {
+        "s@works for 3 years": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "3-way switching": {
+        "+": {
+          "a": [
+            1,
+            10,
+            18,
+            22,
+            33,
+            34,
+            39
+          ],
+          "?": [
+            1
+          ]
+        }
+      },
+      "home automation with Alexa": {
+        "+": {
+          "c": [
+            6
+          ],
+          "?": [
+            6
+          ]
+        }
+      },
+      "remote lighting control": {
+        "+": {
+          "d": [
+            37,
+            40,
+            42,
+            45
+          ],
+          "?": [
+            37
+          ]
+        }
+      },
+      "avoiding rewiring": {
+        "+": {
+          "h": [
+            18,
+            33,
+            34
+          ],
+          "?": [
+            18
+          ]
+        }
+      },
+      "chandelier control": {
+        "+": {
+          "a": [
+            2
+          ],
+          "?": [
+            2
+          ]
+        }
+      },
+      "outdoor lighting": {
+        "+": {
+          "j": [
+            23
+          ],
+          "?": [
+            23
+          ]
+        }
+      },
+      "bedroom lighting": {
+        "+": {
+          "?": [
+            37
+          ]
+        }
+      },
+      "home theatre dimming": {
+        "+": {
+          "m": [
+            42
+          ],
+          "o": [
+            42
+          ]
+        }
+      },
+      "shed to house control": {
+        "+": {
+          "q": [
+            39
+          ],
+          "?": [
+            39
+          ]
+        }
+      },
+      "covered switch access": {
+        "+": {
+          "o": [
+            40
+          ],
+          "?": [
+            40
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:27.017960"
+}

@@ -1,0 +1,641 @@
+{
+  "product_title": "Leviton Decora Slide Dimmer Switch for Magnetic Low Voltage, Dimmable LED, Halogen and Incandescent Bulbs, DSM10-1LZ, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks great": {
+          "+": [
+            0
+          ]
+        },
+        "B@multiple color options with swappable parts in the box": {
+          "+": [
+            3,
+            16,
+            19,
+            20,
+            22,
+            31,
+            33,
+            48
+          ]
+        },
+        "C@highest quality": {
+          "+": [
+            6
+          ]
+        },
+        "D@high quality feel": {
+          "+": [
+            15
+          ]
+        },
+        "E@Leviton printed into the face collects dirt": {
+          "-": [
+            34
+          ]
+        },
+        "F@looks nice": {
+          "+": [
+            44,
+            47
+          ]
+        }
+      },
+      "construction": {
+        "G@wires already installed": {
+          "+": [
+            32
+          ]
+        },
+        "H@wires twisted and different lengths on used unit": {
+          "-": [
+            4
+          ]
+        },
+        "I@face plates slightly flimsy": {
+          "-": [
+            32
+          ]
+        },
+        "J@plastic toggle and slider is thin": {
+          "-": [
+            39
+          ]
+        },
+        "K@well made": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "dimensions": {
+        "L@switch is quite wide": {
+          "-": [
+            36
+          ]
+        }
+      },
+      "indicator_light": {
+        "M@small locator LED": {
+          "+": [
+            12,
+            27,
+            31,
+            40
+          ]
+        }
+      },
+      "controls": {
+        "N@dimmer slide": {
+          "+": [
+            11,
+            21,
+            28
+          ]
+        },
+        "O@positive click of Decora switch": {
+          "+": [
+            22
+          ]
+        },
+        "P@toggle feels soft with no solid clicking": {
+          "-": [
+            27
+          ]
+        },
+        "Q@dimmer slide stays put at setting": {
+          "+": [
+            22
+          ]
+        }
+      }
+    },
+    "perf": {
+      "electrical_performance": {
+        "a@performs well": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@works fine": {
+          "+": {
+            "?": [
+              1,
+              5
+            ]
+          }
+        },
+        "c@still buzzes": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@no hum": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@buzz when switched on": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "f@works great": {
+          "+": {
+            "?": [
+              6,
+              13,
+              18,
+              19
+            ]
+          }
+        },
+        "g@hesitates when turning on": {
+          "-": {
+            "?": [
+              8,
+              12
+            ]
+          }
+        },
+        "h@stopped working after a month": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@lights flash full-brightness then cycle": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "j@no hum/buzzing, no flickering": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "k@generates almost no heat": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "l@smooth dimming": {
+          "+": {
+            "N": [
+              11
+            ]
+          }
+        },
+        "m@no noise": {
+          "+": {
+            "?": [
+              13,
+              16
+            ]
+          }
+        },
+        "n@works well": {
+          "+": {
+            "?": [
+              15,
+              16,
+              38,
+              39,
+              44,
+              48
+            ]
+          }
+        },
+        "o@no buzzing and smooth dimming": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "p@easy to use": {
+          "+": {
+            "?": [
+              20,
+              21
+            ]
+          }
+        },
+        "q@dimming all the way down with no flicker": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "r@operates well with good control": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "s@works perfectly": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "t@quiet with continuously variable light": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "u@works perfectly with LED": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "v@reliable": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "w@works well with no flicker": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "x@quit working first day": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "y@works well with LED under counter lights": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "z@causes flash of light when turning on": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "aa@very smooth with startup delay when dimmed": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "ab@audible buzzing but 50% less than other dimmer": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "ac@working flawlessly with smooth linear dimming": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "heat_management": {
+        "ad@getting very hot": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ae@not running as hot but warm": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "af@mild warmth as expected": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "ag@low-voltage compatible": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "ah@compatibility with compact fluorescent and LED": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "ai@universal switch compatibility": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "aj@handles heavy loads": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ak@handles 450 LED watts": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "al@high capacity and LED compatible": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "timing": {
+        "am@two-second delay for LED lights to come on": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "an@instant to brighten or dim after initial delay": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "durability": {
+        "ao@lasted month then stopped working": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ap@rock solid products used 20+ years with no failures": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "aq@flimsy but okay if used gently": {
+          "-": {
+            "I,J": [
+              39
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED light fixture": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "Halo sloped ceiling LED lights": {
+        "-": {
+          "am": [
+            1
+          ]
+        }
+      },
+      "twenty 15 watt LED downlights": {
+        "-": {
+          "c": [
+            2
+          ]
+        }
+      },
+      "chandelier with 30 halogen lights": {
+        "+": {
+          "aj": [
+            5
+          ]
+        }
+      },
+      "large number of LED lights in kitchen": {
+        "-": {
+          "ao": [
+            9
+          ]
+        }
+      },
+      "4-way circuit with 15 TorchStar 12 watt lights": {
+        "+": {
+          "j,k,l": [
+            11
+          ]
+        }
+      },
+      "30 ea 12W LEDs in large living room": {
+        "+": {
+          "n": [
+            12
+          ]
+        }
+      },
+      "3-way circuit": {
+        "+": {
+          "n": [
+            12
+          ]
+        }
+      },
+      "twelve Elco 1499 50W MLV fixtures with LED lamps": {
+        "+": {
+          "n": [
+            14
+          ]
+        }
+      },
+      "can lights with LED bulbs": {
+        "+": {
+          "n,m": [
+            16
+          ]
+        }
+      },
+      "multi bulb led fixtures": {
+        "+": {
+          "n": [
+            17
+          ]
+        }
+      },
+      "24 100 watt equivalent led dimmable bulbs": {
+        "+": {
+          "f": [
+            18
+          ]
+        }
+      },
+      "14x 8-watt LED bulbs in workout space": {
+        "+": {
+          "o": [
+            19
+          ]
+        }
+      },
+      "chandelier": {
+        "+": {
+          "n": [
+            20
+          ]
+        }
+      },
+      "kitchen lighting fixture over table": {
+        "+": {
+          "p": [
+            21
+          ]
+        }
+      },
+      "3-way circuit with 3 ceiling can lights with LED flood bulbs": {
+        "+": {
+          "q": [
+            22
+          ]
+        }
+      },
+      "LED lights replacing 90s dimmer": {
+        "+": {
+          "r": [
+            24
+          ]
+        }
+      },
+      "bedroom": {
+        "+": {
+          "s": [
+            26
+          ]
+        }
+      },
+      "chandelier with lots of wattage": {
+        "+": {
+          "t": [
+            27
+          ]
+        }
+      },
+      "LED/MLV/Incandescent lights": {
+        "+": {
+          "t": [
+            28
+          ]
+        }
+      },
+      "pantry with LED recessed light": {
+        "+": {
+          "u": [
+            29
+          ]
+        }
+      },
+      "chandaleer control": {
+        "+": {
+          "v": [
+            30
+          ]
+        }
+      },
+      "3-pole environment": {
+        "+": {
+          "n": [
+            33
+          ]
+        }
+      },
+      "LED under counter lights": {
+        "+": {
+          "y": [
+            36
+          ]
+        }
+      },
+      "SleekLighting GU10 LED bulbs": {
+        "-": {
+          "z": [
+            37
+          ]
+        }
+      },
+      "Six Retrofit LED 4\" can lights in Kitchen": {
+        "-": {
+          "ab": [
+            42
+          ]
+        }
+      },
+      "incandescent 18-lite edison style entry light": {
+        "+": {
+          "?": [
+            42
+          ]
+        }
+      },
+      "chandelier with 54 LED bulbs drawing over 200 watts": {
+        "+": {
+          "ac": [
+            43
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:47.418436"
+}

@@ -1,0 +1,2568 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:45:34.658329",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0BTMWZH3K",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0BTMWZH3K",
+    "title": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+    "brand": "Kasa",
+    "model_number": NaN,
+    "price_usd": 62.99,
+    "rating": 4.4,
+    "reviews_count": 879.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0BTMWZH3K"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3F6XIKIN8HAQI",
+        "text": "One of the switches stopped working after 13 months. It connected to the WiFi, but it was not sending power to the light.",
+        "date": "Reviewed in the United States on June 5, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Stopped working after 13 months",
+        "userName": "J. Miranda",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R372Q3QVEGPHFO",
+        "text": "We bought these to replace our old smart home switches that no longer functioned as they should. Pros: -zero issues so far. Which is a big change from previous brand. -the click is nice -easy to install -I like that switch has a small circle light that lights when off so you can see them in the dark. -easy to use with Siri/homekit -price -when turning them off you have a setting that you can have it dim until off instead of just on to off. Which gives you time to fully exit the room. Cons: -none so far",
+        "date": "Reviewed in the United States on June 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "The Smart Switch",
+        "userName": "GinaM",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51AY9Y6qcpL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3374a87b-4064-415f-96fd-97c58bd877df/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3W2GLIYY5KHYF",
+        "text": "Bought the three pack. First two got configured without issue but the third couldn’t be found. Called TP-Link support and Joey Sonio helped me troubleshoot and we got it set up by adding it to HomeKit first before the Kasa app. Thanks Joey!",
+        "date": "Reviewed in the United States on May 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great support!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3A7NBQCRT3BEH",
+        "text": "Great product. I have over 30 Kasa products. They are easy to use easy install and comparable with iOS devices.",
+        "date": "Reviewed in the United States on May 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing products",
+        "userName": "Baron1120",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2NDIY0M689S64",
+        "text": "Amazing. Easy to install. Stays connected to wifi and reconnects automatically when I reboot network. Dimmers work well too. Apple Home compatible works flawlessly.",
+        "date": "Reviewed in the United States on May 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product. Reliable with Apple Home",
+        "userName": "JCap",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RUVGAZJ0H87IQ",
+        "text": "Hit or miss! I bought the 3 switch pack out of which 2 switches worked fine and were able to connect to the Apple home but the 3rd switch kept failing to connect to the Apple home. The switch works as a normal one but not as a smart switch. I wasted almost 1 hr trying, resetting, trying again but to no avail. Wish Kasa can have a better quality check of their products.",
+        "date": "Reviewed in the United States on April 22, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Hit or Miss",
+        "userName": "Arvj",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3FO0VKKPYDCA",
+        "text": "This is a 3 pack. Only one worked. Spent a lot of time trying to get the other 2 to work. Even called Kasa for help. They kept trying to make them work. They never offered to replace them, they just kept wasting my time trying to make them work. I returned them to Amazon and then reordered. The new package worked great and installed easily.",
+        "date": "Reviewed in the United States on April 12, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "If it doesn’t connect, return and reorder",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1PEKK5LR2TQNX",
+        "text": "I've used KASA for all my house, it seems quality has gone down, they can't connect to the wifi out of the box and claiming a warranty is not a simple process you must be quite patient to have your case resolved.",
+        "date": "Reviewed in the United States on April 6, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not as good as it used to be.",
+        "userName": "RafaGon",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2APO36KE10KSR",
+        "text": "Garbage. Installed three of them. Can’t turn brightness above 85% or the lights will flash on and off. One out of the three won’t turn the lights all the way off.",
+        "date": "Reviewed in the United States on April 3, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t function properly",
+        "userName": "Ross",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3LFECE5PAPIQL",
+        "text": "I have installed approximately 20 Kasa HomeKit dimmable switches in my home. They work great with old school incandescent bulbs. However, as I switch a room over to LED bulbs (GU10, MR16 type), each time I have encountered noticeable flickering until the bulb is driven to approx. 60%, so their effective dimmable range is not great in my experience. I have tried multiple bulb vendors with no success yet - despite all claiming to be dimmable. Just be aware that the dimming on these switches is known as Triac Phase Forward (aka Leading Edge) so be sure that you know what bulbs support that dimming approach.",
+        "date": "Reviewed in the United States on March 22, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Have not found LED dimmable bulbs that dont flicker with this switch",
+        "userName": "CSL5000",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1U7BHIU922RKM",
+        "text": "easy to install and set up online with the KASA App. Be sure you have a ground wire and neutral wire access in the electrical box where you are installing the switch. Works very well with Alexa.",
+        "date": "Reviewed in the United States on February 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "William S. Weil",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RMFSL8AGYPE09",
+        "text": "Finding smart dimmers compatible with Apple HomeKit can be a challenge, but this one checks all the boxes. It's sleek, stylish, and works flawlessly. Installation was so straightforward that my wife, who isn’t particularly handy, had no trouble setting them up. The only reason I’m giving it 4 stars is that the switch plate didn’t seem to latch on tightly, which was a bit frustrating. Otherwise, highly recommend for anyone looking to upgrade their smart home!",
+        "date": "Reviewed in the United States on January 26, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "HomeKit-Compatible, and Easy to Install",
+        "userName": "Dan H",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/2198Ue994IL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3PNB9F2FKEBJ5",
+        "text": "These were very simple for an electrician like me to install. Getting them acquainted with my Apple HomeKit was also a breeze after figuring out that I just needed to tap on an option that let me enter the code on the switch. I love the scenes and the ability to automate my lights and my life.",
+        "date": "Reviewed in the United States on January 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wonderful improvement",
+        "userName": "Wesley",
+        "numberOfHelpful": 2,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RSIF1JSZ1OG93",
+        "text": "I initially passed over these lights because I'm not an Apple product user and have no intention of using Apple Home Kit. I had wired another brand of smart switches throughout my entire house that were maybe 15% cheaper but I could also find them at Home Depot. The switches I installed were not compatible with my local network and home automation software. They also dropped network connection everyday, the app was cheap and barely worked, and the dimming stuttered. So I bought these Kasa switches and other 3-Way switches, and just finished installing all of them. It is anmight and day difference. Kasa app is extremely easy to use, the options for customization are amazing, the operation of the dimmer is so smooth it's easy on the eyes. Better yet, they are all working with a third party home automation program I was hoping to use. If you are in the market and hoping to add Kasa products to your home just buy these. Save yourself the hassle of buying, installing, uninstalling, and returning cheaper alternatives.",
+        "date": "Reviewed in the United States on January 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worth the Money",
+        "userName": "B Kingston",
+        "numberOfHelpful": 3,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RSA59LH20EB1G",
+        "text": "I have installed this three smart dimmer switches but I have notice they're not working as expected. frequently down you have to press multiple time to switch on and off. if you do multiple times it will confused and lagged. product quality is not poor compare to other brands",
+        "date": "Reviewed in the United States on January 9, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "avoid this and look for another brand",
+        "userName": "Brijesh Patel",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RG5D66HFR2KCJ",
+        "text": "1-They are connected correctly. Don't connect them the way you \"think\" they go, use a meter or a voltage tester on existing wiring. It has to be connected correctly. 2-Set up a separate 2.4 G network. Don't try connecting into your regular Wi-Fi. Create a new Wi-Fi network on your router and call it something else. Do not add 5G to it, only 2.4. They seem to integrate well with Apple HomeKit, Brilliant Lighting and Control4. I know this only because I am an install tech and have been dealing with the Headache that goes along with this crap for 20+ years.",
+        "date": "Reviewed in the United States on January 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "They work great IF…",
+        "userName": "Wes",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R11WG9BIU8Y0P4",
+        "text": "As a dumb switch, this is a pretty good design. As a smart switch, this product is the worst. Entire pairing implementation is horribly botched. And if that wasn’t enough, TP link, the Chinese company that manufactures these switches has been implicated in DDOS campaigns against US facilities. It’s unclear if the company is working with the Chinese national government. Problems with the app, HomeKit, implementation, pairing, Wi-Fi compatibility, all too numerous to list.",
+        "date": "Reviewed in the United States on January 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not Ready for Prime Time",
+        "userName": "Dad’s Sausage",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/512tQyz36mL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/514Ywn9xzjL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51NXL5rRE3L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61G2rS7AfzL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61Uxq1J5mkL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RQ9S0PO8XE3LY",
+        "text": "These switches worked into our HomeKit setup without any issues. Soft stop and start is a neat feature. Wish the rest had that function. Dims and brightens from switch or iPhone without issue. These are great, now if they could come in some colors besides white? A communication failure led me and my S.O. to make the monstrosity shown in the picture. Light almond plugs and cover plates with white smart switches. All around the kitchen.",
+        "date": "Reviewed in the United States on January 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great. Now can we work on the color?",
+        "userName": "Mike G.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61bl1dmLJUL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3QZVYY38SMSD2",
+        "text": "TP link / Kasa products are fantastic. Easy install and work flawlessly. I use with Apple HomeKit and have almost 24 of their smart devices running. Both my wife and I enjoy the ease of controlling so may lights and outlets remotely. AAAA++++",
+        "date": "Reviewed in the United States on January 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product and company",
+        "userName": "Stephen R.",
+        "numberOfHelpful": 3,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1GH4FR7CNPVLY",
+        "text": "Works great, easy to sync with Apple Home. But large, if you have a lot of wires in your box, it’s difficult to make fit. Note: they are a very bright white plastic, and not a good color match to more common white",
+        "date": "Reviewed in the United States on December 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great, but tight fit.",
+        "userName": "Galen",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2X5QUC3YDLR18",
+        "text": "Excellent switch, you cant go wrong with TP link. I ordered three first to test and then ordered more.",
+        "date": "Reviewed in the United States on December 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Switch",
+        "userName": "S",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61CgvI330+L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61SfXbjf9xL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/76ff3bbe-cad2-4198-9ef3-14fa0ce384a3/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RTENEO3S8OECS",
+        "text": "Value for money . Good quality Very Bright. Good app. Great connectivity Easy to install and easy to manage Works with Google home",
+        "date": "Reviewed in the United States on November 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Switches",
+        "userName": "Hin",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1XBMLR8PW6IZS",
+        "text": "I don't normally leave a review but I think to help other people find a smart dimmer that actually will dim all the way down this is the one. I've owned many of the off-brand smart switches from here on Amazon with mixed success. This by far is a absolutely awesome product. I've used smart light switches for probably 5 years now.",
+        "date": "Reviewed in the United States on November 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer works perfect",
+        "userName": "BRIAN",
+        "numberOfHelpful": 3,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2T4AO0GQZ0XP9",
+        "text": "Having issues and the only support is AI, I am experiencing ongoing issues with the 12 switches I purchased, and the AI support has not provided accurate or helpful solutions. This leads me to believe the product may be defective or of inferior quality. If I cannot receive real support to resolve these issues promptly, I will have no choice but to return the switches.",
+        "date": "Reviewed in the United States on November 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor integration",
+        "userName": "John Francek",
+        "numberOfHelpful": 2,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2HKJLR83PYQT1",
+        "text": "We did these all over our house. We have 3 way dimmers, single dimmers, motion switches, single non dimmers etc. They all function flawlessly. Alexa imports them easily into our smart home environment. We don't have the issues we had with the treat life switches that lost connection or wouldn't dim periodically. You do need the neutral so make sure you have it. Outside that, setup is less than 3 minutes a switch including install. You can set groups, schedules, last mode, long and double press options. I try to keep all my smart functions in one platform to avoid overlapping rules. So set the light up in the kasa app. Then schedule in the alexa app. The hardest part is coming up with a good naming convention but we have some weird single lights that we now make function from one switch or command when we want",
+        "date": "Reviewed in the United States on November 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Kasa switches are great!",
+        "userName": "Kyle",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R5HQTDMS6N2CN",
+        "text": "I have no problem with install and connecting it to apple home-kit",
+        "date": "Reviewed in the United States on October 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer works with Apple",
+        "userName": "Richard Richardson",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3G2ZQ0U1JUW5C",
+        "text": "Well priced dimmers that work. Great value in the 3 unit pack. Very easy to install and high build quality. Easy to connect to Alexa",
+        "date": "Reviewed in the United States on October 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work as advertised - great with Alexa",
+        "userName": "RHB NYC",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1BTMAR11P8L82",
+        "text": "I needed a good dimmer that would fix my flickering LED bulbs and this worked. Works with Apple products too. Also has a good push feel.",
+        "date": "Reviewed in the United States on October 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with LED lights",
+        "userName": "DudeInDenver",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1KH0I5Z81LG4A",
+        "text": "I connected many IOT devices in my home, They all work great. But I cannot view or control the dimmer when I am away from home. In the help session, it needs me to mess with the router settings. However, now I can add it to Homekit. (I had problem previously since I used the wrong homekit codes. I did not realize each code was assign to a device as indicated in the app.). And I can use homekit to control it while I am out of the house.",
+        "date": "Reviewed in the United States on September 27, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "remote control and homekit not working",
+        "userName": "Phil",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RVXB8JSYL20QX",
+        "text": "One of the three pack connected without issue, but the other two just won’t connect to the WiFi, no matter what I try. Very frustrating, especially because the other one worked perfectly.",
+        "date": "Reviewed in the United States on September 19, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Connection issues",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RJWY4M79GJJB3",
+        "text": "Once you actually get the device registered the app, works fine. Knocking 2 stars because: 1. toggling physical switch randomly has delays to turn on/off light, 2. getting the device registered often took multiple tries and turning on/off bluetooth, wifi and network settings on iPhone",
+        "date": "Reviewed in the United States on August 26, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Takes multiple tries to add device to app",
+        "userName": "S. Le",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RAT8MA3KGSCTH",
+        "text": "Funcionan muy bien con google, con Alexa ha sido mas complicada la configuración",
+        "date": "Reviewed in the United States on August 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Buen producto",
+        "userName": "LUIS GONZALEZ",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1UJCGOTGNA39L",
+        "text": "They are a bit noisy and some of them almost impossible to pair with Apple HomeKit. Most of them link at the first try but some exceptions were is almost impossible after several tries. Light on switches varies on the color brightness.",
+        "date": "Reviewed in the United States on August 26, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good but…",
+        "userName": "Ricardo Castillo",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1LPL9JSSW3VZO",
+        "text": "Este artículo no sirve ya que tiene que pagar una suscripción por cada artículo que tengas. Y lo pero de todo es que no tiene devolución en Amazon. Que recomiendo no comprar basura",
+        "date": "Reviewed in the United States on August 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "filth",
+        "userName": "Quilvio",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51ssbqfut9L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61bXVC4G5lL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RT44WNV2RLLOJ",
+        "text": "Absolutely love being able to program them to work with more than just the Kasa app. Currently able to turn on with Alexa, Apple home and Home Assistant",
+        "date": "Reviewed in the United States on August 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best smart switches.",
+        "userName": "STEVEN KOVARIK",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RMDJLX8C9TW4C",
+        "text": "VERY GOOD LOOKIN SWITCHES. HARD TO INSTALL IN REGULAR WALL BOX SPECIALY IF YOU NEED TO INSTALL 2 OR THREE TOGETHER. ONE OF REVIEWS MENTIONED THAT SO I USED BIGGER BOXES THEN WAS MUCH EASIER TO ACOMODATE ALL THE WIRES",
+        "date": "Reviewed in the United States on August 13, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "VERY NICE LOOKING",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2X57QG9LJE78S",
+        "text": "Installation is straightforward. Thats the only easy thing. Connecting to the switch is a nightmare. Out of 5 I installed, I could only get two to complete setup. Of those two, only one connected to Apple Home. I tried multiple things to get them to connect; reset the switch, reset my iPhone, used a different iPhone, removed and reinstalled the switch, put the switch in long and short pairing mode. Nothing worked. Don’t get these unless you want to be frustrated.",
+        "date": "Reviewed in the United States on August 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Horrible connectivity, avoid at all costs",
+        "userName": "Big Red",
+        "numberOfHelpful": 3,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3JYUX2SPFQ8YJ",
+        "text": "I love this witches. It’s so convenient. It’s the best quality in the market. It’s a good buy",
+        "date": "Reviewed in the United States on August 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "Sarah melul",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3GOAB3BMNRJIW",
+        "text": "Works great with Google and Apple Homekit.",
+        "date": "Reviewed in the United States on July 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I love these",
+        "userName": "Marcus",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R26L73OSB3OVQL",
+        "text": "Works great",
+        "date": "Reviewed in the United States on July 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Marina Deych",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RRXNL1L71CKCD",
+        "text": "I don't recommend buying these, 2 out of 3 units don't work and another package I had 1 out of 3 don't work which costs me more than their worth with lost time for the electrician. These seem to be experimental products along with all the KASA brand. Low quality from a low quality company.",
+        "date": "Reviewed in the United States on July 9, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "2 out 3 Units don't work",
+        "userName": "Ezio",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1I7CMBC45CX6F",
+        "text": "I recently bought these HomeKit capable dimmer switches to replace the WeMo dimmers I have been using until now. A couple of months ago, the WeMo dimmers simply stopped working correctly. No matter what I tried to reset them and reconfigure them, they refused to work. So I decided to give these Kasa dimmers a try since they were so highly rated here. Wow! These things are fantastic! The software set up is far superior. It is designed better. It looks really good. And the software does what it is supposed to. It works and it works well. The dimmers work excellently and I have zero complaints. Much more than I can say for the Wemo dimmers. I also bought a few of the Kasa smart plugs. They were a breeze to set up and work flawlessly. Going forward,, I will only be buying this Kasa brand. I highly recommend them. You will not be disappointed. By the way, these dimmers and smart plugs cost much less than the competition with no sacrifice in quality at all.",
+        "date": "Reviewed in the United States on July 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I’m switching to Kasa!",
+        "userName": "Thomas Bricker",
+        "numberOfHelpful": 7,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2NXT9CFB3UC90",
+        "text": "Falta información para establecer compatibilidad.",
+        "date": "Reviewed in the United States on June 26, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Todavia no consigo que me lo reconozca ninguna aplicación smart",
+        "userName": "Bayardi M.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R12016RXPVGYEZ",
+        "text": "Easy to install, works great",
+        "date": "Reviewed in the United States on June 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Bill",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R7T7O5B6VP8IP",
+        "text": "Must have for your home, makes things so much easier",
+        "date": "Reviewed in the United States on June 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Jorge Ortiz",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1YXL9FI7PB08M",
+        "text": "Replacing a 15-year-old Automated light switch system ISY 99 Insteon. I integrated these into My Home for Apple and Nest. The Kasa app has an incredible amount of options for the lighting setup. I added a piece of white sticker to my motion sensor to limit motion detection in the room and not passing by in the hallway.",
+        "date": "Reviewed in the United States on May 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great App",
+        "userName": "mike mckeever",
+        "numberOfHelpful": 2,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51SkdpVJleL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3M9EFZ5ETXUFV",
+        "text": "Love these dimmers with their HomeKit support. Only issue is that after installation, oddly lights in another room started flickering when this was switched on. I eventually had to replace all my LED bulbs controlled by this switch to fix the flickering issue in the other room.",
+        "date": "Reviewed in the United States on May 10, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great and good value for the money with HomeKit support",
+        "userName": "Thuy",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RVCQ86FHULFN9",
+        "text": "Quick and easy install! Make sure you know which ones to get !",
+        "date": "Reviewed in the United States on May 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Made the process easy",
+        "userName": "Tyson",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1EMTPLNXB7N53",
+        "text": "The switch is working well. My favorite thing about this switch is that I was able to make a Smart Action then when turned off automatically triggers my basement light switch to turn on. This allows me to come out of my basement bedroom into the basement hallway and be able to see my way upstairs since that switch is located upstairs and has 20m motion sensor. I've created other Smart Actions to shut down specific Kasa Power Strip outlets to turn off the space heater, heated blanket, monitors, etc. and this is awesome!!",
+        "date": "Reviewed in the United States on April 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Switch",
+        "userName": "Terry C Thillemann",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BTMWZH3K",
+        "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 100,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 879,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 73
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1Z97QXKO5FJPP",
+        "text": "Connectivity was usually great and this product worked great with my apple homekit setup. Every once in a while, I would have to reconnect it to my home WiFi but considering how useful the product is, it’s totally worth it",
+        "date": "Reviewed in the United States on March 30, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easiest way to turn on and off a light",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BTMWZH3K",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

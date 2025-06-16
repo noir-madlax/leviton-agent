@@ -1,0 +1,187 @@
+{
+  "product_title": "(50 Pack) CML Decorator Wall Light Switch, Single Pole Switch, 15A 120/277V, 3-Year Warranty, White",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 16,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@off-white with beige hint": {
+          "+": [
+            4
+          ]
+        },
+        "B@does not match own outlets/cover plates": {
+          "-": [
+            0,
+            10
+          ]
+        },
+        "C@more yellow than standard": {
+          "-": [
+            6
+          ]
+        },
+        "D@matches plate covers": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "marking": {
+        "E@TOP engraved in metal in tiny print": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "construction": {
+        "F@has gap on top": {
+          "-": [
+            3
+          ]
+        },
+        "G@does not feel very sturdy": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "appearance": {
+        "H@nice appearance": {
+          "+": [
+            7
+          ]
+        },
+        "I@looks great": {
+          "+": [
+            13
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works fine": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@they work": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@function well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@some switches are bad/defective": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@switches don't work all the time": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "f@some never worked": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "installation": {
+        "g@easy installation": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "h@easy to change out": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "i@easy to install": {
+          "+": {
+            "?": [
+              13,
+              14
+            ]
+          }
+        },
+        "j@incorrect installation if TOP marking missed": {
+          "-": {
+            "E": [
+              1
+            ]
+          }
+        }
+      },
+      "durability": {
+        "k@should be ok with normal use": {
+          "+": {
+            "G": [
+              13
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "house renovation": {
+        "+": {
+          "c": [
+            2
+          ]
+        }
+      },
+      "replacing all house switches": {
+        "+": {
+          "i": [
+            14
+          ]
+        }
+      },
+      "upgrade from flip switch": {
+        "+": {
+          "i": [
+            13
+          ]
+        }
+      },
+      "modern feel upgrade": {
+        "+": {
+          "h": [
+            8
+          ]
+        }
+      },
+      "wall switch replacement": {
+        "-": {
+          "d": [
+            3
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:18.068607"
+}

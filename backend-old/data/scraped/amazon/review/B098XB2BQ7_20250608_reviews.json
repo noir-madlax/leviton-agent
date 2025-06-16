@@ -1,0 +1,1082 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:33:31.372973",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B098XB2BQ7",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 2,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B098XB2BQ7",
+    "title": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+    "brand": "ELEGRP",
+    "model_number": NaN,
+    "price_usd": 28.99,
+    "rating": 4.6,
+    "reviews_count": 287.0,
+    "category": "Light Switches",
+    "product_segment": "Four Way Multi-Location Control Switches",
+    "product_url": "https://www.amazon.com/dp/B098XB2BQ7"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1UAAMIYARMBXY",
+        "text": "I’m a licensed electrical contractor and typically use Pass & Seymour Legrand switches. I bought this ELEGRP 10-pack because of the price and high reviews, but I won’t make that mistake again. Right out of the box, the switches felt rough, clunky, and low quality ,definitely not what I’d call contractor-grade. I needed them for a job the next day, so I reluctantly installed six. One failed immediately and wouldn’t function at all. Because of that failure and how poor these feel, I’m planning to remove all of them and replace them with reliable switches. I can’t take the risk of callbacks or failures on a job. I’ve used ELEGRP outlets before without issue, but after this experience, I’m not sure I’ll trust anything from them going forward. Not worth the risk.",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "One Failed Immediately – I’m Pulling Them All Out",
+        "userName": "Ziggy",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2ASTPNSWK3UYZ",
+        "text": "Second cLass item. Election said that they were not real good. Had to have him come out. Ed",
+        "date": "Reviewed in the United States on May 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Not a good product",
+        "userName": "ED Renton,WA",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R30R7JZ901H542",
+        "text": "Just as indicated. Well manufactured and easy installation.",
+        "date": "Reviewed in the United States on December 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent",
+        "userName": "ddinkel",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R345019LUFSJZZ",
+        "text": "I would say I am an intermediate skilled DIYer and I found these light switches to be a bit more difficult to handle. The wires must be bent perfectly around the screw to be secured properly so it took a little time since my house is older and the wires are more robust. I was still able to complete the project and all switches worked properly. Would buy again for sure just took some practice on bending the wires properly.",
+        "date": "Reviewed in the United States on September 24, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Well made but difficult to install for a beginner.",
+        "userName": "Railguy713",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RCYB36MOWX1PF",
+        "text": "Used all through our new home. Purchased everything from the same company. Look great.",
+        "date": "Reviewed in the United States on September 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Beautiful",
+        "userName": "Tammy Barker",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RO3QV997PTWP4",
+        "text": "Happy with the quality and love that the seller had all the other pieces we need for our DIY home renovation project.",
+        "date": "Reviewed in the United States on September 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Value",
+        "userName": "Laineybop",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2P660ACL2WMWD",
+        "text": "Made to fit #14AWG copper wire but it one works real hard #12AWG copper wire will work. BUT it should not take that much work since the description says it fits #12AWG copper wire. I would not buy again.",
+        "date": "Reviewed in the United States on September 6, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Does not fit #12AWG copper wire with out a LOT of work!!",
+        "userName": "W., Win",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2Z53SG2AT1KFE",
+        "text": "Has back screw wire insert, but you need to make sure and pull on wire to make sure clamp tight. Or jut J hook em. Good so far.",
+        "date": "Reviewed in the United States on August 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "4 way or 3 way electrical switch",
+        "userName": "D Rogers",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/717wXOXZLBL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6c5ce8a3-0619-4df5-830b-ff484e5fc667/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RQL86XSA42GF6",
+        "text": "Switches worked out wonderfully and can’t beat the price. I recommend them.",
+        "date": "Reviewed in the United States on July 24, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good price",
+        "userName": "JWC",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2U6E3VV3XAXTA",
+        "text": "As others have commented - attaching wires to these switches is very frustrating - the screws recede into the housing when trying to use the external screws to wire to, and trying to insert the wires into the back 1) is very difficult and 2) requires you to \"tighten the screw\" which just seems to spin without tightening to retain the wire. The switches are cheap but if you value your time and all get a reputable brand so you don't feel the need to smash these cheap switches with a sledgehammer when you can't get the wires to stay put.",
+        "date": "Reviewed in the United States on February 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Nice price but incredibly frustrating to install",
+        "userName": "P. W. Kerns",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "REZMXGSPZAEBP",
+        "text": "OK... if you plan to wire more than one 4 way switch, get this. It will pay for itself if you only use two of them.",
+        "date": "Reviewed in the United States on February 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Save Money",
+        "userName": "Jesus and me Creations",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RWCQ7TPRAQ5O3",
+        "text": "I replaced old toggle switches with these rocker switches because they look more modern and upscale. They were easy to install and look good. They work well.",
+        "date": "Reviewed in the United States on July 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "P. Render",
+        "numberOfHelpful": 2,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2BAY2VMZFJ2A",
+        "text": "Over all good product for function and cost. Only complaint is the rocker takes a little effort to push on or off. There is more resistance when pushing on the rocker, it's not as light and smooth action like a Bestten. Also it took a little more than usual effort to wire the nut because it's short. The push in option also took a little effort for it to get in the hole.",
+        "date": "Reviewed in the United States on June 10, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good Value",
+        "userName": "Minh Quang",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61d5pNz7TfL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "REZS6YNJI2JX1",
+        "text": "Little did I know that you only need one four-way switch and two three-way switches to make a three switch circuit work properly. So I ended up with a lot of extra four-way switches. I wish that in the product description it would state something like that prominently. I guess it’s time for eBay lol.",
+        "date": "Reviewed in the United States on May 27, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Little did I know",
+        "userName": "Michael Demby",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R14318ET0XUFJ2",
+        "text": "Every other switch that I've installed connects wires using one of two ways: Either the wire slides into a hole \"quick-connect\", or you screw the wire to the side screw. This switch, however, you install by inserting the wire into a hole on the back, and then tightening the screw, which pulls a square nut that's inside of the housing to secure the wire. The problem is that 14AWG or larger doesn't fit into the holes with the large square nuts inside. (The nut obstructs the hole.) Also, you can't secure the wire to the outside because the screw is secured to the square washer inside alone rather than the housing itself, so it won't remain straight enough to hold the wire. I'm not sure why they designed them this way, perhaps the quick connect and side screws are patented or something. Buy these if you have small gauge wire, or enjoy being frustrated.",
+        "date": "Reviewed in the United States on March 25, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Unusable (Poorly engineered)",
+        "userName": "Michael M.",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3GY62TVTEPY00",
+        "text": "Good color and function",
+        "date": "Reviewed in the United States on February 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Working well",
+        "userName": "George",
+        "numberOfHelpful": 2,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3CI6MHG9OJYCG",
+        "text": "They're cheap, but solid. Of couse, can't beat Leviton and Lutron brands. Leviton and Lutron are expensive, therefore, it's a better option. For decorator wallplates, don't buy them from ELEGRP. Go with \"ENERLITES Screwless Decorator'. Trust me, they will make your life easier, furthermore, ENERLITES have so many colors to choose from. BUT ENERLITES receptacle isn't that good. Therefore, buy receptacle from ELEGRP, but for wallplates, go for ENERLITES. ELEGRP wallplates are very difficult to open. Most of the times, you end up breaking them.",
+        "date": "Reviewed in the United States on November 30, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Cheap but solid residential",
+        "userName": "Darky010",
+        "numberOfHelpful": 3,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RNQPTF81WDOVT",
+        "text": "Buen artículo",
+        "date": "Reviewed in the United States on November 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Rápido",
+        "userName": "Tomás",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R11KCR5TXV9JJO",
+        "text": "They work like they should, easy to install in my electrically stupid home. Idk who install the electrical in my home but I home he quit his profession because it’s wired funny…but even with that issue, these worked great!",
+        "date": "Reviewed in the United States on September 27, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switch switch",
+        "userName": "Arlene",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B098XB2BQ7",
+        "productTitle": "ELEGRP 4 Way Decorative Light Switch, 15Amp, 120-277 Volt, AC Decorator Rocker Paddle Wall Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 20,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 288,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1B1L5A7B7HV57",
+        "text": "4-way switch is the most convenient switch of all. It can be used as single pole, 3 way, or 4 way switch. The only down side of this particular brand is that it makes a loud soud when switch. Otherwise, it would be a 5 star product.",
+        "date": "Reviewed in the United States on July 24, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "almost perfect",
+        "userName": "Dzu Nguyen",
+        "numberOfHelpful": 0,
+        "variationId": "B098XB2BQ7",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Decorator Light Switch",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 20,
+    "pages_scraped": 2,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

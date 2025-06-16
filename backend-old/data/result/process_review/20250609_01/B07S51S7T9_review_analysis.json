@@ -1,0 +1,271 @@
+{
+  "product_title": "SONOFF Smart Light Switch，2.4GHz WiFi Touch Smart Wall Switch for Lights, Works with Alexa and Google Home, RF433 Remote Interruptor Inteligente, Neutral Wire Required, 1 Gang 1 Way TX T3 Black",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 18,
+  "review_analysis": {
+    "phy": {
+      "design": {
+        "A@attractive visual appearance": {
+          "+": [
+            0,
+            6,
+            10,
+            13,
+            14,
+            15,
+            17
+          ]
+        }
+      },
+      "wiring": {
+        "B@requires neutral wire": {
+          "-": [
+            3
+          ]
+        },
+        "C@lacks ground wire connection": {
+          "-": [
+            5
+          ]
+        },
+        "D@requires pigtail wires from previous light": {
+          "-": [
+            0
+          ]
+        },
+        "E@has confusing input and output for live wire": {
+          "-": [
+            5
+          ]
+        },
+        "F@requires ground wire": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "color": {
+        "G@black color option": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "center_light": {
+        "H@blue center light indicator": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "manual_switch": {
+        "I@physical switch button": {
+          "-": [
+            12
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@fails to connect to Alexa": {
+          "-": {
+            "?": [
+              0,
+              1
+            ]
+          }
+        },
+        "b@fails to connect to router": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@app cannot find device": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@works with Alexa integration": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "e@works consistently for 8 months": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "f@sensor fails after one week": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@center blue light never lights up": {
+          "-": {
+            "H": [
+              11
+            ]
+          }
+        },
+        "h@manual activation requires multiple attempts": {
+          "-": {
+            "I": [
+              12
+            ]
+          }
+        },
+        "i@functions perfectly": {
+          "+": {
+            "?": [
+              7,
+              15
+            ]
+          }
+        }
+      },
+      "installation": {
+        "j@easy to install": {
+          "+": {
+            "?": [
+              7,
+              13,
+              17
+            ]
+          }
+        },
+        "k@easy to configure": {
+          "+": {
+            "?": [
+              7,
+              17
+            ]
+          }
+        },
+        "l@cannot be wired due to missing ground connection": {
+          "-": {
+            "C": [
+              5
+            ]
+          }
+        }
+      },
+      "privacy": {
+        "m@requires invasive app permissions": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "n@stores data in China": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "subscription": {
+        "o@requires annual subscription for IFTTT": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "documentation": {
+        "p@instructions are in Chinese": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_automation": {
+        "+": {
+          "d": [
+            15
+          ]
+        },
+        "-": {
+          "a": [
+            0,
+            1
+          ],
+          "o": [
+            8
+          ]
+        }
+      },
+      "light_control": {
+        "+": {
+          "j": [
+            13
+          ],
+          "i": [
+            7,
+            15
+          ]
+        },
+        "-": {
+          "f": [
+            9
+          ],
+          "g": [
+            11
+          ],
+          "h": [
+            12
+          ]
+        }
+      },
+      "wall_switch_replacement": {
+        "+": {
+          "G": [
+            8
+          ]
+        },
+        "-": {
+          "B": [
+            3
+          ],
+          "l": [
+            5
+          ]
+        }
+      },
+      "IFTTT_automation": {
+        "-": {
+          "o": [
+            8
+          ]
+        }
+      },
+      "multiple_room_installation": {
+        "+": {
+          "?": [
+            14
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:18.822866"
+}

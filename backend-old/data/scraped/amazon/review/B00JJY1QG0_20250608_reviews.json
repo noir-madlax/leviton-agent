@@ -1,0 +1,2540 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:52:05.635740",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B00JJY1QG0",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B00JJY1QG0",
+    "title": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+    "brand": "Lutron",
+    "model_number": NaN,
+    "price_usd": 52.99,
+    "rating": 4.8,
+    "reviews_count": 3023.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Plug-In Portable Dimmer Controls",
+    "product_url": "https://www.amazon.com/dp/B00JJY1QG0"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3RK3XE9X42I5M",
+        "text": "90% of my house is outfitted with lutron caseta light switches and motion detectors. App is easy to use (also works with alexa and others). Slowing getting the rest of my house outfitted with Lutron Caseta switches! Their customer service is fantastic as well! Highly recommend!",
+        "date": "Reviewed in the United States on May 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love Lutron Caseta!",
+        "userName": "AG",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RSWTHGJYNYOIB",
+        "text": "Works great with our existing Lutron and Alexa infrastructure. Connected and using the dimmer within minutes. Although not recommended for fans, this dimmer works perfect on our pedestal fan in our master bedroom, with the PICO remote on my wife's nightstand.",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quick Connection and Successful Fan Integration",
+        "userName": "Chief Charlie",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RUUP2L0R11JEB",
+        "text": "I wish Lutron made something not so expensive for this but it works well. Used it to control the end table lamps in my TV room with a Pico on a stand on the coffee table. I put the device into non-dimming mode since the Ikea lamps have custom non-dimming bulbs and used a simple on/off Pico. You have to find the Lutron “advanced instructions” online to learn how to do that. So I’m wasting the dimmer capability, hence wishing Lutron had a cheaper device. But still, this is a useful device",
+        "date": "Reviewed in the United States on March 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "The right solution for a Lutron household",
+        "userName": "Handy Bob",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R19EABC2NKRR6",
+        "text": "Lutron switches and dimmers are the best. Very reliable. I love that they work with the Lutron hub for wireless control over WiFi. I hooked this up to some LED garage shop lights to turn them on and off. I also have one for the lamp next to my bed which has a 200W LED bulb that I can dim and turn off and on with my phone or the Lutron remote while I’m in bed. I use Lutron dimmer switches throughout my home. Started using them in my original 3-story townhome so I wouldn’t have to run up and down stairs to turn off lights that I’d forgotten to turn off before going to bed! Saved my knees. I also use Lutron’s geo fencing to automatically turn off lights when I leave home and to turn them on when I return.",
+        "date": "Reviewed in the United States on March 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "Techie",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1HH1TIAVTOTB0",
+        "text": "This is a high quality lamp remote! We have installed them on all of our lamps not that we have young children in the house. Allows me to quickly and easily set the appropriate light level for feeding or sleeping. I recommend this as a gift for expectant parents as it is so nice to have the the nursery lamp on a dimmer. This item feels like it is quality, not cheap junk that is going to start an electrical fire and burn your house down. I also recommend go ahead and get the remote stand.",
+        "date": "Reviewed in the United States on December 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "The quality is there!",
+        "userName": "B",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R32ZXICOA6GSH8",
+        "text": "Works as advertised but you don’t have advanced options like the regular sit he so you can’t trim the light. In my case it will not completely shut off.",
+        "date": "Reviewed in the United States on December 23, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works but…you don’t have advance options",
+        "userName": "Jordi Munoz",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2BPSO5ZEITQ2M",
+        "text": "I had these products in my smart home ecosystem for years. I never had an issue with Lutron stuff. Ever. They work and they integrate flawlessly with SmartThings, HomeKit, Alexa, etc. I learned many lessons dealing with smart home devices that are constantly having one issue or another. But not this stuff.",
+        "date": "Reviewed in the United States on December 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Consistently reliable",
+        "userName": "spacetimeflux",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2BCEFJHG03TDL",
+        "text": "I know Lutron makes great products. Amazon say next day - and now it is 3 day. I’d think there should be some accountability from Amazon.",
+        "date": "Reviewed in the United States on December 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Amazon. Not Lutron",
+        "userName": "Acker",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3QYV3SSWLT1MR",
+        "text": "I have long raves about these wall switches and wall outlets. They more than pay themselves in new construction or remodeling by not needing to have three-way switches installed. The Pico remotes can be programmed to control multiple devices. And multiple Picos can control a single device. That said, when the wall outlets are powered off, they still leak a tiny bit of electricity. This is not a problem for major brands like Phillips, which get warmer as you dim them, but for several foyers I have 1W dimmable LEDs which provide perfect illumination in these areas. I installed these wall outlets and thought these small round LED bulbs were from the same manufacture but they are not. One bulb turns off completely. The other stays on like a tiny nightlife. I swapped them out both plug in outlets leak a bit of power to this particle bulb. As there is no flickering, I like this unintended nightlight function, and the rest of these outlets I previously ordered turn the larger wattage of Philips LEDs completely off, thus much of the issue is that this one brand of 1W LED bulb is hypersensitive to the tiny leak of current that still flows when the plug-in outlet is turned off. Again, I highly recommend this product and only experienced this issue from all these dozen plus outlets in two homes with one brand of a 1W LED.",
+        "date": "Reviewed in the United States on October 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Must Haves - But Careful with Bulbs",
+        "userName": "Moody, Maine",
+        "numberOfHelpful": 2,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1RGECEX2MC21P",
+        "text": "I think Lutron products are great. I have Caseta Products throughout my home. This, however, was a failure at first, until I tried many bulbs to find one that would dim less than 50% brightness. I purchased this to replace my manual dimmer switch and to have HomeKit control. This just does not operate as good as the actual wall switches, but it gets the job done. What I had to use is a Feit 100w vintage LED bulb which lets me dim pretty much down to a 5% brightness level. Any other dimmable LED bulb with a lower wattage just didn’t work right or flickered.",
+        "date": "Reviewed in the United States on July 26, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Dimmable only with the right bulbs…",
+        "userName": "B. Melchiorre",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2WP6RN1NI5IUA",
+        "text": "I've slowly converted my house into a smart home with remotes and Lutron works with Alexa. It's so convenient. Can't say enough good things about Caseta and it works with your cell phone so if you want to set it to a schedule you can or over-ride with the remote in a hard to get area like behind a sofa. Perfect.",
+        "date": "Reviewed in the United States on July 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love Caseta",
+        "userName": "D. Scott Tjaden",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R39PBUO2Z59DK2",
+        "text": "This is another Lutron Caseta outlet plug dimmer I've bought out of five. Plus we have Lutron Caseta fan, ceiling light, exterior light controls all over the house. They have not once failed in the five years since we bought our starter hub and lights- we now control about 27 devices. We also have the controls/hub pointing to a designated 2.4 Ghz Internet of Things (IoT) SSID we setup on our NetGear WiFi router. Lutron does it right. Period.",
+        "date": "Reviewed in the United States on June 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Flawless performance for years now",
+        "userName": "Dan N.",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RCQGVVR345WD4",
+        "text": "Almost all our lights are on Lutron dimmers and this helps put table and floor lamps on the same system. All these lights can be controlled with an app from anywhere with phone or Wi-Fi access.",
+        "date": "Reviewed in the United States on June 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good addition to our Lutron system",
+        "userName": "Vikas M Gore",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RIEBFPD4RTRLV",
+        "text": "The requirement of a Lutron Smart Hub is disclosed but buried deeply in the product description. Without it, smartphone control and voice control are not possible. You think Apple or Alexa or other such home controllers will be enough. They are not. You can't connect directly. You have to buy, install, and go through the Lutron Smart Hub.",
+        "date": "Reviewed in the United States on May 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "HIDDEN EXPENSE: $80 SMART HUB REQUIRED",
+        "userName": "Richard",
+        "numberOfHelpful": 2,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1PE3UKJUUACQ8",
+        "text": "These are great. I spent years buying less expensive smart switches and plugs...but finally took my own professional advice, spent the money and switched to Lutron's Casseta system throughout the house. I have a pico switch at our front door with \"All lights on\" and \"All lights off\" function. I know Lutron makes the best control products available from my line of work, but now I really understand - it is super user friendly and fast to install and program. There are a few bugs that I'm working out but, the best consumer-grade system by far. Now that everything is dimmed and controlled, I can concentrate on the lighting design of my house without software distraction. Works great with Google home so far.",
+        "date": "Reviewed in the United States on May 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "From an Expert Lighting Designer",
+        "userName": "Sara",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RETI1AFQOM8QO",
+        "text": "Finally something that works as it should!",
+        "date": "Reviewed in the United States on April 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "Lexi",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RZ8X5XI5WXLKP",
+        "text": "Great dimmer, from a name brand so probably safer than others.",
+        "date": "Reviewed in the United States on March 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "perfect",
+        "userName": "Amaz0n Cust0mer",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2JYOW0PGQ0UD3",
+        "text": "Set up and connection were easy but the outlet didn't even last 8 months. The pico remote works and tries communicating with the outlet but the outlet has no output power anymore. I've emailed Lutron to try to get some help but have never received a response.",
+        "date": "Reviewed in the United States on March 15, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didnt even last 8 months",
+        "userName": "ben",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RGX4DOK3Z5JHB",
+        "text": "Got a few of these to avoid invasive electrical work and sheet rock repairs and I am very happy",
+        "date": "Reviewed in the United States on March 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great alternative",
+        "userName": "alvaro ordonez",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1WEO2F2P0KQ3B",
+        "text": "Love lutron, but this should be $20. Still recommend it though.",
+        "date": "Reviewed in the United States on February 29, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good overpriced product",
+        "userName": "Mark",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1ZLXGB5MBUOOO",
+        "text": "I no longer have to run upstairs to turn the light off 😁… very responsive and no issues staying connected.",
+        "date": "Reviewed in the United States on January 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it!",
+        "userName": "Love this hat!!!",
+        "numberOfHelpful": 2,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61KbtSQH0kL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2Q3BOPI2EMIXP",
+        "text": "Works well, nice and simple. Like an on/off switch should be... I was able to program a schedule easily via the Lutron app. If this were a little cheaper, there would be a good case for replacing all the plug-in timers in the house with these.",
+        "date": "Reviewed in the United States on January 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy setup, great remote control",
+        "userName": "Julia",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R12TLIQ8AE9A7Y",
+        "text": "Lutron is probably one of the most stable automation products ever",
+        "date": "Reviewed in the United States on December 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very stable",
+        "userName": "Peter M.",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2JI26VBEMQPXD",
+        "text": "Ease installation and the connectivity it’s awesome, the remote control it’s so elegant .caseta and Alexa love each others",
+        "date": "Reviewed in the United States on November 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Beautiful and convenient",
+        "userName": "Ed",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RMVXCHNCOG0J0",
+        "text": "Muy recomendable",
+        "date": "Reviewed in the United States on November 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Muy buena calidad",
+        "userName": "Alberto",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R23TCMBDXVV4TG",
+        "text": "Perfect Product For My Needs",
+        "date": "Reviewed in the United States on October 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Product For My Needs",
+        "userName": "Bryan Johnson",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2IQ61XEQ2WCP7",
+        "text": "Very easy and intuitive to set up. I also added a second Pico control for my floor lamp at another location to make it even more convenient. The floor lamp has a foot switch that's hard to access, so this was a perfect solution. Dimming works great.",
+        "date": "Reviewed in the United States on September 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great solution for floor lamp control from a wall switch",
+        "userName": "JustLooking",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71VekQ0F-xL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3096N4XVYXPGV",
+        "text": "Make sure you get the additional pieces to add to the switch so you can make it look like it belongs on the wall and that just stuck there",
+        "date": "Reviewed in the United States on August 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Ease of installation",
+        "userName": "Ross Carley",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2PIY92AX09L8U",
+        "text": "The Lutron Caseta Single-Pole/3-Way Smart Lighting Lamp Dimmer and Remote Kit has become an essential part of my smart home lighting setup. This kit offers a hassle-free and efficient way to control the lighting of my lamps, creating a cozy and comfortable ambiance in any room. Setting up the smart lamp dimmer was a breeze. The kit includes clear instructions, and I was able to install the dimmer in just a few minutes without any special tools. The compatibility with various bulb types is impressive. Whether I'm using dimmable LED, incandescent, or halogen bulbs, the Lutron Caseta Smart Lamp Dimmer provides smooth and flicker-free dimming performance. The included Pico remote control is a game-changer. It allows me to control the lamp's brightness from anywhere in the room, eliminating the need to get up and manually adjust the dimmer. The remote's sleek and ergonomic design makes it comfortable to hold. The smart lamp dimmer integrates seamlessly with my existing smart home ecosystem. I can use voice commands through Amazon Alexa or Google Assistant to adjust the lamp's brightness, creating a hands-free lighting experience. The \"smart away\" feature is a thoughtful addition. It automatically turns the lamp on and off randomly when I'm away from home, giving the impression that someone is present and enhancing security. The lamp dimmer's ability to create customizable schedules is fantastic. I can set specific brightness levels for different times of the day, ensuring the perfect lighting atmosphere for every moment. The smart lamp dimmer is a single-pole/3-way switch, providing flexibility for different wiring configurations and allowing control from multiple locations. The Lutron app is user-friendly and intuitive, allowing me to control the lamp dimmer and other Lutron devices with ease from my smartphone. In conclusion, the Lutron Caseta Single-Pole/3-Way Smart Lighting Lamp Dimmer and Remote Kit is a fantastic addition to any smart home. Its easy installation, seamless integration, and versatile control options make it a top-notch smart lighting solution. If you want to elevate your lamp lighting experience and enjoy the convenience of remote control and voice commands, I highly recommend this kit. Embrace the comfort and flexibility it brings to your lighting setup and take full control over the ambiance of your home with the Lutron Caseta Smart Lamp Dimmer and Remote Kit.",
+        "date": "Reviewed in the United States on August 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Lamp Lighting Dimmer",
+        "userName": "Real Deal",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RDFCNQRATT1S8",
+        "text": "Used this in conjunction with a dimmable 12v transformer and COB tape under my cabinets. Replacing some weird color temp/tinted pucks. Works perfectly and integrates with my other Caseta stuff seamlessly which is not a surprise. Responds quickly and reliably.",
+        "date": "Reviewed in the United States on June 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Made my under cabinet lights start!",
+        "userName": "M. Severson",
+        "numberOfHelpful": 2,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RQGN8XO1584TV",
+        "text": "Mechanical timers for lamps are no match. The Lutron unit allows for precise on/off multiple times each day. The level of intensity can also be preset. Each day can have its own unique schedule. With the included remote switch you can easily override the presets. This unit overcomes the limitations of mechanical timers that need to be changed after power interruptions. There is no mechanical \"wheel\" that can be \"played\" with by children or adjusted by well meaning visitors.",
+        "date": "Reviewed in the United States on May 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best Lamp Timer I have used",
+        "userName": "Mr. Carl J. Pacifico",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R20XN9NDYURKF0",
+        "text": "The whole cassetta line is the best option for led lights and home automation",
+        "date": "Reviewed in the United States on April 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "The best",
+        "userName": "Dan L. Sloan",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1BB4QO19J0GSG",
+        "text": "I have owned two similar Luton's over 10 years. Raised in the 50's through the 70s everything in our home was GE new. Lutron is the natural expansion of the engineering. Perfect one.",
+        "date": "Reviewed in the United States on April 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just the best..",
+        "userName": "World of Dogs",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1S9XSITD8WN8I",
+        "text": "Nice to be able to add an additional switch that works with Alexa and no cutting walls or running cables. Great product, easy install, good functionality.",
+        "date": "Reviewed in the United States on March 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Switch",
+        "userName": "Magnetnorth",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RZXUZGVBI7004",
+        "text": "The Lutron lighting control system is good. I just needed another dimmer unit and it integrates right in no problems. The app is also good and they keep it upgraded regularly.",
+        "date": "Reviewed in the United States on March 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron system is good",
+        "userName": "Mike",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2I1U7E72ODPGZ",
+        "text": "Love Lutron Caseta, easy to install and esy to use.",
+        "date": "Reviewed in the United States on January 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Carlos Garcia",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R5NJRU8QAJGXY",
+        "text": "I bought this device specifically because the very first picture shows the Apple HomeKit logo. The box I received in the mail (same model number) does not include the HomeKit logo and there is no way to use this device by itself with HomeKit. I will be returning this purchase.",
+        "date": "Reviewed in the United States on January 8, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Manufacturer Lies — No HomeKit Support",
+        "userName": "Matt Headlee",
+        "numberOfHelpful": 3,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3FWZYRTC41S09",
+        "text": "Have mobility (fall risk) issues and have these through out our home. Helps tremendously to have lights on BEFORE you have to go to area/room and easy to install/use (and I have carpal tunnel) (even around corners) AND one tech thanked me (I told him I was disabled/in Q) for letting him know my situation. He felt good that he could help me in my situation and that showed me how dedicated and caring Lutrons technical staff is! On fixed income and the price was great, too (insurance should cover it). Bravo.",
+        "date": "Reviewed in the United States on January 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "IF mobility issues, this helps a lot and reps dedicated!",
+        "userName": "Chris",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1P75GTKCD15QP",
+        "text": "Can't say enough about how much I love the Lutron Caseta system. It is incredibly reliable - we have 60+ devices now running. Works perfectly with Apple HomeKit.",
+        "date": "Reviewed in the United States on January 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love Caseta",
+        "userName": "Phinman",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R21GCM734F7IDA",
+        "text": "I have used this exact kit in 3 different bedrooms to add the functionality of a switched outlet at the entrance to our bedrooms. This works really well, and is super-simple to install. I love the HomeKit integration, which is achieved with a separately purchased hub. HomeKit requests are fast and reliable with this.",
+        "date": "Reviewed in the United States on December 12, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easily added the function of a switched outlet at bedroom doorway!",
+        "userName": "AmazonUser",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1KPT9NG7503LV",
+        "text": "The Lutron Casada switches are excellent. The integration was their app and Alexa works perfect. We have been very happy using it in our home. Because of the price we are slowly transitioning one room at a time. We also have the bridge and the coverage seems to be very good. Because we have a larger piece of property we split our Internet into two networks so that we could put a separate bridge out in the barn to control those lights and have one in the house. I think that is a huge benefit of the Lutron app being able to have it operate in two different locations on two different networks names. I forgot to mention you can only need to use one app and you can switch between the two. It takes a while to get through to customer service but they are extremely helpful when you talk to them.",
+        "date": "Reviewed in the United States on December 11, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Don P",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RXWESJBD5ZT12",
+        "text": "I'm pleased with how easy it was to connect it to my wi-fi. I'm pleased with how accurate and consistent it's. The Pico switch allows me to have control of lamps from my bed. I use one Pico switch to control two lamp in my room. I have the controller turn lights on and off and presets times. You need to read the instructions they are easy follow (for me anyway). I'm pleased with the product.",
+        "date": "Reviewed in the United States on November 12, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "I'm pleased",
+        "userName": "Tom",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R10GF1T96WBR2B",
+        "text": "Love all my Lutron Caseta devices. Integrate flawlessly with my home automation system and Lutron customer service is amazing.",
+        "date": "Reviewed in the United States on November 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love all my Lutron Caseta devices.",
+        "userName": "J. Ricci",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R391U0WGATIH34",
+        "text": "As a retired electronics engineer I appreciate the technology that went into these simple home automation devices. They look good, and work well, BUT, they have one fatal flaw. They do not seem to have any protection against short circuits! A fast tripping breaker, even a fast blow fuse would be a simple thing to add. While passing out Halloween candy to kids, one of their costumes tipped over an incandescent walkway light, and caused the two poles of the filament to touch. POP goes the $50 Lutron switch, taken out by a shorted $0.50 bulb! Adding short circuit protection would cost very little to Lutron, and would make this product bulletproof. Consider doing that Lutron, as I spend another $50 for a replacement. The replacement will connect to AC through a fast acting surge protector. That might save me another $50 should something like this happen again. BUT, better to fix the cause than address the symptom, right, Lutron.",
+        "date": "Reviewed in the United States on November 1, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "No Short Circuit Protection",
+        "userName": "Eric Abbiss",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R27UXQU348JZVT",
+        "text": "I started using Lutron back in 2015. The application is perfect for organizing and programming the switches to work with each other in a multitude of ways. The ability to add switches wherever I need without adding wires is fantastic. Also there is a sensor you can buy that automatically turn lights on and off, you can also have the light auto turn on at any level of light. Handy for late night trip to the restroom. Now in 2022 the world has changed from indecent lightbulbs to LED lights. Unfortunately Lutron has not updated their hardware to work with LEDs making them not only useless but annoying as LEDs burnout much sooner than they should, blink insensibly, or will not turn off at all (just blinks). Contacting Lutron they act like that is not true - they have a list of lights that work - a list? First sign of a company that has stopped updating their hardware. Do not buy. Modernizing your lights with smart switches is very expensive and needs to work with todays LEDs. With Lutron you are investing in obsolete hardware. Regards, I’m a 40 year research and development engineer from a national laboratory - retired",
+        "date": "Reviewed in the United States on October 26, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Does not work with most LED lights - very disappointing",
+        "userName": "EndoUSA",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R28O9KNRU8W6P9",
+        "text": "Easy to install",
+        "date": "Reviewed in the United States on October 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Kenneth LaBrie",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R19C4OG7CNZXU9",
+        "text": "The functionality of this plug was just what I wanted. The loud electrical whine that lamps emitted when plugged into it was not. I tried multiple lamps and multiple wall outlets before deciding that I just can't live with that level of disruption to the quiet.",
+        "date": "Reviewed in the United States on September 30, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "60 Hz Whine",
+        "userName": "Michael E.",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1DDRCO43FM36K",
+        "text": "We have most of our lights on remotes, and all of our light switches have dimmers, but this was the first remote we found that included a dimmer. It was easy to pair the remote to the light and we LOVE the favorite setting button in the center of the remote. When you turn off the light there is a small delay to give you time to exit before it goes dark. The Lutron Caseta plug in lamp remote worked so well we bought another. Highly recommend it.",
+        "date": "Reviewed in the United States on September 7, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to setup and love a remote with a dimmer!",
+        "userName": "Terry wagner",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3P0AO53F2U3JL",
+        "text": "I installed two wall sconces on either side of a TV in my master bedroom, so being able to control the brightness of both lights is critical for functionality of the lights in the room, and this remote made it all possible. I use the remote everyday to turn the lights on either at full brightness for the whole room or the designated dimmer light ideal for watching TV. Programming the dimmer level was super easy, and now I just have to press the middle button for it to turn on at that saved level. This remote is absolutely wonderful, and I could not recommend it enough for controlling lights plugged into an outlet.",
+        "date": "Reviewed in the United States on September 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Use this everyday",
+        "userName": "RBG",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00JJY1QG0",
+        "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 338,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3024,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 88
+          },
+          "fourStar": {
+            "percentage": 7
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2HDJQ3JTUE556",
+        "text": "Big caseta fans! I'm using this product for low wattage outdoor lighting that has a plug in my basement. We used it to replace a brilliant plug that was first installed with the lights, but kept disconnecting. This product works perfect!",
+        "date": "Reviewed in the United States on September 1, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great home improvement product!",
+        "userName": "Yard play",
+        "numberOfHelpful": 0,
+        "variationId": "B00JJY1QG0",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Lamp Dimmer and Remote Kit"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

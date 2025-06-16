@@ -1,0 +1,34 @@
+{
+  "product_title": "3 Way Decorator Paddle Light Switch, Electrical Rocker Light Switch, Single Pole or Three Way, 3 Wire, 15A 120V/277V, UL Listed, White (20 Pack)",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 1,
+  "review_analysis": {
+    "phy": {
+      "push-in terminal": {
+        "A@accepts 14 gauge wire only": {
+          "-": [
+            0
+          ]
+        },
+        "B@too small for 12 gauge wire": {
+          "-": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "wire compatibility": {
+        "a@limited to 14 gauge wire, cannot accommodate 12 gauge": {
+          "-": {
+            "A,B": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {}
+  },
+  "processed_date": "2025-06-09T01:08:06.176178"
+}

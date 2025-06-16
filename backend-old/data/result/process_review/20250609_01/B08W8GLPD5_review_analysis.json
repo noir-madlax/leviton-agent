@@ -1,0 +1,384 @@
+{
+  "product_title": "Philips Hue Smart Dimmer Switch with Remote, White - 1 Pack - Turns Hue Lights On, Off, Dims or Brightens - Requires Hue Bridge - Easy, No-Wire Installation",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "Material": {
+        "A@Premium material quality": {
+          "+": [
+            3
+          ]
+        },
+        "B@Material feels low quality": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "Design": {
+        "C@Sleek appearance": {
+          "+": [
+            20
+          ]
+        },
+        "D@Rounded corners": {
+          "+": [
+            32
+          ]
+        },
+        "E@Lightweight": {
+          "+": [
+            31
+          ]
+        }
+      },
+      "Buttons": {
+        "F@Face buttons upside down": {
+          "-": [
+            7
+          ]
+        },
+        "G@Button touch could be more delicate": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "Battery": {
+        "H@Battery powered": {
+          "+": [
+            20
+          ]
+        },
+        "I@Batteries dead on arrival": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "Magnet": {
+        "J@Magnet is terrible": {
+          "-": [
+            9
+          ]
+        },
+        "K@No magnets, only adhesive strips": {
+          "-": [
+            32
+          ]
+        },
+        "L@Magnetizes to wall holder": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "Base Plate": {
+        "M@Base plate slightly larger than V1": {
+          "+": [
+            32
+          ]
+        },
+        "N@Forced to use ugly oversized plate": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "Back Cover": {
+        "O@Difficult to remove back cover": {
+          "-": [
+            24
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Responsiveness": {
+        "a@Very responsive": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "b@Flawless responsiveness": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "c@Fast button response": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "d@Sometimes need to double press button": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "e@Frequent latency from button click to action": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "f@Works the same after a year": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "g@Works reliably": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "h@Stopped working consistently after few weeks": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "i@Stopped working entirely after few months": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "j@Works flawlessly": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "Battery Life": {
+        "k@Battery does not last more than few weeks": {
+          "-": {
+            "H": [
+              2
+            ]
+          }
+        },
+        "l@Battery lasts a long time": {
+          "+": {
+            "H": [
+              43
+            ]
+          }
+        },
+        "m@Quickly dying battery even after changing": {
+          "-": {
+            "H": [
+              24
+            ]
+          }
+        }
+      },
+      "Connectivity": {
+        "n@Synced easily": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "o@No issues connecting": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "p@Easy to pair": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "q@Unable to pair with hue bulbs": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "r@Easily connected to all Hue lights": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "Magnetic Performance": {
+        "s@Remote keeps getting bumped and knocked out": {
+          "-": {
+            "J": [
+              9
+            ]
+          }
+        },
+        "t@Repels magnet causing it to turn at angle": {
+          "-": {
+            "K": [
+              24
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Smart Home Control": {
+        "+": {
+          "f": [
+            0
+          ],
+          "?": [
+            27
+          ]
+        }
+      },
+      "Light Control Without Phone": {
+        "+": {
+          "?": [
+            5,
+            8,
+            37,
+            41
+          ]
+        }
+      },
+      "Guest Usage": {
+        "+": {
+          "?": [
+            11,
+            34,
+            39
+          ]
+        }
+      },
+      "Scene Control": {
+        "+": {
+          "?": [
+            6,
+            14,
+            41
+          ]
+        }
+      },
+      "Brightness Control": {
+        "+": {
+          "?": [
+            14,
+            15,
+            18,
+            20
+          ]
+        }
+      },
+      "Multiple Light Control": {
+        "+": {
+          "?": [
+            8,
+            20,
+            34
+          ]
+        }
+      },
+      "Wall Mounting": {
+        "+": {
+          "?": [
+            8,
+            35,
+            36,
+            39,
+            41
+          ]
+        }
+      },
+      "Portable Remote Usage": {
+        "+": {
+          "L": [
+            18,
+            39,
+            40,
+            41,
+            42
+          ]
+        }
+      },
+      "Bedside Control": {
+        "+": {
+          "?": [
+            37,
+            47
+          ]
+        }
+      },
+      "Alexa Integration": {
+        "+": {
+          "?": [
+            23,
+            36
+          ]
+        }
+      },
+      "Home Assistant Integration": {
+        "+": {
+          "?": [
+            5,
+            39
+          ]
+        }
+      },
+      "HomeKit Integration": {
+        "+": {
+          "?": [
+            46
+          ]
+        }
+      },
+      "Bluetooth Control": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "Room Level Control": {
+        "+": {
+          "?": [
+            45
+          ]
+        }
+      },
+      "Whole Home Control": {
+        "+": {
+          "?": [
+            45
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:30.133429"
+}

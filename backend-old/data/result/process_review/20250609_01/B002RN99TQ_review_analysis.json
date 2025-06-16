@@ -1,0 +1,230 @@
+{
+  "product_title": "Leviton 5601-2 15 Amp, 120/277 Volt, Decora Rocker Single-Pole AC Quiet Switch, Residential Grade, Grounding, Brown",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 18,
+  "review_analysis": {
+    "phy": {
+      "ground_screw": {
+        "A@hard to access": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "screw_connectors": {
+        "B@secure and reliable": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "design": {
+        "C@better designed compared to builders grade flip switches": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "color": {
+        "D@brown color available": {
+          "+": [
+            13,
+            14,
+            16,
+            17
+          ]
+        },
+        "E@brown color hard to find": {
+          "+": [
+            17
+          ]
+        }
+      },
+      "appearance": {
+        "F@looks great with bronze fixtures": {
+          "+": [
+            7
+          ]
+        },
+        "G@goes well with oil rubbed bronze fixtures and face plates": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "construction": {
+        "H@well constructed": {
+          "+": [
+            16
+          ]
+        },
+        "I@heavy duty and well made": {
+          "+": [
+            11
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@work as expected": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@work well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@didn't work": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@works well": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "e@reliable product": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "f@screw connectors don't break when tightening": {
+          "+": {
+            "B": [
+              15
+            ]
+          }
+        }
+      },
+      "installation": {
+        "g@very easy to install": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "h@easy to install": {
+          "+": {
+            "?": [
+              7,
+              14
+            ]
+          }
+        },
+        "i@easy installation": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "j@easy to install": {
+          "+": {
+            "H": [
+              16
+            ]
+          }
+        }
+      },
+      "quality": {
+        "k@quality not there": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "l@high quality": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "m@good quality": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "n@leviton quality": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "cabinet_installation": {
+        "+": {
+          "?": [
+            9
+          ]
+        }
+      },
+      "kitchen_remodel": {
+        "+": {
+          "h": [
+            14
+          ]
+        }
+      },
+      "master_bath_remodel": {
+        "+": {
+          "j": [
+            16
+          ]
+        }
+      },
+      "matching_bronze_fixtures": {
+        "+": {
+          "F": [
+            7
+          ]
+        }
+      },
+      "matching_oil_rubbed_bronze_switch_plates": {
+        "+": {
+          "D": [
+            13
+          ]
+        }
+      },
+      "replacing_builders_grade_switches": {
+        "+": {
+          "C": [
+            16
+          ]
+        }
+      },
+      "backsplash_switches_replacement": {
+        "+": {
+          "D": [
+            14
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:53.128886"
+}

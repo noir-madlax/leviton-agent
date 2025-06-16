@@ -1,0 +1,411 @@
+{
+  "product_title": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch Single-Pole, White, L5611-2W",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "LED": {
+        "A@LED produces white light": {
+          "+": [
+            28,
+            31,
+            36
+          ]
+        },
+        "B@LED produces cool white light": {
+          "+": [
+            26
+          ]
+        },
+        "C@LED produces blueish-white light": {
+          "-": [
+            44
+          ]
+        },
+        "D@LED produces harsh white light": {
+          "-": [
+            28
+          ]
+        },
+        "E@LED has pulsating light": {
+          "-": [
+            8
+          ]
+        },
+        "F@LED is faulty": {
+          "-": [
+            29
+          ]
+        }
+      },
+      "Paddle": {
+        "G@Paddle allows light to be seen through it": {
+          "+": [
+            3
+          ]
+        },
+        "H@Paddle has no gap at the top": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "Frame": {
+        "I@Frame has no gap between paddle and frame": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "Wire Contacts": {
+        "J@Wire contacts are good": {
+          "+": [
+            44
+          ]
+        }
+      },
+      "Physical Design": {
+        "K@Professional design": {
+          "+": [
+            3
+          ]
+        },
+        "L@Uses minimal space inside electrical box": {
+          "+": [
+            40
+          ]
+        },
+        "M@Looks like any regular switch when lit": {
+          "+": [
+            2,
+            26
+          ]
+        },
+        "N@Looks great": {
+          "+": [
+            2,
+            12,
+            18
+          ]
+        }
+      },
+      "Build Quality": {
+        "O@Well-made construction": {
+          "+": [
+            10,
+            40
+          ]
+        },
+        "P@Nice feel when operated": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "Wiring Requirements": {
+        "Q@Does not require neutral wire": {
+          "+": [
+            26
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Brightness": {
+        "a@Very dim brightness": {
+          "-": {
+            "A": [
+              8,
+              15,
+              22,
+              24,
+              40,
+              48
+            ],
+            "?": [
+              9
+            ]
+          }
+        },
+        "b@Perfect brightness level": {
+          "+": {
+            "A": [
+              10,
+              13,
+              14,
+              23,
+              26,
+              31,
+              32,
+              33,
+              35,
+              43
+            ],
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@Not bright enough": {
+          "-": {
+            "A": [
+              0,
+              15,
+              16,
+              19
+            ],
+            "?": []
+          }
+        },
+        "d@Excellent lighting": {
+          "+": {
+            "A": [
+              12
+            ],
+            "?": []
+          }
+        },
+        "e@Illuminates at full brightness with LED loads": {
+          "+": {
+            "A": [
+              45
+            ],
+            "?": []
+          }
+        },
+        "f@Illuminates dimly with no load": {
+          "+": {
+            "A": [
+              45
+            ],
+            "?": []
+          }
+        },
+        "g@Does not light up without load unless something is plugged in": {
+          "+": {
+            "A": [
+              44
+            ],
+            "?": []
+          }
+        }
+      },
+      "Functionality": {
+        "h@Works perfectly": {
+          "+": {
+            "?": [
+              2,
+              4,
+              13,
+              20,
+              25,
+              27,
+              42,
+              47
+            ]
+          }
+        },
+        "i@Easy installation": {
+          "+": {
+            "L": [
+              40
+            ],
+            "?": [
+              2,
+              14,
+              19,
+              23,
+              26,
+              27
+            ]
+          }
+        },
+        "j@Even lighting within switch": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "k@Multiple connection options": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "l@Draws less current than neon counterparts": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "m@Long-term reliability": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "Visibility": {
+        "n@Easy to find in dark": {
+          "+": {
+            "b": [
+              5,
+              14,
+              23,
+              25,
+              30,
+              32,
+              36,
+              40,
+              41,
+              46
+            ]
+          }
+        },
+        "o@Hard to see": {
+          "-": {
+            "a": [
+              8
+            ],
+            "?": []
+          }
+        }
+      }
+    },
+    "use": {
+      "Garage lighting control": {
+        "+": {
+          "n": [
+            5,
+            25,
+            32
+          ],
+          "?": [
+            0
+          ]
+        }
+      },
+      "Computer desk lighting control": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "Attic lighting control": {
+        "+": {
+          "n": [
+            7
+          ]
+        }
+      },
+      "Basement lighting control": {
+        "-": {
+          "a": [
+            9
+          ]
+        }
+      },
+      "Water closet/bathroom lighting": {
+        "+": {
+          "b": [
+            13,
+            21,
+            30,
+            35,
+            38
+          ],
+          "n": [
+            14
+          ]
+        }
+      },
+      "Ceiling fan control": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "Walk-in closet lighting": {
+        "+": {
+          "b": [
+            26
+          ],
+          "n": [
+            26
+          ]
+        }
+      },
+      "Office lighting control": {
+        "+": {
+          "n": [
+            41
+          ]
+        }
+      },
+      "Outlet control": {
+        "+": {
+          "g": [
+            44
+          ]
+        }
+      },
+      "Backyard lighting control": {
+        "+": {
+          "h": [
+            47
+          ]
+        }
+      },
+      "Hallway lighting control": {
+        "-": {
+          "?": [
+            46
+          ]
+        },
+        "+": {
+          "n": [
+            46
+          ]
+        }
+      },
+      "Replacement for old switches": {
+        "+": {
+          "q": [
+            26
+          ],
+          "?": [
+            24,
+            28,
+            31
+          ]
+        }
+      },
+      "Night light alternative": {
+        "+": {
+          "b": [
+            30,
+            35,
+            38
+          ],
+          "?": []
+        },
+        "-": {
+          "a": [
+            19,
+            40
+          ],
+          "?": []
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:07.698253"
+}

@@ -1,0 +1,384 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:25:39.895265",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0C7J4YMSZ",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 1,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0C7J4YMSZ",
+    "title": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+    "brand": "ZOOZ",
+    "model_number": NaN,
+    "price_usd": 43.95,
+    "rating": 4.4,
+    "reviews_count": 258.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Commercial 0-10V Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0C7J4YMSZ"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C7J4YMSZ",
+        "productTitle": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 7,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 258,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RJN7CHNNXB9Q5",
+        "text": "If you need a 10v dimmer for Zwave home automation this is what you want. If you do not know what a 10v dimmer is then you do not need this. The unit is small and easily fits in a single-gang box with a standard toggle switch. When paring, I was pressing the pair button too slow so if it won't pair then speed up the cadence of the triple press.",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Small 10v Zwave dimmer",
+        "userName": "Hunter C.",
+        "numberOfHelpful": 0,
+        "variationId": "B0C7J4YMSZ",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: ZEN54 0-10 V Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C7J4YMSZ",
+        "productTitle": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 7,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 258,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R38A1X28TOY9BT",
+        "text": "Kinda shocked it worked",
+        "date": "Reviewed in the United States on April 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "As expected",
+        "userName": "Rennie LeRoy",
+        "numberOfHelpful": 0,
+        "variationId": "B0C7J4YMSZ",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: ZEN54 0-10 V Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C7J4YMSZ",
+        "productTitle": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 7,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 258,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2Y53U2DJG18M8",
+        "text": "Unit does provide precise 0-10V control.",
+        "date": "Reviewed in the United States on January 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "Tissue Engineer",
+        "numberOfHelpful": 0,
+        "variationId": "B0C7J4YMSZ",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: ZEN54 0-10 V Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C7J4YMSZ",
+        "productTitle": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 7,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 258,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1CE1TYAVFS5DL",
+        "text": "I’m using several LED wall packs for exterior lighting around my home. Each has a Zen54 to control it. The Zen54 has a relay that cuts power to the device when turning it off. Note that this is for 0-10V dimming, which uses a pair of sites wires to send an analog signal to a fixture to tell it how bright to be. The 0-10V signal does not drive the light source. 0-10V fixtures have FIVE wires: line, neutral, ground, Dim+, and Dim-.",
+        "date": "Reviewed in the United States on November 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for control of wall packs",
+        "userName": "J s",
+        "numberOfHelpful": 0,
+        "variationId": "B0C7J4YMSZ",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: ZEN54 0-10 V Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C7J4YMSZ",
+        "productTitle": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 7,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 258,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RHFSZVRQO56QH",
+        "text": "Buyer beware !! This is a frequently returned item !! This device does not install like a standard dimmer switch. I purchased this device thinking that it would install like a standard dimmer switch, however in order for it to function as a dimmer you have to connect the purple dimmer wire in addition to the red “load” wire. It DOES NOT wire up like a standard dimmer in which you simply connect the positive negative and neutral wires.",
+        "date": "Reviewed in the United States on October 22, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does not install like a standard dimmer switch !",
+        "userName": "Chris M.",
+        "numberOfHelpful": 0,
+        "variationId": "B0C7J4YMSZ",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: ZEN54 0-10 V Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C7J4YMSZ",
+        "productTitle": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 7,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 258,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R30GMHY162WOKS",
+        "text": "Used this in tandem with a Zooz momentary switch and professionally hard-wired LED strip lights using 0-10V dimming for epic garage lighting. Has worked flawlessly after I fixed some issues with my z-wave and home assistant setup unrelated to this device.",
+        "date": "Reviewed in the United States on August 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked great with 0-10V LEDs",
+        "userName": "MazP",
+        "numberOfHelpful": 0,
+        "variationId": "B0C7J4YMSZ",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: ZEN54 0-10 V Dimmer"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C7J4YMSZ",
+        "productTitle": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 7,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 258,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RFH4XFF5G8WNS",
+        "text": "I was able to use these to control some high bay UFO lights through HomeAssistant. My lights are 1-10v dimming which had me concerned at first but these devices have a built in relay to be able to turn them off completely. Pairing was easy and I also installed some Zooz momentary switches to have physical control over them outside of HomeAssistant.",
+        "date": "Reviewed in the United States on January 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly!",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B0C7J4YMSZ",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71hwgGvYnfL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: ZEN54 0-10 V Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 7,
+    "pages_scraped": 1,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

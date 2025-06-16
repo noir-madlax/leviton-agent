@@ -1,0 +1,419 @@
+{
+  "product_title": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 36,
+  "review_analysis": {
+    "phy": {
+      "LED light": {
+        "A@soft glow": {
+          "+": [
+            0
+          ]
+        },
+        "B@white light": {
+          "+": [
+            1,
+            14,
+            26,
+            27
+          ]
+        },
+        "C@very dim and barely visible": {
+          "-": [
+            5,
+            6,
+            7,
+            8,
+            21,
+            22,
+            24,
+            31,
+            33,
+            34
+          ]
+        },
+        "D@bright white LED that hurts eyes": {
+          "-": [
+            32
+          ]
+        },
+        "E@nice subtle illumination": {
+          "+": [
+            27
+          ]
+        },
+        "F@pure white light with nice glow around button": {
+          "+": [
+            26
+          ]
+        },
+        "G@faint glow": {
+          "+": [
+            25,
+            31
+          ]
+        }
+      },
+      "Build quality": {
+        "H@nice build quality": {
+          "+": [
+            17
+          ]
+        },
+        "I@typical Leviton quality": {
+          "+": [
+            13
+          ]
+        },
+        "J@superior to other lighted switches": {
+          "+": [
+            26
+          ]
+        }
+      },
+      "Switch operation": {
+        "K@completely silent": {
+          "+": [
+            33
+          ]
+        }
+      },
+      "Instructions": {
+        "L@printed on inside of box with small lettering and not easy to read": {
+          "-": [
+            16
+          ]
+        },
+        "M@no instructions included": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "Packaging": {
+        "N@box crushed": {
+          "-": [
+            11
+          ]
+        },
+        "O@appears to have been previously used": {
+          "-": [
+            11
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Brightness performance": {
+        "a@too bright for bedrooms": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@perfect for hallways": {
+          "+": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "c@way too bright for sleeping areas": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@not as bright as expected": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@barely visible in dark": {
+          "-": {
+            "C": [
+              5,
+              6,
+              7
+            ]
+          }
+        },
+        "f@nicely lit": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@not bright but easy to see in dark hall": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "h@not bright at all and shouldn't be": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "i@bright enough to easily see from across room": {
+          "+": {
+            "B": [
+              14
+            ]
+          }
+        },
+        "j@not too bright and nice color": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "k@not bright enough to disturb sleep": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "l@extremely low illumination": {
+          "-": {
+            "C": [
+              21
+            ]
+          }
+        },
+        "m@very dim in small room": {
+          "-": {
+            "C": [
+              33
+            ]
+          }
+        }
+      },
+      "Installation performance": {
+        "n@easy to install": {
+          "+": {
+            "?": [
+              9,
+              10,
+              12,
+              13,
+              15,
+              16,
+              25,
+              28
+            ]
+          }
+        },
+        "o@super easy to install": {
+          "+": {
+            "?": [
+              13,
+              25
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "p@works as advertised": {
+          "+": {
+            "?": [
+              0,
+              12
+            ]
+          }
+        },
+        "q@works great": {
+          "+": {
+            "?": [
+              1,
+              15
+            ]
+          }
+        },
+        "r@switch did not work": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "s@does not perform as advertised - lit when off or on": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "t@shines whether switch is ON or OFF": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "u@LED always off with light on, always on when light off": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Power leakage": {
+        "v@delivers small amount of power to LED lights when off": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "w@should work for years if not decades": {
+          "+": {
+            "J": [
+              26
+            ]
+          }
+        },
+        "x@hope light will last longer than last one": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "LED compatibility": {
+        "y@LED compatible": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "z@not compatible with LED bulbs": {
+          "-": {
+            "v": [
+              29
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Hallway lighting": {
+        "+": {
+          "b,h,g": [
+            0,
+            2,
+            3,
+            12,
+            13,
+            16,
+            20,
+            24,
+            29
+          ]
+        }
+      },
+      "Bedroom lighting": {
+        "-": {
+          "a,c": [
+            0,
+            2,
+            3
+          ]
+        }
+      },
+      "Kitchen lighting": {
+        "+": {
+          "k": [
+            2,
+            16
+          ]
+        }
+      },
+      "Bathroom lighting": {
+        "+": {
+          "j": [
+            2,
+            15,
+            20,
+            33
+          ]
+        }
+      },
+      "Stairway lighting": {
+        "+": {
+          "?": [
+            3,
+            20
+          ]
+        }
+      },
+      "Night light functionality": {
+        "+": {
+          "g,k": [
+            2,
+            10,
+            16,
+            20,
+            23,
+            25,
+            34
+          ]
+        },
+        "-": {
+          "e,l": [
+            6,
+            34
+          ]
+        }
+      },
+      "Guest bathroom": {
+        "-": {
+          "m": [
+            33
+          ]
+        }
+      },
+      "3-way switch configuration": {
+        "+": {
+          "f,u": [
+            9,
+            12,
+            34
+          ]
+        }
+      },
+      "Replacement for old switches": {
+        "+": {
+          "q,n": [
+            10,
+            27,
+            30
+          ]
+        }
+      },
+      "DIY installation": {
+        "+": {
+          "n": [
+            16
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:16.743103"
+}

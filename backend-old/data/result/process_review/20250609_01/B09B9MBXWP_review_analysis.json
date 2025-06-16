@@ -1,0 +1,258 @@
+{
+  "product_title": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+  "product_category": "Inline Cord Control Switches",
+  "total_reviews": 22,
+  "review_analysis": {
+    "phy": {
+      "LED light": {
+        "A@Has LED indicator light": {
+          "+": [
+            0,
+            1,
+            5,
+            17,
+            21
+          ]
+        }
+      },
+      "Wire connection": {
+        "B@Has connection hole under screw head for wire insertion": {
+          "+": [
+            0,
+            17,
+            21
+          ]
+        },
+        "C@No wrap-around required for wire connection": {
+          "+": [
+            17,
+            21
+          ]
+        },
+        "D@Uses compression screws to hold wires": {
+          "+": [
+            21
+          ]
+        }
+      },
+      "Physical construction": {
+        "E@Sturdy hardware construction": {
+          "+": [
+            1,
+            13
+          ]
+        },
+        "F@Heavy duty build": {
+          "+": [
+            13
+          ]
+        },
+        "G@Compact size": {
+          "+": [
+            7
+          ]
+        },
+        "H@Sleek appearance": {
+          "+": [
+            6
+          ]
+        },
+        "I@No screw holes in back for mounting": {
+          "-": [
+            3
+          ]
+        },
+        "J@No strain relief feature": {
+          "-": [
+            15
+          ]
+        }
+      },
+      "Wire compatibility": {
+        "K@Fits 16 gauge wire": {
+          "+": [
+            11
+          ]
+        }
+      },
+      "Switch type": {
+        "L@Not roller type switch": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@User and installer friendly": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Easy assembly": {
+          "+": {
+            "E": [
+              1
+            ]
+          }
+        },
+        "c@Easy to install": {
+          "+": {
+            "B": [
+              0
+            ],
+            "?": [
+              5,
+              8,
+              11,
+              16,
+              20,
+              21
+            ]
+          }
+        },
+        "d@Quick installation time": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "e@Requires very small screwdriver": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "f@Works very well": {
+          "+": {
+            "?": [
+              3,
+              8,
+              10,
+              16,
+              17,
+              19
+            ]
+          }
+        },
+        "g@Good on/off feel": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@LED light direction affects behavior": {
+          "+": {
+            "A": [
+              0,
+              5
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "i@Good quality": {
+          "+": {
+            "?": [
+              10,
+              12,
+              14
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Soldering iron control": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "Under cabinet LED lighting": {
+        "+": {
+          "?": [
+            1,
+            2
+          ]
+        }
+      },
+      "Table lamp lighting": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "Fan power control": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "LED light strip power": {
+        "+": {
+          "?": [
+            1,
+            8
+          ]
+        }
+      },
+      "Mini iron without switch": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "Hanging light bulb in closet": {
+        "+": {
+          "A": [
+            5
+          ]
+        }
+      },
+      "Lamp control": {
+        "+": {
+          "?": [
+            10,
+            11,
+            20
+          ]
+        }
+      },
+      "Test board power control": {
+        "+": {
+          "A": [
+            21
+          ]
+        }
+      },
+      "Wall mounting": {
+        "-": {
+          "I": [
+            3
+          ]
+        }
+      },
+      "Tight spot installation": {
+        "+": {
+          "G": [
+            18
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:24.263935"
+}

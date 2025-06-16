@@ -1,0 +1,522 @@
+{
+  "product_title": "ORVIBO Matter Smart Dimmer Switch, Works with Apple Home, Alexa & Google Home, w/Weather Display, Energy Monitoring, Single Pole, Neutral Wire Required",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "touchscreen": {
+        "A@display quality is great": {
+          "+": [
+            1
+          ]
+        },
+        "B@display shows time and weather": {
+          "+": [
+            2,
+            4,
+            15,
+            22,
+            32,
+            43,
+            45
+          ]
+        },
+        "C@screen becomes blank and unresponsive": {
+          "-": [
+            3
+          ]
+        },
+        "D@screen is frozen but still works via app": {
+          "-": [
+            8
+          ]
+        },
+        "E@touchscreen is responsive": {
+          "+": [
+            49
+          ]
+        },
+        "F@screen is laggy and unacceptable": {
+          "-": [
+            36
+          ]
+        },
+        "G@touchscreen button stopped working": {
+          "-": [
+            33
+          ]
+        },
+        "H@display is clear and bright": {
+          "+": [
+            43
+          ]
+        },
+        "I@color and brightness are very good": {
+          "+": [
+            49
+          ]
+        }
+      },
+      "physical_button": {
+        "J@physical button doesn't work": {
+          "-": [
+            3,
+            33
+          ]
+        },
+        "K@button below screen for on/off control": {
+          "+": [
+            26,
+            43
+          ]
+        },
+        "L@physical button is difficult to see for unfamiliar users": {
+          "-": [
+            16
+          ]
+        }
+      },
+      "appearance": {
+        "M@looks nice and modern": {
+          "+": [
+            7,
+            8,
+            15,
+            16
+          ]
+        },
+        "N@high tech looking and feature rich": {
+          "+": [
+            8
+          ]
+        },
+        "O@sleek and stylish design": {
+          "+": [
+            15
+          ]
+        },
+        "P@looks cool and awesome": {
+          "+": [
+            33,
+            48
+          ]
+        }
+      },
+      "build_quality": {
+        "Q@quality of build is excellent": {
+          "+": [
+            17
+          ]
+        },
+        "R@good build quality": {
+          "+": [
+            36
+          ]
+        },
+        "S@high quality device": {
+          "+": [
+            39,
+            49
+          ]
+        }
+      },
+      "size": {
+        "T@compact for its capabilities": {
+          "+": [
+            49
+          ]
+        },
+        "U@requires larger cutout for multi-gang box": {
+          "-": [
+            26,
+            34
+          ]
+        }
+      },
+      "wiring": {
+        "V@neutral wire required for installation": {
+          "+": [
+            42,
+            43
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@works great with Alexa": {
+          "+": {
+            "?": [
+              4,
+              35,
+              41,
+              43,
+              44,
+              47,
+              49
+            ]
+          }
+        },
+        "b@stopped communicating with apps and Alexa": {
+          "-": {
+            "C": [
+              3
+            ]
+          }
+        },
+        "c@keeps disconnecting and going offline": {
+          "-": {
+            "?": [
+              7,
+              10
+            ]
+          }
+        },
+        "d@lost connection at the same time": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@won't connect to wifi": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "f@switches lose WiFi connection": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "g@easy integration with Google Home": {
+          "+": {
+            "?": [
+              11,
+              42
+            ]
+          }
+        },
+        "h@connects to home assistant and matter enabled": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "i@matter capable but limited to ORVIBO devices only": {
+          "-": {
+            "?": [
+              8,
+              21
+            ]
+          }
+        },
+        "j@cannot connect to other smart devices": {
+          "-": {
+            "?": [
+              19,
+              46
+            ]
+          }
+        },
+        "k@not compatible with Samsung SmartThings": {
+          "-": {
+            "?": [
+              35,
+              44
+            ]
+          }
+        },
+        "l@no real HomeKit support for scenes": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "response_time": {
+        "m@software is slow with 3 second delay": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "n@response can be noticeably slow": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "o@controls are ultra responsive": {
+          "+": {
+            "E": [
+              47
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "p@works fine and stable": {
+          "+": {
+            "?": [
+              0,
+              1,
+              16,
+              39
+            ]
+          }
+        },
+        "q@had to mess with it twice in a year": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "r@completely failed after 4 months": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "s@occasionally loses connection or fails to respond": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "t@first switch would turn on then nothing": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        }
+      },
+      "setup": {
+        "u@setup was simple and straightforward": {
+          "+": {
+            "?": [
+              16,
+              32,
+              43
+            ]
+          }
+        },
+        "v@total pain to setup": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "w@very challenging to set up using Matter or HomeKit": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "x@difficult setup": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "y@little tricky setting up but worth it": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "z@exhausting fail connecting to app": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "aa@dimming doesn't work and flickers": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ab@dimming is easy and fluid": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "ac@cannot dim lights without selecting sub-menu": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "durability": {
+        "ad@fried after 4 months with no reason": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "ae@longer lifespan than smart bulbs": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "three_way_functionality": {
+        "af@does not function well as 3-way dimmer": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "ag@does not work with three-way switches": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "ah@no way to link switches for 3-way operation": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "voice_control": {
+        "+": {
+          "a": [
+            4,
+            35,
+            41,
+            43,
+            44,
+            47,
+            49
+          ]
+        }
+      },
+      "remote_lighting_control": {
+        "+": {
+          "a": [
+            12,
+            17,
+            20
+          ]
+        }
+      },
+      "scene_control": {
+        "-": {
+          "i,l": [
+            9,
+            18,
+            19,
+            21,
+            32
+          ]
+        }
+      },
+      "intercom_functionality": {
+        "+": {
+          "?": [
+            8,
+            11,
+            23,
+            49
+          ]
+        }
+      },
+      "weather_and_time_display": {
+        "+": {
+          "B": [
+            2,
+            4,
+            15,
+            22,
+            32,
+            43,
+            45
+          ]
+        }
+      },
+      "dining_room_chandelier_control": {
+        "+": {
+          "ae": [
+            41
+          ]
+        }
+      },
+      "porch_light_automation": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "vacation_mode": {
+        "+": {
+          "?": [
+            8,
+            49
+          ]
+        }
+      },
+      "timer_and_schedule_functions": {
+        "+": {
+          "?": [
+            22,
+            42,
+            43,
+            49
+          ]
+        }
+      },
+      "single_switch_applications": {
+        "+": {
+          "U": [
+            34
+          ]
+        }
+      },
+      "multi-gang_installations": {
+        "-": {
+          "U": [
+            26,
+            34
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:35.720674"
+}

@@ -1,0 +1,755 @@
+{
+  "product_title": "GHome Smart Dual Dimmer Switch, Space Saving, 2 in 1 Control , WiFi Smart Light Switch Compatible with Alexa and Google Home, Neutral Wire Required, Voice Control, Single-Pole(1 Pack)",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "design": {
+        "A@sleek and modern appearance": {
+          "+": [
+            7,
+            39
+          ]
+        },
+        "B@elegant appearance": {
+          "+": [
+            4
+          ]
+        },
+        "C@great appearance": {
+          "+": [
+            5
+          ]
+        },
+        "D@nice design": {
+          "+": [
+            24,
+            37
+          ]
+        },
+        "E@blends well with decor": {
+          "+": [
+            7,
+            39
+          ]
+        }
+      },
+      "build_quality": {
+        "F@sturdy and high quality feel": {
+          "+": [
+            10
+          ]
+        },
+        "G@doesn't feel cheap": {
+          "+": [
+            47
+          ]
+        }
+      },
+      "form_factor": {
+        "H@dual dimmer in single switch box position": {
+          "+": [
+            14,
+            20,
+            22,
+            24,
+            27,
+            31,
+            37,
+            40,
+            42
+          ]
+        },
+        "I@2-in-1 control feature": {
+          "+": [
+            7,
+            44
+          ]
+        },
+        "J@space-saving design": {
+          "+": [
+            7,
+            22,
+            24,
+            40,
+            42
+          ]
+        }
+      },
+      "wiring": {
+        "K@neutral wire requirement": {
+          "-": [
+            11,
+            48
+          ]
+        },
+        "L@quick wire installation": {
+          "+": [
+            19
+          ]
+        }
+      },
+      "indicators": {
+        "M@no flashing lights in setup mode": {
+          "-": [
+            14
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0,
+              16,
+              22,
+              28,
+              34,
+              38,
+              41,
+              43,
+              45,
+              46,
+              47
+            ]
+          }
+        },
+        "b@not so easy to install": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "c@more complicated than expected": {
+          "-": {
+            "K": [
+              11
+            ]
+          }
+        },
+        "d@straightforward installation": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "e@fairly easy to install": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "f@does not connect with 5g wifi": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "g@sometimes connects to Amazon Alexa then won't connect": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "h@impossible to get it to reconnect": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "i@stopped connecting to wifi": {
+          "-": {
+            "?": [
+              1,
+              27
+            ]
+          }
+        },
+        "j@WiFi connectivity is seamless": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "k@able to connect to router fairly easy": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "l@never worked consistently with Alexa or Google Home": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "m@frequent connectivity issues": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "n@works easily with Alexa": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "o@wouldn't pair after 2 hours of trying": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "p@integrate seamlessly with Alexa": {
+          "+": {
+            "?": [
+              20,
+              24,
+              37
+            ]
+          }
+        },
+        "q@wouldn't go into pairing mode at first": {
+          "-": {
+            "M": [
+              32
+            ]
+          }
+        },
+        "r@easy connecting with Alexa": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "s@integrates seamlessly with home automation systems": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "t@connected to existing WiFi network without issues": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "u@voice commands work flawlessly": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "v@works pretty well with Tuya app": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "w@hooks up easily to Google Home": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "x@dimmer does not dim": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "y@manual dimmer does not work": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "z@dimmer works great": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "aa@dimming feature is smooth": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ab@dimming function was unreliable": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "ac@dimming is accurate": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "ad@very limited dimming range": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "ae@does not dim the lights as much": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "af@intensity of lights do not go down far enough": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "ag@doesn't dim LED lights very much": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "ah@7-level adjustable brightness is smooth and intuitive": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "ai@terribly unreliable": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "aj@turns off randomly": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ak@started flickering": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "al@uncontrollable": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "am@turns on and off as it wishes": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "an@dimmer goes from minimum to maximum constantly": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ao@wall clicks are not doing anything": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "ap@turns on whenever it feels the need": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "aq@no control of it": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ar@must reset it all the time": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "as@died the same night it was installed": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "at@had voltage bleed through": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "au@high EMF output": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "av@no lag when adjusting lights": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "aw@very responsive": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ax@works flawlessly": {
+          "+": {
+            "?": [
+              28,
+              44
+            ]
+          }
+        },
+        "ay@works and is reliable": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "az@never given me an issue": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "ba@app is not good": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "bb@switch wouldn't respond to voice commands": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "bc@allows control via app and/or alexa": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "bd@smart part still works": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "be@works perfectly with Amazon Alexa": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "bf@switch wouldn't turn on unless pressed and held down for several seconds 2 times in a row": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "bg@app/alexa control was instant": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "durability": {
+        "bh@worked for about 30 days then started issues": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "bi@stopped working after 8 months": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "bj@switch goes bad within a year": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "bk@had to replace after less than 2 years": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "setup": {
+        "bl@difficult to set up in Gosund app": {
+          "-": {
+            "M": [
+              14
+            ]
+          }
+        },
+        "bm@instructions are inaccurate": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "bn@instructions aren't great": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "bo@instructions are lacking detail": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "bp@instructions were unclear": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "bq@instructions were very clear": {
+          "+": {
+            "?": [
+              25,
+              45
+            ]
+          }
+        },
+        "br@set up was simple and quick": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "bs@easy set up": {
+          "+": {
+            "?": [
+              26,
+              30
+            ]
+          }
+        },
+        "bt@entire setup completed in 30 minutes": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "bu@very easy to set up": {
+          "+": {
+            "?": [
+              26,
+              41
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "living_room_lighting": {
+        "+": {
+          "B": [
+            4
+          ]
+        }
+      },
+      "dual_area_lighting_control": {
+        "+": {
+          "I": [
+            7
+          ],
+          "H": [
+            24,
+            37
+          ]
+        }
+      },
+      "remote_lighting_control": {
+        "+": {
+          "bc": [
+            7
+          ],
+          "p": [
+            20
+          ],
+          "bg": [
+            45
+          ]
+        }
+      },
+      "voice_control_lighting": {
+        "+": {
+          "u": [
+            39
+          ],
+          "ax": [
+            44
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "?": [
+            25,
+            36
+          ]
+        }
+      },
+      "smart_home_integration": {
+        "+": {
+          "s": [
+            35
+          ],
+          "w": [
+            47
+          ]
+        }
+      },
+      "automatic_lighting_routines": {
+        "+": {
+          "?": [
+            40
+          ]
+        }
+      },
+      "ambiance_control": {
+        "+": {
+          "aa": [
+            7
+          ],
+          "ah": [
+            40
+          ]
+        }
+      },
+      "space_saving_installation": {
+        "+": {
+          "J": [
+            22,
+            24,
+            42
+          ]
+        }
+      },
+      "LED_lighting_control": {
+        "-": {
+          "ag": [
+            38
+          ]
+        }
+      },
+      "ceiling_lights_control": {
+        "+": {
+          "?": [
+            24,
+            37
+          ]
+        }
+      },
+      "recessed_lights_control": {
+        "+": {
+          "?": [
+            36
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:47.009119"
+}

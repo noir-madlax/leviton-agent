@@ -1,0 +1,333 @@
+{
+  "product_title": "Lutron Diva Smart Dimmer Switch ELV+ for Caseta Smart Lighting (Lutron Smart Hub Required), 250-Watt LED, Neutral Required, DVRF-5NE-WH, White",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 11,
+  "review_analysis": {
+    "phy": {
+      "soft-glow light bar": {
+        "A@provides visibility in low-light conditions": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "paddle switch style": {
+        "B@paddle switch design preferred over button style": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "switches and covers": {
+        "C@quality look and feel": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "documentation": {
+        "D@very basic documentation in the box that does not address many features": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "price": {
+        "E@pricey": {
+          "-": [
+            6,
+            8
+          ]
+        }
+      }
+    },
+    "perf": {
+      "compatibility": {
+        "a@compatible with various lighting types including dimmable LEDs and halogen bulbs": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@incompatible with some ELV fixtures despite stated specs": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@works perfectly with twelve volt electronic transformer controlling LED strip lights": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@works to control ceiling mounted LED fixture when other Lutron smart switches didn't": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@works with low voltage led strip lighting": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "f@works well to manage array of low voltage transformer controls": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "g@works well even with low voltage halogen bulbs": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@works flawlessly with Caseta system": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "i@works for 1 minute, flickers, and breaks": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "j@reliable": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "k@very stable": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "l@so reliable": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "m@working flawlessly": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "dimming capability": {
+        "n@can dim led wafer recessed lighting very low with no flicker": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "o@still dims with low voltage led strip lighting": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "p@solved flickering lights problem": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "q@LED fixture was flickering almost constantly with old switch but working flawlessly with this switch": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "installation": {
+        "r@installation process is straightforward": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "s@easy install": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "t@set up is simple with proper manuals": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "integration": {
+        "u@integrates seamlessly with Lutron Smart Hub": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "v@great integration with Apple HomeKit": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "w@great integration with Home Assistant": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "x@user-friendly": {
+          "+": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "y@does work very well": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "z@does the job": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "controlling ELV lighting systems": {
+        "+": {
+          "a": [
+            0
+          ]
+        },
+        "-": {
+          "b": [
+            1
+          ]
+        }
+      },
+      "controlling LED strip lights with electronic transformer": {
+        "+": {
+          "c": [
+            2
+          ]
+        }
+      },
+      "controlling ceiling mounted LED fixture": {
+        "+": {
+          "d": [
+            3
+          ]
+        }
+      },
+      "smart functionality control via smartphone or voice commands": {
+        "+": {
+          "u": [
+            0
+          ]
+        }
+      },
+      "controlling led wafer recessed lighting": {
+        "+": {
+          "n": [
+            4
+          ]
+        }
+      },
+      "under cabinet lighting with low voltage led strip": {
+        "+": {
+          "e": [
+            5
+          ]
+        }
+      },
+      "retrofit of existing low voltage lighting": {
+        "+": {
+          "f": [
+            6
+          ]
+        }
+      },
+      "low voltage transformer control": {
+        "+": {
+          "f,g": [
+            6
+          ]
+        }
+      },
+      "undercabinet lights with electronic transformer": {
+        "+": {
+          "p": [
+            7
+          ]
+        }
+      },
+      "undercabinet/toekick lighting with Home Assistant": {
+        "+": {
+          "h,w": [
+            8
+          ]
+        }
+      },
+      "newer difficult to dim LED fixtures/bulbs": {
+        "+": {
+          "m": [
+            9
+          ]
+        }
+      },
+      "home automation integration": {
+        "+": {
+          "v": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:04.970547"
+}

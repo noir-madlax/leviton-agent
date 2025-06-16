@@ -1,0 +1,122 @@
+{
+  "product_title": "BESTTEN 4 Pack 4-Way Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Paddle Rocker Interrupter, Self-Grounding, UL Listed, White",
+  "product_category": "Four Way Multi-Location Control Switches",
+  "total_reviews": 6,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@color does not match other BESTTEN switches": {
+          "-": [
+            0,
+            3,
+            4,
+            5
+          ]
+        },
+        "B@appears gray instead of white": {
+          "-": [
+            4
+          ]
+        },
+        "C@has blue light": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "rocker": {
+        "D@scrapes against housing": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "appearance": {
+        "E@looks slightly different from other switches": {
+          "-": [
+            3
+          ]
+        },
+        "F@attractive appearance": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "button operation": {
+        "a@hard to push": {
+          "-": {
+            "D": [
+              0
+            ]
+          }
+        },
+        "b@different feedback force": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@makes click sound": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "light control": {
+        "d@causes lights to flicker": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "e@works fine": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "four way light switching": {
+        "+": {
+          "e": [
+            4
+          ]
+        },
+        "-": {
+          "d": [
+            1
+          ]
+        }
+      },
+      "matching with other BESTTEN switches": {
+        "-": {
+          "A": [
+            3,
+            4,
+            5
+          ]
+        }
+      },
+      "replacement for existing switches": {
+        "+": {
+          "e": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:24.282002"
+}

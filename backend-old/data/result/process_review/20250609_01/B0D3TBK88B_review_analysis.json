@@ -1,0 +1,408 @@
+{
+  "product_title": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 31,
+  "review_analysis": {
+    "phy": {
+      "Size": {
+        "A@Large size leaves no room for wire connections": {
+          "-": [
+            22
+          ]
+        }
+      },
+      "Build Quality": {
+        "B@Cheaply built and can easily break": {
+          "-": [
+            22
+          ]
+        },
+        "C@Extremely low quality construction": {
+          "-": [
+            11
+          ]
+        },
+        "D@High quality construction": {
+          "+": [
+            30
+          ]
+        },
+        "E@Poor quality construction": {
+          "-": [
+            9,
+            24
+          ]
+        }
+      },
+      "Slider Mechanism": {
+        "F@Sliders stick and are very difficult to move": {
+          "-": [
+            4
+          ]
+        },
+        "G@Slider jams and cannot be moved": {
+          "-": [
+            6
+          ]
+        },
+        "H@Dimmer adjuster is not built well": {
+          "-": [
+            22
+          ]
+        }
+      },
+      "Switch Click": {
+        "I@Click of the switch is more masculine than it should be": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "Terminals": {
+        "J@Has wire connections instead of preferred screw clamp terminals": {
+          "-": [
+            21
+          ]
+        }
+      },
+      "Ganging Compatibility": {
+        "K@Cannot gang 2 side by side, not to U.S.A. standards": {
+          "-": [
+            28
+          ]
+        }
+      },
+      "Appearance": {
+        "L@Look great and attractive": {
+          "+": [
+            16,
+            17
+          ]
+        },
+        "M@Look beautiful and finished": {
+          "+": [
+            29
+          ]
+        },
+        "N@Elegant appearance": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "Included Components": {
+        "O@Come with matching plate covers and hardware": {
+          "+": [
+            30
+          ]
+        },
+        "P@Include plates which is cost-effective": {
+          "+": [
+            29
+          ]
+        }
+      }
+    },
+    "perf": {
+      "LED Compatibility": {
+        "a@Turn off completely when LED dimmed more than half": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@LED flickers when not dimmed all the way": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@Work best with multiple different LED brands": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "d@Least likely to cause flickering issues in LED bulbs and panels": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "Flickering Issues": {
+        "e@Lights flicker when dimming": {
+          "-": {
+            "H": [
+              22
+            ],
+            "?": [
+              24,
+              26
+            ]
+          }
+        },
+        "f@Constant flickering with any light bulb": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "g@Flicker even when adjusted": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "h@Flicker free operation": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "Multiple Light Handling": {
+        "i@Start blinking when more than 4 lights are on": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "Dimming Range": {
+        "j@Full range of dimming capability": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "k@Excellent dimming regulation": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "l@Different shades of brightness available": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "Memory Function": {
+        "m@Remember settings and return to last used level": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "Noise": {
+        "n@Silent dimming with no humming noises": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "o@Buzzing noise during operation": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "p@Durable construction": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "q@Fall apart during installation": {
+          "-": {
+            "C": [
+              11
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "r@Work as they should": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "s@Work great with full functionality": {
+          "+": {
+            "?": [
+              16,
+              17,
+              21
+            ]
+          }
+        },
+        "t@Don't work well": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "u@Unable to dim": {
+          "-": {
+            "G": [
+              6
+            ]
+          }
+        },
+        "v@Malfunctioning": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "w@Defective": {
+          "-": {
+            "?": [
+              12,
+              13
+            ]
+          }
+        },
+        "x@Not working": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "y@Work like a charm": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "z@Compatible with most bulbs including CFL, incandescent and LED": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "aa@Do not work with Amico lights": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "bb@Made for incandescent bulbs": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Recessed Lights": {
+        "+": {
+          "s": [
+            3
+          ]
+        }
+      },
+      "House Switch Replacement": {
+        "+": {
+          "s": [
+            16
+          ],
+          "y": [
+            29
+          ]
+        }
+      },
+      "Multiple Light Installation": {
+        "-": {
+          "i": [
+            4
+          ]
+        }
+      },
+      "LED Light Control": {
+        "-": {
+          "a,b": [
+            0
+          ]
+        },
+        "+": {
+          "c,d": [
+            18
+          ],
+          "z": [
+            30
+          ]
+        }
+      },
+      "Amico Light Control": {
+        "-": {
+          "aa": [
+            7
+          ]
+        }
+      },
+      "Flickering Issue Diagnosis": {
+        "+": {
+          "d": [
+            18
+          ]
+        }
+      },
+      "Brightness Control": {
+        "+": {
+          "l": [
+            20
+          ]
+        }
+      },
+      "General Dimming Applications": {
+        "-": {
+          "e,f": [
+            22,
+            24,
+            26
+          ]
+        },
+        "+": {
+          "j,k": [
+            8,
+            21
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:30.133480"
+}

@@ -1,0 +1,4051 @@
+{
+  "scrape_session": {
+    "timestamp": "2025-06-08T22:43:26.835878",
+    "total_products": 288,
+    "successful": 268,
+    "skipped": 0,
+    "errors": 20,
+    "exceptions": 0,
+    "review_coverage_months": 6,
+    "configuration": {
+      "rate_limit_delay": 0.55,
+      "max_concurrent_requests": 2,
+      "batch_size": 10,
+      "scrape_recency_days": 30,
+      "min_review_year": 2010,
+      "max_review_year": 2025
+    }
+  },
+  "results": [
+    {
+      "status": "success",
+      "asin": "B095X5HTLS",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B095X5HTLS_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B099RJ2HRN",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B099RJ2HRN_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0076HPM8A",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0076HPM8A_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B094XXG14N",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B094XXG14N_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BC2MWTR9",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BC2MWTR9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07S29S7QD",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07S29S7QD_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D3TBK88B",
+      "review_count": 32,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D3TBK88B_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CTZQZXLL",
+      "review_count": 10,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CTZQZXLL_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00NG0ELL0",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00NG0ELL0_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B079775ZZQ",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B079775ZZQ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B006UTQCA2",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B006UTQCA2_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08RRM8VH5",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08RRM8VH5_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B085D8M2MR",
+      "review_count": 42,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B085D8M2MR_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BTMWZH3K",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BTMWZH3K_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B073H9Y7SH",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B073H9Y7SH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07GNXMVFP",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07GNXMVFP_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B002DNAG4W",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B002DNAG4W_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C7LTX71C",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B0771BC2YH",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0771BC2YH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DRZ77JQT",
+      "review_count": 6,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DRZ77JQT_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D7GR3CKW",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D7GR3CKW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00A92MQ38",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00A92MQ38_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08JSC41JZ",
+      "review_count": 36,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08JSC41JZ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D7BTM5LP",
+      "review_count": 14,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D7BTM5LP_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00SFGNO54",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00SFGNO54_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DWJHD9G1",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B0DXJNJDSH",
+      "review_count": 18,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DXJNJDSH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07VG9XY46",
+      "review_count": 8,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07VG9XY46_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0B12HQ8LM",
+      "review_count": 19,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0B12HQ8LM_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07WFLTZDK",
+      "review_count": 31,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07WFLTZDK_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0897GH1CD",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0897GH1CD_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B073H9Y7SF",
+      "review_count": 40,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B073H9Y7SF_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DKGXY4DL",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DKGXY4DL_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09482M85Y",
+      "review_count": 32,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09482M85Y_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0006V5PXK",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0006V5PXK_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D4YFCTHV",
+      "review_count": 19,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D4YFCTHV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B008X3CH70",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B008X3CH70_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0055TWD2E",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0055TWD2E_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07KYW1MQY",
+      "review_count": 49,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07KYW1MQY_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B078KH9NNT",
+      "review_count": 11,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B078KH9NNT_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00JJY1QG0",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00JJY1QG0_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08XH6HRTZ",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08XH6HRTZ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0B1LBPWZT",
+      "review_count": 11,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0B1LBPWZT_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09JZB8YGJ",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09JZB8YGJ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DB8DRMWW",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DB8DRMWW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B06Y5KN17V",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B01M3XJUAD",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01M3XJUAD_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00UXR8YTO",
+      "review_count": 41,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00UXR8YTO_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0012DNKMO",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0012DNKMO_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CW92T9CH",
+      "review_count": 28,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CW92T9CH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07HNFWWZV",
+      "review_count": 37,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07HNFWWZV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0785VL5MJ",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0785VL5MJ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BSGCHWS5",
+      "review_count": 5,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BSGCHWS5_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C3HGGYHG",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C3HGGYHG_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09LLNT3KR",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09LLNT3KR_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07RV6CP7Q",
+      "review_count": 13,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07RV6CP7Q_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09FL9WPGL",
+      "review_count": 25,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09FL9WPGL_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09HSWR3YG",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09HSWR3YG_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0B4RZFVJG",
+      "review_count": 20,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0B4RZFVJG_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BYPD5WPG",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BYPD5WPG_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D95H9F8C",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B08CXCHFYC",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08CXCHFYC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0033PSGAU",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0033PSGAU_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07WWYQJFR",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07WWYQJFR_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C861YTWD",
+      "review_count": 11,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C861YTWD_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CQ891PXZ",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CQ891PXZ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BXDC6F2M",
+      "review_count": 32,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BXDC6F2M_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B082LKCXV9",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B082LKCXV9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000I3WAW0",
+      "review_count": 2,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000I3WAW0_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0015BKZI0",
+      "review_count": 16,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0015BKZI0_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08CDNTFM3",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08CDNTFM3_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C89JXCF4",
+      "review_count": 27,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C89JXCF4_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0016LBTO8",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0016LBTO8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09X9QG8NV",
+      "review_count": 34,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09X9QG8NV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07RJ14FBS",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07RJ14FBS_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BKZP98CN",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BKZP98CN_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BRNTMFT8",
+      "review_count": 12,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BRNTMFT8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DHYRV32Z",
+      "review_count": 7,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DHYRV32Z_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D2DQXBC2",
+      "review_count": 14,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D2DQXBC2_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DHYJKVX9",
+      "review_count": 4,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DHYJKVX9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D3KRJRTN",
+      "review_count": 27,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D3KRJRTN_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08428GDS8",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08428GDS8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BYPDKCD5",
+      "review_count": 30,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BYPDKCD5_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00MXCRAX8",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00MXCRAX8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C6P4NDSV",
+      "review_count": 22,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C6P4NDSV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08Q7HX3KV",
+      "review_count": 31,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08Q7HX3KV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09DV4PSPP",
+      "review_count": 46,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09DV4PSPP_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CHMQW45X",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CHMQW45X_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B01AFU1KOY",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01AFU1KOY_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07B3LXZJ9",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07B3LXZJ9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B001067I1W",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B09K3HQPYG",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09K3HQPYG_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D473QH36",
+      "review_count": 18,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D473QH36_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CT3QK4JP",
+      "review_count": 16,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CT3QK4JP_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000MAUP58",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000MAUP58_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B095X911T8",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B095X911T8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07JB37H5Y",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07JB37H5Y_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B01MRXOXWB",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01MRXOXWB_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C86MJLVH",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C86MJLVH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07HGW8N7R",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07HGW8N7R_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08SJ3Z8XD",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08SJ3Z8XD_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09MW38VK7",
+      "review_count": 26,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09MW38VK7_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BVFMFSQV",
+      "review_count": 40,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BVFMFSQV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00QXOSTFU",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00QXOSTFU_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DCZCVRL8",
+      "review_count": 3,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DCZCVRL8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07HPBP5Q2",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07HPBP5Q2_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00004YUO0",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00004YUO0_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B01EZV35QU",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01EZV35QU_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07J9PKNBH",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07J9PKNBH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07724HNTX",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07724HNTX_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B087TLPYDT",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B087TLPYDT_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09CKT5B9C",
+      "review_count": 29,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09CKT5B9C_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07HM6L48C",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07HM6L48C_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07ZJ7CPJC",
+      "review_count": 42,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07ZJ7CPJC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08W8GLPD5",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08W8GLPD5_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B017LRCG38",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B017LRCG38_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07FXJFSS2",
+      "review_count": 15,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07FXJFSS2_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07X47W6LC",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07X47W6LC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08KDGBKNC",
+      "review_count": 33,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08KDGBKNC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B002DN8CQ6",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B002DN8CQ6_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BQ1S49F9",
+      "review_count": 6,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BQ1S49F9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08YM4B957",
+      "review_count": 17,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08YM4B957_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D8T97DFN",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B002RN99TQ",
+      "review_count": 20,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B002RN99TQ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09MW3C4MM",
+      "review_count": 13,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09MW3C4MM_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0000CGKLR",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0000CGKLR_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000U3HXWA",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000U3HXWA_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DTK1HHN6",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B003AVLWGM",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B003AVLWGM_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0899ZGFT1",
+      "review_count": 8,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0899ZGFT1_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09B21W5JD",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09B21W5JD_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C6NFBM79",
+      "review_count": 4,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C6NFBM79_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000U3BV0U",
+      "review_count": 22,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000U3BV0U_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000NCTHHW",
+      "review_count": 28,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000NCTHHW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B01HIMC7EE",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01HIMC7EE_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07MTT9NQW",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07MTT9NQW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D66MJPSB",
+      "review_count": 5,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D66MJPSB_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0033PSGJQ",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0033PSGJQ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07WS31L87",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07WS31L87_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000BVZBMU",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000BVZBMU_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07ZYWSH3J",
+      "review_count": 26,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07ZYWSH3J_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09VS2PHQV",
+      "review_count": 5,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09VS2PHQV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08Q4F43HT",
+      "review_count": 34,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08Q4F43HT_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08YLPYYGK",
+      "review_count": 26,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08YLPYYGK_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B087P3DM42",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B087P3DM42_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09B9MBXWP",
+      "review_count": 23,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09B9MBXWP_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DPQGHY9D",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DPQGHY9D_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B001EVKA8G",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B001EVKA8G_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0814R5PSX",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0814R5PSX_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07S51S7T9",
+      "review_count": 19,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07S51S7T9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08YMYC8TD",
+      "review_count": 37,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08YMYC8TD_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D6YRMP1X",
+      "review_count": 11,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D6YRMP1X_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08R9S8TDT",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08R9S8TDT_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08562D7X8",
+      "review_count": 43,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08562D7X8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07X4Z69BV",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07X4Z69BV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B003AUCKLO",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B003AUCKLO_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BRDDFP2J",
+      "review_count": 10,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BRDDFP2J_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0894KT8DC",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0894KT8DC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D2DRSXC1",
+      "review_count": 13,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D2DRSXC1_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08YMDL1KQ",
+      "review_count": 26,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08YMDL1KQ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08T1JBD9P",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08T1JBD9P_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DDL35WNV",
+      "review_count": 41,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DDL35WNV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00E6KAIHK",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00E6KAIHK_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000U3I0RM",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000U3I0RM_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B002NWTETQ",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B002NWTETQ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08JV93V5X",
+      "review_count": 16,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08JV93V5X_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07JVLGFYZ",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07JVLGFYZ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B01N25GTMW",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01N25GTMW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CL1B1LJT",
+      "review_count": 10,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CL1B1LJT_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BVKZLT3B",
+      "review_count": 38,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BVKZLT3B_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D3KP68S7",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D3KP68S7_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000BQUUVC",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000BQUUVC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00004YUO1",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00004YUO1_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CN6RV8W8",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CN6RV8W8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B093PVYMZC",
+      "review_count": 44,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B093PVYMZC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0892HCXGS",
+      "review_count": 18,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0892HCXGS_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C86LDZLW",
+      "review_count": 28,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C86LDZLW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B005K8XFRW",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B005K8XFRW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CBNX6Q51",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CBNX6Q51_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08YMBDGZ8",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08YMBDGZ8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07BPVRMHC",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07BPVRMHC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00081I0EO",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00081I0EO_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BY29HKMM",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BY29HKMM_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C3VGZ2FM",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C3VGZ2FM_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CLGCXT96",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CLGCXT96_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B093PWTTHC",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B093PWTTHC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D62QM98H",
+      "review_count": 14,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D62QM98H_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CT3RFY6K",
+      "review_count": 35,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CT3RFY6K_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C7J4YMSZ",
+      "review_count": 7,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C7J4YMSZ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0055VD9HK",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0055VD9HK_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BX4KH8HV",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BX4KH8HV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D1QZ78XT",
+      "review_count": 9,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D1QZ78XT_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09V7HG417",
+      "review_count": 46,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09V7HG417_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DTTB139J",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B07SXDFH38",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07SXDFH38_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00P4FGRYO",
+      "review_count": 3,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00P4FGRYO_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08PKMT2DV",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08PKMT2DV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DG6G2SGZ",
+      "review_count": 19,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DG6G2SGZ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0076HPMK8",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0076HPMK8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B01N1229L4",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01N1229L4_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08JTFN5CN",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08JTFN5CN_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09LLY51DL",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09LLY51DL_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0734VSNGH",
+      "review_count": 21,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0734VSNGH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DBJ9RC3M",
+      "review_count": 11,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DBJ9RC3M_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07RNJ351J",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07RNJ351J_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07KZJRQYW",
+      "review_count": 39,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07KZJRQYW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B092ZGJ3PB",
+      "review_count": 43,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B092ZGJ3PB_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DS666CFY",
+      "review_count": 3,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DS666CFY_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08VVTYJLC",
+      "review_count": 10,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08VVTYJLC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BWBMHCP3",
+      "review_count": 8,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BWBMHCP3_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0037NXT3C",
+      "review_count": 29,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0037NXT3C_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07JD57RWC",
+      "review_count": 4,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07JD57RWC_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07CKNWGN4",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07CKNWGN4_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B082LK16TH",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B082LK16TH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CLG1L3N4",
+      "review_count": 18,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CLG1L3N4_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0F2PHWYZK",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B004DZONXI",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B004DZONXI_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B077XDB8FV",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B077XDB8FV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C9W2G2V9",
+      "review_count": 5,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C9W2G2V9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B004DZOMRU",
+      "review_count": 15,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B004DZOMRU_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07YKFSWJN",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07YKFSWJN_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C6ZXF159",
+      "review_count": 8,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C6ZXF159_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B01I24JBNM",
+      "review_count": 47,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B01I24JBNM_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CPJCYQJH",
+      "review_count": 43,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CPJCYQJH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B098XB2BQ7",
+      "review_count": 20,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B098XB2BQ7_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B087T6N3RZ",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B087T6N3RZ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0009I7IDA",
+      "review_count": 28,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0009I7IDA_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DTDFCFW9",
+      "review_count": 2,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0DTDFCFW9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CK4TM2R9",
+      "review_count": 14,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CK4TM2R9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C3VCN1GV",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C3VCN1GV_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0D9W9627N",
+      "review_count": 19,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0D9W9627N_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B081S6YXBY",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B081S6YXBY_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CCND92GN",
+      "review_count": 14,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CCND92GN_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0039PZJJK",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0039PZJJK_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00E7N71TO",
+      "review_count": 13,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00E7N71TO_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08R9R2C8M",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08R9R2C8M_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0012DMB6A",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0012DMB6A_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000I3UT1Y",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000I3UT1Y_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08SJ5Q6B9",
+      "review_count": 42,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08SJ5Q6B9_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07V3XB1QG",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07V3XB1QG_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000ZOJL1U",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000ZOJL1U_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08YMGCQKY",
+      "review_count": 36,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08YMGCQKY_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CYB4XW7X",
+      "review_count": 11,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CYB4XW7X_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000GAV562",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000GAV562_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B082FBXJ1M",
+      "review_count": 27,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B082FBXJ1M_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000U3I11C",
+      "review_count": 18,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000U3I11C_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B081ZQWX1F",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B081ZQWX1F_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CZKYMVPR",
+      "review_count": 36,
+      "pages_scraped": 4,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CZKYMVPR_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B000U3DUZO",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B000U3DUZO_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BD9CSHXP",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BD9CSHXP_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08MF7QF37",
+      "review_count": 6,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08MF7QF37_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07J9V2QKW",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07J9V2QKW_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0865WTH62",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0865WTH62_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B06XTD713B",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B06XTD713B_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B07WNRVKJJ",
+      "review_count": 1,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B07WNRVKJJ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0C8NHJ83N",
+      "review_count": 15,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0C8NHJ83N_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0BQTHBKH3",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0BQTHBKH3_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08GF87L3H",
+      "review_count": 46,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08GF87L3H_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0DZM1SF74",
+      "review_count": 0,
+      "earliest_reviews_fetched": true
+    },
+    {
+      "status": "success",
+      "asin": "B0CYSTBMGJ",
+      "review_count": 28,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CYSTBMGJ_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00B2KCFW8",
+      "review_count": 20,
+      "pages_scraped": 2,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00B2KCFW8_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00LC9UYVI",
+      "review_count": 25,
+      "pages_scraped": 3,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00LC9UYVI_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B09WL82DB2",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B09WL82DB2_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CB85MGHP",
+      "review_count": 8,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B0CB85MGHP_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08CNNGCGB",
+      "review_count": 4,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08CNNGCGB_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B004DZON2Y",
+      "review_count": 4,
+      "pages_scraped": 1,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B004DZON2Y_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B08R9JBDHH",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B08R9JBDHH_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00NJ298JU",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/scraped/amazon/review/B00NJ298JU_20250608_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "error",
+      "asin": "B01M9JTK3W",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B002UOXM6I",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B002DNG3EE",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B004DZONJC",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B0D14GN918",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B0BSHKS26L",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B01N8TTXYD",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B00B363T9O",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B095X5H16X",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B08GFR5YK9",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B07PJTLB7Z",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B0CMQKDNDQ",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B07LGCYXQ4",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B0D12VMWW2",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B01LXOG1RL",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B0D3TZJWK1",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B0CW6M3N6C",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B0B4D4JW1B",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B08GF3WQ19",
+      "error": "Monthly usage hard limit exceeded"
+    },
+    {
+      "status": "error",
+      "asin": "B008X3CZ6S",
+      "error": "Monthly usage hard limit exceeded"
+    }
+  ]
+}

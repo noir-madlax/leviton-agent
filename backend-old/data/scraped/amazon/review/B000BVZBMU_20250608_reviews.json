@@ -1,0 +1,2582 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:14:39.714230",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B000BVZBMU",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B000BVZBMU",
+    "title": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+    "brand": "Legrand",
+    "model_number": NaN,
+    "price_usd": 6.79,
+    "rating": 4.5,
+    "reviews_count": 712.0,
+    "category": "Light Switches",
+    "product_segment": "Single Pole Toggle Switches",
+    "product_url": "https://www.amazon.com/dp/B000BVZBMU"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RXKYP71BQV3Z6",
+        "text": "I like the way this glows in the dark (when it is in the off position). We're using it in our attic.",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "A good switch for a dark location.",
+        "userName": "Haydn Huntley",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R16XQCN83TSHJ2",
+        "text": "Nice light switch to differentiate from another light switch in dim light situations",
+        "date": "Reviewed in the United States on April 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Light Switch for dim Light.",
+        "userName": "Keivn L. Rasmussen",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R305JEEQ8P4XSD",
+        "text": "Good switch, does what it says it does, light inside sadly died after 3.5 years. Switch still works but now it's just a regular switch without light.",
+        "date": "Reviewed in the United States on March 31, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Light lasted 3.5 years",
+        "userName": "Thomas K.",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R386U54S8M8Q9H",
+        "text": "Illumination is all but impossible to see. I won't even bother with a drive to kohls to return it.",
+        "date": "Reviewed in the United States on March 15, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk...Don't bother trying...",
+        "userName": "WOLFIE",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RI00OFRJR9WI1",
+        "text": "This switch is a lot better made than the ones you find at the hardware store. Would buy again.",
+        "date": "Reviewed in the United States on February 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very well-made light switch",
+        "userName": "Pam Stiegman",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1BPHY9DSNH5IQ",
+        "text": "Works fine, standard installation, the illuminated switch can be useful in a dark room at night.",
+        "date": "Reviewed in the United States on January 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works fine",
+        "userName": "fc",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3L21HVUOLFOI6",
+        "text": "Easy to install and easy to see in the dark!",
+        "date": "Reviewed in the United States on January 10, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Perfect for my garage at night!",
+        "userName": "wjm crow",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1IVL4XJEWDR36",
+        "text": "This work great for our property that had a dark foyer without a light switch nearby. This switch lights up just enough so you can see it in the dark to turn the light on.",
+        "date": "Reviewed in the United States on December 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great!",
+        "userName": "Midwest Mom",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2DABTAXZOUW2N",
+        "text": "I like the brightness of the light. Some say it is too dim. They are missing the purpose. It is not intended to light up an area. It is intended to make it easy to see the switch in a dark room. It does that very well. It glows amber around the switch so you can see it easily. Installation was easy. The posts are offset. Commonly, you have both wires attach on the same side of a switch. On this, they are on opposite sides of the switch. But, that doesn't make it more difficult to install. If you don't know what you are doing, I strongly suggest getting a qualified electrician to install it. Electricity is dangerous. The problem I have is that this switch leaks. I use LED lights. They have a capacitor leading into the AC to DC circuit. The tiny bit of power leaking into the line charges up the capacitor. When it is charged, it quickly discharges and the LED light blinks. So, my lights blink, very quickly, about once a second. I grounded the switch to see if that would help. It didn't. I can get different lights, but I would rather have a switch that doesn't leak.",
+        "date": "Reviewed in the United States on October 5, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Almost perfect",
+        "userName": "Heather K.",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2HCXCGF2YSPXM",
+        "text": "I expected the toggle switch itself to be lit like ones I’ve had before. There is only a tiny dot of light behind the switch. Very dim.",
+        "date": "Reviewed in the United States on July 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dim",
+        "userName": "kenneth m jones",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2CRSKVDM3NHK6",
+        "text": "Works good I replaced old one",
+        "date": "Reviewed in the United States on June 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awsome",
+        "userName": "Italian Dude",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R15BFNNHJ4YUDV",
+        "text": "My switch was arcing inside, I decided to get a 15 amp rated switch in case the lights it operated were drawing more power than the single light we had changed to a bank of 3. I felt getting that higher amperage rate would be better. Fitted and the arcing has gone. Previously I had a switch that lit up the switch stalk, this one is lit up around the stalk base. I don't really mind it's lit and the dark hallway has that point of light to navigate by, without having to turn on all the lights at night.",
+        "date": "Reviewed in the United States on May 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "The lit up part is around the switch stalk not in it",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2KHA4HFAD633X",
+        "text": "The night light is a good feature. At first I felt it was too dim. It could be brighter for the utility room and den. But in the bedroom I wouldn't want it any brighter. Works well so far. EZ install. Good quality. The white matched the existing plate cover. It is the same brand as the previous switch.",
+        "date": "Reviewed in the United States on April 10, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "It Works",
+        "userName": "Krylos",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R389383XF04A02",
+        "text": "I found exactly what I needed at an affordable price, and the delivery was quick.",
+        "date": "Reviewed in the United States on February 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "brightness",
+        "userName": "jerry",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3080RYHIZ8HFC",
+        "text": "installed in my shop that has no windows..very easy to see",
+        "date": "Reviewed in the United States on January 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "not all that bright, but you can see it in the dark",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R12FFV7OIA436K",
+        "text": "Doesn’t illuminate very well",
+        "date": "Reviewed in the United States on December 18, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Dim light",
+        "userName": "James Kautz",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3KL4YP24KJR36",
+        "text": "I have a bedroom switch in an odd place on the wall and have difficulty finding it in the dark. Well, no more. A flathead screwdriver and some needle-nose pliers and in about ten minutes I had that puppy installed (Don't forget to turn off the power at the circuit breaker). Not a night light. Just bright enough to easily find it easily in the dark. And a good price.🙂",
+        "date": "Reviewed in the United States on November 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I needed",
+        "userName": "John Smith",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1JZMAI491KN4X",
+        "text": "This was easy to install. The existing switch was ungrounded and this one worked without grounding and fit a standard switchplate. It controls 4 shoplights (Two 4 ft LED tubes in each) with no flickering. The neon bulb is a bit dim, especially from the side, that is why I gave it 4 stars instead of 5.",
+        "date": "Reviewed in the United States on October 17, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked perfectly, slightly dim",
+        "userName": "Alan D",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3SBRW67S9489V",
+        "text": "Good purchase. No issues",
+        "date": "Reviewed in the United States on August 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value, it works",
+        "userName": "slipper100",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3FT6JXLPMCSP7",
+        "text": "Best thing we could have ever done.",
+        "date": "Reviewed in the United States on July 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lights up the darkness",
+        "userName": "Hans J. Kohlhoefer",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RJ5IUOE2ZJNF7",
+        "text": "Now I can turn on my awkwardly place garage light switch without feeling around for the switch!",
+        "date": "Reviewed in the United States on June 18, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works without a ground wire!",
+        "userName": "Walter L.",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2AGOFB5O8R9WP",
+        "text": "It had one job. Turn lights on and off. Switch failed after 10 months.",
+        "date": "Reviewed in the United States on April 13, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "It has one job!",
+        "userName": "Eric Schnell",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R215CBC0USAQA5",
+        "text": "I found this switch somewhat disappointing. My switch-plate fits the switch pretty closely and the lighted switch light barely shows around the switch. I may try enlarging the hole in the switch-plate, but this didn't meet my expectations. I cannot recommend this.",
+        "date": "Reviewed in the United States on March 3, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not very bright.",
+        "userName": "Mahlen Petry",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3IF83UDHJU7IU",
+        "text": "Neon bulb as light may flicker in off position when used on LED lights. Fine for fluorescent or incandescent.",
+        "date": "Reviewed in the United States on February 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Neon bulb as light may flicker in off position when used on LED lights",
+        "userName": "Chris",
+        "numberOfHelpful": 3,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R15LACEY42BBGH",
+        "text": "Dim uneven light and it pulses / Flickers.",
+        "date": "Reviewed in the United States on January 12, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Light is not very bright.",
+        "userName": "K DeSantis",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1VLGKBWD64CWR",
+        "text": "Really an amazing toggle switch that is not overly bright but just the perfect amount of brightness.",
+        "date": "Reviewed in the United States on December 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fror that really dark room",
+        "userName": "W Burton",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R38IJ96BJ69ZHW",
+        "text": "Amazon saves me $$$ in gas. Surrounded by big box hardware stores that sell cheap Chinese electrics. Bought this at Amazon, shipped to my door, installed in minutes - No mess, no stress.",
+        "date": "Reviewed in the United States on November 28, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Cheaper & Better than local Big Box Store",
+        "userName": "Mical Caterina",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3IQ1FD3CCLX6R",
+        "text": "It is just as advertised.",
+        "date": "Reviewed in the United States on November 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does the jpb",
+        "userName": "Sophisticated purchaser",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3DTXTMRIY5P1O",
+        "text": "Light controlled by this switch would flicker when off (not talking about the switch itself, that works fine and lights up when switch is off). Simple, standard, 120v single pole light switch to one LED light. Shouldn't happen. Poor/no directions written on box so you have to destroy box to see the poor directions.",
+        "date": "Reviewed in the United States on September 30, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Controlled lights flicker when off.",
+        "userName": "George Prudent",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3RP49WWW460DO",
+        "text": "Was working okay on the fluorescent bulbs with total power 160 Watts. Yesterday installed LED 46 Watts light panel. Panel is flickering in darkness when light is off, switch is blinking when off.",
+        "date": "Reviewed in the United States on April 24, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not good for LED",
+        "userName": "Yevgeniy",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2RU4XOCKQPHSO",
+        "text": "Installed in the hallway by my front door to better find the switch when entering at night. The soft dim glow works perfectly to guide me just as desired. Easy to install. Very satisfied.",
+        "date": "Reviewed in the United States on February 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly what I needed",
+        "userName": "Dave",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2S758E9QP0B52",
+        "text": "Wish the light was a little brighter but went from zero darkness to instant switch location. Easy to install",
+        "date": "Reviewed in the United States on February 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "D K",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1LISSD0BYAZER",
+        "text": "Works very well. I installed it in the dark room that made it to be located easy.",
+        "date": "Reviewed in the United States on January 8, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice",
+        "userName": "rusty nail",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R31FH1QKRTPKLR",
+        "text": "I have had lighted switches before that were much brighter. If you want a soft lit switch, this would be the one for you. Standard size and went in easily; easy to install.",
+        "date": "Reviewed in the United States on December 31, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Very dim",
+        "userName": "Stan M.",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RE486RV4GQKXM",
+        "text": "Wanted a lighted switch for the bathroom. This one works OK. Not too bright that it is blinding, or lighting up the room. But enough light that the grandkids can find it sure enough.",
+        "date": "Reviewed in the United States on November 19, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Not too bright for bedroom",
+        "userName": "tell family",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3PWQYWYAFSCKI",
+        "text": "Not what I had in mind",
+        "date": "Reviewed in the United States on November 18, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "Meh",
+        "userName": "Kia",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R19EKX8R370NG0",
+        "text": "I like the product but installation was a little sketchy, I thought it would be more straight-forward to replace my existing single-pole switch. But this new one doesn't provide clear markings as to line vs load, and instructions were almost non-existent. Probably a slam-dunk for an electrician, but I'm a novice homeowner. Once installed it works just fine.",
+        "date": "Reviewed in the United States on November 17, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fine product, works as expected.",
+        "userName": "DepecheMood",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R98GP5N4GDD7A",
+        "text": "Very nice amount of light at the sides/top of the toggle switch, coming from behind the toggle switch. Works fine with the LED bulbs on this line, no flickering. Needed a reference point during dark hours to avoid the wall end area, and this is just enough light at the light switch toggle area only, for reference/distances purposes. The toggle itself is white, but the light transmits thru the clear plastic framing the toggle itself. (Legrand Seymour single pole lighted toggle 15A light switch).",
+        "date": "Reviewed in the United States on November 7, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice back-lit light switch",
+        "userName": "Jon",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1DJCWY26XZ9FW",
+        "text": "Works, but wish it was a little brighter.",
+        "date": "Reviewed in the United States on November 4, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works, but wish it was a little brighter.",
+        "userName": "JiminChico",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2L7SQT7DDBW1L",
+        "text": "I bought 10 of these, and about half of them, when in the off position, leak a little current, intermittently. This is a real problem for bedroom lights, which visibly strobe at night",
+        "date": "Reviewed in the United States on November 3, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "leaky",
+        "userName": "Peter Bermudez",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1HD5SZVI789JW",
+        "text": "Worked exactly as described. Lights nicely in the dark.",
+        "date": "Reviewed in the United States on October 10, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly",
+        "userName": "Cal Smith",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2A65JA0ZTWCA2",
+        "text": "Great safety feature and easy to install",
+        "date": "Reviewed in the United States on October 2, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Convenient",
+        "userName": "annette",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3AK8BGVX7LBYF",
+        "text": "Good light switch",
+        "date": "Reviewed in the United States on September 12, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good light switch",
+        "userName": "Chekmait",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1XXCYYCBO6O6A",
+        "text": "its ok",
+        "date": "Reviewed in the United States on August 20, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "switch it up",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1OHMPJ9ZMAYN1",
+        "text": "This switch was bought to replace one in our master bath. The old one became loose and floppy. This one is easy to toggle and yet it feels solid. The only thing I wish I had noticed is that it's metal colored. Our faceplate is white. So the switch has a line of silver/chrome color around it. But it doesn't look bad at all. Had I noticed I'd have bought a white one. I am very happy with this one, though.",
+        "date": "Reviewed in the United States on August 9, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice and solid switch",
+        "userName": "CJ555",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R38GYD4GHSQLFG",
+        "text": "Awesome Purchase",
+        "date": "Reviewed in the United States on August 7, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome Purchase",
+        "userName": ":-)",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R554YYGHLAW4C",
+        "text": "I am comparing this to a transparent plastic illuminated switch that I also use, and find this one much less noticeable when illuminated. Not bright enough.",
+        "date": "Reviewed in the United States on August 2, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "Illumination is not significant",
+        "userName": "E. Letchinger",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2HD3LTP2CCR86",
+        "text": "I would search for a different brand if I could do over. The body of the switch have a raised rectangular area around the switch. This causes the switch plate cover to not sit flat.",
+        "date": "Reviewed in the United States on July 29, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Fit issues due to the raised area around the switch",
+        "userName": "cos",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1OIFJONEU6ZBX",
+        "text": "I am disappointed that the light portion of the switch is so dim. The quality of the switch seems to be just fine.",
+        "date": "Reviewed in the United States on June 9, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Dim light",
+        "userName": "Paul N",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000BVZBMU",
+        "productTitle": "Legrand Pass & Seymour 660WSLCC10 Trademaster 15 Amp Single Pole Illuminated Toggle Light Switch, Lighted When Off, Residential Grade, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 104,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 712,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 20
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R15X40UGSGQI8F",
+        "text": "Good switch, love how it lights up. No complaints. Uodate. My ceiling light has a very weak, fast flash with this switch. House has two wire wiring, no ground included. What's wrong here?",
+        "date": "Reviewed in the United States on May 10, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switch",
+        "userName": "Kem",
+        "numberOfHelpful": 0,
+        "variationId": "B000BVZBMU",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

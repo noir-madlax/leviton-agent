@@ -1,0 +1,2622 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:54:43.269865",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0C3HGGYHG",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0C3HGGYHG",
+    "title": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+    "brand": "MOES",
+    "model_number": NaN,
+    "price_usd": 19.99,
+    "rating": 4.1,
+    "reviews_count": 467.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B0C3HGGYHG"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3OIYVLGELOSPS",
+        "text": "Does not connect to wifi no matter what I do. Really unfortunate.",
+        "date": "Reviewed in the United States on May 20, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn’t work",
+        "userName": "Cristian",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RYLD7KOJFQMFD",
+        "text": "This switch lasted 6 months exactly, and then became completely unresponsive to the physical controls over the last 2 weeks. Don’t waste your time on this one.",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Pick something else",
+        "userName": "Patrick Cunningham",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R21GWC2LMJWJ60",
+        "text": "Change your Wi-Fi and all hell breaks lose. The app won't help to connect this device to a new Wi-Fi network. It won't help you to add the switch again with the hope that it will let you connect to the new Wi-Fi. The app's add-device function won't find the switch, so it tells you to put the switch in a pairing mode, but there is no where to tell you how to put the switch in the pairing mode. You can try to add the device manually, but the app would make you search through dozens of different devices, and my smart switch device is not on the list. There is no search function to find your device without manually browsing through their dozens of devices. The more I write this review, the more mad I'm at the company for their laziness, the more I reduced the number of stars. It's down to one star now.",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Inferior app!",
+        "userName": "Chitown388",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R85OOVP14FO6H",
+        "text": "Really like the feature of this switch, it controls my bath room light and vent with timed turn-off. However, the physical button becomes unresponsive after 1 year of use. Will buy from reputable brand next time.",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Great feature but poor reliability.",
+        "userName": "Marty Fan",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6578f91e-2cbb-42e5-aca7-abd36e7209e5/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1VY798JSF4ZDJ",
+        "text": "Switch works as intended haven’t had a issue yet and owned for over a year.",
+        "date": "Reviewed in the United States on April 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good",
+        "userName": "Ralph Rodriguez",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3DTUD7R8A7FUO",
+        "text": "Bad device. We are not a year in yet, and it stopped working. Lasted about 7 months.",
+        "date": "Reviewed in the United States on March 28, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bad switch",
+        "userName": "N. Solomon",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2AHVUTDA44RMW",
+        "text": "Connected to the wifi with no problems. Looks nice. Quality is good. Switch is push button. These are early to clean. This is a good bang for ur buck. Definitely recommend",
+        "date": "Reviewed in the United States on March 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value",
+        "userName": "Bella1",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R191BRHNBMU9XW",
+        "text": "Everything was good: installed, easy app & configuration, integration with google home. But then within 3-6 months all of them stopped working. I install about 10 of them and pretty much all stop responding to the button. Control from the app works but the switch itself does not. I would recommend not to use them ever.",
+        "date": "Reviewed in the United States on January 22, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Within less than 6 months they all stop working",
+        "userName": "rtfh",
+        "numberOfHelpful": 2,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RG5T8B1LUXCHN",
+        "text": "Very nice and neat looking switch. Easy to install and simple to connect to the wifi. Looks good quality and works without any problem.",
+        "date": "Reviewed in the United States on January 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Sleek and smart switch",
+        "userName": "Mydah Malik",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RCII2MVB5UZ3C",
+        "text": "1 gang size (they are all 1 gang size) (the listing uses the term \"gang\" to refer to how many buttons it has). 1 gang is the standard size light switch size that you will see in 99% of US households works with alexa and google assistant. i only use google and it works fine no hub required",
+        "date": "Reviewed in the United States on January 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "no hub required",
+        "userName": "BruSkies",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2W5ARJAVLVN9N",
+        "text": "connecting to Alexa for easy on/off control. , but since it's a smart switch, having Alexa to manage the switch is better than manually. This way, build quality isn't an issue.. The design is simple, and installed very easy",
+        "date": "Reviewed in the United States on January 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very convenient",
+        "userName": "Kiesha",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/618VIvY33oL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/618hk++EbqL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61I+OjDhH9L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61w2lk8TPZL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3SNVXXTYC3HH0",
+        "text": "I got it for my room and it is very easy to use. Will order another for kids room as well",
+        "date": "Reviewed in the United States on January 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Avinash",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2V2BX9EELVFQ0",
+        "text": "Had about a year and switch stopped working. Had electrician out to diagnose and switch is no longer sending voltage to device.",
+        "date": "Reviewed in the United States on December 27, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stoped working",
+        "userName": "garysum",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3LPIF7OX6SRBD",
+        "text": "nice double light switch easy to install nice to have different levels of lighting",
+        "date": "Reviewed in the United States on December 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "powerful",
+        "userName": "Solomon Rosenberg",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R31UTR3RJ7SIEN",
+        "text": "This is a great switch and easy to use and install. Love what it does. The price is better than the big box store.",
+        "date": "Reviewed in the United States on December 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "High quality and low price",
+        "userName": "Thomas",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2E1USY852Y7KC",
+        "text": "It works as intended and is pretty easy to install",
+        "date": "Reviewed in the United States on December 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as intended",
+        "userName": "khashayar youssefi",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3JR4IQYF61CVW",
+        "text": "The things I really like about the switch is the ease of use. The switch connects up with no issues and works with my favorite AI lady Alexa turn off the lights!",
+        "date": "Reviewed in the United States on December 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart switch works",
+        "userName": "Malik",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RIZOKFSAARNIT",
+        "text": "Demasiado bueno, es súper fácil de instalar. Y su función es buenisima! Lo recomiendo mucho!",
+        "date": "Reviewed in the United States on December 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Buenisimo",
+        "userName": "Andrea tellechea",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1HG4V0NHEZ5HL",
+        "text": "The switches are great. Easy to install and work perfectly nb",
+        "date": "Reviewed in the United States on December 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart Switch",
+        "userName": "Eddie",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1IIBTKMHJD6VT",
+        "text": "My dad loves these smart lights, it is a game changer since he can use it with alexa and his phone so he does not have to get up to turn his lights on and off. Great gift for parents and elderly!",
+        "date": "Reviewed in the United States on December 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Upgrade",
+        "userName": "SP",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RQIBDXA3LYY3M",
+        "text": "It came with proper installation instructions so was not very difficult to install. The size matches with standard switches so didn't need to cut anything. Was easy to connect and works quite well with Google assistant.",
+        "date": "Reviewed in the United States on December 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "Shohaib",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61X7ZLDx3nL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61jQfUkub0L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61yGb-TzygL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71HPTI11GtL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RTWKHG1145WFV",
+        "text": "Loving these MOES Smart Double Light Switches! They've completely transformed my home into a smart haven. The installation was straightforward, and the app setup was quick and simple. Now the lights are controlled by voice or my iPhone. Switch functions well and blends with the other switches throughout my apartment. I linked it with my Google Home too.",
+        "date": "Reviewed in the United States on December 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Smart light switch",
+        "userName": "JC",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1OQ8B75KT1LV0",
+        "text": "I love this!! I was going to get a smart switch from Home Depot but i saw this and it was half the price so i thought might as well. And it’s amazing!",
+        "date": "Reviewed in the United States on December 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Half the price and twice as good.",
+        "userName": "profeta",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RXM834FZ1LON3",
+        "text": "wifi is great. Control using Alexa. will purchase more.",
+        "date": "Reviewed in the United States on December 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "works great!",
+        "userName": "fqqk",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R23CBIQY8BIH54",
+        "text": "I bought this switch with a specific purpose in mind. I wanted to convert a double gang set of switches to one slot so I could install an outlet in the other. One of the switches to be replaced controls the light in a walk in closet. I like motion switches for closets, but this one is on a wall outside the closet. So, by making it a smart switch I could put a stand alone motion detector inside the closet and set routines to turn it on and off. This switch fit the bill. Physical installation was straightforward and easy. Find the supply hot wire and both loads, hook to the marked terminals at the top of the switch. Add a jumper from the neutral wires since the old switches were load only. I followed the directions and downloaded the MOES app and created an account. Tried to add the switch and it warned me about 2.4 GHz wifi only. My ISP provided gateway REALLY wants you to use the same SSID for 5 and 2.4 GHz networks and it is a PITA to change it. I had a 2.4 only extender available and switch my phone to it and was able to set up the switch. Then I went to set up the link to my SmartThings app so I could control it with a Zigbee motion detector. The instructions told me to link SmartLife, which I had already done for some smart plugs I have had for a couple of years. That's when I figured out the MOES app is just a pared down version of SmartLife. Deleted the switch from the MOES app and opened SmartLife. The switch was already detected and added with a single click. SmartLife then made it available to SmartThings and I was able to set the routines using my Third Reality motion detector. So, my advice is skip the MOES app and use SmartLife instead. Integration to SmartThings and Alexa are easier.",
+        "date": "Reviewed in the United States on December 7, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Product is OK. App is trash. Use SmartLife instead.",
+        "userName": "D. Jennings",
+        "numberOfHelpful": 2,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51JDrD5+s4L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RWYETS7A8PA8T",
+        "text": "Works great, looks great, totally worth it",
+        "date": "Reviewed in the United States on December 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "As an electrician",
+        "userName": "Angry geek",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2CN4GBI2G99IZ",
+        "text": "Been looking for a wifi smart switch that works as manual switch . After series or purchases and trials , I finally got the one that does exactly what I wanted . Happy with this purchase . I can now go ahead and turn all of my regular switches to this .",
+        "date": "Reviewed in the United States on December 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly what I needed",
+        "userName": "ogirri festus",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61Z3G1t14uL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2MG2YKS69X20N",
+        "text": "Very easy to use outlet, just make sure its 2.4ghz band. Easy set up.",
+        "date": "Reviewed in the United States on December 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to use interface",
+        "userName": "TranDaMan",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3URAP9FC79WD",
+        "text": "Esto es un desastre total. Después de tanta espera.de este.producto NO LO COMPRES!!! Dont buy this product is inconplete and damage !!",
+        "date": "Reviewed in the United States on November 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Le faltan tornillos de conexión parece algo usado",
+        "userName": "RAFAEL J PEREZ",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61qaEQKRslL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61rXiYJxs5L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61sB+JnH9GL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/cdd361e3-824d-455b-bf38-3a1cc305954f/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RMEX9IBUNPCPB",
+        "text": "Nice finish and easy to access",
+        "date": "Reviewed in the United States on November 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfect easy to install",
+        "userName": "mike",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RH2LYERNSMANH",
+        "text": "After three months using the switch stopped working, doesn’t turns on the lights manually and doesn’t connect to the network. Terrible product",
+        "date": "Reviewed in the United States on November 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Terrible quality",
+        "userName": "David",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R112MESJMPX1DU",
+        "text": "Works great manually or through Alexa.",
+        "date": "Reviewed in the United States on November 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Working fine",
+        "userName": "1OldGeek",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R29806TQ43K90H",
+        "text": "perfect",
+        "date": "Reviewed in the United States on October 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "Hernando Brenes",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71gJRmZ8I2L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2N91HTDGJG0OO",
+        "text": "Easy to install, value for money, fit is perfect",
+        "date": "Reviewed in the United States on October 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Value for money",
+        "userName": "Rajveer",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71gqq-XwNIL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71urPAX+ADL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1WGGWSY6LI286",
+        "text": "My husband installed it and it works flawlessly and looks wonderful! Instructions provided were great and installation is really easy. These switches only work on 2.4GHz which I should've checked before I ordered, but it isn’t a problem for me since our network has both. The device works with the Tuya Smart app. which I was already familiar with because of some other appliances in the house. These light switches work really fast and accurate and work with our Google setup. So far, I am pretty pleased with the quality and how affordable these are.",
+        "date": "Reviewed in the United States on October 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "nice solid light switch",
+        "userName": "Elena",
+        "numberOfHelpful": 2,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R27XY5FNASV5ZN",
+        "text": "Purchase in March , functioned as advertised for almost exactly 6 months and now totally dead.",
+        "date": "Reviewed in the United States on October 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed after 6 months",
+        "userName": "3xter",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RY7JH3LGYCS4B",
+        "text": "Really easy to connect to phone and works really well",
+        "date": "Reviewed in the United States on September 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to connect",
+        "userName": "Chana",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2MC78354XHLKU",
+        "text": "We are remodeling our house and we’ve been changing out our light switches for these modern switches. My husband installed it and they look fabulous. It’s so helpful not to have to get up to turn off the light. I absolutely love it and it’s worth every penny.",
+        "date": "Reviewed in the United States on September 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "So much needed",
+        "userName": "Valentina Dominguez",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RTMS1JNRTB76Q",
+        "text": "As I have been digging deeper into the smart home rabbit hole, this smart switch has been perfect to replace my regular switches on Smart light bulbs. It is annoying when you install a smart lightbulb on a regular switch and then accidentally turn the lights switch off. Then that defeats the entire purpose of the smart bulb and you have to manually turn the switch on for it to work again. Installation is really easy and the instructions provided were great. I definitely recommend these smart switches to bring your smart home to the next level.",
+        "date": "Reviewed in the United States on September 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for advanced smart home users!",
+        "userName": "Matt H",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51zEVT2rVPL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61RtLjfWuYL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3JDF3OP41N4Q4",
+        "text": "I bought two of these after a kitchen remodel. I loved the look of them but after 6 months both switches barely work. I will have to replace them with a different style. The on/off is very erratic now. Sometimes it take a10-15 try’s just to turn one light on or off. Not sure if there is a warranty if any sort.",
+        "date": "Reviewed in the United States on September 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working after 7 months",
+        "userName": "foweezy",
+        "numberOfHelpful": 2,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R12YZIIJXSMIZM",
+        "text": "Excellent and quality snart switch. Easy to add to my smart home.",
+        "date": "Reviewed in the United States on August 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent smart switch.",
+        "userName": "Wallace",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1FZ2961DY3P9Q",
+        "text": "After about 6 months all three I purchased no longer function properly when physically pressed. I have to hold the button for 3-4 seconds for it to work, and even then it delays for another 3-4 seconds. I think it's a physical issue because they are still 100% reliable via automation. TLDR: Physical buttons wear out; smart home automation works great.",
+        "date": "Reviewed in the United States on August 21, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "It doesn't last",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2X8TAWPGG4HZT",
+        "text": "Others have commented on the limited 10 Amp capacity of the switch and its acceptance of only small gauge wire. It is not UL approved. It is CE approved which means it is appropriate for European use not US use. With the migration to LED lighting a switch from 15 amp to 10 amp lighting circuits may be coming soon. But don't use this in a non lighting situation. You need the advise of a licensed electrician. It is not safe for homeowners without training to use these devices.",
+        "date": "Reviewed in the United States on August 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "This is not certified for US",
+        "userName": "glc",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71kvQ8naCKL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1E2UV0L09NV6Q",
+        "text": "I installed it in my bathroom to control the vanity light and fan. After 6 months, the buttons didn't seem to work often. Thought maybe it was caused by the damp environment... but the smart features still worked. Today ... the smart features stopped working. It's only been about 8 months and I need to replace it.",
+        "date": "Reviewed in the United States on August 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't last",
+        "userName": "overloaded1",
+        "numberOfHelpful": 3,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2K6R0H6ZFA65C",
+        "text": "After installation the connection to Alexa worked for a day and then would not stay connected- so certainly doesn’t work as advertised there. Bought the switches in January and now 8 months later they won’t turn on unless you press them many times, and once on they won’t turn off unless you press a dozen times and finally get lucky. Don’t waste your money on these switches.",
+        "date": "Reviewed in the United States on August 9, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Doesn’t last and doesn’t work as advertised",
+        "userName": "Kim B",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1VDM9KSQV3ZQ9",
+        "text": "Only one that worked well with wifi and Alexa without disconnecting",
+        "date": "Reviewed in the United States on August 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked perfectly",
+        "userName": "Michael Monroe",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RFNAKPY89SYZI",
+        "text": "After having to return another brand of 2 gang smart switches because they would not work correctly with Alexa... these work correctly. They were easy to install and add to the App. After adding the MOES skill to Alexa, the switch showed up. Alexa was able to control both switches. I don't care for the snap on cover plate so I use a normal screw on cover plate. I use the top switch to control the light and the bottom switch for the fan in my ceiling fans.",
+        "date": "Reviewed in the United States on July 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with Alexa, easy to get working",
+        "userName": "Scott",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3FHR8NRFT801X",
+        "text": "This is a switch that was built so poorly, I am concerned about turning it on and off without breaking it. I just missed my return window by a few days. Otherwise I would’ve sent this part back and bought something else.",
+        "date": "Reviewed in the United States on July 20, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor durability",
+        "userName": "Spoons",
+        "numberOfHelpful": 2,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R25G3KRQZ35G4F",
+        "text": "These wee affordable and easy to setup and use manually and in the app. I have one issue and one problem with them so far. Firstly they only work on 2.4GHz which isn’t a problem for me since my home network is dual band. But I can see issues with range from access points and overall connectivity issues because of the 2.4ghz. Secondly is I’ve had one freeze up where it turned on the lights it is attached to and refused to respond manually or through the app. I had to cut the power to it and then force it into pairing mode. Will definitely keep an eye out for similar issues with the others",
+        "date": "Reviewed in the United States on July 18, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Great product 95% of the time",
+        "userName": "CappiD",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C3HGGYHG",
+        "productTitle": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 98,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 471,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 5
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R142D9ODRR79IG",
+        "text": "The switch loses connection with WiFi and the click becomes imprecise after some time of use.",
+        "date": "Reviewed in the United States on July 17, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not satisfied with the product",
+        "userName": "Javier H.",
+        "numberOfHelpful": 0,
+        "variationId": "B0C3HGGYHG",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 2 Gang"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

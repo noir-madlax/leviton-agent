@@ -1,0 +1,38 @@
+{
+  "product_title": "Legrand radiant RH4FBL3PTCCCV6 0-10V Preset Decorator Rocker Dimmer Light Switch with Locator Light for Flourescent Light Fixtures, Single Pole/3-Way, White/Light Almond/Ivory (1 Count)",
+  "product_category": "Commercial 0-10V Dimmer Switches",
+  "total_reviews": 1,
+  "review_analysis": {
+    "phy": {},
+    "perf": {
+      "ease of use": {
+        "a@easy to change the color": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "b@worked great with 0-10 volt controlled dimmable lighting": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "0-10 volt controlled dimmable lighting": {
+        "+": {
+          "b": [
+            0
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:01.672720"
+}

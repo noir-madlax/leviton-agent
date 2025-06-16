@@ -1,0 +1,489 @@
+{
+  "product_title": "Enbrighten Almond Z-Wave Plus Smart Light Switch with QuickFit and SimpleWire, 3-Way Ready, Compatible with Alexa, Google Assistant, ZWave Hub Required, Repeater/Range Extender, Toggle, 14293",
+  "product_category": "Smart Hub Dependent Switches",
+  "total_reviews": 43,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@smaller footprint inside junction box": {
+          "+": [
+            40
+          ]
+        },
+        "B@bigger than simple switches": {
+          "-": [
+            14
+          ]
+        },
+        "C@fits in single gang wall box with room for wires": {
+          "+": [
+            34
+          ]
+        },
+        "D@plenty of room in middle position of triple gang box": {
+          "+": [
+            17
+          ]
+        }
+      },
+      "wiring": {
+        "E@four connection wires pre-installed with plenty of slack": {
+          "+": [
+            17
+          ]
+        },
+        "F@requires neutral wire": {
+          "-": [
+            28,
+            33
+          ]
+        },
+        "G@includes neutral wire with tinned ends": {
+          "+": [
+            7
+          ]
+        },
+        "H@wire connectors are sturdy": {
+          "+": [
+            35
+          ]
+        }
+      },
+      "toggle": {
+        "I@toggle does not move full to up or down position": {
+          "-": [
+            33
+          ]
+        }
+      },
+      "appearance": {
+        "J@doesn't match existing switches": {
+          "-": [
+            33
+          ]
+        }
+      },
+      "status_indication": {
+        "K@no status LED": {
+          "-": [
+            29
+          ]
+        },
+        "L@doesn't illuminate when off": {
+          "-": [
+            13
+          ]
+        },
+        "M@not backlit on switch": {
+          "-": [
+            16
+          ]
+        },
+        "N@lighted switch when on": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "sound": {
+        "O@makes loud click sound": {
+          "-": [
+            23
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@fragile": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@power cutoff/surge can kill switches": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@burns out easily from surges": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "d@one failed after about a year or two": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@short lives, switches died one by one": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "f@several failed after storm": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "g@easy to install and connect": {
+          "+": {
+            "E": [
+              17
+            ]
+          }
+        },
+        "h@difficult to pair with zwave system": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@keeps dropping connection": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "j@very kludgy procedure for adding to SmartThings": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "k@extremely tricky connecting to Ring Alarm": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "l@easy with Smart Things": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "m@connects up first time every time": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "n@constantly disconnects from Z wave system": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "o@much easier to include and adapt": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "p@integrated perfectly in Ring Alarm z-wave setup": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "q@pairing was problematic, had to reset multiple times": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "r@PITA to get connected to Smartthings after failures": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "s@did not pair with Vera hub": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "t@failure to go into pairing mode": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "switching_speed": {
+        "u@much quicker switching": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "v@switch response almost instantaneous": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "w@works with SmartThings": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "x@works with Ring Alarm": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "y@works well with Ring system and Alexa": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "z@works flawlessly with Home Assistant": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "aa@works great with Vivint Home System": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "bb@not compatible with anything": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "cc@requires re-installing on hub every time power is lost": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "three_way_functionality": {
+        "dd@every 3-way in house did not work": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "ee@can't work with conventional 3-way switch": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ff@can be permanently damaged if used with conventional 3-way": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "lighting_effects": {
+        "gg@lights pulsated": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "hh@no flicker at all on LED bulbs": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_automation": {
+        "+": {
+          "w": [
+            0
+          ],
+          "x": [
+            3
+          ],
+          "y": [
+            28
+          ],
+          "z": [
+            29
+          ],
+          "aa": [
+            34
+          ],
+          "g": [
+            17
+          ],
+          "l": [
+            3
+          ],
+          "m": [
+            19
+          ],
+          "o": [
+            35
+          ],
+          "p": [
+            38
+          ],
+          "u": [
+            35
+          ],
+          "v": [
+            38
+          ],
+          "hh": [
+            38
+          ]
+        },
+        "-": {
+          "h": [
+            2
+          ],
+          "i": [
+            2
+          ],
+          "j": [
+            1
+          ],
+          "k": [
+            3
+          ],
+          "n": [
+            20
+          ],
+          "q": [
+            29
+          ],
+          "r": [
+            19
+          ],
+          "s": [
+            18
+          ],
+          "t": [
+            27
+          ],
+          "bb": [
+            24
+          ],
+          "cc": [
+            24
+          ]
+        }
+      },
+      "three_way_switch_replacement": {
+        "-": {
+          "dd": [
+            11
+          ],
+          "ee": [
+            39
+          ],
+          "ff": [
+            39
+          ]
+        }
+      },
+      "porch_light_automation": {
+        "+": {
+          "N": [
+            36
+          ]
+        }
+      },
+      "bathroom_fan_control": {
+        "+": {
+          "?": [
+            26
+          ]
+        }
+      },
+      "light_automation_with_fan": {
+        "+": {
+          "hh": [
+            38
+          ]
+        }
+      },
+      "basement_garage_installation": {
+        "+": {
+          "A": [
+            29
+          ]
+        }
+      },
+      "Alexa_integration": {
+        "+": {
+          "y": [
+            28
+          ],
+          "p": [
+            38
+          ],
+          "v": [
+            38
+          ]
+        },
+        "-": {
+          "bb": [
+            24
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:32.633740"
+}

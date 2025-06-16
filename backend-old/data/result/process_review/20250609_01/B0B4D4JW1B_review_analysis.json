@@ -1,0 +1,97 @@
+{
+  "product_title": "(12 Pack) UNIELE Ultra Slim Dimmer Switch Single-Pole/3 Way for 300W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, 15A/120V/60Hz, ETL Listed, White",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 4,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek design": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "slider": {
+        "B@smooth slider operation": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "switch": {
+        "C@smooth switch push operation": {
+          "+": [
+            2
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works perfect": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@functions well": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@some units did not work": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "smoothness": {
+        "d@smooth operation": {
+          "+": {
+            "B,C": [
+              2
+            ]
+          }
+        }
+      },
+      "value": {
+        "e@exceeded expectations for the price compared to other more expensive ones": {
+          "+": {
+            "A,B,C": [
+              2
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "installation": {
+        "+": {
+          "e": [
+            2
+          ]
+        }
+      },
+      "home lighting control": {
+        "+": {
+          "b": [
+            1
+          ]
+        }
+      },
+      "blinking issue with LED lights": {
+        "-": {
+          "?": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:21.920267"
+}

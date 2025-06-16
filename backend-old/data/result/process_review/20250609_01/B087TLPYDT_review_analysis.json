@@ -1,0 +1,294 @@
+{
+  "product_title": "4 Pack Illuminated Light Switch, Lightswitch with LED Night Light, Automatic On/Off Sensor, Single Pole Switch, 15Amp 120/277Volt,White",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "illumination": {
+        "A@not bright": {
+          "-": [
+            3,
+            7,
+            15,
+            21,
+            25,
+            35
+          ]
+        },
+        "B@very sufficient illumination": {
+          "+": [
+            4
+          ]
+        },
+        "C@bright but not eye-hurting": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "light_direction": {
+        "D@light points up against wall": {
+          "-": [
+            13,
+            21
+          ]
+        },
+        "E@light illuminates area above switch": {
+          "+": [
+            47
+          ]
+        }
+      },
+      "color": {
+        "F@stark white color vs off-white decor": {
+          "-": [
+            47
+          ]
+        }
+      },
+      "cover_plates": {
+        "G@cover plates not included": {
+          "-": [
+            1,
+            10,
+            23,
+            26,
+            28,
+            29,
+            32,
+            39,
+            43,
+            44
+          ]
+        }
+      },
+      "build_quality": {
+        "H@break easily when bumped": {
+          "-": [
+            27
+          ]
+        },
+        "I@feels good in hand": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "led_functionality": {
+        "J@led lamps do not light up": {
+          "-": [
+            9,
+            16,
+            30,
+            33,
+            38
+          ]
+        },
+        "K@flickering lights": {
+          "-": [
+            5,
+            12
+          ]
+        }
+      },
+      "switch_type": {
+        "L@three way switch works as single pole": {
+          "-": [
+            48
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              2,
+              15,
+              17,
+              24,
+              46
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "b@works as intended": {
+          "+": {
+            "?": [
+              2,
+              7,
+              20,
+              42
+            ]
+          }
+        },
+        "c@turns on randomly and sparks": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "d@defective switches": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "durability": {
+        "e@held up to description and worked flawlessly": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "f@need replacement within 2 weeks": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        }
+      },
+      "visibility": {
+        "g@makes switch visible in dark": {
+          "+": {
+            "A": [
+              3,
+              4,
+              6,
+              7,
+              12,
+              20,
+              36,
+              40,
+              42,
+              47
+            ]
+          }
+        },
+        "h@blinding light at night": {
+          "-": {
+            "D": [
+              13
+            ]
+          }
+        }
+      },
+      "night_light_function": {
+        "i@automatic night light activation": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "j@doesn't work as night light": {
+          "-": {
+            "A": [
+              3
+            ]
+          }
+        }
+      },
+      "switch_orientation": {
+        "k@upside down switch operation": {
+          "-": {
+            "D": [
+              21,
+              31
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "hallway_navigation": {
+        "+": {
+          "g": [
+            4,
+            7,
+            46
+          ]
+        }
+      },
+      "bathroom_use": {
+        "+": {
+          "g": [
+            8,
+            12,
+            37,
+            40
+          ]
+        }
+      },
+      "kitchen_use": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "garage_use": {
+        "+": {
+          "g": [
+            36,
+            40
+          ]
+        }
+      },
+      "home_upgrade": {
+        "+": {
+          "a,b": [
+            2,
+            11
+          ]
+        }
+      },
+      "guest_assistance": {
+        "+": {
+          "g": [
+            12
+          ]
+        }
+      },
+      "replacing_night_lights": {
+        "+": {
+          "g": [
+            17,
+            45
+          ]
+        }
+      },
+      "remodeling_projects": {
+        "+": {
+          "e": [
+            19,
+            22
+          ]
+        }
+      },
+      "dark_locations": {
+        "+": {
+          "g": [
+            42
+          ]
+        }
+      },
+      "safety_improvement": {
+        "+": {
+          "g": [
+            4,
+            45
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:20.577676"
+}

@@ -1,0 +1,634 @@
+{
+  "product_title": "Leviton IllumaTech Dimmer Switch for Incandescent Bulbs, IPI10-1LZ, White",
+  "product_category": "Incandescent Compatible Dimmer Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@modern look and nice design": {
+          "+": [
+            29
+          ]
+        },
+        "B@attractive appearance with subtle green LED glow": {
+          "+": [
+            45
+          ]
+        },
+        "C@looks nice": {
+          "+": [
+            23
+          ]
+        }
+      },
+      "color options": {
+        "D@comes with three switch covers in white, ivory and almond": {
+          "+": [
+            3
+          ]
+        },
+        "E@includes faceplate in all three colors to match decor": {
+          "+": [
+            5
+          ]
+        },
+        "F@different color face plates make it versatile": {
+          "+": [
+            42
+          ]
+        },
+        "G@covers don't come in black": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "size": {
+        "H@challenging big size, takes effort to get wires into standard box": {
+          "-": [
+            41
+          ]
+        }
+      },
+      "LED indicator": {
+        "I@green LED illuminated when light is off": {
+          "+": [
+            34
+          ]
+        },
+        "J@green light makes switches easy to find in the dark": {
+          "+": [
+            46
+          ]
+        },
+        "K@light is great to find switch in the dark": {
+          "+": [
+            31
+          ]
+        }
+      },
+      "button design": {
+        "L@large on/off button is easy to hit": {
+          "+": [
+            46
+          ]
+        },
+        "M@easy to hit as an on/off button": {
+          "+": [
+            45
+          ]
+        }
+      },
+      "manufacturing": {
+        "N@labeled \"Assembled in Mexico\"": {
+          "+": [
+            18
+          ]
+        },
+        "O@labeled \"Made in China\"": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "mounting hardware": {
+        "P@mounting screws are shorter than customary making installation a problem": {
+          "-": [
+            18
+          ]
+        }
+      },
+      "wiring": {
+        "Q@wiring convention has been changed making direct replacement a nuisance": {
+          "-": [
+            18
+          ]
+        },
+        "R@has more wires than old dimmer": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "instructions": {
+        "S@instructions are impossible to read": {
+          "-": [
+            18
+          ]
+        },
+        "T@came with clear directions": {
+          "+": [
+            16
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@installed easily": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@easy to install": {
+          "+": {
+            "?": [
+              14,
+              25
+            ]
+          }
+        },
+        "c@simple installation": {
+          "+": {
+            "F": [
+              42
+            ]
+          }
+        },
+        "d@very simple to install": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "e@took 15-20 minutes to install": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "f@installation difficulty when screw insert broke": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "g@worked perfectly": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "h@works as advertised": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@works as it should": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "j@works exactly as described": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "k@gets the job done": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "l@does the job well": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        }
+      },
+      "dimming performance": {
+        "m@dimmer works smoothly": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "n@very smooth to use": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "o@very accessible and easily adjusted dimmer": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "p@works with no flicker or dimmer issues": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "q@no buzzing": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "r@light doesn't dim, stays on high": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "s@could have more play when choosing how much to dim/brighten": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "power handling": {
+        "t@works great with 1000 watts": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "u@works great powering 1000 watt waterfall pump": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "v@handles 10x60W bulbs without getting too hot": {
+          "+": {
+            "H": [
+              41
+            ]
+          }
+        },
+        "w@could handle more watts": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "x@cannot handle 1000w at all": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "y@can't handle high inrush current from halogen lamps": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "heat management": {
+        "z@gets very hot": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "aa@started to smoke and heat up excessively": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "ab@never gets too hot with 600W load": {
+          "+": {
+            "H": [
+              41
+            ]
+          }
+        }
+      },
+      "durability": {
+        "ac@lasted 1 month": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ad@one failed after few years": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ae@started malfunctioning after 2 years": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "af@switch wore out after two years": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "ag@replacing half of switches after two years": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "ah@switch is only 6 years old and failing": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ai@started malfunctioning after 10 months": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "aj@plan on replacing every 3 years": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ak@on 3rd switch in about 6 years": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "al@8-10% annual failure rate": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "am@oldest is almost 8 years old with no problems": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "an@replacement lasted 10 years with lots of use": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ao@switches work well and stand up to 3 boys constantly using them": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "switch mechanism failure": {
+        "ap@on off toggle fails frequently": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "aq@had to press on-off button several times to make it work": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "ar@stopped working completely couldn't turn lights off": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "as@stopped reliably turning on and off": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "at@to turn on or off would take 3-10 pushes": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "au@switch part fails, when you push nothing happens": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "av@on/off switch fails": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "aw@push button switch stops catching": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "physical degradation": {
+        "ax@they crack": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacement": {
+        "+": {
+          "g": [
+            0
+          ],
+          "?": [
+            2,
+            3,
+            6,
+            11,
+            24
+          ]
+        },
+        "-": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "kitchen use": {
+        "+": {
+          "?": [
+            19
+          ]
+        },
+        "-": {
+          "av": [
+            43
+          ]
+        }
+      },
+      "bathroom ceiling lights": {
+        "+": {
+          "m": [
+            44
+          ]
+        }
+      },
+      "entry foyer light": {
+        "+": {
+          "e": [
+            16
+          ]
+        }
+      },
+      "LED ceiling lights": {
+        "+": {
+          "?": [
+            20
+          ]
+        }
+      },
+      "chandelier with 14 75W equivalent LEDs": {
+        "+": {
+          "q": [
+            34
+          ]
+        }
+      },
+      "church electrical circuits": {
+        "+": {
+          "c,F": [
+            42
+          ]
+        }
+      },
+      "track lights": {
+        "+": {
+          "m": [
+            44
+          ]
+        },
+        "-": {
+          "af": [
+            27
+          ]
+        }
+      },
+      "waterfall pump": {
+        "+": {
+          "u": [
+            5
+          ]
+        }
+      },
+      "back-yard security lighting": {
+        "+": {
+          "v": [
+            41
+          ]
+        }
+      },
+      "hallway lighting": {
+        "-": {
+          "r": [
+            33
+          ]
+        }
+      },
+      "incandescent bulbs only": {
+        "+": {
+          "?": [
+            12
+          ]
+        }
+      },
+      "high-wattage halogen lamps": {
+        "-": {
+          "y": [
+            27
+          ]
+        }
+      },
+      "800W load": {
+        "-": {
+          "at": [
+            35
+          ],
+          "av": [
+            43
+          ]
+        }
+      },
+      "1000W applications": {
+        "+": {
+          "t": [
+            25
+          ]
+        },
+        "-": {
+          "x": [
+            47
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:47.161149"
+}

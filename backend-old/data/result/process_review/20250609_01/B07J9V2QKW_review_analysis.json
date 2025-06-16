@@ -1,0 +1,650 @@
+{
+  "product_title": "GE CYNC Smart Dimmer Light Switch, Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 4-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "button": {
+        "A@hard to press, requires pressing center/top/bottom to register": {
+          "-": [
+            41
+          ]
+        },
+        "B@crammed together rocker switches with limited space": {
+          "-": [
+            3
+          ]
+        },
+        "C@requires precise square pressing in middle to function": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "light_ring": {
+        "D@too bright in dark room, could read a book with multiple switches": {
+          "-": [
+            6
+          ]
+        },
+        "E@soft glow ring around switch": {
+          "+": [
+            35
+          ]
+        },
+        "F@lit LED circle looks sharp and serves as night light": {
+          "+": [
+            22
+          ]
+        },
+        "G@color changing LED hardware": {
+          "+": [
+            41
+          ]
+        }
+      },
+      "mounting": {
+        "H@finicky mounting with tape that floats away from wall": {
+          "-": [
+            3
+          ]
+        },
+        "I@mounting plates do not end up flush with wall": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "depth": {
+        "J@took work to fit in wall box with wires and wire nuts": {
+          "-": [
+            17
+          ]
+        },
+        "K@two dimmers do not fit in metal 1900 box with 2-gang mud-ring": {
+          "-": [
+            25
+          ]
+        }
+      },
+      "appearance": {
+        "L@very nice looking": {
+          "+": [
+            22
+          ]
+        },
+        "M@looks awesome": {
+          "+": [
+            28
+          ]
+        },
+        "N@good design, looks elegant": {
+          "+": [
+            31
+          ]
+        },
+        "O@nice design": {
+          "+": [
+            38
+          ]
+        }
+      },
+      "wiring": {
+        "P@4-wire design with neutral wire": {
+          "+": [
+            35
+          ]
+        },
+        "Q@wire nuts included are one size too small": {
+          "-": [
+            40
+          ]
+        },
+        "R@no traveler wire despite 4-wire advertising": {
+          "-": [
+            48
+          ]
+        }
+      },
+      "packaging": {
+        "S@magnetic flap on box case": {
+          "+": [
+            17
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@easy WiFi setup without special tricks": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "b@flawless immediate connectivity out of box": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "c@will not connect to WiFi": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "d@constantly lose WiFi connection": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@WiFi connection isn't stable": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "f@connectivity became unreliable after company change": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "g@loses connection to internet every other month": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "h@only works on 2.4GHz spectrum requiring powerful router": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "switching": {
+        "i@will not turn off, stays on": {
+          "-": {
+            "?": [
+              0,
+              1
+            ]
+          }
+        },
+        "j@functions on and off but does not dim": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "k@turns lights on and off as expected": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "l@two switches on same circuit turn each other on/off": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "m@often does not turn on/off without precise pressing": {
+          "-": {
+            "C": [
+              24
+            ]
+          }
+        },
+        "n@very slow to respond": {
+          "-": {
+            "A": [
+              5
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "o@dims lights properly": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "p@brightness control works well": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "q@wish it could go dimmer more than 5%": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "r@dimming doesn't work out of box": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "durability": {
+        "s@burned out after three months with buzzing and pop": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "t@switches fail with 165 VAC overvoltage condition": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "u@far too easy to fry with no tolerance for minor errors": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "v@went crazy with flickering lights after 6 months": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "installation": {
+        "w@easy to install": {
+          "+": {
+            "?": [
+              2,
+              21
+            ]
+          }
+        },
+        "x@simple to install in uncrowded box": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "y@easy to wire up": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "z@single pole install really easy": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "aa@connecting 3-way toggle was tricky": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "programming": {
+        "ab@programming is fairly simple": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ac@programming was often a problem or impossibility": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ad@could not be programmed without internet access": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ae@pairing was challenging but manageable": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "af@app is poor and difficult to program": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "smart_features": {
+        "ag@works great with Google Home and Alexa": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "ah@easily integrated with Alexa": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ai@does not work with SmartThings": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "aj@no compatibility with Apple Home": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "ak@only works with Cync app": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "al@cannot be connected to Home Assistant hub": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "app_functionality": {
+        "am@Cync app is not great": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "an@app is terrible": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ao@app doesn't allow timer settings": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ap@cannot set schedule unless Bluetooth-connected": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "aq@app worked half the time": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "ar@app lacks basic features like scheduling": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "as@app doesn't log in half the time": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "at@device schedule in motion detection doesn't work": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "voltage_tolerance": {
+        "au@cannot handle switched outlets": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "av@off isn't really off, small voltage still present": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "noise": {
+        "aw@makes high pitch buzzing noise": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_automation": {
+        "+": {
+          "ag": [
+            4,
+            21,
+            22
+          ],
+          "ah": [
+            22
+          ]
+        },
+        "-": {
+          "ai": [
+            12
+          ],
+          "aj": [
+            3
+          ],
+          "ak": [
+            3
+          ],
+          "al": [
+            9
+          ]
+        }
+      },
+      "phone_control": {
+        "+": {
+          "a": [
+            17
+          ],
+          "b": [
+            10
+          ],
+          "k": [
+            10
+          ]
+        },
+        "-": {
+          "c": [
+            14
+          ],
+          "d": [
+            5
+          ],
+          "e": [
+            38
+          ],
+          "as": [
+            36
+          ]
+        }
+      },
+      "dimming_lights": {
+        "+": {
+          "o": [
+            10
+          ],
+          "p": [
+            35
+          ]
+        },
+        "-": {
+          "j": [
+            0
+          ],
+          "q": [
+            49
+          ],
+          "r": [
+            12
+          ]
+        }
+      },
+      "night_lighting": {
+        "+": {
+          "F": [
+            22
+          ]
+        },
+        "-": {
+          "D": [
+            6
+          ]
+        }
+      },
+      "scheduling": {
+        "-": {
+          "ao": [
+            5
+          ],
+          "ar": [
+            42
+          ],
+          "at": [
+            31
+          ]
+        }
+      },
+      "motion_detection": {
+        "-": {
+          "at": [
+            31
+          ]
+        }
+      },
+      "three_way_switching": {
+        "-": {
+          "aa": [
+            29
+          ],
+          "R": [
+            48
+          ]
+        }
+      },
+      "LED_fixtures": {
+        "-": {
+          "?": [
+            19
+          ]
+        }
+      },
+      "home_theater": {
+        "+": {
+          "?": [
+            34
+          ]
+        }
+      },
+      "closet_lighting": {
+        "+": {
+          "?": [
+            49
+          ]
+        }
+      },
+      "outdoor_lighting": {
+        "-": {
+          "?": [
+            19
+          ]
+        }
+      },
+      "whole_house_installation": {
+        "+": {
+          "L": [
+            22
+          ],
+          "M": [
+            28
+          ]
+        },
+        "-": {
+          "t": [
+            9
+          ],
+          "f": [
+            39
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:26.014155"
+}

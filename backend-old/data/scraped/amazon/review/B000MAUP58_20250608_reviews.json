@@ -1,0 +1,2596 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:03:49.059161",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B000MAUP58",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B000MAUP58",
+    "title": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+    "brand": "Lutron",
+    "model_number": NaN,
+    "price_usd": 78.0,
+    "rating": 4.4,
+    "reviews_count": 251.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Electronic Low Voltage Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B000MAUP58"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1UKE4AWXY69F7",
+        "text": "These reverse-phase dimmers are required for some LED lighting solutions, and I've noticed that they increase the longevity and reduce the flicker of LED bulbs even when reverse-phase is not required. They're expensive, so you can do the math in terms of what makes more sense to you: replacing LED bulbs more often, or buying a reverse-phase dimmer one time so that the bulbs last longer.",
+        "date": "Reviewed in the United States on May 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best of the best as dimmers go",
+        "userName": "Anonymous anteater",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2MZKQJV1ISO0W",
+        "text": "If you have low voltage under the counter led lights that buzz when you dim them, this EL dimmer may solve the problem. This dimmer is design to be used with led lights that use an \"electronic\" transformer to step down the voltage from 120 volts to 12-24 volts. These under the counter lights are often daisy chained with snap out wires. If you use the standard box store TRIAC dimmers they will buzz. TRIAC dimmers are \"leading edge chopping\" dimmers that chop up the leading edge of the AC sine wave. They do not play well with electronic transformers. This is a more expensive dimmer that cuts out the trailing edge of the sine wave and is better tolerated by electronic transformers. This dimmer requires a neutral wire in your switch box unlike the TRIAC dimmer. This dimmer does not play well with old school \"magnetic\" transformers that use a pair of wire coils to lower the voltage. You need to confirm that your switch box has a neutral wire so I give this product three stars for ease of install. This dimmer is also much more expensive than its CL cousin so I give it three stars for value. If you just want to get rid of the hum, you should be able to remove your TRIAC dimmer and replace it with a standard on off switch.",
+        "date": "Reviewed in the United States on August 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Stops buzzing from low voltage under counter lights with \"electronic\" transformers.",
+        "userName": "JAL",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R29PO51OBU6HT4",
+        "text": "4/5 because it worked with our halo canless recessed lights and no buzzing BUT it appeared that the items were either returned, previously opened, or returned and we paid for new items.",
+        "date": "Reviewed in the United States on February 26, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Sent used/opened items",
+        "userName": "J Siu",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61Ls8xAeI8L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71hxYC5HeOL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71z6pjPar4L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RR42BPTW08T4F",
+        "text": "Fast shipping, worked as it should, thanks",
+        "date": "Reviewed in the United States on May 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "ELV dimmer are pricey but did its job",
+        "userName": "Yesplease1234",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1OMP8EPUDZIBV",
+        "text": "No buzzing from this dimmer and it's easy to adjust.",
+        "date": "Reviewed in the United States on December 19, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Noise free dimmer! Works great with LEDs.",
+        "userName": "gbonamazon",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RYTXSNI7XO2M7",
+        "text": "Moved into a house where ceiling LED lighting fixtures constantly emitted a buzz. Having read that this is usually caused by the dimmer switches on the lighting circuits, I tried every variation available at the local Lowes and Home Depots but none of them eliminated the buzz. This one did and was worth the additional expense!",
+        "date": "Reviewed in the United States on November 14, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great at eliminating LED buzzing",
+        "userName": "Unmesh",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2TEQSEJ2S5E4W",
+        "text": "Pricey. Does the job perfectly. Well worth the cost.",
+        "date": "Reviewed in the United States on August 17, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Right product for the job.",
+        "userName": "Jerry L. Bronikowski",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2PQC1HBV738DK",
+        "text": "I filled a bunch of new light fixtures with high-quality dimmable LEDs, and installed a Lutron Maestro - only to find there was a terrible buzzing/humming sound whenever the lights were turned on. After some internet research, I thought I'd give this dimmer switch (Lutron Diva ELV) a try. It worked perfectly...immediately and completely eliminated all sound. Twice the cost, but worth it.",
+        "date": "Reviewed in the United States on June 2, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Stops the buzzing on Dimmable LEDs",
+        "userName": "Ryan Miles",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R29S73T3YUGTOT",
+        "text": "open box and used 5 month after purchase, not working. broken piece",
+        "date": "Reviewed in the United States on May 3, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not working",
+        "userName": "Allen Wu",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2MFWS2M5X5I23",
+        "text": "Only dimmer we have used that doesn’t buzz. Even with 6 LED can lights. Impressive.",
+        "date": "Reviewed in the United States on March 24, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Expensive, but worth the elimination of “buzz”",
+        "userName": "Ryan Williams",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1B9P7WKZFJBAJ",
+        "text": "I’ve gone through three or four different digital dimmers to control a stairway LED can light that draws a max of 9 volts at full power. Every other dimmer flickered irritatingly or did not turn off the fixture completely in the off position, since the small trickle of voltage used to operate the fancy dimmer switch was also enough to cause the fixture to glow at night. This model is not digital and it DOES require a neutral wire. You will also need sufficient depth in your wall box, this switch is as deep as standard digital dimmers, about 1 1/2” deep into the wall. Also important, if using in a 3-way (or 4-way) configuration, the dimmer MUST be installed on the load side (I.e., the outlet closest in the circuit to the light fixture, not the end that has the hot wire). Luckily, my wall box had a neutral wire. Unluckily, I would have preferred the dimmer to be on the other end of the 3-way circuit. But it turns out the location was not an issue once it was installed. I’ve done (too much) research on low voltage LED dimmers, and apparently this is the only model currently on the market (early 2021) that reliably works with LED lights of all voltages. I concede that some smart dimmers will also work with low voltage LEDs, but you’ll still need a neutral wire, and as for me, I didn’t need Alexa to control a side staircase light 😛. Yes, it’s expensive. But I just sucked it up; it works where other models failed. Thanks, Lutron! Now lower your prices!",
+        "date": "Reviewed in the United States on March 17, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "FINALLY a dimmer that works with low voltage LED fixtures!",
+        "userName": "TK in Chgo",
+        "numberOfHelpful": 5,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2BRCL3YVUIWVX",
+        "text": "I bought this in hopes that the flickering and random bulbs going out would stop. It was no different than my regular Diva switch, i'm returning it. I also have another one of these ELV dimmers on some under counter lights and they buzz a lot.",
+        "date": "Reviewed in the United States on January 23, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn't stop the flicker",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RVNXRRBYUR2CK",
+        "text": "We used this switch to dim our LED strip connected to Mean Well power supply with dedicated dimming line connection. Be aware, it's not a typical LED dimmer switch and is not designed to work with ordinary Home Depot Style LED lights.",
+        "date": "Reviewed in the United States on December 12, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron Diva 0-10v does the job it promises",
+        "userName": "P. Chaploutskiy",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/718jQJKSHnL._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71HSlZQR81L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3QNSX5Q6AOV8",
+        "text": "Evl is the only way I'll go from now on.I tried over 8 different dimmers.Different manufacturers,big box store dimmers.Switches would buzz,lights would buzz,service panel/breaker box would buzz and for whatever reason my stove would buzz.Sometimes the lights would be quiet and switch yet my stove upstairs would buzz and service panel.Another switch it would flip flop.These switches fixed it all.No noise,works great!!",
+        "date": "Reviewed in the United States on December 10, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fixed all my buzzing",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R10TSXXOPEXZWK",
+        "text": "This product will eliminate the buzzing when the LED lights are dimmed. This is my 3rd install of recessed lights and the 2nd time using ELV switches. They are not cheap but if your lights flicker or buzz when dimmed it is worth the investment. Lights: Halo BLD BLD6089SWHR",
+        "date": "Reviewed in the United States on October 20, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Eliminate buzzing from you LED lights",
+        "userName": "Mike",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RMORKMF13IGNB",
+        "text": "Great dimmer switch. It took care of the buzzing from the switch and lights. Light are the led from Lowes",
+        "date": "Reviewed in the United States on October 1, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "No more buzzing",
+        "userName": "LeoHess2",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3UO5MNTRQC50V",
+        "text": "Installed this dimmer on four can lights works great absolutely no buzzing or hum just quite.",
+        "date": "Reviewed in the United States on June 6, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "No buzz or hum",
+        "userName": "Bruce e.",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R20SJNLCXLSOIL",
+        "text": "If you can get a neutral wire to your light switch box, then this switch will probably remedy any LED fixture buzzing you have from a standard CL dimmer. It's expensive, but if you are stuck with buzz, it might be worth the money.",
+        "date": "Reviewed in the United States on May 22, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "So much quieter!",
+        "userName": "Collin B",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3FZGL8K4HCS2Z",
+        "text": "this is the helpful ELV dimmer that does work with Toggled D-series dimmable LED tubes.",
+        "date": "Reviewed in the United States on May 7, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "works with dimmable LED tubes",
+        "userName": "TC",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RLTOVQG20INR9",
+        "text": "You need this dimmer if your LED bulbs or fixtures buzz. This summer covers most drivers",
+        "date": "Reviewed in the United States on August 12, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does what it’s supposed to do",
+        "userName": "Rick N.",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2JRH1Q4QMPVO8",
+        "text": "It's pricey but it's the only dimmer switch that worked with Commercial Electric LED Recessed Downlight with Nightlight Trim without buzzing or flickering. All of the led dimmers recommended by manufacturer were buzzing.",
+        "date": "Reviewed in the United States on June 8, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Commercial Electric",
+        "userName": "James",
+        "numberOfHelpful": 6,
+        "variationId": "B000MAUP58",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/51AwYffla-L._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71F7Io7xhoL._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71g1yFjfk8L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2PIF91VDNZ556",
+        "text": "Easy to install",
+        "date": "Reviewed in the United States on May 23, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "john santi",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R30B7MNEEVSAY6",
+        "text": "Item shipped to me was an item that was returned to Amazon as a defect. My electrician pointed this out to me and it is too late to return it. Remodeling is a pain!",
+        "date": "Reviewed in the United States on May 20, 2019",
+        "rating": "1.0 out of 5 stars",
+        "title": "Item shipped to me was an item that was returned to Amazon as a defect.",
+        "userName": "Julie",
+        "numberOfHelpful": 2,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3BCZQPV99OB5L",
+        "text": "Like many others, I am here because the cheaper Diva Dimmer by Lutron, which is \"LED compatible\", made my LED bulbs buzz like crazy. This was for a dining room fixture that hangs low and would kill the mood. So here I am spending 2.5x the cost of the first switch to get this second one but I am happy to report this fixes the humming problem! Honestly a $75 switch is insane, but cheaper than trying 6 new good looking LED bulbs. If you are in an older place, be forewarned that you need 5 wires to make this work in a 3-way (2 switch) configuration. Lucky for me there was a neutral wire jammed all the way in the back. I have no idea how the wires work, I have never installed a complicated switch like this one before, but if you read the instructions it should go easy enough. I also found it helpful to take pictures of everything before I started helping me keep the wiring straight since everyone likes to color code things differently... Took a star off for price, but the product is great.",
+        "date": "Reviewed in the United States on March 4, 2019",
+        "rating": "4.0 out of 5 stars",
+        "title": "Buzzing LED fix",
+        "userName": "Carl",
+        "numberOfHelpful": 2,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3CDI1PYWXDLMD",
+        "text": "Expensive dimmer but the only thing that will work on a low voltage LED light. The instructions were clear, accurate, and well illustrated. Easy-to-install for an occasional do-it-Yourselfer.",
+        "date": "Reviewed in the United States on November 26, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy-to-install",
+        "userName": "Porter",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3IWQQEJVRO0A2",
+        "text": "You can't get these at home depot and apparently the electricians don't know about them. After a number of very expensive LED fixtures failed (fortunately under warranty) the lighting store told me to get this type. Now the fixtures dim properly and don't hum at all. They cost more but actually work right for low power LED fixtures. All dimmers seem to clip the sine wave (PWM), but these clip the trailing side, not the leading side so the fixture does not get a high voltage surge. Instead it comes on smooth and cuts off at the end. Had to do a lot of reading to figure this out. Even the Lutron site is vague about what is going on so I may be missing some details. Works with the PIXE panels that HD used to carry. I suspect they had too many returns from use with the wrong dimmer type. Now that fixture dims properly without humming too.",
+        "date": "Reviewed in the United States on October 5, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Actually dims LED fixtures without hum and failures.",
+        "userName": "MT",
+        "numberOfHelpful": 7,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3H2FKUTRR7TVK",
+        "text": "I didn't know that this dimmer have an integrated orange light inside.",
+        "date": "Reviewed in the United States on October 1, 2018",
+        "rating": "4.0 out of 5 stars",
+        "title": "Light integrated in Dimmer",
+        "userName": "Philippe Chayer",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3D1MAZGF8UNV9",
+        "text": "eliminated \"buzz\" on LED dimmable lights. Caveat: It requires a neutral \"white\" conductor, this wasnt wired to the existing 3-way toggle switch, but there was a bundle of white wires connected together in the switch box, just added the white wire from the dimmer to that bundle and it worked. Your house depending on how new it is may or may not have the white neutral wire.",
+        "date": "Reviewed in the United States on August 28, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Zero Buzz",
+        "userName": "Endocine",
+        "numberOfHelpful": 3,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3BLIQ45YKILZQ",
+        "text": "worked great",
+        "date": "Reviewed in the United States on August 26, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Rick Baird",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2EQS5FKMNWC15",
+        "text": "I wanted 3000K lights in my nook since I have 3500K in the kitchen next to it. Actually I'd prefer 32-3300K, but those aren't really available in A19 bulbs. Anyways, there weren't very many options at the time, so I just went with HD's 75W ecosmart bulbs in bright white. The original dimmer at that location was an incandescent Diva, so I thought the Diva C.L. was all I needed since it says it's for LED's. The dimming worked fine but there was a very noticeable buzzing (at least to me, the significant other told me I was going crazy). I thought maybe it was just the bulbs. HD recently started carrying Feit bright white bulbs so I tried those in 75W and there was still a bit of buzzing but a little less than the ecosmarts. I finally decided to try out this dimmer as a last resort, but it should have been first. The ecosmart bulbs did indeed still buzz like another reviewer said, but when I changed them to the Feits I couldn't believe my ears. I could actually hear myself think while sitting directly under the bulbs. I don't even know why the other dimmers say they're LED compatible. Do yourself a huge favor and start off with the ELV version,",
+        "date": "Reviewed in the United States on July 26, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Use ELV dimmers for LED lights!",
+        "userName": "JAbena",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2ZMS77SXISB6H",
+        "text": "After reading several articles as well as many Amazon reviews, I decided the steep price tag on this switch would be worth it to fix the buzz from my LED bulbs (EcoSmart 11W from HD). I had very high hopes, but unfortunately it did not help the buzz one bit. The switch and dimmer function just fine, but I do think it has somewhat of a cheap feel as has been noted in some reviews. Install was easy, but it does take up a lot of space in the box so you have to be very efficient with getting wires situated properly. The switch itself is very deep and it has 5 pre-installed wires rather than screws to attach to (all are used for a 3-way). A neutral is required so make sure you have one in the box where you are installing before you buy.",
+        "date": "Reviewed in the United States on May 30, 2018",
+        "rating": "3.0 out of 5 stars",
+        "title": "Did not help LED buzz at all",
+        "userName": "FigureItOut",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3MWG1HBBSIRVQ",
+        "text": "I recently purchased FEIT Electric LED Retrofit lights at Costco. I love the lights and the design is superior, but I hated the buzz/ hum that I was getting from the lights with my original 15 year old dimmer switch. I didn't want to give up my lights (yet), so I ordered another new dimmer that stated it was for LED lights, the Lutron model: DVWCL-153PH-WH, White. It still buzzed, so I called FEIT Electric directly and they were so kind to send me one of their own dimmer switches for free. I installed the FEIT dimmer switch, and it was a bit better, but still buzzed. I still wasn't ready to give up the great lights, so I tried this last and most expensive switch, because I had read a post somewhere that an Electronic Low Voltage (ELV) switch almost always solved the light buzzing problems... it did! I highly recommend this switch to eliminate LED light buzz. Just keep in mind you need a Neutral wire (white in my case) in the electrical box to connect to.",
+        "date": "Reviewed in the United States on April 25, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Eliminates LED light Buzz",
+        "userName": "peterb",
+        "numberOfHelpful": 13,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2DOL1Q5GCC11M",
+        "text": "I have purchased 100’s of items on Amazon, and this is my first review. I had to let everyone know these switches are worth ever expensive penny. I tried switch after switch to rid my undercabinet lighting of transformer hum and LED flicker, and this switch was the cure. Look no further. This will fix your LED problems!",
+        "date": "Reviewed in the United States on February 5, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "I have purchased 100’s of items on Amazon, and ...",
+        "userName": "Joann",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2HZM2E1UX1LPH",
+        "text": "Works well with my installed WAC Lighting SOLARAIL Kit with LED Lighting. Smooth dimmer!",
+        "date": "Reviewed in the United States on January 27, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "SSA",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/714aHq87a+L._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/71kWS6qt0XL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1SPGVZBPGDDIA",
+        "text": "work properly...learn your dimmers and what you need to properly function before opening.",
+        "date": "Reviewed in the United States on January 13, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "work properly... learn your dimmers and what ...",
+        "userName": "Michael D",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3VSQLADBG7I7N",
+        "text": "This dimmer solved my buzzing issues. I had tried 4 other models from he local hardware store but this is the only one that did it. Still a *tiny* buzz that can hardly be heard. Nothing like what I was getting before. I'm using EcoSmart brand in-ceiling LED can lights. The dimming is much more fine tuned and predictable compared to the cheaper CL models. No flicker at low voltage. Highly recommend. Note that you will need a neutral wire with this dimmer, so check your outlet first!.",
+        "date": "Reviewed in the United States on January 5, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nothing like what I was getting before",
+        "userName": "Craig",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3SFSPMT9CXHFL",
+        "text": "Eliminates buzz with LED.",
+        "date": "Reviewed in the United States on December 6, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Buzz kill",
+        "userName": "N. R Wood",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RHTX8UMHVR1D6",
+        "text": "Expensive but worth it if you are dealing with LED noise/buzz/flickering. Installed 14 LED lights in our basement and had immediate buzzing and flickering. Reviews of the lights warned using cheaper dimmers would cause this. Tried two 150w $30/each dimmers which helped but still had some buzzing. This Lutron 300w dimmer did the trick. No buzz or flicker. It is a little deeper and wider than most others so if you have a shallow wall box or have a lot of wires inside the box it may be a little tough to fit this dimmer all the way in. I had to trim all excess wire lengths to give enough depth for this switch. A deeper box would also have worked fine.",
+        "date": "Reviewed in the United States on November 13, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worth the price if dealing with LED buzzing or flickering",
+        "userName": "Sean Kenworthy",
+        "numberOfHelpful": 3,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3J4SS3M86YTBR",
+        "text": "I used these dimmers specifically for 12V DC 6\" Dia PR15s from LED Waves when connected on a three-way (two switches). They work perfectly and have a good range of dimming and no flickering",
+        "date": "Reviewed in the United States on July 29, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmers to be used with low voltage fixtures",
+        "userName": "Cliff Hurlbut",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2FZBCX574NYBC",
+        "text": "These are beautiful and functional; they work well with the electronic low voltage lights I am replacing at my home. I love the matching cover plates Lutron have for these dimmers.",
+        "date": "Reviewed in the United States on May 31, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Beautiful and functional.",
+        "userName": "C. Lauer",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3MND482VAMFTF",
+        "text": "Great dimmer and just the solution for the buzzing sound we were getting with our new Hyperikon LED lights. These dimmers do require that your house be wired with a white neutral cable. I opened up the wall panel before ordering to make sure we had the white wires. Everything worked out fine, except that I did get two of my blacks crossed on the dimmer's red and yellow cables. I did read that if you cross them, your lights might flicker. As it turns out, the lights weren't flickering but the dimmer's amber night light was. The other dimmer was fine, so on a hunch I switched the blacks and the flickering stopped. Nice product and decent instructions (they made sense to someone with zero electrical experience).",
+        "date": "Reviewed in the United States on May 9, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "My first high-voltage DIY",
+        "userName": "Kaveh A",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3HQYOLN468JJA",
+        "text": "This dims very well with my aspect LED ultra low profile lights in my attic nursery. I tried other ELV dimmers for LED lights, and they all still flickered when dimmed. This was super expensive for a dimmer, but in the end i guess its worth it!",
+        "date": "Reviewed in the United States on April 11, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great dimmer for aspect LED ultra low profile recessed lights",
+        "userName": "Doug M.",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1GQN0X3UFZ4X7",
+        "text": "Very expensive compared to other dimmers, and with lots of mixed-message information on the site about this type of dimmer. It does not completely, silently dim LED fixtures, except at the lowest setting, hums at all other settings. Go to Lutron's site, and it's very difficult to determine from the information present whether or not this device is correct for LEDs -- if not, what the hell should one use to silently dim LED fixtures? I'm basically OK with it, but at the price paid, it should work PERFECTLY.",
+        "date": "Reviewed in the United States on February 23, 2017",
+        "rating": "2.0 out of 5 stars",
+        "title": "EXPENSIVE AND LESS THAN IMPRESSED WITH PERFORMANCE",
+        "userName": "Thomas Gibbs",
+        "numberOfHelpful": 3,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1XULC64N38WQZ",
+        "text": "Awesome. No hum.",
+        "date": "Reviewed in the United States on February 2, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Colin MacAllister",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1822XHJSXJRTU",
+        "text": "Works exactly as needed to dim my fixtures. 08-07-2023 Updated comments: I have used Lutron dimmers for 50 years, most recently, LED dimming needs as the technology has evolved. I've received several e-mail queries from other Amazon members regarding if this dimmer will work with their light fixture and/or LED bulb. I highly recommend that if you're wondering if this dimmer (or any other Lutron dimmer) will work for your lighting project, that you call Lutron customer service before buying. They are very helpful, and will ask you what dimmer model you're buying, what light fixture you're installing, what LED/incandescent/flourescent light bulb manufacturer and product number you're thinking of using, whether it's line or low voltage installation, and then they'll tell you if it will work. If they think you should use a different dimmer model or light bulb, they will tell you the exact model number of Lutron dimmer you need to purchase to ensure 100% compatibility. Leviton also has a similar customer service department (or did when I was actively installing dimmers). One other suggestion I strongly suggest you follow when installing low-voltage rated dimmers: TURN OFF THE CIRCUIT BREAKER that controls the line voltage feed to the wall switch/junction box you're installing the switch. Unfortunately, it's very easy to burn out the dimmer while installing it if all power feed to it isn't turned off first. While prices have come down over the years for these low-voltage rated dimmers, they're still quite expensive compared to the ordinary ones you're used to using around your house. Thanks for reading, and I hope my updated comments help you.",
+        "date": "Reviewed in the United States on August 30, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Low Voltage Dimmer comment-CALL Lutron before buying + they will ensure it is for your installation",
+        "userName": "ovalhed",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RL9K91YPW8NCD",
+        "text": "Outstanding—had terrible differential mode noise on my AC line coming from the Lutron CL dimmers. They cause pans on my induction burner to buzz, and also caused the transformer in my audio amp to buzz. Buzz changed with the amount of LED dimming. Tried everything—resistive dimmers for incandescent lights, halogens, different LED bulbs, switched the circuit's phase on the electrical panel, isolation transformers, linear noise filters, RFI/EMI filter: NOTHING WORKED....expect this ELV dimmer by Lutron. Since installing this dimmer, the buzzing is now totally gone.",
+        "date": "Reviewed in the United States on June 27, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Totally eliminated AC line noise causing buzz in my induction and audio system",
+        "userName": "Mike",
+        "numberOfHelpful": 9,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3OO277QZEY4MR",
+        "text": "While more expensive than most dimmer switches, this one really solved my \"buzzing\" recessed LED light problem.",
+        "date": "Reviewed in the United States on March 28, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Expensive But Eliminates Buzz in LED Recessed Lighting",
+        "userName": "Brent Fortman",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3SS1UP04VVO31",
+        "text": "It almost fixed the buzzing issue we had for the cheaper LED dimmer. This isn't a momentary switch. Has to be flipped. Amazon sent us a broken switch (working like a momentary switch) and we had to order a replacement. Still happy with it because we spent so much time figuring out why the light buzzes.",
+        "date": "Reviewed in the United States on March 23, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazon sent us a broken switch (working like a momentary switch) and we had to order a ...",
+        "userName": "Mrs. Garten",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2G1P9PL7CVM5I",
+        "text": "Solved buzzing LED flood light bulbs and audio speaker humming.",
+        "date": "Reviewed in the United States on March 4, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Raquel",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000MAUP58",
+        "productTitle": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 70,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 251,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1XLDC7PKCFSDK",
+        "text": "Great dimmer for use with low voltage LEDs",
+        "date": "Reviewed in the United States on March 1, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Sean O",
+        "numberOfHelpful": 0,
+        "variationId": "B000MAUP58",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Pattern Name: Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

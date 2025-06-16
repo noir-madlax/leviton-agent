@@ -1,0 +1,392 @@
+{
+  "product_title": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 13,
+  "review_analysis": {
+    "phy": {
+      "Size": {
+        "A@Large size compared to standard switches": {
+          "-": [
+            1,
+            5
+          ]
+        },
+        "B@Bulky compared to other dimmers": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "Appearance": {
+        "C@Not the prettiest design": {
+          "-": [
+            1,
+            5
+          ]
+        },
+        "D@Ugly appearance": {
+          "-": [
+            2
+          ]
+        },
+        "E@Good looks": {
+          "+": [
+            8
+          ]
+        },
+        "F@Cleaner, more modern look": {
+          "+": [
+            7
+          ]
+        },
+        "G@Looks nicer than many other dimmer options": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "Color": {
+        "H@Not quite the same color as other white switches": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "Slider": {
+        "I@Nice large slider": {
+          "+": [
+            0
+          ]
+        },
+        "J@Easy to move slider that finger won't slip off": {
+          "+": [
+            1
+          ]
+        },
+        "K@Cheap feeling on the slider": {
+          "-": [
+            8
+          ]
+        },
+        "L@Sensitive in middle range requiring gentle touch": {
+          "-": [
+            2
+          ]
+        },
+        "M@Not uniform in brightness application": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "Switch": {
+        "N@Robust ON/OFF switch with positive snap": {
+          "+": [
+            0
+          ]
+        },
+        "O@Easy to use switch": {
+          "+": [
+            1
+          ]
+        },
+        "P@Horizontal toggle can be confusing": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "Wiring": {
+        "Q@Permanently installed lead wires (pigtails)": {
+          "-": [
+            2,
+            5,
+            8
+          ]
+        },
+        "R@Prewired with stripped and tinned wires": {
+          "+": [
+            8
+          ]
+        },
+        "S@Thin wires compared to 14AWG Romex": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "Adjustment Wheel": {
+        "T@Adjustment wheel on top right for trimming activation range": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "Wall Plate": {
+        "U@Smaller than standard switch plate cover": {
+          "-": [
+            2
+          ]
+        },
+        "V@Sits higher than switch leaving it recessed": {
+          "-": [
+            2
+          ]
+        },
+        "W@Wall plate included": {
+          "+": [
+            5,
+            10
+          ]
+        }
+      },
+      "Screws": {
+        "X@Standard #1 square bit screws instead of phillips": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "Build Quality": {
+        "Y@Solid build quality, not cheap feeling": {
+          "+": [
+            7
+          ]
+        },
+        "Z@Well built": {
+          "+": [
+            1
+          ]
+        },
+        "AA@Nice quality for the price": {
+          "+": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming Performance": {
+        "a@Dims lights smoothly with no buzzing": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@No flicker or humming at any brightness level": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "c@Dims from full brightness to barely on in smooth motion": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "d@Abrupt/sharp transition in middle of slider range": {
+          "-": {
+            "L": [
+              2
+            ]
+          }
+        },
+        "e@Flickering at intermediate intensity": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "f@No buzzing": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@Much better range of dimming than old dial dimmer": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "Power Handling": {
+        "h@Supports up to 300w for LED lighting": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "i@Did not heat up much during 300w test": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "j@Works well on dimmable LED fixtures and incandescent bulbs": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "k@Sturdy construction": {
+          "+": {
+            "Z": [
+              1
+            ]
+          }
+        },
+        "l@Expected long service life if not abused": {
+          "+": {
+            "AA": [
+              0
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "m@Works in both single switch and 3-way applications": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "n@3-way support": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "o@Range adjustment capability": {
+          "+": {
+            "T": [
+              9
+            ]
+          }
+        },
+        "p@Can be used with 3-wire or 4-wire system": {
+          "+": {
+            "Q": [
+              12
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "q@Easy to install": {
+          "+": {
+            "R": [
+              3,
+              6,
+              7,
+              8,
+              12
+            ]
+          }
+        },
+        "r@Takes up a lot of room in box": {
+          "-": {
+            "A,Q": [
+              2,
+              5
+            ]
+          }
+        }
+      },
+      "Usability": {
+        "s@Good for people with hand motor control issues": {
+          "+": {
+            "J": [
+              1
+            ]
+          }
+        },
+        "t@Can operate with elbow": {
+          "+": {
+            "O": [
+              1
+            ]
+          }
+        },
+        "u@Separate controls for on-off and dimming": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED Lighting": {
+        "+": {
+          "h,j": [
+            0,
+            5,
+            8
+          ]
+        },
+        "-": {
+          "e": [
+            8
+          ]
+        }
+      },
+      "Incandescent Bulbs": {
+        "+": {
+          "j": [
+            5
+          ]
+        }
+      },
+      "3-Way Switch Applications": {
+        "+": {
+          "m,n": [
+            4,
+            5,
+            6,
+            11
+          ]
+        }
+      },
+      "Bathroom Installation": {
+        "+": {
+          "g": [
+            10
+          ]
+        }
+      },
+      "Home Lighting Upgrade": {
+        "+": {
+          "f,l": [
+            7,
+            10,
+            11
+          ]
+        }
+      },
+      "Accessibility Applications": {
+        "+": {
+          "s,t": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:17.546008"
+}

@@ -1,0 +1,2021 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:29:49.788917",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07KZJRQYW",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 4,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07KZJRQYW",
+    "title": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+    "brand": "Maxxima",
+    "model_number": NaN,
+    "price_usd": 13.99,
+    "rating": 4.3,
+    "reviews_count": 3112.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Slide Control Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B07KZJRQYW"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3GH0E232S7KNJ",
+        "text": "Very easy install, less than 15 minutes total, and it works perfectly.",
+        "date": "Reviewed in the United States on April 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "All good",
+        "userName": "Big Kahuna",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3CEMPPWF1GOHL",
+        "text": "Bought two of these dimmers, and one of them was used, and did not work !",
+        "date": "Reviewed in the United States on December 10, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Sold me used crap !",
+        "userName": "Tim Roman",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RBPF4J5POZHF5",
+        "text": "Sorry to say these are not compatabil with high quality wifi color LEDs .",
+        "date": "Reviewed in the United States on March 17, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn't work to keep LED bulbs from flickering.",
+        "userName": "Setauket Jeff",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RZV278GZBHXY9",
+        "text": "Very satisfied with this product",
+        "date": "Reviewed in the United States on February 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "As described",
+        "userName": "Erika T.",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1R6E4Z30U5CS6",
+        "text": "When activated the lights flicker 😞",
+        "date": "Reviewed in the United States on January 14, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Dimmer flicker!",
+        "userName": "WG Bob",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R36TUUK2FT80CP",
+        "text": "Dimmer comes with dimmer plate as well. Ivory though is almond and almond is really ivory. So if you want almond...order the ivory. Has nice adjustment on it. Good instructions for 2 wire or three wire installation. Only odd thing thing is it did not come with plate screws.",
+        "date": "Reviewed in the United States on January 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good priced dimmer",
+        "userName": "MSS",
+        "numberOfHelpful": 2,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1C7IMX85LTQLF",
+        "text": "Received two switches, one ivory and one almond colors. Both of them work well, but neither matches the ivory and almond existing switches. Installed as singles, they would not be as noticeable, but in a two or three switch setup, the color difference is very apparent,",
+        "date": "Reviewed in the United States on November 7, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good Value Switch - poor color match",
+        "userName": "rhiggi8",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1EU55MQNI7Y80",
+        "text": "After I installed this switch, I discovered that the dimmer slider sticks on the left (low) side and it is difficult to get it to move right. I uninstalled it and wanted to return it but I was passed the return date which is my fault because I was ordering a bundle of things that I knew I would need for my kitchen renovation but did not get to the installation until it was after the date. Yes, my fault but nevertheless, it is disturbing since now I have paid for a low quality switch that I will likely never use. Be sure if you order this part that you check it thoroughly right away so you don't get stuck.",
+        "date": "Reviewed in the United States on October 20, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Dimmer switch sticks in the left position.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R19JMRERM7GMKD",
+        "text": "Clear directions and easy to install with all the wireless connectors needed to complete the job",
+        "date": "Reviewed in the United States on August 24, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy use",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3BG7X9MGPD8CG",
+        "text": "This dimmer is awesome! It even fits next to a GFI outlet in a two gang box. More importantly, it dims my bulbs (both LED and originally Incandescent) smoothly down to nothing. There is a little low limit adjustment wheel before you put the plate back on that allows you to set the lowest level. In essence, a custom range. Also, I tested for Radio Frequency Interference. I put an AM radio right next to it to hear the buzzing, but 18” away it was clear. Perfect.",
+        "date": "Reviewed in the United States on August 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smooth dimming, no RFI, fits w/GFI",
+        "userName": "JimRochNY",
+        "numberOfHelpful": 2,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2C2BQ9RH6QQXV",
+        "text": "Works!",
+        "date": "Reviewed in the United States on March 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works !!!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3GAASPBGZ8QPH",
+        "text": "Looks good, well made, easy to install and works great.",
+        "date": "Reviewed in the United States on February 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well made dimmer",
+        "userName": "Richard",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1SH0WUQEI8Y4P",
+        "text": "Need dimmer switch wanted simple dimmer found this switch ordered, straight forward install happy with purchase",
+        "date": "Reviewed in the United States on February 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Price Easy Install",
+        "userName": "Jim K",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RYZ0IWKH2EJ77",
+        "text": "Quality. No flicker in LED lights. Seperate brigtness level selection control. Bought two. Not sorry at all.",
+        "date": "Reviewed in the United States on November 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice! It doesn't cause the LED lights to flicker.",
+        "userName": "David Remillard",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RGPW56UA7SK1N",
+        "text": "Purchased this Dimmer switch to work with GE LED BR30 Dimmerable 19Watt Flood Lights I have in my Kitchen. When you turn the slider to a dimmer position (perhaps 30 to 35% Brightness) ...next time you turn on lights they will not come on. You must slide the dimmer to a Higher setting. So if you want to be able to use a Constant brightness setting....be aware...at least with my Well Known GE LED BR30....this dimmer switch may not turn on lights...you will need to keep its brightness at a Higher setting. I did use the Adjusting wheel to set up the Switch with the Lights...that did not resolve the issue.",
+        "date": "Reviewed in the United States on July 27, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Does not work with All Light Bulbs",
+        "userName": "denmarfl",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RBCSTLPT9QVOV",
+        "text": "Good quality easy to install.",
+        "date": "Reviewed in the United States on June 15, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Goeed quality",
+        "userName": "Richard Foster",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R38R3W7QBX28QQ",
+        "text": "Very nice switch. Easy to install. Works perfectly",
+        "date": "Reviewed in the United States on November 21, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Mathew P",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R13YW7XVX16EXW",
+        "text": "These \"dimmers\" are absolute CRAP! Regular 120v AC LED bulbs flicker when dimmed and BUZZZZZZZ when fully powered. Not worth the pollution shipping them from China. Like others ... I'd give these dimmers a MINUS five star rating if I could.",
+        "date": "Reviewed in the United States on June 17, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Absolute CRAP - a waste of diesel shipping from China. LED's buzz when ON & flicker when dimmed",
+        "userName": "One time customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3BPTOIA26NYID",
+        "text": "A small ball with spring which allows the toggling of the metal contactor rocker ON/OFF comes loose with normal use and defeats the normal ON/OFF function of the switch. I would not have another rocker switch from this manufacturer it is a waste of money.",
+        "date": "Reviewed in the United States on April 15, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Rocker switch mechanism is poorly designed, it failed with very little use",
+        "userName": "George",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1JNKCY0NXHJZN",
+        "text": "Installed it and worked great, I'm wondering if people that are having flickering issues are using an led that isn't made to be dimmable.",
+        "date": "Reviewed in the United States on April 11, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "No flickering here",
+        "userName": "mike",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3QMW0KEGTKK34",
+        "text": "You get what you pay for. This switch looks good, was easy to install and I like the sliding dimmer switch. After installing this switch our light fixture flickers randomly throughout the day; and yes, it is installed properly. We will be returning this one and purchase one from our local hardware store.",
+        "date": "Reviewed in the United States on March 5, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flickering lights",
+        "userName": "rmb",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2PECPKOTW9K2H",
+        "text": "As an electrical worker with 50 + years in the trade the instructions were easy to understand. I don't recommend persons with NO electrical background to attempt to install this unit. First the instructions DO NOT cover all the different ways a 3-Way or a Single pole switch can be wired up. Example, older home single pole switches can have only one Black and one White wire in the box. In this case the white wire is used as a Hot (power) lead supplying power to the switch. In this case there is NO neutral wire in the box. 3-Way switches are even more complicated with travelers and multiple of ways to configure each switch not explained in the instructions. Each wire whether White, Black or Red must be identified, Power, Line, Load, Traveler or neutral before making your connections. As a reminder Most CFLs and many LED lights are NOT dimmable so check first.",
+        "date": "Reviewed in the United States on October 27, 2020",
+        "rating": "4.0 out of 5 stars",
+        "title": "Not so simple",
+        "userName": "JOSEPH",
+        "numberOfHelpful": 2,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3DET0ZT4QELZ0",
+        "text": "Made our led bulbs strobe",
+        "date": "Reviewed in the United States on October 19, 2020",
+        "rating": "2.0 out of 5 stars",
+        "title": "Made our led bulbs strobe",
+        "userName": "Kevin S. Burchatz",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3JXIXU0SMFTO8",
+        "text": "Easy install and good quality",
+        "date": "Reviewed in the United States on July 28, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked as expected",
+        "userName": "sciond",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2BJGE3B8JI8G",
+        "text": "Ordered two of these dimmers and once installed to control my LED bulbs, both flicker. No amount of adjustment to the dimming wheel eliminates the flickering. Only position where I do not get flickering is full on position. Very disappointed after reading some stellar reviews. Would have returned but the \"return window is closed\". Made in CHINA. Re ordered Lutrons but they are in transit. Will report if the Lutrons prevent flicker. I have every reason to believe they will be flicker free because they are an established brand. Not recommended.",
+        "date": "Reviewed in the United States on July 9, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flicker",
+        "userName": "peter dp",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1Y0HS4NE4SGLM",
+        "text": "Brightness is not a good catagory for a dimmer switch. The better catagory would be variability. The leds they were hooked to only dim about 2/3 before shutting off. The 2nd adjustment helps some. The worst part is it causes the leds to buz in the 3k hertz down to 1k htz with the dim. Can lights are less effected than the led bulbs that screw in. Couldnt use dimmer on those even though they are dimmer rated.",
+        "date": "Reviewed in the United States on May 26, 2020",
+        "rating": "3.0 out of 5 stars",
+        "title": "Looks good, not very led friendly or full dim",
+        "userName": "martin",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RRD89ALQR3PQN",
+        "text": "Good quality good price",
+        "date": "Reviewed in the United States on February 17, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wall switch",
+        "userName": "Pat",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R38HXP8TRTARPU",
+        "text": "Works as expected, seems to be of good quality",
+        "date": "Reviewed in the United States on January 5, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "As expected",
+        "userName": "neco",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R6VFWHWR1NDWV",
+        "text": "The dimmer cuts out on the bright end (as you increase the brightness, it all of a sudden goes dim when its hour be at its brightest).",
+        "date": "Reviewed in the United States on December 30, 2019",
+        "rating": "2.0 out of 5 stars",
+        "title": "Light Dims at Bright Setting",
+        "userName": "Aaron M. Lewis",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RZ0QVRDK85FDF",
+        "text": "Got today.. already installed and works great!",
+        "date": "Reviewed in the United States on December 30, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great...",
+        "userName": "indygirlinnc",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2YKKBMIIZIPR8",
+        "text": "Excellent !",
+        "date": "Reviewed in the United States on December 17, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent on time and as advertised.",
+        "userName": "Richard Finman",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2EF8ANB0IZZ5L",
+        "text": "i liked the instructions very clear ,easy to understand. works perfectly .",
+        "date": "Reviewed in the United States on October 31, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "great!",
+        "userName": "kenny",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1R9EK91CXXT54",
+        "text": "Works well, easy to install. I like the adjustable minimum brightness setting!",
+        "date": "Reviewed in the United States on October 30, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Replacement Switch for LED can light.",
+        "userName": "DJJJS",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R19V4TI80P2M0L",
+        "text": "Purchased in both white and Ivory. Updating my house before selling. Complete light adjustment easily done. Size with wires easily fit in connection box. Horizontal light intensity slide extremely convenient. Price OUTSTANDINGLY LOWER than any others I could locate. Will purchase again if price stays about the same.",
+        "date": "Reviewed in the United States on September 7, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best Value for Money",
+        "userName": "JZ",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1GCZR4KS202GO",
+        "text": "Fixed my issue of flickering LEDs with an improper other dimmer. Good quality and nice to have slider separate.",
+        "date": "Reviewed in the United States on August 26, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dims large range smoothly",
+        "userName": "J. Styba",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RSW2YRTFCF210",
+        "text": "Works well",
+        "date": "Reviewed in the United States on July 24, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switch",
+        "userName": "Placeholder",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R31MYSLOZ3SB2",
+        "text": "We had to replace our dimmer switch for our bathroom. This switch seemed sturdier than our previous one so was very happy until we tried dimming our light for night time use. Whenever we dimmed our light to where we wanted it the light would not turn on. You could verily dim the light for it to turn on and off at that exposure which defeated the purpose of having the dimmer in the first place because it was still too bright.",
+        "date": "Reviewed in the United States on July 21, 2019",
+        "rating": "3.0 out of 5 stars",
+        "title": "Light does not come on when dimmed.",
+        "userName": "Jola",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R4R379UEDRUB2",
+        "text": "Easy to install and the fine tuning adjustment on top of the brightness adjustment is great.",
+        "date": "Reviewed in the United States on May 27, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy",
+        "userName": "Heather H.",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07KZJRQYW",
+        "productTitle": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 39,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 3112,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 67
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R12H1OHU78X641",
+        "text": "I installed this device on LED lamps. Not sure why, but it had limited range in dimming. It also did not adjust to full brightness. I tried another brand and got similar results.",
+        "date": "Reviewed in the United States on May 15, 2019",
+        "rating": "2.0 out of 5 stars",
+        "title": "LED's.... maybe not.",
+        "userName": "Some Joe",
+        "numberOfHelpful": 0,
+        "variationId": "B07KZJRQYW",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Single Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 39,
+    "pages_scraped": 4,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

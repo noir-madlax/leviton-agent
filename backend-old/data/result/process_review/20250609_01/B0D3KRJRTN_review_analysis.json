@@ -1,0 +1,493 @@
+{
+  "product_title": "ELEGRP Dimmer Switch, Touch Dimmer Light Switch for LED Lights 150W, INC/HAL 450W,Single Pole & 3 Way LED Dimmer Switch, Needs Neutral Wire, Wall Plate Included, UL Listed, 1 Pack, Matte White",
+  "product_category": "Touch Activated Dimmer Switches",
+  "total_reviews": 27,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek shallow profile": {
+          "+": [
+            0
+          ]
+        },
+        "B@modern elegant look": {
+          "+": [
+            0,
+            1,
+            2,
+            8
+          ]
+        },
+        "C@fancy futuristic look": {
+          "+": [
+            3
+          ]
+        },
+        "D@clean modern style": {
+          "+": [
+            1,
+            2,
+            8
+          ]
+        },
+        "E@slick appearance": {
+          "+": [
+            14,
+            19
+          ]
+        },
+        "F@nice modern look": {
+          "+": [
+            22
+          ]
+        },
+        "G@thin low profile appearance": {
+          "+": [
+            23
+          ]
+        },
+        "H@handsome appearance": {
+          "+": [
+            24
+          ]
+        }
+      },
+      "build_quality": {
+        "I@feels as good as expensive name-brand dimmers": {
+          "+": [
+            0
+          ]
+        },
+        "J@well made": {
+          "+": [
+            3,
+            17,
+            20,
+            22,
+            26
+          ]
+        },
+        "K@high quality finish": {
+          "+": [
+            16,
+            20
+          ]
+        },
+        "L@cheap feeling": {
+          "-": [
+            10
+          ]
+        },
+        "M@mid build quality": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "size": {
+        "N@compact in the back": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "components": {
+        "O@decorative plate included": {
+          "+": [
+            0,
+            2,
+            8,
+            15,
+            18,
+            21,
+            25
+          ]
+        },
+        "P@screwless cover plate": {
+          "+": [
+            1,
+            11
+          ]
+        },
+        "Q@stepped design faceplate": {
+          "-": [
+            15
+          ]
+        },
+        "R@dish-shaped contour smooth surface": {
+          "+": [
+            10
+          ]
+        },
+        "S@precut wire insulation": {
+          "+": [
+            11
+          ]
+        },
+        "T@plastic mounting bracket with clip-on faceplate": {
+          "+": [
+            11
+          ]
+        }
+      },
+      "wiring": {
+        "U@requires neutral wire": {
+          "+": [
+            3,
+            5,
+            8,
+            12,
+            18,
+            25
+          ],
+          "-": [
+            7
+          ]
+        },
+        "V@labeled wires and switch": {
+          "+": [
+            5,
+            7
+          ]
+        }
+      },
+      "led_indicator": {
+        "W@vertical LED light bar": {
+          "+": [
+            14
+          ]
+        },
+        "X@dimmer LED remains lit": {
+          "-": [
+            10
+          ]
+        },
+        "Y@LED too bright when light off": {
+          "-": [
+            13
+          ]
+        },
+        "Z@LED shows dimming percent": {
+          "+": [
+            14
+          ]
+        }
+      }
+    },
+    "perf": {
+      "operation": {
+        "a@smooth operation": {
+          "+": {
+            "A,B": [
+              0
+            ],
+            "?": [
+              1,
+              8,
+              16,
+              18,
+              24
+            ]
+          }
+        },
+        "b@quiet operation": {
+          "+": {
+            "?": [
+              1,
+              7,
+              11
+            ]
+          }
+        },
+        "c@soft click on/off": {
+          "+": {
+            "C": [
+              3
+            ]
+          }
+        },
+        "d@remembers last dimmer setting": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "e@no flickering": {
+          "+": {
+            "I": [
+              0
+            ],
+            "?": [
+              17
+            ]
+          }
+        },
+        "f@violent flickering": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "g@causes light bulb flickers": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "touch_functionality": {
+        "h@touch sensitivity responsive": {
+          "+": {
+            "?": [
+              8,
+              12,
+              18
+            ]
+          }
+        },
+        "i@smooth continuous touch dimming": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "j@touch functionality spotty": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "k@dimming can be jumpy": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "l@finger needs to be on switch and dimmer part": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "m@works best pressing top left or bottom right": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "n@dimming function works well": {
+          "+": {
+            "?": [
+              2,
+              12
+            ]
+          }
+        },
+        "o@precise control over light levels": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "p@light can be dimmed perfectly": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "q@dimming feature wouldn't work up or down": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "r@won't increase brightness from minimum": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "s@jumps back to lowest dim level": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "t@works single pole and 3-way": {
+          "+": {
+            "?": [
+              2,
+              8,
+              12,
+              18,
+              21
+            ]
+          }
+        },
+        "u@3-way control didn't work": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "v@compatible with LED lights up to 150W": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "w@compatible with incandescent/halogen up to 450W": {
+          "+": {
+            "?": [
+              12,
+              21
+            ]
+          }
+        }
+      },
+      "installation": {
+        "x@easy to install": {
+          "+": {
+            "S,T": [
+              11
+            ],
+            "N": [
+              16
+            ],
+            "?": [
+              1,
+              5,
+              8,
+              18,
+              23,
+              24,
+              26
+            ]
+          }
+        },
+        "y@straightforward installation": {
+          "+": {
+            "U": [
+              8,
+              18
+            ],
+            "?": [
+              12
+            ]
+          }
+        },
+        "z@more difficult to install": {
+          "-": {
+            "U": [
+              7
+            ]
+          }
+        }
+      },
+      "durability": {
+        "aa@holding up fairly well": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "ab@worked great for two days then stopped": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_lighting_control": {
+        "+": {
+          "t,h": [
+            8
+          ],
+          "p": [
+            17
+          ],
+          "o": [
+            18
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "n": [
+            5
+          ]
+        }
+      },
+      "home_lighting_upgrade": {
+        "+": {
+          "a,d,e": [
+            0
+          ],
+          "i": [
+            1
+          ],
+          "n,t": [
+            2
+          ],
+          "t,h,n": [
+            12
+          ],
+          "x": [
+            18
+          ]
+        }
+      },
+      "mood_lighting": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "night_light": {
+        "+": {
+          "Z": [
+            14
+          ]
+        }
+      },
+      "modern_home_decor": {
+        "+": {
+          "D,P": [
+            1
+          ],
+          "D": [
+            2
+          ],
+          "B": [
+            8
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:55.016746"
+}

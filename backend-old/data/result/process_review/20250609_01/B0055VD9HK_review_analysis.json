@@ -1,0 +1,457 @@
+{
+  "product_title": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks like a typical switch": {
+          "+": [
+            14
+          ]
+        },
+        "B@color is ivory, not white": {
+          "-": [
+            13
+          ]
+        },
+        "C@comes in ivory color": {
+          "+": [
+            42,
+            43
+          ]
+        },
+        "D@fits in standard switch plate": {
+          "+": [
+            37
+          ]
+        },
+        "E@fits under normal switch cover": {
+          "+": [
+            39
+          ]
+        },
+        "F@bulky size": {
+          "-": [
+            36
+          ]
+        }
+      },
+      "construction": {
+        "G@cheap plastic": {
+          "-": [
+            24
+          ]
+        },
+        "H@solid construction": {
+          "+": [
+            34
+          ]
+        },
+        "I@made in Mexico": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "wiring_terminals": {
+        "J@terminals inset into body with too much gap": {
+          "-": [
+            20
+          ]
+        },
+        "K@push-in connection hole too small for 12-gauge wire": {
+          "-": [
+            20
+          ]
+        },
+        "L@can't get wires on screw": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "toggle": {
+        "M@toggle feels like it's going to fall off": {
+          "-": [
+            24
+          ]
+        },
+        "N@slider doesn't move to full on when light is turned off": {
+          "+": [
+            33
+          ]
+        }
+      },
+      "internal_components": {
+        "O@missing part internally": {
+          "-": [
+            9
+          ]
+        },
+        "P@adjustable setting on internal face": {
+          "+": [
+            34
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_functionality": {
+        "a@works well for dimming": {
+          "+": {
+            "?": [
+              0,
+              2,
+              6,
+              7,
+              12,
+              16,
+              17,
+              25,
+              28,
+              32,
+              34,
+              35,
+              40,
+              45,
+              46
+            ]
+          }
+        },
+        "b@light doesn't stay same dimness": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@causes lights to blink": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@causes flickering": {
+          "-": {
+            "?": [
+              3,
+              22,
+              33
+            ]
+          }
+        },
+        "e@eliminates flickering": {
+          "+": {
+            "?": [
+              15,
+              21,
+              29,
+              30
+            ]
+          }
+        },
+        "f@limited dimming range": {
+          "-": {
+            "?": [
+              5,
+              22,
+              33
+            ]
+          }
+        },
+        "g@wide dimming range": {
+          "+": {
+            "?": [
+              29,
+              44
+            ]
+          }
+        },
+        "h@doesn't turn on when set below 80%": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "i@highly controllable brightness": {
+          "+": {
+            "P": [
+              34
+            ]
+          }
+        },
+        "j@fine-tunable": {
+          "+": {
+            "P": [
+              38
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "k@dimmer function died after six weeks": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "l@worked once then quit": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "m@3 of 4 don't work": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "n@only 2 of 3 pack worked": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "o@1 of 9 switches failed after 3 years": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "p@first one died immediately": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "installation": {
+        "q@easy to install": {
+          "+": {
+            "?": [
+              2,
+              7,
+              12,
+              35,
+              37,
+              40,
+              46
+            ]
+          }
+        },
+        "r@very hard to install": {
+          "-": {
+            "J,K": [
+              20
+            ]
+          }
+        },
+        "s@very frustrating to install": {
+          "-": {
+            "J,K": [
+              20
+            ]
+          }
+        }
+      },
+      "noise": {
+        "t@silent operation": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "u@buzzing/humming noise from lights": {
+          "-": {
+            "?": [
+              11,
+              39
+            ]
+          }
+        },
+        "v@no buzz": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "3_way_functionality": {
+        "w@works as 3-way": {
+          "+": {
+            "?": [
+              9,
+              25,
+              32,
+              33,
+              39,
+              45
+            ]
+          }
+        },
+        "x@no longer functions as 3-way": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "y@did not function as 3-way": {
+          "-": {
+            "O": [
+              9
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "z@works with LED bulbs": {
+          "+": {
+            "?": [
+              16,
+              17,
+              21,
+              29,
+              30,
+              31,
+              32
+            ]
+          }
+        },
+        "aa@LED compatibility is iffy": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ab@fits existing fixtures": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_lighting": {
+        "+": {
+          "z": [
+            2,
+            7,
+            16,
+            17,
+            21,
+            29,
+            30,
+            31,
+            32,
+            34,
+            39,
+            42,
+            44,
+            46
+          ]
+        },
+        "-": {
+          "aa": [
+            11,
+            22,
+            33
+          ]
+        }
+      },
+      "3_way_circuits": {
+        "+": {
+          "w": [
+            9,
+            25,
+            32,
+            45
+          ]
+        },
+        "-": {
+          "x,y": [
+            8,
+            9
+          ]
+        }
+      },
+      "bathroom_lighting": {
+        "+": {
+          "a": [
+            21,
+            27
+          ]
+        }
+      },
+      "under_cabinet_lights": {
+        "+": {
+          "a": [
+            7
+          ]
+        }
+      },
+      "ceiling_fans": {
+        "+": {
+          "z": [
+            21,
+            31
+          ]
+        }
+      },
+      "dining_room": {
+        "+": {
+          "w": [
+            21,
+            45
+          ]
+        }
+      },
+      "hallway_lighting": {
+        "+": {
+          "z": [
+            21
+          ]
+        }
+      },
+      "recessed_can_lights": {
+        "+": {
+          "e": [
+            22,
+            30,
+            36
+          ]
+        }
+      },
+      "wall_lamps": {
+        "+": {
+          "i": [
+            34
+          ]
+        }
+      },
+      "candelabra_lamps": {
+        "+": {
+          "a": [
+            32
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:31.713988"
+}

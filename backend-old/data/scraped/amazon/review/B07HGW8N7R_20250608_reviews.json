@@ -1,0 +1,2590 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:05:15.377520",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07HGW8N7R",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07HGW8N7R",
+    "title": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+    "brand": "Kasa",
+    "model_number": NaN,
+    "price_usd": 42.99,
+    "rating": 4.6,
+    "reviews_count": 26357.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B07HGW8N7R"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3MY8OJJKFZE3S",
+        "text": "The durability is a big issue, after replacing the broken HS200 within one year, it broken again… considering moving back to traditional switch since all the other switches last forever without a problem, but I’ve replaced the smart switches the third time already…",
+        "date": "Reviewed in the United States on June 5, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Questionable durability for a daily essential",
+        "userName": "JESSEY CHIN",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R11NO4LN5KQLNC",
+        "text": "I've bought 12 TP-Link smart light switches over the past 3-4 years. Two weeks ago, one just stopped working. I figured, okay, stuff happens. But then—boom—another one dies the following week. The day after that? A third one goes out. That’s three failures in under two weeks. Out of curiosity, I checked TP-Link’s website. Surprise, surprise: the warranty is only 1–2 years. Guess what? All three failed right after the warranty expired. These things aren’t defective — they’re engineered to fail once you’re no longer covered. That’s not a coincidence. That’s a planned-obsolescence scam. These smart switches are not “smart”—they’re a stupid waste of money. Regular light switches last 10–20 years, while these overpriced plastic toys can’t even last two. DO NOT BUY these switches. I don’t care how fancy the app is or what brand it is — TP-Link or otherwise. If it needs replacing every couple of years, it’s trash. Stick with old-school switches. They’re cheap, reliable, and they don’t leave you in the dark — literally.",
+        "date": "Reviewed in the United States on June 3, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "TP-Link Smart Switches Are Garbage – Built to Break, Total Scam",
+        "userName": "Barros Family",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1XQ2WULCVY0BT",
+        "text": "I didn’t realize a one-letter difference in the model number would make such a big difference. I bought the HS200, but it turns out it doesn’t work with HomeHub or support voice control. Only the KS200 model is compatible. Now I have to buy the correct one again — very frustrating!",
+        "date": "Reviewed in the United States on June 2, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "one-letter difference in the model number would make it incompatible with smartphone control.",
+        "userName": "Liz",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R13Q20ZJRJPI9E",
+        "text": "These are pretty rad for the price, but the 15a rating is bogus. I've had two of these fail on the same circuit in my garage for the ceiling lighting in there. I can only conclude that the relay's not handling the higher current of this set of lights. They've been totally reliable for other light duty applications.",
+        "date": "Reviewed in the United States on May 31, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good for low-current circuits, but prone to failure after a few months on higher current circuits.",
+        "userName": "Dan",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R22GR9UD9XI1A3",
+        "text": "These switches worked well for a few years after purchase. I liked the simplicity of install and the fact that no hub was required so installed many of them throughout our house. ~3 years later, all of the switches are failing one by one. They fail in a mode that just switches on and off repeatedly meaning I can’t just fix it later and replace the switch when it’s convenient, unless I’m ok with a light (or worse depending on the load controlled) flashing incessantly on and off and the sound of a relay clicking every second. TP link provided no support when contacted the first few times, just provided boilerplate troubleshooting before they said it can’t be fixed, and told me they’re out of warranty (it’s only 2 years so true but irritating) so I just need to replace them. I’m now proactively ripping all of these out of my house, giving away or disposing of the uninstalled extras, and will go with a more reliable brand next time. Sometimes the easy solution is definitely the wrong one, and this has tainted TP-Link’s reputation for me and will avoid them in the future.",
+        "date": "Reviewed in the United States on May 30, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Easy install, but horrible when they fail with no customer support",
+        "userName": "James Coles",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3EUMTS7NR8IZF",
+        "text": "Works great but one didn’t work and the return process is long and hard. So just buy one at a time. The three pack is a scam. I have 5 that work but one of the 3 pack didn’t. Then they want you to jump thru hoops to replace it.",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Don’t buy 3 pack!!",
+        "userName": "G Brandon Cunningham",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R19MZB10BEG5KK",
+        "text": "Ok",
+        "date": "Reviewed in the United States on May 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Ok",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1SU2HNVO944GY",
+        "text": "Working well",
+        "date": "Reviewed in the United States on May 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "It’s working.",
+        "userName": "T.Chase",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R22TDG6PKAAPZN",
+        "text": "Great quality",
+        "date": "Reviewed in the United States on May 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent quality",
+        "userName": "james sielaff",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2AVK125OT61QS",
+        "text": "The light on the front of the switches to tell if they are on and off is very dim. When the room lights are on you are not able to see the light on any of the switches. Even the ones that are off. The lights do not match either. If you put switches next to each other the light brightness in the switch button is different for each switch. Makes them look cheap. One has gone bad already too.",
+        "date": "Reviewed in the United States on May 22, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "You get what you pay for.",
+        "userName": "Canar",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1KDNWIEEY8G24",
+        "text": "If I could rate these 10 out of 5 stars I would. Have ordered so many of these that I should buy stock in this company. Love these switches - they work perfectly with Alexa, never fail, never drop out, are so easy to install, they’re amazing. These increase your home value exponentially. I can’t commend these enough - probably one of the best products I’ve ever bought on Amazon",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Incredibly good quality, work perfectly",
+        "userName": "Constance C. Sholdra",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2ERFEW7J1FTLW",
+        "text": "You can use the app or ask Alexa to turn the light on and off. We have these in several rooms and they’re great. Only downfall is they don’t work on multi switch lights",
+        "date": "Reviewed in the United States on May 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Integrated with Alexa",
+        "userName": "Kendra Chandler",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3REXO814SEJT7",
+        "text": "Extremely well built. Excellent choice and will keep buying more… I’m for my 7th. Want to replace all my new ones but not smart. Works perfectly with my Alexa.",
+        "date": "Reviewed in the United States on May 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it.",
+        "userName": "Bella",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R27CBR9ALMLOLN",
+        "text": "One of the best smart home purchases I’ve made recently. The Kasa Smart Switch is stylish, responsive, and adds real convenience to my setup. Just a heads-up: you’ll need to make sure your home has a neutral wire for installation. Once installed, it works flawlessly and definitely enhances the smart home experience.",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart, Stylish, and Reliable – Great Upgrade",
+        "userName": "robin",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RSTQ60I71JA0X",
+        "text": "Great product took some time to connect but very nice operation",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Operation of switches",
+        "userName": "Nicole Quirk",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RUV0ABQELHLEI",
+        "text": "Esta excelente",
+        "date": "Reviewed in the United States on May 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente muy bueno",
+        "userName": "Manuel A.",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2L76HTG72DXF5",
+        "text": "super easy to install, and had no trouble setting up the app or anything.",
+        "date": "Reviewed in the United States on April 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Super classy",
+        "userName": "Matthew",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R26L5QTSW2GK6G",
+        "text": "3 out of 6 of the switches I purchsed on Amazon stopped working after about a year and a half. Restarting, resetting, changing networks, nothing works. These are just pieces of junks now. The keep blinking really fast, along with switching on and off several times per second. Almost feels like company may be bricking these OTA to make you buy new ones.",
+        "date": "Reviewed in the United States on April 22, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "TP-Link, work on the durability of these switches.",
+        "userName": "Mohammad Swaleh",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RQ8AVQFKKPGDQ",
+        "text": "Ties into google home and home assistant very nicely. Highly recommend if you don't use a zigbee system",
+        "date": "Reviewed in the United States on April 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "My new favorite light switches",
+        "userName": "Raya Peterson",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3QZG2AUJGE879",
+        "text": "Had a power outage causing these switches to become disabled. Tried resetting them with no luck. Contacted KASA and gave them my concerns, which replied with no direct response on how to correct the issue. Do a little more research when purchasing.",
+        "date": "Reviewed in the United States on April 20, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Do your research before buying",
+        "userName": "Jack",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RHIPX1NFVKE4M",
+        "text": "worked fine for about a year, and suddenly it stopped working. The light stays on even when I turn it off. Did a quick web search, and it seems to be a common problem with this product. Basically, it suddenly stops working, and light stays on, even though I hear clicking sound from the switch, and also the indicator light turns on and off. It's just that the internal switch is defective and stops working. I had a spare; so, I replaced it with the spare, and it worked right away. It was good while it lasted, and the price is cheap, but lifetime of 1.5 years? I'm not sure I want to deal with electrical wiring so often. The product is definitely not durable. Luckily the product is under warranty of 2 years. Let's see how good their support is.",
+        "date": "Reviewed in the United States on April 19, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "stopped working after 1 year. Seems to be a common issue. Not reliable.",
+        "userName": "Shenanig",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RWQI197MY2H7R",
+        "text": "The Kasa Smart Light Switch (HS200P3) is one of those small upgrades that makes a huge difference. After moving into our new home from a place where we had these installed, I didn’t even think twice—I ordered a couple 3-pack right away. These switches are that good. Once you’ve lived with smart switches like this, it’s genuinely hard to go back to flipping lights on and off manually. They integrate beautifully with Alexa, making it easy to control your lights with a simple voice command. Whether I’m settling in to watch a movie or getting ready for bed, not having to get up to hit a switch is a luxury I didn’t know I needed—until I had it. While these don’t have dimming capabilities, they still deliver a top-tier smart home experience with reliable performance, remote access through the Kasa app, scheduling, and seamless voice control. And honestly, for most rooms, just having on/off control from anywhere is a total win. Super easy to install (as long as you have a neutral wire), and they look sleek on the wall. If you’re starting or expanding your smart home setup, this is one of the best bang-for-your-buck upgrades out there.",
+        "date": "Reviewed in the United States on April 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart Switches That Instantly Upgrade Your Home",
+        "userName": "Eilam",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1UEV1HNC10BT3",
+        "text": "Not a good buy. I tried Wemo and they consistently failed. I then bought over 6 of these, installed them they worked fine until I changed my router and now they will not detect the 2.4ghz. Wasted money for what I intended them to be used for.",
+        "date": "Reviewed in the United States on April 16, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not a good buy at all!",
+        "userName": "Great gifts",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R19SEKB3BBTTJL",
+        "text": "Unable to program it. Also unable to get any support. Waste of money",
+        "date": "Reviewed in the United States on April 13, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does not work",
+        "userName": "Munir Gilani",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R11CCG6C4TQTE0",
+        "text": "Works nice and easy to set up in the app. Have other Kasa plugs that I love.",
+        "date": "Reviewed in the United States on April 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to connect to the app for controlling it.",
+        "userName": "Hitiek",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3JFIC62KUC5SR",
+        "text": "Works great and easy to set up.",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy",
+        "userName": "GARY FANGER",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1GZXTZY9K437V",
+        "text": "Product fails after few months of installation; suddenly starts flickering",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Unreliable product; wont last a year",
+        "userName": "Milan Shah",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3DPGAT0KEAFC8",
+        "text": "Not a fan anymore. There's something wrong internally with the switch and I've had two so far. The switch after a couple of months is stuck on and will not turn off or is stuck off and will not turn on manually or automatically. I tried to get customer support on this and they basically don't offer anything and push you into just buying another one. I did that and the new one did the exact same thing about a month later. Won't buy another.",
+        "date": "Reviewed in the United States on March 30, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Switch wears out and sticks on/off after a few months",
+        "userName": "gregory hensley",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1XQ641ROE6TQG",
+        "text": "Junk. Installed correctly, connected to the app and all that. Did not work at all. Even tried installing at a different spot, didn’t work. Would not recommend",
+        "date": "Reviewed in the United States on March 23, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "R D",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RBSK5NCZW8ITV",
+        "text": "Barely lasted 2 years and has failed. Circle Light and WIFI symbol light on switch blinks rapidly and clicks. Holding reset or trying to use the restart button do nothing. Contacted TP-Link for warranty replacement. They refused to replace it because my purchase date was 1 month past the 2 year warranty. I would expect this switch to last more than a couple years. I have other smart devices in my home for much longer. If your considering buying these switches, don't.",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Avoid - Failed after 2 years use. Go with a better quality brand.",
+        "userName": "capblye",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R32R0ZEF90I5KC",
+        "text": "Works flawlessly",
+        "date": "Reviewed in the United States on March 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Functionality",
+        "userName": "Octavio Macias",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R15DHKKC3C0639",
+        "text": "This single pole switch worked flawlessly for 3.5 years and one day started clicking repeatedly, switching the circuit on and off rapidly. Installed indoors. If you research it, it happens to a lot of people with this model.",
+        "date": "Reviewed in the United States on March 13, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Worked fine for 3.5 years and then broke",
+        "userName": "Ken",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2RD8XH8VX4328",
+        "text": "Great when they work but lifespan is rather limited. 2nd switch has burnt out after 4 years … i don’t even use the switch that much since its automated!",
+        "date": "Reviewed in the United States on March 12, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Great while it lasted…. Need replacing after 4 years!",
+        "userName": "RoEle",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RPA3R43D6S16T",
+        "text": "I’ve been using Kasa smart switches and the Deco TP-Link A5400 mesh WiFi for over two years, and overall, I’m extremely disappointed. Despite both products being from the same brand, the Kasa app is consistently laggy, slow, and unreliable. Even with a strong network connection, the app struggles to respond, making smart home control frustrating. The biggest issue is connectivity. The Deco A5400 mesh system itself has been unstable, frequently dropping connections or failing to properly integrate with Kasa devices. I’ve tried every troubleshooting method—resetting, repositioning nodes, firmware updates—but nothing has provided a long-term fix. To make matters worse, Google Home integration is unreliable at best, with devices often appearing offline or responding inconsistently to voice commands. For a smart home ecosystem, reliability is crucial, and TP-Link has not delivered. If you’re looking for a seamless smart switch and mesh WiFi combination, I’d strongly recommend looking at other brands.",
+        "date": "Reviewed in the United States on March 11, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Laggy and unreliable",
+        "userName": "Americo Torres",
+        "numberOfHelpful": 2,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3K7XD3AXNADOB",
+        "text": "We keep coming back to this brand because it's so easy to install and use. We even have them outside for our patio and bbq. It syncs up well with Alexa making it super simple to control lights inside and outside the house.",
+        "date": "Reviewed in the United States on March 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Reliable and Easy to Use",
+        "userName": "Pauline Castillo",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R20ZMOX18LP9U",
+        "text": "Purchased like new product. Missing all screws and wire nuts so it make it harder to install when I have to buy the rest of the parts.",
+        "date": "Reviewed in the United States on March 3, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Don’t buy used like new unless you have spare parts.",
+        "userName": "WDNTULK2NO",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R12HTLSPMULJXJ",
+        "text": "I bought these switches because I am so pleased with Kasa Ep25 plugs. These Kasa switches are compatible with Alexa which is great, but not Apple HomeKit, which is odd because the plugs are. The Kasa plugs are very reliable. I hope these switches are as well.",
+        "date": "Reviewed in the United States on March 3, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good switch but not compatible with Homekit",
+        "userName": "Brick Steel",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1EWPJGS80C6R5",
+        "text": "Easy to install, works great.",
+        "date": "Reviewed in the United States on March 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very well done",
+        "userName": "Nizar Idriss",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1PSGCSNZ7WOSP",
+        "text": "This is the 3rd time i bought this light switch. After about a year it starts turning on and off continuously. The wifi lights up red and does not stop",
+        "date": "Reviewed in the United States on March 3, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Defective",
+        "userName": "carl",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2B4TM6URS42NX",
+        "text": "I bought a total of four switches. One three pack (this item), had them installed and not one worked. I also bought one switch in a single pack. It worked. I am now buying three more switches but this time I’m buying singles!",
+        "date": "Reviewed in the United States on March 1, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bad Lot??",
+        "userName": "JR",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R33NU7KHI0GXDB",
+        "text": "I installed this smart switch to control my front porch light. Set to come on at sunset and off at sunrise. Works great,",
+        "date": "Reviewed in the United States on February 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Happy with purchase",
+        "userName": "Sam Porterfield",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1MAZSPX9L5F1H",
+        "text": "Amazon rejected my review. This product is not dimmable as implied by the picture",
+        "date": "Reviewed in the United States on February 28, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not dimmable",
+        "userName": "CHRIS H PETERSON",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3NRBGSOMFCL5Q",
+        "text": "I love these switches! Easy to install and customer support is easy to obtain via phone, talking to a real person who was knowledgeable and provided above and beyond customer support. And if you have Amazon Alexa, she easily and quickly supports the switches. I have three switches and will buy more.",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "I love these switches!",
+        "userName": "SandraGeb",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3QSPO8SCKPR2K",
+        "text": "Muy bien producto",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente",
+        "userName": "Monica Maria Londoño",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1262FGWXCVB4X",
+        "text": "After installing, easy setup and easy to set schedules.",
+        "date": "Reviewed in the United States on February 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "So convenient",
+        "userName": "AJohnDeereFan",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1RCQVOJFY2B9U",
+        "text": "The dimmer steps are not really equal as you may think when you increase it and decrease it. Not the greatest feedback as well.",
+        "date": "Reviewed in the United States on February 22, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Average",
+        "userName": "Magic",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3LHUGS5KK3MCW",
+        "text": "I had difficulty in the setup of one of three switches and customer service did a great job of successfully connecting to my router.",
+        "date": "Reviewed in the United States on February 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Customer Service came through in a pinch",
+        "userName": "Daniel Knopman",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3PHGLDH6L2B88",
+        "text": "We have several of these switches and in tplink/kasa defence we have only had problems with 1 of them. That being said I will likely never purchase another tplink product due to the hassles of 1 $13.00 switch warranty. I spent an hour on a chat trouble shooting a swich that was obviously bad and providing receipts, photos, etc. The switch worked fine for 2 weeks and then stuck on and we could not turn the light off. Now I have an email asking for all the same information and informing me they may not cover it. Argh!",
+        "date": "Reviewed in the United States on February 14, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Holy cow tplink is likely the worst company I have ever dealt with on a warranty.",
+        "userName": "Sparky",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1CBR42SZPRMJL",
+        "text": "I have many of these all over my house and they have been super reliable for years! They connect without any issues to Alexa and Home Assistant. On/off time is almost instant and I haven't had any problems with them at all.",
+        "date": "Reviewed in the United States on February 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great cheap wifi smart switch",
+        "userName": "LastHopeOfTheInternet",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07HGW8N7R",
+        "productTitle": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 2883,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 26367,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 80
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3O5BQUO36SD5Q",
+        "text": "Love them",
+        "date": "Reviewed in the United States on February 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Courtney",
+        "numberOfHelpful": 0,
+        "variationId": "B07HGW8N7R",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White, Alexa Compatible",
+          "Size: 3 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,727 @@
+{
+  "categorization_summary": {
+    "total_products_categorized": 10,
+    "total_products_attempted": 10,
+    "categorization_date": "2025-06-09T04:59:20.061280",
+    "model_used": "claude-sonnet-4-20250514",
+    "configuration": {
+      "script_name": "process_review",
+      "model_name": "claude-sonnet-4-20250514",
+      "model_temperature": 0.15,
+      "model_max_tokens": 4096,
+      "max_requests_per_minute": 1900,
+      "max_input_tokens_per_minute": 75000,
+      "max_output_tokens_per_minute": 30000,
+      "max_concurrent_requests": 20,
+      "default_batch_size": 40,
+      "default_seed": 42,
+      "default_max_retries": 3,
+      "rate_limit_delay": 0.1,
+      "root_dir": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo",
+      "output_root_dir": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/result/process_review/20250609_04",
+      "log_dir": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/llm_log/process_review/20250609_04"
+    }
+  },
+  "results": {
+    "B08PKMT2DV": {
+      "aspect_categorization": {
+        "phy": {
+          "buttons": {
+            "A@button layout changed between v1 and v2 versions": "Button Interface",
+            "B@top button for on/off": "Button Interface",
+            "C@bottom button changed from off to hue function": "Button Interface",
+            "D@one button for on/off": "Button Interface",
+            "E@center rocker for dimming": "Button Interface",
+            "F@button for scene selection": "Button Interface"
+          },
+          "magnets": {
+            "G@magnets hold remote to mount with perfect strength": "Magnetic Systems",
+            "H@magnet holding to housing not as good as v1": "Magnetic Systems"
+          },
+          "design": {
+            "I@slim profile": "Aesthetic Design",
+            "J@new design looks awesome": "Aesthetic Design",
+            "K@design puts features before usability": "Aesthetic Design",
+            "L@shape not compatible between versions": "Aesthetic Design"
+          },
+          "wall_mount": {
+            "M@wall mount with screw option or 3M adhesive": "Physical Mounting",
+            "N@stick on plate for convenient install": "Physical Mounting"
+          },
+          "battery": {
+            "O@battery lasts very long time upwards of a year": "Power Management"
+          },
+          "build_quality": {
+            "P@seems well-made": "Material Construction"
+          }
+        },
+        "perf": {
+          "connectivity": {
+            "a@easy to connect to Philips Hue app": "Smart Home Integration",
+            "b@pairs easy and shows up in Hue app and Apple HomeKit": "Smart Home Integration",
+            "c@impossible to sync with hue bridge": "Smart Home Integration",
+            "d@works without bridge by pairing remote close to light": "Smart Home Integration",
+            "e@very easy to set up in HUE app and HomeKit": "Smart Home Integration",
+            "f@easy to pair and setup": "Smart Home Integration",
+            "g@switch doesn't install despite following instructions": "Installation Experience",
+            "h@works like a breeze with SONOFF Zigbee Dongle": "Smart Home Integration"
+          },
+          "reliability": {
+            "i@always works": "Operational Reliability",
+            "j@works every time": "Operational Reliability",
+            "k@never have operational problems": "Operational Reliability",
+            "l@have to hit buttons a few times before they work when first entering room": "Operational Reliability",
+            "m@keep knocking it off the wall": "Physical Durability"
+          },
+          "dimming": {
+            "n@dims perfectly": "Dimming Performance",
+            "o@dims nicely": "Dimming Performance",
+            "p@being able to easily dim lights is massive plus": "Dimming Performance"
+          },
+          "customization": {
+            "q@easy connectivity and customizability with near-infinite variations": "User Interface Experience",
+            "r@can really customize what each button does": "User Interface Experience",
+            "s@can create automations to turn lights on/off in different parts of house": "Smart Home Integration",
+            "t@set up with 5 different scenes accessible by tapping button": "User Interface Experience"
+          },
+          "usability": {
+            "u@have to look at it and aim for button in dark room": "User Interface Experience",
+            "v@exceeded expectations": "OUT_OF_SCOPE",
+            "w@works fine": "OUT_OF_SCOPE"
+          }
+        },
+        "use": {
+          "bedroom_lighting": "Room Specific Lighting",
+          "guest_control": "Property Management",
+          "avoiding_phone_app": "OUT_OF_SCOPE",
+          "lamp_control": "Room Specific Lighting",
+          "ceiling_fan_light_replacement": "Ceiling Fan Control",
+          "scene_cycling": "Ambiance and Scene Control",
+          "nighttime_use": "Ambiance and Scene Control",
+          "rental_property_lighting": "Property Management",
+          "smart_home_integration": "Smart Home Integration",
+          "resolving_flickering_ceiling_fan_lights": "Ceiling Fan Control"
+        }
+      }
+    },
+    "B0D7GR3CKW": {
+      "aspect_categorization": {
+        "phy": {
+          "appearance": {
+            "A@modern and sleek design": "Aesthetic Design",
+            "B@clean design": "Aesthetic Design"
+          },
+          "build_quality": {
+            "C@well made and sturdy construction": "Material Construction",
+            "D@not flimsy": "Material Construction",
+            "E@good quality material": "Material Construction",
+            "F@high end appearance": "Aesthetic Design"
+          },
+          "slider": {
+            "G@smooth and responsive slider": "Slider Controls",
+            "H@easy to move slide bar": "Slider Controls",
+            "I@stiff slider movement": "Slider Controls"
+          },
+          "buttons": {
+            "J@big buttons": "Button Interface"
+          },
+          "wiring": {
+            "K@load wires same color without proper marking": "Electrical Connections"
+          },
+          "cover_plate": {
+            "L@cover plate difficult to snap on": "Cover Components",
+            "M@enclosed cover wouldn't stay on": "Cover Components",
+            "N@screw-secured cover": "Cover Components"
+          },
+          "screw_design": {
+            "O@hidden screws": "Aesthetic Design"
+          },
+          "size": {
+            "P@optimal depth for wall box": "Physical Dimensions",
+            "Q@fits existing box easily": "Physical Dimensions"
+          }
+        },
+        "perf": {
+          "dimming_function": {
+            "a@smooth dimming operation": "Dimming Performance",
+            "b@precise brightness control": "Dimming Performance",
+            "c@full dimming capability": "Dimming Performance",
+            "d@limited dimming range": "Dimming Performance",
+            "e@no dimming functionality": "Dimming Performance"
+          },
+          "compatibility": {
+            "f@works with LED bulbs without flickering": "Device Compatibility",
+            "g@supports multiple bulb types": "Device Compatibility",
+            "h@600 watt rating": "Device Compatibility"
+          },
+          "installation": {
+            "i@easy installation": "Installation Experience",
+            "j@no neutral wire required": "Installation Experience",
+            "k@works in 3-way and single pole setups": "Installation Experience",
+            "l@confusing wiring diagram": "Installation Experience",
+            "m@quick installation": "Installation Experience"
+          },
+          "reliability": {
+            "n@works perfectly": "Operational Reliability",
+            "o@consistent performance": "Operational Reliability",
+            "p@doesn't work on outlet": "Operational Reliability"
+          },
+          "adjustability": {
+            "q@adjustable minimum level trimmer": "Dimming Performance",
+            "r@fully adjustable": "Dimming Performance"
+          }
+        },
+        "use": {
+          "bedroom_lighting": "Room Specific Lighting",
+          "hallway_lighting": "Room Specific Lighting",
+          "bathroom_lighting": "Room Specific Lighting",
+          "room_ambiance_control": "Ambiance and Scene Control",
+          "romantic_lighting": "Ambiance and Scene Control",
+          "home_office": "Room Specific Lighting",
+          "accent_lights": "LED Light Management",
+          "recessed_LED_lights": "LED Light Management",
+          "can_lighting": "LED Light Management",
+          "renovation_projects": "Renovation and Construction",
+          "multiple_room_installation": "Room Specific Lighting",
+          "LED_applications": "LED Light Management"
+        }
+      }
+    },
+    "B08KDGBKNC": {
+      "aspect_categorization": {
+        "phy": {
+          "Material": {
+            "A@Made of cheap plastic": "Material Construction",
+            "B@Made of polycarbonate that cracks": "Material Construction"
+          },
+          "Color": {
+            "C@Off-white color instead of white": "Aesthetic Design",
+            "D@Gloss ivory color instead of gloss white": "Aesthetic Design"
+          },
+          "Design": {
+            "E@Lightweight": "Material Construction",
+            "F@Compact size that doesn't take much space in electrical box": "Physical Dimensions",
+            "G@Has holes on the back for hookup": "Electrical Connections",
+            "H@Has satisfying click": "Mechanical Operation",
+            "I@Has gaps at the top of the switch": "Material Construction"
+          },
+          "Ground Terminal": {
+            "J@Ground terminal is hard to work with": "Electrical Connections"
+          },
+          "Paddle/Switch Cover": {
+            "K@Tab on switch cover breaks off": "Cover Components"
+          }
+        },
+        "perf": {
+          "Durability": {
+            "a@Breaks easily and won't last more than 6 months": "Physical Durability",
+            "b@Cracks develop in paddles within 2 years": "Physical Durability",
+            "c@Tab breaks off causing switch cover to fly": "Physical Durability",
+            "d@Not sturdy": "Physical Durability"
+          },
+          "Functionality": {
+            "e@Switch doesn't stay when switched": "Operational Reliability",
+            "f@Switch stays only 9 out of 10 times": "Operational Reliability",
+            "g@Works very well": "Operational Reliability",
+            "h@Works well": "Operational Reliability",
+            "i@Light stops working after few weeks": "Operational Reliability",
+            "j@Burns out right after installation": "Operational Reliability"
+          },
+          "Build Quality": {
+            "k@Well built": "Physical Durability",
+            "l@Built well": "Physical Durability",
+            "m@High quality": "Physical Durability",
+            "n@Great quality": "Physical Durability",
+            "o@Low quality": "Physical Durability"
+          },
+          "Installation": {
+            "p@Easy to install": "Installation Experience",
+            "q@Easier to manage wires": "Installation Experience",
+            "r@Back holes don't work for hookup": "Installation Experience"
+          },
+          "Appearance": {
+            "s@Looks identical to brand-name ones": "Aesthetic Integration",
+            "t@Looks very good": "Aesthetic Integration",
+            "u@Look nice": "Aesthetic Integration",
+            "v@Does not match with white wall plates": "Aesthetic Integration"
+          }
+        },
+        "use": {
+          "Switching from toggle to paddle switch": "Switch Replacement and Upgrades",
+          "Replacing old toggle switches": "Switch Replacement and Upgrades",
+          "Replacing all light switches in house": "Switch Replacement and Upgrades",
+          "House remodeling": "Renovation and Construction",
+          "House flipping": "Renovation and Construction",
+          "Daughter's room": "Room Specific Lighting",
+          "General light switching": "OUT_OF_SCOPE",
+          "Electrical installation by electrician": "OUT_OF_SCOPE",
+          "Replacement switches": "Switch Replacement and Upgrades"
+        }
+      }
+    },
+    "B08Q7HX3KV": {
+      "aspect_categorization": {
+        "phy": {
+          "size": {
+            "A@compact and small form factor": "Physical Dimensions"
+          },
+          "button": {
+            "B@touch-activated button interface": "Button Interface",
+            "C@blue LED indicator light on button": "Visual Indicators"
+          },
+          "wiring": {
+            "D@4-wire configuration": "Electrical Connections",
+            "E@stiff and hard to route wires": "Electrical Connections",
+            "F@heat shrink wrapper that is bulky": "Electrical Connections",
+            "G@disconnected wire upon arrival": "Electrical Connections"
+          },
+          "construction": {
+            "H@appears nicely made": "Material Construction",
+            "I@packaged properly": "OUT_OF_SCOPE"
+          },
+          "specifications": {
+            "J@12V max 36 watt capacity": "Power Management",
+            "K@cannot handle 2 amps or higher current": "Power Management"
+          }
+        },
+        "perf": {
+          "functionality": {
+            "a@works beautifully for intended purpose": "Operational Reliability",
+            "b@requires training and time to get used to sensitivity": "User Interface Experience",
+            "c@complete failure to work": "Operational Reliability",
+            "d@LED lights fade up and down with no on-off control": "Dimming Performance",
+            "e@dimmer function does not work while light works": "Dimming Performance",
+            "f@perfect performance for LED applications": "Device Compatibility",
+            "g@silent operation without flicker": "Audio and Visual Feedback",
+            "h@steady dimming with slow brightness adjustment": "Dimming Performance",
+            "i@does not work with multi-colored LEDs": "Device Compatibility",
+            "j@one touch on/off and dimming by holding finger": "User Interface Experience",
+            "k@worked for only 3 hours before failure": "Operational Reliability",
+            "l@fantastic and user-friendly electronics": "User Interface Experience",
+            "m@cannot shut off, stays on all the time": "Operational Reliability",
+            "n@stops working properly under higher current loads": "Electrical Performance",
+            "o@works great with proper electrical knowledge": "Installation Experience",
+            "p@requires separate isolated circuits for proper operation": "Electrical Performance",
+            "q@functions as dimmer only, not on-off switch": "User Interface Experience",
+            "r@works perfectly when installed correctly": "Operational Reliability",
+            "s@simple and intuitive control": "User Interface Experience",
+            "t@only blue circle light works, no dimming or turn off": "Operational Reliability",
+            "u@remembers last brightness setting": "User Interface Experience",
+            "v@no control over lights, stays where it was": "Operational Reliability",
+            "w@lights up blue but no functionality": "Operational Reliability",
+            "x@worked for few minutes then stopped": "Operational Reliability",
+            "y@overheats and becomes very hot to touch": "Electrical Performance",
+            "z@died within one day of use": "Operational Reliability",
+            "aa@blue light went out after 3 weeks": "Audio and Visual Feedback",
+            "ab@works very well for applications": "Operational Reliability",
+            "ac@works great when wiring instructions followed": "Operational Reliability",
+            "ad@stopped working after 4th try": "Operational Reliability",
+            "ae@performed exactly same functions as original": "Operational Reliability"
+          },
+          "durability": {
+            "af@short lifespan with multiple failures": "Physical Durability",
+            "ag@continues to work after blue light failure": "Physical Durability"
+          },
+          "compatibility": {
+            "ah@works with voltage range 6.9-11.75 VDC": "Device Compatibility",
+            "ai@only works with 2-wire LED strips": "Device Compatibility"
+          }
+        },
+        "use": {
+          "lamp building": "Specialty and Custom Applications",
+          "cabinet LED lighting": "LED Light Management",
+          "under-counter lighting": "LED Light Management",
+          "custom power supply illumination": "Specialty and Custom Applications",
+          "12V fan control": "Specialty and Custom Applications",
+          "fuel gauge dimming": "Specialty and Custom Applications",
+          "camper van LED puck lights": "Specialty and Custom Applications",
+          "under cabinet LED strip lighting": "LED Light Management",
+          "auto stereo/CD unit": "Specialty and Custom Applications",
+          "LED light strip dimming": "LED Light Management",
+          "makeup mirror lighting": "Specialty and Custom Applications"
+        }
+      }
+    },
+    "B077XDB8FV": {
+      "aspect_categorization": {
+        "phy": {
+          "Design": {
+            "A@Single gang design for dual functions": "Physical Dimensions",
+            "B@Modern appearance": "Aesthetic Design",
+            "C@Deeper than regular switch": "Physical Dimensions",
+            "D@No cover included": "Cover Components",
+            "E@Small LED indicators for each control": "Visual Indicators"
+          },
+          "Wiring": {
+            "F@Hot wire connection difficulty": "Electrical Connections",
+            "G@Requires specific electrical wiring": "Electrical Connections",
+            "H@Supplied wire nuts and screws": "Electrical Connections"
+          },
+          "Components": {
+            "I@Rocker switches for on/off": "Mechanical Operation",
+            "J@Side controls for fan speed and dimmer": "Button Interface",
+            "K@Pull tab cutoff at bottom": "Cover Components"
+          }
+        },
+        "perf": {
+          "Installation": {
+            "a@Easy to install": "Installation Experience",
+            "b@Installation can be tough": "Installation Experience"
+          },
+          "Reliability": {
+            "c@Works well initially then fails": "Operational Reliability",
+            "d@Long-term durability": "Physical Durability",
+            "e@Switches destroyed by circuit shorts": "Electrical Performance",
+            "f@Dead on arrival or immediate failure": "Operational Reliability"
+          },
+          "Light Control": {
+            "g@Light dimming works properly": "Dimming Performance",
+            "h@Maintains brightness level": "Dimming Performance",
+            "i@Light turns off when fan is on": "Device Compatibility",
+            "j@Light pops on randomly": "Operational Reliability",
+            "k@Light flickering and delay issues": "Audio and Visual Feedback",
+            "l@No buzzing with LED bulbs": "Audio and Visual Feedback"
+          },
+          "Fan Control": {
+            "m@Fan speed control works well": "Device Compatibility",
+            "n@Fan works occasionally": "Operational Reliability",
+            "o@Fan ramps up to high and won't shut off": "Operational Reliability",
+            "p@Fan makes whining noise and barely spins": "Audio and Visual Feedback",
+            "q@No buzzing at any speed": "Audio and Visual Feedback",
+            "r@Power on/off without changing speed": "User Interface Experience"
+          },
+          "Compatibility": {
+            "s@Works with Hunter ceiling fans": "Device Compatibility",
+            "t@Compatibility issues with certain fans": "Device Compatibility",
+            "u@LED bulb compatibility issues": "Device Compatibility",
+            "v@Works great with approved bulbs": "Device Compatibility"
+          },
+          "Features": {
+            "w@Remembers settings": "User Interface Experience",
+            "x@High range of brightness": "Dimming Performance",
+            "y@Hold button for timed shutoff": "User Interface Experience",
+            "z@No WiFi capabilities": "Smart Home Integration"
+          },
+          "Value": {
+            "aa@Expensive for features offered": "Purchase Value",
+            "ab@Good quality for price": "Purchase Value"
+          }
+        },
+        "use": {
+          "Bedroom fan control": "Ceiling Fan Control",
+          "Guest room fan control": "Property Management",
+          "Bathroom fan and light control": "Ceiling Fan Control",
+          "Living room fan control": "Ceiling Fan Control",
+          "Outdoor deck fan control": "Ceiling Fan Control",
+          "Hunter ceiling fan control": "Ceiling Fan Control",
+          "Multiple fans in home": "Ceiling Fan Control",
+          "Replacement for old switches": "Switch Replacement and Upgrades",
+          "New fan installation": "Ceiling Fan Control",
+          "LED ceiling light control": "LED Light Management"
+        }
+      }
+    },
+    "B0DTDFCFW9": {
+      "aspect_categorization": {
+        "phy": {
+          "construction": {
+            "A@solidly made and not flimsy": "Material Construction"
+          },
+          "connections": {
+            "B@both screws and push-in connections on the back": "Electrical Connections"
+          },
+          "compatibility": {
+            "C@use standard screws and decora plates": "Physical Mounting"
+          },
+          "tactile_feedback": {
+            "D@good \"click\" as they switch": "Mechanical Operation"
+          }
+        },
+        "perf": {
+          "installation": {
+            "a@easy to install": "Installation Experience"
+          },
+          "switching_function": {
+            "b@works as expected": "Operational Reliability"
+          },
+          "fit": {
+            "c@everything fits well": "Installation Experience"
+          }
+        },
+        "use": {
+          "light switches": "OUT_OF_SCOPE"
+        }
+      }
+    },
+    "B0771BC2YH": {
+      "aspect_categorization": {
+        "phy": {
+          "Construction Quality": {
+            "A@Poor build quality with gaps developing": "Material Construction",
+            "B@Feels very low quality": "Material Construction",
+            "C@High quality feel": "Material Construction",
+            "D@Feels solid": "Material Construction",
+            "E@Cheaply made": "Material Construction",
+            "F@Physically coming apart": "Material Construction"
+          },
+          "Switch Design": {
+            "G@Nice looking switch": "Aesthetic Design",
+            "H@Neat look": "Aesthetic Design",
+            "I@Nice simple design": "Aesthetic Design",
+            "J@Perfect size and matches white color": "Aesthetic Design",
+            "K@Looks off to the rear of the switches": "Aesthetic Design"
+          },
+          "Wiring": {
+            "L@Has red and one black wire that does not conform to residential wiring": "Electrical Connections"
+          },
+          "Internal Components": {
+            "M@Pivot of the rocker broke on one side": "Internal Mechanisms",
+            "N@Toggle switch fell apart when tried to use": "Internal Mechanisms",
+            "O@Has thumbwheel dial under cover for adjustment": "Internal Mechanisms",
+            "P@Has wheel adjustment on inside to help adjust lowest dimmer setting": "Internal Mechanisms"
+          }
+        },
+        "perf": {
+          "Durability": {
+            "a@Failed within a year": "Physical Durability",
+            "b@Failed within two years": "Physical Durability",
+            "c@Broke after 4 years of regular use": "Physical Durability",
+            "d@Failed relatively quickly with rocker pivot breaking": "Physical Durability",
+            "e@More reliable than rotary type": "Physical Durability"
+          },
+          "Dimming Performance": {
+            "f@Barely dimmed with flickering on low": "Dimming Performance",
+            "g@Does not dim at all": "Dimming Performance",
+            "h@Dims perfectly": "Dimming Performance",
+            "i@LED lights dimmed down considerable without flicker": "Dimming Performance",
+            "j@Brightness goes from low to high and slightly less than high": "Dimming Performance",
+            "k@Perfect brightness control": "Dimming Performance"
+          },
+          "Flickering Issues": {
+            "l@Flickers even when turned all the way up": "Audio and Visual Feedback",
+            "m@Lights flickering without adjusting dimmer": "Audio and Visual Feedback",
+            "n@Started causing flickering in lights": "Audio and Visual Feedback",
+            "o@Lights flicker every now and then despite adjustment": "Audio and Visual Feedback",
+            "p@Light flickers when set to dim": "Audio and Visual Feedback"
+          },
+          "Noise Issues": {
+            "q@Extremely loud buzzing noise": "Audio and Visual Feedback",
+            "r@Constant buzzing/humming sound": "Audio and Visual Feedback",
+            "s@Buzzing noise occurred after about a month": "Audio and Visual Feedback",
+            "t@No noise from switch": "Audio and Visual Feedback",
+            "u@Easy slide and quiet": "Audio and Visual Feedback"
+          },
+          "Response Time": {
+            "v@Second or two delay from clicking switch to light turning on": "Response Timing",
+            "w@Very responsive, no lag": "Response Timing"
+          },
+          "Electrical Safety": {
+            "x@Switch exploded": "Electrical Performance",
+            "y@Switch causes internal arcing": "Electrical Performance"
+          },
+          "Functionality": {
+            "z@No longer switches": "Operational Reliability",
+            "aa@On off switch does not work": "Operational Reliability",
+            "bb@Did not work when installed": "Operational Reliability",
+            "cc@Works perfectly": "Operational Reliability",
+            "dd@Works smoothly and as intended": "Operational Reliability",
+            "ee@Works as intended": "Operational Reliability"
+          }
+        },
+        "use": {
+          "Closet Installation": "Room Specific Lighting",
+          "General House Installation": "OUT_OF_SCOPE",
+          "LED Light Control": "LED Light Management",
+          "Hallway Light Control": "Room Specific Lighting",
+          "Dining Room Light Control": "Room Specific Lighting",
+          "Kitchen Light Control": "Room Specific Lighting",
+          "Three Way Switch Installation": "OUT_OF_SCOPE",
+          "Incandescent Bulb Control": "OUT_OF_SCOPE",
+          "Replacement for Rotary Dimmer": "Switch Replacement and Upgrades",
+          "Ceiling Light Control": "Room Specific Lighting"
+        }
+      }
+    },
+    "B09LLY51DL": {
+      "aspect_categorization": {
+        "phy": {
+          "Size": {
+            "A@Switch base is really big making connections difficult to fit in electrical box": "Physical Dimensions"
+          },
+          "Appearance": {
+            "B@Simple, modern sleek look": "Aesthetic Design",
+            "C@Look nice": "Aesthetic Design",
+            "D@Well made complete set with cover plates and wire nuts": "Aesthetic Design",
+            "E@Beautiful instrument and well manufactured": "Aesthetic Design"
+          },
+          "Face plate": {
+            "F@Face plate has broken off from the switch": "Cover Components"
+          },
+          "Touch interface": {
+            "G@Touch plate for dimming seems awkward - causes unintended dimming level changes": "Button Interface",
+            "H@Can slide finger instead of clicking for dimming": "Button Interface",
+            "I@Switch responds well to touch": "Button Interface",
+            "J@Physical dimmer feature is hit or miss - sometimes registers touch, sometimes doesn't": "Button Interface"
+          },
+          "Indicator light": {
+            "K@Light on switch symbol should be brighter when light is on": "Visual Indicators",
+            "L@Status light won't turn on when switch is dead": "Visual Indicators",
+            "M@Green indicator light stays on even when switch stops working": "Visual Indicators"
+          },
+          "Wiring requirements": {
+            "N@Requires neutral wire": "Electrical Connections",
+            "O@Extra pigtails and wire nuts create room issues in electrical box": "Electrical Connections"
+          }
+        },
+        "perf": {
+          "Installation": {
+            "a@Easy to install": "Installation Experience"
+          },
+          "Dimming capability": {
+            "b@Not 1-100 percent dimming as advertised - LED light still insanely bright at lowest setting": "Dimming Performance",
+            "c@Dimmest setting not particularly dim - still quite bright": "Dimming Performance",
+            "d@Don't dim lights far enough down": "Dimming Performance",
+            "e@Allows dimming to 6% which is excellent": "Dimming Performance",
+            "f@Very adjustable - can turn brightness up or down by as little as 1%": "Dimming Performance",
+            "g@Will not dim by voice command - only manually": "Smart Home Integration",
+            "h@Dimmer wouldn't dim with existing non-dimmable lightbulbs": "Device Compatibility"
+          },
+          "Reliability": {
+            "i@Stopped functioning after 1 month": "Operational Reliability",
+            "j@3 out of 4 will not re-pair in less than a year": "Operational Reliability",
+            "k@One switch stops working after couple of days": "Operational Reliability",
+            "l@Dies within months - had 3 die in a year": "Operational Reliability",
+            "m@Failed in less than 6 months": "Operational Reliability",
+            "n@Keep failing - switches stop working": "Operational Reliability",
+            "o@Several failed within 6 months, 50% gone in 20 months": "Operational Reliability",
+            "p@Two of four switches failed in less than a year": "Operational Reliability"
+          },
+          "Overheating": {
+            "q@Keeps turning off after 15 min when dimmed 100% due to overheating": "Electrical Performance"
+          },
+          "Connectivity": {
+            "r@Easy to connect to Alexa": "Smart Home Integration",
+            "s@Works well with Google": "Smart Home Integration",
+            "t@None would program to work remotely": "Smart Home Integration",
+            "u@No longer works with Alexa as of 2023": "Smart Home Integration",
+            "v@Lost Wi-Fi connection": "Smart Home Integration",
+            "w@Had trouble registering to simultaneous dual band wifi until using dedicated 2.4GHz band": "Smart Home Integration"
+          },
+          "Response time": {
+            "x@Delay before turning on or off when pressing physical button": "Response Timing"
+          },
+          "Timer function": {
+            "y@Timer doesn't allow dimming": "User Interface Experience"
+          },
+          "Switch function": {
+            "z@Switch function is super easygoing": "User Interface Experience",
+            "aa@Works great": "Operational Reliability",
+            "ab@Functions well": "Operational Reliability"
+          }
+        },
+        "use": {
+          "Home automation with Alexa": "Smart Home Integration",
+          "Home automation with Google": "Smart Home Integration",
+          "Kids' rooms for remote light control": "Smart Home Integration",
+          "Kitchen lighting": "Room Specific Lighting",
+          "Bathroom lighting": "Room Specific Lighting",
+          "LED high hats": "LED Light Management",
+          "Basement rooms": "Room Specific Lighting",
+          "Hallway and dining room with multi-switch outlets": "Room Specific Lighting",
+          "Special halogen lighting that can't be changed to smart bulbs": "Specialty and Custom Applications",
+          "Upgrading existing light switches": "Switch Replacement and Upgrades",
+          "Early morning routines at minimum brightness": "Ambiance and Scene Control",
+          "Remote control from another room via app": "Smart Home Integration"
+        }
+      }
+    },
+    "B07MTT9NQW": {
+      "aspect_categorization": {
+        "phy": {},
+        "perf": {
+          "functionality": {
+            "a@stopped working after a year": "Operational Reliability",
+            "b@defective unit": "Operational Reliability"
+          }
+        },
+        "use": {
+          "light switch": "OUT_OF_SCOPE"
+        }
+      }
+    },
+    "B0BVFMFSQV": {
+      "aspect_categorization": {
+        "phy": {
+          "appearance": {
+            "A@looks sleek": "Aesthetic Design",
+            "B@looks great": "Aesthetic Design",
+            "C@looks modern and beautiful": "Aesthetic Design",
+            "D@looks good": "Aesthetic Design"
+          },
+          "material": {
+            "E@feels sturdy": "Material Construction",
+            "F@good material quality": "Material Construction",
+            "G@high quality material": "Material Construction"
+          },
+          "switch_mechanism": {
+            "H@nice feel to the switch": "Mechanical Operation",
+            "I@nice soft operation that is smooth and quiet": "Mechanical Operation",
+            "J@squeaks when pushed": "Mechanical Operation",
+            "K@spring inside is loud": "Mechanical Operation",
+            "L@rocker clicks quite loudly when pressing on/off": "Mechanical Operation",
+            "M@nice feeling switch": "Mechanical Operation"
+          },
+          "cover_plate": {
+            "N@wall plate is included": "Cover Components",
+            "O@cheap cover": "Cover Components",
+            "P@faceplate color doesn't match the switch": "Cover Components",
+            "Q@comes with its own wall plate": "Cover Components"
+          },
+          "size_fit": {
+            "R@perfect fit": "Physical Dimensions",
+            "S@perfect size": "Physical Dimensions"
+          },
+          "grade_specification": {
+            "T@spec grade that doesn't need J hook": "OUT_OF_SCOPE"
+          },
+          "led_feature": {
+            "U@light touch feature that elevates the product": "Button Interface"
+          }
+        },
+        "perf": {
+          "functionality": {
+            "a@works as expected": "Operational Reliability",
+            "b@works as intended": "Operational Reliability",
+            "c@works perfectly": "Operational Reliability",
+            "d@works fine": "Operational Reliability",
+            "e@just works": "Operational Reliability",
+            "f@two switches didn't work and caused power outage": "Electrical Performance"
+          },
+          "installation": {
+            "g@easy to install": "Installation Experience"
+          },
+          "durability": {
+            "h@so far so good": "OUT_OF_SCOPE",
+            "i@works great so far": "OUT_OF_SCOPE"
+          },
+          "value": {
+            "j@worth the money": "Purchase Value",
+            "k@worth the price": "Purchase Value",
+            "l@great value": "Purchase Value",
+            "m@good value for money": "Purchase Value",
+            "n@good value": "Purchase Value",
+            "o@great value": "Purchase Value"
+          }
+        },
+        "use": {
+          "light_control": "OUT_OF_SCOPE",
+          "home_renovation": "Renovation and Construction",
+          "replacement_switches": "Switch Replacement and Upgrades",
+          "bedroom_installation": "Room Specific Lighting",
+          "modular_home_installation": "Renovation and Construction",
+          "wall_mounting": "OUT_OF_SCOPE"
+        }
+      }
+    }
+  }
+}

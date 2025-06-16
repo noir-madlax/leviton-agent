@@ -1,0 +1,348 @@
+{
+  "product_title": "UltraPro 700 Series Z-Wave In-Wall Smart Rocker Light Dimmer with QuickFit & SimpleWire, 3-Way Ready, Works with Alexa, Google Assistant, Z-Wave Hub Required, Smart Home, Voice Control, White, 59350",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 22,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@rocker style design": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "buttons": {
+        "B@physical buttons": {
+          "-": [
+            4
+          ]
+        },
+        "C@on button": {
+          "+": [
+            1
+          ]
+        },
+        "D@off button": {
+          "+": [
+            1
+          ]
+        },
+        "E@paddle button": {
+          "-": [
+            5
+          ]
+        },
+        "F@blue tooth reset button": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "material": {
+        "G@cheap plastic construction": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "plate": {
+        "H@plate fit": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "wire_connections": {
+        "I@wire terminations": {
+          "+": [
+            13
+          ]
+        },
+        "J@plug in wire connections": {
+          "+": [
+            21
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@z-wave hub connection": {
+          "+": {
+            "?": [
+              0,
+              15,
+              19
+            ]
+          },
+          "-": {
+            "?": [
+              11,
+              20
+            ]
+          }
+        },
+        "b@SmartThings hub connection": {
+          "+": {
+            "?": [
+              1
+            ]
+          },
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "c@home automation system sync": {
+          "-": {
+            "F": [
+              9
+            ]
+          }
+        },
+        "d@connection consistency": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "responsiveness": {
+        "e@turn off response delay": {
+          "-": {
+            "?": [
+              2,
+              5
+            ]
+          }
+        },
+        "f@ramp up/down times": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "durability": {
+        "g@lifespan of 6 months": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@lifespan of 2 years": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "i@long-term durability": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "sound": {
+        "j@buzzing sound": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "k@humming noise with ceiling fan": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "l@dimming setting retention": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "m@LED flickering prevention": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "n@manual dimming functionality": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "configuration": {
+        "o@z-wave configuration options": {
+          "-": {
+            "?": [
+              16,
+              17
+            ]
+          }
+        },
+        "p@parameter 16 functionality": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "installation": {
+        "q@ease of installation": {
+          "+": {
+            "I": [
+              13
+            ],
+            "J": [
+              21
+            ],
+            "?": [
+              7,
+              19
+            ]
+          }
+        },
+        "r@difficulty of installation": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "z_wave_technology": {
+        "s@z-wave 700 series performance": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "t@backward compatibility": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "u@network repeater functionality": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "ADT z-wave system": {
+        "+": {
+          "?": [
+            0
+          ]
+        }
+      },
+      "SmartThings hub integration": {
+        "+": {
+          "b": [
+            1
+          ]
+        },
+        "-": {
+          "b": [
+            20
+          ]
+        }
+      },
+      "LED light control": {
+        "+": {
+          "m": [
+            4
+          ]
+        }
+      },
+      "bath fan control": {
+        "+": {
+          "m": [
+            4
+          ]
+        }
+      },
+      "home automation controller": {
+        "+": {
+          "i": [
+            7
+          ]
+        }
+      },
+      "3-way control setup": {
+        "+": {
+          "?": [
+            7
+          ]
+        }
+      },
+      "RING system integration": {
+        "+": {
+          "?": [
+            10
+          ]
+        }
+      },
+      "Vera hub integration": {
+        "-": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "HS3/HS4 system integration": {
+        "+": {
+          "s": [
+            14
+          ]
+        }
+      },
+      "bedroom lighting": {
+        "-": {
+          "j": [
+            15
+          ]
+        }
+      },
+      "ceiling fan control": {
+        "-": {
+          "k": [
+            20
+          ]
+        }
+      },
+      "live line, load line and neutral wire setup": {
+        "+": {
+          "q": [
+            21
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:23.545187"
+}

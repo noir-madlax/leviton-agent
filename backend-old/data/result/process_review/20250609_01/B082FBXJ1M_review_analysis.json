@@ -1,0 +1,444 @@
+{
+  "product_title": "Lesim Smart 3 Gang WiFi Light Switch, 2.4GHz, Compatible with Alexa, Google Home, White, Push Button, Automatically/Smart Switch Operation",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 27,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek and modern design that blends with home decor": {
+          "+": [
+            12
+          ]
+        },
+        "B@nice appearance": {
+          "+": [
+            6
+          ]
+        },
+        "C@green light when off and red light when on": {
+          "-": [
+            0,
+            20
+          ]
+        }
+      },
+      "build_quality": {
+        "D@sturdy and well-made construction": {
+          "+": [
+            12
+          ]
+        },
+        "E@responsive touch buttons with satisfying tactile experience": {
+          "+": [
+            12
+          ]
+        },
+        "F@middle button doesn't feel like it connects but does work": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "components": {
+        "G@manual switches": {
+          "-": [
+            0
+          ]
+        },
+        "H@physical switch": {
+          "-": [
+            2
+          ]
+        },
+        "I@wall switch": {
+          "-": [
+            3
+          ]
+        },
+        "J@wall plate included": {
+          "+": [
+            12
+          ]
+        },
+        "K@three separate pieces": {
+          "+": [
+            26
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0,
+              11,
+              12,
+              16,
+              19,
+              21,
+              23,
+              26
+            ]
+          }
+        },
+        "b@straightforward installation process": {
+          "+": {
+            "?": [
+              12,
+              18
+            ]
+          }
+        },
+        "c@fits perfectly into wall plate": {
+          "+": {
+            "?": [
+              12,
+              16
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "d@Alexa integration not too difficult": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "e@easy setup with Alexa": {
+          "+": {
+            "?": [
+              1,
+              16,
+              18,
+              21,
+              22,
+              25,
+              26
+            ]
+          }
+        },
+        "f@seamless app connectivity": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "g@hard time connecting to wifi": {
+          "-": {
+            "?": [
+              7,
+              17
+            ]
+          }
+        },
+        "h@not connecting to WiFi": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "i@super hard to pair": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "j@requires stable 2.4 GHz Wi-Fi connection": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "k@manual switches don't respond reliably after 10 months": {
+          "-": {
+            "G": [
+              0
+            ]
+          }
+        },
+        "l@physical switch stopped working after 1 year": {
+          "-": {
+            "H": [
+              2
+            ]
+          }
+        },
+        "m@switch works only sometimes": {
+          "-": {
+            "I": [
+              3
+            ]
+          }
+        },
+        "n@takes few seconds or does nothing when pressed": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "o@stopped working after less than a month": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "p@worn out by November 2024 after July 2024 installation": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "q@broke within first few days": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "r@stopped working after 3 months": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "s@30 second delay when switching": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "t@half the times doesn't switch on/off": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "u@long term reliability issues": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "v@works flawlessly after connection": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "w@stable connection allowing reliable control": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "x@can control with Alexa when manual switches fail": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "y@WiFi control still works when physical switch fails": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "z@depends on internet connection and Smartlife services": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "aa@green light stays on but won't function": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "ab@device shows offline in app": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "ac@app responded promptly without glitches or delays": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ad@works like a charm": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "user_experience": {
+        "ae@intuitive and user-friendly app": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "af@app uses Asian characters after setup": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ag@nothing in app makes sense": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ah@not easy to operate": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "ai@easy to use app": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "aj@take trial and error to get first one up": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_integration": {
+        "+": {
+          "d,e": [
+            0,
+            1,
+            16,
+            18,
+            21,
+            22,
+            25,
+            26
+          ]
+        },
+        "-": {
+          "g,h,i": [
+            4,
+            7,
+            10,
+            17
+          ]
+        }
+      },
+      "lighting_control": {
+        "+": {
+          "ac,ad,v": [
+            12,
+            17,
+            24
+          ]
+        },
+        "-": {
+          "k,l,m,n,s,t": [
+            0,
+            2,
+            3,
+            8
+          ]
+        }
+      },
+      "remote_control": {
+        "+": {
+          "x,y,w": [
+            0,
+            2,
+            12
+          ]
+        },
+        "-": {
+          "z,ab": [
+            3,
+            6
+          ]
+        }
+      },
+      "scheduling_automation": {
+        "+": {
+          "ac": [
+            12,
+            26
+          ]
+        }
+      },
+      "replacement_upgrade": {
+        "+": {
+          "a,ad": [
+            24
+          ]
+        },
+        "-": {
+          "k,l,r,u": [
+            0,
+            2,
+            8,
+            9
+          ]
+        }
+      },
+      "multi_room_installation": {
+        "+": {
+          "a,c": [
+            16,
+            18
+          ]
+        },
+        "-": {
+          "aj": [
+            24
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:04.890735"
+}

@@ -1,0 +1,2444 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:13:57.551041",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0033PSGJQ",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0033PSGJQ",
+    "title": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 12.46,
+    "rating": 4.7,
+    "reviews_count": 534.0,
+    "category": "Light Switches",
+    "product_segment": "Multi-Function Combination Switches",
+    "product_url": "https://www.amazon.com/dp/B0033PSGJQ"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R6A3XUU2YI8S7",
+        "text": "solid as ususal with this brand",
+        "date": "Reviewed in the United States on September 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "great quality",
+        "userName": "Deserae & James Thompson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RHR0L10BHTBHX",
+        "text": "Disappears into the backsplash = perfect!",
+        "date": "Reviewed in the United States on July 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love the color!",
+        "userName": "Leslie D.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2600ML3V6HK4Q",
+        "text": "Could not find item in grey at area stores. Very pleased",
+        "date": "Reviewed in the United States on March 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Grey switch",
+        "userName": "Linda Osborn",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RY811EVV2XHQC",
+        "text": "Works well and nice looking",
+        "date": "Reviewed in the United States on February 28, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "RDH",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2PU36NP4LNG61",
+        "text": "I’ve been going around my city looking everywhere for something similar to this, after receiving the light switch I was extremely pleased by the quality and durability of the light switch.",
+        "date": "Reviewed in the United States on November 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality light switch",
+        "userName": "Jefferson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3HHW7C0EWVI7U",
+        "text": "All in all, I can't complain too much. It's a perfectly cromulent solution for putting two switches into a single gang box (or one slot of a two-gang box). It does have removable tabs on both sides, and not every similar product does. This allows you to wire up two lights that are on two different circuits without issue - in my case an outdoor light and an outdoor outlet that are both switched from inside the house. It solves the problem fine and it's from a reputable brand so I'm confident that it will last. It's got some very minor issues. It is a bit bulky. It's not as deep as a GFCI receptacle for example, but it is thicker than a normal switch and this may impact fitment in older boxes. This is why I only gave four stars for ease of installation. The added girth, plus the fact that you're installing two pairs of wires into it means that things are going to get pretty cramped in an older box. The overall feel during operation just doesn't feel as nice as a typical decora switch, and it's hard to describe why. The click sound that it makes feels hollow and it has quite a bit of resistance when being toggled. It just feels a bit cheap. Which is a shame because it's not cheap at all - it's more expensive than the equivalent product with the old toggle style switches would be and it should feel similarly premium. Ultimately there just aren't many solutions on the market for single-gang multi switches in a decora style, especially in unusual colors. If that's what you need, it's probably the best out there. I'm certainly going to trust Leviton more than the unpronounceable gibberish brands that infect Amazon - at least I can be confident that this has proper UL certification and is up to code. For that reason alone, I recommend this over any product that isn't from a reputable major brand.",
+        "date": "Reviewed in the United States on October 14, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Perfectly functional, but doesn't feel as nice as the single-switch versions",
+        "userName": "Jon",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1B6HLJ7LFTYQ8",
+        "text": "I chose the gray color for my bathroom. It looks nice and so far works well.",
+        "date": "Reviewed in the United States on September 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "cjrob",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71nX5bh+bBL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3B1RR78F1QSUQ",
+        "text": "Very good thanks",
+        "date": "Reviewed in the United States on June 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very good",
+        "userName": "Enrique S.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1QGFAVVO02948",
+        "text": "East install, perfect double switch for over sink light and under sink incenerator",
+        "date": "Reviewed in the United States on April 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Nick",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1RM00PBLCGY8G",
+        "text": "Quick delivery and great colr:",
+        "date": "Reviewed in the United States on January 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exceeds my expectations",
+        "userName": "Joe Rifice",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R308BLTO0UNZLX",
+        "text": "Awesome",
+        "date": "Reviewed in the United States on December 11, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent item",
+        "userName": "Ben",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R240QNQ3LV458E",
+        "text": "Received items quickly. All uints work great. Thank you!",
+        "date": "Reviewed in the United States on December 5, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent service and product",
+        "userName": "rayf",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1C7ZG24T0YFUZ",
+        "text": "ok",
+        "date": "Reviewed in the United States on September 6, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "ok",
+        "userName": "wolf",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1MOIP43G5NAJA",
+        "text": "I shopped Albuquerque from box hardware stores to electrical supply companies but could NOT find these rocker switches in Dove Gray anywhere! While waiting on remaining items on my list I went to Amazon on my phone & found exactly what I wanted! I placed my order with next day delivery. They are a perfect match with my quartzite counter tops & backsplash.",
+        "date": "Reviewed in the United States on August 15, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "A Perfect Match",
+        "userName": "Jan Stockton",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R14T8DY4TB3VP0",
+        "text": "Was as decribed",
+        "date": "Reviewed in the United States on August 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Received right away",
+        "userName": "kathleen dickinson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2BARBD21JBYSZ",
+        "text": "Couldn't find this at lowes and we were on a time crunch but luckily we found it on amazon and its working great!",
+        "date": "Reviewed in the United States on July 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it",
+        "userName": "Destiny Evans",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RY86J7JGAQMJK",
+        "text": "Easy to install, I was living with a light that did not work until I had an electrician out for another reason. I thought I had to fix something in the atic but instead was told to change out the switch. Saw this switch and it works great. If you are upgrading to a more modern look this is the switch for you.",
+        "date": "Reviewed in the United States on June 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works and upgrades the switches to a more modern look",
+        "userName": "Eric Grant",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RLEJRT4O0DB02",
+        "text": "Exact match to the switch I needed to replace. Fast shipping and reasonable price.",
+        "date": "Reviewed in the United States on June 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality product",
+        "userName": "David W DePew",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1Y44K9CXM0BJV",
+        "text": "Buena calidad",
+        "date": "Reviewed in the United States on June 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente",
+        "userName": "Osvaldo paredes",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R30MM6ABNR8IA",
+        "text": "Thanks",
+        "date": "Reviewed in the United States on April 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Chris",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R20EPSW8OT815U",
+        "text": "It's fine it's a light switch",
+        "date": "Reviewed in the United States on January 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Even color",
+        "userName": "John Horvath",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3DX476KIRHMC2",
+        "text": "We had some remodeling done on our bathroom. The bathroom originally had a separate switch for the fan and light, but the electrician, for whatever reason combined and placed them on one switch. This combination switch allowed for the one switch look, but also have dual functionality of operating each individually. Very easy to install as well.",
+        "date": "Reviewed in the United States on November 25, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Tony",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61dU5qT64OL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1AV7AELIY9PEB",
+        "text": "Installed in kitchen after the original broke after 14 years.",
+        "date": "Reviewed in the United States on November 11, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazon seems to be the only way to get the gray color",
+        "userName": "Ernest Robertson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2Q7QWSQ8IZSBC",
+        "text": "Fácil de instalar",
+        "date": "Reviewed in the United States on February 28, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "De calidad",
+        "userName": "eriberto",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R24NQYQSTK8JRL",
+        "text": "A little darker then I though",
+        "date": "Reviewed in the United States on July 21, 2020",
+        "rating": "4.0 out of 5 stars",
+        "title": "Standard switch",
+        "userName": "R",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1BWVGQW6ZCKVF",
+        "text": "Great price and quality!",
+        "date": "Reviewed in the United States on April 4, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Price!",
+        "userName": "sue",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3FPZ992PX36XJ",
+        "text": "Excellent product",
+        "date": "Reviewed in the United States on February 7, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Not available at Lowe’s or home depot",
+        "userName": "Alicia Ewen",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1FMH17WW7U44E",
+        "text": "It’s grey and exactly what I wanted",
+        "date": "Reviewed in the United States on January 9, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "It’s grey",
+        "userName": "Eric S.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R11MHAPHK9T89M",
+        "text": "Smooth switch",
+        "date": "Reviewed in the United States on December 19, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switch",
+        "userName": "robert marotto",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R22LGN47394UWC",
+        "text": "As expected",
+        "date": "Reviewed in the United States on November 9, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good item",
+        "userName": "Jim R",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1TLVJWAUNT89S",
+        "text": "The product grate... I just hate when they leave it by the trash so far from the porch where people can Steal it!",
+        "date": "Reviewed in the United States on July 20, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great!",
+        "userName": "Mike Gtz from Rioverde, S.L.P.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RSD9LPWW6B1UO",
+        "text": "I could only find this product",
+        "date": "Reviewed in the United States on April 27, 2019",
+        "rating": "4.0 out of 5 stars",
+        "title": "These a good for the money",
+        "userName": "Sheila",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R10RK4F0OF7CQS",
+        "text": "The switches don't work properly. The switches don't control different functions.",
+        "date": "Reviewed in the United States on March 14, 2019",
+        "rating": "1.0 out of 5 stars",
+        "title": "It's a fluke!",
+        "userName": "C Brown",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RRDUVW49PTDDS",
+        "text": "I used this to split up the lighting in a bath room. So the overhead chandelier light now goes to the top toggle and the vanity lights go to the bottom. I like that another gang did not have to be added to do this, since there was very limited room to add additional switches. The gray color is a very natural gray. The Leviton gray matches the Lutron gray very well, as long as both are glossy. I installed Lutron covers and dimmers with the Leviton switches and outlets (much cheaper). However, the GFCI I have is not the glossy gray and is a flat textured gray, so it does not match as well. I'm sharing the color observation, as I searched online and compared in stores to make sure the mixed brands would look good together. Not all other manufacturer grays match.",
+        "date": "Reviewed in the United States on July 6, 2018",
+        "rating": "4.0 out of 5 stars",
+        "title": "Leviton gray matches Lutron gray",
+        "userName": "Enlighten Me",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3KJ30M11YEII4",
+        "text": "works great",
+        "date": "Reviewed in the United States on June 12, 2018",
+        "rating": "4.0 out of 5 stars",
+        "title": "Four Stars",
+        "userName": "Robert Cross",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1DTBCGBL2U0HK",
+        "text": "Thank you good product",
+        "date": "Reviewed in the United States on April 24, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Thank you good product",
+        "userName": "Many",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RYT4IRMTQH26U",
+        "text": "Switch came DOA which I found extremely unusual leviton is a very reliable Brand has been around for a very long time. I’ve never had a problem before but unfortunately this one wasn’t so good. Amazon refunded me immediately and I got a replacement that works perfectly.",
+        "date": "Reviewed in the United States on March 15, 2018",
+        "rating": "3.0 out of 5 stars",
+        "title": "Usually very reliable",
+        "userName": "antcin307",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1JTBC75ZF7OD4",
+        "text": "Item as expected.",
+        "date": "Reviewed in the United States on February 17, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Mum",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R270GZQ1J5C5PP",
+        "text": "The color of the switch matches the rest of the outlets that we had installed. It is very well designed & functions well. There is definite feedback when operating the switches, which helps with not having accidental operation of the switch. Installation was easy.",
+        "date": "Reviewed in the United States on January 12, 2018",
+        "rating": "4.0 out of 5 stars",
+        "title": "It is very well designed & functions well",
+        "userName": "Tom",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2CGK1X8FS65GR",
+        "text": "I was worried about the color but it is grey as it says. Very nice and modern and easy to put.",
+        "date": "Reviewed in the United States on September 16, 2017",
+        "rating": "4.0 out of 5 stars",
+        "title": "Very nice and modern and easy to put",
+        "userName": "Cheka Handal",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3KOLSM6NQLDDZ",
+        "text": "I hesitated to buy the gray version because the picture does not show classic Leviton gray, but I took a chance, and indeed it is gray. The previous Leviton switch failed (stuck on) after only ten years, but it's the first Leviton switch that has ever failed on me.",
+        "date": "Reviewed in the United States on June 28, 2017",
+        "rating": "4.0 out of 5 stars",
+        "title": "A classic switch, and the gray really is Leviton gray.",
+        "userName": "Camp Runamok",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1T58TQXLZX8SN",
+        "text": "I am very satisfied with the purchase, Works as described.",
+        "date": "Reviewed in the United States on June 8, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "A. Velasquez",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1RWRVZFNQMGDU",
+        "text": "FINALLY. Got the color switch I needed. Couldn't find gray anywhere.",
+        "date": "Reviewed in the United States on March 29, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "A th room Complete",
+        "userName": "Tinydancer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R31WBVQC2AG211",
+        "text": "Perfect color..just what I needed",
+        "date": "Reviewed in the United States on January 11, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it.",
+        "userName": "Diane",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3D6UVDDP59OPX",
+        "text": "Happy to find this combo switch in Decora gray to wire the bathroom fan and light without having to add a new box. As expected, the Leviton product is all quality as well.",
+        "date": "Reviewed in the United States on October 2, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "Happy to find this combo switch in Decora gray to ...",
+        "userName": "Pat K.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RVK3BIBFFFIXS",
+        "text": "Got exactly as ordered. Was looking for a brushed nickel switch. This comes in every color but brushed nickel or nickel. The gray stood out. Found a similar paint at a hobby store and painted the switch. Leviton should get nickel colored switches.",
+        "date": "Reviewed in the United States on July 3, 2016",
+        "rating": "3.0 out of 5 stars",
+        "title": "Got exactly as ordered. Was looking for a brushed ...",
+        "userName": "Busy Dad",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3A0TJPUTMIOEZ",
+        "text": "luv it",
+        "date": "Reviewed in the United States on February 14, 2016",
+        "rating": "4.0 out of 5 stars",
+        "title": "Four Stars",
+        "userName": "KOOKYE",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2VTSGWPO47FJJ",
+        "text": "Works great. Clean look.",
+        "date": "Reviewed in the United States on December 14, 2015",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great brand",
+        "userName": "J Davis",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1D26Q24UAE9FO",
+        "text": "exactly what i wanted",
+        "date": "Reviewed in the United States on December 2, 2015",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "mary welhusen",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0033PSGJQ",
+        "productTitle": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 61,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 535,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 82
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "ROF9IP6AV670B",
+        "text": "Just what I wanted.",
+        "date": "Reviewed in the United States on October 18, 2015",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Annette Bennett",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

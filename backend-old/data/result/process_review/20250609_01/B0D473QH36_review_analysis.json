@@ -1,0 +1,365 @@
+{
+  "product_title": "DEWENWILS Dimmer Switch for LED Lights, Dimmer Light Switch, Full Range Dimming, ON/Off Rocker Switch, Single Pole/3-Way LED Dimmer Switch, Incandescent/Tungsten 600W, CFL/LED 150W, ETL Listed, 2Pack",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 18,
+  "review_analysis": {
+    "phy": {
+      "adjustment_screw": {
+        "A@has adjustment screw for tuning dimmer": {
+          "+": [
+            3,
+            5,
+            10
+          ]
+        }
+      },
+      "switch_shape": {
+        "B@has hourglass shape": {
+          "+": [
+            4
+          ]
+        },
+        "C@has paddle shape that is unusual but not unattractive": {
+          "+": [
+            12
+          ]
+        },
+        "D@has large switch": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "slider": {
+        "E@has dimming slide on the side": {
+          "+": [
+            8
+          ]
+        },
+        "F@has small slider": {
+          "+": [
+            15
+          ]
+        },
+        "G@slider works smoothly": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "rocker_switch": {
+        "H@has rocker movement that is easy to turn on/off": {
+          "+": [
+            10
+          ]
+        },
+        "I@rocker switch is responsive": {
+          "+": [
+            11
+          ]
+        },
+        "J@operates with gentle rocker press": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "plastic_material": {
+        "K@made of very low quality plastic that can be felt by touch": {
+          "-": [
+            14
+          ]
+        },
+        "L@plastic looks slightly cheaper than other switches": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "side_tab": {
+        "M@has breakable side tab for mounting flexibility": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "wiring_requirements": {
+        "N@does not require neutral wire": {
+          "+": [
+            13
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_function": {
+        "a@doesn't work - light remains same when pushed up or pulled down": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@don't dim enough": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@stopped working right away": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@worked perfectly for few days before failing to dim at all": {
+          "-": {
+            "A": [
+              3
+            ]
+          }
+        },
+        "e@offers full-range dimming": {
+          "+": {
+            "?": [
+              7,
+              11
+            ]
+          }
+        },
+        "f@wouldn't gradually dim LED recessed lighting - would do some then complete off": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@works smoothly with no flicker when adjusting brightness": {
+          "+": {
+            "G": [
+              13
+            ]
+          }
+        },
+        "h@will only dim to about 50%": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "i@doesn't dim all the way to off": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "j@flicker free": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "k@small amount of flickering but improved from previous switches": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "l@no flicker": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "durability": {
+        "m@seems durably made and should last a long time": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "n@performed reliably": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "o@works with old wiring and able to control dimmable LEDs": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "p@works well with both LED and incandescent bulbs": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "q@won't work on ceiling fans without dimming capability": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "adjustment_capability": {
+        "r@can adjust how low dimmer goes": {
+          "+": {
+            "A": [
+              4
+            ]
+          }
+        },
+        "s@has adjuster to control adjustment range": {
+          "+": {
+            "A": [
+              5
+            ]
+          }
+        },
+        "t@dimming can be adjusted for brightness range": {
+          "+": {
+            "A": [
+              10
+            ]
+          }
+        }
+      },
+      "energy_efficiency": {
+        "u@enhances energy efficiency": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "color_matching": {
+        "v@color doesn't quite match other switches or wall plate": {
+          "-": {
+            "K": [
+              10
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_lighting_applications": {
+        "+": {
+          "j": [
+            4
+          ],
+          "o": [
+            5
+          ]
+        }
+      },
+      "recessed_lighting": {
+        "+": {
+          "j": [
+            4
+          ]
+        },
+        "-": {
+          "f": [
+            9
+          ]
+        }
+      },
+      "lights_on_fans": {
+        "+": {
+          "j": [
+            4
+          ]
+        }
+      },
+      "old_house_with_2_wires": {
+        "+": {
+          "o": [
+            5
+          ]
+        }
+      },
+      "single_pole_control": {
+        "+": {
+          "?": [
+            5,
+            13
+          ]
+        }
+      },
+      "3_way_switches": {
+        "+": {
+          "?": [
+            5,
+            9,
+            10,
+            12
+          ]
+        }
+      },
+      "home_lighting_setup": {
+        "+": {
+          "e,n": [
+            11
+          ]
+        }
+      },
+      "replacing_defective_switches": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "laundry_room": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "ceiling_fans_without_dimming_capability": {
+        "-": {
+          "q": [
+            8
+          ]
+        }
+      },
+      "recessed_LCD_downlights": {
+        "+": {
+          "?": [
+            12
+          ]
+        }
+      },
+      "mounting_next_to_GFCI_outlet": {
+        "+": {
+          "M": [
+            12
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:30.856037"
+}

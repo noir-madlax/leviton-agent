@@ -1,0 +1,308 @@
+{
+  "product_title": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+  "product_category": "Plug-In Portable Dimmer Controls",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "construction": {
+        "A@made of plastic material": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "slider_switch": {
+        "B@sliding dimmer switch": {
+          "-": [
+            4
+          ]
+        },
+        "C@slide control is wide enough for big toe operation": {
+          "+": [
+            13
+          ]
+        },
+        "D@slides smoothly": {
+          "+": [
+            6,
+            16,
+            24
+          ]
+        }
+      },
+      "design": {
+        "E@compact size": {
+          "+": [
+            27,
+            29
+          ]
+        },
+        "F@lightweight": {
+          "-": [
+            32
+          ]
+        },
+        "G@well designed": {
+          "+": [
+            27
+          ]
+        },
+        "H@small and discreet": {
+          "+": [
+            34
+          ]
+        }
+      },
+      "wiring": {
+        "I@has short in wiring": {
+          "-": [
+            1,
+            41
+          ]
+        },
+        "J@two cords coming out from one side": {
+          "-": [
+            32
+          ]
+        }
+      },
+      "build_quality": {
+        "K@not cheaply made": {
+          "+": [
+            3
+          ]
+        },
+        "L@very bad quality": {
+          "-": [
+            46
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_functionality": {
+        "a@dims the lamp": {
+          "+": {
+            "?": [
+              4,
+              11,
+              19,
+              24,
+              39,
+              40
+            ]
+          }
+        },
+        "b@does not completely shut off LED lights": {
+          "-": {
+            "?": [
+              0,
+              23,
+              28,
+              30,
+              42
+            ]
+          }
+        },
+        "c@does not reach full brightness": {
+          "-": {
+            "?": [
+              8,
+              42
+            ]
+          }
+        },
+        "d@works as intended": {
+          "+": {
+            "?": [
+              2,
+              5,
+              9,
+              10,
+              12,
+              20,
+              22,
+              25,
+              27,
+              33,
+              43,
+              45
+            ]
+          }
+        },
+        "e@causes bulb flickering": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "f@does not flicker": {
+          "+": {
+            "?": [
+              26,
+              42
+            ]
+          }
+        },
+        "g@does not work at all": {
+          "-": {
+            "I": [
+              1
+            ],
+            "?": [
+              8,
+              14,
+              31,
+              46
+            ]
+          }
+        }
+      },
+      "noise_performance": {
+        "h@operates silently without humming": {
+          "+": {
+            "?": [
+              16,
+              18
+            ]
+          }
+        },
+        "i@very stable and quiet": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "durability": {
+        "j@lasted 14 months": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "k@cracked when stepped on": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "power_efficiency": {
+        "l@power vampire device": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "slipping": {
+        "m@slips around on hard floors": {
+          "-": {
+            "F": [
+              32
+            ]
+          }
+        }
+      },
+      "burning_smell": {
+        "n@smelled like burning": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "floor_lamp_dimming": {
+        "+": {
+          "a": [
+            4,
+            12,
+            13,
+            21,
+            34
+          ]
+        }
+      },
+      "bedroom_lamp_control": {
+        "+": {
+          "a": [
+            16,
+            17
+          ]
+        }
+      },
+      "heat_lamp_temperature_control": {
+        "+": {
+          "a": [
+            15
+          ]
+        }
+      },
+      "rope_lights_dimming": {
+        "+": {
+          "a": [
+            19
+          ]
+        }
+      },
+      "LED_bulb_conversion": {
+        "+": {
+          "d": [
+            25,
+            39
+          ]
+        }
+      },
+      "mood_lighting": {
+        "+": {
+          "a": [
+            11
+          ]
+        }
+      },
+      "timer_controlled_lighting": {
+        "+": {
+          "d": [
+            34
+          ]
+        }
+      },
+      "torchiere_LED_lamp": {
+        "+": {
+          "d": [
+            45
+          ]
+        }
+      },
+      "christmas_lights": {
+        "-": {
+          "?": [
+            38
+          ]
+        }
+      },
+      "dimmable_LED_string_lights": {
+        "+": {
+          "f": [
+            42
+          ]
+        },
+        "-": {
+          "b,c": [
+            42
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:57.873754"
+}

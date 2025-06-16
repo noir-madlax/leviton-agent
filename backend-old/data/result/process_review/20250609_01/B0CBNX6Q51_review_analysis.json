@@ -1,0 +1,612 @@
+{
+  "product_title": "TP-Link Tapo Matter Smart Light Switch: Voice Control w/Siri, Alexa & Google Home | UL Certified | Timer & Schedule | Easy Guided Install | Neutral Wire Required | Single Pole | Tapo S505(2-Pack)",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@aesthetic design": {
+          "+": [
+            0
+          ]
+        },
+        "B@clean look": {
+          "+": [
+            43
+          ]
+        },
+        "C@good appearance": {
+          "+": [
+            26
+          ]
+        }
+      },
+      "button": {
+        "D@satisfying click": {
+          "+": [
+            6
+          ]
+        },
+        "E@toggle button design": {
+          "-": [
+            35
+          ]
+        },
+        "F@no up switch": {
+          "-": [
+            35
+          ]
+        },
+        "G@small reset button on bottom": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "wiring": {
+        "H@color-coded wires": {
+          "+": [
+            19,
+            27
+          ]
+        },
+        "I@requires neutral wire": {
+          "+": [
+            44
+          ]
+        }
+      },
+      "mounting": {
+        "J@thick plastic mounting ears": {
+          "-": [
+            21
+          ]
+        },
+        "K@doesn't fit well with screwless wallplates": {
+          "-": [
+            21
+          ]
+        }
+      },
+      "LED indicator": {
+        "L@locator/indicator LED": {
+          "+": [
+            21
+          ]
+        },
+        "M@automatic night mode": {
+          "+": [
+            26
+          ]
+        }
+      },
+      "packaging": {
+        "N@nice packaging": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "size": {
+        "O@difficult to fit in smaller electrical boxes": {
+          "-": [
+            19
+          ]
+        }
+      }
+    },
+    "perf": {
+      "voltage compatibility": {
+        "a@works with 220v despite 110v specification": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "installation": {
+        "b@easy to install": {
+          "+": {
+            "H": [
+              19,
+              27
+            ]
+          }
+        },
+        "c@straightforward installation": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@simple installation": {
+          "+": {
+            "?": [
+              13,
+              18,
+              21,
+              26,
+              31,
+              34,
+              43
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "e@seamless WiFi connection": {
+          "+": {
+            "?": [
+              6,
+              23,
+              31
+            ]
+          }
+        },
+        "f@strong and reliable WiFi connectivity": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "g@drops signal daily": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "h@no Bluetooth connection during setup": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "i@doesn't work wirelessly": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "j@finicky to pair to WiFi": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "k@disconnects from WiFi randomly": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "l@difficult to connect to iPhone during setup": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "m@can take couple tries to connect": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "app integration": {
+        "n@works well with Tapo app": {
+          "+": {
+            "?": [
+              1,
+              6,
+              23
+            ]
+          }
+        },
+        "o@doesn't work with Smart Life": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "p@easy setup through app": {
+          "+": {
+            "?": [
+              13,
+              14,
+              18,
+              31,
+              33,
+              38,
+              45
+            ]
+          }
+        },
+        "q@requires Tapo app for firmware updates": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "voice control": {
+        "r@works with Alexa": {
+          "+": {
+            "?": [
+              2,
+              9,
+              31,
+              41,
+              44
+            ]
+          }
+        },
+        "s@works with Google Home": {
+          "+": {
+            "?": [
+              6,
+              27,
+              33,
+              39
+            ]
+          }
+        },
+        "t@works with Siri": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "smart home integration": {
+        "u@Matter compatibility": {
+          "+": {
+            "?": [
+              6,
+              10,
+              11,
+              16,
+              19,
+              22,
+              26,
+              33,
+              37
+            ]
+          }
+        },
+        "v@HomeKit integration": {
+          "+": {
+            "?": [
+              10,
+              11,
+              16,
+              17,
+              21,
+              23,
+              33
+            ]
+          }
+        },
+        "w@works with Home Assistant": {
+          "+": {
+            "?": [
+              6,
+              37
+            ]
+          }
+        },
+        "x@works with HomeSeer": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "y@HomeKit displays as light only": {
+          "-": {
+            "?": [
+              11,
+              16
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "z@works every time": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "aa@very reliable": {
+          "+": {
+            "?": [
+              10,
+              16,
+              36
+            ]
+          }
+        },
+        "ab@stops working after 6 months": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ac@died within 4 months": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "ad@becomes unresponsive": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "ae@stops working sometimes": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "af@integrations randomly stop triggering": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "ag@occasionally miss signal": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "ah@manual control works": {
+          "+": {
+            "D": [
+              6
+            ]
+          }
+        },
+        "ai@manual control doesn't work": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "aj@light won't stay on": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ak@switches on then immediately off": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "al@automation features": {
+          "+": {
+            "?": [
+              6,
+              23
+            ]
+          }
+        },
+        "am@delayed shutoff functionality": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "an@auto-off timer": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "ao@needs to be polled to get status": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "power rating": {
+        "ap@only 120 watts for ceiling fans": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "durability": {
+        "aq@durable physical switch": {
+          "+": {
+            "D": [
+              23
+            ]
+          }
+        },
+        "ar@good quality": {
+          "+": {
+            "?": [
+              0,
+              16,
+              36
+            ]
+          }
+        },
+        "as@poor quality": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "outdoor lighting control": {
+        "+": {
+          "n": [
+            1,
+            20,
+            23,
+            28,
+            30,
+            31
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "indoor lighting control": {
+        "+": {
+          "ah,al": [
+            6,
+            9,
+            27,
+            34,
+            41,
+            43
+          ]
+        },
+        "-": {
+          "aj,ak": [
+            7
+          ]
+        }
+      },
+      "ceiling fan control": {
+        "+": {
+          "?": [
+            11
+          ]
+        },
+        "-": {
+          "ap,y": [
+            11
+          ]
+        }
+      },
+      "bathroom fan control": {
+        "+": {
+          "?": [
+            11
+          ]
+        },
+        "-": {
+          "y": [
+            11
+          ]
+        }
+      },
+      "outlet control": {
+        "+": {
+          "?": [
+            11
+          ]
+        },
+        "-": {
+          "y": [
+            11
+          ]
+        }
+      },
+      "home automation": {
+        "+": {
+          "u,al": [
+            1,
+            6,
+            23,
+            27,
+            46
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "voice control applications": {
+        "+": {
+          "r,s,t": [
+            2,
+            9,
+            23,
+            27,
+            31,
+            39,
+            41
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "multi-switch replacement": {
+        "+": {
+          "b": [
+            28
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "timer replacement": {
+        "+": {
+          "c": [
+            1
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "workshop lighting": {
+        "+": {
+          "?": [
+            28
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:24.442886"
+}

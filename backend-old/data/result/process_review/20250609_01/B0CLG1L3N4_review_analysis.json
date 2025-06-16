@@ -1,0 +1,282 @@
+{
+  "product_title": "Leviton Decora Smart No-Neutral Dimmer & Wi-Fi Bridge Kit for Older Homes Without a Neutral Wire (Works with My Leviton App for controlling light)",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 16,
+  "review_analysis": {
+    "phy": {
+      "wiring requirements": {
+        "A@requires ground wire": {
+          "-": [
+            0
+          ]
+        },
+        "B@works without neutral wire": {
+          "+": [
+            1,
+            2,
+            4,
+            10,
+            12
+          ]
+        }
+      },
+      "physical dimensions": {
+        "C@too deep for standard electrical box": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "appearance": {
+        "D@looks decent": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "bridge component": {
+        "E@bridge connects to wifi network": {
+          "+": [
+            3
+          ]
+        },
+        "F@dongle bridges protocol to wifi": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@unresponsive": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@works pretty good": {
+          "+": {
+            "F": [
+              1
+            ]
+          }
+        },
+        "c@works great after correct installation": {
+          "+": {
+            "B": [
+              2
+            ]
+          }
+        },
+        "d@switch would not connect to bridge": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@extremely hard to connect and configure": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "f@connection is not reliable": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "g@doesn't connect with bridge": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@takes forever to respond via Apple Home App": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "i@response slightly slower than other switches": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "dimming functionality": {
+        "j@no flickering, 1% to 100% brightness": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "k@dimming on app doesn't work effectively": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "l@range of dimming closer to 10-25% despite showing 0-100%": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "m@need to reset dongle after couple months": {
+          "-": {
+            "F": [
+              1
+            ]
+          }
+        },
+        "n@high quality": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "o@didn't work right out the box": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "p@completely unreliable": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "q@works well": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "installation": {
+        "r@installs pretty easily": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "s@simple to install": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "t@don't work well with HomeKit": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "u@works with HomeKit without user account": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "old wiring homes": {
+        "+": {
+          "B": [
+            1,
+            2,
+            4,
+            10,
+            11,
+            12
+          ]
+        },
+        "-": {
+          "A": [
+            0
+          ]
+        }
+      },
+      "controlling LED flood lamps": {
+        "+": {
+          "j": [
+            3
+          ]
+        }
+      },
+      "remote control and scheduling": {
+        "+": {
+          "n": [
+            7
+          ]
+        },
+        "-": {
+          "k,l": [
+            9
+          ]
+        }
+      },
+      "lamp post lighting": {
+        "+": {
+          "?": [
+            14
+          ]
+        }
+      },
+      "multi-location control with companion remote": {
+        "+": {
+          "?": [
+            3
+          ]
+        }
+      },
+      "Amazon Echo control": {
+        "+": {
+          "b": [
+            1
+          ]
+        },
+        "-": {
+          "m": [
+            1
+          ]
+        }
+      },
+      "mobile app setup": {
+        "-": {
+          "?": [
+            13
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:13.242979"
+}

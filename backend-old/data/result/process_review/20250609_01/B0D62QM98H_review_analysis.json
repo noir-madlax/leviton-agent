@@ -1,0 +1,328 @@
+{
+  "product_title": "DEWENWILS Dimmer Switch for LED Lights, 600W Incandescent/Halogen and 150W CFL/LED, Single-Pole or 3-Way Dimmer Light Switch, ETL ＆ cUL Listed, White, 2 Packs",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 12,
+  "review_analysis": {
+    "phy": {
+      "wiring": {
+        "A@includes extra red wire with one end taped up for 3-way configuration": {
+          "+": [
+            6
+          ]
+        },
+        "B@wiring does not have a lot of extra length and is pretty short": {
+          "-": [
+            6
+          ]
+        },
+        "C@does not require neutral wire": {
+          "+": [
+            8,
+            9
+          ]
+        },
+        "D@has unusual grounding": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "construction": {
+        "E@feels very plastic": {
+          "-": [
+            6
+          ]
+        },
+        "F@doesn't weigh much": {
+          "-": [
+            10
+          ]
+        },
+        "G@has relatively shallow depth": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "appearance": {
+        "H@looks good": {
+          "+": [
+            6
+          ]
+        },
+        "I@looks very nice with good fit and finish": {
+          "+": [
+            10
+          ]
+        },
+        "J@overall aesthetics are very good": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "buttons": {
+        "K@buttons are a bit bulky but good for finding in the dark": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "dimmer slide": {
+        "L@dimmer has smooth glide": {
+          "+": [
+            10
+          ]
+        }
+      },
+      "rocker": {
+        "M@rocker is light and crisp": {
+          "+": [
+            10
+          ]
+        }
+      },
+      "metal part": {
+        "N@has UL rating printed on metal part": {
+          "+": [
+            7
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works as intended": {
+          "+": {
+            "?": [
+              0,
+              11
+            ]
+          }
+        },
+        "b@50% failure rate": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@works perfectly after bulb replacement": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "d@works as expected": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@works well in low light settings": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "f@works well": {
+          "+": {
+            "?": [
+              7,
+              9
+            ]
+          }
+        },
+        "g@operates efficiently": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "operation": {
+        "h@on/off switch and dimmer slide are smooth operation": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@dimmer glide moves smoothly and effortlessly": {
+          "+": {
+            "L": [
+              5
+            ]
+          }
+        },
+        "j@gentle rocker press operation": {
+          "+": {
+            "M": [
+              8
+            ]
+          }
+        },
+        "k@dimmer slide works smoothly": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "l@no flicker when adjusting brightness": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "m@dims halogen light as wanted": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "n@same good performance on LED circuit": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "installation": {
+        "o@easy to install": {
+          "+": {
+            "?": [
+              5,
+              6
+            ]
+          }
+        },
+        "p@installation was straightforward": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "q@simple to install": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "r@installed with no issues": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "s@easy to put on faceplate": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "t@no trouble fitting everything back in wall box": {
+          "+": {
+            "G": [
+              9
+            ]
+          }
+        },
+        "u@installation is less invasive": {
+          "+": {
+            "C": [
+              8
+            ]
+          }
+        }
+      },
+      "value": {
+        "v@far better price than big box stores": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "w@really good value": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom single pole configuration": {
+        "+": {
+          "f": [
+            7
+          ]
+        }
+      },
+      "laundry room replacement": {
+        "+": {
+          "a,g,j,k,l": [
+            8
+          ]
+        }
+      },
+      "entry light dimming for hallway": {
+        "+": {
+          "f,q": [
+            9
+          ]
+        }
+      },
+      "three-way switch capability": {
+        "+": {
+          "A": [
+            6,
+            9
+          ]
+        }
+      },
+      "replacing older overheating dimmer": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "adding dimmer to LED lights": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "halogen light dimming": {
+        "+": {
+          "m": [
+            11
+          ]
+        }
+      },
+      "LED circuit": {
+        "+": {
+          "n": [
+            11
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:25.410588"
+}

@@ -1,0 +1,236 @@
+{
+  "product_title": "Lutron Toggler 1000-Watt Single-Pole Incandescent Dimmer Switch, AY-10P-WH, White",
+  "product_category": "Incandescent Compatible Dimmer Switches",
+  "total_reviews": 11,
+  "review_analysis": {
+    "phy": {
+      "wattage_capacity": {
+        "A@1000w capacity": {
+          "+": [
+            0,
+            3,
+            7
+          ]
+        },
+        "B@600w capacity": {
+          "+": [
+            5
+          ]
+        },
+        "C@higher wattage capacity compared to standard 650w": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "instructions": {
+        "D@great instructions included": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "appearance": {
+        "E@blends in with other non-dimmer switches": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "packaging": {
+        "F@previously opened box": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "connections": {
+        "G@connections did not look like they had ever been connected": {
+          "+": [
+            9
+          ]
+        }
+      }
+    },
+    "perf": {
+      "heat_dissipation": {
+        "a@handles 900w well in terms of dissipating heat": {
+          "+": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@heat up with high wattage loads": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "c@overheating with lesser wattage dimmer": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "d@no longer have overheating problem": {
+          "+": {
+            "A": [
+              8
+            ]
+          }
+        },
+        "e@very little heat problem": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "f@does not work": {
+          "-": {
+            "?": [
+              1,
+              2
+            ]
+          }
+        },
+        "g@works perfectly": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@works like a charm": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "i@works great": {
+          "+": {
+            "?": [
+              6,
+              7
+            ]
+          }
+        },
+        "j@could not handle 480 watts despite 600w rating": {
+          "-": {
+            "B": [
+              5
+            ]
+          }
+        },
+        "k@dimmer feature burned out in 9 months": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "l@could only be used as off or on switch": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "m@did not work out of the box": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "n@does the job as expected": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "installation": {
+        "o@easy to install": {
+          "+": {
+            "D": [
+              3,
+              7
+            ]
+          }
+        },
+        "p@change out was quick and easy": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "pricing": {
+        "q@reasonably priced": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "r@1000w was pricey compared to 600w": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "controlling_high_wattage_loads": {
+        "+": {
+          "A": [
+            0,
+            3,
+            7,
+            8
+          ]
+        }
+      },
+      "first_time_light_switch_installation": {
+        "+": {
+          "D,o": [
+            3
+          ]
+        }
+      },
+      "replacement_for_broken_unit": {
+        "+": {
+          "h,p": [
+            4
+          ]
+        }
+      },
+      "controlling_14-bulb_chandelier": {
+        "+": {
+          "A,d": [
+            8
+          ]
+        }
+      },
+      "heavy_use_for_couple_of_years": {
+        "+": {
+          "i": [
+            7
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:05.068831"
+}

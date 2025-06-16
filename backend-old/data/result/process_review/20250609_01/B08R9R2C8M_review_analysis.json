@@ -1,0 +1,453 @@
+{
+  "product_title": "Suraielec 3 Way Wireless Light Switch, No Wiring, No WiFi, 100ft RF Range, Pre-Programmed, Expandable Wireless Wall Switch and Receiver Kit, Remote Control Light Fixture for Lamp, Ceiling Light, Fan",
+  "product_category": "RF Wireless Remote Control Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sticks out 3/4 inch from wall": {
+          "-": [
+            19
+          ]
+        },
+        "B@not aesthetically pleasing": {
+          "-": [
+            36
+          ]
+        },
+        "C@looks like regular deco light switch": {
+          "+": [
+            45
+          ]
+        },
+        "D@mounting/housing needs to be wider to fully cover existing box": {
+          "-": [
+            35
+          ]
+        },
+        "E@one switch was smudged and dirty": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "button": {
+        "F@tactile feedback and audible click": {
+          "+": [
+            2
+          ]
+        },
+        "G@finicky button press location": {
+          "-": [
+            36
+          ]
+        },
+        "H@off button is finicky": {
+          "-": [
+            19
+          ]
+        },
+        "I@push button switch design": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "battery": {
+        "J@drains battery in minutes": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "receiver": {
+        "K@metal wall box interferes with wireless signals": {
+          "-": [
+            18
+          ]
+        }
+      }
+    },
+    "perf": {
+      "range": {
+        "a@only works intermittently at 80 feet": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@functional distance less than 20 feet": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@hard time working at 5 feet": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "d@range has to be very close at 15 feet": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "e@spotty signal at 10 feet": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "f@works usually at 20 feet with line of sight": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "g@works at 30-40 feet but lossy": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "h@OFF channel has shorter range than ON channel": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "i@couldn't handle 30 inches distance": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "j@only worked 10% of time initially": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "k@works 80-90% of the time": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "l@works 95% of the times": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "m@sometimes doesn't seem to work": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "n@one remote works, other doesn't": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "o@quit working after 1 day": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "p@replacement lasted 2 days": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "q@sometimes works to turn on/off, other times doesn't": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "r@signal occasionally not sent": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "s@works sporadically": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "t@doesn't turn off with single tap": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "u@doesn't consistently respond": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "v@having to push on/off two or three times": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "w@need to hold button for a second to work": {
+          "-": {
+            "F": [
+              2
+            ]
+          }
+        },
+        "x@delayed response": {
+          "-": {
+            "I": [
+              5
+            ]
+          }
+        },
+        "y@first tap doesn't work once in a while": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "durability": {
+        "z@one switch module drains battery and is bad": {
+          "-": {
+            "J": [
+              3
+            ]
+          }
+        }
+      },
+      "installation": {
+        "aa@easy to install": {
+          "+": {
+            "?": [
+              4,
+              6,
+              8,
+              20,
+              25,
+              27,
+              36,
+              37,
+              43,
+              44
+            ]
+          }
+        },
+        "bb@installation is quick": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "signal_interference": {
+        "cc@metal wall box interferes with signals": {
+          "-": {
+            "K": [
+              18
+            ]
+          }
+        },
+        "dd@receiver orientation affects performance": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "detached garage to house lighting": {
+        "-": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "room to room control": {
+        "+": {
+          "?": [
+            0
+          ]
+        }
+      },
+      "garage lighting with no existing switches": {
+        "+": {
+          "k": [
+            2
+          ]
+        }
+      },
+      "garage lighting replacement": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "closet light with no switch": {
+        "+": {
+          "aa": [
+            8
+          ]
+        }
+      },
+      "rewiring alternative": {
+        "+": {
+          "aa": [
+            9
+          ]
+        }
+      },
+      "3-way switch for old home code compliance": {
+        "+": {
+          "?": [
+            10
+          ]
+        }
+      },
+      "basement stairwell lighting": {
+        "-": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "crawl space wiring alternative": {
+        "+": {
+          "?": [
+            15
+          ]
+        }
+      },
+      "neighboring room control": {
+        "+": {
+          "?": [
+            16
+          ]
+        }
+      },
+      "three-way switch alternative": {
+        "+": {
+          "aa": [
+            19
+          ]
+        }
+      },
+      "shop dual location control": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "small room applications": {
+        "+": {
+          "f": [
+            22
+          ]
+        }
+      },
+      "three way wall wiring replacement": {
+        "-": {
+          "q": [
+            26
+          ]
+        }
+      },
+      "equipment/bulb control from two locations": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "laundry room switch placement": {
+        "+": {
+          "aa": [
+            33
+          ]
+        }
+      },
+      "garage lighting": {
+        "-": {
+          "dd": [
+            34
+          ]
+        }
+      },
+      "entry way hall with single switch": {
+        "+": {
+          "aa": [
+            36
+          ]
+        }
+      },
+      "three way install alternative": {
+        "+": {
+          "aa": [
+            37
+          ]
+        }
+      },
+      "pull chain light replacement": {
+        "+": {
+          "aa": [
+            44
+          ]
+        }
+      },
+      "inaccessible switch replacement": {
+        "+": {
+          "?": [
+            45
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:33.053473"
+}

@@ -1,0 +1,402 @@
+{
+  "product_title": "TREATLIFE Dimmer Plug with 100FT Wireless Remote Control, IP44 Weather Resistance, Outdoor Dimmer for String Lights, Lamps, Patio Lights, Max Power 400W",
+  "product_category": "Plug-In Portable Dimmer Controls",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "plug": {
+        "A@90 degree plug design": {
+          "+": [
+            31
+          ]
+        }
+      },
+      "remote": {
+        "B@wireless remote with 100ft range": {
+          "+": [
+            27,
+            40
+          ]
+        },
+        "C@user-friendly remote design": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "weather_resistance": {
+        "D@IP44 weather resistance rating": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "power_capacity": {
+        "E@400 watt capacity": {
+          "+": [
+            31
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@stops working after 6 months": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@remote stops working after 32 days": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@dies very quickly after return period": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@burns out immediately after plugging in": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "e@stops working after few weeks": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "f@does not work out of the box": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "g@still working after one year": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "h@functions as new after outdoor exposure to rain, snow, 100 degree weather": {
+          "+": {
+            "D": [
+              19
+            ]
+          }
+        },
+        "i@remote still working after a year of use": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "dimming_function": {
+        "j@provides 4 levels of brightness": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "k@provides 10 levels of dimming": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "l@lots of power levels": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "m@does not dim enough": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "n@dims without flicker": {
+          "+": {
+            "?": [
+              29,
+              38
+            ]
+          }
+        },
+        "o@does not work well": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "p@doesn't support 0v-10v LED dimming control": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "remote_functionality": {
+        "q@remote works great with long range": {
+          "+": {
+            "B": [
+              27
+            ]
+          }
+        },
+        "r@remote operates as expected": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "s@remote control works great": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "t@remote works great for on/off control": {
+          "+": {
+            "?": [
+              22,
+              26
+            ]
+          }
+        },
+        "u@can control from inside house without stepping outside": {
+          "+": {
+            "B": [
+              40
+            ]
+          }
+        }
+      },
+      "memory_function": {
+        "v@remembers last dimmer setting": {
+          "+": {
+            "?": [
+              31,
+              40
+            ]
+          }
+        }
+      },
+      "power_default": {
+        "w@defaults to OFF when power is applied": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "x@lights will not come back on when used with timer": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "bulb_compatibility": {
+        "y@causes bulbs to blow including LEDs": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "z@problems connecting to Orbi mesh system": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "aa@finally connected after 2 hours but quit working after 2 months": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_string_lights": {
+        "+": {
+          "?": [
+            0,
+            10,
+            19,
+            27,
+            30,
+            40
+          ]
+        },
+        "-": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "interior_dimming": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "exterior_dimming": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "back_porch_light_sets": {
+        "+": {
+          "?": [
+            3
+          ]
+        }
+      },
+      "indoor_lamp_with_3_LED_bulbs": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "200_watt_power_control": {
+        "+": {
+          "?": [
+            7
+          ]
+        }
+      },
+      "patio_string_lights": {
+        "+": {
+          "?": [
+            10,
+            12,
+            42,
+            47
+          ]
+        }
+      },
+      "gazebo_string_lights": {
+        "+": {
+          "?": [
+            12
+          ]
+        }
+      },
+      "table_lamp_bedside_control": {
+        "+": {
+          "?": [
+            17
+          ]
+        }
+      },
+      "Edison_string_lights": {
+        "+": {
+          "?": [
+            19
+          ]
+        }
+      },
+      "bistro_lights_without_switch": {
+        "+": {
+          "t": [
+            22
+          ]
+        }
+      },
+      "living_room_lamps": {
+        "+": {
+          "?": [
+            24
+          ]
+        }
+      },
+      "floor_lamp_dimming": {
+        "+": {
+          "?": [
+            28
+          ]
+        }
+      },
+      "225_feet_large_string_lights": {
+        "+": {
+          "j": [
+            30
+          ]
+        }
+      },
+      "extremely_bright_LED_lights": {
+        "+": {
+          "?": [
+            33
+          ]
+        }
+      },
+      "wedding_venue_marque_light_control": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "Christmas_tree_lights": {
+        "+": {
+          "?": [
+            39,
+            47,
+            49
+          ]
+        }
+      },
+      "modern_LED_lamps": {
+        "-": {
+          "p": [
+            37
+          ]
+        }
+      },
+      "regular_non-dimming_LED_string_lights": {
+        "+": {
+          "n": [
+            38
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:15.082571"
+}

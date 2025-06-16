@@ -1,0 +1,643 @@
+{
+  "product_title": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Switch Works with Alexa and Google Home, 2.4GHz WiFi Dimmer Light Switch for LED, CFL, Incandescent Bulbs, Neutral Wire Required, Single Pole",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek and attractive look": {
+          "+": [
+            12,
+            34
+          ]
+        }
+      },
+      "wire": {
+        "B@electric wire is too thin and rips easily": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "capacitor": {
+        "C@low quality capacitor": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "touch_feature": {
+        "D@capacitive touch feature": {
+          "+": [
+            12
+          ]
+        },
+        "E@feels like phone touchscreen when adjusting light": {
+          "+": [
+            48
+          ]
+        },
+        "F@vertical touch sensor in the middle of the switch": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "button_mechanism": {
+        "G@mechanism that pushes the button out after it's pushed in has stopped working": {
+          "-": [
+            37
+          ]
+        },
+        "H@loud when clicking": {
+          "-": [
+            20
+          ]
+        },
+        "I@not the smoothest": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "indicator_light": {
+        "J@indicator light is NOT customizable and glows 24/7": {
+          "-": [
+            25
+          ]
+        }
+      },
+      "size": {
+        "K@normal size": {
+          "+": [
+            20
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@fall off line constantly": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@wifi stopped working": {
+          "-": {
+            "?": [
+              7,
+              31
+            ]
+          }
+        },
+        "c@need to be reconnected to network after power outage": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "d@go offline or unresponsive at least once a week": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "e@constantly unavailable in apps": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "f@come up in not available state after power outage": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "g@failed to reconnect after changing wifi name": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "h@could only connect 2 out of 4 properly": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "i@communicates over 2.4ghz network with some difficulty": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "j@synced with Alexa well": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "k@integrates seamlessly with Alexa and Google Home": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "dimming_function": {
+        "l@lowers the lights but not much": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "m@barely dims the lights": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "n@don't dim down to much": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "o@dimmer function works smoothly allowing precise control": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "p@dimming works well": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "q@dimmer is not smooth with like 6 intensity graduations": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "r@dimming option stopped working": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "s@usuasable dimming range is like 5 to 15% and 90% to 100%": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "t@keep breaking and need reset not even 1 day after programming": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "u@all slowly failing": {
+          "-": {
+            "C": [
+              5
+            ]
+          }
+        },
+        "v@each have malfunctioned over 2 years": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "w@had to replace 1/2 of them after 2.5 years": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "x@two stopped working in less than two years": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "y@stopped working with Alexa": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "z@stopped working on manual press after only a month": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "aa@3 out of 4 switches do not turn on or off after less than 1 year": {
+          "-": {
+            "G": [
+              37
+            ]
+          }
+        },
+        "ab@7 out of 10 have failed after 2 years": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "ac@operates effectively and reliably": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "sensitivity": {
+        "ad@very sensitive and cuts off": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ae@too sensitive - dimmer adjusts when waving near it": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "af@causing flicker the lights": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "ag@it flickers": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ah@occasional flickering": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ai@lights flickers because of switch": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "aj@lights flicker way too much": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "ak@makes dimmable bulbs hiss and flicker on lower settings": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "al@produces very obnoxious hum from bulbs": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "heat_generation": {
+        "am@HIGH heat these dimmers produce": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "an@switch is overheating and protecting itself": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "safety": {
+        "ao@sparked the first time turned on and burned wire coating": {
+          "-": {
+            "B": [
+              2
+            ]
+          }
+        },
+        "ap@two LEDs blew cause of high current": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "aq@high amount of leakage on common line": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "installation": {
+        "ar@easy to install": {
+          "+": {
+            "?": [
+              3,
+              27
+            ]
+          }
+        },
+        "as@installation is straightforward": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "at@very easy to set up": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "au@installed in less than 2 minutes": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "av@installation was easy": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "cross_communication": {
+        "aw@communication between switches is crossed": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "ax@when dimming in living room they dimmed all lights in house": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "ay@will start to glitch early on if more than 1 treatlife switch on same breaker": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "az@always dimming on its own": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "app_functionality": {
+        "ba@provides additional customization options": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "bb@automatically found the switches": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "bc@unstable apps": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "bd@wall switches are challenging to pair most of the time": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "be@set up is a pain and can be difficult to pair": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "bf@settings for dimmers reset themselves": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_automation": {
+        "+": {
+          "o": [
+            29
+          ],
+          "k": [
+            29
+          ],
+          "ba": [
+            29
+          ]
+        },
+        "-": {
+          "d": [
+            19
+          ],
+          "e": [
+            38
+          ]
+        }
+      },
+      "vacation_lighting": {
+        "+": {
+          "?": [
+            42
+          ]
+        }
+      },
+      "outside_deck_lighting": {
+        "+": {
+          "ar": [
+            27
+          ]
+        }
+      },
+      "creating_ambiance": {
+        "+": {
+          "o": [
+            29
+          ],
+          "p": [
+            46
+          ]
+        }
+      },
+      "migraine_relief": {
+        "+": {
+          "?": [
+            43
+          ]
+        }
+      },
+      "infant_care": {
+        "+": {
+          "p": [
+            46
+          ]
+        }
+      },
+      "LED_light_compatibility": {
+        "-": {
+          "l": [
+            1
+          ],
+          "m": [
+            28
+          ],
+          "n": [
+            26
+          ],
+          "af": [
+            4
+          ],
+          "ag": [
+            10
+          ],
+          "ai": [
+            23
+          ],
+          "aj": [
+            26
+          ],
+          "ak": [
+            41
+          ],
+          "al": [
+            32
+          ],
+          "ap": [
+            33
+          ]
+        }
+      },
+      "multiple_switch_installation": {
+        "-": {
+          "aw": [
+            6
+          ],
+          "ax": [
+            15
+          ],
+          "ay": [
+            39
+          ],
+          "az": [
+            39
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "k": [
+            29
+          ],
+          "j": [
+            45
+          ]
+        },
+        "-": {
+          "y": [
+            24
+          ]
+        }
+      },
+      "scheduling_and_timers": {
+        "+": {
+          "ba": [
+            29
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:24.782076"
+}

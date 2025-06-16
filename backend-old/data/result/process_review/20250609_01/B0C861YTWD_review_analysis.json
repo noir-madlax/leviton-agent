@@ -1,0 +1,231 @@
+{
+  "product_title": "AIDA Single Pole Triple Paddle Rocker Decorator Light Switch, 15 Amp Self-grounding Electrical Light Switches, Residential Grade, UL Listed (1 Pack, Glossy White)",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 11,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@compact single gang size for three switches": {
+          "+": [
+            1,
+            6,
+            7,
+            10
+          ]
+        },
+        "B@cover smaller than store-bought versions": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "construction": {
+        "C@sturdy and well built": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "design": {
+        "D@toggle design with clean look": {
+          "+": [
+            6
+          ]
+        },
+        "E@modern look": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "terminals": {
+        "F@clamp style terminals": {
+          "+": [
+            10
+          ]
+        }
+      },
+      "rocker mechanism": {
+        "G@rocker too firm to push": {
+          "-": [
+            8
+          ]
+        },
+        "H@play in rocker before activation with inconsistent feel": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "wiring": {
+        "I@single power input with three outputs": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "certification": {
+        "J@UL listing": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well": {
+          "+": {
+            "?": [
+              0,
+              1,
+              2
+            ]
+          }
+        },
+        "b@worked perfectly": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@all outputs function properly with no draw through when activated": {
+          "+": {
+            "I": [
+              9
+            ]
+          }
+        },
+        "d@switches function as expected": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "installation": {
+        "e@easy installation": {
+          "+": {
+            "F": [
+              10
+            ]
+          }
+        },
+        "f@quick replacement in less than 10 minutes": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "g@easier to install due to single input design": {
+          "+": {
+            "I": [
+              9
+            ]
+          }
+        }
+      },
+      "durability": {
+        "h@more sturdy than previous switch": {
+          "+": {
+            "C": [
+              5
+            ]
+          }
+        }
+      },
+      "operation": {
+        "i@switching action could be smoother": {
+          "-": {
+            "G": [
+              8
+            ]
+          }
+        },
+        "j@turning switches on is mechanical hassle and noisier": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "k@turning switches off is normal and quiet": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "l@rocker feel could be better due to inconsistent activation": {
+          "-": {
+            "H": [
+              10
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacement switch": {
+        "+": {
+          "b": [
+            4
+          ],
+          "h": [
+            5
+          ]
+        }
+      },
+      "space saving in electrical box": {
+        "+": {
+          "A": [
+            6,
+            7,
+            10
+          ]
+        }
+      },
+      "controlling multiple lights from single location": {
+        "+": {
+          "A,I": [
+            7
+          ]
+        }
+      },
+      "home decor enhancement": {
+        "+": {
+          "D,E": [
+            6,
+            7
+          ]
+        }
+      },
+      "updating older home electrical": {
+        "+": {
+          "A,E": [
+            7
+          ]
+        }
+      },
+      "controlling LED lighting": {
+        "+": {
+          "c": [
+            7,
+            9
+          ]
+        }
+      },
+      "adding components to electrical box": {
+        "+": {
+          "A": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:18.429532"
+}

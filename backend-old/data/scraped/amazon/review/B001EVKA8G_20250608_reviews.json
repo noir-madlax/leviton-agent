@@ -1,0 +1,2437 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:16:13.368820",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B001EVKA8G",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B001EVKA8G",
+    "title": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+    "brand": "Lee",
+    "model_number": NaN,
+    "price_usd": 14.3,
+    "rating": 4.6,
+    "reviews_count": 765.0,
+    "category": "Light Switches",
+    "product_segment": "Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B001EVKA8G"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1144INGBGB6A6",
+        "text": "Easy to install. works as intended",
+        "date": "Reviewed in the United States on April 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect replacement",
+        "userName": "Shivana Prashad",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2D0C7Y06KFD8Y",
+        "text": "I replaced a 210S with this and it’s working fine.",
+        "date": "Reviewed in the United States on March 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works",
+        "userName": "Alan",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RGYYXWV9XLIIK",
+        "text": "These work great but wear out after a few years. Still in my opinion the best looking switch of this type. I wish the plastic switch were available on its own but the closest I can find costs almost as much as the whole kit.",
+        "date": "Reviewed in the United States on March 5, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "I wish it lasted longer.",
+        "userName": "Anton allen",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3PK0MDCOURTKB",
+        "text": "Switch worked well",
+        "date": "Reviewed in the United States on February 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well made item",
+        "userName": "Donald A. Doorly",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R19ZLMQZNN2EMW",
+        "text": "Was hoping for longevity but…stopped functioning just short of 2 years. Only 2 people in the house. Was hoping for st least 5 years or more like my original. Will seek a sturdier model if that exists.",
+        "date": "Reviewed in the United States on February 21, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Failed in less than 2 years",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RKJV16X41BE3X",
+        "text": "The part was perfect and it actually showed up a day early. I would definitely order from them again.",
+        "date": "Reviewed in the United States on January 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Interaction",
+        "userName": "Jimmy Dean",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3AS90Q2K8AYZH",
+        "text": "Product was slightly difficult to install. It lasted almost 2 years to the day. I purchased this for my daughter‘s pantry December 20 22. Fast-forward December 2024 interior guts of the switch broke I purchased a new similar switch made with more metal than this plastic one hoping for better results",
+        "date": "Reviewed in the United States on December 27, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not built for the long run.",
+        "userName": "Bill",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3M48USQ8H3V9V",
+        "text": "We use this on our basement door which gets regular use, but it shouldn't have pooped out so quickly imo That said, it performed flawlessly until one day it stayed on.",
+        "date": "Reviewed in the United States on December 9, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Wore out in less than 1 year",
+        "userName": "James D",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1CMN161VGFZ8",
+        "text": "God replacement part, works as expected",
+        "date": "Reviewed in the United States on December 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Nbaldeon7",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R10ZPX3C3IIHR2",
+        "text": "Great Product",
+        "date": "Reviewed in the United States on October 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality",
+        "userName": "vincent polizzi",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R26179VDLXP1QV",
+        "text": "Fits great as a replacement for same product so that you don't have to do any modifications.",
+        "date": "Reviewed in the United States on September 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Pricey but good.",
+        "userName": "texaztony",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3GFIZEQHWSWUL",
+        "text": "Works like it should. It was an almost exact replacement for a switch that was 45 years old. Happy with the performance.",
+        "date": "Reviewed in the United States on August 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very good product.",
+        "userName": "Upendra P.",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3CDMWJMBDHIO5",
+        "text": "Purchase and installed in Nov. 2022, has worked great since installed but about a week ago, July 2024, the switch is stuck on. Out of warranty so forced to purchase another one",
+        "date": "Reviewed in the United States on July 23, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Worked great for a while. Until..",
+        "userName": "Krystal Coates",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2MV9OZMMETE39",
+        "text": "The product worked as advertised and was delivered promptly",
+        "date": "Reviewed in the United States on July 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Product worked as advertised",
+        "userName": "waynbe hardison",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1NXSHT1ZIY07C",
+        "text": "Good product exactly what i was looking for",
+        "date": "Reviewed in the United States on June 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "As promised",
+        "userName": "Whydid",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RFDNPE8UAJEL7",
+        "text": "I'm switching to a different brand of switch since 2016 I've had these go bad 5 times. I just bought a new one that was deaf out of the box. I'm curious what the cycle rating is on these.",
+        "date": "Reviewed in the United States on June 7, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "These don't last",
+        "userName": "Zachary F.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R22YDWTK7YX3S8",
+        "text": "Works week can be a pain to align, but it is a great switch",
+        "date": "Reviewed in the United States on May 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice item",
+        "userName": "ThatGuy !",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R137OC727NIFN",
+        "text": "Basically a direct replacement switch. So far it has lasted over two months. We will see. I think it is a bit overpriced from the second unit I bought from the local electrical supply store, not Lowe’s or Home Depot.",
+        "date": "Reviewed in the United States on May 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Closet door light switch",
+        "userName": "delmarva",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3785L22TBAQT8",
+        "text": "Perfect replacement switch for my pantry Closet door. First one lasted 5 years. When door is closed the light is off. When the door opens the light switch activates and we can see with an overhead light.",
+        "date": "Reviewed in the United States on March 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Closest door light switch",
+        "userName": "Tony R. Tramel",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "REL217QZQYTE5",
+        "text": "Perfect replacement for our previous switch that had worn out. Love the gold detail! Quick install",
+        "date": "Reviewed in the United States on March 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1A2ZIY4NI3D0V",
+        "text": "Bought two. Works great highly recommend",
+        "date": "Reviewed in the United States on January 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Door switch",
+        "userName": "Thomas and Pattie O Brien",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1MWD2I0PQFYAQ",
+        "text": "Perfect replacement fit for the original installed in my house that failed.",
+        "date": "Reviewed in the United States on December 21, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Replacement!",
+        "userName": "PlaneCrazy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R149J86AANWZ6B",
+        "text": "Easy to install and my light now works again in the pantry when I open the door - thank you!",
+        "date": "Reviewed in the United States on December 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Fit",
+        "userName": "Carman10",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R24RNCNFRH6L4V",
+        "text": "It was an easy replacement for the original one installed by my builder. Original one lasted 6 years",
+        "date": "Reviewed in the United States on November 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy replacement",
+        "userName": "trisha",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3VIDO2JT472V2",
+        "text": "These are not very durable.",
+        "date": "Reviewed in the United States on November 11, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "May want to buy two - they only last 2-3 years.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RMT99CRJX4NIC",
+        "text": "The switch works great. They should make the switch white. Most doors are and frames are white so this should be a standard. The install was straight forward. I was redoing my closet and had to take the moulding off of the inside of closet. Cut open the frame area for the box. Make sure you use 14/2 wire if not you’ll have an issue getting the wire in the box. Over all it’s a great upgrade",
+        "date": "Reviewed in the United States on November 8, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great closet upgrade",
+        "userName": "Big Rob NYC",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R191HB6XKLRC58",
+        "text": "Easy install pretty cheapl material don’t know how long it will last",
+        "date": "Reviewed in the United States on October 21, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fit",
+        "userName": "Dr. Patricia J",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R10TEXHZ0T7PNI",
+        "text": "PRODUCT CAME WITH NO WIRING INSTRUCTIONS AS TO HOW TO WIRE IT TO POWER..",
+        "date": "Reviewed in the United States on October 4, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "NO INSTRUCTIONS!",
+        "userName": "DF",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RBPS8QYI4X9N5",
+        "text": "The length of this replacement was about one eighth of an inch too long. A slight tap with a sharp chisel fixed the jamb opening. Two wire nuts later and it was working perfectly.",
+        "date": "Reviewed in the United States on September 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Almost perfect fit on an existing antique switch",
+        "userName": "Glenn",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1S8PHEHLWPVAR",
+        "text": "This was a perfect replacement for my original switch that I installed about 9 years ago. With everyone going in and out of our pantry as often as they do, this is probably the most-used light switch in the house, and the fact that it lasted 9 years before it went out is a testament to its durability and longevity. The button failed on my last unit and I'm hoping to get another 9-10 years out of this one.",
+        "date": "Reviewed in the United States on August 1, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great replacement",
+        "userName": "Chad Anderson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RURGXWN8ZT91L",
+        "text": "Just instal a few weeks ago so can't rate durability. trusting it last a very long time. Lee products are normally very reliable. The door is to a pantry. Very HAPPY with this switch. It works well and the measurements were good as it replaced a door switch and the cover plate measured 3.5\" long. I wish all products would list as this one did, the width, height and length when offering items. It is extremely important to have measurements when order these things. Seller was good to show 3.5 inch length. This Included an electrical box if one is doing a new install. The width worked out because of the comments form buyers were very good to post and show the door jams etc and write comments. The old door switch (to a large kitchen pantry) quit working after 40 years, go figure. LOL, and was hard wired. This product had enough lead wire and workable to hard wire with wire nuts (not included) and also to simply wrap a band of electrical tape (not included) around for second security. Tape may not be needed with wire nuts but added safety. The brass screws included, good length, fit the former holes. All in all, it is a great ending to a search for: \"where is a door switch to replace this 40+ year old switch. Great find and quality product! Would use this company again. NO brick and mortar electrical store or hardware store had anything like this. Thank you LEE ELECTRIC!",
+        "date": "Reviewed in the United States on July 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well, installed few weeks ago, brass door plate 5stars and hoping long durability.",
+        "userName": "K",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3T3URTS8VSOWS",
+        "text": "I installed and after a year and half is no work anymore, I gas I need to buy an other one.",
+        "date": "Reviewed in the United States on July 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "If work for long time is good???",
+        "userName": "100% chilango",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R14GTYB4WXQ69H",
+        "text": "I bought this to replace an identical one which failed in under a year. My brother also had one that failed in under a year. It's easy to replace, but the switch itself is cheaply made and just doesn't last. So far, I have not found a better alternative, so if you buy, just expect to replace at least once per year. I found a source for the internal plastic switch, which simply snaps into the assembly, but it consts as much as the whole assembly. The switches by themselves should sell for around $1 per each, but they do not. If I could source the switches separatly and cheaply, I would just keep some on hand so I would have new ones when they break.",
+        "date": "Reviewed in the United States on July 4, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "They don't last very long",
+        "userName": "verified purchaser",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R31VRB3PVND1O3",
+        "text": "Easy to install. Wish it would have come with instructions but it’s pretty straight forward if you look it up online. Works well after installed.",
+        "date": "Reviewed in the United States on May 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "Brittni B.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2ZQVA915XQ2P5",
+        "text": "Perfect dimensions to match defective switch. Went in easily and worked as designed.",
+        "date": "Reviewed in the United States on May 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect replacement, easy installation",
+        "userName": "Phil Cee",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R24AJG1O86KO7V",
+        "text": "The product lasted a little over one year, which conveniently was right after the warranty ended. I contacted customer support and they said that they’d send me a replacement, which never happened. Pretty disappointed, but you can’t expect much more from a Chairman Mao special.",
+        "date": "Reviewed in the United States on April 18, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Lasted a little over a year",
+        "userName": "GNP",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RFJOAXZM0GWUH",
+        "text": "as many others report, it doesn't hold up. I've gone through 2 in 3 years. time for something new.",
+        "date": "Reviewed in the United States on March 29, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "doesn't last",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2L56NASH72WRK",
+        "text": "I've installed two of these on a kitchen pantry door and both failed within a year. This time around, I spent more and installed the leviton. Hopefully it works longer.",
+        "date": "Reviewed in the United States on February 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Did not last",
+        "userName": "Richard L",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1QQMC2HWGHO7S",
+        "text": "**make sure your width is as tight and precise as you can make it. The face plate is the same width as the gang box.** It would be nice if it was a 1/8th wider. I would go with another brand if that was the case and you want a better finish look. The brass finish has the look and texture if a brass spray paint. The gang box isn’t very rigid and can be easily deformed if forced in. It is made by folding a piece of metal over, origami style and none of the seams are connected.",
+        "date": "Reviewed in the United States on January 19, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Be precise on your mortise cut",
+        "userName": "D. Krebs",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71UBypWx-rL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RWZ3MYG0PV8U",
+        "text": "Works great.",
+        "date": "Reviewed in the United States on January 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install.",
+        "userName": "R. Christopher Lione",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R4UJRN1A7AYRP",
+        "text": "I've had 2 of these and they seem to last me about 1-2 years. Mine is installed on the pantry door and with young children it does get a lot of use. If you are putting it somewhere low usage then it ight be perfect. I'm guessing mine are failing at 10k cycles which is pretty poor honestly.",
+        "date": "Reviewed in the United States on December 19, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Worked great...until it didn't",
+        "userName": "Keith",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R36MQHD7HHK122",
+        "text": "Easy to install, but failed after two years",
+        "date": "Reviewed in the United States on October 31, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed after two years",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2DWC3Q0XA1R8L",
+        "text": "Very nice appearance and function. The force needed to activate these is very low, and there's a significant \"breakaway\" after activation so the force to keep them depressed is smaller still. I used these to replace some ancient switches that were so hard to press that the door couldn't hold them shut without a super strong latch. With these, I don't even need a latch, as the small amount of door friction can hold them in. Be sure you measure your existing switch to make sure these are an exact fit. If so, I think youll be very happy with these. I would NOT recommend these for new installations. As others have noted, installing these from scratch in old work is not simple.",
+        "date": "Reviewed in the United States on October 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Low force switch better than what I replaced.",
+        "userName": "Chris Nadovich",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "REPPLZUZKCTKM",
+        "text": "Pantry Door",
+        "date": "Reviewed in the United States on October 14, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "All the features above are very correct",
+        "userName": "Thomas Izzo",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RQN8NVBHNNOGJ",
+        "text": "in about two weeks of little use the switch stuck pulled switch and noted the back opened and hung up the spring.. Out of warranty..",
+        "date": "Reviewed in the United States on October 12, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Back of switch opened and spring stuck",
+        "userName": "Michael Madero",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/613+ZAxCwfL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71F8VXWU6yL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RCVF5C7N0PRO7",
+        "text": "Everything you needed at a great value price",
+        "date": "Reviewed in the United States on August 15, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "that it was easily available on Amazon",
+        "userName": "michael murphy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R14H7AAO0G0GW0",
+        "text": "This is the 2nd switch failure for me. The first one lasted a couple years, the newest one lasted just a few months. I am going to look for another brand. It's on a pantry door that gets opened frequently but it does not hold up. It should be cycle rated at many thousands, not hundreds.",
+        "date": "Reviewed in the United States on August 1, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Switch Failure",
+        "userName": "Karen M",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1DX7D63KZMIWP",
+        "text": "Easy enough to install. Already had opening in door jamb. Stopped working after about 7 months.",
+        "date": "Reviewed in the United States on July 22, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Failed.",
+        "userName": "LyleB",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1PM7GD5BWCHRW",
+        "text": "Simple direct and easy.",
+        "date": "Reviewed in the United States on July 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very good replacement or even new install.",
+        "userName": "Steven J.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B001EVKA8G",
+        "productTitle": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 194,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 765,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1WL1DOG5DXGZJ",
+        "text": "Switch is solidly built, not much plastic. Doesn’t feel cheaply made. Not easy to install once doors are already in, much better to do when originally installing door jambs. I have done both with this switch, using one after the door was installed, and had to cut out the jamb to fit the switch. The install with the new door frame was much easier, prepping the cuts before the door went in. Would buy again!",
+        "date": "Reviewed in the United States on April 6, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Solid build for switch",
+        "userName": "akusmc06",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

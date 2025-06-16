@@ -1,0 +1,454 @@
+{
+  "product_title": "Kasa Smart 3 Way Switch HS210 KIT, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch works with Alexa and Google Home, UL Certified, No Hub Required, White,2 Count (Pack of 1)",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Material": {
+        "A@Made of plastic material": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "Size": {
+        "B@Bulky on the backside": {
+          "-": [
+            23
+          ]
+        },
+        "C@Does not fit in standard 4\" steel electrical boxes": {
+          "-": [
+            30
+          ]
+        }
+      },
+      "Appearance": {
+        "D@Touch style switches with halo when off": {
+          "+": [
+            12
+          ]
+        },
+        "E@Matches other switches in the house": {
+          "+": [
+            12
+          ]
+        },
+        "F@Both switches look the same regardless of which was used": {
+          "+": [
+            12
+          ]
+        },
+        "G@Has scuff marks when used": {
+          "-": [
+            18
+          ]
+        }
+      },
+      "Components": {
+        "H@Missing screw component": {
+          "-": [
+            33
+          ]
+        },
+        "I@Mechanical side feels cheap without satisfying click": {
+          "-": [
+            23
+          ]
+        },
+        "J@Switch housing prevents installation in steel boxes": {
+          "-": [
+            30
+          ]
+        }
+      },
+      "Wiring": {
+        "K@Requires neutral wire connection": {
+          "+": [
+            22
+          ]
+        },
+        "L@Wiring is reversed on back in newer version": {
+          "+": [
+            38
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Fails after 2 years warranty expires": {
+          "-": {
+            "A": [
+              1
+            ]
+          }
+        },
+        "b@Lasted about 2 months then died completely": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "c@Started failing one by one after two years": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "d@Only lasted 4 years vs decades for old switches": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "e@Switches crap out every 3 years": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "f@Rapid on/off flickering after 3 years": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Connectivity": {
+        "g@Connection issues with Kasa app on phones": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "h@Works perfectly on MacBook Air": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "i@Connects to network easily": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "j@Could not find signal even when other switches connected": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "k@Does not reliably report status to app": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "l@Disconnects from WiFi frequently": {
+          "-": {
+            "?": [
+              20,
+              49
+            ]
+          }
+        },
+        "m@Reconnects automatically after power outages": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "n@WiFi connection setup issues resolved by changing settings": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "o@Easy to install": {
+          "+": {
+            "?": [
+              2,
+              4,
+              6,
+              10,
+              12,
+              39,
+              45,
+              47,
+              48,
+              49
+            ]
+          }
+        },
+        "p@Frustrating to install": {
+          "-": {
+            "B": [
+              11,
+              23
+            ]
+          }
+        },
+        "q@Very difficult to set up": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "r@Requires extra space in switch boxes": {
+          "-": {
+            "B": [
+              23
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "s@Works great as designed": {
+          "+": {
+            "?": [
+              0,
+              4,
+              15,
+              19,
+              37,
+              42,
+              47
+            ]
+          }
+        },
+        "t@Rarely worked on 3-way circuit with both switches": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "u@Does not work with Alexa routines": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "v@Sometimes clicks on then right back off": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "w@Gets lost on how to control light sometimes": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "x@Schedule turn on works but turn off does not": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "y@Causes lights to flicker rapidly in constant on/off mode": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "z@Only switch that turned lights off can turn them back on": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "aa@Voice commands disabled when using different switches": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "ab@App may not pick up manual switch status": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "ac@Does not work with Matter": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ad@Requires cloud-based apps": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ae@Works with standard 3-way switch at other end": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "af@Does not work with lights on GFCI circuit": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ag@Causes issues in 4-way switch circuits": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "Firmware": {
+        "ah@Firmware update is difficult and unreliable": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "ai@More stable after firmware update": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Smart home automation": {
+        "+": {
+          "s": [
+            14,
+            28
+          ]
+        },
+        "-": {
+          "ac,ad": [
+            12
+          ]
+        }
+      },
+      "3-way lighting setups in stairways and hallways": {
+        "+": {
+          "s": [
+            3,
+            28,
+            39
+          ]
+        }
+      },
+      "Remote control and scheduling": {
+        "+": {
+          "s": [
+            17,
+            28
+          ]
+        },
+        "-": {
+          "x": [
+            32
+          ]
+        }
+      },
+      "Integration with Alexa": {
+        "+": {
+          "s": [
+            10,
+            16,
+            19,
+            39,
+            42
+          ]
+        },
+        "-": {
+          "u,aa": [
+            7,
+            25
+          ]
+        }
+      },
+      "Integration with Google Home": {
+        "+": {
+          "s": [
+            23,
+            41
+          ]
+        },
+        "-": {
+          "k": [
+            27
+          ]
+        }
+      },
+      "Vacation/security feature": {
+        "+": {
+          "s": [
+            22
+          ]
+        }
+      },
+      "Home Assistant integration": {
+        "+": {
+          "s": [
+            37
+          ]
+        },
+        "-": {
+          "ac,ad": [
+            12
+          ]
+        }
+      },
+      "Professional installation": {
+        "+": {
+          "o": [
+            45
+          ]
+        },
+        "-": {
+          "p": [
+            21
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:38.085544"
+}

@@ -1,0 +1,94 @@
+{
+  "product_title": "TOPGREENER Kalide Dimmer Light Switch, Pair with 12V Power Supply, 3-Way or Single-Pole, 12/24 V LED Dimmer Switch, TGSDS-1224-W, White",
+  "product_category": "Electronic Low Voltage Dimmer Switches",
+  "total_reviews": 4,
+  "review_analysis": {
+    "phy": {
+      "adjustment wheel": {
+        "A@missing from product": {
+          "-": [
+            1,
+            2,
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming capability": {
+        "a@limited to approximately 50% maximum dimming": {
+          "-": {
+            "?": [
+              0,
+              3
+            ]
+          }
+        },
+        "b@minimal voltage reduction from 12.4v to 11.8v": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@does not provide true low light dimming": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "d@does not dim from 100% to 0%": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "installation": {
+        "e@easy wiring and installation process": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "f@works as basic switch": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "12v puck lights": {
+        "+": {
+          "?": [
+            2,
+            3
+          ]
+        }
+      },
+      "undercabinet kitchen lighting": {
+        "+": {
+          "?": [
+            3
+          ]
+        }
+      },
+      "12v circuit applications": {
+        "-": {
+          "b": [
+            2
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:54.725381"
+}

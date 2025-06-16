@@ -1,0 +1,695 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:35:27.167815",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B00E7N71TO",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 2,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B00E7N71TO",
+    "title": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+    "brand": "Lutron",
+    "model_number": NaN,
+    "price_usd": 7.48,
+    "rating": 4.8,
+    "reviews_count": 2228.0,
+    "category": "Light Switches",
+    "product_segment": "Single Pole Rocker Switches",
+    "product_url": "https://www.amazon.com/dp/B00E7N71TO"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1J9PQW68B3VAF",
+        "text": "Needed something quick without going to town. This worked wonderfully.",
+        "date": "Reviewed in the United States on September 14, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked great",
+        "userName": "bw",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RE9ZKRV8WJQK4",
+        "text": "Easy to install and works great!",
+        "date": "Reviewed in the United States on March 7, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install and works great!",
+        "userName": "Kim",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2I1K2Q4LTGK15",
+        "text": "Love that these are available in multiple colors!",
+        "date": "Reviewed in the United States on December 17, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Comes in multiple colors to match any decor.",
+        "userName": "Joan Duffy",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "ROJ1NYL8KFKG2",
+        "text": "After buying one of these, I bought two 10 packs of leviton light almond decora switches. They feel the same quality, and the levitons are far cheaper. The only real difference is that the lutrons have slightly narrower buttons.",
+        "date": "Reviewed in the United States on November 25, 2019",
+        "rating": "4.0 out of 5 stars",
+        "title": "Would buy 10 pack of levitons instead.",
+        "userName": "Chris",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R18PK6VE8KA53I",
+        "text": "The actual priduct is great! However, this us the secind time ive had this order shipoed to my house, and it's becuase it keeps coming in\"white\" & not the Light Almond I've orderd. The outside of the box says light almond, but the actual switch inside is white. Arrgghhhh!",
+        "date": "Reviewed in the United States on February 10, 2019",
+        "rating": "1.0 out of 5 stars",
+        "title": "Need to get correct item (as what's labled in box & in the order!)",
+        "userName": "Craig Lambert",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R12Z8V7Q4UXSQC",
+        "text": "Like Lutron products. See other lutron reviews.",
+        "date": "Reviewed in the United States on January 2, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value",
+        "userName": "Luap",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R10BI0ITCB0RMZ",
+        "text": "Can't go wrong with Lutron. High quality paddle switch to pair with a screwless plate to spiff up a room.",
+        "date": "Reviewed in the United States on July 25, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Can't go wrong with Lutron. High quality paddle switch ...",
+        "userName": "StaceyG",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3UKWXALC920N2",
+        "text": "Nice change from toggles.",
+        "date": "Reviewed in the United States on September 25, 2017",
+        "rating": "5.0 out of 5 stars",
+        "title": "Servicable",
+        "userName": "DTL",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2CBUHZXM1LMNP",
+        "text": "It works",
+        "date": "Reviewed in the United States on July 2, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works",
+        "userName": "zalusky",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1JXCN92KYXH58",
+        "text": "Color white, not light almond. Returned.",
+        "date": "Reviewed in the United States on March 30, 2016",
+        "rating": "1.0 out of 5 stars",
+        "title": "One Star",
+        "userName": "Bob",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R38F838X5NM8WV",
+        "text": "Fits into existing space. Looks great!",
+        "date": "Reviewed in the United States on March 4, 2016",
+        "rating": "5.0 out of 5 stars",
+        "title": "replacement switch",
+        "userName": "smj",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R9TXOMEBLKLGC",
+        "text": "Very solid, well-made switch. Lutron is top quality.",
+        "date": "Reviewed in the United States on January 7, 2015",
+        "rating": "5.0 out of 5 stars",
+        "title": "Five Stars",
+        "userName": "Alex Croy",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00E7N71TO",
+        "productTitle": "Lutron Claro 15 Amp Single-Pole Paddle Switch, CA-1PS-LA, Light Almond",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2229,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 86
+          },
+          "fourStar": {
+            "percentage": 10
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1QV056PD6CD6F",
+        "text": "Great Switch. Bought this to control the garbage disposal in the kitchen. Switch works well turning off and on. Bought to match other dimmer & timer switches from Lutron. The screw-less bezel gives these switches a very modern cool look. I Will continue to buy more to replace other switches in the house.",
+        "date": "Reviewed in the United States on April 23, 2014",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Switch. Bought this to control the garbage disposal ...",
+        "userName": "Mitchell",
+        "numberOfHelpful": 0,
+        "variationId": "B00E7N71TO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Light Almond",
+          "Size: 1 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 13,
+    "pages_scraped": 2,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

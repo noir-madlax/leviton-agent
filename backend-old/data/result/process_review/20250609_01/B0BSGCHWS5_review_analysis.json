@@ -1,0 +1,88 @@
+{
+  "product_title": "ENERLITES Toggle Light Switch, Light Switch, Single Pole, 20A 120/277V, Grounding Screw, Commercial Grade, UL Listed, 81201A-W-5PCS, White, 5 Pack",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 5,
+  "review_analysis": {
+    "phy": {
+      "wiring configuration": {
+        "A@single pole design requiring white wire as hot wire": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "internal mechanism": {
+        "B@defective internal mechanism": {
+          "-": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works perfectly": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@works as described": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@switches did not work - light wouldn't come on": {
+          "-": {
+            "B": [
+              3
+            ]
+          }
+        },
+        "d@worked as it should": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "e@2 out of 5 switches had problems": {
+          "-": {
+            "B": [
+              3
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home electrical replacement": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "appliance wiring": {
+        "-": {
+          "A": [
+            2
+          ]
+        }
+      },
+      "lighting circuits": {
+        "-": {
+          "c": [
+            3
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:11.678038"
+}

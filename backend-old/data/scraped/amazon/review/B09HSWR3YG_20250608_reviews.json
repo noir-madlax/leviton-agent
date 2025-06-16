@@ -1,0 +1,2555 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:55:37.824717",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B09HSWR3YG",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B09HSWR3YG",
+    "title": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+    "brand": "WYZE",
+    "model_number": NaN,
+    "price_usd": 41.9,
+    "rating": 4.4,
+    "reviews_count": 844.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B09HSWR3YG"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2A3ASQHM5JCOV",
+        "text": "So close guys , I have half a dozen or more of these , they will randomly disconnect They will also randomly loose their WiFi settings and you have to re-setup It doesn't take long and they have gotten a bit better on setting them up in the app but annoying . You also need to come out with a dimable one and I'd replace all my switches iny home But I then worry about bandwidth and AP connection management...",
+        "date": "Reviewed in the United States on June 1, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "So close ...",
+        "userName": "M. Goerke",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3DT1UA21VSH12",
+        "text": "I’ve used different brands of ‘smart switches’ in the past but figured that I’d give these a shot for the new place (I already have Wyze cameras). Installation was pretty easy (if you know how to change outlets/switches) and getting it initially setup in the app was a breeze. After that, I got them added in Home Assistant and have been running them without issue (normal operation, automations, scenes and with Echo). The price point is pretty good, they’ll work with other/different wall plates, and they don’t look bad at all. I do wish that Wyze offered these in Zigbee, Z-Wave, or Matter (instead of just WiFi) but I knew what I was getting when I ordered. My only real complaint at this moment is the “status” light. For some reason, Wyze thought it was best to have the status light on when the switch is on and off if the switch is off. Personally, I wish that the “status” light was on when the switch is off and off when the switch is on. I’d much rather be able to get a hint to where exactly the switch is when I’m walking around in the dark; I don’t need a little LED to tell me the light is on…I can see that but I can’t see the switch location when it’s pitch black. You can even put it into a Firmware update and give us the ability to choose when the status light comes on (not just status light on or off).",
+        "date": "Reviewed in the United States on March 12, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked for me (Home Assistant)",
+        "userName": "JustAnotherName12",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R34KGJN9M8IOGP",
+        "text": "I have purchased MANY Wyze products over the years and have been very satisfied until now. I purchased this 3 pack of Wyze Smart Light Switches directly from Wyze in 11-24. I installed one and within 3 weeks it would no longer work. I am familiar with the product and after trying every option I contacted customer service and asked for a replacement for the one faulty switch. I provided MAC, purchase date directly from Wyze and was told they would contact me. A couple days later I received an email from Wyze asking for a photo of the MAC and to provide Proof of Purchase. I responded back that I had already provided the MAC and to look at my account with Wyze from Proof of Purchase. Never heard another word. Business must be good. I have 12 Wyze products but this will be my last.",
+        "date": "Reviewed in the United States on December 26, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Disappointing",
+        "userName": "kindi",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2U0J94IQ3DWWM",
+        "text": "I like the function and installation was easy. But these switches lose connection to the Internet frequently and I have to go and power cycle them to get them to reconnect. That makes them not dependable when I'm out of town. I would not buy them again.",
+        "date": "Reviewed in the United States on December 24, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Loses connection frequently",
+        "userName": "Tabernash",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R17WYYDE57M8QI",
+        "text": "Wyze products are very good, having cams and other products of there's, these switches are really cool and having them programed when coming home or when waking up in the morning to lights coming on or turning off. Is perfect. There are kinda easy to install and come with good instal instructions. I'd definitely recommend.",
+        "date": "Reviewed in the United States on October 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wyze light switches are super convenient!",
+        "userName": "Paul",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/718K9ZDFT3L._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3QUDGRCWXWLST",
+        "text": "One of the 3 switches did not work. It worked as a regular switch, but did not blink or funciton as a smart swicth, or was discoverable by my phone. Replaced it and the second switch worded fine.",
+        "date": "Reviewed in the United States on September 22, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "1 of 3 did not work",
+        "userName": "Someone",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3TXBL2FQT1UPA",
+        "text": "Switch always dropping wifi poorly built terminals never tightens up would not recommend bought three so I decide to go with different brand they work great I'm a huge fan of wyze I have lots of cameras but I will never buy the switches again",
+        "date": "Reviewed in the United States on September 14, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor product",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1GYRIGXDCG8W5",
+        "text": "push connections on back of switch. when it fails to connect to your app you must factory reset it. Press and hold the switch button for 20 seconds.",
+        "date": "Reviewed in the United States on August 29, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Push Connections.",
+        "userName": "Grant",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RQ9CS9MASG14O",
+        "text": "easy to setup, don't need a hub. app is easy to use",
+        "date": "Reviewed in the United States on August 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "good basic smart lightswitch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RROZS19T61SPJ",
+        "text": "To be honest it's pretty nice to ge able to turn on my lights before I get home or when I'm sitting down to watch a movie and I want to turn a light off I can do it with my phone or through my Alexa. Wyze is making my house smart one device at a time.",
+        "date": "Reviewed in the United States on August 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "Dan",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51cmORnJ5YL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1780DQJK29GT0",
+        "text": "I schedule them for my carport overhead light to turn on at sunset and off at sunrise; also floodlights to the rear towards my patio and forward to my driveway; finally 8 LED's that identify as fluorescents to make night into day when I want to do maintenance in the cool of the evenings.",
+        "date": "Reviewed in the United States on August 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install, convenient and dependable.",
+        "userName": "AtlantaGA",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RA0V29GSWF379",
+        "text": "We had an electrician come by and connect the switches. Only 1 worked and we still had to pay for the labor. We are disappointed as we got their doorbell camera and it works great",
+        "date": "Reviewed in the United States on June 30, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "2 OUT OF 3 DON’T WORK",
+        "userName": "brianna",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6812c8a9-7704-40db-9396-2a9879b6b828/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1GCM6X376M1C9",
+        "text": "The Wyze Switch has been a fantastic addition to my smart home setup! It integrates seamlessly with my other Wyze devices and offers a range of features that make controlling my lights incredibly convenient. The switch is responsive and works flawlessly with both the Wyze app and voice commands through Alexa and Google Assistant. I tested both, my son likes Alexa for some reason. The ability to create schedules and automate lighting scenes has significantly improved my home’s functionality. Installation Tips Based on My Experience: Confirm Neutral Wire Presence: Experience: I initially didn’t realize that my older home lacked a neutral wire. Tip: Before purchasing, I recommend checking your existing switch box to ensure it contains a neutral wire, typically white. Without it, you might need an electrician's help or consider a different smart switch. Wi-Fi Connectivity: Experience: I had some trouble connecting the switch to my Wi-Fi network at first. Tip: Ensure your Wi-Fi is 2.4 GHz since the Wyze Switch doesn’t support 5 GHz networks. I also moved my router closer to the switch during setup, which helped avoid connectivity issues. If you are using the Wyze Routers make sure to split the bands in your settings. Tight Wall Boxes: Experience: Fitting the switch into the wall box was challenging due to its size. Tip: Carefully arrange the wires and use electrical tape to bundle them neatly. Make sure there’s enough space for the switch to fit properly without forcing it, which could damage the wires. Overall, the Wyze Switch is an excellent product that delivers on its promises. With the right preparation and a bit of patience, installation is manageable. I highly recommend it to anyone looking to upgrade their home with smart lighting!",
+        "date": "Reviewed in the United States on June 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fantastic Smart Switch, but make sure you do your homework",
+        "userName": "Milan Brown",
+        "numberOfHelpful": 4,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2AUSDEYDGMB93",
+        "text": "The switch is basically good, except that the plates inside the switch that clamp the wires when the screw is tightened deform and slide out of place, which then ruins the switch. 2 out of 3 switches had this problem.",
+        "date": "Reviewed in the United States on June 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Wire Attachment Design is Bad",
+        "userName": "Bert",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1HI21RRFXZJYZ",
+        "text": "I've had an open ticket with them for months. They just ignore your emails after their canned responses don't lead them to a solution. Wyze products are ok but not without reliability issues. Their AI is a joke and yes I've purchases their annual plans. Don't be fooled by the hype from influencers who don't nearly test it for long enough.I've unfortunately went entirely with their ecosystem spending thousands and now I'm going to slowly go in a different direction. Possibly Eufy.",
+        "date": "Reviewed in the United States on June 24, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "terrible customer support",
+        "userName": "Jack",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R33OU3S9GDA18N",
+        "text": "I bought the three pack, opened it today and one switch was defective. The other two were installed today and works perfectly.",
+        "date": "Reviewed in the United States on June 22, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "One switch defective",
+        "userName": "Meranda Ramoutar",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2TVFSXCX9WWU6",
+        "text": "If you already have a bunch of WYZE products then sure would be a great switch for you to add to make any light switch a smart, capable light switch. I'm using these to control my outside lights so they can be on a dusk to Dawn timer. But honestly, TPLink has a much better switch system than these. with motion, 3way and dimmer options",
+        "date": "Reviewed in the United States on May 6, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "If you're already in the ecosystem",
+        "userName": "HB4Delirious",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3SFWB26APZP48",
+        "text": "These switches are amazing for the price. Flawless in all regards. Just wish they had 3 way versions.",
+        "date": "Reviewed in the United States on March 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It's a Wyze, it works",
+        "userName": "Francisco",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2382D94F7ROP",
+        "text": "Great as always! Still amazed how easy to convert a house nowadays into a smart home for such an affordable price. Have 20+ Wyze devices in my house and all of them work great for a pretty long time now. Never had to replace even one of them. These outlets are not an exception. Automatically turn on/off lights in my house, can control them in person or from anywhere in the world using your smartphone (have to have an internet connection of course on both sides). Definitely that’s not my last Wyze purchase!",
+        "date": "Reviewed in the United States on February 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love Wyze products!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/610en1cFQLL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RZG90E2ZLQY3O",
+        "text": "The Wyze smart switch is made of flimsy cheap plastic. The screws broke during installation. Just spend the extra and get Leviton.",
+        "date": "Reviewed in the United States on January 31, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "It Broke!",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61O4sBQ1rtL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61b1cKn5zUL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2S57CMHI1KOHW",
+        "text": "In my opinion it was a total waste of my money. Scheduling the product to come on or off at a specific time would'n't work properly. Don't have to take my word for it. Check out the different forums. It seems to be a common problem. I would not recommend this product. Customer service was no help on a different issue. You're basically on your own. Hope this helps. Looking to replace existing switches with some other product.",
+        "date": "Reviewed in the United States on January 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "I wouldn't buy this again",
+        "userName": "Dan Bertog",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2RLTZZOCHWXGC",
+        "text": "I have many of these Wyze switches and products, I would recommend any of there products. Great product, great price",
+        "date": "Reviewed in the United States on January 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switches",
+        "userName": "Kelly",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61UQ4aQ-NAL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2LD0F4INTMOCF",
+        "text": "I have several Wyze products and these by far are my least favorite. They’re so difficult to install that they are dangerous. The terminals are next to impossible to get tight. Leaving the wires loose and causing a fire hazard. They cost me an extra 3 hours of work which is not cheap for the customer who I recommended them to",
+        "date": "Reviewed in the United States on January 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Terrible",
+        "userName": "Eric",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RBSU8GWCEBUHB",
+        "text": "They just work. I like the fact they can still be operated manually.",
+        "date": "Reviewed in the United States on December 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Reliable Remote Switch...",
+        "userName": "Boris",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RGVADVUV6B2LK",
+        "text": "No problems installing. Loved the few days it worked. Now it notes an internet problem while showing good internet strength in settings. My speed is good and no other devIces w a problem. Power reset at breaker without any resolution. Getting help online appeared promising but was ultimately circular as this is not really one of their options and every effort sent me back to square one…including chat and email. Love their camera, but have had similar problems with the paid service. Not thrilled. Marvelous items when not having problems.",
+        "date": "Reviewed in the United States on November 27, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Worked great for a few days",
+        "userName": "KH",
+        "numberOfHelpful": 2,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RPOZ65GLU9BHM",
+        "text": "I’ve tried several brands, I keep buying these!!!",
+        "date": "Reviewed in the United States on November 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "So easy to get set up and use!",
+        "userName": "R. Herold",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1W0VLD323APB8",
+        "text": "Works well with app integration. Setup multiple on/off timer schedules and rules. Rules can control these switches when another wyze device(like a cam) is triggered. These are easy to use by themselves(need wyze app). They integrate well with other devices if you are in the wyze ecosystem",
+        "date": "Reviewed in the United States on November 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Handy to have with multiple schedules",
+        "userName": "TxRx",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2BAE2GUZOP5BA",
+        "text": "Two working as they should, number three, contact broke off tightening line. Not sure how to return just one. Not going to take the other two out.",
+        "date": "Reviewed in the United States on August 31, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "2 out of 3 ain’t bad!",
+        "userName": "Steve",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1M4K5HUNOAJ94",
+        "text": "I have found Wyze makes pretty good products and the app works well. Pros: Very flexible controls. I had 3 different lighting systems that had three different switches in different locations. I am now able to turn them on any of them from any switch. You can set up rules and behaviors from the app and they also work with Google assistant. I did not use the provided face plate. Fortunately the switch was standard so I could use my own. Cons: if you are not comfortable with working with electrical switches and outlets find someone who is to help",
+        "date": "Reviewed in the United States on August 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "noblerwe",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R6DFRLVAR1J2K",
+        "text": "I had some difficulty figuring out how to correctly install the switches. The issue was that every switch that I wanted to use a Wyze Smart Switch had multiple load wires and none of them had neutral wires connected to the existing switch. The Wyze support were pretty useless helping with this. They suggested hiring an electrician. No - not going to pay several hundred dollars to have an electrician spend 10 minutes to install a switch. So for each switch, it was pretty easy to find the neutral wire in the electric box and use the wire Wyze includes to connect that to the smart switch. I'm certain the reason each switch had multiple load wires is that these switches turned on and off multiple outlets in a couple of different rooms. The smart switch has room for two load wires - I had one switch that had three to I had to connect them with a lug and get a short run of electrical wire so I could then plug that wire into the smartswitch. Tech support was clueless and couldn't help. Lastly, trying to connect the smart switches to my Android Wyze app was an adventure - it didn't work because of a known problem with their Android app. Getting someone in support to figure that out took longer than it should have. I was able to use my son's IOS phone to add the smart switches to the Wyze app and then he shared the devices with me. Wyze fixed the issue and I reconnected the switches to my Android app (so I could be the \"owner\" of all the devices in my Wyze app). So once I got past installation, I love my switches.",
+        "date": "Reviewed in the United States on August 24, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Once they're in, they are great",
+        "userName": "Calvin Zito",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R232ZDQC9HQDDJ",
+        "text": "Bought these for the simple fact of setting a time to turn on my outdoor lights. Got the switches installed, if electricity makes you nervous, have a professional or someone familiar with electricity install. Once installed, pair with the WYZE app. Mine didn't pair on my phone. Called WYZE tech support, very helpful and polite with my instance. Long story short, my phone was glitching really bad. Set-up on the wife's phone with my account, BOOM!! Works, set timer, never had to touch the switch again. It is nice to have the option to manually turn on as well. Highly recommend to anyone looking for a simple, discreet smart light switch.",
+        "date": "Reviewed in the United States on August 3, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Home automation requirement!!!",
+        "userName": "Nick Novick",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R6AHCTNHHMPHO",
+        "text": "I ordered two boxes of these with three in each box. I've only installed three switches so far, and already found one with dry solder joints. For me, that's not a big deal. I can fix that with my soldering iron. I also found my Galaxy S23+ was incapable of performing the initial setup. I had to use my 'work' iPhone to join them to my Wi-Fi and update the firmware. Once set up, my Android worked fine controlling the switches. They come with a six inch braided aluminum wire for the neutral. It's super frustrating to get the braided wire in the little hole in the back of the switch. Plus, aluminum and copper together in a wire nut is going to corrode over time. So I bought some 14 gauge solid core copper wire to use instead of the included aluminum wire, and I recommend you do the same. For the price, I think they are great once they're installed and working. It would be nice if they included a 6\" solid core copper wire, had better quality control, and better android support, but then they'd be a lot more expensive, right?",
+        "date": "Reviewed in the United States on July 18, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Not perfect, but still recommended",
+        "userName": "youcrackmeupdude",
+        "numberOfHelpful": 6,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71zFCeIDwRL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R26YZJ4K1IGDGJ",
+        "text": "These switches are garbage and any self respecting electrician will state the same. The construction quality is poor at best. The fact that you have to use the backstabs in these already prove a problem. The terminals are flimsy at best, the outlet housing is way too large to fit in most new construction boxes, and the screw holes cause a misalignment over regular deco style switches if you try to mount in a multi gang box. It’s useless. I had one completely faulty out of the box. Another one the terminal broke off of. Great way to burn down your home.",
+        "date": "Reviewed in the United States on July 14, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Garbage",
+        "userName": "Travis",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RBKW4M5WD8A5N",
+        "text": "Easy install....I was up and running in 20 minutes",
+        "date": "Reviewed in the United States on July 3, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "Jim S",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2RKRBWIG3UJC0",
+        "text": "These are my first Wyze Smart Switches and I could not be more pleased. Simple install and once they were up they did not work properly but they're was a firmware update and then all was good. Works great with Google Home I will definitely buy these again.",
+        "date": "Reviewed in the United States on June 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great Simple Install.....",
+        "userName": "R.S. Truitt",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RS5R5E83KQLB3",
+        "text": "Good smart switch. Easy to install and use. However, it's not a dimmer.",
+        "date": "Reviewed in the United States on June 26, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "good smart switch",
+        "userName": "TWH78",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RCTSZT9V5NURT",
+        "text": "I had a Wi-Fi switch for about six years and it worked perfectly but it finally came to its life’s end so I decided to switch it out with a Wyze switch because they no longer make the same switch I have but I am so disappointed in this Wyze product you would think that Wyze would have figured out how to make a light switch that would work in any home whether it was built last year or forty years ago my house is three years old and it would not work in my house it would power up and connect to the app I could turn it off and on with my phone through the app but it would not turn on the light I connected it up according to the directions and it just wouldn’t work so I returned it and went to Walmart spent four dollars on a flip switch and now I have lights now problem solved",
+        "date": "Reviewed in the United States on May 10, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Want turn on lights",
+        "userName": "Moonlights392$",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R314K58XYHJ466",
+        "text": "Not too hard to install, (find instructions on youtube) works with office lighting (I have fluorescent LEDs) and can schedule it to do things while you are away or in the office. You make the rules, when to turn on, or off what days and times, then Forget about your lights. Forgot the light son? Just use the App to turn them off!!",
+        "date": "Reviewed in the United States on May 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "I had my office regular swith replaced and I am happy!",
+        "userName": "George Diamond",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2JC6V0RNCODCR",
+        "text": "On - OFF Only - You would assume a DIMMER... But Noooooo - Worthless IMO - 30 Day Return Window? - All Plastic - NOT RETURN - No Dimmer - NO LIKE!",
+        "date": "Reviewed in the United States on March 21, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "On - OFF Only - You would assume a DIMMER... But Noooooo - Worthless IMO - 30 Day Return Window?",
+        "userName": "Frank E.",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R278BTBQG4N6CH",
+        "text": "We have an outdoor light that we wanted turned on all dark hours of the day. Easy with this device. The Wyze app is easy to program for “turn on 20 min before sunset” with an off at sunrise. You need to be a little handy in order to install but the installation instructions in the app are excellent. After the success of the first one we now have several lights running on a schedule in the house. Great!",
+        "date": "Reviewed in the United States on March 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fantastic way of controlling lights on a timer.",
+        "userName": "Mats E Jonsson",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3BDARK4N7LGMJ",
+        "text": "De 3 unidades ordenadas solo una me funcionó.",
+        "date": "Reviewed in the United States on February 11, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Me salieron dañadas",
+        "userName": "German",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RB3DVAHBS2433",
+        "text": "This product sucks! It disconnects then in order to recover I have to delete the device and reinstall. Threw them out and got Kasa switches they work awesome",
+        "date": "Reviewed in the United States on February 9, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Horrible",
+        "userName": "alexander ferrin",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1KSBU13EZWL6E",
+        "text": "These Wyze switches, like most Wyze products are much less expensive than other competing products, but backed by a company well known and established. They work flawless and are easy to install (for anyone with a little electrical experience). Having tried other products that were much more expensive I can say that after several months of use, I am very pleased and will purchase many more.",
+        "date": "Reviewed in the United States on February 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "You can't beat the price for the quality",
+        "userName": "supertechguy",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RMBS22TDP8KWI",
+        "text": "Hice la instalación de uno de los aparadores no fue difícil para mi trabajo bien pero la conexión inalámbrica a la red no era buena se desconectaba muy seguido tenía a que resetear el apagador para volver a conectar no me funcionó",
+        "date": "Reviewed in the United States on January 1, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "No trabajo para mi",
+        "userName": "LA",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2Y0ZKM9BPW2E1",
+        "text": "Easy install. I have many wyze devices, nice to stay on their ecosystem.",
+        "date": "Reviewed in the United States on December 31, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Monica M.",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R34I2H0QS5V08F",
+        "text": "I purchased the 3 pack of the Wyze Switch, after installing one of the switches it does not work, I contacted Amazon to do a return on the 2 remaining uninstalled switches and I am not able to receive a refund for the original purchase amount, only a partial refund, when buying the 3 pack this should be considered",
+        "date": "Reviewed in the United States on December 16, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Does not Work",
+        "userName": "Kathy Stroud",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2D1P2RXK2Z59S",
+        "text": "Attractively priced switch that makes the electrical installation very easy. Be aware that the back of this switch is very big and fitting it back into the electrical box was the single hardest task.",
+        "date": "Reviewed in the United States on December 15, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Inexpensive, easy to connect but has a large back",
+        "userName": "Kenny",
+        "numberOfHelpful": 4,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2EW6ZQL1VIAK9",
+        "text": "Easy to install. App integration is good. Tech support is not easy to get. It’s emailing which is not helpful in the midst of the install.",
+        "date": "Reviewed in the United States on December 6, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "brittany pilallis",
+        "numberOfHelpful": 2,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1NJN1FV7MJQZ1",
+        "text": "These are easy to install & the online application instructions make it very clear. But, the biggest drawback, & why I can’t recommend these is that the contacts are not soldered to the copper plate on the inside, with only two small tabs that are pressed into the base, which causes the contacts to break when tightening the screws that secure the wires. The other issue is that when installing/connecting to the app via your Wi-Fi it fails to find the switch, even when the switch is 10’ from your router. While tech support is excellent, it is of little value when nothing they suggest can get the switch to be found by the app. Trying to search again for the switch only results in “Switch not found. Try again?” I have 19 other Wyze devices that work with 95% reliability, but their switches need a complete rethink by their engineers.",
+        "date": "Reviewed in the United States on December 2, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Can’t recommend",
+        "userName": "k4zmb",
+        "numberOfHelpful": 2,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09HSWR3YG",
+        "productTitle": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 72,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 846,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3UI5H9AUOFQPD",
+        "text": "I've installed a couple different brands of smart switches, and while they all functioned fine once installed, the installation (in my 70yo house with tiny electrical boxes) was always a PITA because they all required the use of wire nuts. Kudos to Wyze for that choice. However, the big news with these (IF you use Wyze bulbs/outlets/etc.) is the multi-tap functions. I actually converted my whole upstairs to Wyze bulbs once I got these switches. Now, my three-bulb vanity fixture in the bathroom can toggle on/off (single tap), go to 50% warm white (double tap), 100% daylight white (triple tap), or just the middle bulb at 1% and blue (press and hold) for those trips to the potty in the wee hours....all without summoning Alexa! In the bedrooms, I programmed the various tap \"scenes\" to control both brightness and color in lamps as well as ceiling fixtures. Also, the bathroom outlets in my house are wired to the light fixtures (old house DIY from previous owner), so the ability to turn those lights off via a wall switch without disconnecting power to the outlet is great (no more charging cordless toothbrush/razor/etc. in the bedroom)! Wyze's bulbs are almost as inexpensive as no-name smart bulbs, are \"normal\" size/shape, and come in both tuneable white and RGB configurations, so converting was pretty painless. Plus, I already had their cameras, so no need for another app on my phone (and it's a pretty good app as well). For parents of small children, these would be great for silently triggering nighttime \"scenes\" involving night-lights, fans, etc. all from the switch by the door. No more tiptoeing across messy rooms *please no Legos! please no Legos!*, or trying to invoke Alexa in \"whisper mode\". If they could trigger my more complex Alexa routines, that include time delays and IR controlled AV devices, I think I'd convert my whole house to Wyze!",
+        "date": "Reviewed in the United States on November 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Game changer...if you're in the Wyze ecosystem.",
+        "userName": "Zach Lies",
+        "numberOfHelpful": 0,
+        "variationId": "B09HSWR3YG",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 3-Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,199 @@
+{
+  "title": "ELECTECK 12 Pack Single Pole Rocker Light Switch, 15A 120/277V, Wallplate Included, UL Certified",
+  "location": "Delivering to Rochester 03867",
+  "product_information": {
+    "Is Discontinued By Manufacturer": "No",
+    "Product Dimensions": "4.09 x 1.3 x 1.32 inches; 2.09 Pounds",
+    "Item model number": "LS-01-12PK-CH",
+    "Date First Available": "October 11, 2018",
+    "Manufacturer": "ELECTECK",
+    "ASIN": "B07JVLGFYZ",
+    "Best Sellers Rank": "Best Sellers Rank:  #54,345 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement)    #189 in Electrical Light Switches       #189 in Electrical Light Switches",
+    "Customer Reviews": "#189 in Electrical Light Switches"
+  },
+  "brand": "ELECTECK Store",
+  "brand_url": "/stores/ELECTECK/page/7FBD8973-D697-44D0-A4F1-27686C4625F8?is_byline_deeplink=true&deeplink=4667CB07-398C-44C1-A7B1-D47341C10C4A&redirect_store_id=7FBD8973-D697-44D0-A4F1-27686C4625F8&lp_asin=B07JVLGFYZ&ref_=ast_bln&store_ref=bl_ast_dp_brandLogo_sto",
+  "description": "ELECTECK ON/OFF Light Switch with Cover, Pack of 12, 15A 120/277V, Electric AC Paddle Rocker Interrupter, Single Pole Grounding, Residential & Commercial Grade, Wall Plate Included, UL Listed, White",
+  "price": "$19.99",
+  "list_price": "$19.99",
+  "exact_price": "",
+  "other_used_pricing": "",
+  "price_symbol": "$",
+  "is_prime_exclusive": false,
+  "is_frequently_returned": true,
+  "number_of_people_bought": "50+ bought in past month",
+  "shipping_info": "FREE Wednesday, June 11 on orders shipped by Amazon over $35",
+  "availability_status": "In Stock",
+  "aplus": true,
+  "previous_price": "",
+  "is_coupon_exists": false,
+  "coupon_text": "",
+  "main_image": "https://m.media-amazon.com/images/I/41m7RP0EQjL._SY445_SX342_QL70_ML2_.jpg",
+  "images_of_specified_asin": [
+    "https://m.media-amazon.com/images/I/71j35uyEibL._SL1500_.jpg"
+  ],
+  "images": [
+    "https://m.media-amazon.com/images/I/71j35uyEibL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61F7Hd4-LCL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61Xo83zRx2L._SL1500_.jpg"
+  ],
+  "number_of_videos": 0,
+  "product_category": "Tools & Home Improvement›Electrical›Switches & Dimmers›Wall Switches›Light Switches",
+  "category_id": "6291359011",
+  "average_rating": "4.6",
+  "feature_bullets": [
+    "Made of high-quality materials. Support back insert and side terminal wiring installation.",
+    "15A, 120V-277V AC, Single Pole.",
+    "Quality construction for long service life.",
+    "Decor wall plates included.",
+    "Residential & Commercial Grade. UL Listed."
+  ],
+  "total_reviews": "964 ratings",
+  "total_answered_questions": "",
+  "other_sellers": [],
+  "customization_options": {
+    "color": [],
+    "size": [
+      {
+        "is_selected": false,
+        "value": "3 Way Light Switch",
+        "asin": "B0BYNDQ2NG"
+      },
+      {
+        "is_selected": true,
+        "value": "Single Pole Light Switch",
+        "asin": "B07JVLGFYZ"
+      }
+    ],
+    "style": []
+  },
+  "merchant_info": "Kowin",
+  "ships_from": "AmazonAmazonShipsfromAmazon",
+  "sold_by": "Kowin",
+  "author": {
+    "title": "",
+    "description": "                                             Size:   Single Pole Light Switch            \n                                    Make a Size selection \n                                                     3 Way Light Switch                      \n                                                    \n                                                                          Single Pole Light Switch                                                                              Number of Items:   12            \n                                    Make a Number of Items selection \n                                                   12                             20      \n                                                    \n                                                                       var postCsmCountMetric = function postCountMetric(metricName, value) {if (window.ue) {ue.count(metricName, value); } }; try {P.when(\"A\").execute('vse-vw-dp-card', function(A) {var widget = A.$('.vse-vw-dp' ); if (widget.length) {var isMetricRecorded = false; var widgetInViewMetrics = function widgetInViewMetrics () {if (isMetricRecorded) {A.off('scroll', widgetInViewMetrics); return; } if (A.onScreen(widget, 0)) {var requestId = window.ue ? window.ue.id : ''; if (false) {var successCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestSuccess:vse-vw-dp-card', 1); }; var errorCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestError:vse-vw-dp-card', 1); }; postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequest:vse-vw-dp-card', 1); var payload = {weblabNames: [], requestId: requestId }; A.ajax(\"/vap/ew/weblabtrigger/batch/v2\", {params: payload, paramsFormat: 'json', crossDomain: true, method: 'POST', withCredentials: true, contentType: 'application/json', success: successCallback, error: errorCallback }); isMetricRecorded = true; } if (false) {if (window.ue.trigger) {var triggerInCsmWeblab = ''; if (triggerInCsmWeblab.indexOf(':') !== -1) {var weblabNameAndTreatment = triggerInCsmWeblab.split(':'); window.ue.trigger(weblabNameAndTreatment[0], weblabNameAndTreatment[1]); postCsmCountMetric('ive:csm:widgetScrolledInView:csmWeblabTrigger:vse-vw-dp-card:', 1); } } } } }; A.on('scroll', widgetInViewMetrics); } }); } catch (exception) {postCsmCountMetric('vse-vw-dp-card' + 'weblabTrigger:exception'); if (window.ueLogError) {var message = 'Exception when trigger Weblab on scroll into the view '; if (false) {message += ''; } var additionalInfo = {logLevel: 'ERROR', attribution: 'ive-trigger-on-scroll', message: message }; window.ueLogError(exception, additionalInfo); } }VideosPage 1 of 1Start OverPrevious pageVideos for this product<img alt=\"Video Widget Card\" src=\"https://m.media-amazon.com/images/I/81p0wAwD8eL._CR3,0,1914,1080_SR684,386_.jpg\"/><img alt=\"Video Widget Card\" src=\"https://m.media-amazon.com/images/I/81p0wAwD8eL._CR3,0,1914,1080_SR684,386_.jpg\" height=\"163px\" width=\"292px\"/> 0:27 <img alt=\"Video Widget Video Title Section\" src=\"https://m.media-amazon.com/images/I/81p0wAwD8eL._CR3,0,1914,1080_SR342,193_CR0,126,342,67_.jpg\" height=\"67px\" width=\"292px\"/><img src=\"https://m.media-amazon.com/images/I/51+nSaepvXL._CR0,0,286,286_._FMjpg_._SL34_.jpg\"/>Creating an elegant look for your home. Paula's Consumer Corner Videos for this product<img alt=\"Video Widget Card\" src=\"https://m.media-amazon.com/images/I/51jqb2xT7CL._CR0,0,640,361_SR342,193_.jpg\"/><img alt=\"Video Widget Card\" src=\"https://m.media-amazon.com/images/I/51jqb2xT7CL._CR0,0,640,361_SR342,193_.jpg\" height=\"163px\" width=\"292px\"/> 0:40 <img alt=\"Video Widget Video Title Section\" src=\"https://m.media-amazon.com/images/I/51jqb2xT7CL._CR0,388,640,361_SR342,193_CR0,126,342,67_.jpg\" height=\"67px\" width=\"292px\"/><img src=\"https://m.media-amazon.com/images/I/D1E7dHmoZiL._CR1414,550,2356,2356_._FMjpg_._SL34_.jpg\"/>Honest Review of Paddle Light Switch Malia Heath Next pageUpload your video"
+  },
+  "customers_freuqently_viewed": [],
+  "products_related_to_this_item": [],
+  "customer_who_bought_this_item_also_bought": [],
+  "customers_say": "Customers find the light switches easy to install, reasonably priced, and functional, with one mentioning they make the house feel more homey. However, the quality receives mixed feedback, with some finding them excellent while others report poor quality. Additionally, customers complain about the noise level, noting that the switches are louder than normal and not quiet at all.AI Generated from the text of customer reviews",
+  "customer_sentiments": [
+    {
+      "title": "Look",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Value for money",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Functionality",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Ease of installation",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Quality",
+      "sentiment": "MIXED"
+    }
+  ],
+  "ratings_distribution": [
+    {
+      "rating": 5,
+      "distribution": "79"
+    },
+    {
+      "rating": 4,
+      "distribution": "15"
+    },
+    {
+      "rating": 3,
+      "distribution": "3"
+    },
+    {
+      "rating": 2,
+      "distribution": "1"
+    },
+    {
+      "rating": 1,
+      "distribution": "2"
+    }
+  ],
+  "customer_reviews": [
+    {
+      "customer_name": "R.W.D.",
+      "customer_profile": "/gp/profile/amzn1.account.AHN3VN76DNYAIM7AE4AACFAEYO2Q/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsThey withstand 4 kids and wipe off easily.",
+      "date": "Reviewed in the United States on May 24, 2025",
+      "review_snippet": "The tactile click has authority which is a good thing for longevity of the contactors. I have four children and these switches and plates are holding up better than the previous Leviton did."
+    },
+    {
+      "customer_name": "ChastityChastity",
+      "customer_profile": "/gp/profile/amzn1.account.AEEWF2MCFF7SQKCWAZEWCTEREBDQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsLight switch",
+      "date": "Reviewed in the United States on May 27, 2025",
+      "review_snippet": "Simple switch modernized all of our light switches."
+    },
+    {
+      "customer_name": "Azita Azadi",
+      "customer_profile": "/gp/profile/amzn1.account.AHRGTM2XKEOHVZB75NP3TPFSD7BA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsThey’re OK",
+      "date": "Reviewed in the United States on January 6, 2025",
+      "review_snippet": "Very nice but I realized that I could have ordered the screw less to look better."
+    },
+    {
+      "customer_name": "ApAp",
+      "customer_profile": "/gp/profile/amzn1.account.AHHX7JXW5VF3SDXWZ4DEO3QGH6SQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "4.0 out of 5 stars4.0 out of 5 stars",
+      "review_title": "4.0 out of 5 starsPerfect for my rental",
+      "date": "Reviewed in the United States on April 30, 2025",
+      "review_snippet": "I like these a lot came in a smallBox with everything. I had installed immediately perfect for my rental home."
+    },
+    {
+      "customer_name": "randy hodges",
+      "customer_profile": "/gp/profile/amzn1.account.AGOFLHW2BDE6SXDQINZY7TD6ANNQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsSingle polls work",
+      "date": "Reviewed in the United States on July 8, 2024",
+      "review_snippet": "I’m not electrician just found out about single and triple poles on light switches the single ones work as advertise the triple poles do not work at all. I have to go to all the locations to try to get one to work if you have more than one switch for the same lights do not buy these if this only has one purpose, then buy them."
+    },
+    {
+      "customer_name": "Rita",
+      "customer_profile": "/gp/profile/amzn1.account.AHWKRRAGPIYMU3QSEHYXDEH2BJ5Q/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsToggle Toggle Toggle",
+      "date": "Reviewed in the United States on March 9, 2024",
+      "review_snippet": "Love the toggle switches. Still replacing the regular switches."
+    },
+    {
+      "customer_name": "Derek",
+      "customer_profile": "/gp/profile/amzn1.account.AE6P4QON5C6NCENSMZKLIWPYVCQQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsGreat Value for the Cost",
+      "date": "Reviewed in the United States on December 4, 2023",
+      "review_snippet": "Works as it should, and I feel this is very reasonably priced."
+    },
+    {
+      "customer_name": "Todd",
+      "customer_profile": "/gp/profile/amzn1.account.AHVUKJSHOXBLTOIU3GUAEZ7FTFFA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsGood",
+      "date": "Reviewed in the United States on November 4, 2023",
+      "review_snippet": "If you need just good switches this is them. Would recommend"
+    }
+  ]
+}

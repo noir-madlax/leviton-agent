@@ -1,0 +1,2550 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:31:03.976432",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07CKNWGN4",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07CKNWGN4",
+    "title": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+    "brand": "TREATLIFE",
+    "model_number": NaN,
+    "price_usd": 19.99,
+    "rating": 4.4,
+    "reviews_count": 4101.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B07CKNWGN4"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2Z3LW3SNY2QN7",
+        "text": "Excelente",
+        "date": "Reviewed in the United States on May 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "No se batalla",
+        "userName": "Alex lara",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R33S2YTS339RB0",
+        "text": "Don’t work with two different style LED lights. They would not give me a refund. So I leave a bad review.",
+        "date": "Reviewed in the United States on May 26, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn’t work. No refund.",
+        "userName": "jenn",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1RBCDTMZ01PYF",
+        "text": "Great Product",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "J. Gardner",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R131W1CQR3U4S9",
+        "text": "Broke after only 2 years.",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broke after only 2 years",
+        "userName": "Michael Kehm",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R8SJK5564RUD2",
+        "text": "The dimmer literally worked for 20 mins I hit the switch one now I have the loudest roar of electric I’ve heard in my life. This product’s awful it’s way more convenient to buy a lamp",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "All shine forgot my dim 😊",
+        "userName": "Apryldawnn",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2BM0QC67F6U5E",
+        "text": "One of the best and easiest switches I have in my home I have four or five different brands and I may switch them all to this one.",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy and reliable",
+        "userName": "Mike Fellet",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RCP1DH1VE5103",
+        "text": "Bought this a little over a year ago and it worked great until recently. The bulb started flickering so I thought the bulb was going bad so I replaced it and that didn't fix the issue. I read about the 3 operating modes and I tried all 3. Mode 2 has the least flicker, but it still flickers. The switch was great while it worked- never had wifi issues or anything, it was very responsive and worked well, but now I'm going to have to replace it after 15 months.",
+        "date": "Reviewed in the United States on April 9, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Worked until it didn't",
+        "userName": "Robert I.",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1NJJNIOO0LNDG",
+        "text": "Install easy, setup and app are easy to operate",
+        "date": "Reviewed in the United States on April 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Install and app usage",
+        "userName": "jeff tunks",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3156DU8KB1MPW",
+        "text": "I really wanted to like these switches. They do exactly what they're advertised to do, and they do it well. After using them for a few months, I've decided I don't like how touchy the dimmer function is. It's not a physical slider, you slide your finger up and down the center to dim the lights. The problem is, to keep from dimming the lights every time you turn the light on or off, you have to press at the very bottom. I try to remember, but every other type of light switch requires no forethought other than turning it on or off, and that's what I'm used to. If they had a lockout feature for the dimmer, I wouldn't have a problem. I'm going to to replace them with plain old smart switches and upgrade my Led's to smart lights.",
+        "date": "Reviewed in the United States on April 5, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Very touchy",
+        "userName": "Kenny A.",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R8GFYI46CL65C",
+        "text": "This Dimmer Switch is a fantastic addition to any smart home setup. Installation is straightforward, making it accessible even for those who aren't particularly tech-savvy. The switches integrate seamlessly with Alexa and Google Home, allowing for convenient voice control to adjust your lighting effortlessly. One of the standout features is the TREATLIFE app, which provides additional customization options. You can set schedules, create lighting scenes, and adjust brightness levels, all from your smartphone. This flexibility enhances the overall user experience, making it easy to create the perfect ambiance for any occasion. Another great aspect is that you don’t have to connect it to Wi-Fi for it to function. This means you can use it like a regular light switch, which is perfect for households where not everyone wants to engage with smart technology. Even without the smart features enabled, the switch operates effectively and reliably, ensuring your lights can be controlled as usual. The dimmer function works smoothly, allowing for precise control over lighting levels, which is particularly nice for creating a cozy atmosphere in living spaces or dining areas. Overall, it's offers a great value for upgrading your home lighting while providing the flexibility of smart features when you want them. It’s a worthwhile investment for anyone looking to enhance their smart home experience!",
+        "date": "Reviewed in the United States on March 11, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy to install and set up",
+        "userName": "Carol",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3LNXRTQJV2AQA",
+        "text": "I was trying to make my house smarter, and individual bulbs were not cost effective for me. Instead, I installed a number of these to control the lights. Sync easily to Alexa, allowing me to control which lights turn on, and when. Easily installed and look great on the wall!",
+        "date": "Reviewed in the United States on March 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "Bass",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2UMXYXO6VEJ11",
+        "text": "Loved this product until I upgraded my iPhone to iOS 18 and lost ability to use widgets for these switches. This makes management of light switches from my phone much more difficult than it needs to be. It’s been almost 6 months and still no indication from vendor if they’re ever going to resolve this issue. Considering replacing all of my light switches with a product from a company that is interested in keeping up with technology. This is, after all, supposedly a ”smart” switch.",
+        "date": "Reviewed in the United States on February 24, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "No Widget in iOS 18",
+        "userName": "case",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3SHH9VDLP8FSD",
+        "text": "I’ve had this dimmer for a couple years now and it’s still works perfectly. The treatlife brand in general has been great and good price for the quality.",
+        "date": "Reviewed in the United States on February 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome! Just buy it!",
+        "userName": "Luis",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2FWTUD0WGCGYG",
+        "text": "This switch does not work. I was able to get the LED lights on the switch to turn on and I connected the switch to the Internet, but the switch wouldn’t control the lights… which is really the main function of a light switch. It’s a lemon.",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn’t work",
+        "userName": "Jeff",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3FT6YRJP0HWHB",
+        "text": "El producto funciona y es compatible con alexa aun que cuesta conectarse por primera vez en el App pero una vez que lo logras los demás que agregues es más fácil",
+        "date": "Reviewed in the United States on January 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Muy bueno",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61biS+u-bbL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3H3X6VJ2N7NEJ",
+        "text": "I love the look of these but honestly the reliability of the connection leaves so much to be desired. I have kasa switches that I've yet to have to reconnect. Cannot say the same for this brand. I have their bulbs and a couple dimmer switches and I've had to reconnect only Treatlife branded smart devices. Unreliable cheap crap.",
+        "date": "Reviewed in the United States on January 30, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Will be replacing with kasa switches.",
+        "userName": "Mota",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RAVTWAQLO5CKG",
+        "text": "It is good if you are not running many different brands of items. I have a home assistant instance that can not use these so i cant have it talk to the rest of my ecosystem. If i was only using these switches then it would be exactly what I want. Good tough feedback and easy use and install.",
+        "date": "Reviewed in the United States on January 22, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Decent Switch",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RI4U6H06AKYXA",
+        "text": "I have several of smart Treatlife single and 3 way switches installed and all work fine. Wanted to swap a single pole to get a smart dimmer. Ordered first and installed correctly (used amp meter to check) and it did not work. Returned for another (thinking my bad luck) land installed again correctly per directions again using amp meter to make sure. Did not work... after i clamed down I REVERSED load and line wires and it now works fine. Major problem with paper instructions and labels on the switch wires. I noted that Amazon said Often Returned, now the reason is clear. They shot themselves in the food with crappy instructions.",
+        "date": "Reviewed in the United States on January 4, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works - bad direction",
+        "userName": "Al",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1E5QPO3F3MI1B",
+        "text": "Great product",
+        "date": "Reviewed in the United States on December 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and program",
+        "userName": "Sue",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R17P3WMNNN8BGD",
+        "text": "Easy instructions for installing.",
+        "date": "Reviewed in the United States on December 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It worked as advertised,",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R16J97UIQXHUHA",
+        "text": "I'm continually having to add these back to Alexa.That's frustrating.",
+        "date": "Reviewed in the United States on December 21, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Keeps dropping from Alexa",
+        "userName": "LizzyD",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R398T2RUAP3GSL",
+        "text": "All my 4 dimmers failed at about the same time. First, they all lost connection to the TreatLife app and Alexa and then even after multiple attempts I was not able to connect any one of them. Customer support provided the same instructions over and over again. Please be careful when buying this product as the quality is not satisfactory.",
+        "date": "Reviewed in the United States on December 20, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Multiple Dimmer Failures",
+        "userName": "V",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2AJ3PZQP0YOED",
+        "text": "This worked well for 3 years. Unfortunately, it just stopped working so now it needs to be replaced.",
+        "date": "Reviewed in the United States on December 12, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Works well but didn’t last",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R10EUM8V5M0TM5",
+        "text": "Can only turn on lights with app or Alexa. Switch doesn’t work at all",
+        "date": "Reviewed in the United States on November 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working",
+        "userName": "Jessica L Holley",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R25LZIZWH3JQHB",
+        "text": "Great product.",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Cost effective.",
+        "userName": "Carl Peters",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R5G0A519CP3UV",
+        "text": "I have about 25 of these and they work great. The dimming feature is nice by just sliding your finger up and down. Side Note: If you are into home assistant these will work perfect if you use the \"Smart Life\" app instead of the TreatLife app to setup.",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "eXplod3",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1OT21JX0OVUPA",
+        "text": "Bought a TreatLife Wi-Fi dimmer in Feb 2020. It failed 36 months later. Switch lost its programming and could not be found by its app for reprogramming",
+        "date": "Reviewed in the United States on November 8, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "switch not working",
+        "userName": "Snigdha",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1ZVIA0QO1FWZ6",
+        "text": "I checked out several options in the store for functionality and aesthetics and this dimmer switch is simply the best. Actually, I took a chance buying this on Amazon and not being able to try it out first. But, one of the options I was hoping for but wasn't sure about was can you touch (not press as in button press) the button and slide your finger up or down to set the dimmer. And, yes you can. It is a capacitance touch to set the dimmer. To turn it on and off simply press the bottom of the switch and it will turn on/off. Interestingly, you can set the dimmer level without the light being on. It has several LEDs on the switch that light as you slide your finger. I didn't really need the APP control but that is nifty if you want to control with your phone. I simply love this switch and will be buying a couple more.",
+        "date": "Reviewed in the United States on November 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Probably the best dimmer switch I've seen!",
+        "userName": "Anoid",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R27MH7ZD9U8J9A",
+        "text": "4 years later it has stopped working … you would think a switch would last longer…",
+        "date": "Reviewed in the United States on September 17, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Is there warranty on this product ?",
+        "userName": "Bernard Odak",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1EX8WQMDW9PRB",
+        "text": "Estoy reemplazando los switches de la casa y me gustó el diseño. Son muy prácticos y cazan perfectamente con Alexa, solo hay q seguir cuidadosamente las instrucciones del manual",
+        "date": "Reviewed in the United States on September 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Bonito y funcional",
+        "userName": "Camilo Sarmiento",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2D2DFD54ZZ677",
+        "text": "I have installed in 2020 and both burned in 2024",
+        "date": "Reviewed in the United States on September 10, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "It’s not for long term use",
+        "userName": "armin",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R34XYTTOSI0WP1",
+        "text": "Works as it should. Please be aware this only works with 2.4g when connecting to wifi. 5g will need to disable untill fully set up then re enabled when smart switch is connected to your network.",
+        "date": "Reviewed in the United States on September 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Happy",
+        "userName": "Rafael Alvarez",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RHP3Q92J7YEQZ",
+        "text": "TreatLife has been the best, and has only gotten better. Rock-solid reliability, ease of installation and the updated pairing process, is second to none. Have been using TreatLife in two houses for at least the last 5-6 years. The old method of pairing would have the extra step of the switch broadcasting a temporary WiFi network, then would shift to the house WiFi. Now, by the time you hit the “+” in the SmartLife app, the device has already been discovered, and after you have one device already connected in the app, you no longer have to select your network and input the credentials. It’s the little things that make the difference.",
+        "date": "Reviewed in the United States on August 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best Smart Switch Available",
+        "userName": "Chris & Michelle Safrath",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51ntToTW56L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51r2PQLfDML._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61TRuiCGuVL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R285LU1Q23KNRN",
+        "text": "I can’t believe the price of these and how well the work. Easy to install. Easy to use",
+        "date": "Reviewed in the United States on August 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "Kellie Fuhrman",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3GZN4XF8CRYO0",
+        "text": "Great switch but only lived for 4 years, company will only warranty it for the 1st 2 months. Easy to install and connect to Alexa. Longevity is my biggest concern.",
+        "date": "Reviewed in the United States on August 3, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Pretty great switch, however",
+        "userName": "CaryMichael Holman",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R31NB4KKC2XGJ0",
+        "text": "Easy to install, work greay",
+        "date": "Reviewed in the United States on July 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "Lisa A Tanner",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R25IN4VCKQD488",
+        "text": "I bought a 4-pack of Treatlife single pole switches and 1 Treatlife dimmer. They worked fine, pairing with the Tuya app and working through Tuya with Home Assistant. All 4 of the single pole switches died within 2 years. The dimmer failed after 4 years. In all cases, they wouldn't connect to the app, and trying to turn the switch on manually failed. The LEDs on the switch would just flicker. When electronics are built with very cheap components, they just don't last. I expect things like light switches to be functional long-term.",
+        "date": "Reviewed in the United States on July 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very short life",
+        "userName": "Chris Mause",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1CGNRO2KHDATW",
+        "text": "I absolutely love this thing. It's a game changer. It works extraordinarily well with the Alexa app and I really like how you can change so many settings to work with different types of LED bulbs. I removed one star because the push button action is kind of a pain in the butt. Remembers the previous setting but if you touch the touch sensor then it might adjust that setting. Then you have to readjust it and then sometimes when you're trying to turn the light on or off it adjusts the setting again. That aside, if you just plan to use Alexa to control it, it works flawlessly.",
+        "date": "Reviewed in the United States on June 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Working great so far",
+        "userName": "A.J.",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2R7JX14SGNCB9",
+        "text": "Never had an issue with WiFi operation. Dimmer and scheduling work well even when outside the home network. 'HOWEVER....... 'Did not like the manual on/off button. It never did work 100% of the time. Minus one star. Eventually got to where at 1.5 years the on/off button no longer worked. Minus another star. 'Did not like the manual dimmer control. Very difficult to make small adjustments. Minus another star. Many people seem to like this switch, which is why I bought it. My own experience was mostly negative and I can not recommend it.",
+        "date": "Reviewed in the United States on May 19, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Quit working at 1.5 years",
+        "userName": "Magnum Bob",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2D1C5XG4JUFP8",
+        "text": "Every now and then my lights seem to have a mind of their own for a minute. But other than that it's a great product.",
+        "date": "Reviewed in the United States on February 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Glitches once in a blue moon.",
+        "userName": "Micah S.",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1VNP668O118GU",
+        "text": "I bought several of these for the dimming function. I do not use the smart function at all. They are so-so as far as dimming, but only dim to about 60% if you are using LED bulbs. My biggest complaint is the \"on off\" function. As these age I have to press harder and harder to get them to turn on or off. Eventually they will not work at all. Also they are squishy...not good tactile feedback when pressing on/off button. I have been replacing with GHome brand and seem to be having better results.",
+        "date": "Reviewed in the United States on February 10, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not reliable, keep having to replace. Bad tactile feeling.",
+        "userName": "Bret Shepard",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R9MD9W798G3HO",
+        "text": "Garage light in a six gang box. Low on room so it was a little tight but I was able to fit in into the box. Thanks",
+        "date": "Reviewed in the United States on January 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised and simple to install.",
+        "userName": "Gary T.",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1UH7OANQBA6PC",
+        "text": "Worked okay for about 3 years. Was having major flickering issues but only when I tried to dim the lights. I just delt with it by keeping the lights at 100% but now the switch stopped working entirely and I can't even turn my lights off. Going to have to replace it with something else.",
+        "date": "Reviewed in the United States on December 27, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working. Only lasted 3 years...",
+        "userName": "Cory",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2OB4QTEMG56YO",
+        "text": "Dimmer switch is great. For some reason the wifi capability stopped working but great customer service, they've responded immediately and sent a replacement right away. I recommend this brand.",
+        "date": "Reviewed in the United States on December 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "Jung H. Shin",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RK8107IUWUANL",
+        "text": "Install took me about 5-10 minutes including the time it took to turn off/on my breaker. I used the \"Smart Life\" app to add connect it to Google home and it work great. I like the touch panel for dimming. Just a heads up, this will not dim below 15%. Not an issue for me.",
+        "date": "Reviewed in the United States on December 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy Install and works well with Google Home",
+        "userName": "Christopher Sanders",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1SCSPA2ZTOPSK",
+        "text": "As a dimming switch, the product works great, looks modern, and is intuitive to use. As a smart switch, it’s very terrible. Their app experience is poor and something has simple as logging in is painful. Most people will just connect them to their Alexa, Google or Apple homes however that is also glitchy. On google all my TreatLife products show as “offline”. So controlling them with your voice flat out does not work. Their software systems seem to just be poorly maintained. If you’re in the market for smart switches I highly recommend you find zigbee or matter products. These connect to a server (hub) in your home instead of a server in China. You’ll get more privacy, security, and can still hook the hub up to the internet and control them with Google, Siri, Alexa. But this way your data is only exposed to US big tech instead of both US companies and shady Chinese companies",
+        "date": "Reviewed in the United States on December 8, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "A good switch but not a good “smart” switch",
+        "userName": "Shahaed Hasan",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3EJLP6DQD9W62",
+        "text": "Uno de los interruptores salió dañanado",
+        "date": "Reviewed in the United States on December 2, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Inconforme",
+        "userName": "MAHMOUD",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2NYE4CULIWDH4",
+        "text": "I have been buying this brand for the various remodels I have done for homes over the last 4 years. I had minimal and fixable communication and flicker issues that were annoying, but eventually sovable. Now, they either cheapened the parts or the batch of 20 (yes 20) or more are a disaster. Flickering, one room turning on another room, total inconsistent phone adaptability and a few thousand spent on trying to figure it out with my certified electrician. Customer service was initially responsive but then the passed me off the tech support...IN CHINA...VIA EMAIL ONLY. That is an impossible feat. They have a two year warranty, but my efforts to have it honored are moot. I want the money back (hundreds of dollars) so I can buy a proper switch/dimmers. I do not need a replacement for them, I already spend time swapping this location for that as well as removing them from the WiFi etc. The fact that I am having the issue accross the board on almost all of the units indicates that replacements are a further investment in installation that at this point would be an unreasonable solution. So I am stuck eating all costs involved and replacing for the homeowner. I will continue to review the many many units I have purchased from this company until they decide to refund me my purchases within the last two years.",
+        "date": "Reviewed in the United States on November 19, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Major Flicker Issues Zero Resolution",
+        "userName": "CeeCee Lea",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R24VG57GL6MAD3",
+        "text": "Well made",
+        "date": "Reviewed in the United States on November 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work as stated. Easy to install and setup",
+        "userName": "Bozo",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07CKNWGN4",
+        "productTitle": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1402,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4101,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2S65D3W3W3WKV",
+        "text": "Dimmer switch went bad. Reached out to Treatlife and they sent a replacement.",
+        "date": "Reviewed in the United States on October 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great customer service",
+        "userName": "Rocky N.",
+        "numberOfHelpful": 0,
+        "variationId": "B07CKNWGN4",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

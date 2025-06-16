@@ -1,0 +1,67 @@
+{
+  "product_title": "Amico 30 Pack Single Pole Light Switch with Wall Plate, UL Listed, 15A 120/277V, On/Off Rocker Paddle Interrupter Wall Switch, Grounding Screw, Residential Grade, Suitable for Home and Business, White",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 3,
+  "review_analysis": {
+    "phy": {
+      "construction quality": {
+        "A@solid build construction": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "color": {
+        "B@off-white color that looks dirty rather than true white": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "overall quality": {
+        "C@good quality": {
+          "+": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "affordability": {
+        "a@affordable pricing": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "aesthetic impact": {
+        "b@provides modern appearance to house": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "house modernization": {
+        "+": {
+          "a,b": [
+            1
+          ]
+        }
+      },
+      "replacing old light switches": {
+        "+": {
+          "a": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:07.370633"
+}

@@ -1,0 +1,394 @@
+{
+  "product_title": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek and stylish design": {
+          "+": [
+            11
+          ]
+        },
+        "B@very bright white plastic color that doesn't match common white": {
+          "-": [
+            19
+          ]
+        },
+        "C@very good looking switches": {
+          "+": [
+            35
+          ]
+        },
+        "D@nice click sound": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "size": {
+        "E@large size making it difficult to fit in boxes with many wires": {
+          "-": [
+            19
+          ]
+        },
+        "F@hard to install in regular wall box especially with multiple switches": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "components": {
+        "G@small circle light that illuminates when switch is off for visibility in dark": {
+          "+": [
+            1
+          ]
+        },
+        "H@switch plate doesn't latch on tightly": {
+          "-": [
+            11
+          ]
+        },
+        "I@homekit code on the switch": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "build_quality": {
+        "J@high build quality": {
+          "+": [
+            26
+          ]
+        },
+        "K@good push feel": {
+          "+": [
+            27
+          ]
+        },
+        "L@switches are noisy": {
+          "-": [
+            32
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@stopped working after 13 months": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "power_delivery": {
+        "b@not sending power to the light despite WiFi connection": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@one switch won't turn lights all the way off": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "d@can't turn brightness above 85% or lights flash on and off": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "e@LED bulbs flicker until driven to approximately 60% limiting effective dimmable range": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "f@dimmers work well": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "g@dimming operation is smooth and easy on the eyes": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "h@dims all the way down properly": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "i@fixes flickering LED bulbs": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "j@stays connected to wifi and reconnects automatically when network reboots": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "k@can't connect to WiFi out of the box": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "l@switches drop network connection everyday": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "m@connectivity issues with some switches unable to connect to WiFi": {
+          "-": {
+            "?": [
+              29,
+              36
+            ]
+          }
+        },
+        "n@connectivity was usually great with occasional need to reconnect to WiFi": {
+          "+": {
+            "?": [
+              49
+            ]
+          }
+        }
+      },
+      "smart_features": {
+        "o@works flawlessly with Apple HomeKit": {
+          "+": {
+            "?": [
+              4,
+              11
+            ]
+          }
+        },
+        "p@some switches fail to connect to Apple Home": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "q@pairing implementation is horribly botched": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "r@takes multiple tries to add device to app": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "s@some switches almost impossible to pair with Apple HomeKit": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "t@works great with Google and Apple HomeKit": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        }
+      },
+      "response_time": {
+        "u@toggling physical switch has random delays to turn on/off light": {
+          "-": {
+            "?": [
+              14,
+              30
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "v@zero issues and reliable operation": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "w@function flawlessly": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "x@quality has gone down": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_integration": {
+        "+": {
+          "o": [
+            1,
+            4,
+            10,
+            12,
+            18,
+            24,
+            25,
+            26,
+            34,
+            38,
+            41,
+            45,
+            46,
+            49
+          ],
+          "f": [
+            4
+          ],
+          "w": [
+            24
+          ]
+        },
+        "-": {
+          "p": [
+            5
+          ],
+          "q": [
+            16
+          ],
+          "s": [
+            32
+          ]
+        }
+      },
+      "LED_lighting_control": {
+        "+": {
+          "h": [
+            22
+          ],
+          "i": [
+            27
+          ]
+        },
+        "-": {
+          "e": [
+            9
+          ]
+        }
+      },
+      "home_automation": {
+        "+": {
+          "g": [
+            13
+          ],
+          "w": [
+            24
+          ],
+          "o": [
+            41,
+            48
+          ]
+        },
+        "-": {
+          "l": [
+            13
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "o": [
+            10,
+            26,
+            34
+          ],
+          "w": [
+            24
+          ]
+        },
+        "-": {
+          "?": [
+            31
+          ]
+        }
+      },
+      "installation": {
+        "+": {
+          "?": [
+            1,
+            3,
+            4,
+            10,
+            11,
+            12,
+            24,
+            26,
+            43,
+            47
+          ]
+        },
+        "-": {
+          "E": [
+            19
+          ],
+          "F": [
+            35
+          ]
+        }
+      },
+      "remote_control": {
+        "+": {
+          "n": [
+            49
+          ],
+          "o": [
+            28
+          ]
+        },
+        "-": {
+          "?": [
+            28
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:29.560551"
+}

@@ -1,0 +1,2542 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T23:21:39.157931",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0CW6M3N6C",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R29RF224W310J5",
+        "text": "These are garbage, if I could give them zero stars I would. I ordered five of these and so far four of them have failed within two months. They are set up and installed by a professional electrician with the appropriate/compatible lighting. Do not order these.",
+        "date": "Reviewed in the United States on April 28, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Garbage, do not order these",
+        "userName": "M.B.",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2JRJVRKL3OQHZ",
+        "text": "Stopped working after 1 month as single pole. Installed old non dimmer switch and lights work great",
+        "date": "Reviewed in the United States on April 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working out of the blue",
+        "userName": "Hi",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1EGJA1LBH9YJV",
+        "text": "These are what you need for lights that flicker",
+        "date": "Reviewed in the United States on April 11, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Stops the flicker",
+        "userName": "Robin Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1CGLMBSQ7V70O",
+        "text": "5 months later the switch completely failed. Zero output at any level. Tested circuit and voltage was present. Out of replacement or return date and manufacturer refusing to help. No storms or surges here. Replaced with a standard switch and everything is working again. Now I understand why other dimmers are $30+",
+        "date": "Reviewed in the United States on April 10, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn't last 5 months of very little use.",
+        "userName": "J Robertson",
+        "numberOfHelpful": 2,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R25IOSUJRK7MDQ",
+        "text": "Works great so far",
+        "date": "Reviewed in the United States on April 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer switch",
+        "userName": "SI",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3RPMB0XGBPOWY",
+        "text": "Worked great for about three months until it simply burned out and quit working. Wired as single-pole, used to drive a 60W LED fixture.",
+        "date": "Reviewed in the United States on March 31, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Died Prematurely",
+        "userName": "Tronfan",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RXOKZWUREG542",
+        "text": "Bought a different Legrand dimmer for some other light fixtures, and that worked great. But that one only worked for fixtures with bulbs in them. We had purchased an integrated LED light for our mud room and it was just very bright, so we wanted a dimmer for that. The dimmer that only worked on bulbs (bought at Menards) didn't work with it. Luckily, I found this one and it works like a charm. I was glad to find one of the same brand/style to match the other one as they were both on a 2-gang box. Very pleased so far.",
+        "date": "Reviewed in the United States on March 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works on integrated LED fixture and matches other switches",
+        "userName": "Jason A. Hoffman",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R210ZNYS8WXECB",
+        "text": "Very easy to install. A major plus is you can set hi & low limits for dimmer activation.",
+        "date": "Reviewed in the United States on March 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "A gem of a dimmer!",
+        "userName": "Jim Pac",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1A53IK78YNJIO",
+        "text": "Purchased 5 of these in early November 2024. Two quit working already. One of them was for a ceiling fan light kit (3 dimmable bulbs). The second was for 6 recessed lights in the kitchen, also dimmable.",
+        "date": "Reviewed in the United States on February 25, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "Adam",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3TP5OL10BO313",
+        "text": "Feach was easy to install and adjusts in a few steps, not a big deal. Works well for a year since installed, no complaints",
+        "date": "Reviewed in the United States on February 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Useful feach, no doubts",
+        "userName": "Konstantin Kapchin",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6812feaf-4024-4864-9240-0d6aa1ef1446/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1DEBF2HBZ5YB1",
+        "text": "This model does not have the little dial adjustment. I find that essential using a variety of lights. 80% of the time it needs adjustnent, sometimes a lot. Returned for the one I'm used to for a few dollars more.",
+        "date": "Reviewed in the United States on February 8, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Not the one with the dial adjustment",
+        "userName": "esteve",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "REGZEWFJWRXWM",
+        "text": "This is the second dimmer switch I've purchased this year. The first one I received was clearly a used open box item and did not work right out of the box. I returned the failed open box unit and received a replacement which was new and worked well but has failed within 4 months. I'm going to give this product one more try and hopefully it lasts longer than a few months.",
+        "date": "Reviewed in the United States on January 19, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Failed within 4 months of use",
+        "userName": "Riada",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R191FCM1IIJB2A",
+        "text": "I tested this switch and found it to be dead. I created a short video to prove it.",
+        "date": "Reviewed in the United States on January 13, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "DOA. See video",
+        "userName": "T. Robinson",
+        "numberOfHelpful": 2,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e454c1c1-6473-4dfc-8aa8-60de8e63f5c1/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RSSVMKPJW5GVJ",
+        "text": "Very easy to install and the Quality is good",
+        "date": "Reviewed in the United States on December 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very good switch, have used several. Journeyman Electrical Wireman Tony M",
+        "userName": "Avak",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R8DISC61NWKAP",
+        "text": "Works perfect for my kitchen overhead can lights to dim while also working with the 3-way circuit so I can still use the regular on/off switch on the other side of the kitchen.",
+        "date": "Reviewed in the United States on November 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great with 3-Way circuit",
+        "userName": "Austin",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1XTNN7EYXRV8N",
+        "text": "Best design for a dimmer I have found. I have 4 others in my home and may think about replacing with this.",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy design to put on quickly and then adjust the dimmer.",
+        "userName": "Judy",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RC1G7PVYEUAPI",
+        "text": "I wanted ambience sliding in my bathroom, which I know is something uncommon but this switch gives my overhead lighting the fact that I wanted whether I need bright light throughout the day or I need some things subtle for the middle of the night",
+        "date": "Reviewed in the United States on October 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect for ambient lighting",
+        "userName": "Beautiful earrings and perfect for the beach wedding I have coming up",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R5L1YBKSSHA6M",
+        "text": "These work so good with all my LED lights. I recently found out that there is an option to buy them without the plate cover, at a cheaper price. I am going to use this on an existing 3 switch wall plate, so I don't need the single plate. Anyway, it works like a charm on a single pole or 3 way install. I have like 4 of these already",
+        "date": "Reviewed in the United States on September 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "These are great!",
+        "userName": "G.R.",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R17QFT3RH2IV1J",
+        "text": "We have various dimmer switches in each of the bedrooms in our house. I prefer this style with the smaller style slider off to the side instead of the larger ones that we have in some of our other bedrooms. It allows for the switch to look more like just a normal switch but with the added functionality of a dimmer. These arn't hard to install just follow the directions and make sure you wire them correctly. Typically all you need is a screw driver and maybe a wire stripper/cutter tool. They are a standard size compared to other dimmers so you may just have to move or push some of the wiring around inside the gang box.",
+        "date": "Reviewed in the United States on September 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple dimmer switch",
+        "userName": "Shaun Carroll",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RI684GOYJ5Q1I",
+        "text": "Nice way to save some electricity",
+        "date": "Reviewed in the United States on September 5, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Wattage",
+        "userName": "Jmar",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R24ONP73JVY65G",
+        "text": "This is a nice dimmer switch. It was easy to install and works as intended. It looks nice and I would recommend it.",
+        "date": "Reviewed in the United States on August 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as intended",
+        "userName": "NY",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1WTGMOITXZ61D",
+        "text": "I’ve been installing these all over now, I like the function, can keep a setPoint and can wire three way and four way. Can’t do dimming from multi location like Lutron maestro etc but they’re also cheaper than those. But I have tons of three way and four way switches in my house, some I only need to dim from one spot so I use these. When I need dimming from all locations I use maestro. Love sunnata but they’re just way too expensive for the multi-location dimmable version. Overall this one is usually my best compromise cost vs function.",
+        "date": "Reviewed in the United States on August 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good dimmers",
+        "userName": "Dave",
+        "numberOfHelpful": 2,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2W5K4GP2YTDYG",
+        "text": "Worked as described. No issues.",
+        "date": "Reviewed in the United States on August 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Radiant® 150-Watt Single-Pole/3-Way LED Advanced Dimmer",
+        "userName": "Paul",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RAWIUQP72LDX5",
+        "text": "First, the price is WAY better than the big box stores local to me. Second, it is name brand. Third, it works perfectly with my LED flush mount lights. Fourth, it looks great. Highly recommended.",
+        "date": "Reviewed in the United States on August 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Looks and works great",
+        "userName": "Sleefany",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R213SWNXRYJAL3",
+        "text": "I ordered this product for my master bath as there was a switch that required a single pole dimmer. On opening the box, I noted that the switch had an attractive appearance and that it looked defect free. The instructions provided were easy to follow and hence ease of installation was high. After installing, I found that the switch worked well and that there was no noise or flicker when operating the dimmer function . I was happy with the product and would recommend it to others.",
+        "date": "Reviewed in the United States on June 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product for my home",
+        "userName": "Carol Y.",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RA8E49E68OOB5",
+        "text": "I really like the design of this dimmer - instead of focusing on a huge rocker switch like others on the market with a small dimmer slider, this unit decided that the dimmer slider should be larger which makes it way more functional. The rocker switch is still plenty large so no loss of functionality there. Love things that are both functional and have good form, and this meets both. Nice to see manufacturers focusing on LED specific dimmers, instead of repurposing incandescent ones and making them LED compatible. I don't need a 600W LED dimmer (which most incandescent ones support), so this one is perfectly sized for LED use. I also like that unlike most dimmers on the market, this one does not come with pigtails off the unit. It is a standard switch with three screws (so it can be used for both 2 way and 3 way situations), and a ground pigtail. A nice touch is a QR code label on the unit for installation instructions in case you lose the included paper copy (they probably could save a few trees and not bother with the paper copy).",
+        "date": "Reviewed in the United States on June 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great dimmer design",
+        "userName": "Pylot",
+        "numberOfHelpful": 6,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RAU87WCBCWL7S",
+        "text": "I swapped an older dimmer switch with this. It was made more for incandescent bulbs. So when I put in led lights, there was a noticeable flicker. This switch resolved that issue. The dimmer slider is smooth although a bit harder to move. The advantage of that is that it doesn’t sim accidentally. The paddle has a snap to it. An additional feature is the ability to use this in a 3-way application which is how I installed it.",
+        "date": "Reviewed in the United States on May 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "drshmug",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3GH9BAAABGKO4",
+        "text": "I acquired this because I have dimmer switches that were made before LEDs were so very common. The nice thing about this switch is that it LED-ready. There are calibration settings of you need to limit how dim your bulbs can go. It is relatively compact and has UL approval. The instructions are clear and fairly extensive. It will work in a 2-way or 3-way set up. The dimmer slider is good sized and easy to use.",
+        "date": "Reviewed in the United States on May 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "solid, simple, and nice that it works with LEDs",
+        "userName": "Joseph Andrews",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R30MIJUQQF2KD6",
+        "text": "I'm not a professional electrician, so won't give a highly technical review. What I can say is that this was easy to install. I had a dimmable light fixture installed in my bedroom a while back, but it was still being used on the standard rocker switch, so I finally got around to changing that. This was simple to install, and looks great in place of the old rocker, nice clean look,more modern. It operates smoothly, and at full power, the light fixture seems just as bright. It's so nice to be able to dim the lights to a more comfortable level.",
+        "date": "Reviewed in the United States on May 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy installation, operates smoothly, looks great.",
+        "userName": "La3",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RPIVMBOBJZG01",
+        "text": "I spent some time doing lab testing of this switch, and I have to say that I'm impressed thus far. This LED-compatible dimmer handles most of the issues that you commonly run into during a normal installation. The install itself is fairly straightforward, supporting either single switch or three-way installs. I did notice that the switch seemed to limit (even on high) the current the lights could take. Testing with a bulb at 11.7W, with the switch in place I couldn't get it over 11.1W, so there was some dimming of the lights involved, even with the dimmer slide at maximum. One common problem with LED bulbs is the lower dimming range, and this one was no exception -- the bulbs turned off completely at a low dim level. Using the easy procedure to reset the dimmer low range, fixed this, though. (I could not get the high range to go any higher, though.) The burst feature resolves another common problem, when using different LED bulbs on a circuit, they can be slow to start up if the dimmer is low. This forces full power for a very short time to activate all bulbs, and then it trims the brightness for you. If you are unhappy with your current dimmer, then I'm pretty sure you're going to like this one.",
+        "date": "Reviewed in the United States on April 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Sweet features for LED dimming.",
+        "userName": "Anon",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/618MI4zBpSL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61Tuc2wL0TL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61sh4x1kpYL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R39JM99731ETXO",
+        "text": "This switch feels well made-- the plastic does not feel cheap or brittle, the switch provides some resistance and a positive \"click\", the slider is easy to use, and it dims my LED bulbs smoothly with no flickering or buzzing. In addition, I am a fan of the wire connections-- it's a combo backstab and clamp type style. That is, you insert the straight stripped wire, then tighten the screw to clamp it in. No trying to bend the wire around a screw and keep it there as you tighten it. This is quick, easy, and takes no skill. I love it. Do note that this can only power 150W worth of load-- so it's good for a few LED lights or a couple incandescent lights, but not a row of 40 lights in your open floor plan. Also, my LED lights did require me to adjust the low end cut off using the calibration button. It took about 20 seconds and now when I dim all the way with the slider, the power to the LED bulbs stops before the LED lights go out or super dim. Easy adjustment, worked well. If you can live with the 150W maximum power (that is, don't overload this switch), then this is perfect. Well made, looks good, easy to use, easy to install, no buzzin will dimming, no flickering of LED lights. Easy 5 stars.",
+        "date": "Reviewed in the United States on April 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smooth Operation, Smooth LED Dimmer, No Buzzing",
+        "userName": "Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1MWSRX3KVB0D0",
+        "text": "Legrand is a good name brand in this space filled with humming and flickering competitors. This is one of my favorites from them, being low cost, intuitive to use, and functioning properly with modern LED lights. It installs like any other dimmer switch and does not require a neutral. Make sure to calibrate the dimming range for your particular bulbs. I'll likely buy more of these over some of the fancier ones that have been an issue.",
+        "date": "Reviewed in the United States on April 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Value Solution",
+        "userName": "Nerd Alert",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2I1L7NRAPI89I",
+        "text": "This dimmer installed quickly, programmed easily, and works great. Initially my bathroom’s LED bulbs shut off when dimmed all the way down, but the adjustment was simple and now I can use the full slider range. Powering on has a slight delay compared to my previous standard switch, but it’s worth the trade off for the dimming capability. Neutral is available but not required, along with 3-way wiring.",
+        "date": "Reviewed in the United States on April 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "High quality, adjustable dimmer",
+        "userName": "KJMagnum",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71QPbDPTRGL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71k3aq6WMNL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1MULJOP94ZPFF",
+        "text": "It has all of the features I wanted and the install was straightforward. The dimmer works well and it has a good range. I generally prefer toggle switches, but they tend to have smaller sliders for the dimming functionality. This is a good size and it's easy to change the brightness on the fly without much focus required.",
+        "date": "Reviewed in the United States on April 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works how it should.",
+        "userName": "Arnold C.",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3TWVPI0G2M9GH",
+        "text": "I installed this in my downstairs bathroom where I had recently put an LED light fixture over the vanity. I didn't realize (more like didn't pay attention when ordering) exactly how BRIGHT the new LED vanity light was going to be. So, after enduring sunburn for a few weeks, something had to change. I picked this up and installed it quickly - pretty much like any other switch if you are handy at electrical installation. You'll need the standard 'decorator' or 'decor' wall plate for the opening if you stared with a standard toggle switch. The slider stays at about 30%-40% and that seems to be about the perfect brightness. Two things I liked better about this one compared to some other manufacturers. First, the slider is maintained and independent from the on/off function. Basically, we have it set at a certain brightness and never touch that part - only the on/off now. Second, I like that the slider is a little larger than other ones I've seen. I don't care for the dinky sliders on some other brands. This one is quite a bit larger and much easier to use.",
+        "date": "Reviewed in the United States on April 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great for LEDs",
+        "userName": "Where's Waldo",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2EAOMMX9N1NKK",
+        "text": "I'm a general contractor by trade, and I put a lot of this type of stuff in. Usually switches will have a screw to attach a safety ground. This switch instead has a green, stranded lead attached, and an orange wire nut to join them. It's at least a real wire nut, with metal inside it, but I prefer to have the screw. It has 2 spots for back-wiring on each terminal, big enough to fit 12ga wire into, which is nice, a black screw for the common, and clearly marked (in raised plastic) for single pole and 3 way. It only sticks back into the work box about 1 1/8 inch, which leaves plenty of room for wiring behind it, and is about as wide as a typical GFI, so a little tight side to side. As far as the visible and functional aspects, it fits nicely in a decora cover plate, and looks normal. The dimmer slide is smooth and easy to operate. The rocker switch itself seems to have a pretty serious spring driving it, and takes a little more effort to push , and makes a louder 'click' than a lot of other switches I've installed. Maybe these would both diminish over time, with use, and it isn't horribly loud, just a little louder than normal.",
+        "date": "Reviewed in the United States on April 10, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Review by a contractor",
+        "userName": "Critical Thinker",
+        "numberOfHelpful": 6,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1PK20GC6EWH38",
+        "text": "This is a very impressive AC wall dimmer switch! Not only can it be installed as a single pole or 3-way switch, but it has a clever additional feature of being able to set lower and upper limits on the dimming range, as well as a \"burst\" setting, all done via a concealed button. The unit seems very well made, and the detailed instructions that came with it are excellent!",
+        "date": "Reviewed in the United States on April 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very good AC wall dimmer with clever additional features.",
+        "userName": "Charlie D",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RC4CAHJ309HFR",
+        "text": "Having had many years trying to integrate LED lighting with non-flickering dimmer switches, this new version of Pass and Seymour LED dimmer was a real pleasure to experience. We’ve had a chronic problem with a new set of bathroom LED lights, that flickered with the dimmer switches installed from Pass and Seymour. After trying two other brands with the same dilemma, I’d pretty much given up until this switch came along. Evidently it is of new design and the company has figured out the proper way to engineer the switch for modern LED fixtures. Installation was simple and the minimum-maximum functionality allowed lighting to be tailored for our particular environment. I’ve been pretty disappointed in the past but can’t say enough about this newly designed dimmer switch from Pass and Seymour.",
+        "date": "Reviewed in the United States on April 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Superior!",
+        "userName": "Bill L",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1WM5KSZ1X5DXV",
+        "text": "This Radiant Dimmer is performing admirably with my LED recessed lights. I discovered the need for a new dimmer with adjustable minimum settings to effectively control my 4 recessed LED can lights. Setting up this dimmer in single-pole mode was a breeze. I noticed that the additional terminal used in 3-way mode was covered with a sticker, which was unnecessary for my installation but may interest others. Installation involves inserting 14 or 12 gauge wire through one or two of the holes in the back and then tightening the screw at the side. I was somewhat surprised to find a stranded ground wire permanently attached to the metal housing without a ground screw terminal, as I had Wago push-wire connectors in the box already. The switch included a traditional wire nut in the box for this connection so this was a minor inconvenience in an otherwise swift installation process. The instructions for adjusting the minimum/maximum levels are written step-by-step, but the gist is to turn on the light, set the slider to min/max, push and hold the tiny button on the side of the switch's face, and then adjust the slider to the desired lowest/highest level before releasing the calibration button. There are also other settings related to \"burst mode\" and \"soft start\" turn-on methods, along with additional instructions provided. This switch does have a slightly raised profile compared to the one I'm replacing, and adjusting it by curling the metal bits around the switch doesn't seem to be easy. Nevertheless, I am satisfied with this dimmer from Pass & Seymour/Legrand, and it is functioning well for my needs.",
+        "date": "Reviewed in the United States on April 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "A good dimmer for my recessed LED lights with large on/off rocker",
+        "userName": "J F Seattle",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61FUZ0zxonL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/715T1ULT90L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71NpucJP45L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71TrGhJ93QL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71g1wxU02rL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71o2nahsbUL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71o2zaLMlIL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2FU3W3KLOK0W",
+        "text": "This review is for Legrand Radiant® 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White. I was very excited to find this on Amazon. I had looked for something similar in my local big box store, but they don't carry it. This is the same quality as all other Legrand products. I wanted to replace a dimmer knob from the mid-1980s and this was a great choice. Very happy. I will continue to buy only Legrand products for all my home electrical needs.",
+        "date": "Reviewed in the United States on April 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Legrand Radiant® 150-Watt Single-Pole Dimmer - Solid choice",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1TBOMMNSILXJO",
+        "text": "My old, antiquated dimmer switch knob had broken off and I tried to super glue it back into place. Well, it sort of worked but it did not glue on evenly. So I installed this new, advanced dimmer switch where the old one used to be and it looks and operates perfectly. It also doesn't look old like the old design did. Easy to switch out. Looks a lot nicer. Functions a lot better and smoother! 5 Stars!",
+        "date": "Reviewed in the United States on April 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Advanced dimmer switch works really well by PASS & SEYMOUR",
+        "userName": "A Amo User",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RS0XN0TGV0LH9",
+        "text": "This is a good dimmer switch. It was fairly easy to install, though I’ve done this a few times now. Due to the size compared to a regular switch, it’s a little bit bigger so I have to kinda work the switch into the box. At least for me that’s how it worked. The timer function works great. It looks nice and modern. It matches my other rocker switches from another brand. It also fits the generic switch plates that I have. The slide was a little stiff but is better after using it a few times.",
+        "date": "Reviewed in the United States on April 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer switch",
+        "userName": "lulum",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3D4U4GKSO27H9",
+        "text": "This dimmer has turned out to be the ideal match for our LED ceiling lights. Unlike our old dimmer, this unit is very smooth from dark to bright, free of any visible flickering. It also has no trouble powering on the lights at their lowest level, whereas our previous dimmer had to be turned up half way before the fixtures produced any light. Installation was straightforward, with both side- and back-clamped wiring methods supported. The dimmer works perfectly in a 3-way setup, and my remote switch's illuminated paddle still lights up as before. The unit did well for me with its default settings, but you can customize min/max brightness, enable a slight fade-to-on effect, and adjust burst mode (for LEDs that need it). Just be sure to hold onto the instructions, as the options are set using a variety of switch/slider/button combinations. Overall, I'm very happy with this dimmer's build quality and performance. It's worth noting, however, that a wall plate isn't included, so plan on buying a matching Radiant plate for the best, screwless/flush look. Standard decorator plates will also fit, but the dimmer's rectangular face may protrude somewhat from thin or low-profile ones.",
+        "date": "Reviewed in the United States on April 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "No-compromise LED dimming",
+        "userName": "States",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3QGG76S88NXJ2",
+        "text": "Pretty hefty unit. A bit deeper than the GE 3-way dimmer it replaced, so make sure you’ve got enough depth in your box. It’s definitely better made than then far more delicate GE. Nice adjustment range including high and low, and it’s easy to set. Instructions very thorough. Works great without buzzing or flicker. I was a bit worried that the skinnier-than-usual toggle would look strange compared to the size of an adjacent full-size on-off toggle, but it looks fine once installed. It’s relatively pricey but the build quality and high/low settings do set it apart.",
+        "date": "Reviewed in the United States on April 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality dimmer",
+        "userName": "Brentochan",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1E9XMFUE6JLJ4",
+        "text": "This dimmer works well with both LED and incandescent bulbs and does the best I've seen with a mix of both on one switch. The slide moves easily and the switch looks good on the wall. It was easy to install with a few common tools. The two pictures attempt to show full on and dimmed light. It has a good range of bright vs. dimmed.",
+        "date": "Reviewed in the United States on April 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well and looks good.",
+        "userName": "Keith A",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61APTq1LnsL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71hbXYqyzDL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R167PMXK7M8W5Q",
+        "text": "Since my significant other will only tolerate dimmable light sources, I've installed dimmer switches on every light in our house. I've tried 3-4 styles and these rocker with slider switches are my favorite, both in looks and usage. The look is very modern and clean, especially with this included wall plate. I love the color options but since I've already started with some other white switches I stayed with white. The usage is also very straight forward, with an on/off rocker that feels solid and dimmer slider on the side. On the technical side, the 150W dimmer seems to handle LED bulb dimming well with no flickering, something that can happen depending on how many bulbs you're dimming and also the bulbs themselves. This switch did well with the color changing LED smart bulb I have in the lamp that it controls. It should have enough capabilities to handle most LEDs without flickering.",
+        "date": "Reviewed in the United States on April 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Favorite Kind of Dimmer Switch",
+        "userName": "B",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1UYZYSIH3Y2UF",
+        "text": "This is a nice dimming switch. It's got a nice, streamlined look. It's super simple to adjust the brightness of your light. My husband is a pretty handy guy and has done a fair amount of DIY electrical work, this switch was a little challenging to install. I think mostly due to the fact that we were going from traditional switches to these rocker switches. It's not a lot of space to work with. Once installed they worked perfectly. You do have to make sure you are using dimming bulbs. I plan to buy more and install them around my house!",
+        "date": "Reviewed in the United States on April 1, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works great, somewhat hard to install.",
+        "userName": "KP",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RAE4HAC8ZYQYN",
+        "text": "Easy to install, easy to use and the dimmer is really handy without be obtrusive.",
+        "date": "Reviewed in the United States on April 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "BEst Dimmer switch ive tried.",
+        "userName": "Patrick",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3KWZKEVVBJWZE",
+        "text": "I like the simplicity of a big on/off button with the side slider for dimming. Makes it a lot easier to just turn the lights on or off with the main toggle as that is usually the main function of the switch. Works better than the gimmicky touch based switches. It says it is designed for LED lights and that's what I installed it for so I cannot comment on other light types.",
+        "date": "Reviewed in the United States on April 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to use dimmer",
+        "userName": "FS Clovis",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CW6M3N6C",
+        "productTitle": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 52,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 143,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3J1OQMST15JFG",
+        "text": "High quality dimmer switch, fits aesthetically with all my current switches and was a seamless fit. The installation instruction is clear and easy to access, and I was able to pretty quickly install this and add dimmer to my recessed lighting. This does not come with a wall plate but existing switch plate fit this perfectly. Very happy with the results.",
+        "date": "Reviewed in the United States on March 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "easily replaced my standard switch",
+        "userName": "darwin4lunch",
+        "numberOfHelpful": 0,
+        "variationId": "B0CW6M3N6C",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

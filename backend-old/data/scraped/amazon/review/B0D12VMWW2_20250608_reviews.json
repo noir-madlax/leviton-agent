@@ -1,0 +1,2581 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T23:20:27.460953",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0D12VMWW2",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1H9U9YQJFHXD5",
+        "text": "Works great!!!",
+        "date": "Reviewed in the United States on June 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "A good product for the price I paid",
+        "userName": "fanboy911",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3W0CU2JC6HSG3",
+        "text": "Mine lasted about 3 months before the plastic flip switch fell out and onto the floor. This is why tariffs are a good idea. If I had to pay a tariff charge, I would know which products are cheap, China junk.",
+        "date": "Reviewed in the United States on May 23, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "You get what you pay for",
+        "userName": "AA",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R17SNP2E6OJ0YJ",
+        "text": "great",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "great",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R37GL9AV7N4UYB",
+        "text": "Easy to wire up. Clear idiot-proof directions included. Has added some mood to our lighting!",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "You can do this.",
+        "userName": "Dawn Huffman",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3C6EU4XPWCY90",
+        "text": "Quality at reasonable price",
+        "date": "Reviewed in the United States on May 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality & Value",
+        "userName": "Allen",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2IEW07GE1H538",
+        "text": "This dimmer switch has a flicker. Every few minutes, when seated beneath a light fixture controlled by this dimmer, I'd notice a small flash, especially when the dimmer was set to the bright end of the voltage range. After playing around with the minimum brightness control for a couple of days, I replaced it with another brand dimmer switch that has shown no such issues, with the same set of dimmable LED bulbs and same light fixture.",
+        "date": "Reviewed in the United States on April 29, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "it flickers once every 4 or 5 minutes or so",
+        "userName": "Marty S",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R30VYIDT3OC3H5",
+        "text": "Nice dimmer at a great price. Worked perfectly for me.",
+        "date": "Reviewed in the United States on April 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great as Advertised",
+        "userName": "BidOnMe",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RHJEKP3XOD72Q",
+        "text": "Great price and easy to install/use.",
+        "date": "Reviewed in the United States on April 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product,easy to use.",
+        "userName": "Jeffrey H.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2OMYCPDY2JB4R",
+        "text": "I was unable to loosen the screws that secure the wires to the switch. So could not use.",
+        "date": "Reviewed in the United States on April 20, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Unable to use",
+        "userName": "John Rosenthal",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2BBNMZU92K2BI",
+        "text": "Works well for the most part. Fit in the box nicely and place fits over it. Switches on and off smoothly. I've tried different lights plugged in to the outlet it controls. Some flicker. Some don't. Cheap bulbs seem to do the flickering. And the Edison bulbs that aren't name brand. Makes sure wattage matches what switch can handle.",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well.",
+        "userName": "Kal",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R7MBYDSXTO0T0",
+        "text": "This dimmer switch fits easily into multiple wall switch box. Relatively easy to install although wires are not secure in the plug-in connectors on back of the dimmer case. The dimming limiting feature does not operate as stated and is really useless as it doesn't work. However the unit does dim the lights from bright to completelny of with no flickering. It's OK, but would not purchase again. Updated: called Aida Customer Service about the dimming setting feature. They emailed a detailed instruction message to me that was a bit different than what came with the switch. My desired dim setting is now set, and I'm adding a star due to the follow through from this seller! I'm now pleased with the product, and can recommend this dimmer. Works great in my 3-gang switch box. Thank you.",
+        "date": "Reviewed in the United States on March 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "This dimmer is narrower than most other available switches",
+        "userName": "Cape Cod Boy",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R39GUITQKZ8T6D",
+        "text": "Easy and detailed instructions",
+        "date": "Reviewed in the United States on March 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "steve j.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2PZOAY6MX3GPF",
+        "text": "Works great! A little bit smaller than other brands so it fits better.",
+        "date": "Reviewed in the United States on March 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Compact size",
+        "userName": "Joe Mercatante",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RX97P7C0LEAUR",
+        "text": "If you're reading this, you've probably learned old school dimmer switches don't work well with the new LED lights. I bought this one due to its price and apparent ability to handle a higher wattage. It installed just fine and works exactly as it should, brings the nine 60 watt equivalent bulbs from holy cow bright down to a whisper of light.",
+        "date": "Reviewed in the United States on February 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "RitaEFromm",
+        "numberOfHelpful": 2,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61Dn82YWozL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R37A99T52CEN92",
+        "text": "It is what needed",
+        "date": "Reviewed in the United States on January 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Winderful",
+        "userName": "Ladan",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1EBEHFPN2LA00",
+        "text": "Easy installation and did not require changing the faceplate.",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy Installation",
+        "userName": "Ira",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RTJGU86FW9P52",
+        "text": "This switch was easy to install. And it works great with my led lights. Makes the room less bright as my wife doesn't like it that bright. Thr lights to not flicker or just turn off like some dimmer switches do with led.",
+        "date": "Reviewed in the United States on January 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "LED dimmer",
+        "userName": "Thomas phillips",
+        "numberOfHelpful": 2,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2NHPJ9N5ANFXB",
+        "text": "Installed for my dining room chandelier. It was easy to install myself, fit nicely in the array of switches, and works like a charm. The dimmer is good quality and transitions smoothly to different brightnesses.",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and works well",
+        "userName": "Adam",
+        "numberOfHelpful": 2,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R175MHEK869ZJV",
+        "text": "This replaced an older dimmer switch at our kitchen sink where we use LED track lighting. It works as described and was pleasantly surprised about it's ability to adjust the level of dimming. Thankfully the unit dimensions were given which made ordering it much easier removing any doubts about it fitting. It would have been nice for them to mention a preferred wire size and making mention of the wire installation by turning down the side screws after the wire was placed in the rear holes. What can you expect from a dummy novice non-electrician like me?",
+        "date": "Reviewed in the United States on December 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Thanks - Good Product.",
+        "userName": "PK",
+        "numberOfHelpful": 2,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1SMOGZ21P40ZK",
+        "text": "Great little dimmer for our great room. This was a single pole application, very easy and I love that the wires can be removed by loosening the side screw. . No need to get a pick to release. Would buy again.",
+        "date": "Reviewed in the United States on December 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "S. Johnson",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/612JZPkCGgL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71Y-bKk37uL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3SCD0O4GZWHY4",
+        "text": "Bought 2 of these for single pole dimmer applications. One was defective. Next time will stick with the reiable name brands.",
+        "date": "Reviewed in the United States on December 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Took a chance on an off brand..",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R9PBH6G5BMPQR",
+        "text": "permanent fixtures are decent, but using remote on/off sockets don’t work very well. very disappointing.",
+        "date": "Reviewed in the United States on November 26, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "meh - loads of flickering",
+        "userName": "Dan",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1e65712d-5314-42fd-90a1-19e451789aa8/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2MYC7PMFTMD4T",
+        "text": "Easy to install, easy to use and works perfectly with LED lights.",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I needed",
+        "userName": "CJ Cassidy",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R14A6H4SYE06P5",
+        "text": "Works as expected. Happy with purchase",
+        "date": "Reviewed in the United States on November 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as promised",
+        "userName": "Cathleen W R",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R9Q8TCSQIG9VR",
+        "text": "Worked about two weeks and quit",
+        "date": "Reviewed in the United States on October 30, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Poor quality",
+        "userName": "Bill Cloyd",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1HC13Y2TGC9EN",
+        "text": "Arrived on time and it works!",
+        "date": "Reviewed in the United States on October 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "it works!",
+        "userName": "michael l obrien",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3F6NGL78Z8TY6",
+        "text": "Installation was easy",
+        "date": "Reviewed in the United States on October 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked as discussed",
+        "userName": "RMB",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3AIJ5B71AB1XL",
+        "text": "Replaced my original switch with this one. Now I can dim the lights. Easy install.",
+        "date": "Reviewed in the United States on October 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great",
+        "userName": "Verified Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1WMF2VCDJDB9E",
+        "text": "Perfect for application.",
+        "date": "Reviewed in the United States on October 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install 👌",
+        "userName": "Had 2 old doors that the hinge screws were beyond hope. This fixed it ! Repairs only took about 10 minutes for both doors. I'll definitely recommend it to anyone who has this issue.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RXS6UPF971A06",
+        "text": "Please note that there are three caveats to this AIDA dimmer switch. Although, it is rated for 600W incandescents, it is only 150W for LEDs and CFLs which the majority of us would have. Next is that it comes with no plate cover. Which is generally fine because the switch with this dimmer looks like a simple up/down light switch. So your own face plate should fit it fine. We had no issue with installing it and using our prior face plate with it. The final caveat is that at the lower light level settings, there seems to be a mini-cycle of up and down on the brightness. That is, it had trouble with keeping the same low level setting. Since for our needs, we did not have or wish the room to be that dark, the switch worked fine with our level of comfortable ambient light. Overall, if you keep the three caveats in mind, this dimmer switch worked well for us.",
+        "date": "Reviewed in the United States on October 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Dimmer Switch for 150W LED/CFL looks like Simple On/Off Light Switch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 3,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R6JERTWBHBXEO",
+        "text": "I was able to replace an on/off toggle with this dimmer toggle switch without the need of getting a new face plate. Switch went into a multi gang box the rest of the switches in the box are toggle switch and it is more difficult to get customized faceplate where there is a decora style switch(as with most dimmer) mixed in the middle of a bunch of toggle switches. This toggle style dimmer allow me to keep the faceplate and not have to change out all the other switches to decora style switch just so I can have a dimmer in the middle. The dimmer switch is shallow and doesn't take up much room in a crowded electrical box. Adjustment works well, just set the min lighting setting for the load and replace the faceplate. Slider adjustment independent of the on/off toggle allows a set and forget for brightness level so you can always just set the brightness to what you normally want and just use the toggle to turn on an off. The option to adjust brightness is still readily available.",
+        "date": "Reviewed in the United States on October 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Toggle style dimmer switch",
+        "userName": "k",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1VGWUSL61VBGI",
+        "text": "Works like it’s supposed to",
+        "date": "Reviewed in the United States on October 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Looks good",
+        "userName": "Ray & Laura 2001💕",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3CFQQX73J2A41",
+        "text": "Dimming, price, quality, ease of installation. 5 stars",
+        "date": "Reviewed in the United States on October 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great price works as expected",
+        "userName": "David James",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R391QAMLMUCJIG",
+        "text": "Used this to hook up some faux sky lights and dim them, worked well.",
+        "date": "Reviewed in the United States on October 3, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked",
+        "userName": "Cynthia",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3IDLL1FJE45I7",
+        "text": "I'm using this switch in a room with 4 recessed led spotlights and I haven't had a single problem. Installation was easy, my lights dim with no flickering.",
+        "date": "Reviewed in the United States on September 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly",
+        "userName": "Paul L",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2AFB37A8CK27",
+        "text": "I own a handyman service, so end up installing lots of light fixtures and also dimmer switches. This AIDA branded dimmer is very much a standard LED-compatible dimmer. It's a bit more narrow than most, which isn't a bad thing. As usual it can function as a 3-way switch, if you need that capability. As noted in some other reviews the switch makes a slight audible click when switched, which I consider a plus, as I prefer switches with the tactile feedback that's associated with the click. So, this is very much a standard LED compatible dimmer. The Amazon price for 1 is a couple of dollars cheaper than my local sources. To me the big news here is the pricing on larger quantities. At the time this review was written a pack of 4 runs $51 or $12.75 per dimmer. A pack of 10 is just $10.30 each.",
+        "date": "Reviewed in the United States on September 24, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "A Pro Handyman's View: A Standard LED-Compatible Dimmer, Great Quantity Pricing",
+        "userName": "SecretSquirrel007",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RM2ABBSMOG0G0",
+        "text": "We use it to control 2 LED lights in the bathroom. Works great to set the most desired brightness and only adjust when needed.",
+        "date": "Reviewed in the United States on September 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It is to set the desired brightness that you want most of the time.",
+        "userName": "Art Maes",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2YBKC406N4Z1B",
+        "text": "Easy to install, and work perfectly! Some dimmer switches are temperamental and easily damaged by current fluctuations - however, these are dealing with my electrical system renovation work just fine! Highly recommended!",
+        "date": "Reviewed in the United States on September 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Professional grade switches!",
+        "userName": "AF",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1RPGNP3QGWQ9J",
+        "text": "I am so bummed! It worked great for a month, then it died. Electrician said the switch was a dud, wire was spot on.",
+        "date": "Reviewed in the United States on August 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working one week after the return date.",
+        "userName": "mommalyndsey",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R277SIATHEAKFY",
+        "text": "I had purchased this item because it took up less space in my rather small switch box. At all but maximal power there was a noticeable fine oscillation of the brightness of the led light that it was feeding. No amount of brightness range adjustment would eliminate the oscillation. Replacing it with a Leutron CL dimmer fixed the problem.",
+        "date": "Reviewed in the United States on August 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Light levels not stable.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 4,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R5CPI0IQ6G3OH",
+        "text": "Can't ask for more ... 3-way switch, dimmable and a very sturdy front plate. The dimmer switch is barely visible with a smooth mechanism.",
+        "date": "Reviewed in the United States on August 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Got to love it !",
+        "userName": "Rafael",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RUX57GAILU93F",
+        "text": "Easy replacement for my dimmer switch that stopped working. Just make sure you shut off your breaker before you try to take the old one out. So far so good, hopefully it will last a long time.",
+        "date": "Reviewed in the United States on July 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Janet A.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RECMCLAULIG8V",
+        "text": "...wiring instructions for installation on either type of circuit.",
+        "date": "Reviewed in the United States on July 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Like the Flexible...",
+        "userName": "Bob",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2N2CY560HKAHZ",
+        "text": "I found this toggle slide dimmer switch simple and easy to install. It's working exactly as expected. I'm enjoying having dimmable lights in my loft living room. Programming it was easy and I'm using it with four recessed 6 inch LEDs.",
+        "date": "Reviewed in the United States on July 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install, working great",
+        "userName": "Miki",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3P2XEGUV1HCB9",
+        "text": "Works perfectly. Nicely bright/nicely dimmed.",
+        "date": "Reviewed in the United States on July 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well-designed",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R13HDVT51O27RB",
+        "text": "I installed this on my LED recessed lights in the living room and it worked flawlessly. Some dimmers cause LEDs to flicker, but this one dimmed the lights smoothly. It also doesn’t produce heat like I’ve had with other dimmers. Very sturdy metal construction.",
+        "date": "Reviewed in the United States on July 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "No flickering",
+        "userName": "Ryan Martin",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1IKQW04AIUASJ",
+        "text": "Super easy installation and works great. One word of caution, make sure your LED bulbs are dimmable otherwise you might shorten their life significantly. I think most newer LEDs have this capability but might be good to check. Installation only took a few minutes (I spent more time trying to figure out which breaker to shut off than I did installing the switch).",
+        "date": "Reviewed in the United States on July 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great",
+        "userName": "xb90",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R12JTOPT91UCV7",
+        "text": "The switch itself is of decent construction, easy push in design to eliminate wire nuts and has presets that aren't accessible once you put the cover plate on. Thankfully the dimmer is there next to the switch. Keep in mind that when using this in a hallway with two controlling switches, only the one with the dimmer will turn the lights on to the setting you have it at. The other switch will turn the lights on full brightness. It's not really a big deal, but would be nice if it kept it on the same brightness the dimmer switch is set to.",
+        "date": "Reviewed in the United States on July 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fits in standard cover",
+        "userName": "Anthony B.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1W5VOKLBN5K01",
+        "text": "This dimmer has a nice quality feel to it with premium wire screw downs for easy fast installation. There is a low level adjuster for led lights to dim them down to their lowest brightness. The dimmer slider is a little wider than a typical slider which is an improvement for adjusting!",
+        "date": "Reviewed in the United States on June 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Classic toggle dimmer",
+        "userName": "Woodsman",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/4bc3722c-1b19-4008-a4e2-d86f6068592a/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D12VMWW2",
+        "productTitle": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 62,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 262,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R272F8JNRHI7XY",
+        "text": "I have thick ceramic wall plates that are difficult for many other style dimmer switches ~ the old-fashioned toggle style of this switch is able to function properly. Good price, easy install = 4 stars. What I like ~ • Able to reuse ceramic wall plates that cannot be changed in this room. • Supports LED • Looks and functions like a normal light switch most of the time and offers dimming adjustment when needed. • The wire clamps are already \"open\" and ready to clamp down on a wire ~ some brands have these \"closed,\" requiring you to open them and that is a waste of time. What I do not like ~ (no deal breakers here) • At least with my LED lighting, there is a very noticeable delay between flipping the switch and the lights coming on. If I am in a rush, I have already stepped into the room before the lights have come on. • I am still messing with the \"minimum dimmer\" function ~ may be due to having LEDs and them drawing so little power ~ troubleshooting suggestion from instructions suggest I up the wattage.",
+        "date": "Reviewed in the United States on June 24, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good toggle lightswitch dimmer that supports LED",
+        "userName": "Someotherjim",
+        "numberOfHelpful": 0,
+        "variationId": "B0D12VMWW2",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61FXwcGL4yL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Number of Items: 1"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

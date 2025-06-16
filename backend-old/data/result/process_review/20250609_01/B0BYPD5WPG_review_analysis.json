@@ -1,0 +1,104 @@
+{
+  "product_title": "Lutron Claro Smart Switch for Caseta Smart Lighting (Lutron Smart Hub Required), for LED Lights and Fans, 5 Amp, Single-Pole/3-Way, Neutral Required, DVRF-5NS-LA, Light Almond",
+  "product_category": "Smart Hub Dependent Switches",
+  "total_reviews": 1,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@paddle design matches existing switches": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "design": {
+        "B@look-and-feel of original Caseta dimmers": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "cost": {
+        "C@expensive price": {
+          "-": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "features": {
+        "a@good features available": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "b@works well with HomeKit": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@doesn't support Matter network": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "d@requires Lutron bridge": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "e@allows setting maximum and minimum light intensity": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "iOS app control": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "multiple locations around house": {
+        "+": {
+          "A": [
+            0
+          ]
+        }
+      },
+      "chandelier brightness control": {
+        "+": {
+          "e": [
+            0
+          ]
+        }
+      },
+      "minimum power light activation": {
+        "+": {
+          "e": [
+            0
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:28.828288"
+}

@@ -1,0 +1,226 @@
+{
+  "title": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+  "location": "Delivering to Rochester 03867",
+  "product_information": {
+    "Operation Mode": "Automatic,Off",
+    "Operating Voltage": "120 Volts",
+    "Contact Type": "Normally Open",
+    "Connector Type": "Crimp",
+    "Brand": "Lee",
+    "Terminal": "Screw",
+    "Item dimensions L x W x H": "1.25 x 3.88 x 2.06 inches",
+    "Circuit Type": "1-way",
+    "Actuator Type": "Push Button",
+    "Contact Material": "Metal",
+    "Number of Positions": "2",
+    "Specification Met": "X-10",
+    "Control Method": "Touch",
+    "Connectivity Protocol": "X-10",
+    "Color": "White",
+    "Wattage": "600 watts",
+    "Unit Count": "1.0 Count",
+    "Number of Items": "1",
+    "Global Trade Identification Number": "00721667209109",
+    "Manufacturer": "Smarthome Technologies",
+    "UPC": "721667209109",
+    "Part Number": "209DN -ELECT LIGHT SWITCH",
+    "Item Weight": "5.6 ounces",
+    "Product Dimensions": "1.25 x 3.88 x 2.06 inches",
+    "Item model number": "209DN",
+    "Is Discontinued By Manufacturer": "No",
+    "Item Package Quantity": "1",
+    "Batteries Included": "No",
+    "Batteries Required": "No",
+    "ASIN": "B001EVKA8G",
+    "Customer Reviews": {
+      "ratings_count": "765 ratings",
+      "stars": "4.6"
+    },
+    "Best Sellers Rank": "#45,034 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement)  #164 in Electrical Light Switches",
+    "Date First Available": "August 26, 2008"
+  },
+  "brand": "Lee Store",
+  "brand_url": "/stores/LEE%C2%AE/page/450C35B6-2305-427C-87D9-A5E75DDF379F?is_byline_deeplink=true&deeplink=450C35B6-2305-427C-87D9-A5E75DDF379F&redirect_store_id=450C35B6-2305-427C-87D9-A5E75DDF379F&lp_asin=B001EVKA8G&ref_=ast_bln&store_ref=bl_ast_dp_brandLogo_sto",
+  "description": "Product Description          Had it up to here with replacing burnt-out light bulbs because you or someone in your household forgot to turn off the closet light? Simplify matters by equipping your closet door with a convenient automatic light switch. Just mount this 600-Watt spring-loaded.             From the Manufacturer          Had it up to here with replacing burnt-out light bulbs because you or someone in your household forgot to turn off the closet light? Simplify matters by equipping your closet door with a convenient automatic light switch. Just mount this 600-Watt spring-loaded.",
+  "price": "$14.30",
+  "list_price": "$14.30",
+  "exact_price": "",
+  "other_used_pricing": "",
+  "price_symbol": "$",
+  "is_prime_exclusive": false,
+  "is_frequently_returned": true,
+  "number_of_people_bought": "100+ bought in past month",
+  "shipping_info": "FREE Wednesday, June 11 on orders shipped by Amazon over $35",
+  "availability_status": "In Stock",
+  "aplus": true,
+  "previous_price": "",
+  "is_coupon_exists": false,
+  "coupon_text": "",
+  "main_image": "https://m.media-amazon.com/images/I/81VU-U7rWML.__AC_SX300_SY300_QL70_FMwebp_.jpg",
+  "images_of_specified_asin": [
+    "https://m.media-amazon.com/images/I/81VU-U7rWML._AC_SL1500_.jpg"
+  ],
+  "images": [
+    "https://m.media-amazon.com/images/I/81VU-U7rWML._AC_SL1500_.jpg"
+  ],
+  "number_of_videos": 0,
+  "product_category": "Tools & Home Improvement›Electrical›Switches & Dimmers›Wall Switches›Light Switches",
+  "category_id": "6291359011",
+  "average_rating": "4.6",
+  "feature_bullets": [
+    "Make your closet light turn on or off when you open or close the door",
+    "Save money by reducing your electric bill and lengthening bulb life",
+    "Works with sliding or hinged doors",
+    "600-Watt, spring-loaded",
+    "Mounting hardware included"
+  ],
+  "total_reviews": "765 ratings",
+  "total_answered_questions": "",
+  "other_sellers": [],
+  "customization_options": {
+    "color": [],
+    "size": [],
+    "style": []
+  },
+  "merchant_info": "Alexander Lighting",
+  "ships_from": "AmazonAmazonShipsfromAmazon",
+  "sold_by": "Alexander Lighting",
+  "author": {
+    "title": "",
+    "description": "var postCsmCountMetric = function postCountMetric(metricName, value) {if (window.ue) {ue.count(metricName, value); } }; try {P.when(\"A\").execute('vse-vw-dp-card', function(A) {var widget = A.$('.vse-vw-dp' ); if (widget.length) {var isMetricRecorded = false; var widgetInViewMetrics = function widgetInViewMetrics () {if (isMetricRecorded) {A.off('scroll', widgetInViewMetrics); return; } if (A.onScreen(widget, 0)) {var requestId = window.ue ? window.ue.id : ''; if (false) {var successCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestSuccess:vse-vw-dp-card', 1); }; var errorCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestError:vse-vw-dp-card', 1); }; postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequest:vse-vw-dp-card', 1); var payload = {weblabNames: [], requestId: requestId }; A.ajax(\"/vap/ew/weblabtrigger/batch/v2\", {params: payload, paramsFormat: 'json', crossDomain: true, method: 'POST', withCredentials: true, contentType: 'application/json', success: successCallback, error: errorCallback }); isMetricRecorded = true; } if (false) {if (window.ue.trigger) {var triggerInCsmWeblab = ''; if (triggerInCsmWeblab.indexOf(':') !== -1) {var weblabNameAndTreatment = triggerInCsmWeblab.split(':'); window.ue.trigger(weblabNameAndTreatment[0], weblabNameAndTreatment[1]); postCsmCountMetric('ive:csm:widgetScrolledInView:csmWeblabTrigger:vse-vw-dp-card:', 1); } } } } }; A.on('scroll', widgetInViewMetrics); } }); } catch (exception) {postCsmCountMetric('vse-vw-dp-card' + 'weblabTrigger:exception'); if (window.ueLogError) {var message = 'Exception when trigger Weblab on scroll into the view '; if (false) {message += ''; } var additionalInfo = {logLevel: 'ERROR', attribution: 'ive-trigger-on-scroll', message: message }; window.ueLogError(exception, additionalInfo); } } VideosHelp others learn more about this product by uploading a video!Upload your video"
+  },
+  "customers_freuqently_viewed": [],
+  "products_related_to_this_item": [],
+  "customer_who_bought_this_item_also_bought": [],
+  "customers_say": "Customers find the door light switch works well, particularly as a closet system addition, and appreciate that the light turns on only when the door is open. Moreover, they consider it a perfect replacement and worth the price. However, the build quality receives mixed feedback, with some finding it well-made while others note it's not built for long-term use. Installation experiences are also mixed, with some finding it relatively easy while others report poor instructions. Additionally, customers disagree on the fit, with some finding it perfect while others say it's too big.AI Generated from the text of customer reviews",
+  "customer_sentiments": [
+    {
+      "title": "Functionality",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Light switch",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Light level",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Value for money",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Replacement value",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Ease of installation",
+      "sentiment": "MIXED"
+    },
+    {
+      "title": "Build quality",
+      "sentiment": "MIXED"
+    },
+    {
+      "title": "Fit",
+      "sentiment": "MIXED"
+    }
+  ],
+  "ratings_distribution": [
+    {
+      "rating": 5,
+      "distribution": "78"
+    },
+    {
+      "rating": 4,
+      "distribution": "11"
+    },
+    {
+      "rating": 3,
+      "distribution": "4"
+    },
+    {
+      "rating": 2,
+      "distribution": "4"
+    },
+    {
+      "rating": 1,
+      "distribution": "3"
+    }
+  ],
+  "customer_reviews": [
+    {
+      "customer_name": "Shivana Prashad",
+      "customer_profile": "/gp/profile/amzn1.account.AHP23SYDEPPRQ7VEL72DU5SMJBZQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsPerfect replacement",
+      "date": "Reviewed in the United States on April 15, 2025",
+      "review_snippet": "Easy to install. works as intended"
+    },
+    {
+      "customer_name": "Alan",
+      "customer_profile": "/gp/profile/amzn1.account.AHJBYRMTKXH3FIGEUN3L337V2PCA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsIt works",
+      "date": "Reviewed in the United States on March 25, 2025",
+      "review_snippet": "I replaced a 210S with this and it’s working fine."
+    },
+    {
+      "customer_name": "K",
+      "customer_profile": "/gp/profile/amzn1.account.AF5F2267LRT5BXDKOOO3GB2URHTQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsWorks well, installed few weeks ago, brass door plate  5stars and hoping long durability.",
+      "date": "Reviewed in the United States on July 11, 2023",
+      "review_snippet": "Just instal a few weeks ago so can't rate durability. trusting it last a very long time. Lee products are normally very reliable. The door is to a pantry. Very HAPPY with this switch.  It works well and the measurements were good as it replaced a door switch and the cover plate measured  3.5\" long. I wish all products would list as this one did,  the width, height and length when offering items.  It is extremely important to have measurements when order these things.  Seller was good to show 3.5 inch length. This  Included an electrical  box if one is doing a new install. The width worked out because of the comments form buyers were very good to post and show the door jams etc and write comments.  The old door switch (to a large kitchen pantry)  quit working after 40 years, go figure. LOL,  and was hard wired. This product had enough lead wire and workable to hard wire with wire nuts (not included)  and also to simply wrap a band of electrical tape (not included)  around for second security.  Tape may not be needed with wire nuts but added safety.  The brass screws included, good length, fit the former holes.  All in all, it is a great ending to a search for:  \"where is a door switch to replace this 40+ year old switch.  Great find and quality product! Would use this company again. NO brick and mortar electrical store or hardware store had anything like this.  Thank you LEE ELECTRIC!"
+    },
+    {
+      "customer_name": "Anton allen",
+      "customer_profile": "/gp/profile/amzn1.account.AE2LVTWCH7QLHKO3PATRTEUHIU4Q/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "4.0 out of 5 stars",
+      "review_title": "4.0 out of 5 starsI wish it lasted longer.",
+      "date": "Reviewed in the United States on March 5, 2025",
+      "review_snippet": "These work great but wear out after a few years. Still in my opinion the best looking switch of this type. I wish the plastic switch were available on its own but the closest I can find costs almost as much as the whole kit."
+    },
+    {
+      "customer_name": "Donald A. Doorly",
+      "customer_profile": "/gp/profile/amzn1.account.AESVJMEALZ3CPNF6PIAN2QL4IMUA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsWell made item",
+      "date": "Reviewed in the United States on February 22, 2025",
+      "review_snippet": "Switch worked well"
+    },
+    {
+      "customer_name": "Nbaldeon7",
+      "customer_profile": "/gp/profile/amzn1.account.AHMWB66WSRLXD2NABQ2CUZSAWWGA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsWorks",
+      "date": "Reviewed in the United States on December 3, 2024",
+      "review_snippet": "God replacement part, works as expected"
+    },
+    {
+      "customer_name": "Mister Fixit",
+      "customer_profile": "/gp/profile/amzn1.account.AGN7FFVZPLCHXSM6GQ6VFVUSXYYQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsWorks great, but difficult to install.",
+      "date": "Reviewed in the United States on February 13, 2020",
+      "review_snippet": "This door switch works great, but is a challenge to install. During new construction it would be a lot easier, but in a house with finished walls you have to be very creative in how you will get to the necessary wiring and then route it to this box. The other difficulty is cutting out the wood in the door frame to make room for this unit to be installed. It requires some substantial space so there will be a lot of material to remove. This should only be attempted by someone with both woodworking skills and electrical skills. That being said, once it is installed, it works flawlessly. I have installed 3 of these in my home and have had no problems at all. I was constantly entering closets in my lower level and forgetting to shut off the lights. I don't have to think about it now. When I open the door the light is on and when I leave and close the door I can rest assured that the light is off. There is a slight audible click to let you know that the switch has actuated."
+    },
+    {
+      "customer_name": "Chris Nadovich",
+      "customer_profile": "/gp/profile/amzn1.account.AH4QBVYU2HJSIOI5XDITQ22R2ZCQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsLow force switch better than what I replaced.",
+      "date": "Reviewed in the United States on October 25, 2022",
+      "review_snippet": "Very nice appearance and function. The force needed to activate these is very low, and there's a significant \"breakaway\" after activation so the force to keep them depressed is smaller still. I used these to replace some ancient switches that were so hard to press that the door couldn't hold them shut without a super strong latch. With these, I don't even need a latch, as the small amount of door friction can hold them in.Be sure you measure your existing switch to make sure these are an exact fit. If so, I think youll be very happy with these. I would NOT recommend these for new installations. As others have noted, installing these from scratch in old work is not simple."
+    }
+  ]
+}

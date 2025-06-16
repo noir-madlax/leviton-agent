@@ -1,0 +1,398 @@
+{
+  "product_title": "MOES Dimmer Light Switch, 3 Way & Single Pole Dimmable for LED, CFL, Incandescent, Halogen, 600Watt Max, ON/Off with Dimming Slide for Bedroom Hallway, No Neutral Wire Required",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@modern and sleek design": {
+          "+": [
+            0,
+            22,
+            35,
+            42
+          ]
+        },
+        "B@clean design": {
+          "+": [
+            9,
+            17
+          ]
+        }
+      },
+      "build_quality": {
+        "C@well made and sturdy construction": {
+          "+": [
+            3,
+            8,
+            9
+          ]
+        },
+        "D@not flimsy": {
+          "+": [
+            3
+          ]
+        },
+        "E@good quality material": {
+          "+": [
+            2,
+            4
+          ]
+        }
+      },
+      "slider": {
+        "F@smooth and responsive slider": {
+          "+": [
+            5,
+            8,
+            9,
+            35,
+            38
+          ]
+        },
+        "G@slide bar easy to move": {
+          "+": [
+            37
+          ]
+        },
+        "H@slider is stiff when moving": {
+          "-": [
+            34
+          ]
+        }
+      },
+      "buttons": {
+        "I@big buttons": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "wiring": {
+        "J@load wires are same color (solid red) without proper marking": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "cover_plate": {
+        "K@cover plate tricky to snap on": {
+          "-": [
+            29
+          ]
+        },
+        "L@enclosed cover wouldn't stay on": {
+          "-": [
+            15
+          ]
+        }
+      },
+      "screw_design": {
+        "M@hidden screws": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "size": {
+        "N@optimal depth for wall box space": {
+          "+": [
+            19
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_function": {
+        "a@smooth dimming operation": {
+          "+": {
+            "F": [
+              5,
+              8,
+              9,
+              35,
+              38,
+              48
+            ]
+          }
+        },
+        "b@precise brightness control": {
+          "+": {
+            "F": [
+              9,
+              35,
+              36,
+              38,
+              45
+            ]
+          }
+        },
+        "c@good brightness range": {
+          "+": {
+            "?": [
+              0,
+              25
+            ]
+          }
+        },
+        "d@limited dimming range": {
+          "-": {
+            "?": [
+              28,
+              31
+            ]
+          }
+        },
+        "e@no flickering with LEDs": {
+          "+": {
+            "?": [
+              15,
+              20,
+              23,
+              36,
+              39,
+              41
+            ]
+          }
+        },
+        "f@no dimming functionality (only on/off)": {
+          "-": {
+            "J": [
+              7
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "g@works with LED, CFL, incandescent, and halogen bulbs": {
+          "+": {
+            "?": [
+              9,
+              38
+            ]
+          }
+        },
+        "h@works great with LED bulbs": {
+          "+": {
+            "?": [
+              8,
+              10,
+              17,
+              42
+            ]
+          }
+        },
+        "i@handles high wattage (600W rating)": {
+          "+": {
+            "?": [
+              1,
+              38
+            ]
+          }
+        }
+      },
+      "installation": {
+        "j@easy installation": {
+          "+": {
+            "?": [
+              0,
+              2,
+              5,
+              8,
+              10,
+              12,
+              16,
+              17,
+              23,
+              25,
+              30,
+              33,
+              35,
+              36,
+              38,
+              40,
+              42,
+              44,
+              45
+            ]
+          }
+        },
+        "k@no neutral wire required": {
+          "+": {
+            "?": [
+              5,
+              8,
+              9,
+              38,
+              42
+            ]
+          }
+        },
+        "l@works in 3-way and single pole setups": {
+          "+": {
+            "?": [
+              5,
+              9,
+              38
+            ]
+          }
+        },
+        "m@straightforward wiring": {
+          "+": {
+            "?": [
+              11,
+              36
+            ]
+          }
+        },
+        "n@wiring diagram confusing for DIY": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "durability": {
+        "o@more durable than toggle switch type": {
+          "+": {
+            "C": [
+              41
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "p@works perfectly as expected": {
+          "+": {
+            "?": [
+              10,
+              16,
+              21,
+              28,
+              30,
+              38,
+              40,
+              43
+            ]
+          }
+        },
+        "q@doesn't work on outlet": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "adjustability": {
+        "r@has trimmer to adjust minimum level for LEDs": {
+          "+": {
+            "?": [
+              19,
+              20
+            ]
+          }
+        },
+        "s@fully adjustable": {
+          "+": {
+            "?": [
+              36,
+              41
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom_lighting": {
+        "+": {
+          "a,b": [
+            5,
+            9,
+            25
+          ]
+        }
+      },
+      "hallway_lighting": {
+        "+": {
+          "j,k": [
+            8,
+            9,
+            38
+          ]
+        }
+      },
+      "bathroom_lighting": {
+        "+": {
+          "i": [
+            1
+          ]
+        }
+      },
+      "room_ambiance_control": {
+        "+": {
+          "a,b": [
+            2,
+            9,
+            35,
+            36,
+            38,
+            45
+          ]
+        }
+      },
+      "romance_lighting": {
+        "+": {
+          "a": [
+            22
+          ]
+        }
+      },
+      "home_office": {
+        "+": {
+          "p": [
+            28
+          ]
+        }
+      },
+      "living_room_can_lighting": {
+        "+": {
+          "j,e": [
+            46
+          ]
+        }
+      },
+      "accent_lights": {
+        "+": {
+          "p": [
+            43
+          ]
+        }
+      },
+      "recessed_LED_lights": {
+        "+": {
+          "a,e": [
+            44
+          ]
+        }
+      },
+      "renovation_projects": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "older_homes_without_neutral": {
+        "+": {
+          "k": [
+            9,
+            38
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:01.351600"
+}

@@ -1,0 +1,341 @@
+{
+  "product_title": "Simple Dimmer by Deako, Slide Switch, 3-Way/4-Way/Single Pole, Neutral Wire Required, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Clean white finish and simple slide switch": {
+          "+": [
+            16
+          ]
+        },
+        "B@Sleek and modern appearance": {
+          "+": [
+            16,
+            17
+          ]
+        },
+        "C@Only comes in white color": {
+          "-": [
+            16
+          ]
+        }
+      },
+      "Sound": {
+        "D@Makes buzzing noise when on": {
+          "-": [
+            8,
+            25
+          ]
+        },
+        "E@Switches are very loud": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "Price": {
+        "F@More expensive than standard switches": {
+          "-": [
+            0,
+            7,
+            11,
+            30,
+            33,
+            36,
+            40,
+            42
+          ]
+        },
+        "G@Good price": {
+          "+": [
+            2,
+            37
+          ]
+        }
+      },
+      "Physical Components": {
+        "H@Adjustment wheel at the bottom for lowest dim level": {
+          "+": [
+            14
+          ]
+        },
+        "I@Requires neutral wire": {
+          "-": [
+            16
+          ]
+        }
+      },
+      "Availability": {
+        "J@Not available at local hardware stores": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "Compatibility": {
+        "K@Not compatible with standard switches": {
+          "-": [
+            0
+          ]
+        },
+        "L@Only works with Deako system": {
+          "-": [
+            22,
+            24
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@Plug and play installation": {
+          "+": {
+            "?": [
+              0,
+              2
+            ]
+          }
+        },
+        "b@Easy to install in minutes": {
+          "+": {
+            "?": [
+              1,
+              6,
+              10,
+              12,
+              13,
+              19,
+              26,
+              27,
+              29,
+              34,
+              38,
+              41,
+              43,
+              44
+            ]
+          }
+        },
+        "c@Takes less than 30 seconds to 5 minutes to replace": {
+          "+": {
+            "?": [
+              0,
+              4,
+              21,
+              30,
+              36
+            ]
+          }
+        },
+        "d@No tools required": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@No wiring needed": {
+          "+": {
+            "?": [
+              0,
+              30
+            ]
+          }
+        },
+        "f@Unable to pull some switches out of housing": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "Dimming Function": {
+        "g@Smooth dimming action without jumps or flickers": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "h@Works well for dimming": {
+          "+": {
+            "?": [
+              13,
+              21,
+              23,
+              31,
+              34,
+              37,
+              46
+            ]
+          }
+        },
+        "i@Did not dim all the way down initially": {
+          "-": {
+            "H": [
+              14
+            ]
+          }
+        },
+        "j@Minimal dimming effect with multiple lights": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "k@Provides calming ambience effect": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "l@Simply reliable": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "m@Worked perfectly first time": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "n@Lights blink on and off": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "o@Stopped working properly after couple years": {
+          "-": {
+            "?": [
+              18,
+              45
+            ]
+          }
+        },
+        "p@Must press hard to turn on": {
+          "-": {
+            "?": [
+              18,
+              20,
+              45
+            ]
+          }
+        }
+      },
+      "Smart Features": {
+        "q@No smart connectivity": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "r@Wi-Fi smart switches get hot": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "Versatility": {
+        "s@Works with 3-way, 4-way, or single-pole setup": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "t@Compatible with dimmable LED lights": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home Lighting Control": {
+        "+": {
+          "a,b,g,h": [
+            0,
+            12,
+            15,
+            16,
+            17,
+            21,
+            27,
+            34
+          ]
+        }
+      },
+      "New Construction Homes": {
+        "+": {
+          "a,b": [
+            0,
+            4,
+            23,
+            39
+          ]
+        }
+      },
+      "Replacing Standard Switches": {
+        "+": {
+          "a,b,c": [
+            0,
+            4,
+            12,
+            27,
+            33
+          ]
+        }
+      },
+      "Setting Ambiance": {
+        "+": {
+          "g,h,k": [
+            9,
+            16,
+            17,
+            27
+          ]
+        }
+      },
+      "Kitchen Lighting with Multiple Lights": {
+        "-": {
+          "j": [
+            39
+          ]
+        }
+      },
+      "Closet Lighting": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "Smart Home Integration": {
+        "+": {
+          "?": [
+            40
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:33.455506"
+}

@@ -1,0 +1,2642 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:10:25.879378",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B002DN8CQ6",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B002DN8CQ6",
+    "title": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+    "brand": "GE",
+    "model_number": NaN,
+    "price_usd": 5.0,
+    "rating": 4.7,
+    "reviews_count": 1235.0,
+    "category": "Light Switches",
+    "product_segment": "Three Way Multi-Location Control Switches",
+    "product_url": "https://www.amazon.com/dp/B002DN8CQ6"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1QO3VYMJVXC3L",
+        "text": "great price thank you",
+        "date": "Reviewed in the United States on May 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "works every time for me",
+        "userName": "jim",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R7WO0D8PLZCAS",
+        "text": "Switch was defective. The 2 silver screws (Travelers) are shorted together in one position. This condition should never be possible in a 3 way switch. Tested out of circuit with a multimeter.",
+        "date": "Reviewed in the United States on March 26, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Shorted travelers.",
+        "userName": "Stephen M.",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3A64O59V6QYO0",
+        "text": "This is a well made 3 way switch. It does what it was designed to do.",
+        "date": "Reviewed in the United States on March 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well made & should last",
+        "userName": "Charley",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2PH7LFZ6N2H19",
+        "text": "Works very well. recommend buying this if your light switch stops working.",
+        "date": "Reviewed in the United States on January 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome product",
+        "userName": "WendyWanda",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2SC3HZY0FUHJP",
+        "text": "I actually only needed a 2 way switch but this one worked just fine. I had smart bulbs attached to a switch which had a dimmer. This caused them to flicker. Once the light switch was changed to one without a dimmer, the flickering went away!",
+        "date": "Reviewed in the United States on January 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good fit and worked as expected",
+        "userName": "Chris Carlson",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f0ca0cc3-4ac0-4de5-95d7-95863079bb77/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3QCPKG44RAJ4A",
+        "text": "Needed a new light switch for my laundry room but didn’t have time to run to Lowe’s so I ordered this one on Amazon and it was perfect! I have replaced a lot of light switches in our home and this one was just as high of a quality as ones that I’ve purchased from hardware stores. Would definitely purchase again!",
+        "date": "Reviewed in the United States on January 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked perfectly!",
+        "userName": "J. Kirr",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RFGF803VHMST7",
+        "text": "Love these. Very good springy pop in either the up or down position. I only used one of these and went with a different brand to do the rest of my house and wish I didn’t, the up on those is decent but the down feels like a sponge.",
+        "date": "Reviewed in the United States on June 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very tactile feel",
+        "userName": "Dave",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R36X77WXI6UJ0K",
+        "text": "The ones in my house i didnt know were so cheap. These are well made and feel well made.",
+        "date": "Reviewed in the United States on March 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality",
+        "userName": "Brandyt",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1L0DJ6HG67HXD",
+        "text": "OVER ALL IS WELL.",
+        "date": "Reviewed in the United States on March 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I HAVE NOT USED SWITCHS LONG EOUGH FOR DURABILITY, BUT SO FOT THEY ARE WORKING FINE.",
+        "userName": "Everett",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2VLD37H9CRA1I",
+        "text": "Works great easy to install. Like white better than cream.",
+        "date": "Reviewed in the United States on February 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Rodney rees",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2AOAQH3J4K03P",
+        "text": "perfect replacement for my failed 3-way switch. great price, works perfect.",
+        "date": "Reviewed in the United States on February 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "works great",
+        "userName": "Jonny Q",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3O18C3NLMEAMU",
+        "text": "3-way required and works as advertised.",
+        "date": "Reviewed in the United States on January 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer replaced",
+        "userName": "Grady",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1L4RFONGKFZ8Z",
+        "text": "Quality switches. Packaged well",
+        "date": "Reviewed in the United States on January 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality switches.",
+        "userName": "CMos",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1NP3LKBLGPD6O",
+        "text": "very nice",
+        "date": "Reviewed in the United States on December 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "panamerica",
+        "userName": "joseph a xavier",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2UN1KZ9YM7WVT",
+        "text": "Perfect two way switch",
+        "date": "Reviewed in the United States on November 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect two way switch",
+        "userName": "Bill Ummel",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3GJUTKDPVXEZ6",
+        "text": "I use these on my 1985 Hatteras yacht. They work perfect and what a difference they made between the new switches and the old clunky sound making switches! I am so glad I bought them on Amazon and didn’t bother going to a local hardware store! They were a great deal and have been working like a champion!",
+        "date": "Reviewed in the United States on September 21, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Replaced 38 year old switches!",
+        "userName": "1998 Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61O9x28LI8L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1D1BXCWZXEC6V",
+        "text": "Installed it right away as I needed it quick and works perfecting as expected.",
+        "date": "Reviewed in the United States on July 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfect",
+        "userName": "CuteBots",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2B07VIZL7Y6VH",
+        "text": "As expected",
+        "date": "Reviewed in the United States on July 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "As described",
+        "userName": "mommaturtle",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2GMETI5RKUL0N",
+        "text": "Good quality. Plugs stay in outlet. No sloppy fit.",
+        "date": "Reviewed in the United States on May 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Quality Outlet",
+        "userName": "jrh_atl",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R275BDFI870W82",
+        "text": "As described",
+        "date": "Reviewed in the United States on May 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality",
+        "userName": "J.",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RHHONL2XJ7FLW",
+        "text": "Installation ease.",
+        "date": "Reviewed in the United States on March 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Top quality.",
+        "userName": "melvin curry",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3UVWVTIDT11NU",
+        "text": "product was as described, no complaints, and fast shipping",
+        "date": "Reviewed in the United States on January 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "good product",
+        "userName": "Jack",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1Z10HIX94X97C",
+        "text": "It is just a 3-way light switch, needed to replace an older one - works as expected.",
+        "date": "Reviewed in the United States on January 1, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Replaced malfunctioning switch",
+        "userName": "T",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R38PWH203RNDCA",
+        "text": "Great deal and works perfectly.",
+        "date": "Reviewed in the United States on December 4, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very good deal",
+        "userName": "woopya",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R4AE7DJDKU2YJ",
+        "text": "These switches have terrible connections. Hard to install to spec. Recommend that you do not buy!",
+        "date": "Reviewed in the United States on November 8, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Cheaply built",
+        "userName": "Lawrence L. Reid",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R381PRWGI6081Y",
+        "text": "I am pleased with this purchase.",
+        "date": "Reviewed in the United States on September 26, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switch",
+        "userName": "tncunn",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2EO3MT3NYFP8K",
+        "text": "Installed one of these switch’s to replace an old bone colored switch in my living room. If you have a basic understanding of electrical wiring it shouldn’t take hardly any time at all to install this switch.",
+        "date": "Reviewed in the United States on August 11, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Gets the job done for cheap!",
+        "userName": "Max",
+        "numberOfHelpful": 3,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RTEVTNIILUYUJ",
+        "text": "The pressure lock feature made the connection of wiring a breeze, soft contact. This is a 3-way switch, not 2-way .",
+        "date": "Reviewed in the United States on August 1, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Have pressure lock feature for convenience",
+        "userName": "Dziem Vuong",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3HZGBDCRKU9HZ",
+        "text": "It was a simple ten-minute job to replace the old switch and regain the convenience of the three-way circuit. Instructions were clear and complete.",
+        "date": "Reviewed in the United States on May 24, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple replacement",
+        "userName": "K Behlen",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R30FU41APFH69T",
+        "text": "Perfect fit",
+        "date": "Reviewed in the United States on May 15, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect fit",
+        "userName": "Arthur Polgano",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RRR6NUOLY2L1T",
+        "text": "Gr8",
+        "date": "Reviewed in the United States on May 12, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Gr8",
+        "userName": "Josh Burke",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": {
+          "language": "de",
+          "country": "DE",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RM0B7X71ZDVAS",
+        "text": "Bought two of these to change out a couple old outlets that were no longer working. Priced at almost half of what the local stores wanted. They were actually in stock, and the right color. Installed with no issues and work right. It’s been a week and the house hasn’t burned down yet, so that’s a win in my book. 😃",
+        "date": "Reviewed in the United States on May 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality, great price.",
+        "userName": "Hodgie",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R6HNX7ORYDOB3",
+        "text": "Worked fine",
+        "date": "Reviewed in the United States on April 27, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "3 way switches",
+        "userName": "Howard Parker",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R35S43CJI4COOB",
+        "text": "Now problem to replace if you use common sense. Need to shut off power to switch before starting.",
+        "date": "Reviewed in the United States on April 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Caution with electricity.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2U0ZCAVL2CZ3Y",
+        "text": "Durable material",
+        "date": "Reviewed in the United States on April 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality product",
+        "userName": "Thomas Sadler",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3DMBE60C61KXV",
+        "text": "This is a single pole switch not 3 way. Has the wrong barcode on it.",
+        "date": "Reviewed in the United States on April 7, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "This is a single pole switch not 3 way.",
+        "userName": "D. Navarre",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2LNO80STT5JUM",
+        "text": "Pay close attention to your existing wiring before swap.",
+        "date": "Reviewed in the United States on March 14, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Careful: Provided wiring instructions not entirely accurate",
+        "userName": "Mia",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1WQDGJDTPEFGB",
+        "text": "I was getting a three way switch from Amazon and needed this switch to use with it. Both switches are working well.",
+        "date": "Reviewed in the United States on January 14, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "I used this with a three way switch",
+        "userName": "Old Man",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3ESMOGLW73MC3",
+        "text": "Exactly what it says it is .",
+        "date": "Reviewed in the United States on August 22, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Greg",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2E3K1OMFTBG5X",
+        "text": "Easy to install",
+        "date": "Reviewed in the United States on August 9, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "As advertised",
+        "userName": "steven a soper jr",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1UD98TYIJ9744",
+        "text": "delivery was on time and easy to install and works well.",
+        "date": "Reviewed in the United States on June 5, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "V. L. Caruso",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1BWY8H91JYY0B",
+        "text": "Works well.",
+        "date": "Reviewed in the United States on May 22, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Outlet",
+        "userName": "danielle",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RS20VK0W8P31G",
+        "text": "Just what I was looking for.",
+        "date": "Reviewed in the United States on March 11, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked exactly as described. Easy to install.",
+        "userName": "Alvin",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2UFFYNGJK0NV6",
+        "text": "Both of the switches I purchased arrived with significant marring of the switch itself.",
+        "date": "Reviewed in the United States on February 26, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Purchased 2, both arrived with damage",
+        "userName": "R",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/817rUuUpvNL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1UADTOL7XDU4B",
+        "text": "Would buy again.",
+        "date": "Reviewed in the United States on December 3, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works",
+        "userName": "KarenKB",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RBNPLQN60T4D3",
+        "text": "Did not work",
+        "date": "Reviewed in the United States on October 5, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn’t work",
+        "userName": "LNC",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2B1FBV6124S0R",
+        "text": "I put it in place of the broken switch. It works well.",
+        "date": "Reviewed in the United States on August 17, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "It suits well",
+        "userName": "ELENA K",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R31FJDF9XY0XFP",
+        "text": "Installed fast, turns on. No need to for a switch twice the price. Either the light'll go on or it won't.",
+        "date": "Reviewed in the United States on July 14, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does the job.",
+        "userName": "Ping Pong Player",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1W1QDUFJZ3Q1M",
+        "text": "Looks great, easy install, fast shipping. Thank you",
+        "date": "Reviewed in the United States on July 8, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I needed",
+        "userName": "Justen Stock",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DN8CQ6",
+        "productTitle": "GE 3-Way Grounding Toggle Switch, In Wall On/Off Fan & Light Switch Replacement, 15 Amp, Great for Home, Office & Kitchen, UL Listed, White, 54172",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 118,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1235,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 83
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2XL84CWLV16V4",
+        "text": "Good quality",
+        "date": "Reviewed in the United States on June 11, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good wa quality",
+        "userName": "Jefferson Ramon",
+        "numberOfHelpful": 0,
+        "variationId": "B002DN8CQ6",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Standard"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

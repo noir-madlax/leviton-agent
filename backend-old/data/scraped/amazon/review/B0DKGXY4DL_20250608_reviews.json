@@ -1,0 +1,2445 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:50:01.502178",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0DKGXY4DL",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0DKGXY4DL",
+    "title": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+    "brand": "TP-Link",
+    "model_number": NaN,
+    "price_usd": 43.99,
+    "rating": 4.6,
+    "reviews_count": 111.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0DKGXY4DL"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RTNM62O1JU8II",
+        "text": "Doesn’t work in a 4-way circuit with three switches.",
+        "date": "Reviewed in the United States on June 6, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Doesn’t work in. 4-way circuit",
+        "userName": "Chuck Cobb",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R24AA85EUAFYZL",
+        "text": "Installation was quite straightforward - as long as you can identify the load, line, neutral, and ground wires, you’re good to go. Take a moment to study your existing 3-way switch setup, especially the common and traveler wires, since this switch follows a similar wiring pattern. I’m not an electrician by any means; my only prior experience is replacing a few standard switches with smart ones. Despite my initial hesitation - especially after seeing it marked as a “Frequently returned item”- I went ahead, and honestly, I’m glad I did. It turned out to be easier than expected. As for the smart connection, thanks to Matter support, I didn’t have to rely solely on the Tapo app. I first added the switch using Matter via Apple Home, which automatically synced with the Tapo app, and then integrated it with Alexa through Tapo. Now I can control the switch from Apple Home, Tapo, and Alexa - a really convenient setup.",
+        "date": "Reviewed in the United States on May 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Surprisingly Easy to Install and Works Seamlessly Across Platforms",
+        "userName": "Random Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R25W7BSK7YOLPJ",
+        "text": "Like them for the use of apple homekit functions.",
+        "date": "Reviewed in the United States on May 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love the homekit integration.",
+        "userName": "james biffle",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61f6clqsCHL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2F0G91UG0M6HT",
+        "text": "Great switches for the price if you are going the WiFi route. Very easy to install with provided directions. App feels intuitive and compatible with SmartThings. Matter functionality is a nice touch for future proofing.",
+        "date": "Reviewed in the United States on May 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best in Space Switches for the Price",
+        "userName": "Rosenberger",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RH9BYYO3VFDBZ",
+        "text": "I’ve had positive experiences with Tapo/TPLink products in the past, so I was really looking forward to trying the TP-Link Tapo Smart 3 Way Dimmer Switch KIT. Although the item was unfortunately lost in the mail (Amazon couldn’t cancel my order due to the Vin program), I’m still confident this product would be an excellent addition to my smart home setup. The features like full dimming control, energy monitoring, and Matter compatibility with Alexa, Siri, Google Home, and SmartThings align perfectly with the high-quality performance I’ve come to expect from TPLink products. I love the idea of controlling my lights remotely, setting schedules, and tracking energy usage—all things that matter to me as someone who values both tech and eco-conscious living. Looking forward to getting a replacement to try it out!",
+        "date": "Reviewed in the United States on May 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product, Great Brand – Can't Wait to Try it Once I Get it!",
+        "userName": "Kandarp S",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "REZGVWZ1O7I9V",
+        "text": "Just put these in our house to replace our old smart switches that were no longer working. Install was fast after the first one. They connect easily to HomeKit and the Wi-Fi. Good value for the money. We love the dimmer function and that when you turn them off you can change it to dim slowly instead of straight off and on. Good replacement to our old brand.",
+        "date": "Reviewed in the United States on May 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great smart switch for homekit",
+        "userName": "GinaM",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RU5INM3HODKDV",
+        "text": "It takes some time to figure out how to wire it but works well after installing.",
+        "date": "Reviewed in the United States on April 29, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "good",
+        "userName": "Justin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R27OL9YEGPXB31",
+        "text": "Works fabulous 👌 looks beautiful. Easy to install, great value, durable with my six children Banging on them",
+        "date": "Reviewed in the United States on April 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "Lauren",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2RN2WXCW2TG8L",
+        "text": "instructions make this dead simple to install. love tapo switches",
+        "date": "Reviewed in the United States on April 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "easy to install",
+        "userName": "rgonzalez94",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RVNQJQ1GU7VLL",
+        "text": "Great smart switch and easy to set-up. Just wish they explained it won't work in 4 way scenarios.",
+        "date": "Reviewed in the United States on April 24, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great smart switch and easy to set-up",
+        "userName": "golfaddict79",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2DTCMM7OGYNHR",
+        "text": "Best switches I have used. Easy to install and work with google home and other apps. Love to ability to set the dimming and brightness. As well as the lighted circle on the push ens of the switch.",
+        "date": "Reviewed in the United States on April 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great wifi connected switches",
+        "userName": "Aaron K",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b42fc837-3bcf-4bc2-9e65-005bca7d33ee/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2BDBKTRVQ2N0V",
+        "text": "No problems found so far, but I notice that the “satellite” switch of the switch pair is lacking the little dimmer indicator lights. I don’t know why those would be missing unless the satellite can’t get that info from the primary. Also, if there’s going to be a primary and a satellite, I don’t get why they don’t consider multi-way configurations with more than one “satellite”.",
+        "date": "Reviewed in the United States on April 20, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Seems to be working properly so far (HomeKit HomePod mini)",
+        "userName": "Omega Man",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1XZ4JHKMDLCYQ",
+        "text": "I replaced an older set of smart dimmers with this. The other ones were somewhat unreliable at times. Installation was pretty easy if you've done this sort of thing before. It was a little hard to get all the wires in the box since I had a large GFCI and another smart switch in that box, but it all fit. Setup took a few times to work, but once it was setup, I've not had any issues. It's great to be able to dim from two locations with separate buttons on the switch instead of holding it down like many other switches require. Overall this is a good product at a reasonable price.",
+        "date": "Reviewed in the United States on April 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value for a quality product",
+        "userName": "N. Franke",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R27A48UV591V9A",
+        "text": "Easy install and works well with both Matter and direct with Alexa via the TPlink app.",
+        "date": "Reviewed in the United States on April 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy and compatible",
+        "userName": "crussty",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R475DUGOJCUC5",
+        "text": "This is a good product, I have several Tapo products in my house but this time, I received a used one with two different switch in it, I return it and bought another one",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Be careful about used products as a new",
+        "userName": "Hossein Fakhraei",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/710yeoPlbCL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R3QFDCDIMEU9LV",
+        "text": "Easy to install and works great",
+        "date": "Reviewed in the United States on April 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Smart Swiches",
+        "userName": "Scott Wheeler",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R23P9G2NFKJUDE",
+        "text": "Works great. Now have lights running on routines, or voice command or from an app.",
+        "date": "Reviewed in the United States on April 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "S. Neal",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2UGJPHF7HDA2",
+        "text": "Easy to install & VERY easy setup! Happy customer!",
+        "date": "Reviewed in the United States on April 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install & VERY easy setup! Happy customer!",
+        "userName": "Laurie",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R36D9CL18GTYEO",
+        "text": "I have at least 10 of these. They work great. I use schedules and Alexa voice commands.",
+        "date": "Reviewed in the United States on April 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Tapo is a reliable brand. I use multiple products from them.",
+        "userName": "Shipping Manager",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RVOXJP74RXHV5",
+        "text": "Easy installation and the supplied tags for the wiring made wiring up the three way switches easier. Excellent app accompanies this excellent smart switch. Alexa integration allows for voice control. App has additional features for energy monitoring, devices routines and others!",
+        "date": "Reviewed in the United States on April 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great smart switch with great app!",
+        "userName": "Rob",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2HAUR5FDT878Z",
+        "text": "TP Link makes a nice switch. It is UL approved which is nice. Note that it is a single paddle design, so you press the bottom to toggle the light. Some people like this, some people find it confusing. This is a Matter device which means you need a Matter compatible hub such as a Google Home or a newer Amazon Echo (or any other Matter compatible hub). After powering on the switch, a pop-up message appeared on my phone and walked me through adding it to my Google Home hub. After that I could control it from the Google Home App or by voice. It also added to my HomeSeer system so I could then control it from there or add automations. Note that this kit is designed to be used in a 3-way circuit. If you wanted to just use it at one location, it would not work. I tried this and the dimmer blinked red, which indicated that it was not connected properly. It needs to be connected to the included accessory dimmer that they include. So, keep this in mind when you install it. There are separate buttons for bright and dim.",
+        "date": "Reviewed in the United States on March 31, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "RJH",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61BzaotRRHL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61EYnUXSqjL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1Q2ZN9GN3YZXD",
+        "text": "I ordered this kit because it is matter compatible. I didn't notice at first that it is a 3 way dimmer. Shame on me. I only have two uses for it. One is in my test rig that I use for testing luminaires and stuff. You know - how bright is it, what is its dimming range, does it flicker, etc. The other is to test out home assistant integration. No joy there yet, but I haven't tried too hard either. By home assistant integration I mean using the switch with a local controller and no phoning home to tp-link. I want my smart home to work when the internet connection is down.",
+        "date": "Reviewed in the United States on March 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works fine in my test rig.",
+        "userName": "Tyler Forge",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RYZH7E4B3EFBG",
+        "text": "I run other TAPO smart gear. These installed just as easy as any other 3 way plug. You must have a neutral to install this. Connected to my app without issue. The switch feels like it will last many flips.",
+        "date": "Reviewed in the United States on March 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "As easy as wiring a new switch",
+        "userName": "Kevin",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R3FIHC9T2EQWAD",
+        "text": "Only thing I wish was better about these is that they would use the Kasa platform... because everything else I have from TP Link is on the Kasa platform. These are slightly better though, with the introduction of matter, they communicate amongst each other to use less power and to maintain better connections throughout the house. Using them is easy. Installing them was easy, and I have no complaints on how they operate. You may have to make some adjustments in software for the dimming function though, but I am using this for a hallway light and I just need it on or off.",
+        "date": "Reviewed in the United States on March 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very good, wish it was functional on the Kasa platform, but Tapo is easy to use.",
+        "userName": "BurazeKun",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R243GTIH66XTX",
+        "text": "This product is easy install and works well. So far so good. I have no problem with it. And it’s easy to use and works with Alexa so smooth",
+        "date": "Reviewed in the United States on March 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "So far so good",
+        "userName": "Lyca",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1QMLWA7F6QEF7",
+        "text": "Pretty easy to set up and configure. Syncing up with the app is pretty straightforward. The instructions are pretty clear, although the font is a little small. And was able to integrate into home assistant pretty easily as well",
+        "date": "Reviewed in the United States on March 11, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice and easy to setup",
+        "userName": "Koritonics",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1VKTENA53BO8U",
+        "text": "great instructions and easy to connect. You just gotta have a neutral wire connected to it. I think the price is decent, and easy to connect to the app as well. Very good deal",
+        "date": "Reviewed in the United States on March 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to connect to the app",
+        "userName": "Kero",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71subkWW0IL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R36T4M8Q8JIV5N",
+        "text": "Easy to set up and connect to WiFi and hub (Apple TV). Easy to update firmware and they’ve been reliably connected to HomeKit even after I had to cut power multiple times to resolve other electrical issues. Works with fluorescent and LED bulbs and has good low range ability without flickering.",
+        "date": "Reviewed in the United States on March 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to set up and they stay connected to Apples HomeKit",
+        "userName": "Brian Cummings",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2VC74O839THOJ",
+        "text": "Works great with great instructions and solid app. Build quality is a on par with other comparable switches in the Market for Home Assistant and HomeKit. Integrated well with my Smart Home. I do miss the tactile feel of normal switches.",
+        "date": "Reviewed in the United States on March 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice addition in my Smart Home",
+        "userName": "Chris DG",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R20S211W65Y225",
+        "text": "Excellent documentation and documentation on installing. Works entirely as expected. Great value for the money you spend on it.",
+        "date": "Reviewed in the United States on March 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value",
+        "userName": "Don Krajewski",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2IICNJR88K4ZF",
+        "text": "S515D smart dimmer switches are great! I have not experienced any of the connectivity issues that drove me to return all S515 (non-dimmer) 3-way switches.",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Difference between S515D & S515 switch stability.",
+        "userName": "RunningMom",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RCR5PP790KKHR",
+        "text": "Having been with TPlink since the Kasa line of switches, I have to give them props for supporting those in the tapo app to keep a single ecosystem as they move to Tapo. They are the only brand I've seen do that, which speaks volumes. That said, coming from kasa, you used to be able to just buy 3 way kits and mindlessly use them as single switches, effectively getting 2 independent switches in a 3 way kit if you only had a need for single pole. Seems those days are gone, as the directions do talk about being able to wire this for single pole, but I could NOT get it to work. I ended up buying another tapo single pole kit which worked great, and just to make sure these weren't defective, actually installed it on a 3 way with traveller wires, where it worked out just fine. Again, INCREDIBLE support for product lifecycle from these guys. Leviton, Legrand, and Belkin could learn a LOT from TPLink. I'm super loyal to them for not forcing their earliest customers like me to live in two different ecosystems.",
+        "date": "Reviewed in the United States on February 24, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Excellent as long as you need a 3 way switch.",
+        "userName": "Glass",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R3T7GZ87VR74LN",
+        "text": "This install was a lot easier than I thought it would be! After watching some videos and following the instructions, I was able to quickly get it installed. Unlike other dimmer switches, it seems these need to be installed as a pair instead of individually. The switches feature a lot of upgraded features, such as voice command and an app that has a lot of good features. Overall, I am really starting to like the TP-Link brand! I have used their security cameras, Wi-Fi equipment, and now light switches. They are of great quality, and I expect them to last for years to come!",
+        "date": "Reviewed in the United States on February 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smooth install, tons of features!",
+        "userName": "Honest Reviews",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1RQRW4UE0CP6N",
+        "text": "I had to install the secondary switch for the \"main\" 3-way switch to work. Watched a video on YT where the author claimed that only the main one was a must, but when I tried that the TAPO app said that the connection were wrong. That was not a problem for me and it's a better way to do things anyway.",
+        "date": "Reviewed in the United States on February 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "PK",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R28U3LV62RQIUF",
+        "text": "We have these all throughout our house!",
+        "date": "Reviewed in the United States on February 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great to use with apple home",
+        "userName": "Kim Flannery",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61xSbaiC7UL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R365ARK0AZEMZ2",
+        "text": "Works as advertised. I use this and the other dimmer switches by TAPO with my Home assistant platform. Although I could not successfully register them with the matter instance I did end up using the TAPO app and then my TPLINK instance found them. The single dimmers are about a third of the price of this 3 way.",
+        "date": "Reviewed in the United States on February 20, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Simple install and integration",
+        "userName": "Kevin S.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R285DLXALVTVG5",
+        "text": "the wiring could be complicated, the guide came with instruction and as long as you follow you should have no problem with the wiring. The response time is instant. The dimmer level can be adjusted thru tplink app. Overall it is a great product",
+        "date": "Reviewed in the United States on February 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "works with existing 3 way light switch",
+        "userName": "Logan J",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1FIE6DJYAFB1L",
+        "text": "These make for nice lights wishes, and my first dive into the Tapo series from TP-Link. I have used plenty of Kasa series products and have come to like them due to the reliability versus some of these no name brands that tend to fall off the network over time forcing you to have to reset power to them. When it comes to this model, you do have to take caution to make sure that the right switch is installed at the right place since these are master versus slave scenario versus install it anywhere like some of the options out there. That was really my only complaint, though. If you can call it a complaint. As long as you know what you're doing when you're installing them, you'll be fine. Okay, I lied. Now that I think about it, I also don't like that I can't add these to home assistant without some difficult yaml additions vs a simple integration. However, I can't flaw these for that directly as it is still a new series and the company probably just hasn't rolled out a stable API yet that would allow for such an integration. Unless they don't plan to do that, then this is indeed a complaint and would lower it by another star. I find it to be quite important to allow for integration with larger hub environments such as home assistant. Without that, products are doomed as everything is starting to push toward that thanks to things like Matter. But, oh wait, these are Matter compatible! Well that's nice, however, it's still limits what you can control or keep track of if there isn't a direct API relationship. Like energy monitoring, which for the Kasa series, requires the API integration in home assistant since you can't monitor energy via just a matter relation to the hub.",
+        "date": "Reviewed in the United States on February 17, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "I like these",
+        "userName": "Poc Network // Tech",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R398MCDCKEO33R",
+        "text": "These worked fine, but note that if your wall box is tight they can be a challenge to fit since they are quite large. I had to replace my boxes in order to fit them in. Luckily this was a new install so it wasn’t a big deal, but if the boxes were drywalled in or anything then I would have had to return them. Setup was easy just make sure to pay attention to the instructions, if they are wired incorrectly you will fry them.",
+        "date": "Reviewed in the United States on February 12, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Work fine but very large",
+        "userName": "Evan S.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R17CNNW41BU4G0",
+        "text": "We have 2 places where we would like to control our living room lights and I wanted to get all light switches to match. This 3-Way kit matches the rest of the TP-Link switches we have. Installation was straight forward and the manual walks you through different scenarios and proper way to tie in your wires (as long as you know which is which coming from the wall). We set these up pretty quickly and love that we can control these via Matter. Energy monitoring is a whole other ball-game that I hadn't used before but now I can see how each light contributes to our bill. Definitely recommend!",
+        "date": "Reviewed in the United States on February 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice 3 Way dimmers",
+        "userName": "S",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2C2T299DWEG2W",
+        "text": "The switches can't be used independently, unlike the Kasa model. Additionally, it can only be connected to the live wire, not the load, which differs from the Kasa version. Overall, installing a 3-way switch is more expensive because both switches need to be used. The Kasa switch can be installed on either the hot wire or the load, whereas this one requires connections to both the hot wire and the load.",
+        "date": "Reviewed in the United States on February 3, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Go For the kasa Version.",
+        "userName": "Black Butterfly",
+        "numberOfHelpful": 8,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R3TV1P217XJETX",
+        "text": "Finally, a matter compatible 3-way dimmer! Installing this was relatively easy. My situation had line and load in the same box, which is covered in the instructions. One thing to note is if you have this setup, the travelers must be attached to the same terminals on both switches (top to top, bottom to bottom). I initially had them switched and the dimmer was blinking at me indicating a wiring issues. This requirement isn't detailed very well in the instructions. Matter controls are limited to on/off/dimmer. Using the Tapo app you can setup things like if the led is on at nights, on/off transitions, and other items. Once set in the Tapo app, these will be reflected in the matter operation. Getting everything setup via Tapo and Matter were very easy.",
+        "date": "Reviewed in the United States on February 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great once wired up correctly.",
+        "userName": "Jennifer L Queen",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RDV3NPCFJFFWF",
+        "text": "Nicely packed, and they come complete with wall plates; unusual for switches and dimmers. Extensive instruction booklet is included, detailing all the possible hookup scenarios when retrofitting (there are several). I really like the fact that they will work not just with the recommended app, but also with the more common home control apps that many are already using. My only complaint is that they are not truly independent devices; they must be used to control the same circuit. It isn't really possible to use them to control two separate circuits, as could be done with two 'off the shelf' 3way dimmers.",
+        "date": "Reviewed in the United States on February 2, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Complete and good looking; one minor limitation",
+        "userName": "Ann",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R3M1U7ADEFARNZ",
+        "text": "I have a large number of Kasa switches and plugs in my home, controlled primarily by Home Assistant. When I got the opportunity to pick this up I decided to see what the difference is with Tapo versus Kasa. First off - though I believe this is because it's a dimming switch, not Tapo versus Kasa - this switch must be installed as a pair. My existing 3-way Kasa non-dimming switches only need to replace one end of the run with a smart switch, and even when you buy those as a kit, the two switches are identical. This is not the case with this dimming Tapo switch - there is a main switch that needs to go where your always-on live wire is, and a satellite switch that replaces the other end. Typically the load will be at the far end of the circuit but that's not always the case and they do include instructions on how to wire things up if your circuit is unusual. In my case, I have a typical scenario with line in one box, where the main switch gets installed, and load in the other box, where the satellite switch gets installed. The satellite switch does not require (or even have) a neutral connection, so you can at least save yourself the work of digging the neutral out of the back of that box. Since this is my first Tapo device, I had to download the Tapo app. TP-Link does allow the Tapo app to control both Tapo and Kasa devices natively, which is a nice perk for mixed-device homes. Here's where the main upgrade from Kasa is - the Tapo switch does its initial configuration over Bluetooth, instead of a temporary wireless network. While the temporary wifi option does work, it's always a pain to deal with since modern phones try to reject wifi networks without internet access. Configuration over Bluetooth eliminates that conflict. The Bluetooth signal is quite strong, as well - I was able to set up the app from my desk a couple of rooms away from the main switch. Adding the switch to the app was completely smooth, and the app guides you through all the steps, including calibrating the dimmer. In my case, once that was done, I also had to add it to my Home Assistant setup, which was equally simple. There's where the other nice perk over Kasa shows up - the Tapo devices do power monitoring, which most Kasa devices do not. I will fully admit I was taking a bit of a gamble on this being a dimmer, since the previous owner of my house installed the can lights and I had no idea beforehand if they supported a dimmer. To my pleasant surprise, they work perfectly. Overall, zero complaints. I've been very happy with TP-Link's smart home products so far and I see no reason why this would change with the Tapo line as well.",
+        "date": "Reviewed in the United States on February 1, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "A lot of upgrades compared to Kasa switches",
+        "userName": "ayocee",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RGIJPJO3NIFKG",
+        "text": "This is my new favorite home automation switches...I'm using these Tapo's and some TP Link Kasa switches with my home automation system. For those that have this question: The Kasa is their \"premier\" line and the Tapo is their \"mainstream\" line of in-wall switches outlets, and plugs. Each product line has other products like cameras and such but I think the Tapo line is my new go-to for swapping out wall switches that I need WiFi control of from now on! This 3-way switch kit was a breeze to install! It works with just about every kind of light (LED, Incandescent, CFL) and will dim the dimmable ones too! One of my favorite features is that it will walk you through setting the dim and 100% levels with the Tapo app! It makes it so easy to find \"the bottom\" and ensure the dimmest setting isn't just \"off\" or flickering bulbs! The buttons are instinctual in their operation and they fit the decor and style of other \"deco-style\" switches in your home! The best part I think is that if the light is \"off\" you get a dim circle icon on the switch so you can find it in the dark! The dimming controls are above the paddle-type switch and are clearly marked with icons to allow you to dim or brighten the room! They are very \"expensive\" looking, to me they have an iconic look! They also have blue LEDs that indicate the level of the light which goes dark after adjustments...even those \"fade-out\"! I also love that if you have the Kasa switches, the Tapo switches, you can manage them all in the Tapo phone app, it of course integrates into all the other smart-home platforms (Alexa, Google, Home Assistant) and some models of Kasa and Tapo integrate into Apple HomeKit as well (my Kasa switches do). Even if you're not a \"Home Automation Nerd\" like me, you can buy, install, and then use JUST the Tapo app on your phone to schedule turn-on and turn-off times to automate your lights...it also has a feature to randomize the times in case you leave on vacation...no additional hardware/software or expertise is required! They have made it as easy as you need and as powerful as you wanted! Top-pick Tapo!",
+        "date": "Reviewed in the United States on January 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "TP Link Tapo...my new favorite!",
+        "userName": "J.T.",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1RR0EOC4BA4LG",
+        "text": "Great set that was easy to install and get them synced up with the app.",
+        "date": "Reviewed in the United States on January 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "Keir A Dykstra",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R36C41AN8XGWP0",
+        "text": "We love all of the TAPO products, and have quite the system with 9 cameras, countless switches and smart outlets. I love how these smart switches also keep track of energy used, which is something very few others out there do. The step-down when you turn the switches off is a really nice touch and makes it feel much higher end. I would prefer just a little more \"click\" on the switch when it's pressed, but it does still give a fair amount of feedback. Hooking nearly all TAPO products up to your network is completely painless and adds to the experience of using their products. You really can't lose with their stuff, and they've got the name behind them so you know the company won't disappear like so many other no-name smart switches and plugs.",
+        "date": "Reviewed in the United States on January 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "One of the smartest smart switches you can buy!",
+        "userName": "Stavesacre",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1O5N0HJHUTK4Z",
+        "text": "I have converted all of our light switches to smart switches except one, so I ordered the TP-Link Smart 3 Way Dimmer Switch kit. The kit comes with two switches and easy to use instructions. The TP-Link Smart 3 Way Dimmer Switches worked great and the tapo app is easy to use. We’re very pleased with the TP-Link Smart 3 Way Dimmer Switches.",
+        "date": "Reviewed in the United States on January 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great smart switches",
+        "userName": "Paul M Darnell",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RK93ME5IPVXCS",
+        "text": "These switches are different than other 3 way switches I've installed. Most are 3-way compatible but can be used alone, where these switches are 3-way only. One will not work without the other. The main switch has the line input, and the satellite switch has the load output, and there are 2 traveler wires between them. So after sorting out the strange way they're installed, they work great. Easy to connect to my smart home via Matter, and they work well from the switches themselves.",
+        "date": "Reviewed in the United States on January 20, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy, if a little odd to install",
+        "userName": "Adam",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DKGXY4DL",
+        "productTitle": "TP-Link Tapo Smart 3 Way Dimmer Switch KIT, Matter Compatible, Energy Monitoring, Neutral Wire Required, Works with Alexa, Siri, Google Home, SmartThings, UL Certified, 2.4GHZ Wi-Fi, Tapo S515D KIT",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 54,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 112,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1KTULJWL5XH6A",
+        "text": "I have replaced so many of my fan switches, light switches, and receptacles with TP Link Tapo smart switches and I am SO SO happy that I did. I love being able to control everything with my voice or through the Alexa app or the Tapo app. Installation is not super difficult but you should watch some instructional Youtube videos first if you are new to this. What a huge upgrade these have made.",
+        "date": "Reviewed in the United States on January 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "TP Link Smart Switches are the way to go!",
+        "userName": "Shopaholic",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

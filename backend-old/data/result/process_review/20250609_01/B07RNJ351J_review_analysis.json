@@ -1,0 +1,410 @@
+{
+  "product_title": "2Pack UL Listed Rotary Dimmer Switch with1.8m/5.9ft Extension Power Cord for Halogen and Incandescent Bulbs lamp, Compatible with LED dimmable Lights",
+  "product_category": "Plug-In Portable Dimmer Controls",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "cord": {
+        "A@short cord length": {
+          "-": [
+            24,
+            25
+          ]
+        },
+        "B@heavy cord leads": {
+          "+": [
+            47
+          ]
+        },
+        "C@exposed wire end": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "switch": {
+        "D@compact design": {
+          "+": [
+            37
+          ]
+        },
+        "E@attractive appearance": {
+          "+": [
+            37
+          ]
+        },
+        "F@cheap dimmer casing": {
+          "-": [
+            47
+          ]
+        },
+        "G@durable casing": {
+          "+": [
+            47
+          ]
+        },
+        "H@well made construction": {
+          "+": [
+            4,
+            12,
+            16,
+            21,
+            37,
+            41,
+            47,
+            48
+          ]
+        },
+        "I@good quality": {
+          "+": [
+            0,
+            28,
+            35
+          ]
+        },
+        "J@high quality": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "circuit_board": {
+        "K@well made circuit board": {
+          "+": [
+            6
+          ]
+        },
+        "L@poor soldering quality": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "resistor": {
+        "M@cheap resistor": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "plug": {
+        "N@non polarized plug": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "nut": {
+        "O@missing securing nut": {
+          "-": [
+            6
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_functionality": {
+        "a@works great": {
+          "+": {
+            "?": [
+              0,
+              1,
+              7,
+              11,
+              16
+            ]
+          }
+        },
+        "b@smooth dimming": {
+          "+": {
+            "?": [
+              47,
+              48
+            ]
+          }
+        },
+        "c@large dimming range": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "d@uneven dimming curve": {
+          "-": {
+            "?": [
+              15,
+              25
+            ]
+          }
+        },
+        "e@non-linear adjustment": {
+          "-": {
+            "?": [
+              13,
+              25,
+              33
+            ]
+          }
+        },
+        "f@works through entire brightness range": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "g@works with LED and incandescent bulbs": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@works with dimmable LED bulbs": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "i@works with incandescent bulbs": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "j@works with ceramic heaters": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "k@fire hazard": {
+          "-": {
+            "M": [
+              5
+            ]
+          }
+        },
+        "l@switch failure and burning": {
+          "-": {
+            "?": [
+              3,
+              5,
+              8,
+              18,
+              22,
+              32
+            ]
+          }
+        },
+        "m@overheating": {
+          "-": {
+            "?": [
+              31,
+              34
+            ]
+          }
+        },
+        "n@melting under load": {
+          "-": {
+            "?": [
+              32,
+              44
+            ]
+          }
+        },
+        "o@sparking and failure": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "p@stops working after overheating": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "electrical_performance": {
+        "q@voltage drop over 10%": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "r@flickering": {
+          "-": {
+            "?": [
+              13,
+              27,
+              28,
+              29
+            ]
+          }
+        },
+        "s@strobing": {
+          "-": {
+            "?": [
+              26,
+              29
+            ]
+          }
+        },
+        "t@surging": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "installation": {
+        "u@easy to install": {
+          "+": {
+            "?": [
+              4,
+              19,
+              27
+            ]
+          }
+        },
+        "v@easy to modify": {
+          "+": {
+            "K": [
+              6
+            ]
+          }
+        },
+        "w@can be opened for adaptation": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "durability": {
+        "x@made to last": {
+          "+": {
+            "H": [
+              21
+            ]
+          }
+        },
+        "y@burnt out in second year": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "lamp_projects": {
+        "+": {
+          "a": [
+            1,
+            16,
+            19,
+            41,
+            42
+          ]
+        },
+        "-": {
+          "l": [
+            18
+          ]
+        }
+      },
+      "night_light": {
+        "+": {
+          "a": [
+            7
+          ]
+        }
+      },
+      "reptile_enclosures": {
+        "+": {
+          "a": [
+            10,
+            11,
+            17
+          ]
+        }
+      },
+      "fish_tank_lighting": {
+        "+": {
+          "?": [
+            15
+          ]
+        },
+        "-": {
+          "d": [
+            15
+          ]
+        }
+      },
+      "video_making_setup": {
+        "-": {
+          "s": [
+            26
+          ]
+        }
+      },
+      "chandelier_dimming": {
+        "+": {
+          "?": [
+            31
+          ]
+        },
+        "-": {
+          "p": [
+            31
+          ]
+        }
+      },
+      "wax_warmer": {
+        "+": {
+          "?": [
+            40
+          ]
+        }
+      },
+      "coffee_warming_plate": {
+        "+": {
+          "?": [
+            43
+          ]
+        }
+      },
+      "wall_lamps": {
+        "+": {
+          "?": [
+            14
+          ]
+        }
+      },
+      "hanging_light_fixture": {
+        "+": {
+          "?": [
+            37
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:09.121062"
+}

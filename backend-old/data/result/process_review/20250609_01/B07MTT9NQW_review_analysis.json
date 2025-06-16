@@ -1,0 +1,36 @@
+{
+  "product_title": "ENERLITES 20 Amp Toggle Light Switch, Single Pole, 20A 120-277V, Grounding Screw, Commercial Grade, UL Listed, 81200-GY, Gray",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 1,
+  "review_analysis": {
+    "phy": {},
+    "perf": {
+      "functionality": {
+        "a@stopped working after a year": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@defective unit": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "light switch": {
+        "-": {
+          "a": [
+            0
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:05.173205"
+}

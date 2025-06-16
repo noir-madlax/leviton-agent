@@ -1,0 +1,348 @@
+{
+  "product_title": "Lutron Diva Electronic Low Voltage Dimmer | 300-Watt, Single-Pole or 3-Way | DVELV-303P-WH, White",
+  "product_category": "Electronic Low Voltage Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "price": {
+        "A@expensive compared to standard dimmers": {
+          "-": [
+            0,
+            1,
+            3,
+            6,
+            9,
+            10,
+            23,
+            24,
+            30,
+            37,
+            41,
+            42
+          ]
+        }
+      },
+      "wiring": {
+        "B@requires neutral wire": {
+          "+": [
+            1,
+            10,
+            27,
+            30,
+            31,
+            35
+          ]
+        }
+      },
+      "size": {
+        "C@deep/wide dimensions requiring sufficient wall box space": {
+          "-": [
+            10,
+            30,
+            37
+          ]
+        }
+      },
+      "construction": {
+        "D@has 5 pre-installed wires rather than screws": {
+          "+": [
+            30
+          ]
+        },
+        "E@feels cheap despite high price": {
+          "-": [
+            30
+          ]
+        }
+      },
+      "indicator_light": {
+        "F@has integrated orange/amber night light": {
+          "+": [
+            26,
+            40
+          ]
+        }
+      },
+      "appearance": {
+        "G@beautiful design": {
+          "+": [
+            39
+          ]
+        }
+      }
+    },
+    "perf": {
+      "noise_elimination": {
+        "a@eliminates buzzing/humming from LED lights": {
+          "+": {
+            "?": [
+              1,
+              4,
+              5,
+              7,
+              9,
+              13,
+              14,
+              15,
+              16,
+              17,
+              23,
+              27,
+              29,
+              31,
+              32,
+              35,
+              36,
+              37,
+              43,
+              46,
+              47,
+              48
+            ]
+          }
+        },
+        "b@does not eliminate buzzing": {
+          "-": {
+            "?": [
+              11,
+              30,
+              42
+            ]
+          }
+        },
+        "c@eliminates AC line noise and differential mode noise": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "d@smooth dimming without flicker": {
+          "+": {
+            "?": [
+              10,
+              33,
+              35,
+              38,
+              41
+            ]
+          }
+        },
+        "e@fine tuned and predictable dimming": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "f@does not stop flickering": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "longevity_enhancement": {
+        "g@increases LED bulb longevity": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "h@works with electronic transformers": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "i@does not work well with magnetic transformers": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "j@works with low voltage LED fixtures": {
+          "+": {
+            "?": [
+              10,
+              24,
+              38,
+              39,
+              49
+            ]
+          }
+        },
+        "k@works with dimmable LED tubes": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "l@works with 0-10v LED strips": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "installation": {
+        "m@easy to install": {
+          "+": {
+            "?": [
+              4,
+              21,
+              24,
+              30
+            ]
+          }
+        },
+        "n@requires proper wiring configuration for 3-way setup": {
+          "+": {
+            "B": [
+              10
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "o@functions properly when installed correctly": {
+          "+": {
+            "?": [
+              3,
+              6,
+              44
+            ]
+          }
+        },
+        "p@received defective/used items": {
+          "-": {
+            "?": [
+              2,
+              8,
+              22,
+              47
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_recessed_lighting": {
+        "+": {
+          "a": [
+            2,
+            5,
+            9,
+            14,
+            16,
+            20,
+            25,
+            37,
+            41,
+            46
+          ]
+        },
+        "-": {
+          "b": [
+            11
+          ]
+        }
+      },
+      "under_counter_LED_lights": {
+        "+": {
+          "a": [
+            1,
+            32
+          ]
+        },
+        "-": {
+          "b": [
+            11
+          ]
+        }
+      },
+      "ceiling_LED_fixtures": {
+        "+": {
+          "a": [
+            5,
+            13
+          ]
+        }
+      },
+      "dining_room_fixtures": {
+        "+": {
+          "a": [
+            23
+          ]
+        }
+      },
+      "low_voltage_LED_systems": {
+        "+": {
+          "j": [
+            10,
+            24,
+            38,
+            39,
+            49
+          ]
+        }
+      },
+      "LED_strip_lighting": {
+        "+": {
+          "l": [
+            12
+          ]
+        }
+      },
+      "LED_tube_lighting": {
+        "+": {
+          "k": [
+            18
+          ]
+        }
+      },
+      "stairway_lighting": {
+        "+": {
+          "d": [
+            10
+          ]
+        }
+      },
+      "basement_lighting": {
+        "+": {
+          "a": [
+            37
+          ]
+        }
+      },
+      "nursery_lighting": {
+        "+": {
+          "d": [
+            41
+          ]
+        }
+      },
+      "3-way_switch_configurations": {
+        "+": {
+          "n": [
+            10,
+            23,
+            30,
+            38
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:38.107298"
+}

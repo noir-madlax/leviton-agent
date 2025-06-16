@@ -1,0 +1,413 @@
+{
+  "product_title": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-1RW, White",
+  "product_category": "Products",
+  "total_reviews": 19,
+  "review_analysis": {
+    "phy": {
+      "colors": {
+        "A@came with 2 different colors that don't match": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "wiring": {
+        "B@pre wired with color coded wiring": {
+          "+": [
+            10
+          ]
+        },
+        "C@requires neutral wire connection": {
+          "+": [
+            10,
+            12
+          ]
+        },
+        "D@has black wire that carries power": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "appearance": {
+        "E@aesthetically pleasing": {
+          "+": [
+            7
+          ]
+        },
+        "F@comes with ivory switch that can be changed out for white": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "tactile feedback": {
+        "G@has tactile click": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "LED indicator": {
+        "H@has flashing green LED in pairing mode": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "packaging": {
+        "I@boxes have barcode for setup purposes": {
+          "+": [
+            17
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation ease": {
+        "a@easy installation": {
+          "+": {
+            "B": [
+              10
+            ],
+            "?": [
+              1,
+              4,
+              5,
+              8,
+              10,
+              11,
+              12,
+              14,
+              15
+            ]
+          }
+        },
+        "b@Gen 2 is easier to install": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "c@simple to wire": {
+          "+": {
+            "B": [
+              10
+            ],
+            "?": [
+              12,
+              16
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "d@easy WiFi connection": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@WiFi setup was messy": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "f@connects right up to home assistant with homekit": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "g@never breaks connection": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@connection to MyLeviton app practically automatic": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "dimming performance": {
+        "i@smoothly dims": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "j@dimming transition on LED lamps is very smooth": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "k@LEDs flicker when dimmed": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "l@works flawlessly": {
+          "+": {
+            "?": [
+              1,
+              14
+            ]
+          }
+        },
+        "m@rock solid": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "n@just works": {
+          "+": {
+            "?": [
+              1,
+              16,
+              18
+            ]
+          }
+        },
+        "o@works as advertised": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "p@works boringly smooth": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "app functionality": {
+        "q@app works flawlessly": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "r@app is easy to use": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "quality": {
+        "s@good quality": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "t@top quality compared to others": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "u@high quality": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "v@well built": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "w@works well with Alexa": {
+          "+": {
+            "?": [
+              4,
+              6
+            ]
+          }
+        },
+        "x@very compatible with Apple HomeKit": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "y@works smoothly with Apple Homekit": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "firmware": {
+        "z@firmware requires update for Matter support": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart home automation": {
+        "+": {
+          "l": [
+            2
+          ],
+          "w": [
+            2
+          ]
+        }
+      },
+      "remote control through app": {
+        "+": {
+          "l": [
+            2
+          ]
+        }
+      },
+      "voice control through Alexa": {
+        "+": {
+          "w": [
+            3,
+            6
+          ],
+          "l": [
+            2
+          ]
+        }
+      },
+      "programmable automatic lighting": {
+        "+": {
+          "l": [
+            2
+          ]
+        }
+      },
+      "porch lights": {
+        "+": {
+          "l": [
+            2
+          ],
+          "r": [
+            15
+          ]
+        }
+      },
+      "night lights": {
+        "+": {
+          "l": [
+            2
+          ]
+        }
+      },
+      "home remodeling": {
+        "+": {
+          "a": [
+            10
+          ],
+          "t": [
+            10
+          ]
+        }
+      },
+      "kitchen renovation": {
+        "+": {
+          "j": [
+            17
+          ]
+        }
+      },
+      "ceiling lights control": {
+        "+": {
+          "j": [
+            17
+          ]
+        }
+      },
+      "automated light control for deaf person alerts": {
+        "+": {
+          "q": [
+            13
+          ]
+        }
+      },
+      "schedule creation": {
+        "+": {
+          "q": [
+            13
+          ]
+        }
+      },
+      "third party app control": {
+        "+": {
+          "w": [
+            13
+          ]
+        }
+      },
+      "Apple HomeKit integration": {
+        "+": {
+          "x": [
+            16
+          ],
+          "y": [
+            18
+          ]
+        }
+      },
+      "replacing old timer switches": {
+        "+": {
+          "a": [
+            15
+          ],
+          "r": [
+            15
+          ]
+        }
+      },
+      "areas without hardwiring": {
+        "+": {
+          "a": [
+            8
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:28.379739"
+}

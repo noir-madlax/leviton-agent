@@ -1,0 +1,2553 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:32:48.861574",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07YKFSWJN",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07YKFSWJN",
+    "title": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+    "brand": "TREATLIFE",
+    "model_number": NaN,
+    "price_usd": 67.99,
+    "rating": 4.3,
+    "reviews_count": 2357.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B07YKFSWJN"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1EKFH9TUQPAHP",
+        "text": "These switches work pretty well in the other area of my home that did not require a 3way. I’ve been using this product for almost 2 years with no huge complaint. They were fairly easy to install (by my brother). The value is also great. I got multiple packs for the different area of my home. Only thing I’ve dislike is reconnecting it once in a while.",
+        "date": "Reviewed in the United States on May 5, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "More treatlife please",
+        "userName": "PJ",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RF1UB6F628SA4",
+        "text": "I installed over 70 switches in my house and only issues I have with dimmer switches.",
+        "date": "Reviewed in the United States on February 20, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Issue with dimmer switches",
+        "userName": "Simple guy",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3KKHO2BCTAK6B",
+        "text": "Be careful, I do not recommend that you buy these switches, they are of very poor quality. I have many problems after installing these switches with a professional electrician, I installed these switches throughout my house and they turned on and off normally, but when I wanted to do dimmer in the living room, they dimmed all the lights in the house. I contacted the seller's customer service and they did not give me any solution since the products have a big factory problem. I already solved the problem by buying other switches from another brand but the TREATLIFE ones are going to the trash so the time to return them has passed, stay away from this product, look for something different from this brand, this was my experience and I would not want anyone else to have this problem. Ojo, no les recomiendo que compren estos interruptores, son de muy mala calidad. Yo tengo muchos problemas después de instalar estos interruptores con un electricista profesional, instale estos interruptores en toda mi casa y se encendían y apagaban normalmente, pero cuando quise hacer dimmer en la sala, atenuaron todas las luces de la casa. Me comuniqué con el servicio al cliente del vendedor y no me dieron ninguna solución ya que los productos tienen un gran problema de fábrica. Ya solucioné el problema comprando otros interruptores de otra marca pero los de TREATLIFE se van a la basura así que ya pasó el tiempo de devolverlos, aléjense de este producto, busquen algo diferente de esta marca, esta fue mi experiencia y no quisiera que nadie más tenga este problema.",
+        "date": "Reviewed in the United States on February 19, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "poorly manufactured product",
+        "userName": "Adrián",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R39D9FBR3BFUOU",
+        "text": "I have been buying these switches for years and they work great. I have at least 24 TreatLife smart switches in my house now. I purchased this box over a year ago and never got around to installing them until recently. Only to open the box and find the wrong switches. Now, well outside the return date - I have to take an L on the cost of the switches. Unless TreatLife sees this and allows me to return.",
+        "date": "Reviewed in the United States on January 21, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Completely wrong switches",
+        "userName": "Dan",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71CHgzlbgFL._SY88.jpg"
+        ],
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1CY5OJ2SP9ECK",
+        "text": "One of my pandemic projects was to replace my dumb light switches with all smart ones. I choose Treatlife as my switch of choice and installed more than 20 of them around my house. There were a couple of duds during the initial installation, but otherwise things went smoothly and we have loved having smart switches that work with Alexa. There were periods where we could go months with making physical contact with a light switch. The problems started about 2 years after installation. Since then one-by-one the switches have been dying. I am now (4 yrs later) at the point where every single one of the switches have failed. I do not know if this is the expected life expancy of smart switches or if this limited to Treatlife, but you should know going in that if you install these you will be revisiting that effort every 2 to 4 years.",
+        "date": "Reviewed in the United States on December 20, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good value, but short lifespan.",
+        "userName": "pcbelize",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "REF9LMPKJC2UT",
+        "text": "2 stars because they look nice…Bought multiple sets for my basements and sorry to say couple of them went bad in the first year and now all of them have been replaced in the amount of 3 yrs. I reached out to customer service and was told manager will reach out and no one did..so i say stay away from all of treatlife products.",
+        "date": "Reviewed in the United States on December 8, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Gone Bad in 3 yrs",
+        "userName": "Jasmeet S. Sehgal",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3LZDUSX4DS4KP",
+        "text": "Love it, looks great, feels great, dims great, and great deal!",
+        "date": "Reviewed in the United States on December 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for Dimming the Lights",
+        "userName": "smallli",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R21261UTG25Y00",
+        "text": "3 of the 4 switches will no longer connect to wifi for app control after about a year of use. They won’t even go into pairing mode. They still work manually",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor reliability",
+        "userName": "Aaron Snyder",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1YIAMMK51ZLDF",
+        "text": "I recently embarked on a large home renovation project and decided to install smart switches for all my lights, ordering 20 TreatLife switches, along with multiple 2-gang and 3-gang wall plates. Unfortunately, this decision turned into the biggest headache of the project. During installation, my electricians discovered that the TreatLife smart 3-way switches didn’t work with the other TreatLife 3-way switches and would need to be paired with non-smart switches. The lights would randomly go to the dimmest setting. Worse, I had no choice in which side the smart switch went on due to existing wiring, leading to awkward placements where smart switches were alone, and non-smart switches were grouped with others—resulting in a messy, unattractive look (see images). I contacted TreatLife, and while each response took a day or more, they finally confirmed that their 3-way smart switches only work with 3-way non-smart switches, WHICH THEY DON’T EVEN MAKE! Not very smart for a ‘smart’ switch company. They offered no solution for the mismatched look, and to top it off, refused to accept returns on the unopened switches that would not work with their other switches as it had been over 30 days. I ultimately found a solution with Lutron Caseta switches, which allow two matching switches on either side of the 3-way configuration through an innovative remote that can be installed to look just like the hard-wired switch while allowing way more flexibility with installation locations since no wiring is needed for the remote side. The result? A seamless, functional setup I love. While it required an additional investment and another electrician visit, the new system is worth every penny. If you want matching switches for your 3-way lights, STAY AWAY FROM TREATLIFE!",
+        "date": "Reviewed in the United States on October 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "If you want matching switches for your 3-way lights, STAY AWAY FROM TREATLIFE!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51-8DzWjzeL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51A1S2yn0oL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51fYiz4P3kL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51ixRidElwL._SY88.jpg"
+        ],
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1A0AJBSI5G76A",
+        "text": "I've experienced issues with these units over time. After about 2 years, four of them have stopped connecting to Wi-Fi, and one of the relays has failed. Troubleshooting revealed burned-out ESP8266 boards that became very hot when powered. The unit with the failed relay became hot to the touch, which raised safety concerns for me. Unfortunately, these issues occurred outside of the support period. Based on my experience, the durability could be improved, so I recommend considering this when making your purchase.",
+        "date": "Reviewed in the United States on September 30, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Durability Issues and Lack of Safety Certification",
+        "userName": "JD",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R12IBH77FZAZCP",
+        "text": "I purchased bunches in 2021 for a new contraction house. A few were defectives but they wouldn’t listen to me at first when I called their customer service, I had put my electrician on the phone speaking with them and then finally they agreed to send me replacement. After that, everything was fine for the first 2 years. The function of the switches started get crazy since last year, some switches turn on automatically after power outages or blinking and they can’t be turned off by APP, I have to reset them every single time. If we’re out of town the lights are all on till we get home to reset everything. It gets worse this year, some of them just turn on repeatedly right after I turn them off, I couldn’t turn them off so I had reset those switches and delete them from my APP, when I trying to reset them they were all dead, so I had to replace them from my stock that I purchased 3 years ago, then found out that they were discolored, unless I change the whole panel of switches otherwise the color doesn’t much here and there. So these switches life spans are about 3 years. the switch itself is not expansive but it definitely is expansive for only last 3 years.",
+        "date": "Reviewed in the United States on August 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Review after 3 years",
+        "userName": "en4tiosgw",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51W7Y-1rGrL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51ZCpmZurnL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51umnzJ0S5L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61ASNFBSP-L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61wuNaXa9jL._SY88.jpg"
+        ],
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2FKU9EDDFZO1I",
+        "text": "The box condition looks as if someone has returned.",
+        "date": "Reviewed in the United States on June 25, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "4 Pack Dimmer Switch",
+        "userName": "PARIMAL JOSHI",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2TGQRC7MXTJZ7",
+        "text": "I've have had 3 of these switches working for months without issue. One connected as a dimmer on a three way circuit and two working as just dimmers on normal circuits. They all work great with the Smart Life app. I did have an issue with one of these switches and Home Assistant. I had to delete and re-add the device in the Smart Life app. It was a breeze to do compared to other devices I have. As soon as I deleted the device and press the restart button it went into the pairing mode and was back to working correctly in a couple of minutes. I don't know where the problem actually was but it was easy to fix and only affected the Home Assistant automation, every thing in Smart Life was working correctly.",
+        "date": "Reviewed in the United States on June 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well with Smart Life and Home Assistant.",
+        "userName": "Richard",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1XAXF3DRGHC6L",
+        "text": "I previously used this product without any issues. So, upon purchasing a new home I ordered a large quantity of them. I'm not sure if it's the current batch, or they need a firmware update, but they keep going off-line, ultimately turning them into just dimmer switches. I'm am disappointed to say the least. Help!",
+        "date": "Reviewed in the United States on May 17, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "I feel cheated",
+        "userName": "Jay Harris",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R34P38V7Y8AOAP",
+        "text": "I am a residential electrical contractor over 25 years. Used these in my house 3 years ago. Have over a dozen and they work great Recommend them to a new homeowner when we wired his house. He purchased about 20 that I installed in a new house. When power got turned on most of them wouldn’t work correctly. After hours if trouble shooting and research found you can only install 1 dimmer on a branch circuits. Seems they improved them and now they are worth less Do Not Buy. It’s a neutral feed back problem. Why sell 4 packs. Get another brand. These are junk now",
+        "date": "Reviewed in the United States on May 8, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t Buy. Read electrical contractor why not",
+        "userName": "troy bigley",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R228IG35X9XY8A",
+        "text": "Installed roughly 40 of these switches (various flavors) in my house about 2.5 years ago. About 6 months ago started having problems. I've replaced a several witches under warranty and it's getting to be a real hassle. Think about your time before installing these switches, even if they provide a replacement, you will lose a lot of time replacing as they go bad. And if you have to call an electrician to fix 3 way switch, that's even worse. I threw in the towel and started replacing with old school dumb switches.",
+        "date": "Reviewed in the United States on May 3, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Works great for about 2 years then comes trouble",
+        "userName": "Alliebaire",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1LDSEXAR2Q998",
+        "text": "When installing multiple dimmers on 1 breaker line, they interfere with each other. One dimmer will dim another dimmer on the same line. The neutral line has a voltage leak. Bad design. Spent hours checking wiring and after 100% confirming the circuit, the issue persisted.",
+        "date": "Reviewed in the United States on April 4, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bad design muti dimmers",
+        "userName": "Karl Clayton",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R364KTEXEI57KK",
+        "text": "I love the look and function of these switches. Connectivity to Alexa is super easy for voice activated. However I need a dimmer that allows me to get the lights very dim. This does not do that.. Far too bright even on the lowest setting for my preference. Will need to uninstall and return..",
+        "date": "Reviewed in the United States on March 19, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Looks and works great except doesn’t get super dim",
+        "userName": "Juliet",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2WN80JRSTTM9X",
+        "text": "After a couple of weeks the lights started flickering when the switch was off. It came in a pack of 4 so I replaced it. The second light would only dim to about 75%. Avoid causing a fire in your home and go with a different product.",
+        "date": "Reviewed in the United States on February 21, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worked okay for a week or two",
+        "userName": "Jason",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7ed10d0a-99b1-484b-8798-c773afaa78f0/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RYJJ9GZUXCV2N",
+        "text": "I have these switches throughout my house. Integrating them with Alexa was painless and straightforward. I had an issue with one of them and customer service immediately sent me out a replacement. I appreciate their responsiveness.",
+        "date": "Reviewed in the United States on February 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great customer service",
+        "userName": "R. Miller",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R19Z2KEIGGXZ3",
+        "text": "DISCONNECTS ON THE REGULAR. Didn't last a year and it doesn't reconnect. IF YOU WANT SOMETHING TEMPORARY THAT LASTS LESS THAN A YEAR, THIS MIGHT BE A FIT. If you like and appreciate your money, stay away. I've spent hundreds on their products and I regret every penny. SWITCHING FOR A BETTER NON HACKED COMPANY. TREAT LIFE IS A JOKE",
+        "date": "Reviewed in the United States on January 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Piece of 💩",
+        "userName": "Kristian",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RPI87FOSGVFQT",
+        "text": "I got these because I had the old style dial dimmers and they were all messing up in my great room. These were less expensive and I got the added capability of adding Alexa control. Highly recommend. They have been installed almost 3 years now and never have had an issue!",
+        "date": "Reviewed in the United States on December 18, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing",
+        "userName": "Justin",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1AF2BCXDPLVC8",
+        "text": "I changed several switches in my house to smart switches. Three times I had issues with different switches: they worked for a very short time and then stopped working. Although I love the app and find it easy to use, I have had bad experiences with these switches. Maybe it is just a batch that was problematic, but I did purchase more than 3 different times, so I do not think that is the case. I am currently exploring a different option.",
+        "date": "Reviewed in the United States on December 13, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not reliable",
+        "userName": "shoshana",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R51Z63TQ272UP",
+        "text": "I spent $850 over the course of a year changing all my switches to Treatlife products to manager dozens of recessed can lights, bathroom fans, ceiling fans, etc. With so many switches and kids, I thought it would be great to be able to dim the massive amount of can lights and also control them to keep lights all over the house from being left on. The theory is great but the switches are not. I have fought several to keep them on the network constantly resetting them. Several have been replaced. Several are not working now and I had to put the old toggle switches back into one fixture. I have a mesh network so signal is never a problem. Every time we have a power outage of any sort, many get messed up and have to be reconnected to the network / app. The newest versions I bought as replacements are even harder to get online since they “automated” the process. I have 2 that cannot be synced and are brand new. 3 out of the 4 fan light combination switches have failed. Naturally some that I have the most trouble with are in the basement and I have to go down to turn off one switch out of 3 that my kids left on even after using the app to turn off ALL basement lights. I contacted Treatlife about some of these issues and they wanted me to go thru all the programming steps and tell them what happens at each step. I explained it is not even turning on so I cannot make it do anything. Then they said I must have made a mistake wiring them. I am an engineer and have wired several houses and barns including fixing others mistakes. This is all run around to avoid warranty claims. They won’t stand behind the high failure rate products. My advice is to limit your installations to only devices that benefit from connectivity and avoid the headache and expense of such a buggy system. Definitely not worth the hype for a whole home install. And definitely not worth a wife being upset the lights or ceiling fan is not working.",
+        "date": "Reviewed in the United States on December 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not worth the headache.",
+        "userName": "Distracted Engineer",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2TVVQAOFENVK3",
+        "text": "Been using it for years, great produce and even better customer service, recently one of the switch stopped working after 3 years and they sent me a free replacement even outside of warranty period.",
+        "date": "Reviewed in the United States on November 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Dvsray14",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "ROPZCV52BPUTX",
+        "text": "When they work, they’re great. Rarely ever lose signal and integrates well. However, I’ve purchased over 90 of these to redo my whole house. It’s been about 3 years and each year, 2-3 of them go out inexplicably. Just lose power and never work again. I end up replacing them. Tried to get warranty replacements but customer service is so slow to respond. When they eventually do, and confirm replacement, they still never mail them out.",
+        "date": "Reviewed in the United States on November 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Good product when it works. Nonexistent customer service.",
+        "userName": "Zee K.",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RVIYXORH4MAYH",
+        "text": "UPDATE : November 8, 2023. Even though the return window has long been closed, the manufacturer reached out unsolicited, offering a full refund. While the product review stands, customer service gets 5 stars. Purchased the 4 pack in Jan 2023. So far, 2 have failed, not reacting to Alexa voice commands, then being unable to pair with a router again located less than 20' from the switch. The switch does function manually, so the internal WiFi is kaput. I would not recommend this particular brand as your WiFi dimmer solution.",
+        "date": "Reviewed in the United States on November 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Slow Failures , 2 of 4 Devices Dead In 10 Months",
+        "userName": "Cap Capello",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3D9LD7VUAKQIK",
+        "text": "I work in tech and have seen it all. These dimmers are very polished. From the hardware, wire labeling, installation, and integration with Alexa. Kinda reminds me of products from Logitech. Just don't buy it if you don't have a neutral wire at your switch.",
+        "date": "Reviewed in the United States on October 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "This dimmer is high quality",
+        "userName": "Marcello",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1RKIA7FD1B7VZ",
+        "text": "Switches came in a 4-pack. Two worked great, they dimmed LED bulbs perfectly and were very easy to set up in the Android app and connect to Google Home. One however was defective and would constantly flash the lights when turned off as can be seen in the video. Replacing it solved the problem. Currently trying to get a replacement from the manufacturer however am being told they will not replace as it was bought through Amazon? I'm sure we'll get it straightened out. These switches are a bit more expensive than others but worth it in my opinion and assuming they do stand by their warranty, I'll gladly buy again.",
+        "date": "Reviewed in the United States on October 4, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Great when they work.",
+        "userName": "Brian Keys",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1f4431d2-a056-429d-8f81-12fc81bfba53/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2NJ8XD0EU1F2P",
+        "text": "Easy to install. Like the brightness plus and minus buttons. The on off button still big enough. The 3rd of the four had a broken ground. At that point already installed 2 and didn’t want to uninstall and return. Contacted the seller and was able to get a replacement. Happy with the customer service.",
+        "date": "Reviewed in the United States on August 12, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Wi-Fi dimmer",
+        "userName": "cz",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2Z3OT3S4LJC9W",
+        "text": "This product says it works, with Alexa and Google; it did not work. I had to install another app, that says it is supposed to work with these platforms not at true. I installed two of these switches,and neither one would connect with Alexa. I returned the product; and purchased Amazon basics smart switches, works absolutely perfect.",
+        "date": "Reviewed in the United States on June 5, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not user friendly",
+        "userName": "Andy",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3OMQ9K84V4V23",
+        "text": "Quick install and easy to use app. One of the switches did stop working within a few months but was replaced quickly thanks to customer service.",
+        "date": "Reviewed in the United States on April 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Product",
+        "userName": "Kevin L.",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R64UGHP0F9Z9S",
+        "text": "I purchased the pack of smart dimmer light switches to replace my standard light switches, during the renovation of my house following a house fire. I had been buying things for my house in anticipation of the renovation, as I found items on sale, long before my house was stated for construction. I had probably made my purchase for these light switches a year before they were actually installed, and before I was able to move back into my house. The install was very easy, after creating an account on the Treatlife app. One of my light switches however, failed to go into pairing mode, for me to connect it to the app, or Alexa. I contacted customer support, through the Amazon help page, and explained that my light switch was not going into pairing mode. It was very quick and easy to get a customer service representative on the phone. He walked me through some troubleshooting steps, and concluded that the light switch was faulty. He took some information from me, and a replacement switch arrived within a day or two. The new switch was installed, and paired seamlessly. I have 6 of the dimmer smart switches on the recessed lights throughout my house... I love them. They were easy to set up, and connect to the Treatlife app... easy for me to enable voice control through both Alexa and Google. I just walk in and out of rooms, and have my lights controlled through voice activation. Love this option when walking into a dark room, or when my hands are full. You can even control for the lights to be set to turn on/off on a schedule. Thanks for much for excellent quality control. You made my experience a pleasure choosing your brand... and thank you for standing behind your product. I would highly recommend this brand of dimmer smart switch because of the convenience of voice activation, the ease of set up, the ease of using the app, and most importantly the ease of customer service, in the event you have questions or concern about your product.",
+        "date": "Reviewed in the United States on April 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart Dimmer Switch",
+        "userName": "Nikki Pete",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R28BHALE7YNINJ",
+        "text": "I've used Treatlife products for a couple of years now. I've never had to touch base with Customer Service for anything, but when I finally did, they gave me a ticket number for a defective unit then never responded for over a month (as of 03/07/23). I've reached out multiple times in this month and have not received a response. I cannot back a product where there is no service to help. UPDATE 04/2023 Customer service ended up reaching out to me after posting this review to rectify the situation and sent me a replacement switch. I gave them 4 stars as they did replace the faulty switch, but left out a star for how long it took to get the right people and get my issue resolved.",
+        "date": "Reviewed in the United States on March 7, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Customer service non-existent (UPDATE)",
+        "userName": "Joseph S.",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RQKTD2EFBRM2W",
+        "text": "I purchased the four pack about 26 months ago. One of them no longer turns on. I contacted the company and they gave me a simple troubleshooting technique. It didn't work. When they wrote back to me a couple days later, they simply said that they stand by their 24 month warranty (something for which I have no evidence) but my purchase has passed that warranty time period. Now remember - this is a switch that turns on a light and dims it. You would expect a switch to last significantly longer than 24 months. In fact, I've never had any light switch in my house break. Ever. Again...I have no idea if they honor their warranty or not. But ask yourself this. After either paying an electrician to install this or going through the fun of installing it yourself, do you want to be in that same position in a couple of years? Even if it's within 24 months and they standby their warranty when their product stops working, the major expense (either in time or money) is in the work being done to replace it, not the item. I've written glowing reviews for a number of items on Amazon and poor reviews for a few not so good ones. I try to be fair. This item doesn't deserve a good review.",
+        "date": "Reviewed in the United States on February 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Ask yourself if it's worth the future hassle of buying this.",
+        "userName": "pab",
+        "numberOfHelpful": 3,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2YKMI5CDK4BX7",
+        "text": "I installed two of the switches. Each one has a different name. When one is put into a routine both switches follow the routine. Tried removing the switch and reconnecting with same results. It is like they share a brain no matter what you do. I have not installed the other as I do not need all four following the same routine. I should have stuck with Kasa brand. Other than that I like the switches. I was sent an email by the seller advising me to follow the instructions for installation. I did follow the instructions and wired entire houses without any complications and it passed electrical inspections for occupancy. The ability and following the instructions does not change the fact of how these switches perform.",
+        "date": "Reviewed in the United States on January 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Smart switch that is not so smart.",
+        "userName": "Rick",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R34FJIUUN00D",
+        "text": "The product is priced much better than many of the competitive products and works every bit as well if not better.",
+        "date": "Reviewed in the United States on December 5, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product at great price",
+        "userName": "BH",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2KQNNLITZBXGS",
+        "text": "The main issue with these plugs I believe is the software. When you pull the app up after you’ve installed several devices, click on Kitchen pendant lights for example, it will randomly turn on another switch. The app consistently has done this for the last 10 months for the first 30 seconds or so you have the app open. Basically you have to leave the app open for 30 seconds in order to turn on your devices properly through it Out of the 75 devices I’ve bought I have had 6 which were bad hardware, not horrible and I can deal with less that 10% defective however the app is horrible. The devices also have issues when you try to adjust the timer/scheduling settings. If you’re only buying three or four of these it’s not a big deal but if you have a large home and plan on installing them all over the house do yourself a favor and do not buy these.",
+        "date": "Reviewed in the United States on November 11, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Intermittent at best with robust Ubiquiti WIFI network",
+        "userName": "Ashley",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1XSTQACTBZAFH",
+        "text": "I have these switches throughout my home. They are great to have when away or at home.",
+        "date": "Reviewed in the United States on October 31, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Ed M",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3FC8U1T8ZKJRJ",
+        "text": "I've had these almost a year bought a 5 pack and have installed 3 of the 5 in my garage , also in the garage is 3 other forms of smart switch (1 motion ,and 2 non dimming single pole) of the 6 switches these are the only ones having difficulty , completely randomly one will just stop connecting with wifi or app. Once it disconnects its nearly impossible to get it to reconnect. The only way I've had success is completely removing it from power for days and then reinstalling . The actual switch will still function as a manual switch they just drop wifi . I have a brand new mesh wifi system with one of the satellites mounted in the garage 3 ' above the switches so it's not a signal issue or a quality of signal issue . One of the switches has functioned perfect until tonight and it did the same as the other two just dropped wifi for no apparent reason after an hour of attempting to reconnect it with no success. I typically don't even write reviews but these things are infuriating.",
+        "date": "Reviewed in the United States on October 29, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Constantly disconnect and impossible to reconnect",
+        "userName": "Guyhazard",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2A4Z8I94PV2EF",
+        "text": "Yeah I ignored some bad reviews, unfortunately! And hoped I'd be the exception. I only had it installed it 30 days after it arrived by a professional, so there was no going back :( Pro: -Works great with Alexa -Has a great App of its own -Love their other products (ie: \"The Smart Dimmer Plug- 9 months of use zero problems\" Con: -The lights flicker, anything below 100% and it will randomly flick up to 100% constantly. -So I've still been using it for about 5 months, Its a roll of a dice, every time I dim the lights below 99%, 10% for me seems to flicker only after some time, where as anything between 11-99% flickers immediately. The switch covers are smaller than hole in the wall, (Seriously Treatlife! Who is designing these?) To conclude: -1 Star cause, I wouldn't recommend it the slightest bit! -You think you getting a good 4 for 1 deal, you hope! You see 5 stars reviews and their leading you on. Stop! Look elsewhere! Treatlife can do better, just not this! -You need to spend a little more money, for one good switch.",
+        "date": "Reviewed in the United States on October 23, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Nope! Frome day 1 to 5 months, I can't dim the lights.",
+        "userName": "Genevieve S. Richards",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R61LU24PC21RF",
+        "text": "Great product with flawless day-to-day operation. The only downside is installation may not be for beginners. Not that it's much harder than a standard light switch but you will need to follow the instructions and be able to identify which word are your feed and load wires.",
+        "date": "Reviewed in the United States on September 29, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Flawless operation",
+        "userName": "J. T. M.",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f865d2f9-524e-4d94-8679-171f13a7e147/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R28T3GTELD3G5L",
+        "text": "I had one switch that was defective, it happens, the manufacturer sent out a new one immediately!",
+        "date": "Reviewed in the United States on September 27, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent customer service",
+        "userName": "Ron S.",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2TKNMWPIYPMQL",
+        "text": "I tried 3 diff manufacturers and finaly I settled on this and its 3way version. I bought 6. Its easy to install and works as advertised. Make sure you install the 3way version on the line side and not the load (i.e, light) side. The software works but can improve on the usability features. I recommend this product.",
+        "date": "Reviewed in the United States on September 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Finaly, one that works..",
+        "userName": "Great Zod",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3FNFA5Z3F2PJ1",
+        "text": "Thos was easy to install. Alexa integration was seamless. App was intuitive",
+        "date": "Reviewed in the United States on September 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Did rhe job well",
+        "userName": "supplychainguy",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2SU5FZAZ35XWL",
+        "text": "This product is very bad, after four months of installation the dimmer smart switches started to go bad, they started flickering and it won't stop not even when you turn them off manually, so I defining won't buy this brand again.",
+        "date": "Reviewed in the United States on August 30, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bad product.",
+        "userName": "bertin bernal",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/e0c38526-71a3-4757-a5b3-6ba58fbe0494/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3C38A6XUJN1NB",
+        "text": "Theses dimmer switches made my recessed lights come alive and increased my home automation",
+        "date": "Reviewed in the United States on August 21, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice product",
+        "userName": "Darwin Rodgers",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3I6D5JQNQY65W",
+        "text": "Overall, this produce seems OK for the money. I was very disappointed to find the wiring was incorrectly labeled. The Hot line (red) is supposed to connect to load. However, it did not power on with it connected. I used my multimeter to verify that I had the correct live wire connected to their hot red. After switching with the Line wire, it worked fine. This means the external labels or internally it was switched. Very sad since they went through a lot of trouble and good labeling to have it be incorrect. For that reason, it cannot be considered good, and I suspect with such poor-quality control it may not last, but we will see.",
+        "date": "Reviewed in the United States on August 5, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Wiring is incorrectly labelled on back. Hot is actually Line.",
+        "userName": "David R.",
+        "numberOfHelpful": 0,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RA5LI779CEQ5V",
+        "text": "Do your self a favor and read all the one star reviews. If you plan to use this in a whole house setup, beware: these will leak current and you will get strange behavior on all your other switches when you operate one. I’ve seen 80 volts come out of a TURNED OFF switch because another switch on another breaker was turned on. This literally turned on my living room lights when my outdoor light was turned on. When the living room switch was turned on, they just got brighter. I TORE APART MY ELECTRICAL SYSTEM AND WALLS trying to figure out what was wrong and it’s just these poorly engineered switches. Absolute garbage.",
+        "date": "Reviewed in the United States on August 1, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "leaks current, can’t use in multiple rooms!!",
+        "userName": "Michael",
+        "numberOfHelpful": 2,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07YKFSWJN",
+        "productTitle": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 837,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2357,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R135L5KID4MKPL",
+        "text": "I installed 20+ of these in my brand new house. Lights would flicker and effect other switches in the house. You would turn on a switch and it would turn on another light in another room. Swapped out for higher-end WiFi switches and the flickering stopped. Also, some switches would show up on WiFi system. Seemed like cheap manufacturing.",
+        "date": "Reviewed in the United States on July 25, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Unreliable and spooky",
+        "userName": "Ultradad Henderson",
+        "numberOfHelpful": 2,
+        "variationId": "B07YKFSWJN",
+        "imageUrlList": null,
+        "variationList": [
+          "Pattern Name: Switch 4 Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,1837 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:37:28.802305",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08YMGCQKY",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 4,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08YMGCQKY",
+    "title": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 13.48,
+    "rating": 4.6,
+    "reviews_count": 233.0,
+    "category": "Light Switches",
+    "product_segment": "LED Illuminated Indicator Switches",
+    "product_url": "https://www.amazon.com/dp/B08YMGCQKY"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1DVY0X64D78RY",
+        "text": "The led light is a soft glow, perfect for hallways. A little too bright for bedrooms, and the install is like any other light switch. Can either back switch or j hook.",
+        "date": "Reviewed in the United States on June 1, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "Amac",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1CPF6XDOONCJX",
+        "text": "Works great. Love the white light led seitch",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great and looks great",
+        "userName": "MK",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R11QDYAHHV0DS9",
+        "text": "An illuminated light switch in appropriate locations is convenient. Not quite a night light, and maybe not the best for dark bedrooms. For hallways, kitchens, are bathrooms, it's a nice benefit.",
+        "date": "Reviewed in the United States on April 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Helpful",
+        "userName": "Eric",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RK46OHDHYPRR7",
+        "text": "I got this for the hallway because in the winter when I turn the bedroom light off I can't find the light switch to go up the stairs. The LED is way too bright if it's in range of sleeping. When I rollover in the middle of the night it looks like someone is shining a flashlight at me in bed because the door isn't completely closed from the bedroom to the hallway. Would be better if they just installed the same tiny LEDs that they use on the dimmer switches and GFCI outlets.",
+        "date": "Reviewed in the United States on April 15, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Way too bright for sleeping areas",
+        "userName": "Beergod",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3TIB7HDDLPSST",
+        "text": "Works well. Not as bright as I expected, so I hope the light will last longer than the last one.",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Installed well",
+        "userName": "NETimberframer",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2DKFIAZNBMPZY",
+        "text": "The light on the switch is very dim and barely visible.",
+        "date": "Reviewed in the United States on December 30, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Dim.",
+        "userName": "Davido",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1Z6OY2AODPN77",
+        "text": "I bought these same switches at home depot for about the same cost. I canceled my prime because im sick and tired of amazon's bullcrap. So they're punishing me. Over $100 on the last order and it still took almost 2 wks. FU amazon. After I thought I did my due diligence in researching these pieces of crap. It's not all bad. The switches are after all levitn. Quality of the switch itself is there. Looking at the pictures leviton uses to display the illumination and what I got are NOT THE SAME. The light is so friggen dim! Seriously leviton!?? Hard up for a sale? I feel misled and it sucks! Why cant they add a single sentence stating the light is dim? Other sellers do. Im suppoed to see some in the dark w/nightlight. This friggen thing may get me there but ill hit every obstacle on the way. GERRRR! Looks like home depot is getting a good sized return. Back looking for something that's really what it says it is.",
+        "date": "Reviewed in the United States on November 16, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Dont waste time",
+        "userName": "Anonymous",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R37AABGL5FAC7A",
+        "text": "I have no idea what product some of these people are talking about because we picked up six of these and the illumination from the switch is barely visible at all. None of the switches that we have look anything like the pictures. They are not bright and the fact that somebody says they're too bright for their eyes makes me think that they must live on another planet. These are barely illuminated so we're going to try another brand before we start finishing up on wiring",
+        "date": "Reviewed in the United States on October 28, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Illumination is Not bright at all",
+        "userName": "CRANKI",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2WP2OXBG8QM16",
+        "text": "Illuminates like a $2 light switch that I paid $16 for.",
+        "date": "Reviewed in the United States on October 10, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Built-in nightlight is very dim.",
+        "userName": "Cynthia R.",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R88LLCMYR0HB7",
+        "text": "Very easy to install. Nicely lit.",
+        "date": "Reviewed in the United States on September 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lighted 3-way switch",
+        "userName": "Stu in SoCal",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1PVTCMSKTU2TO",
+        "text": "Not only did this replace the old burnt out switch, it has a night light built it, was easy to instally",
+        "date": "Reviewed in the United States on September 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "replaced old switch with this one",
+        "userName": "Raymond S. Iorio",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2UD0PADRFZBET",
+        "text": "I’d like the product replaced or refunded",
+        "date": "Reviewed in the United States on August 9, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Item sent appears to have been previously used. Box crushed, no instructions included",
+        "userName": "Pamela B. Schachter",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1R2BBSVTNN4ZZ",
+        "text": "Easy to install and night lite is as advertised. Light is not bright but in a dark hall very easy to see.",
+        "date": "Reviewed in the United States on April 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Lighted 3-way switch.",
+        "userName": "Trudy",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1UZCWN439KW8I",
+        "text": "Installed a couple of these down a long dark hallway. Makes it easy to see where the switches are now. They are not bright at all, and they shouldn't be. Just enough light to plainly see where they are in the dark. Typical Leviton quality and super easy to install with either screws or push in 14-gauge solid copper wire.",
+        "date": "Reviewed in the United States on March 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Can see the switch when the lights are off now.",
+        "userName": "Nice Pony",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R18OECQOAE6L9R",
+        "text": "I liked the fact that the light is white.",
+        "date": "Reviewed in the United States on March 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light is bright enough to easily see from across the room.",
+        "userName": "Douglas J",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R8B9PKGM1TBPN",
+        "text": "Nice switch, easy to install, location light is not too bright and is a nice color. Gives off just enough light to easily locate the switch at night. I have purchased a few of these now and they all work great.",
+        "date": "Reviewed in the United States on August 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "JOHNNYRINGO",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1N8H94Q9M5EE7",
+        "text": "Very easy to install, if you are DIY'er, I would suggest watching some youtube videos on installation, since the instructions for this light switch are printed on the inside of the box with small lettering and not easy to read. I do like the illuminated light switch - it's easy to find at night. I don't think it is bright enough to disturb your sleep. I installed this in my kitchen, and one in the hallway.",
+        "date": "Reviewed in the United States on July 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great little illuminated light switch!",
+        "userName": "Dave, Boston",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3H6ITMLT6ZZCE",
+        "text": "Good product, nice build quality",
+        "date": "Reviewed in the United States on June 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good",
+        "userName": "Alexander",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3C2X7RALDHL5A",
+        "text": "Description indicates that when off, the rocker switch will light up to show the load is off. This however isn't true. The switch is lit when \"off or on\". This is merely an illuminated switch. I will be returning this switch.",
+        "date": "Reviewed in the United States on June 23, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Big disappointment! Does not perform as advertised!",
+        "userName": "PaulP",
+        "numberOfHelpful": 3,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71CoAcH+4PL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71GRjf54JDL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R7FL6U1VHYQC5",
+        "text": "Could not find at manards",
+        "date": "Reviewed in the United States on June 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It has a lighted switch",
+        "userName": "Grandma",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3PJQS61SCOZFY",
+        "text": "I have a light switch that is around a corner on the top of a flight of stairs which makes trying to find the light switch in the dark a little sketchy. I switched it out with this and it’s great. Not too bright but it doesn’t need to be - it gives off enough light to do the trick. I will be installing these in my bathrooms as well. It should also be helpful in not turning on the loud bathroom fans in the middle of the night!",
+        "date": "Reviewed in the United States on May 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I needed",
+        "userName": "tosismaguill",
+        "numberOfHelpful": 2,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3PWVDAC3WKJ7T",
+        "text": "Other than the continuous light feature, which projected an extremely low illumination, the switch did not work",
+        "date": "Reviewed in the United States on March 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Faulty Switch",
+        "userName": "JA-Z",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1ZRJFEIXDS28D",
+        "text": "I wish I would have taken a pic of how little light / dull this switch emits. There is no other way to describe this and I REALLY like Leviton products. How to fix this: If you where to replace the top half of the switch with a clear see through plastic, I think it would solve the problem. Good news though... I bought this Leviton product and it works great. I really wanted the panel switch but the light emitted from this switch works, well. https://www.amazon.com/gp/product/B005K8XFRW/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1 FYI - I am a verified purchaser of this product and wrote a review, not sure why it didn't show up on this particular page, so I thought I'd added it here too. Link to my original review > https://www.amazon.com/Leviton-L5611-2W-Illuminated-Single-Pole-Residential/dp/B08YMBDGZ8/ref=cm_cr_srp_d_product_top?ie=UTF8",
+        "date": "Reviewed in the United States on March 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "I'm a big fan of Leviton - Just not this product",
+        "userName": "Don C",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RJS8JZC8EM8TB",
+        "text": "Great low light for you to know that it’s there to be used",
+        "date": "Reviewed in the United States on March 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome white light",
+        "userName": "E. Schindler",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RZ238C36NOGN2",
+        "text": "I purchased this to see it down the hallway and it's not bright at all very disappointing",
+        "date": "Reviewed in the United States on March 21, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "not happy not bright at all",
+        "userName": "kevin canzoneri",
+        "numberOfHelpful": 3,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R32KET0HYLF4DE",
+        "text": "I only needed to connect the white and black wires for this to start doing exactly what I wanted: replace a regular switch with one that gives a faint glow at night for easy location :)",
+        "date": "Reviewed in the United States on March 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Super easy to install, works great",
+        "userName": "Alan Hogan",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3L9EC4EP2S90J",
+        "text": "Look in just about any American home today and chances are the switches and electrical receptacles are made by Leviton. The company has decades of experience in the industry and their products just work and keep working for ages. I started off swapping out the switches in my home to add illuminated switches as a convenience: it’s easy to find a light switch in the dark when the switch is glowing. This almost should be a requirement for all homes, but whatever. The first few switches I installed were cheap, generic switches with a distinctly Asian/Chinese brand name. They worked, but they had an amber glow, and they used a gas tube to generate the light and this had a tendency to flicker. I grabbed one of the Leviton LED switches at a big box store when I needed a 3-way lighted switch, and once I saw the pure white light on these and the nice glow around the button, I couldn’t go back to the orange ones. Yes, these are gonna set you back a bit if you upgrade all the switches in your home, but you shouldn’t ever have to replace these, and the LED should work for years if not decades.",
+        "date": "Reviewed in the United States on March 11, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Expensive, but superior to other lighted switches",
+        "userName": "James W. Anderson",
+        "numberOfHelpful": 3,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1FFUC47ACOTD8",
+        "text": "Nice subtle illumination. I installed this to replace an older orange glowing light switch. This looks much better and more modern. I have installed 2 so far, and will be installing more.",
+        "date": "Reviewed in the United States on January 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice illumination",
+        "userName": "T&C",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3RADT4COE3OMD",
+        "text": "Easy to install and works as intended. LED compatible too !!!",
+        "date": "Reviewed in the United States on March 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice lighted LED compatible switch…",
+        "userName": "Luckymann77",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2Z037RE6G743T",
+        "text": "I have two of these installed in my hallway, powering a pair of ceiling lights. When the switches are off, there is still a small amount of power being delivered to the lights. It's enough that the lights are able to illuminate the entire hallway. In other words, my hallway is never dark. I don't understand why Leviton can't make any illuminate switch that doesn't leak power to the lights it controls?",
+        "date": "Reviewed in the United States on February 6, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not compatible with LED bulbs",
+        "userName": "TT",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3TLHIPNR6JUUZ",
+        "text": "I bought this switch to replace an old 3 way that stopped illuminating when in the OFF position. This thing shines wether the switch is ON or OFF. It does shine a bit brighter in the OFF position, but that's not the point. It's going back.",
+        "date": "Reviewed in the United States on December 17, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Poorly designed",
+        "userName": "Joan L.",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1GAV3WW62BN4K",
+        "text": "I was hoping these were a little brighter. The glow is faint. It I guess that's to be expected",
+        "date": "Reviewed in the United States on December 7, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "The light is a little dim",
+        "userName": "Anonymous2001",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R151YYZYE1NS1S",
+        "text": "I had another Leviton rocker switch with an LED, but the LED's color is a nice amber color thats easy on the eyes at night. I expected this new switch to be the same, but instead it came with a terrible bright, white LED that I have to shield my eyes when I walk past this thing at night. Very disappointed, and cannot find switches advertising that mellow amber color LED.",
+        "date": "Reviewed in the United States on October 31, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bright white LED hurts your eyes",
+        "userName": "compdoc",
+        "numberOfHelpful": 2,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RI1RPXQ9COEIT",
+        "text": "I bought this rocker switch to put in my guest bathroom, which is a small room. On the positive side, the rocker is completely silent. On the negative side, the light DIM!!! If it's this dim in a very small room, I can't even imagine how dim it would be in a large room.",
+        "date": "Reviewed in the United States on October 31, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Very DIM!!!",
+        "userName": "Valleri",
+        "numberOfHelpful": 3,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81IPoszKvQL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R21KE81NQ5H18D",
+        "text": "The description is ambiguous. There are 3 types of night illumination for switches: (very dim when off - just to locate the switch [like this one]. Nightlight when the switch is off [what I was looking for] and pilot light, LED on when light/load is on. Disappointing that I needed to buy one to find out its not what I was looking for. Otherwise these are perfectly fine switches (match standard decora ones quite well and will work in 3+ way configuration (illuminating in both switch positions if the other switch(es) turn(s) the light off). The LED is always off with the light on, and always stays on when the light is off - even in daylight (but hardly visible).",
+        "date": "Reviewed in the United States on May 22, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "These have a very dim light to locate the switch in the dark - NOT a nightlight",
+        "userName": "A. Moore",
+        "numberOfHelpful": 9,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08YMGCQKY",
+        "productTitle": "Leviton 15 Amp Decora LED Illuminated Light Wall Switch 3-Way, White, L5613-2W",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 36,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 233,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 2
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3ESP1LK4VCAUR",
+        "text": "Came as always in time , perfect switch",
+        "date": "Reviewed in Canada on September 17, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice and work well",
+        "userName": "Andrea voltech",
+        "numberOfHelpful": 0,
+        "variationId": "B08YMGCQKY",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Count (Pack of 1)"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 36,
+    "pages_scraped": 4,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

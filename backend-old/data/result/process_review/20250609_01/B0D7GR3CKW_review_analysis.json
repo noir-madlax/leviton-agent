@@ -1,0 +1,424 @@
+{
+  "product_title": "MOES Dimmer Light Switch, 3 Way & Single Pole Dimmable for LED, CFL, Incandescent, Halogen, 600Watt Max, ON/Off with Dimming Slide for Bedroom Hallway, No Neutral Wire Required",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@modern and sleek design": {
+          "+": [
+            0,
+            22,
+            35,
+            42
+          ]
+        },
+        "B@clean design": {
+          "+": [
+            9,
+            17
+          ]
+        }
+      },
+      "build_quality": {
+        "C@well made and sturdy construction": {
+          "+": [
+            3,
+            8,
+            9
+          ]
+        },
+        "D@not flimsy": {
+          "+": [
+            3
+          ]
+        },
+        "E@good quality material": {
+          "+": [
+            2,
+            4
+          ]
+        },
+        "F@high end appearance": {
+          "+": [
+            25
+          ]
+        }
+      },
+      "slider": {
+        "G@smooth and responsive slider": {
+          "+": [
+            5,
+            8,
+            9,
+            35,
+            38,
+            48
+          ]
+        },
+        "H@easy to move slide bar": {
+          "+": [
+            37
+          ]
+        },
+        "I@stiff slider movement": {
+          "-": [
+            34
+          ]
+        }
+      },
+      "buttons": {
+        "J@big buttons": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "wiring": {
+        "K@load wires same color without proper marking": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "cover_plate": {
+        "L@cover plate difficult to snap on": {
+          "-": [
+            29
+          ]
+        },
+        "M@enclosed cover wouldn't stay on": {
+          "-": [
+            15
+          ]
+        },
+        "N@screw-secured cover": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "screw_design": {
+        "O@hidden screws": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "size": {
+        "P@optimal depth for wall box": {
+          "+": [
+            19
+          ]
+        },
+        "Q@fits existing box easily": {
+          "+": [
+            32
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_function": {
+        "a@smooth dimming operation": {
+          "+": {
+            "G": [
+              5,
+              8,
+              9,
+              15,
+              25,
+              35,
+              36,
+              38,
+              48
+            ]
+          }
+        },
+        "b@precise brightness control": {
+          "+": {
+            "G": [
+              9,
+              35,
+              36,
+              38,
+              45
+            ]
+          }
+        },
+        "c@full dimming capability": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "d@limited dimming range": {
+          "-": {
+            "?": [
+              28,
+              31
+            ]
+          }
+        },
+        "e@no dimming functionality": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "f@works with LED bulbs without flickering": {
+          "+": {
+            "?": [
+              8,
+              10,
+              15,
+              17,
+              20,
+              23,
+              36,
+              39,
+              41,
+              42,
+              44,
+              46,
+              48
+            ]
+          }
+        },
+        "g@supports multiple bulb types": {
+          "+": {
+            "?": [
+              9,
+              38
+            ]
+          }
+        },
+        "h@600 watt rating": {
+          "+": {
+            "?": [
+              1,
+              38
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@easy installation": {
+          "+": {
+            "?": [
+              0,
+              2,
+              5,
+              8,
+              10,
+              12,
+              16,
+              17,
+              23,
+              25,
+              30,
+              33,
+              35,
+              36,
+              38,
+              40,
+              41,
+              42,
+              44,
+              45,
+              47
+            ]
+          }
+        },
+        "j@no neutral wire required": {
+          "+": {
+            "?": [
+              5,
+              8,
+              9,
+              38,
+              42
+            ]
+          }
+        },
+        "k@works in 3-way and single pole setups": {
+          "+": {
+            "?": [
+              5,
+              9,
+              16,
+              38
+            ]
+          }
+        },
+        "l@confusing wiring diagram": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "m@quick installation": {
+          "+": {
+            "?": [
+              10,
+              12,
+              44
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "n@works perfectly": {
+          "+": {
+            "?": [
+              8,
+              10,
+              11,
+              16,
+              21,
+              30,
+              38,
+              42
+            ]
+          }
+        },
+        "o@consistent performance": {
+          "+": {
+            "?": [
+              13,
+              27,
+              29
+            ]
+          }
+        },
+        "p@doesn't work on outlet": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "adjustability": {
+        "q@adjustable minimum level trimmer": {
+          "+": {
+            "?": [
+              19,
+              20
+            ]
+          }
+        },
+        "r@fully adjustable": {
+          "+": {
+            "?": [
+              36,
+              41
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom_lighting": {
+        "+": {
+          "a,b": [
+            5,
+            9,
+            25
+          ]
+        }
+      },
+      "hallway_lighting": {
+        "+": {
+          "i,j": [
+            8,
+            9,
+            38
+          ]
+        }
+      },
+      "bathroom_lighting": {
+        "+": {
+          "h": [
+            1
+          ]
+        }
+      },
+      "room_ambiance_control": {
+        "+": {
+          "a,b": [
+            2,
+            35,
+            38,
+            45
+          ]
+        }
+      },
+      "romantic_lighting": {
+        "+": {
+          "a": [
+            22
+          ]
+        }
+      },
+      "home_office": {
+        "+": {
+          "n": [
+            28
+          ]
+        }
+      },
+      "accent_lights": {
+        "+": {
+          "n": [
+            43
+          ]
+        }
+      },
+      "recessed_LED_lights": {
+        "+": {
+          "f": [
+            44
+          ]
+        }
+      },
+      "can_lighting": {
+        "+": {
+          "f": [
+            46
+          ]
+        }
+      },
+      "renovation_projects": {
+        "+": {
+          "o": [
+            13
+          ]
+        }
+      },
+      "multiple_room_installation": {
+        "+": {
+          "a,i": [
+            8,
+            9
+          ]
+        }
+      },
+      "LED_applications": {
+        "+": {
+          "f,r": [
+            15,
+            36,
+            41
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:28.346184"
+}

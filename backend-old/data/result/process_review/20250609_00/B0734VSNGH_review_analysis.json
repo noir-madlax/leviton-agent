@@ -1,0 +1,363 @@
+{
+  "product_title": "Legrand radiant RH453PDBCCV6 450W Preset Decorator Rocker Dimmer Light Switch with Locator Light for Dimmable LED and CFL Bulbs, Single Pole/3-Way, Dark Bronze (1 Count)",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 21,
+  "review_analysis": {
+    "phy": {
+      "Package": {
+        "A@Package arrived damaged and ripped up": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "Paint/Coating": {
+        "B@Paint present on switch surface": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "Color": {
+        "C@Color is great": {
+          "+": [
+            1
+          ]
+        },
+        "D@Color not as pictured": {
+          "-": [
+            5
+          ]
+        },
+        "E@Hard to find color in brick and mortar stores": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "Build Quality": {
+        "F@Switch seems sturdy": {
+          "+": [
+            5
+          ]
+        },
+        "G@High quality construction": {
+          "+": [
+            13,
+            18
+          ]
+        }
+      },
+      "Slider": {
+        "H@Slider is smooth": {
+          "+": [
+            5
+          ]
+        },
+        "I@Broader slide design": {
+          "+": [
+            7
+          ]
+        },
+        "J@Dimmer slider is sturdy with no play, very precise": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "Click Mechanism": {
+        "K@Click feel is awesome, snappy and responsive": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "LED Indicator": {
+        "L@LED makes it easy to find at night/in the dark": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "Size": {
+        "M@Too big for electrical box or smaller-than-standard box": {
+          "-": [
+            15
+          ]
+        },
+        "N@Perfect fit with standard boxes and gang plates": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "Plate Design": {
+        "O@All plastic plate that attaches to the box": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "Electronics": {
+        "P@Electronics were sourced as cheaply as possible": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "Appearance": {
+        "Q@Elegant appearance": {
+          "+": [
+            1
+          ]
+        },
+        "R@Looks gorgeous": {
+          "+": [
+            13
+          ]
+        },
+        "S@Looks great": {
+          "+": [
+            12,
+            18,
+            19
+          ]
+        },
+        "T@Modern look": {
+          "+": [
+            19
+          ]
+        },
+        "U@Nice fit/finish": {
+          "+": [
+            20
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Functionality": {
+        "a@Does not work": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Functions as expected using rocker & dimmer": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@Works great": {
+          "+": {
+            "?": [
+              3,
+              4,
+              10
+            ]
+          }
+        },
+        "d@Work as should": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@Works perfectly": {
+          "+": {
+            "?": [
+              10,
+              16
+            ]
+          }
+        },
+        "f@Works as expected": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@Works as described": {
+          "+": {
+            "?": [
+              12,
+              14
+            ]
+          }
+        },
+        "h@Worked just like it should": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "i@Works exactly as intended": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "j@Working well": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "Flickering Issues": {
+        "k@Makes bulbs flicker and sometimes won't come on": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "l@Light flickers with all bulbs, even on full power": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "Dimmer Operation": {
+        "m@Have to move dimmer to make lights work": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "n@Dimmer would not stay at full brightness, dims to 50%": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "o@Failed after two years": {
+          "-": {
+            "O,P": [
+              11
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "p@Works great with Feit LED lights": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "q@Compatible with dimmable recessed lights": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "r@Not compatible with smart bulbs (HUE)": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "Noise": {
+        "s@No buzz or hum": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "Cleaning": {
+        "t@Easy to clean": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Bathroom Installation": {
+        "+": {
+          "b": [
+            1
+          ]
+        },
+        "-": {
+          "o": [
+            11
+          ]
+        }
+      },
+      "LED Recessed Retrofit Lights": {
+        "+": {
+          "p": [
+            3
+          ]
+        }
+      },
+      "LED Patio Lights": {
+        "+": {
+          "e": [
+            16
+          ]
+        }
+      },
+      "LED Vanity Lights": {
+        "-": {
+          "o": [
+            11
+          ]
+        }
+      },
+      "Installation Process": {
+        "+": {
+          "?": [
+            1,
+            4,
+            8
+          ]
+        },
+        "-": {
+          "M": [
+            15
+          ]
+        }
+      },
+      "Mixed Bulb Applications": {
+        "+": {
+          "q": [
+            13
+          ]
+        }
+      },
+      "Multiple Light Control": {
+        "+": {
+          "q": [
+            13
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:53:58.631771"
+}

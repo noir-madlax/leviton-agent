@@ -1,0 +1,2590 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:46:24.437314",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B002DNAG4W",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B002DNAG4W",
+    "title": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+    "brand": "GE",
+    "model_number": NaN,
+    "price_usd": 15.32,
+    "rating": 4.4,
+    "reviews_count": 4866.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Toggle Style Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B002DNAG4W"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2UKT8VWVTI7NY",
+        "text": "Simple to install and is working really well! My wife hated how bright our bathroom was in the vending, with a chandelier with 4 light bulbs in even 40W made it feel like the sun was gonna burn your eyes out. Finally got this thing installed and now we don’t get blinded by the light :)",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer - it works and is just as good as more expensive ones",
+        "userName": "VADadx4",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3K8OCG5KBRCMT",
+        "text": "Switch works great, was able to dim the lights without any issues. Nice to have options",
+        "date": "Reviewed in the United States on May 5, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Dimmable switch was a nice change",
+        "userName": "Ab",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1KN547E17O32O",
+        "text": "The loudest light switch since the 1950s-1960s I've ever heard. Unless you're hard of hearing or deaf, don't buy it. Fortunately I tested it right out of the box and haven't installed it yet. It's going back on the same day it arrived.",
+        "date": "Reviewed in the United States on April 3, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Too LOUD for me! It's going back",
+        "userName": "Amazon Shopper",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1LERU311KFY80",
+        "text": "Bought two of these to replace existing (circa. 2004) wall dimmers which were not LED compatible. I'm using these with GE brand dimmable LED bulbs and everything is working perfectly - Dimming very smoothly & consistently throughout the brightness range. It was annoying to have to replace my old dimmer switches to support LED bulbs, but I am very happy with this purchase.",
+        "date": "Reviewed in the United States on March 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work well with decent bulbs",
+        "userName": "Consumer in Puget Sound",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RXOUS1I49TQQO",
+        "text": "Although they claim it works with dimmable LEDs it does not. The light flashes in high setting. Spend the money on Lutron that does work",
+        "date": "Reviewed in the United States on March 2, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does not work with dimmable LED",
+        "userName": "Greg",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3I2R1TMRRWHHL",
+        "text": "This dimmer will flicker with LED lamps. I replaced with a Lutron dimmer that does not flicker. Even though it says that this dimmer is compatible it is not. Do not buy this dimmer. Past my return window by a couple of weeks so it is just a $16 piece of trash for me.",
+        "date": "Reviewed in the United States on February 18, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flicker with LED lamps",
+        "userName": "Kathryn S.",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1RA9REM5KYERJ",
+        "text": "It works, but is THE LOUDEST, CLICKIEST toggle switch that I’ve ever used, in my home or anywhere else!",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Better use EARPLUGS before you turn on your lights!",
+        "userName": "R.B.",
+        "numberOfHelpful": 2,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/238c5313-43f4-4d76-8097-725d87b10cff/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R38BOQ8LU9WX5T",
+        "text": "I expected better from a name brand GE dimmer. Nope. They flickered under cabinet lights, also flickering on overhead lights. Three fixtures flickered. 3 out of 4 dimmers I bought had the same issue. Leviton is more expensive, but they simply work. time saved = money in your pocket.",
+        "date": "Reviewed in the United States on February 4, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flicker with LED lights, cheap flimsy product",
+        "userName": "Dan Troxel",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R28VUEN10PA3S9",
+        "text": "Very nice dimmer. Easy install, simple operation, and reasonable cost.",
+        "date": "Reviewed in the United States on January 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smooth operation",
+        "userName": "Brian",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2G9K8JMCSNW4R",
+        "text": "This dimmer switch was a good price. Easy to install and works as described. Just installed 1/15/25, so hopefully there will be no problems. Such cheaper than other brands that has same features.",
+        "date": "Reviewed in the United States on January 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good price",
+        "userName": "Kim Capone",
+        "numberOfHelpful": 2,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2X16MDXM6G6QY",
+        "text": "I bought this dimmer to replace my old dimmer which was causing my LED lights to flicker when dimming them. It fixed the problem. Highly recommend if you need to stop your LED bulbs from flickering when they're dimmed.",
+        "date": "Reviewed in the United States on January 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fixed LED Flicker",
+        "userName": "Steakum",
+        "numberOfHelpful": 4,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R11KLYFCQ50284",
+        "text": "Works as it should.",
+        "date": "Reviewed in the United States on January 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as it should.",
+        "userName": "a",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2GIRQTP2Y4M30",
+        "text": "Slider moves too easily when you switch on. Since purchase I have replaced it with a rotary Dimmer Switch.",
+        "date": "Reviewed in the United States on January 11, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Slider Vs. Rotary Dimmer",
+        "userName": "W.Legggie",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1N6AN8I51VMPA",
+        "text": "I bought more.",
+        "date": "Reviewed in the United States on January 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice dimmer switch.",
+        "userName": "Largo",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1B6Q3ISPNUZRU",
+        "text": "Lamps still flicker. Tried different bulbs. No help",
+        "date": "Reviewed in the United States on November 27, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Dimmer",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1CJD0OYK2MZNT",
+        "text": "Took less than 10 min to install",
+        "date": "Reviewed in the United States on November 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It was easy to install",
+        "userName": "James C. Coulter",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R6G1PALUYIPU3",
+        "text": "I have dim-capable LED lighting on the ceiling. Originally had just a regular switch. Flip, lights full blast. When I put this switch in, flip on with \"no dim\" and I swear they are all of a sudden not as bright as the regular switch. Maybe I'm seeing things? But then I go to test dimming and it reacts extremely slowly. You have to operate the dim slider at a glacial pace to have any fidelity in the dimming. It's not ideal. I have another dimmer switch from Lutron I'm going to slap in to see what happens tonight. On the positives, the switch operation is very tactile... clunky and positive (unlike many switches sold today that are gummy), it's not ridiculously deep, and it uses screw terminals instead of those incredibly annoying and cheap aluminum wires that just force a crowded electrical box thanks to tons of wire nuts.",
+        "date": "Reviewed in the United States on November 16, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "I swear the lights don't get as bright with no dimming as a regular switch; dimming is wonky",
+        "userName": "wildcatgoal",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RBJYTLG9S0U2C",
+        "text": "Love the ability to dim my lights",
+        "date": "Reviewed in the United States on November 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked as advertised",
+        "userName": "Robert Hall",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R18RM42X9E45WS",
+        "text": "Works as expected. Easy installation, no problems in over 2 months of using it",
+        "date": "Reviewed in the United States on October 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good dimmer",
+        "userName": "Ian T",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R17INRD157TB3O",
+        "text": "I had this switch installed by an electrician to control an LED ceiling fixture. It worked fine initially and then when I switched it on a couple days later, the light would not come on. Had my electrician come back to look at it. He found there was power going into the switch but no power coming out. He replaced it with a Leviton Sureslide dimmer switch, and now all is well.",
+        "date": "Reviewed in the United States on August 29, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working after 2 days",
+        "userName": "Leslie Ford",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2T7ANHI4M0ANJ",
+        "text": "Bought 3 of these for my new house. Can leds and pendant lamps. 1 failed within 3 days and the other within 45 days. no Amazon return after 30 days and no support from GE. POS.",
+        "date": "Reviewed in the United States on July 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "POS do not buy!",
+        "userName": "Kimberly Hill",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2VFW1YKSHTNGG",
+        "text": "Not the easiest switch I have ever installed as the ground screw would not drop enough to wrap the ground wire around it. Also the push in connections for the other leads must be locked in place with a screw. Kinda weird.",
+        "date": "Reviewed in the United States on May 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works as a dimmer switch",
+        "userName": "TC",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RDSDG4VBG7GFM",
+        "text": "Works well, good price",
+        "date": "Reviewed in the United States on May 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works well",
+        "userName": "Glenn K.",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R31NZ1Z9529ABB",
+        "text": "Instead of a big dimming toggle switch....it consists of an on/off snap switch....and an additional small slider switch.",
+        "date": "Reviewed in the United States on May 14, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not as pictured.",
+        "userName": "Walker",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2RWDHSI842D98",
+        "text": "The instructions for three way hook up are vague so I had to do a couple of tries at first. They work well enough, when you turn them on they tend to raise the brightness level along with the power on. Not a big deal.",
+        "date": "Reviewed in the United States on May 9, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Know what you are doing.",
+        "userName": "Jack White",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R57HDJFGD9S9K",
+        "text": "Using this for our track light. Switched to LED from halogen. No flicker and simple installation",
+        "date": "Reviewed in the United States on April 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent LED dimmer",
+        "userName": "DrJeff",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RXUXN1S87BY8",
+        "text": "installed the dimmer and the dimmer function does NOT work, switch only turns the lights \"on\" and \"off\" , there is no working dimmer function on this light switch, it came defective.",
+        "date": "Reviewed in the United States on April 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Product is garbage",
+        "userName": "Lpiddy",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R12J8N5QN4WL7L",
+        "text": "Worked great and simple design. Easy to install.",
+        "date": "Reviewed in the United States on April 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Basic Dimming",
+        "userName": "Mr. G",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R320VDHP63L58H",
+        "text": "I used these for dimmable LED ceiling lights. It works perfectly. It's very easy to adjust the minimum point with the adjustment button. I'm impressed and will buy again",
+        "date": "Reviewed in the United States on March 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "This LED compatible dimmer works great!",
+        "userName": "Fletch-a",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1Z6L21HDMQIOU",
+        "text": "Would have expected more from GE. The terminals are loose and hard to wire unless you hold it upside down. There is also a delay before the LED lights turn on.",
+        "date": "Reviewed in the United States on March 11, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "OK value",
+        "userName": "Marc",
+        "numberOfHelpful": 2,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "ROX58APHXKFX",
+        "text": "These switches work great. Worth the money. The switch is silent and the dimmer slide moves easily. A bit too easy really. If your not careful, every time you turn the switch on or off you will move the dimmer portion of the switch as well, causing you to have to readjust the brightness of the light every time you use the switch.",
+        "date": "Reviewed in the United States on March 2, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice Switch",
+        "userName": "Dave",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2PPTQTN6HTXYR",
+        "text": "This is an excellent switch for LED bulbs BUT the performance is best when it’s used with GE LED BULBS!!! Specifically the relax and reveal line bulbs!!! Hopefully many people see this review so they can enjoy the range of this dimmer , I’d bet this dims as low as halogen bulbs used to dim when you pair it with GE DIMMABLE LED BULBS!!! A highly recommended switch from me and I have probably 7 of these in our home!",
+        "date": "Reviewed in the United States on February 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Use with GE led bulbs for best performance",
+        "userName": "R. Morgan",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1K2G69XSABXYO",
+        "text": "Turn items into plant pots Just add water in bottom of pot Start on a slight slant and gradually go straight on. Worked great Dry off after using so bit doesn't rust Very happy",
+        "date": "Reviewed in the United States on February 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to drill into ceramic",
+        "userName": "Tami Field",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1UQMH673BHAPM",
+        "text": "Reviews worried me but once I received the swith and installed it I was relieved. Quality switch and works great. No flickering or anything..",
+        "date": "Reviewed in the United States on January 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "As described",
+        "userName": "Joe",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2J9129TJGY76H",
+        "text": "I installed it, and immediately removed it. It works - but 90% of the dimming range occurs within the briefest movement of the toggle. If you move it VERY carefully you can set dimming at roughy 40% of brightness, but move it a fraction more and it jumps to 90% of brightness - the rest of the motion changes the brightness very little. In addition, the toggle has no resistance - it moves to easily. It worked - but I wouldn't use it.",
+        "date": "Reviewed in the United States on January 12, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Poor Dimming Range",
+        "userName": "Star Mapper",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2DQH8LOWVDT85",
+        "text": "Dimmer Switch LED that is working very well.",
+        "date": "Reviewed in the United States on January 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great!",
+        "userName": "Alexis",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RR9L6378HZ099",
+        "text": "Just got this and installed immediately...very pleased with results with two incandescent floods. This dimmer is old school toggle switch only (no small slider on the side), that's what I wanted. An FYI, fairly big (I imagine it has a circuit board with an IC PWM in it): I mention the size, because it is a tight squeeze in a metal single gang box....but, don't worry......I made it fit. Will be no squeeze at all for use in a single gang blue plastic box.",
+        "date": "Reviewed in the United States on December 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Old school toggle dimmer",
+        "userName": "Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "RYDT34OWM9KH1",
+        "text": "Super cheap quality. I don't understand how the United States could allow something so flimsy to be used in electrical systems. I doubt this will last a year before breaking. Unfortunately, it's Thanksgiving and I have people coming over so I won't be returning it.",
+        "date": "Reviewed in the United States on November 23, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Horrible quality, feels like its going to fall apart",
+        "userName": "Scott Tucker",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3HED9NSVEZ0MK",
+        "text": "Shipped quickly and was so simple to install! Works great!",
+        "date": "Reviewed in the United States on November 1, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Toggle dimmer switch",
+        "userName": "Ronald Boatwright",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61YfSAL-8PL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/7104b5ef-f8eb-446f-9c18-658406d1c35b/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1E8ORJT9218MP",
+        "text": "Works as described",
+        "date": "Reviewed in the United States on October 24, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Laporte First Church of the Nazarene",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2755Z9D0WTQXF",
+        "text": "Client wanted the same kind of dimmer switch, they did not like the newer ones. Luckily these were available since the other look like this one, but it uses a slider to dimmer. These units dim/in/off using the switch alone. Great find.",
+        "date": "Reviewed in the United States on October 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Oldie but goodie!",
+        "userName": "Happy Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1T4X6J9ZRU7IE",
+        "text": "After installing this replacement toggle dimmer the LED bulbs flickered annoyingly. They worked perfectly with the previous toggle dimmer of another brand which had died after many years of use. Luckily I still had a stash of 60W clear incandescent bulbs so I swapped them out. 2nd issue was when I tried to reinstall the cover plate screws. Despite being carefully lined up they wouldn't even start. A closer look showed that the holes would not accept a 6-32 screw, which has been the USA standard for such screws for decades. Luckily I have an extensive set of machinist taps and was able to properly thread the hole but no one should have to do this. The switch action also feels of low quality and I suspect it will wear out sooner than it should. Bottom Line: Save your money and buy a better brand such as Pass & Seymour.",
+        "date": "Reviewed in the United States on September 7, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "(POORLY) MADE IN CHINA!",
+        "userName": "Scott L.",
+        "numberOfHelpful": 2,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1ONNT4CQCYFDH",
+        "text": "I wanted to replace my existing switches with separate dimming rheostats with a single switch type. These did the trick! They're a bit more costly than I liked but they're a one time expense.",
+        "date": "Reviewed in the United States on August 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It's what I wanted...",
+        "userName": "cwousn",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R34UXYE2O8T6SA",
+        "text": "Caused dimmable led lights to blink, tried a different style (knob) dimmer and it works.",
+        "date": "Reviewed in the United States on July 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Blinking lights",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R9OIR3GHPHICU",
+        "text": "good value for the dollars spent",
+        "date": "Reviewed in the United States on July 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "nice",
+        "userName": "Fred Benson",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R2Z57DCF55M4W",
+        "text": "This dimmer is different from most, in that there is no little slider on the side of the switch. You just move the lever to adjust the level. That's the way I like it.",
+        "date": "Reviewed in the United States on July 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "works great, no little slider on the side",
+        "userName": "Tommy Prophet",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R3UYFKK4ZTG36P",
+        "text": "It was a great switch and easy to install, but only lasted a little over a year.",
+        "date": "Reviewed in the United States on July 9, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Was great until it broke",
+        "userName": "Renfam",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/810WEEj-bfL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R10R157RZ3AWPS",
+        "text": "Bought two of these and they are both broken within 1 year of usage. Learn from our experience and don’t buy these.",
+        "date": "Reviewed in the United States on February 13, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broken after 1 year",
+        "userName": "S. Brown",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R1LNTW9WJWE3ZF",
+        "text": "It might work fine in some applications, but it gives very troublesome flickers at some positions when used in my pretty standard under-cabinet light strip. Replacing with a brand that was just a bit more expensive solved the problem. Also, the switch itself has a loose, \"cheap\" feel.",
+        "date": "Reviewed in the United States on February 12, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Limited value",
+        "userName": "saraber76",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B002DNAG4W",
+        "productTitle": "GE Single Pole Dimmer Toggle Switch, On/Off/Dim Settings, for Dimmable LED, CFL and Incandescent Bulbs, DIY Project, UL Listed, White, 18025",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 168,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 4869,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 5
+          }
+        },
+        "reviewId": "R22JVSSHO8MBDM",
+        "text": "Installed to operate an LED fixture over the tub/shower in the main bathroom that is shard by two persons. Usage would be 4 or 5 times a week. After 2 1/2 years the switch failed. Up until then it was great at being able to choose brightness by just the on/off toggle and not having a secondary slider next to the toggle. Bad design or quality control issues? Other switches used to last for decades with higher usage. Just another sign of the times and something we have to accept with so much manufacturing being contracted to third parties overseas and clouded by using formerly strong recognizable U.S. company names.",
+        "date": "Reviewed in the United States on February 2, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Malfunction after 2 1/2 years.",
+        "userName": "MnMike",
+        "numberOfHelpful": 0,
+        "variationId": "B002DNAG4W",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Toggle Dimmer",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

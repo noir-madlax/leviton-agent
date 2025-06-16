@@ -1,0 +1,113 @@
+{
+  "product_title": "BESTTEN 4 Pack 4-Way Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Paddle Rocker Interrupter, Self-Grounding, UL Listed, White",
+  "product_category": "Four Way Multi-Location Control Switches",
+  "total_reviews": 6,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@color does not match other BESTTEN switches": {
+          "-": [
+            0,
+            3,
+            4,
+            5
+          ]
+        },
+        "B@appears gray instead of white": {
+          "-": [
+            4
+          ]
+        },
+        "C@has blue light": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "rocker": {
+        "D@scrapes against housing": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "appearance": {
+        "E@looks slightly different from other switches": {
+          "-": [
+            3
+          ]
+        },
+        "F@good visual appearance": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "button operation": {
+        "a@hard to push": {
+          "-": {
+            "D": [
+              0
+            ]
+          }
+        },
+        "b@different feedback force": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@makes click sound": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "light control": {
+        "d@causes lights to flicker": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@works fine for switching": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacement for existing switches": {
+        "-": {
+          "A": [
+            3,
+            4,
+            5
+          ]
+        },
+        "+": {
+          "e": [
+            4
+          ]
+        }
+      },
+      "lighting control with adjuster": {
+        "-": {
+          "d": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:05.260101"
+}

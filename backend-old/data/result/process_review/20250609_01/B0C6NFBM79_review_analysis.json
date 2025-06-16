@@ -1,0 +1,110 @@
+{
+  "product_title": "Enbrighten 59339 In-Wall Add-On Paddle Switch, White & Light Almond",
+  "product_category": "Add On Auxiliary Switches",
+  "total_reviews": 4,
+  "review_analysis": {
+    "phy": {
+      "paddles": {
+        "A@comes with ivory paddles": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "instructions": {
+        "B@impossible to follow instructions for 3-way install": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "wiring design": {
+        "C@wiring design specifications require ingenuity for existing three-way switch": {
+          "-": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@works as expected": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "c@only works with other Enbrighten smart switches": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@does not work with smart switches from other manufacturers": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "installation": {
+        "+": {
+          "?": [
+            0
+          ]
+        },
+        "-": {
+          "B": [
+            2
+          ],
+          "C": [
+            3
+          ]
+        }
+      },
+      "matching wall plates": {
+        "+": {
+          "A": [
+            0
+          ]
+        }
+      },
+      "pairing with Enbrighten smart switches": {
+        "+": {
+          "c": [
+            1
+          ]
+        }
+      },
+      "3-way install": {
+        "-": {
+          "B": [
+            2
+          ]
+        }
+      },
+      "existing three-way switch wiring": {
+        "-": {
+          "C": [
+            3
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:11.360239"
+}

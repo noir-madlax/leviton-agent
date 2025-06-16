@@ -1,0 +1,739 @@
+{
+  "product_title": "Aqara Smart Light Switch (No Neutral, Single Rocker), Requires AQARA HUB, Zigbee Light Switch, Remote Control and Smart Home Automation, Compatible with HomeKit, Google, Works with Alexa, SmartThings",
+  "product_category": "Smart Hub Dependent Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Build Quality": {
+        "A@Good build quality": {
+          "+": [
+            0,
+            15
+          ]
+        },
+        "B@Very good build quality": {
+          "+": [
+            15
+          ]
+        },
+        "C@Solid material quality": {
+          "+": [
+            12
+          ]
+        },
+        "D@Materials feel very poor quality": {
+          "-": [
+            25
+          ]
+        },
+        "E@Feels a little cheap": {
+          "-": [
+            40
+          ]
+        }
+      },
+      "Button/Switch": {
+        "F@Very short button travel, doesn't feel like quality switch": {
+          "-": [
+            25
+          ]
+        },
+        "G@Large toggle is flimsy feeling": {
+          "-": [
+            40
+          ]
+        },
+        "H@Button gets stuck at certain angles": {
+          "-": [
+            34
+          ]
+        }
+      },
+      "Appearance": {
+        "I@Clean look": {
+          "+": [
+            8
+          ]
+        },
+        "J@Great looking": {
+          "+": [
+            39
+          ]
+        },
+        "K@Looks good": {
+          "+": [
+            12
+          ]
+        },
+        "L@Look amazing": {
+          "+": [
+            16
+          ]
+        },
+        "M@Matte finish looks and feels like unfinished plastic": {
+          "-": [
+            40
+          ]
+        }
+      },
+      "Wiring": {
+        "N@Comes with own stranded wires attached, no screw posts": {
+          "+": [
+            39
+          ]
+        },
+        "O@Comes with all screws and wire nuts necessary": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "LED Indicators": {
+        "P@LED indicators can be toggled and aren't too bright": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "Relay": {
+        "Q@Internal relay clicks pretty loud": {
+          "-": [
+            12
+          ]
+        },
+        "R@Relay click is annoying": {
+          "-": [
+            8
+          ]
+        },
+        "S@Very loud when turning on or off": {
+          "-": [
+            49
+          ]
+        }
+      },
+      "Packaging": {
+        "T@Switch was packaged well and protected": {
+          "+": [
+            15
+          ]
+        },
+        "U@Missing small screws for cover plate": {
+          "-": [
+            7
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Connectivity": {
+        "a@Works with Home Assistant via Zigbee correctly for on/off commands": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Turns on and off depending on device load": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@Connected quickly and easily to M3 Hub": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@Won't stay connected to Zigbee": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@Disconnects after 10 minutes": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "f@Zero reliability": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "g@Generally reliable": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "h@Once in a while goes offline": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "i@Works with home assistant automation": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "j@Connect to SmartThings with ease": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "k@Requires Aqara hub now": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "l@Operate flawlessly": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "m@Eventually flashes red meaning lost connection": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "n@Does not act as router/repeater": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "o@Will not find switch when trying to add": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "p@Only connects when hub is 2 inches away": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "q@Paired once but could never connect to Zigbee after": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "r@Becomes unpaired from Home Assistant when button stuck": {
+          "-": {
+            "H": [
+              34
+            ]
+          }
+        },
+        "s@Not as fast as other switches, takes half second to react": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "t@Would disconnect at random": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "u@Struggle to get it to connect again": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "v@Easy to pair and setup with Home Assistant": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "w@Constantly disconnects from hub 20 ft away": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "x@Fall offline about once a month": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "y@Disconnect every few weeks due to non-standard zigbee implementation": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "z@Will not connect directly to HomeKit": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "aa@Works even without neutral wire": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "bb@Works perfectly": {
+          "+": {
+            "?": [
+              5,
+              9
+            ]
+          }
+        },
+        "cc@Reliable": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "dd@Works like a charm": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ee@Works excellent": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ff@Can turn on/off through voice command": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "gg@Cannot be turned on/off on schedule": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "hh@Maintains light switch functionality as before": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "ii@Only sometimes makes outlet come on": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "jj@Turns back off after few seconds": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "kk@Switch continually turns lights on": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ll@Turns lights immediately back on when turned off": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "mm@Supports decoupled smart bulb mode": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "nn@Doesn't allow direct binding to bulbs": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "oo@Works as expected": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "pp@Works perfectly fine": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "qq@Died from static electric shock": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "rr@Vulnerable to static electricity": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ss@Stopped working after two months": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "tt@Stopped working after 1 year and 4 months": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "uu@Lasted only 1.5 years": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "vv@Suddenly bricked after 16 months": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "ww@Shorted out and tripped breaker after three weeks": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "xx@Easy to install": {
+          "+": {
+            "?": [
+              9,
+              11,
+              12,
+              30
+            ]
+          }
+        },
+        "yy@Installation was easy": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "zz@Easy to connect to old wiring": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "aaa@Installation was quick and trouble-free": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "bbb@Super easy to install": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "Setup": {
+        "ccc@Easy to connect to Aqara app": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "ddd@Setup was a little clunky, had to repeat steps": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "eee@Easy setup": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "fff@Easy to pair and setup": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "LED Light Behavior": {
+        "ggg@Sends energy to fixture when switched off": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "hhh@LED fixtures receive enough power to flicker when off": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "iii@Doesn't make Hue lights flash like disco when off": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "jjj@Very noticeable flickering of light": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home Assistant Integration": {
+        "-": {
+          "a": [
+            0
+          ],
+          "d": [
+            4
+          ],
+          "e": [
+            4
+          ],
+          "f": [
+            4
+          ],
+          "r": [
+            34
+          ],
+          "q": [
+            30
+          ],
+          "y": [
+            43
+          ]
+        }
+      },
+      "Apple HomeKit Smart Home Setup": {
+        "+": {
+          "aa": [
+            1
+          ]
+        }
+      },
+      "Pool Lights Control": {
+        "+": {
+          "aa": [
+            2
+          ]
+        }
+      },
+      "Old Houses with Limited Wiring": {
+        "+": {
+          "aa": [
+            3
+          ],
+          "zz": [
+            3
+          ]
+        }
+      },
+      "SmartThings Integration": {
+        "+": {
+          "j": [
+            13
+          ],
+          "v": [
+            38
+          ]
+        }
+      },
+      "Kitchen Light Control": {
+        "+": {
+          "bb": [
+            15
+          ]
+        }
+      },
+      "Dining and Lounge Light Control": {
+        "+": {
+          "l": [
+            16
+          ]
+        }
+      },
+      "Alexa Integration": {
+        "+": {
+          "ff": [
+            11
+          ],
+          "m": [
+            20
+          ]
+        },
+        "-": {
+          "gg": [
+            11
+          ]
+        }
+      },
+      "Zigbee2MQTT with Home Assistant": {
+        "+": {
+          "i": [
+            18
+          ]
+        },
+        "-": {
+          "x": [
+            42
+          ],
+          "y": [
+            43
+          ]
+        }
+      },
+      "Houses with No Neutral and No Ground": {
+        "+": {
+          "aa": [
+            20
+          ]
+        }
+      },
+      "Knob and Tube Wiring": {
+        "+": {
+          "aa": [
+            21
+          ]
+        }
+      },
+      "Hubitat Integration": {
+        "+": {
+          "?": [
+            28
+          ]
+        }
+      },
+      "19th Century Home Wiring": {
+        "+": {
+          "aa": [
+            46
+          ]
+        }
+      },
+      "Garage Lighting Control": {
+        "+": {
+          "oo": [
+            40
+          ]
+        }
+      },
+      "LED Light Control": {
+        "-": {
+          "ggg": [
+            34
+          ],
+          "hhh": [
+            34
+          ]
+        }
+      },
+      "Hue Bulbs Control": {
+        "+": {
+          "iii": [
+            26
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:28.003588"
+}

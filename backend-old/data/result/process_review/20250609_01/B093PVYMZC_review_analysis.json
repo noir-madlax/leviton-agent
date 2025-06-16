@@ -1,0 +1,398 @@
+{
+  "product_title": "ELEGRP Decorator Triple Rocker Light Switch, Three Single Pole Electrical Paddle Switch, 15A 120V, in-Wall On/Off Switch, Self-grounding, Wall Plate is Included, UL Listed (1 Pack, Glossy White)",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 41,
+  "review_analysis": {
+    "phy": {
+      "switches": {
+        "A@switches are very flimsy": {
+          "-": [
+            1
+          ]
+        },
+        "B@switches have nice tension": {
+          "+": [
+            33
+          ]
+        },
+        "C@switches feel nice": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "plastic": {
+        "D@made of very delicate plastic": {
+          "-": [
+            25
+          ]
+        }
+      },
+      "size": {
+        "E@extremely small": {
+          "-": [
+            14
+          ]
+        },
+        "F@size of middle finger": {
+          "-": [
+            26
+          ]
+        },
+        "G@single switch size": {
+          "-": [
+            27
+          ]
+        }
+      },
+      "face plate": {
+        "H@face plate smaller than expected": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "material": {
+        "I@durable material": {
+          "+": [
+            9
+          ]
+        },
+        "J@good material": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "appearance": {
+        "K@looks very nice and modern": {
+          "+": [
+            11
+          ]
+        },
+        "L@clean look": {
+          "+": [
+            28
+          ]
+        },
+        "M@simple and clean design": {
+          "+": [
+            23
+          ]
+        },
+        "N@very attractive": {
+          "+": [
+            34
+          ]
+        },
+        "O@nice looking": {
+          "+": [
+            35
+          ]
+        },
+        "P@looks good": {
+          "+": [
+            3,
+            18
+          ]
+        }
+      },
+      "terminals": {
+        "Q@press-in connections are really nice": {
+          "+": [
+            12
+          ]
+        },
+        "R@easy to install terminals": {
+          "+": [
+            21
+          ]
+        },
+        "S@wires are easy to terminate": {
+          "+": [
+            35
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@didn't last a year": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@center switch broke after 10 months": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@plastic switches broke after a month": {
+          "-": {
+            "D": [
+              25
+            ]
+          }
+        },
+        "d@one of switches failed after less than dozen cycles": {
+          "-": {
+            "A": [
+              1
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "e@all switches functioned": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "f@one of three integral switches defective": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "g@sparked when turned on": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "h@switch shorted open": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "i@switch failed short causing continuous operation": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "j@switch was bad when installed": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "k@works great": {
+          "+": {
+            "?": [
+              12,
+              16,
+              18,
+              20,
+              33,
+              38
+            ]
+          }
+        },
+        "l@worked perfectly": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "m@works fine": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "n@works well": {
+          "+": {
+            "?": [
+              16,
+              34
+            ]
+          }
+        },
+        "o@works nicely": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "p@didn't work in 60 year old house": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "q@LED light occasionally flicker": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "r@engaging fan makes LED shut off then come back on": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "installation": {
+        "s@easy to install": {
+          "+": {
+            "Q,R,S": [
+              3,
+              8,
+              12,
+              19,
+              20,
+              21,
+              31,
+              33,
+              35
+            ]
+          }
+        },
+        "t@fit just right": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "u@easy to wire": {
+          "+": {
+            "S": [
+              23
+            ]
+          }
+        }
+      },
+      "quality": {
+        "v@higher quality than expected": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "w@lower quality than Leviton": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "x@cheap and fragile": {
+          "-": {
+            "D": [
+              25
+            ]
+          }
+        },
+        "y@cheap, shoddy, and dangerous": {
+          "-": {
+            "A": [
+              1
+            ]
+          }
+        },
+        "z@good quality": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "temperature": {
+        "aa@won't get warm": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom electric light/fan/heater": {
+        "+": {
+          "e": [
+            1
+          ]
+        },
+        "-": {
+          "d,h,i": [
+            1
+          ]
+        }
+      },
+      "bathroom fan/light/nightlight control": {
+        "+": {
+          "k": [
+            7
+          ]
+        }
+      },
+      "bathroom vent/light/fan": {
+        "+": {
+          "n": [
+            16
+          ]
+        }
+      },
+      "bathroom exhaust fan/heater/light combo": {
+        "+": {
+          "k": [
+            18
+          ]
+        }
+      },
+      "Broan bathroom fan installation": {
+        "+": {
+          "?": [
+            24
+          ]
+        }
+      },
+      "bathroom lights and fan on separate switches": {
+        "+": {
+          "?": [
+            40
+          ]
+        }
+      },
+      "controlling lights": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "three pole light switch replacement": {
+        "+": {
+          "m": [
+            21
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:55.683491"
+}

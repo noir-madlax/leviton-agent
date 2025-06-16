@@ -1,0 +1,12 @@
+=== RETRY REQUIRED ===
+
+{error_details}
+
+{content_sections}
+
+Please analyze the errors above and provide a corrected response that addresses all the issues. Make sure to:
+- Follow the exact JSON schema required
+- Fix all validation errors listed above
+- Provide complete and valid JSON
+
+=== END RETRY INSTRUCTIONS === 

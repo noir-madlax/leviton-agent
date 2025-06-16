@@ -1,0 +1,179 @@
+{
+  "title": "Feit Electric Wi-Fi Smart Dimmer Light Switch, 3 Pack, White",
+  "location": "United Kingdom",
+  "product_information": {
+    "Product Dimensions": "4.2 x 2.9 x 1.5 inches; 1.3 Pounds",
+    "Item model number": "do not apply",
+    "Date First Available": "May 23, 2024",
+    "Manufacturer": "Feit Electric",
+    "ASIN": "B0D4YFCTHV",
+    "Best Sellers Rank": "Best Sellers Rank:  #21,764 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement)    #59 in Dimmer Switches       #59 in Dimmer Switches",
+    "Customer Reviews": "#59 in Dimmer Switches"
+  },
+  "brand": "Feit Electric Store",
+  "brand_url": "/stores/FeitElectricCompany/page/4ED3FB57-4257-4D17-9520-9629D4583C8F?is_byline_deeplink=true&deeplink=4ED3FB57-4257-4D17-9520-9629D4583C8F&redirect_store_id=4ED3FB57-4257-4D17-9520-9629D4583C8F&lp_asin=B0D4YFCTHV&ref_=ast_bln&store_ref=bl_ast_dp_brandLogo_sto",
+  "description": "",
+  "price": "$35.75",
+  "list_price": "$35.75",
+  "exact_price": "",
+  "other_used_pricing": "",
+  "price_symbol": "$",
+  "is_prime_exclusive": false,
+  "is_frequently_returned": false,
+  "number_of_people_bought": "500+ bought in past month",
+  "shipping_info": "$9.30 Monday, June 16 ",
+  "availability_status": "In Stock",
+  "aplus": true,
+  "previous_price": "",
+  "is_coupon_exists": false,
+  "coupon_text": "",
+  "main_image": "https://m.media-amazon.com/images/I/41KQCcTF-gL._SY445_SX342_QL70_FMwebp_.jpg",
+  "images_of_specified_asin": [
+    "https://m.media-amazon.com/images/I/61hzyyKU4uL._SL1196_.jpg",
+    "https://m.media-amazon.com/images/I/61SiMZDHLFL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/71VJC-MDAfL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61BLbH2WVSL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61xW6b+NgpL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61NrclzmLeL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61xOL1IqnqL._SL1500_.jpg"
+  ],
+  "images": [
+    "https://m.media-amazon.com/images/I/61hzyyKU4uL._SL1196_.jpg",
+    "https://m.media-amazon.com/images/I/61SiMZDHLFL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/71VJC-MDAfL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61BLbH2WVSL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61xW6b+NgpL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61NrclzmLeL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/61xOL1IqnqL._SL1500_.jpg"
+  ],
+  "number_of_videos": 0,
+  "product_category": "Tools & Home Improvement›Electrical›Switches & Dimmers›Wall Switches›Dimmer Switches",
+  "category_id": "507840",
+  "average_rating": "4.6",
+  "feature_bullets": [],
+  "total_reviews": "88 ratings",
+  "total_answered_questions": "",
+  "other_sellers": [],
+  "customization_options": {
+    "color": [],
+    "size": [],
+    "style": []
+  },
+  "merchant_info": "MSC Distribution",
+  "ships_from": "AmazonAmazonShipsfromAmazon",
+  "sold_by": "MSC Distribution",
+  "author": {
+    "title": "",
+    "description": "var postCsmCountMetric = function postCountMetric(metricName, value) {if (window.ue) {ue.count(metricName, value); } }; try {P.when(\"A\").execute('vse-vw-dp-card', function(A) {var widget = A.$('.vse-vw-dp' ); if (widget.length) {var isMetricRecorded = false; var widgetInViewMetrics = function widgetInViewMetrics () {if (isMetricRecorded) {A.off('scroll', widgetInViewMetrics); return; } if (A.onScreen(widget, 0)) {var requestId = window.ue ? window.ue.id : ''; if (false) {var successCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestSuccess:vse-vw-dp-card', 1); }; var errorCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestError:vse-vw-dp-card', 1); }; postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequest:vse-vw-dp-card', 1); var payload = {weblabNames: [], requestId: requestId }; A.ajax(\"/vap/ew/weblabtrigger/batch/v2\", {params: payload, paramsFormat: 'json', crossDomain: true, method: 'POST', withCredentials: true, contentType: 'application/json', success: successCallback, error: errorCallback }); isMetricRecorded = true; } if (false) {if (window.ue.trigger) {var triggerInCsmWeblab = ''; if (triggerInCsmWeblab.indexOf(':') !== -1) {var weblabNameAndTreatment = triggerInCsmWeblab.split(':'); window.ue.trigger(weblabNameAndTreatment[0], weblabNameAndTreatment[1]); postCsmCountMetric('ive:csm:widgetScrolledInView:csmWeblabTrigger:vse-vw-dp-card:', 1); } } } } }; A.on('scroll', widgetInViewMetrics); } }); } catch (exception) {postCsmCountMetric('vse-vw-dp-card' + 'weblabTrigger:exception'); if (window.ueLogError) {var message = 'Exception when trigger Weblab on scroll into the view '; if (false) {message += ''; } var additionalInfo = {logLevel: 'ERROR', attribution: 'ive-trigger-on-scroll', message: message }; window.ueLogError(exception, additionalInfo); } }VideosPage 1 of 1Start OverPrevious pageVideos for this product<img alt=\"Video Widget Card\" src=\"https://m.media-amazon.com/images/I/31LPWuH4fQL._CR1,0,638,360_SR342,193_.jpg\"/><img alt=\"Video Widget Card\" src=\"https://m.media-amazon.com/images/I/31LPWuH4fQL._CR1,0,638,360_SR342,193_.jpg\" height=\"163px\" width=\"292px\"/> 0:44 <img alt=\"Video Widget Video Title Section\" src=\"https://m.media-amazon.com/images/I/31LPWuH4fQL._CR1,0,638,360_SR342,193_CR0,126,342,67_.jpg\" height=\"67px\" width=\"292px\"/><img src=\"https://m.media-amazon.com/images/I/61UCG0MXm7L._CR31,6,250,250_._FMjpg_._SL34_.jpg\"/>Connect Your Smart Devicers To The Feit App - Easy! 🌟 Toolsdoctor Videos for this product<img alt=\"Video Widget Card\" src=\"https://m.media-amazon.com/images/I/615hZ+xtbFL._CR1,0,638,360_SR342,193_.jpg\"/><img alt=\"Video Widget Card\" src=\"https://m.media-amazon.com/images/I/615hZ+xtbFL._CR1,0,638,360_SR342,193_.jpg\" height=\"163px\" width=\"292px\"/> 1:49 <img alt=\"Video Widget Video Title Section\" src=\"https://m.media-amazon.com/images/I/615hZ+xtbFL._CR1,0,638,360_SR342,193_CR0,126,342,67_.jpg\" height=\"67px\" width=\"292px\"/><img src=\"https://m.media-amazon.com/images/I/B1Mrm-7HsRL._CR0,0,3678,3678_._FMjpg_._SL34_.jpg\"/>HONEST REVIEW of the Feit Electric WiFi Smart Dimmer 3 Pack Dan and Doby ⭐️⭐️⭐️⭐️⭐️ Next pageUpload your video"
+  },
+  "customers_freuqently_viewed": [],
+  "products_related_to_this_item": [],
+  "customer_who_bought_this_item_also_bought": [],
+  "customers_say": "Customers like the dimmer switch's brightness features, with one mentioning the LEDs that show how bright the dimmer is set. The functionality receives positive feedback, with one customer noting its reliability.AI Generated from the text of customer reviews",
+  "customer_sentiments": [
+    {
+      "title": "Brightness",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Functionality",
+      "sentiment": "POSITIVE"
+    }
+  ],
+  "ratings_distribution": [
+    {
+      "rating": 5,
+      "distribution": "82"
+    },
+    {
+      "rating": 4,
+      "distribution": "8"
+    },
+    {
+      "rating": 3,
+      "distribution": "4"
+    },
+    {
+      "rating": 2,
+      "distribution": "3"
+    },
+    {
+      "rating": 1,
+      "distribution": "3"
+    }
+  ],
+  "customer_reviews": [
+    {
+      "customer_name": "Fix It Friend",
+      "customer_profile": "/gp/profile/amzn1.account.AGU7RQE7RULP57LOHGZED6NGPA7A/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsI'm Very impressed",
+      "date": "Reviewed in the United States on June 3, 2025",
+      "review_snippet": "How could it be this easy...I spent way too much money on a new patio. And then at night when I flipped on my outdoor floodlights you would think I was on a nighttime airstrip. Too bright for comfort when lounging on the patio.Ahhh... I need a dimmer that I can control with my phone I said to myself.So I ordered the FEIT dimmer as can be controlled by their phone AP. or at the actual new FEIT switch. Easy install of the switch. Easy download of the phone AP. It works !Two tips for users:Tip 1) With my first attempt to dim either at the switch or with the phone AP half of my 6 LED Floodlights flickered like crazy. I checked the bulbs and they were stamped \"dimmable\" I was suspicious though and ordered new LED FEIT (brand) floodlight bulbs. Everything works great now.Tip 2) The phone AP dims the lights with a slide bar that moves up and down. Slide down and the lights dim. Up they brighten. I had it in my head that when I fully dimmed the lights the lights would go out. Wrong. On that same phone AP slide bar image is a blue button that turns the lights on or off with a push of the buttonAt this stage I'm trying to find more uses for this great switch."
+    },
+    {
+      "customer_name": "Donald John M.",
+      "customer_profile": "/gp/profile/amzn1.account.AE4RFWMRTG7PQNKSNDQXCURNEOFQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsWorks great",
+      "date": "Reviewed in the United States on May 27, 2025",
+      "review_snippet": "Love these. You can control all of your lights with your phone. Also you can have them turn on or off automatically to eliminate timers."
+    },
+    {
+      "customer_name": "TR",
+      "customer_profile": "/gp/profile/amzn1.account.AHBOPYNCAJVSYGMDNGWXQFSNDEWQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsMaybe 4.5 stars",
+      "date": "Reviewed in the United States on April 14, 2025",
+      "review_snippet": "These are almost perfect. Sometimes a little hard to install, sometimes tricky to connect to WiFi, sometimes challenging to program but overall a solid WiFi light switch that works for either single pole or 3-way and connects easily to Alexa and Google. Now if we can only get to a place where everything is plug and play I will be happy to never have to troubleshoot again."
+    },
+    {
+      "customer_name": "Robert H.",
+      "customer_profile": "/gp/profile/amzn1.account.AHFUJFOR2IUEZ7CMFUESI6NH7PRQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsIt’s a switch",
+      "date": "Reviewed in the United States on April 26, 2025",
+      "review_snippet": "Compatible with Alexa and easy to set up"
+    },
+    {
+      "customer_name": "Sasi Kiran Parasa",
+      "customer_profile": "/gp/profile/amzn1.account.AHQSSVB6GZCSETYW6D3P5NSBD4UA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsSmart dimmer",
+      "date": "Reviewed in the United States on April 24, 2025",
+      "review_snippet": "Dimming is good"
+    },
+    {
+      "customer_name": "C. Sol",
+      "customer_profile": "/gp/profile/amzn1.account.AHF4WNEPQX3J3HRAGZLHML4UXXVQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "4.0 out of 5 stars",
+      "review_title": "4.0 out of 5 starsNot Dim enough.",
+      "date": "Reviewed in the United States on April 30, 2025",
+      "review_snippet": "The switches work great using the App or Alexa to control them,  but they don't dim the lights enough.  On lowest setting the lights are still too bright."
+    },
+    {
+      "customer_name": "Daniel Hoffman",
+      "customer_profile": "/gp/profile/amzn1.account.AH7TXFZZ62ZJ3DHSLQI7BAYIEOLA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsWiFi dimmable light switch",
+      "date": "Reviewed in the United States on March 19, 2025",
+      "review_snippet": "Absolutely love these. They work with \"Hey Google\"The low level is adjustable and I really like that I can turn the lights off from anywhere since my family leaves the lights on."
+    },
+    {
+      "customer_name": "Amazon Customer",
+      "customer_profile": "/gp/profile/amzn1.account.AF4P56NZQCUKIMZPY6IX4CZLYYXA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsBest smart dimmer",
+      "date": "Reviewed in the United States on October 5, 2024",
+      "review_snippet": "I was an early adopter in the smart switch space and have probably installed upwards of 40 smart switches in my home since 2015. Starting with the Z-wave/Zigbee/Smartthings mess to the much better wifi versions that everyone uses now. These are the best I have used. No wires coming out of the back and they aren't too deep, so they fit in your box. They also have dedicated dimming functions and LEDs showing how bright the dimmer is set. Easy to connect to wifi. These are the best smart switches in have used. If I was going to design the perfect smart switch, I would use this back side design with the treatlife dimmer front. (The back side of the treatlife is huge and often won't fit in the box with the wires.)"
+    }
+  ]
+}

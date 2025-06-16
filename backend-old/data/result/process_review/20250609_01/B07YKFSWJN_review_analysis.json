@@ -1,0 +1,710 @@
+{
+  "product_title": "TREATLIFE Smart Dimmer Switch 4 Pack, Smart Light Switch Works with Alexa and Google Assistant, Neutral Wire Needed, 2.4Ghz Wi-Fi, Schedule, Remote Control, Single Pole, FCC Listed",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks nice": {
+          "+": [
+            5,
+            6
+          ]
+        },
+        "B@looks great": {
+          "+": [
+            6
+          ]
+        },
+        "C@switch covers are smaller than hole in the wall": {
+          "-": [
+            40
+          ]
+        }
+      },
+      "labeling": {
+        "D@wire labeling": {
+          "+": [
+            27
+          ]
+        },
+        "E@wiring is incorrectly labelled on back": {
+          "-": [
+            47
+          ]
+        }
+      },
+      "hardware": {
+        "F@hardware": {
+          "+": [
+            27
+          ]
+        },
+        "G@burned-out ESP8266 boards": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "packaging": {
+        "H@box condition looks as if someone has returned": {
+          "-": [
+            11
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@work pretty well": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@will no longer connect to wifi": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "c@stopped connecting to Wi-Fi": {
+          "-": {
+            "G": [
+              9
+            ]
+          }
+        },
+        "d@keep going off-line": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "e@DISCONNECTS ON THE REGULAR": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "f@fought several to keep them on the network": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "g@rarely ever lose signal": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "h@internal WiFi is kaput": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "i@constantly disconnect and impossible to reconnect": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "j@some switches would show up on WiFi system": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "k@dims great": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "l@dimmed all the lights in the house": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "m@lights would randomly go to the dimmest setting": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "n@doesn't get super dim": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "o@would only dim to about 75%": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "p@dimmed LED bulbs perfectly": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "q@can't dim the lights": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "r@lights flicker, anything below 100% and it will randomly flick up to 100% constantly": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "s@switches have been dying": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "t@couple of them went bad in the first year": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "u@all of them have been replaced in the amount of 3 yrs": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "v@won't even go into pairing mode": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "w@one of the relays has failed": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "x@function of the switches started get crazy": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "y@some switches turn on automatically after power outages": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "z@some of them just turn on repeatedly right after I turn them off": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "aa@switches life spans are about 3 years": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ab@most of them wouldn't work correctly": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ac@switches have been dying": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "ad@lights started flickering when the switch was off": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ae@worked for a very short time and then stopped working": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "af@high failure rate": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "ag@2-3 of them go out inexplicably": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "ah@2 have failed": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "ai@one however was defective and would constantly flash the lights": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "aj@one of the switches did stop working within a few months": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "ak@one of them no longer turns on": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "al@started to go bad, they started flickering": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "am@lights would flicker and effect other switches in the house": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        }
+      },
+      "installation": {
+        "an@fairly easy to install": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "ao@easy to install": {
+          "+": {
+            "?": [
+              29,
+              44
+            ]
+          }
+        },
+        "ap@quick install": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "aq@install was very easy": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "ar@easy to install": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "as@installation may not be for beginners": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "at@work great": {
+          "+": {
+            "?": [
+              3,
+              12
+            ]
+          }
+        },
+        "au@still work manually": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "av@works as advertised": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "aw@flawless day-to-day operation": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "ax@integrates well": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "interference": {
+        "ay@they interfere with each other": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "az@one dimmer will dim another dimmer on the same line": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "ba@neutral line has a voltage leak": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "bb@leaks current": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "bc@will get strange behavior on all your other switches": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "bd@turned on my living room lights when my outdoor light was turned on": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "be@you would turn on a switch and it would turn on another light in another room": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        }
+      },
+      "heat_generation": {
+        "bf@became very hot when powered": {
+          "-": {
+            "G": [
+              9
+            ]
+          }
+        },
+        "bg@became hot to the touch": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "app_performance": {
+        "bh@it will randomly turn on another switch": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "bi@app consistently has done this": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "bj@devices also have issues when you try to adjust the timer/scheduling settings": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_integration": {
+        "+": {
+          "a": [
+            0,
+            4,
+            12,
+            19,
+            21,
+            25,
+            27,
+            28,
+            30,
+            32,
+            44
+          ],
+          "k": [
+            6
+          ],
+          "at": [
+            12
+          ],
+          "ax": [
+            25
+          ]
+        },
+        "-": {
+          "b": [
+            7
+          ],
+          "d": [
+            13
+          ],
+          "e": [
+            20
+          ],
+          "f": [
+            23
+          ],
+          "h": [
+            26
+          ],
+          "i": [
+            39
+          ]
+        }
+      },
+      "whole_house_installation": {
+        "+": {
+          "a": [
+            0,
+            4,
+            23,
+            25
+          ],
+          "at": [
+            3
+          ]
+        },
+        "-": {
+          "l": [
+            2
+          ],
+          "s": [
+            4
+          ],
+          "t": [
+            5
+          ],
+          "u": [
+            5
+          ],
+          "ab": [
+            14
+          ],
+          "ac": [
+            15
+          ],
+          "af": [
+            23
+          ],
+          "ag": [
+            25
+          ],
+          "am": [
+            49
+          ],
+          "ay": [
+            16
+          ],
+          "bb": [
+            48
+          ]
+        }
+      },
+      "3-way_switch_configuration": {
+        "+": {
+          "at": [
+            12
+          ],
+          "av": [
+            43
+          ]
+        },
+        "-": {
+          "m": [
+            8
+          ],
+          "v": [
+            8
+          ]
+        }
+      },
+      "recessed_lighting": {
+        "+": {
+          "k": [
+            6
+          ],
+          "at": [
+            32,
+            46
+          ]
+        },
+        "-": {
+          "q": [
+            40
+          ],
+          "r": [
+            40
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "a": [
+            4,
+            19,
+            21,
+            32
+          ],
+          "k": [
+            6
+          ],
+          "at": [
+            32
+          ]
+        },
+        "-": {
+          "ah": [
+            26
+          ]
+        }
+      },
+      "dimming_LED_bulbs": {
+        "+": {
+          "p": [
+            28
+          ]
+        },
+        "-": {
+          "n": [
+            17
+          ],
+          "o": [
+            18
+          ],
+          "q": [
+            40
+          ],
+          "r": [
+            40
+          ]
+        }
+      },
+      "multiple_dimmers_on_same_circuit": {
+        "-": {
+          "ay": [
+            16
+          ],
+          "az": [
+            16
+          ],
+          "ba": [
+            16
+          ],
+          "ab": [
+            14
+          ],
+          "bb": [
+            48
+          ],
+          "bc": [
+            48
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:42.606576"
+}

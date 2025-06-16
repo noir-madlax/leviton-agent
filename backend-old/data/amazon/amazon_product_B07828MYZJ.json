@@ -1,0 +1,196 @@
+{
+  "title": "Zooz Momentary Push-Button in-Wall Switch ZAC99",
+  "location": "Delivering to Dallas 75270",
+  "product_information": {
+    "Is Discontinued By Manufacturer": "No",
+    "Package Dimensions": "4.2 x 1.7 x 1.5 inches; 2.4 ounces",
+    "Date First Available": "December 9, 2017",
+    "Manufacturer": "ZOOZ",
+    "ASIN": "B07828MYZJ",
+    "Best Sellers Rank": "Best Sellers Rank:  #175,704 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement)    #306 in Dimmer Switches       #306 in Dimmer Switches",
+    "Customer Reviews": "#306 in Dimmer Switches"
+  },
+  "brand": "ZOOZ Store",
+  "brand_url": "/stores/ZOOZ/page/CFDB1093-9B9A-4874-BFA9-7F7D81E511E2?is_byline_deeplink=true&deeplink=CFDB1093-9B9A-4874-BFA9-7F7D81E511E2&redirect_store_id=CFDB1093-9B9A-4874-BFA9-7F7D81E511E2&lp_asin=B07828MYZJ&ref_=ast_bln",
+  "description": "Great accessory switch whenever push-button control is requiredSPECIFICATIONS:Model Number: ZAC99Power: 120 VAC, 60 HzMaximum Load: 15 AOperating Temperature: 32-104° F (0-40° C)Dimensions: 4” x 1.5” x 1.4”Installation and Use: Indoor only Use it with these Z-Wave dimmer modules for remote control Aeotec By Aeon Labs Z-Wave Plus Nano Dimmer ZW111 (no neutral needed!)Fibaro Z-Wave Plus Dimmer 2 FGD-212 (no neutral needed!)Qubino Z-Wave Plus Flush Dimmer ZMNHDD3Qubino Z-Wave Plus Flush RGBW Dimmer Module ZMNHWD3",
+  "price": "$12.95",
+  "list_price": "$12.95",
+  "exact_price": "",
+  "other_used_pricing": "",
+  "price_symbol": "$",
+  "is_prime_exclusive": false,
+  "is_frequently_returned": true,
+  "number_of_people_bought": "50+ bought in past month",
+  "shipping_info": "FREE Wednesday, June 11 on orders shipped by Amazon over $35",
+  "availability_status": "In Stock",
+  "aplus": true,
+  "previous_price": "",
+  "is_coupon_exists": false,
+  "coupon_text": "",
+  "main_image": "https://m.media-amazon.com/images/I/31zKL9vXI+L._SX342_SY445_.jpg",
+  "images_of_specified_asin": [
+    "https://m.media-amazon.com/images/I/61CW9bLdn2L._SL1500_.jpg"
+  ],
+  "images": [
+    "https://m.media-amazon.com/images/I/61CW9bLdn2L._SL1500_.jpg"
+  ],
+  "number_of_videos": 0,
+  "product_category": "Tools & Home Improvement›Electrical›Switches & Dimmers›Wall Switches›Dimmer Switches",
+  "category_id": "507840",
+  "average_rating": "4.8",
+  "feature_bullets": [
+    "VERSATILE APPLICATION: Push-button control for garbage disposals. Can be used with Z-Wave dimmer modules for local dimming control (NOTE: THIS IS NOT A Z-WAVE DEVICE).",
+    "MOMENTARY CONTROL: Press and hold to trigger the motor in your garbage disposal, release to stop. Tap to turn on the light, press and hold to adjust brightness, tap again to turn off the light when using with a Z-Wave dimmer module.",
+    "FLEXIBLE INSTALLATION: Accepts 14 AWG and 12 AWG wires. Works with loads up to 15 A.",
+    "EASY FIT: Slim design for extra room in the switch box."
+  ],
+  "total_reviews": "143 ratings",
+  "total_answered_questions": "",
+  "other_sellers": [],
+  "customization_options": {
+    "color": [],
+    "size": [],
+    "style": []
+  },
+  "merchant_info": "Z-Wave Store",
+  "ships_from": "AmazonAmazonShipsfromAmazon",
+  "sold_by": "Z-Wave Store",
+  "author": {
+    "title": "",
+    "description": "var postCsmCountMetric = function postCountMetric(metricName, value) {if (window.ue) {ue.count(metricName, value); } }; try {P.when(\"A\").execute('vse-vw-dp-card', function(A) {var widget = A.$('.vse-vw-dp' ); if (widget.length) {var isMetricRecorded = false; var widgetInViewMetrics = function widgetInViewMetrics () {if (isMetricRecorded) {A.off('scroll', widgetInViewMetrics); return; } if (A.onScreen(widget, 0)) {var requestId = window.ue ? window.ue.id : ''; if (false) {var successCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestSuccess:vse-vw-dp-card', 1); }; var errorCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestError:vse-vw-dp-card', 1); }; postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequest:vse-vw-dp-card', 1); var payload = {weblabNames: [], requestId: requestId }; A.ajax(\"/vap/ew/weblabtrigger/batch/v2\", {params: payload, paramsFormat: 'json', crossDomain: true, method: 'POST', withCredentials: true, contentType: 'application/json', success: successCallback, error: errorCallback }); isMetricRecorded = true; } if (false) {if (window.ue.trigger) {var triggerInCsmWeblab = ''; if (triggerInCsmWeblab.indexOf(':') !== -1) {var weblabNameAndTreatment = triggerInCsmWeblab.split(':'); window.ue.trigger(weblabNameAndTreatment[0], weblabNameAndTreatment[1]); postCsmCountMetric('ive:csm:widgetScrolledInView:csmWeblabTrigger:vse-vw-dp-card:', 1); } } } } }; A.on('scroll', widgetInViewMetrics); } }); } catch (exception) {postCsmCountMetric('vse-vw-dp-card' + 'weblabTrigger:exception'); if (window.ueLogError) {var message = 'Exception when trigger Weblab on scroll into the view '; if (false) {message += ''; } var additionalInfo = {logLevel: 'ERROR', attribution: 'ive-trigger-on-scroll', message: message }; window.ueLogError(exception, additionalInfo); } } VideosHelp others learn more about this product by uploading a video!Upload your videoBrands in this category on AmazonSponsoredRocker Paddle Smart Switch(function (w, id) {if (w && id && Date) {w.sbxGwentClient = w.sbxGwentClient || {}; w.sbxGwentClient[id] = Date.now(); } })(window, \"0s2SLo26OWHs5OuKCu3VSQ\");Gate Opener Accessories(function (w, id) {if (w && id && Date) {w.sbxGwentClient = w.sbxGwentClient || {}; w.sbxGwentClient[id] = Date.now(); } })(window, \"b3Qbsk9Gm.z-.Wbv342RIw\");Polarity reverse switch(function (w, id) {if (w && id && Date) {w.sbxGwentClient = w.sbxGwentClient || {}; w.sbxGwentClient[id] = Date.now(); } })(window, \"EvJea2Xd5nlACrDgxLk9SQ\");Electrical Replacement Plug(function (w, id) {if (w && id && Date) {w.sbxGwentClient = w.sbxGwentClient || {}; w.sbxGwentClient[id] = Date.now(); } })(window, \"TgKcz83VwUf9OEzVT57HCw\");"
+  },
+  "customers_freuqently_viewed": [],
+  "products_related_to_this_item": [],
+  "customer_who_bought_this_item_also_bought": [],
+  "customers_say": "Customers find the switch works well, with one mentioning it's great for hot water recirculation. They appreciate its solid build quality, nice solid click, and easy installation, with one noting it requires less effort than the Legrand version. Customers like its appearance and consider it cheaper priced, with one highlighting its suitability for garages.AI Generated from the text of customer reviews",
+  "customer_sentiments": [
+    {
+      "title": "Functionality",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Appearance",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Ease of installation",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Switch functionality",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Build quality",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Utility",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Click strength",
+      "sentiment": "POSITIVE"
+    },
+    {
+      "title": "Price range",
+      "sentiment": "POSITIVE"
+    }
+  ],
+  "ratings_distribution": [
+    {
+      "rating": 5,
+      "distribution": "87"
+    },
+    {
+      "rating": 4,
+      "distribution": "7"
+    },
+    {
+      "rating": 3,
+      "distribution": "5"
+    },
+    {
+      "rating": 2,
+      "distribution": "0"
+    },
+    {
+      "rating": 1,
+      "distribution": "1"
+    }
+  ],
+  "customer_reviews": [
+    {
+      "customer_name": "GREG ZUPAN",
+      "customer_profile": "/gp/profile/amzn1.account.AFKKVL6YHDRNLO5IXHXO7PCRIR2A/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsExactly what I needed for disposal with sturdy, clicking design",
+      "date": "Reviewed in the United States on June 8, 2024",
+      "review_snippet": "This 120v switch was just what I wanted, delivered promptly to improve the kitchen's safety.  Strong narrow design, with spring auto shutoff switching that works well with a kitchen disposal unit. I was very satisfied with this product."
+    },
+    {
+      "customer_name": "CEEmomCEEmom",
+      "customer_profile": "/gp/profile/amzn1.account.AEFWAYQS5BSSVC35RSPII4H4ET5A/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsWorks Great as a Hot Water Recirculation Button",
+      "date": "Reviewed in the United States on February 3, 2024",
+      "review_snippet": "I have one of these next to every sink in the house to trigger my on-demand hot water heater's recirculation feature.  They fit in a Decora Wall Plate so they look great.  I used a label printer so mark them as hot water.  The recirculation system is 12V DC, daisy-chained wire that links all the sinks, showers, tubs, washing machines, etc. in the house.  Any momentary contact triggers the hot water heater's recirculation feature.The recirculation feature eliminates running cold water down the drain while waiting for hot water to arrive by filling the pipes with hot water before you open the tap."
+    },
+    {
+      "customer_name": "JV",
+      "customer_profile": "/gp/profile/amzn1.account.AFGZLN5T4LJIH7JZ3K2UPUYVJCJA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsGreat Switch",
+      "date": "Reviewed in the United States on April 12, 2019",
+      "review_snippet": "I got this to use for our Sink Waste Disposer.  It is easy to install, goes in just like any other light switch.  I looks like a standard Decora style light switch, but works as a momentary on switch.  When you press the upper part of the switch (aka ON) the switch is active for as long as you hold it.  Release and its off.  Pressing the lower part of the switch (aka OFF) doesn't do anything.  For our use this works perfectly, to turn on the disposer, just press the ON part of the switch, and hold it for as long as you want the disposer to be on for, when you are done, release the switch and the disposer turns off.  It would be a great switch for anything that you want to have on just for a moment while you're at the switch.  And, since it looks just like a standard Decora switch, it blends in perfectly."
+    },
+    {
+      "customer_name": "Gregory ",
+      "customer_profile": "/gp/profile/amzn1.account.AEPN377I52QRJ3PW4KDZCMKESDXA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsSafety first",
+      "date": "Reviewed in the United States on March 4, 2025",
+      "review_snippet": "This switch is a safety must for your garbage desposer."
+    },
+    {
+      "customer_name": "Jeffrey L. Paterson",
+      "customer_profile": "/gp/profile/amzn1.account.AEQBH3B3QQMIMBCLMS72TOXW54TA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsSolid device, not much to complain about",
+      "date": "Reviewed in the United States on March 5, 2025",
+      "review_snippet": "I installed it a month ago or so. The build feels pretty solid, the switch has a nice solid click to it. It's not like it's difficult to push the button but it is a little harder to push the button than I would like. When I had my girlfriend test it, she thought she pushed it but didn't actually push it all the way. Just something to get used to."
+    },
+    {
+      "customer_name": "MichaelMichael",
+      "customer_profile": "/gp/profile/amzn1.account.AH3HYSSW3EXKCGTPXURV3V5XOOMQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsWorks great",
+      "date": "Reviewed in the United States on January 6, 2024",
+      "review_snippet": "I bought 2 to use with 2 Zooz 0-10v z-wave dimming modules. You have to change a setting on the dimmer to tell it to expect a momentary switch rather than a latching/traditional switch but after that they work great! I mounted the switches upside down because I thought they felt better that way."
+    },
+    {
+      "customer_name": "newlinux",
+      "customer_profile": "/gp/profile/amzn1.account.AGKRS5WSNCUHJQJ4DSICFGES6LEA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "4.0 out of 5 stars",
+      "review_title": "4.0 out of 5 starsDoes what it is supposed to do, beware of the somewhat loud click",
+      "date": "Reviewed in the United States on March 29, 2022",
+      "review_snippet": "It's a momentary switch, and it does what it is supposed to do. I wired mine up to a Wi-Fi relay (Shelly 1) which was connected to a bathroom exhaust fan. Worked perfectly to make it a smart switch for the exhaust when the kids forget to turn it on and it is humid in there.My only complaint is the click is of pushing the switch is a little louder than I'd like. Otherwise, it's great, not much bigger than a regular toggle switch inside the gang box, and easy to install."
+    },
+    {
+      "customer_name": "catfanone",
+      "customer_profile": "/gp/profile/amzn1.account.AF5SBU4JAK5TW3HZANSZQMIKK6MA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsStandard Rocker switch",
+      "date": "Reviewed in the United States on November 18, 2024",
+      "review_snippet": "This us a standard replacement rocker switch.  It comes in several versions, so make sure you select the right one before your click the purchase button,  as they do look very much the same."
+    }
+  ]
+}

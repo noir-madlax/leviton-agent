@@ -1,0 +1,230 @@
+{
+  "product_title": "BESTTEN Super Slim Quiet Dimmer Switch, Max 300W LED, CFL Lights and 600W Incandescent, Halogen, Single Pole or 3-Way Dimmer, Slide Dimmable Light Switch, ETL Listed, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 8,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@small enough to fit into outdated electrical housing": {
+          "+": [
+            0
+          ]
+        },
+        "B@slimmer than most dimmable switches": {
+          "+": [
+            3
+          ]
+        },
+        "C@fits in shallow old work box with no room": {
+          "+": [
+            4
+          ]
+        },
+        "D@fits into very crowded box": {
+          "+": [
+            7
+          ]
+        },
+        "E@slim design allows fitting where flip switch fits": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "adjustment wheel": {
+        "F@little adjustment wheel": {
+          "+": [
+            1,
+            5
+          ]
+        },
+        "G@adjustment wheel can only be accessed after taking cover plate off": {
+          "-": [
+            1
+          ]
+        },
+        "H@adjustment wheel is sort of hard to move": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "appearance": {
+        "I@good looking": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "packaging": {
+        "J@nicely packaged": {
+          "+": [
+            5
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming functionality": {
+        "a@worked fine": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@works perfectly well in dimming overhead LED lights": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@unable to stop LEDs from flickering": {
+          "-": {
+            "G": [
+              1
+            ]
+          }
+        },
+        "d@worked for few weeks then LEDs started flickering": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@lots of flickering no matter how much adjusted": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "f@lets dim bulbs quite low for savasana with no flicker": {
+          "+": {
+            "F": [
+              5
+            ]
+          }
+        },
+        "g@works great with 4 LED lights": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@smooth action across dimming range": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "i@not good with LED drivers for puck lights": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "j@fine with wafer LEDs": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "k@works as advertised with LED lamps": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "noise": {
+        "l@zero noise/buzz": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "installation": {
+        "m@easy to install": {
+          "+": {
+            "A": [
+              5
+            ]
+          }
+        },
+        "n@easy to install": {
+          "+": {
+            "J": [
+              5
+            ]
+          }
+        }
+      },
+      "fitting": {
+        "o@fits as advertised": {
+          "+": {
+            "E": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "kitchen lighting": {
+        "+": {
+          "D": [
+            7
+          ]
+        }
+      },
+      "ceiling fan LED lights": {
+        "+": {
+          "g": [
+            6
+          ]
+        }
+      },
+      "yoga studio lighting": {
+        "+": {
+          "f": [
+            5
+          ]
+        }
+      },
+      "overhead LED lights": {
+        "+": {
+          "b": [
+            3
+          ]
+        }
+      },
+      "puck lights": {
+        "-": {
+          "i": [
+            4
+          ]
+        }
+      },
+      "wafer LEDs": {
+        "+": {
+          "j": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:12.482611"
+}

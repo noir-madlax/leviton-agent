@@ -1,0 +1,511 @@
+{
+  "product_title": "Suraielec 3 Way Wireless Light Switch, No Wiring, No WiFi, 100ft RF Range, Pre-Programmed, Expandable Wireless Wall Switch and Receiver Kit, Remote Control Light Fixture for Lamp, Ceiling Light, Fan",
+  "product_category": "RF Wireless Remote Control Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@switches look nice": {
+          "+": [
+            26
+          ]
+        },
+        "B@switches aren't very aesthetically pleasing": {
+          "-": [
+            36
+          ]
+        },
+        "C@looks just like a regular \"deco\" light switch": {
+          "+": [
+            45
+          ]
+        }
+      },
+      "dimensions": {
+        "D@sticks out 3/4 inch from the wall": {
+          "-": [
+            19
+          ]
+        },
+        "E@mounting/housing needs to be wider to fully cover an existing box": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "button design": {
+        "F@buttons have very tactile feedback and audible click": {
+          "+": [
+            2
+          ]
+        },
+        "G@not an ordinary on/off switch, more of a push button switch": {
+          "+": [
+            5
+          ]
+        },
+        "H@look and feel is kind of weird": {
+          "-": [
+            12
+          ]
+        },
+        "I@off button is a bit finicky": {
+          "-": [
+            19
+          ]
+        },
+        "J@finicky about where you have to press the button to get it to activate": {
+          "-": [
+            36
+          ]
+        }
+      },
+      "battery": {
+        "K@one switch module drains battery in minutes": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "condition": {
+        "L@one switch was smudged and dirty": {
+          "-": [
+            6
+          ]
+        }
+      }
+    },
+    "perf": {
+      "range": {
+        "a@range not as advertised": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@only worked intermittently at 80 feet": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@functional distance less than 20 feet": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@only function if within 20 feet of each other": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@has hard time working properly even 5 feet away": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "f@range has to be very close at 15 feet distance": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "g@signal is spotty at 10 feet away": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "h@works to 20 feet with line of sight usually": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "i@distance is not great, recommend for 30-40 feet": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "j@100 feet range is overrated": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "k@couldn't handle being 30 inches from light switch": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "l@only worked 10% of the time initially": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "m@works 80-90% of the time": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "n@works 95% of the times": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "o@quit working after 1 day": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "p@replacement lasted 2 days": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "q@sometimes works to turn on/off, other times doesn't": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "r@works some of the time": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "s@signal is not sent occasionally": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "t@sometimes works fine, sometimes you have to play with on off": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "u@worked sporadically": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "v@light comes on nicely, problem getting light turned off": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "w@don't turn off with single tap": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "x@turns on instantly but turning off not consistent": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "y@once in a while first tap doesn't work": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "z@tends to give trouble when switching on and off": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "aa@does not consistently respond to on/off switch": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ab@having to push on and off two or three times even when switch is right next to box": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "ac@turn on is great but switch at 7.5 feet very hard to turn off": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "button response": {
+        "ad@really have to hold button for second to work": {
+          "-": {
+            "F": [
+              2
+            ]
+          }
+        },
+        "ae@almost never works if you tap quickly": {
+          "-": {
+            "F": [
+              2
+            ]
+          }
+        },
+        "af@delayed response": {
+          "-": {
+            "G": [
+              5
+            ]
+          }
+        },
+        "ag@had to hold down off button for few seconds": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "ah@sometimes have to hold down switch until it turns on/off": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "durability": {
+        "ai@quality seems just fine": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "aj@good quality product": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "ak@one remote works, other doesn't": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "al@one switch module is bad": {
+          "-": {
+            "K": [
+              3
+            ]
+          }
+        },
+        "am@other switch module and main receiver function fine": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "an@transmitter not receiving signal or vice versa": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "ao@one switch doesn't work": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "ap@OFF channel has shorter range than ON channel": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "interference": {
+        "aq@metal wall box interferes with wireless signals": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ar@relative orientations of transmitters and receiver matters": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "outdoor lighting control": {
+        "+": {
+          "?": [
+            0
+          ]
+        },
+        "-": {
+          "a,b": [
+            0
+          ]
+        }
+      },
+      "garage lighting": {
+        "+": {
+          "?": [
+            2,
+            25
+          ]
+        },
+        "-": {
+          "l,m": [
+            2
+          ]
+        }
+      },
+      "room to room control": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "closet light control": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "3-way switch replacement": {
+        "+": {
+          "?": [
+            9,
+            10,
+            15,
+            19,
+            21,
+            37,
+            40,
+            45
+          ]
+        }
+      },
+      "basement stairwell lighting": {
+        "-": {
+          "r": [
+            13
+          ]
+        }
+      },
+      "neighboring room control": {
+        "+": {
+          "?": [
+            16
+          ]
+        },
+        "-": {
+          "s": [
+            16
+          ]
+        }
+      },
+      "shop lighting control": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "small room applications": {
+        "+": {
+          "h": [
+            22
+          ]
+        }
+      },
+      "entry way hall lighting": {
+        "+": {
+          "?": [
+            36
+          ]
+        }
+      },
+      "pull chain light replacement": {
+        "+": {
+          "?": [
+            44
+          ]
+        }
+      },
+      "inaccessible switch replacement": {
+        "+": {
+          "?": [
+            45
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:11.923492"
+}

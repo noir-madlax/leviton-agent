@@ -1,0 +1,394 @@
+{
+  "product_title": "Leviton L1463-2W 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, White",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 25,
+  "review_analysis": {
+    "phy": {
+      "backlight": {
+        "A@backlight is constantly on": {
+          "+": [
+            0,
+            14
+          ]
+        }
+      },
+      "LED": {
+        "B@internal LED": {
+          "+": [
+            6
+          ]
+        },
+        "C@LED behind the bezel": {
+          "-": [
+            7
+          ]
+        },
+        "D@LED on full time regardless of circuit state": {
+          "-": [
+            6
+          ]
+        },
+        "E@dim white-blue LED": {
+          "+": [
+            10
+          ]
+        },
+        "F@white LED may not be suitable for sleeping areas": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "toggle": {
+        "G@toggle is not illuminated": {
+          "-": [
+            7,
+            15,
+            23
+          ]
+        },
+        "H@clear switch paddle": {
+          "+": [
+            10
+          ]
+        },
+        "I@sturdy toggle switch": {
+          "+": [
+            19
+          ]
+        }
+      },
+      "light source": {
+        "J@light around the toggle switch": {
+          "+": [
+            19
+          ]
+        },
+        "K@light around the base of the toggle": {
+          "-": [
+            23
+          ]
+        },
+        "L@lighted surround": {
+          "+": [
+            11
+          ]
+        },
+        "M@not uniform looking light": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "screws": {
+        "N@side screws are easy to turn and tighten": {
+          "+": [
+            19
+          ]
+        }
+      },
+      "documentation": {
+        "O@incorrect and incomplete documentation": {
+          "-": [
+            4
+          ]
+        },
+        "P@connectors drawn in wrong location": {
+          "-": [
+            4
+          ]
+        },
+        "Q@missing neutral line instructions": {
+          "-": [
+            4
+          ]
+        }
+      }
+    },
+    "perf": {
+      "visibility": {
+        "a@can see the light switch in basement": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@not easy to locate in dark room": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@can't see until standing right in front": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@works well in the dark": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@can be easily seen in the dark": {
+          "+": {
+            "L": [
+              11
+            ]
+          }
+        },
+        "f@very little light output": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@doesn't throw off nearly enough light": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "h@not too bright": {
+          "+": {
+            "L": [
+              11
+            ]
+          }
+        },
+        "i@aren't annoyingly bright": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "j@wish they were a tad brighter": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "k@not much illumination": {
+          "-": {
+            "G": [
+              23
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "l@switch works as it should": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "m@switches work fine": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "n@stopped working after 3 months": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "o@silent switch": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "p@works well as 2-way": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "q@3 way works fine": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "r@easy to install": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "s@feels really durable": {
+          "+": {
+            "I": [
+              18
+            ]
+          }
+        },
+        "t@should last a long time": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "u@could not get night light working": {
+          "-": {
+            "O": [
+              4
+            ]
+          }
+        },
+        "v@light goes off when you turn the light on": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "quality": {
+        "w@high quality switch": {
+          "+": {
+            "?": [
+              11,
+              12
+            ]
+          }
+        },
+        "x@well made": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "y@quality control issues": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "z@some arrived defective": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "basement lighting": {
+        "+": {
+          "a": [
+            1
+          ]
+        }
+      },
+      "dark room location": {
+        "-": {
+          "b,c": [
+            2
+          ]
+        }
+      },
+      "finding switch in dark": {
+        "+": {
+          "d": [
+            3
+          ]
+        }
+      },
+      "3 way switch installation": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "night light application": {
+        "-": {
+          "u": [
+            4
+          ]
+        }
+      },
+      "sleeping areas": {
+        "-": {
+          "F": [
+            7
+          ]
+        }
+      },
+      "2-way switch application": {
+        "+": {
+          "p": [
+            10
+          ]
+        }
+      },
+      "replacement for problem switch": {
+        "+": {
+          "w": [
+            12
+          ]
+        }
+      },
+      "replacement for older switches": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "3-way illuminated toggle switch": {
+        "+": {
+          "r,s": [
+            18
+          ]
+        }
+      },
+      "dark upstairs hallway": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "dark hallway with complicated molding": {
+        "+": {
+          "i,v": [
+            20
+          ]
+        }
+      },
+      "home improvements": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:32.757345"
+}

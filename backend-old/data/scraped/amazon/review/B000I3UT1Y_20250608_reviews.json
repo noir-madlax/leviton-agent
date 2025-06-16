@@ -1,0 +1,2646 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:36:19.173564",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B000I3UT1Y",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B000I3UT1Y",
+    "title": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+    "brand": "Legrand",
+    "model_number": NaN,
+    "price_usd": 10.79,
+    "rating": 4.5,
+    "reviews_count": 445.0,
+    "category": "Light Switches",
+    "product_segment": "LED Illuminated Indicator Switches",
+    "product_url": "https://www.amazon.com/dp/B000I3UT1Y"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2H1Z1ZMTRPAZJ",
+        "text": "After 4 years of daily use, the LED pilot light stopped working.",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "pilot light stopped working",
+        "userName": "J. Hsu",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2TAB1BN8JW7BE",
+        "text": "Installation was a bit of a pain when wrapping wires around the screws as the screws will completely go inside of the housing when the slightest pressure is placed on them. Half of the install was getting under these screws. The settings and adjustments allowed us to tune the dimmer to work with the existing lights and avoid flicker. We notice that they hate running with our generator and frequently cut off entirely at random and the dimmer will stop working. They're fine with mains power, however.",
+        "date": "Reviewed in the United States on February 18, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "They work well after install, are finicky to hook up, and do not like working on generator power.",
+        "userName": "Not Mariia",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2V06W0M7SHVJT",
+        "text": "Legrand makes quality switches and outlets. I purchased these to replace the standard run of the mill cheap switches my contractor purchased. They work great.",
+        "date": "Reviewed in the United States on June 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality products",
+        "userName": "Iboughtitonamazon",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1C4GYNRR7FKG",
+        "text": "Works perfect for my application",
+        "date": "Reviewed in the United States on April 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Neat small lighted",
+        "userName": "MR FIXIT",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2L8TLQWDIKB8Y",
+        "text": "One out of the three indicator lights worked. Could have saved money if I would have bought standard ones",
+        "date": "Reviewed in the United States on January 29, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Ordered three. Only one worked",
+        "userName": "chubaka",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2BJ8GP2JX38J",
+        "text": "Wish the light was just a little bit brighter, but it is good enough when it is totally dark and I'm trying to locate the switch. Beats running my hand all over the wall to find it. This is in a bathroom where a brighter light would of been fine, but I would buy these again for a bedroom as the light is so dim it would be perfect in a sleeping room, so as not to bother your sleep. I have bought several Legrand products and they are always of good quality.",
+        "date": "Reviewed in the United States on January 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I can find it in the dark now",
+        "userName": "Gatesay",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RAFCHIA8O9CUX",
+        "text": "I like the illumination of this switch. It is very faint, but does not look tacky as some other illuminated switches do. I also like the ability to backwire. (not backstab).",
+        "date": "Reviewed in the United States on January 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "High quality switch.",
+        "userName": "Texas Bill",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1SHYHK5O4J6AU",
+        "text": "My wife and I just moved into a new house and the builder installed one of these. We noticed the tiny locator LED one night and I thought I'd get a few more and install them myself. They were easy enough to install and the LED works great to help someone locate the switch in the dark. The only negative I can say is they have a really loud click sound when you turn the switch on or off. Otherwise, they are great.",
+        "date": "Reviewed in the United States on October 10, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Does what I need it to, just a little too loud",
+        "userName": "Gene Crowley",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1WAV6Q9TO7XET",
+        "text": "Product works as advertised, works with incandescent and halogen lights only. Does not work with LED, clearly stated in the picture. I was not able to use my two switches because they leaked voltage when a LED bulb was connected. The two switches that I purchased worked correctly with incandescent bulbs. The build quality for this switch was of good quality but the LED indicator (locator light on the switch) was so tiny that we could not see this light from a rooms distance. I wouldn't purchase this if you're looking for a locator to find the switch in the dark.",
+        "date": "Reviewed in the United States on May 17, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Does not work with LED, I didn't see this until after I made the purchase and did the install.",
+        "userName": "Sawz",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51S2-ZoUSxL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3DMGKSPRSP0QO",
+        "text": "Unless these have changed recently, the front of the switch has the company name impressed (like engraved) into the plastic. Because you often touch this, it tends to collect dirt/grime. You can sort of clean it out with a toothbrush, but it is frustrating that you have to do so. I chose these switches for their clean and sleek look, and paid a premium for that. I would happily give them five starts if they would remove the name, or print it in a way that doesn't collect dirt.",
+        "date": "Reviewed in the United States on May 3, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Impressed company name on switch collects dirt",
+        "userName": "K&G columbus ohio",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51fHi4hYfzL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1XLFADM5KYLLK",
+        "text": "Love these, they work really well. Have had them installed for over a year in most of my house and have no issues",
+        "date": "Reviewed in the United States on March 8, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work great",
+        "userName": "Taylor D.",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R31G0674M8ETZV",
+        "text": "Can't see that LED in the dark. Very dim",
+        "date": "Reviewed in the United States on December 30, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Can't see that LED in the dark.",
+        "userName": "Leo",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1831UUXAIXDBT",
+        "text": "Perfect replacements for 30 year old rocker switches in bathroom. Single pole for bathroom light and fan. Old switches were so old one shattered and broke apart. Wiring was a little confusing as red wires were mixed with black wires on the same lines. Old switches were single pole so no issues just replicating the previous installation. Nice rocker switches, feel good and solid, work well with subtle white LED glow light at top of switches.",
+        "date": "Reviewed in the United States on December 15, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice upgrade, feels sturdy. Subtle white LED lights, single pole for bathroom light and fan.",
+        "userName": "Sam",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51bbyILh83L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61EzXx70lYL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71LzgTEzXdL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2UZ84KJJI1AM6",
+        "text": "They're great and don't emit any light, just enough for the eye to walk into a dark room and you're going to know exactly where the switch is. This is not a nightlight, it's purely a switch that's easy to find in the dark.",
+        "date": "Reviewed in the United States on December 4, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "A cool must have and easy DIY",
+        "userName": "Grant Coffman",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RFQIHMUL1VMSR",
+        "text": "I’ve installed dozens of switches as a homeowner. This Legrand switch is solid and is equal to or better than the others I’ve used. I believe this switch is described as “lighted.” Be advised that there is one very small, green LED just above the switch (think the size of a pencil point). Personally, I like it. Neat and clean. Some illuminated switches have a bigger light behind the switch itself. If you are trying to match an existing switch, you might want to keep that in mind.",
+        "date": "Reviewed in the United States on November 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "It goes on and off. Any questions?",
+        "userName": "James S. Stone",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RM5XA0OVUSIBA",
+        "text": "It's difficult to tell well enough, looking at the item's page's pictures, that the light put out by these is as insufficient as it is. So, I took one & made sure it looked as close to how it does to my eyes in the actual picture.(Thumbnail looks all black, cuz the room(to my eyes) was nearly black. That tiny lit pixel almost perfectly centered is the light from the switch with which I'm supposed to locate said switch) I'd have to wait, I dunno, like a minute after turning the light out for my eyes to adjust to be able to see that light well enough for quick acquisition. I'm looking at replacing this one with a motion detection switch. The switch works fine, & the locator light does turn on when the switch is in the OFF position, so it gets 3 stars, but the whole point of installing one of these, vs those locator-less ones that cost 1/3 or less, is to be able to quickly locate where the light switch is. Come on guys. A PinHole?? I'm not sure what you were thinking there, but if it's gonna provide such little 'locatability', you should probly update your product page/info to reflect that so buyers can make more informed decisions vs writing less than satisfied reviews such as this. Honestly, I can only see this being useful in a small closet where the pinhole light is aimed right at yur face when you open the door. -_-",
+        "date": "Reviewed in the United States on November 10, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Locator Light Insuficient for Rooms Larger than Small Closet",
+        "userName": "NelF",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/31iY5v1ckbL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R13TYDFMLGTWIU",
+        "text": "I think Legrand may have produced a bad batch of these as I’ve ordered 2 of these and the LED indicators on both goes out after a few minutes. The indicators on all my other Legrand switches work fine, it’s just this model that’s been problematic.",
+        "date": "Reviewed in the United States on October 18, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "LED indicator not working",
+        "userName": "B. Oliver",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3FEIUZ6UKJR1F",
+        "text": "No indicator",
+        "date": "Reviewed in the United States on October 16, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Led indicator does not work",
+        "userName": "John Anderson",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RAZR08PKOD0SA",
+        "text": "Great product, just as advertised i made an video of its use.",
+        "date": "Reviewed in the United States on October 11, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just as advertised",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b7fb01f4-27a8-44cc-b942-ad4b2a9139c1/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R5BLAUD9AFTW0",
+        "text": "I got exactly what was described and works perfectly without issue.",
+        "date": "Reviewed in the United States on July 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Stylish Modern Switch",
+        "userName": "E. Jennings",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RRUD3H9LK2PQF",
+        "text": "Spent the other 5$ for a nightlight integrated switch. Light doesn’t work, never heard from seller",
+        "date": "Reviewed in the United States on May 2, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Good product but seller eh",
+        "userName": "Dan",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RVAB4ODDRDVLE",
+        "text": "This switch is not a nightlight. The light does not illuminate anything in front of it. The LED is a tiny pinpoint with a dim white glow. It allows you to (barely) locate the switch in a totally dark room. It's not enough light to wake you up during a bathroom visit. But don't expect it to help you see where you're going. Does the job",
+        "date": "Reviewed in the United States on April 7, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Not a nightlight.. just a marker light",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RPS54UMOYAA6X",
+        "text": "Sadly the night light LED failed after a year",
+        "date": "Reviewed in the United States on April 2, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "Crane",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RSNEYQ80882MR",
+        "text": "It works",
+        "date": "Reviewed in the United States on February 22, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works",
+        "userName": "mark downing",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1YBW1RU7GQQPY",
+        "text": "My preferred brand of switch became difficult to find in October 2020. I needed a switch with a locator light and this was the only one I could find. After I installed this light, I noted that the locator light was a miniscule pinpoint at the switch edge which is difficult to locate in the dark even when you are looking for it. I was expecting at least one of the 2 rocker panels to glow like my preferred brand but it did not. I do not believe this switch detects motion as the review template implies.",
+        "date": "Reviewed in the United States on January 2, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Location light is tiny",
+        "userName": "PowerShopper",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R8Z03CSII87HD",
+        "text": "Needed a replacement for an old wall switch (also Legrand but a 12 year older version of this one). The connections matched one for one and was very easy to install. The small LED on it is not really noticeable during the day but at night when it is dark it stands out just enough to make it easy to find. The rocker feels solid and clean.",
+        "date": "Reviewed in the United States on December 14, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple to install",
+        "userName": "Paul B.",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RVHBRYI5F75HA",
+        "text": "Switch works great! Reason for the four star rating is that the night time light dot on top of switch does not work. Not even dim! No light whatsoever coming from the dot at night. Not a deal killer because I like the brand in general.",
+        "date": "Reviewed in the United States on October 13, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Night light option",
+        "userName": "William E. Moylan",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1Y9P0DN1SFU4L",
+        "text": "I would not call this switch Radiant. I expected an illuminated rocker. The only lumination is a tiny dot sized LED above the rocker switch. I appreciated Amazon granting a refund.",
+        "date": "Reviewed in the United States on October 13, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not \" Radiant\"",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RO3KEVSX2DFN2",
+        "text": "To my surprise, when I opened the box, I just got one of these items.",
+        "date": "Reviewed in the United States on September 14, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "Purchased 2, was charged for 2 and just got one",
+        "userName": "Carlos E. Oliveira",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RN8DOLO72MOQ4",
+        "text": "Indicator lit is very tiny",
+        "date": "Reviewed in the United States on June 26, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works fine, easy to install, lite is very tiny.",
+        "userName": "dakota's mom",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2PUF3BLI97DGJ",
+        "text": "As others have commented... the light is very small. But I find it perfect for my use - in the almost total darkness of my bedroom the light is plenty bright enough to distinguish the switch from the one beside it. So now in the middle of the night I turn on the correct switch (for the closet) instead of accidentally hitting the other switch that turns on the lights for the entire room and wakes up both me and my wife. There's really no need for a brighter or larger light.",
+        "date": "Reviewed in the United States on May 12, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "jwl80303",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1E5FNAF6MC8H9",
+        "text": "Great product give location",
+        "date": "Reviewed in the United States on May 2, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Rick",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2Z6S7QC9MDPRK",
+        "text": "A+",
+        "date": "Reviewed in the United States on April 6, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "A+",
+        "userName": "DAVID D",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "REVCTYUZ2VA5P",
+        "text": "I much prefer the smaller locator light. The usual, larger-size neon lamps used for illumination tend to annoy me. And, typically, cease functioning sooner than L.E.D's.",
+        "date": "Reviewed in the United States on March 28, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "A better choice.",
+        "userName": "G. Snyder",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1LJ5BFSUA7LT9",
+        "text": "I really like there switches",
+        "date": "Reviewed in the United States on March 13, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love em",
+        "userName": "Rick",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R34OB7V2NWR7L8",
+        "text": "I know many people have purchased these thinking the entire rocker paddle illuminated at night, however that is not the case. There is a pinhole sized LED just above the rocker that illuminates in the darkness. At first, I wasn't too thrilled about it, however, I love them now! The small LED keeps the switch looking very chic during the day and at night illuminates sufficiently to allow you to find the light switch. Additionally, the tactile feel on the rocker is excellent and smooth. It will not randomly toggle on and off.",
+        "date": "Reviewed in the United States on January 25, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Small LED",
+        "userName": "OutOThsWrld",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1RVEO80SEPNKL",
+        "text": "Single pole flat rocker switch, just what I needed",
+        "date": "Reviewed in the United States on November 30, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Single pole switch",
+        "userName": "Buddy",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R28SMN24Z4BA58",
+        "text": "works great",
+        "date": "Reviewed in the United States on November 2, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "indicator light",
+        "userName": "Izabella Baka",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1X8Q5K2ZO2J56",
+        "text": "If you just want a basic light switch, it’s fine. I needed a back lit or illuminated switch so that I could find the switch easily when I enter the garage from my house. This switch produces only the teeny tiniest pinprick of light - not sure what its purpose is, I can barely see it. Wish I could post a picture, but I can’t show you what it looks like in my garage because it’s DARK in my garage and you can’t see this light switch.",
+        "date": "Reviewed in the United States on September 20, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Is not illuminated!",
+        "userName": "momof 4",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1LCKZF41LFGL2",
+        "text": "Does not work with LED lights....",
+        "date": "Reviewed in the United States on September 6, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Outdated...",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R20J26G1VFI9H5",
+        "text": "I bought this to replace one switch in a 2 switch panel. When placing this switch next to the other white switch, this appeared an off white vs pure white so I did not install it.",
+        "date": "Reviewed in the United States on August 5, 2020",
+        "rating": "3.0 out of 5 stars",
+        "title": "More off white than white",
+        "userName": "MikeyB",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RANWS167Y8R0G",
+        "text": "We obviously didn't read the other reviews closely enough before ordering. We just moved into a new house and wanted this for our VERY dark garage to find the light easier when coming out of the house, but it just has a puny little light on the frame of the switch that barely shows. Very disappointed. We wanted the switch itself to be lit. We have had those before and liked them.",
+        "date": "Reviewed in the United States on July 12, 2020",
+        "rating": "2.0 out of 5 stars",
+        "title": "Switch doesn't light up",
+        "userName": "dqchris",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ER6QELGV2SVP",
+        "text": "Read description carefully. This is not an illuminated paddle switch. Just contains a minute \"LED Locator Light\" at the top of the switch that glows when the switch is in the off position. The minuscule dot is very hard to see in the dark. Also while not stated on the package, Legrand says \"This switch is compatible with incandescent loads only and is not recommended for use with LED or CFL lamps.\" Really? Most homes are replacing lamps and fixtures with LED bulbs.",
+        "date": "Reviewed in the United States on June 20, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not an illuminated switch",
+        "userName": "bookreadermg",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R38BYM442ARGFK",
+        "text": "I purchased this lighted wall switch since I am looking for a 21st century solution for lighted Decora switches. Why is this so hard? Old switches are illuminated by an orange neon bulb with an average lifespan of about 10 years. My request is simple: A decora wall switch with an LED on it to light it up in the dark. Must look good (some options you find for lighted switches are VERY 1970), be reliable, and put out just enough light to be visible. No need for wi-fi, phone apps, internet connectivity, etc. I just want a lighted switch. Legrand is a good brand name that I recognize. Some other switches out there look cooler (there's a glass touch one that looks REALLY cool but has absymal quality ratings) but I don't want something that will fail early or worse, burn my house down. So I opted for this switch, recognizing that reviewers here commented that the light is TOO small/dim/subtle. My thoughts: The switch seems substantial to the feel, matches the regular decora switches and is very simple to install. If you take more than 10 minutes to install this switch then you are working too hard. :) As always, be safe and make sure the circuit is de-energized before installing. Connections consist of hot, load, and ground. No neutral wire is needed. The illumination: Other reviewers are right. The illumination is a TINY white LED, literally about the size of a pencil point. I have attached a picture to this review - and it makes the LED look bigger than it really is! It's visible in no-light situations as a white dot but doesn't light up the switch paddle area. I think that Legrand should have made the LED a little wider (think narrow rectangle, I know they make LEDs in this size) and they'd have a winner on their hands. Note that the pencil point LED *is* the LED and is not a hole allowing visibility to an LED in the back - so you can't drill out the trim to make the light bigger. Since the lighting effect is a little TOO subtle I'm giving this about a 5 out of 10. Overall I like the switch and I like the idea behind it, but I think I'll keep looking for a better solution for an illuminated Decora switch. That's a bummer because this one definitely has potential and I'd like a lot more lighted switches for my home.",
+        "date": "Reviewed in the United States on June 13, 2020",
+        "rating": "4.0 out of 5 stars",
+        "title": "It's VERY subtle - almost TOO subtle!",
+        "userName": "DeNomolos",
+        "numberOfHelpful": 4,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/61jRA2UYiOL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RTU6HYJUBA80K",
+        "text": "Tough to tell if on. Light sometimes is on, but the head of a pin",
+        "date": "Reviewed in the United States on June 6, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2ZDOOUY5B1YZL",
+        "text": "I ordered two of these switches. The Decora style lighted switch is what I wanted, but neither switch is lighted. Packaging states they are lighted. What are the odds both would be defective out-of-the-box? Too much of a hassle to return now. Will stick to big box or hardware stores for stuff like this in the future.",
+        "date": "Reviewed in the United States on May 4, 2020",
+        "rating": "2.0 out of 5 stars",
+        "title": "Switches are NOT lighted!",
+        "userName": "fergi",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RS2OG1UH2HVA3",
+        "text": "Unfortunately, after I installed the switch, it did not illuminate the face as advertised.",
+        "date": "Reviewed in the United States on April 25, 2020",
+        "rating": "2.0 out of 5 stars",
+        "title": "No illumination",
+        "userName": "Nick Ferris",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R28KR1MCV3A5EP",
+        "text": "It does the job it's supposed to do. Very well constructed.",
+        "date": "Reviewed in the United States on March 13, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "It does the job it's supposed to do.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3VR5EKVELDEV1",
+        "text": "This lighted switch is much brighter than the type that has the pin hole with the led light in it.",
+        "date": "Reviewed in the United States on March 10, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good lighted switch",
+        "userName": "Patti Cox",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B000I3UT1Y",
+        "productTitle": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 81,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 445,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R22QV0U5NVVKLE",
+        "text": "Small led, solid build, eazy install, good price, fast shipping.",
+        "date": "Reviewed in the United States on February 22, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Vary easy to see in low light",
+        "userName": "FAAAST EDDIE",
+        "numberOfHelpful": 0,
+        "variationId": "B000I3UT1Y",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

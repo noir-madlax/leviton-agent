@@ -1,0 +1,455 @@
+{
+  "product_title": "Kasa Smart Light Switch HS200P3, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 3 Count -Pack of 1 , White",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@indicator light is very dim and hard to see when room lights are on": {
+          "-": [
+            8
+          ]
+        },
+        "B@indicator lights have inconsistent brightness between switches": {
+          "-": [
+            8
+          ]
+        },
+        "C@stylish appearance": {
+          "+": [
+            12
+          ]
+        },
+        "D@sleek appearance on wall": {
+          "+": [
+            20
+          ]
+        }
+      },
+      "material": {
+        "E@overpriced plastic construction": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "internal_components": {
+        "F@relay component": {
+          "+": [
+            3
+          ]
+        },
+        "G@internal switch component": {
+          "-": [
+            19
+          ]
+        }
+      },
+      "model_specifications": {
+        "H@15a current rating": {
+          "-": [
+            3
+          ]
+        },
+        "I@model number differences affect compatibility": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "installation_requirements": {
+        "J@requires neutral wire for installation": {
+          "+": [
+            12,
+            20
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@fails within one year": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@engineered to fail after warranty expires": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@fails on higher current circuits": {
+          "-": {
+            "F": [
+              3
+            ]
+          }
+        },
+        "d@fails after a few years with relay clicking": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@stops working after about a year": {
+          "-": {
+            "G": [
+              19
+            ]
+          }
+        },
+        "f@fails after 2 years": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "g@works for 3.5 years then breaks with clicking": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "h@burns out after 4 years": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "i@starts turning on/off continuously after about a year": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "j@gets stuck on after 2 weeks": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "k@super reliable for years": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "l@does not work with HomeHub or voice control": {
+          "-": {
+            "I": [
+              2
+            ]
+          }
+        },
+        "m@will not detect 2.4ghz after router change": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "n@app is consistently laggy and unreliable": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "o@frequently drops connections": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "p@Google Home integration is unreliable": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "q@connects without any issues to Alexa": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "r@bogus 15a rating performance": {
+          "-": {
+            "H": [
+              3
+            ]
+          }
+        },
+        "s@fails in mode switching on/off repeatedly": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "t@light stays on even when turned off": {
+          "-": {
+            "G": [
+              19
+            ]
+          }
+        },
+        "u@switch gets stuck on/off after few months": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "v@does not work at all even when properly installed": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "w@works flawlessly": {
+          "+": {
+            "?": [
+              29,
+              30
+            ]
+          }
+        },
+        "x@on/off time is almost instant": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "y@dimmer steps are not equal": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "z@not great feedback": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "aa@totally reliable for light duty applications": {
+          "+": {
+            "F": [
+              3
+            ]
+          }
+        },
+        "ab@never fail": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ac@never drop out": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ad@responsive": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ae@works flawlessly": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "af@reliable performance": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_integration": {
+        "+": {
+          "ad": [
+            9,
+            11,
+            12,
+            17,
+            20,
+            33,
+            35,
+            41,
+            47
+          ],
+          "q": [
+            47
+          ]
+        },
+        "-": {
+          "l": [
+            2
+          ],
+          "p": [
+            32
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "?": [
+            10,
+            20,
+            33,
+            41
+          ]
+        },
+        "-": {
+          "l": [
+            2
+          ],
+          "p": [
+            32
+          ]
+        }
+      },
+      "app_control": {
+        "+": {
+          "?": [
+            10,
+            20,
+            23,
+            24
+          ]
+        },
+        "-": {
+          "n": [
+            32
+          ]
+        }
+      },
+      "lighting_control": {
+        "+": {
+          "w": [
+            29
+          ],
+          "x": [
+            47
+          ],
+          "af": [
+            20
+          ]
+        },
+        "-": {
+          "s": [
+            4
+          ],
+          "t": [
+            19
+          ],
+          "u": [
+            26
+          ],
+          "v": [
+            27
+          ]
+        }
+      },
+      "scheduling": {
+        "+": {
+          "?": [
+            20,
+            39,
+            43
+          ]
+        }
+      },
+      "outdoor_use": {
+        "+": {
+          "?": [
+            33
+          ]
+        }
+      },
+      "garage_lighting": {
+        "-": {
+          "c": [
+            3
+          ]
+        }
+      },
+      "ceiling_lighting": {
+        "-": {
+          "c": [
+            3
+          ]
+        }
+      },
+      "front_porch_lighting": {
+        "+": {
+          "?": [
+            39
+          ]
+        }
+      },
+      "patio_and_bbq_lighting": {
+        "+": {
+          "?": [
+            33
+          ]
+        }
+      },
+      "multi_switch_lights": {
+        "-": {
+          "?": [
+            10
+          ]
+        }
+      },
+      "dimming": {
+        "-": {
+          "y": [
+            44
+          ],
+          "z": [
+            44
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:31.442998"
+}

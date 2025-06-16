@@ -1,0 +1,369 @@
+{
+  "product_title": "Legrand radiant TM873WCC10 15 Amp Rocker Wall Switch, 3-Way Decorator Light Switches, White (1 Count)",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@bright white color": {
+          "+": [
+            10
+          ]
+        },
+        "B@sleek and modern design": {
+          "+": [
+            22
+          ]
+        },
+        "C@contemporary design": {
+          "+": [
+            22
+          ]
+        },
+        "D@smooth finish": {
+          "+": [
+            22
+          ]
+        },
+        "E@minimalist style": {
+          "+": [
+            22
+          ]
+        },
+        "F@off-grey white color instead of white": {
+          "-": [
+            26
+          ]
+        },
+        "G@color mismatch with other switches": {
+          "-": [
+            41
+          ]
+        }
+      },
+      "construction": {
+        "H@low profile on the back": {
+          "+": [
+            14
+          ]
+        },
+        "I@terminal posts with additional guard": {
+          "+": [
+            14
+          ]
+        },
+        "J@shark bite connections": {
+          "+": [
+            14
+          ]
+        },
+        "K@fit and finish superior to hardware store": {
+          "+": [
+            18
+          ]
+        },
+        "L@sturdy feel": {
+          "+": [
+            21
+          ]
+        },
+        "M@quality construction": {
+          "+": [
+            20
+          ]
+        }
+      },
+      "screws": {
+        "N@screws don't come out far enough": {
+          "-": [
+            16
+          ]
+        }
+      },
+      "wire_connections": {
+        "O@holes on back for push-in wires": {
+          "+": [
+            32
+          ]
+        },
+        "P@push-in wire release mechanism doesn't work": {
+          "-": [
+            32
+          ]
+        },
+        "Q@only supports 14 AWG push-in, not 12 AWG": {
+          "-": [
+            45
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "R@positive action": {
+          "+": [
+            11
+          ]
+        },
+        "S@clicks up and down feel sticky": {
+          "-": [
+            40
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works as 3-way switch": {
+          "+": {
+            "?": [
+              0,
+              25,
+              28,
+              30,
+              31,
+              32,
+              34
+            ]
+          }
+        },
+        "b@switches did not work": {
+          "-": {
+            "?": [
+              6,
+              47
+            ]
+          }
+        },
+        "c@light didn't work properly": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "d@sometimes won't work": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "installation": {
+        "e@easy to install": {
+          "+": {
+            "?": [
+              0,
+              2,
+              4,
+              10,
+              20,
+              22,
+              28,
+              37,
+              41,
+              44
+            ]
+          }
+        },
+        "f@makes connection secure and easier to wire": {
+          "+": {
+            "I": [
+              14
+            ]
+          }
+        },
+        "g@shark bite connections are pain to take apart": {
+          "-": {
+            "J": [
+              14
+            ]
+          }
+        },
+        "h@more time to configure with screw terminals": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "i@12 AWG installation more cumbersome": {
+          "-": {
+            "Q": [
+              45
+            ]
+          }
+        }
+      },
+      "durability": {
+        "j@seems durable": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "k@seem solid": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "l@broke after 2 weeks": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "m@had to replace most after 1.5-2 years": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "n@coming apart after 4 years": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "o@still being used after 3+ years": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        }
+      },
+      "operation": {
+        "p@silent operation": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "q@makes loud noise when pushing": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "r@makes too much noise when pushing": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "s@need to press very hard": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "t@feels nice when operating": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "u@clicks with on/off": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "aesthetics": {
+        "v@elevates overall aesthetic": {
+          "+": {
+            "B,C": [
+              22
+            ]
+          }
+        },
+        "w@blends seamlessly with any decor": {
+          "+": {
+            "E": [
+              22
+            ]
+          }
+        },
+        "x@adds touch of sophistication": {
+          "+": {
+            "B": [
+              22
+            ]
+          }
+        },
+        "y@looks good": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "upstairs and downstairs light control": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "upgrading old switches": {
+        "+": {
+          "e,j": [
+            2
+          ]
+        }
+      },
+      "whole house switch replacement": {
+        "-": {
+          "m": [
+            13
+          ]
+        }
+      },
+      "spare bathroom installation": {
+        "-": {
+          "n": [
+            19
+          ]
+        }
+      },
+      "modern home aesthetic": {
+        "+": {
+          "v,w,x": [
+            22
+          ]
+        }
+      },
+      "DIY installation": {
+        "+": {
+          "e": [
+            37
+          ]
+        }
+      },
+      "replacement for old switch": {
+        "+": {
+          "a": [
+            34
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:28.835634"
+}

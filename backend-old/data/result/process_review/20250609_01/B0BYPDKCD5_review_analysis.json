@@ -1,0 +1,368 @@
+{
+  "product_title": "Lutron Caseta Smart Claro Accessory Switch for 3 way – For use only with Diva Smart Dimmer or Claro Smart Switch, DVRF-AS-WH, White",
+  "product_category": "Multi-Location Companion Dimmer Switches",
+  "total_reviews": 30,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@elegant and sleek design": {
+          "+": [
+            4,
+            5
+          ]
+        },
+        "B@premium look and feel": {
+          "+": [
+            8
+          ]
+        },
+        "C@matches Diva switches appearance": {
+          "+": [
+            26
+          ]
+        },
+        "D@uniform aesthetic with other Lutron switches": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "E@paddle switch design": {
+          "+": [
+            10
+          ]
+        },
+        "F@lacks satisfying click action compared to traditional switches": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "wiring": {
+        "G@no neutral wire required": {
+          "+": [
+            14,
+            16
+          ]
+        },
+        "H@requires traveler wires between switches": {
+          "-": [
+            13
+          ]
+        },
+        "I@hardwired connection": {
+          "+": [
+            14,
+            19
+          ]
+        },
+        "J@broken ground wire on received item": {
+          "-": [
+            15
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0,
+              4,
+              6,
+              16,
+              20,
+              29
+            ]
+          }
+        },
+        "b@straightforward installation process": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "c@clear wiring instructions": {
+          "+": {
+            "?": [
+              8,
+              16
+            ]
+          }
+        },
+        "d@hard to install and troubleshoot": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@requires electrical knowledge and skills": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "f@patient determination of wire connections needed": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "g@flawless performance": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "h@functions great": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "i@works well with no problems": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "j@100% reliable operation": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "k@rock solid reliability": {
+          "+": {
+            "?": [
+              12,
+              23
+            ]
+          }
+        },
+        "l@fussy and buggy behavior": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "m@intermittent operation - sometimes toggles light, sometimes not": {
+          "-": {
+            "?": [
+              11,
+              21
+            ]
+          }
+        },
+        "n@delays when toggling on/off": {
+          "-": {
+            "?": [
+              7,
+              25
+            ]
+          }
+        },
+        "o@humming noise from lights": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "dimming_control": {
+        "p@cannot change dimmer brightness from accessory switch": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "q@single tap turns on to main dimmer level": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "r@double tap goes to full brightness": {
+          "+": {
+            "?": [
+              19,
+              28
+            ]
+          }
+        },
+        "s@no manual dimming by holding switch": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "t@missing dimmer functionality compared to Pico remote": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "u@no problems with connection to base or app": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "v@integrates well with Alexa": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "w@easy integration with Google Assistant": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "x@not recognized in app and cannot be programmed": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "durability": {
+        "y@exceptional quality": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "3-way switch configuration": {
+        "+": {
+          "a,g,h": [
+            0
+          ],
+          "a,i": [
+            14
+          ],
+          "a,w": [
+            16
+          ],
+          "a": [
+            22,
+            29
+          ],
+          "j": [
+            24
+          ],
+          "r": [
+            28
+          ]
+        },
+        "-": {
+          "p": [
+            10
+          ],
+          "q,x": [
+            19
+          ]
+        }
+      },
+      "4-way switch setup": {
+        "+": {
+          "a": [
+            29
+          ]
+        }
+      },
+      "pairing with Lutron Caseta Diva Dimmer": {
+        "+": {
+          "g,h": [
+            0
+          ],
+          "c": [
+            26
+          ]
+        },
+        "-": {
+          "p": [
+            10
+          ],
+          "q": [
+            19
+          ]
+        }
+      },
+      "home automation with smart hub": {
+        "+": {
+          "u": [
+            2
+          ],
+          "v": [
+            6
+          ],
+          "w": [
+            16
+          ],
+          "a": [
+            20
+          ]
+        }
+      },
+      "replacing traditional dumb switches": {
+        "+": {
+          "b,d": [
+            8
+          ]
+        }
+      },
+      "locations without neutral wire": {
+        "+": {
+          "g": [
+            14
+          ]
+        }
+      },
+      "use with dimmable bulbs": {
+        "+": {
+          "g,h": [
+            0
+          ]
+        }
+      },
+      "reducing device count in Caseta system": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:22.537223"
+}

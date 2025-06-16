@@ -1,0 +1,439 @@
+{
+  "product_title": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@large back/housing that is difficult to fit in electrical boxes": {
+          "-": [
+            32,
+            46
+          ]
+        }
+      },
+      "construction_material": {
+        "B@made of flimsy cheap plastic": {
+          "-": [
+            19
+          ]
+        },
+        "C@all plastic construction": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "terminal_design": {
+        "D@wire attachment plates that deform and slide out of place": {
+          "-": [
+            13
+          ]
+        },
+        "E@flimsy terminals that never tighten up properly": {
+          "-": [
+            6,
+            22
+          ]
+        },
+        "F@contacts not soldered to copper plate, only pressed tabs that break": {
+          "-": [
+            48
+          ]
+        },
+        "G@backstab connections": {
+          "-": [
+            32
+          ]
+        }
+      },
+      "screws": {
+        "H@screws that break during installation": {
+          "-": [
+            19
+          ]
+        }
+      },
+      "status_light": {
+        "I@status light on when switch is on, off when switch is off": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "wire_included": {
+        "J@six inch braided aluminum wire for neutral": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "screw_holes": {
+        "K@screw holes cause misalignment in multi gang boxes": {
+          "-": [
+            32
+          ]
+        }
+      },
+      "appearance": {
+        "L@don't look bad at all": {
+          "+": [
+            1
+          ]
+        },
+        "M@work with other/different wall plates": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@randomly disconnect from WiFi": {
+          "-": {
+            "?": [
+              0,
+              3,
+              6
+            ]
+          }
+        },
+        "b@randomly lose WiFi settings requiring re-setup": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@lose connection to Internet frequently": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@always dropping wifi": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@disconnects then requires deletion and reinstall": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "f@wireless connection not good, disconnects frequently": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "g@fails to find switch during WiFi setup even close to router": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "h@notes internet problem while showing good internet strength": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "i@not dependable when out of town": {
+          "-": {
+            "a": [
+              3
+            ]
+          }
+        },
+        "j@works flawlessly": {
+          "+": {
+            "?": [
+              17,
+              42
+            ]
+          }
+        },
+        "k@running without issue": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "l@they just work": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "m@works great": {
+          "+": {
+            "?": [
+              34,
+              44
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "n@worked as regular switch but not as smart switch": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "o@would not turn on the light despite app control working": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "p@scheduling to turn on/off at specific time doesn't work properly": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "q@responsive and works with app and voice commands": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "r@can still be operated manually": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "durability": {
+        "s@terminal contacts break when tightening screws": {
+          "-": {
+            "D": [
+              13
+            ],
+            "F": [
+              48
+            ]
+          }
+        },
+        "t@contact broke off during installation": {
+          "-": {
+            "E": [
+              27
+            ]
+          }
+        },
+        "u@screws broke during installation": {
+          "-": {
+            "H": [
+              19
+            ]
+          }
+        },
+        "v@terminals impossible to get tight, leaving wires loose": {
+          "-": {
+            "E": [
+              22
+            ]
+          }
+        }
+      },
+      "defect_rate": {
+        "w@one out of three switches defective": {
+          "-": {
+            "?": [
+              5,
+              15
+            ]
+          }
+        },
+        "x@two out of three switches defective": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "y@two out of three had terminal problems": {
+          "-": {
+            "D": [
+              13
+            ]
+          }
+        },
+        "z@one completely faulty out of the box": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "aa@dry solder joints found": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "installation": {
+        "ab@easy installation": {
+          "+": {
+            "?": [
+              1,
+              4,
+              8,
+              33,
+              35,
+              42,
+              47,
+              48
+            ]
+          }
+        },
+        "ac@difficult and dangerous to install": {
+          "-": {
+            "E": [
+              22
+            ]
+          }
+        },
+        "ad@fitting into electrical box is challenging": {
+          "-": {
+            "A": [
+              12
+            ]
+          }
+        },
+        "ae@hardest task is fitting back into electrical box": {
+          "-": {
+            "A": [
+              46
+            ]
+          }
+        },
+        "af@braided wire frustrating to insert": {
+          "-": {
+            "J": [
+              31
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_automation": {
+        "+": {
+          "q": [
+            1,
+            4,
+            9,
+            12,
+            18,
+            21,
+            25,
+            26,
+            28,
+            30,
+            39,
+            44,
+            49
+          ],
+          "l": [
+            23
+          ],
+          "j": [
+            42
+          ]
+        }
+      },
+      "outdoor_lighting_control": {
+        "+": {
+          "q": [
+            10,
+            16,
+            30,
+            39
+          ]
+        }
+      },
+      "scheduled_lighting": {
+        "+": {
+          "q": [
+            10,
+            26,
+            39
+          ],
+          "l": [
+            30
+          ]
+        },
+        "-": {
+          "p": [
+            20
+          ]
+        }
+      },
+      "remote_control": {
+        "+": {
+          "q": [
+            9,
+            18,
+            23,
+            37
+          ]
+        }
+      },
+      "integration_with_other_systems": {
+        "+": {
+          "q": [
+            1,
+            12,
+            26,
+            28,
+            34,
+            49
+          ]
+        }
+      },
+      "replacing_regular_switches": {
+        "+": {
+          "ab": [
+            33,
+            37,
+            47
+          ]
+        },
+        "-": {
+          "o": [
+            36
+          ],
+          "n": [
+            5
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:36.291136"
+}

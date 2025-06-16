@@ -1,0 +1,373 @@
+{
+  "product_title": "Lutron Diva LED+ Dimmer for Dimmable LED, Halogen and Incandescent Bulbs with Wallplate | 150W/Single-Pole or 3-Way | DVWCL-153PH-LA | Light Almond",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@beautiful and attractive looking": {
+          "+": [
+            2,
+            14,
+            32
+          ]
+        },
+        "B@plain jane variety with no soft on/off or led display": {
+          "-": [
+            6
+          ]
+        },
+        "C@stylish": {
+          "+": [
+            25
+          ]
+        }
+      },
+      "color": {
+        "D@perfect color match": {
+          "+": [
+            1
+          ]
+        },
+        "E@light almond model color accurate": {
+          "+": [
+            2
+          ]
+        },
+        "F@received white instead of light almond": {
+          "-": [
+            30
+          ]
+        }
+      },
+      "size": {
+        "G@smaller than existing plate showing drywall gap": {
+          "-": [
+            10
+          ]
+        },
+        "H@doesn't take up much space inside switch box": {
+          "+": [
+            42
+          ]
+        },
+        "I@takes up a lot of space in the outlet box": {
+          "-": [
+            43
+          ]
+        }
+      },
+      "faceplate": {
+        "J@snap-on cover plate without screws for cleaner look": {
+          "+": [
+            25,
+            29,
+            42
+          ]
+        }
+      },
+      "dimmer_slider": {
+        "K@very tiny dimmer slider": {
+          "-": [
+            35
+          ]
+        },
+        "L@slide dimmer": {
+          "+": [
+            25
+          ]
+        }
+      },
+      "rocker_switch": {
+        "M@rocker is stiff to turn on/off": {
+          "-": [
+            29
+          ]
+        },
+        "N@switch is flush on the front": {
+          "+": [
+            43
+          ]
+        }
+      },
+      "wiring": {
+        "O@twist-wire connections with no push-in wiring option": {
+          "-": [
+            43
+          ]
+        }
+      },
+      "dimmer_adjustment_lever": {
+        "P@missing dimming range lever despite being advertised": {
+          "-": [
+            9
+          ]
+        },
+        "Q@internal dimmer adjustment immovable and factory set": {
+          "-": [
+            13
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@very easy to install": {
+          "+": {
+            "?": [
+              0,
+              4,
+              7,
+              14,
+              17,
+              20,
+              23,
+              26,
+              28,
+              31,
+              34,
+              38,
+              42
+            ]
+          }
+        },
+        "b@easy to replace existing switch": {
+          "+": {
+            "?": [
+              13,
+              25
+            ]
+          }
+        },
+        "c@fits in existing switch box": {
+          "+": {
+            "?": [
+              37,
+              43
+            ]
+          }
+        },
+        "d@compatible with three-way and four-way circuits": {
+          "+": {
+            "?": [
+              32,
+              43
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "e@great dimming range and control": {
+          "+": {
+            "?": [
+              18,
+              22,
+              24,
+              25,
+              32,
+              41
+            ]
+          }
+        },
+        "f@works great with LED lights without flickering": {
+          "+": {
+            "?": [
+              15,
+              19,
+              21,
+              22,
+              24,
+              26,
+              32
+            ]
+          }
+        },
+        "g@solves LED light flickering issue": {
+          "+": {
+            "?": [
+              2,
+              24
+            ]
+          }
+        },
+        "h@no buzzing with LED bulbs": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "i@blinks light when turned down": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "j@lights still buzz when turned on": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "k@switch only works when dimmer is on low": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "operation": {
+        "l@easy to operate and toggle on/off": {
+          "+": {
+            "M": [
+              7,
+              11
+            ]
+          }
+        },
+        "m@dimming is more difficult than other dimmers": {
+          "-": {
+            "K": [
+              11,
+              35
+            ]
+          }
+        },
+        "n@works as advertised": {
+          "+": {
+            "?": [
+              18,
+              27,
+              35
+            ]
+          }
+        }
+      },
+      "durability": {
+        "o@broke in one month": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "p@great quality and reliable": {
+          "+": {
+            "?": [
+              14,
+              28,
+              33,
+              40,
+              44
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "q@LED technology compatibility with house wiring": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "r@works with various LED bulb types": {
+          "+": {
+            "?": [
+              15,
+              32,
+              42,
+              45
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "residential_lighting": {
+        "+": {
+          "a,f": [
+            0,
+            4,
+            19,
+            20,
+            26,
+            31,
+            32,
+            34,
+            37,
+            39,
+            42
+          ]
+        },
+        "-": {
+          "o": [
+            36
+          ]
+        }
+      },
+      "LED_bulb_replacement": {
+        "+": {
+          "f,g": [
+            2,
+            15,
+            19,
+            21,
+            24,
+            32,
+            33,
+            42
+          ]
+        },
+        "-": {
+          "j": [
+            46
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "a,f": [
+            4,
+            42
+          ]
+        }
+      },
+      "bathroom_lighting": {
+        "+": {
+          "f": [
+            19,
+            42
+          ]
+        }
+      },
+      "office_lighting": {
+        "+": {
+          "a": [
+            17,
+            18
+          ]
+        }
+      },
+      "dining_room_lighting": {
+        "+": {
+          "f": [
+            42
+          ]
+        }
+      },
+      "three_way_switch_replacement": {
+        "+": {
+          "b,d": [
+            13,
+            32
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:29.389191"
+}

@@ -1,0 +1,1728 @@
+{
+  "request_info": {
+    "success": true,
+    "credits_used": 18,
+    "credits_remaining": 82,
+    "credits_used_this_request": 1
+  },
+  "request_parameters": {
+    "type": "search",
+    "amazon_domain": "amazon.com",
+    "page": "5",
+    "search_term": "light switches",
+    "category_id": "6291359011",
+    "sort_by": "featured",
+    "exclude_sponsored": "true"
+  },
+  "request_metadata": {
+    "created_at": "2025-06-06T19:23:49.767Z",
+    "processed_at": "2025-06-06T19:23:53.282Z",
+    "total_time_taken": 3.52,
+    "amazon_url": "https://www.amazon.com/s/?k=light+switches&ref=nb_sb_noss_2&node=6291359011&page=5&s=relevancerank"
+  },
+  "search_results": [
+    {
+      "position": 1,
+      "title": "CML Double Rocker Decorator Light Switch, Dual Single Pole Paddle in-Wall Switch, Self-grounding Electrical On/Off Interrupter, 15A 120V, UL Listed, 1 Pack, White",
+      "asin": "B0CW92T9CH",
+      "link": "https://www.amazon.com/CML-Decorator-Self-grounding-Electrical-Interrupter/dp/B0CW92T9CH/ref=sr_1_100?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-100",
+      "recent_sales": "400+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/617Q9DpfC1L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 104,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 6.74,
+          "currency": "USD",
+          "raw": "$6.74",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$7.19",
+          "asin": "B0CW92T9CH",
+          "link": "https://www.amazon.com/CML-Decorator-Self-grounding-Electrical-Interrupter/dp/B0CW92T9CH/ref=sr_1_100?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-100"
+        },
+        {
+          "symbol": "$",
+          "value": 7.19,
+          "currency": "USD",
+          "raw": "$7.19",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/CML-Decorator-Self-grounding-Electrical-Interrupter/dp/B0CW92T9CH/ref=sr_1_100?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-100",
+          "asin": "B0CW92T9CH"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 6.74,
+        "currency": "USD",
+        "raw": "$6.74",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$7.19",
+        "asin": "B0CW92T9CH",
+        "link": "https://www.amazon.com/CML-Decorator-Self-grounding-Electrical-Interrupter/dp/B0CW92T9CH/ref=sr_1_100?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-100"
+      }
+    },
+    {
+      "position": 2,
+      "title": "ENERLITES Elite Series Decorator Rocker Light Switch, 15A 120V/277V, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, UL Listed, 91150-GD, Gold Color",
+      "asin": "B07HNFWWZV",
+      "link": "https://www.amazon.com/ENERLITES-Decorator-Grounding-Residential-91150-GD/dp/B07HNFWWZV/ref=sr_1_101?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-101",
+      "recent_sales": "300+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/81SsfawEeRL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 2335,
+      "is_small_business": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 9.99,
+          "currency": "USD",
+          "raw": "$9.99",
+          "asin": "B07HNFWWZV",
+          "link": "https://www.amazon.com/ENERLITES-Decorator-Grounding-Residential-91150-GD/dp/B07HNFWWZV/ref=sr_1_101?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-101"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 9.99,
+        "currency": "USD",
+        "raw": "$9.99",
+        "asin": "B07HNFWWZV",
+        "link": "https://www.amazon.com/ENERLITES-Decorator-Grounding-Residential-91150-GD/dp/B07HNFWWZV/ref=sr_1_101?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-101"
+      }
+    },
+    {
+      "position": 3,
+      "title": "Legrand adorne 15A 1 or 3-Way Paddle Switch with Matching Wall Plate (White Finish), 4-Pack, ASPD1532W4WP-4PK",
+      "asin": "B0785VL5MJ",
+      "link": "https://www.amazon.com/Legrand-Adorne-ASPD1532W4WP-Paddle-Switch/dp/B0785VL5MJ/ref=sr_1_102?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-102",
+      "availability": {
+        "raw": "Only 11 left in stock - order soon."
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61NIe7Ea5ML._AC_UL320_.jpg",
+      "unit_price": "$14.60$14.60/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.8,
+      "ratings_total": 373,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 58.4,
+          "currency": "USD",
+          "raw": "$58.40",
+          "list_price": "$14.60",
+          "asin": "B0785VL5MJ",
+          "link": "https://www.amazon.com/Legrand-Adorne-ASPD1532W4WP-Paddle-Switch/dp/B0785VL5MJ/ref=sr_1_102?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-102"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 58.4,
+        "currency": "USD",
+        "raw": "$58.40",
+        "list_price": "$14.60",
+        "asin": "B0785VL5MJ",
+        "link": "https://www.amazon.com/Legrand-Adorne-ASPD1532W4WP-Paddle-Switch/dp/B0785VL5MJ/ref=sr_1_102?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-102"
+      }
+    },
+    {
+      "position": 4,
+      "title": "ENERLITES Toggle Light Switch, Light Switch, Single Pole, 20A 120/277V, Grounding Screw, Commercial Grade, UL Listed, 81201A-W-5PCS, White, 5 Pack",
+      "asin": "B0BSGCHWS5",
+      "link": "https://www.amazon.com/ENERLITES-Toggle-Grounding-Commercial-81201A-W-5PCS/dp/B0BSGCHWS5/ref=sr_1_103?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-103",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/814AiiMBBKL._AC_UL320_.jpg",
+      "unit_price": "$5.98$5.98/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 19,
+      "is_small_business": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 29.92,
+          "currency": "USD",
+          "raw": "$29.92",
+          "list_price": "$5.98",
+          "asin": "B0BSGCHWS5",
+          "link": "https://www.amazon.com/ENERLITES-Toggle-Grounding-Commercial-81201A-W-5PCS/dp/B0BSGCHWS5/ref=sr_1_103?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-103"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 29.92,
+        "currency": "USD",
+        "raw": "$29.92",
+        "list_price": "$5.98",
+        "asin": "B0BSGCHWS5",
+        "link": "https://www.amazon.com/ENERLITES-Toggle-Grounding-Commercial-81201A-W-5PCS/dp/B0BSGCHWS5/ref=sr_1_103?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-103"
+      }
+    },
+    {
+      "position": 5,
+      "title": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+      "asin": "B0C3HGGYHG",
+      "link": "https://www.amazon.com/MOES-Switches-Inteligente-Assistant-Controlgle/dp/B0C3HGGYHG/ref=sr_1_104?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-104",
+      "recent_sales": "100+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51lKLaoxMLL._AC_UL320_.jpg",
+      "coupon": {
+        "badge_text": "Save 5%",
+        "text": "with coupon"
+      },
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.1,
+      "ratings_total": 467,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 19.99,
+          "currency": "USD",
+          "raw": "$19.99",
+          "asin": "B0C3HGGYHG",
+          "link": "https://www.amazon.com/MOES-Switches-Inteligente-Assistant-Controlgle/dp/B0C3HGGYHG/ref=sr_1_104?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-104"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 19.99,
+        "currency": "USD",
+        "raw": "$19.99",
+        "asin": "B0C3HGGYHG",
+        "link": "https://www.amazon.com/MOES-Switches-Inteligente-Assistant-Controlgle/dp/B0C3HGGYHG/ref=sr_1_104?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-104"
+      }
+    },
+    {
+      "position": 6,
+      "title": "GHome Smart Switch,Smart Wi-Fi Light Switch for Lights Works with Alexa and Google Home 2.4Ghz, Single-Pole,Neutral Wire Required,UL Certified,Voice Control (4 Pack)",
+      "asin": "B09LLNT3KR",
+      "link": "https://www.amazon.com/Compatible-Assistant-Single-Pole-Required-Certified/dp/B09LLNT3KR/ref=sr_1_105?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-105",
+      "recent_sales": "100+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61hbuHsuTkL._AC_UL320_.jpg",
+      "coupon": {
+        "badge_text": "Save $5.00",
+        "text": "with coupon"
+      },
+      "unit_price": "$9.50$9.50/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 1475,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 37.99,
+          "currency": "USD",
+          "raw": "$37.99",
+          "list_price": "$9.50",
+          "asin": "B09LLNT3KR",
+          "link": "https://www.amazon.com/Compatible-Assistant-Single-Pole-Required-Certified/dp/B09LLNT3KR/ref=sr_1_105?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-105"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 37.99,
+        "currency": "USD",
+        "raw": "$37.99",
+        "list_price": "$9.50",
+        "asin": "B09LLNT3KR",
+        "link": "https://www.amazon.com/Compatible-Assistant-Single-Pole-Required-Certified/dp/B09LLNT3KR/ref=sr_1_105?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-105"
+      }
+    },
+    {
+      "position": 7,
+      "title": "ENERLITES Single Pole Decorator Paddle Light Switch, Commercial Grade, 20A 120V-277V, Grounding Screw, Back Insert and Side Terminals, 91200-W-10PCS, White (10 Pack)",
+      "asin": "B07RV6CP7Q",
+      "link": "https://www.amazon.com/ENERLITES-Decorator-Commercial-120V-277V-91200-W-10PCS/dp/B07RV6CP7Q/ref=sr_1_106?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-106",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/81eOQV1o4bL._AC_UL320_.jpg",
+      "unit_price": "$6.40$6.40/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.2,
+      "ratings_total": 333,
+      "is_small_business": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 63.99,
+          "currency": "USD",
+          "raw": "$63.99",
+          "list_price": "$6.40",
+          "asin": "B07RV6CP7Q",
+          "link": "https://www.amazon.com/ENERLITES-Decorator-Commercial-120V-277V-91200-W-10PCS/dp/B07RV6CP7Q/ref=sr_1_106?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-106"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 63.99,
+        "currency": "USD",
+        "raw": "$63.99",
+        "list_price": "$6.40",
+        "asin": "B07RV6CP7Q",
+        "link": "https://www.amazon.com/ENERLITES-Decorator-Commercial-120V-277V-91200-W-10PCS/dp/B07RV6CP7Q/ref=sr_1_106?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-106"
+      }
+    },
+    {
+      "position": 8,
+      "title": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+      "asin": "B09FL9WPGL",
+      "link": "https://www.amazon.com/LANBON-Dimmable-Wireless-Required-L8-HS-White/dp/B09FL9WPGL/ref=sr_1_107?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-107",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51607Wm683L._AC_UL320_.jpg",
+      "deal": {
+        "link": "https://www.amazon.com/gp/goldbox/",
+        "badge_text": "Limited time deal"
+      },
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4,
+      "ratings_total": 412,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 43.99,
+          "currency": "USD",
+          "raw": "$43.99",
+          "name": "Limited time deal",
+          "is_primary": true,
+          "list_price": "$51.99",
+          "asin": "B09FL9WPGL",
+          "link": "https://www.amazon.com/LANBON-Dimmable-Wireless-Required-L8-HS-White/dp/B09FL9WPGL/ref=sr_1_107?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-107"
+        },
+        {
+          "symbol": "$",
+          "value": 51.99,
+          "currency": "USD",
+          "raw": "$51.99",
+          "name": "Limited time deal",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/LANBON-Dimmable-Wireless-Required-L8-HS-White/dp/B09FL9WPGL/ref=sr_1_107?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-107",
+          "asin": "B09FL9WPGL"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 43.99,
+        "currency": "USD",
+        "raw": "$43.99",
+        "name": "Limited time deal",
+        "is_primary": true,
+        "list_price": "$51.99",
+        "asin": "B09FL9WPGL",
+        "link": "https://www.amazon.com/LANBON-Dimmable-Wireless-Required-L8-HS-White/dp/B09FL9WPGL/ref=sr_1_107?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-107"
+      }
+    },
+    {
+      "position": 9,
+      "title": "Wyze Switch, 2.4 GHz WiFi Smart Light Switch, Single-Pole, Needs Neutral Wire, Compatible with Alexa, Google Assistant, and IFTTT, No Hub Required, 3-Pack, White",
+      "asin": "B09HSWR3YG",
+      "link": "https://www.amazon.com/Single-Pole-Neutral-Compatible-Assistant-Required/dp/B09HSWR3YG/ref=sr_1_108?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-108",
+      "recent_sales": "200+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/718WTuB7qjL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.4,
+      "ratings_total": 844,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 41.9,
+          "currency": "USD",
+          "raw": "$41.90",
+          "asin": "B09HSWR3YG",
+          "link": "https://www.amazon.com/Single-Pole-Neutral-Compatible-Assistant-Required/dp/B09HSWR3YG/ref=sr_1_108?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-108"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 41.9,
+        "currency": "USD",
+        "raw": "$41.90",
+        "asin": "B09HSWR3YG",
+        "link": "https://www.amazon.com/Single-Pole-Neutral-Compatible-Assistant-Required/dp/B09HSWR3YG/ref=sr_1_108?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-108"
+      }
+    },
+    {
+      "position": 10,
+      "title": "Duplex Rocker Combination Decorator Switch,120VAC 15Amp,Ground Terminal,Residential/Commercial Grade,2 Individual Switches,UL Listed,Pack of 2,White",
+      "asin": "B0B4RZFVJG",
+      "link": "https://www.amazon.com/Combination-120-277VAC-Residential-Commercial-Individual/dp/B0B4RZFVJG/ref=sr_1_109?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-109",
+      "recent_sales": "200+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61u7QXHeJFL._AC_UL320_.jpg",
+      "unit_price": "$2.38$2.38/ounce",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 168,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 8.39,
+          "currency": "USD",
+          "raw": "$8.39",
+          "list_price": "$2.38",
+          "asin": "B0B4RZFVJG",
+          "link": "https://www.amazon.com/Combination-120-277VAC-Residential-Commercial-Individual/dp/B0B4RZFVJG/ref=sr_1_109?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-109"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 8.39,
+        "currency": "USD",
+        "raw": "$8.39",
+        "list_price": "$2.38",
+        "asin": "B0B4RZFVJG",
+        "link": "https://www.amazon.com/Combination-120-277VAC-Residential-Commercial-Individual/dp/B0B4RZFVJG/ref=sr_1_109?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-109"
+      }
+    },
+    {
+      "position": 11,
+      "title": "Lutron Claro Smart Switch for Caseta Smart Lighting (Lutron Smart Hub Required), for LED Lights and Fans, 5 Amp, Single-Pole/3-Way, Neutral Required, DVRF-5NS-LA, Light Almond",
+      "asin": "B0BYPD5WPG",
+      "link": "https://www.amazon.com/Lutron-Lighting-Control-Required-DVRF-5NS/dp/B0BYPD5WPG/ref=sr_1_110?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-110",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51QFA8JQDOL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 392,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 64.95,
+          "currency": "USD",
+          "raw": "$64.95",
+          "asin": "B0BYPD5WPG",
+          "link": "https://www.amazon.com/Lutron-Lighting-Control-Required-DVRF-5NS/dp/B0BYPD5WPG/ref=sr_1_110?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-110"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 64.95,
+        "currency": "USD",
+        "raw": "$64.95",
+        "asin": "B0BYPD5WPG",
+        "link": "https://www.amazon.com/Lutron-Lighting-Control-Required-DVRF-5NS/dp/B0BYPD5WPG/ref=sr_1_110?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-110"
+      }
+    },
+    {
+      "position": 12,
+      "title": "Decorator Wall Light Paddle Switch With Wallplates, 15 Amp Single Pole On/Off, Self-grounding, Rocker Replacement for Light & Ceiling Fan, Light Almond, 10 Pack",
+      "asin": "B0D95H9F8C",
+      "link": "https://www.amazon.com/TOPELER-Decorator-Wallplates-Self-grounding-Replacement/dp/B0D95H9F8C/ref=sr_1_111?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-111",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51gC2Y0OeqL._AC_UL320_.jpg",
+      "unit_price": "$1.90$1.90/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.2,
+      "ratings_total": 50,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 18.99,
+          "currency": "USD",
+          "raw": "$18.99",
+          "list_price": "$1.90",
+          "asin": "B0D95H9F8C",
+          "link": "https://www.amazon.com/TOPELER-Decorator-Wallplates-Self-grounding-Replacement/dp/B0D95H9F8C/ref=sr_1_111?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-111"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 18.99,
+        "currency": "USD",
+        "raw": "$18.99",
+        "list_price": "$1.90",
+        "asin": "B0D95H9F8C",
+        "link": "https://www.amazon.com/TOPELER-Decorator-Wallplates-Self-grounding-Replacement/dp/B0D95H9F8C/ref=sr_1_111?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-111"
+      }
+    },
+    {
+      "position": 13,
+      "title": "DEWENWILS Wireless Light Switch and Receiver Kit, No in-Wall Wiring Required,Remote Control Wall Switch Lighting Fixture for Ceiling Lights, Fans, Lamps,100 Ft RF Range, Programmable",
+      "asin": "B08CXCHFYC",
+      "link": "https://www.amazon.com/DEWENWILS-Wireless-Receiver-Required-Programmable/dp/B08CXCHFYC/ref=sr_1_115?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-115",
+      "recent_sales": "1K+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61Gf-1RhP2L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.2,
+      "ratings_total": 2813,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.99,
+          "currency": "USD",
+          "raw": "$13.99",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$17.99",
+          "asin": "B08CXCHFYC",
+          "link": "https://www.amazon.com/DEWENWILS-Wireless-Receiver-Required-Programmable/dp/B08CXCHFYC/ref=sr_1_115?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-115"
+        },
+        {
+          "symbol": "$",
+          "value": 17.99,
+          "currency": "USD",
+          "raw": "$17.99",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/DEWENWILS-Wireless-Receiver-Required-Programmable/dp/B08CXCHFYC/ref=sr_1_115?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-115",
+          "asin": "B08CXCHFYC"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.99,
+        "currency": "USD",
+        "raw": "$13.99",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$17.99",
+        "asin": "B08CXCHFYC",
+        "link": "https://www.amazon.com/DEWENWILS-Wireless-Receiver-Required-Programmable/dp/B08CXCHFYC/ref=sr_1_115?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-115"
+      }
+    },
+    {
+      "position": 14,
+      "title": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+      "asin": "B0033PSGAU",
+      "link": "https://www.amazon.com/Leviton-5224-2W-Single-Pole-Combination-Grounding/dp/B0033PSGAU/ref=sr_1_116?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-116",
+      "recent_sales": "200+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51FvLKlFfrL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 662,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 11.2,
+          "currency": "USD",
+          "raw": "$11.20",
+          "asin": "B0033PSGAU",
+          "link": "https://www.amazon.com/Leviton-5224-2W-Single-Pole-Combination-Grounding/dp/B0033PSGAU/ref=sr_1_116?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-116"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 11.2,
+        "currency": "USD",
+        "raw": "$11.20",
+        "asin": "B0033PSGAU",
+        "link": "https://www.amazon.com/Leviton-5224-2W-Single-Pole-Combination-Grounding/dp/B0033PSGAU/ref=sr_1_116?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-116"
+      }
+    },
+    {
+      "position": 15,
+      "title": "TREATLIFE Smart Switch 4 Pack, 2.4Ghz WiFi Light Switch Single-Pole, Neutral Wire Required, Works with Alexa, Google Home and SmartThings, Smart Home Remote Control, FCC Listed",
+      "asin": "B07WWYQJFR",
+      "link": "https://www.amazon.com/Treatlife-Required-Assistant-Single-Pole-Schedule/dp/B07WWYQJFR/ref=sr_1_117?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-117",
+      "recent_sales": "100+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61AK+PfWCzL._AC_UL320_.jpg",
+      "coupon": {
+        "badge_text": "Save 5%",
+        "text": "with coupon"
+      },
+      "unit_price": "$10.00$10.00/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 4138,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 39.99,
+          "currency": "USD",
+          "raw": "$39.99",
+          "list_price": "$10.00",
+          "asin": "B07WWYQJFR",
+          "link": "https://www.amazon.com/Treatlife-Required-Assistant-Single-Pole-Schedule/dp/B07WWYQJFR/ref=sr_1_117?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-117"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 39.99,
+        "currency": "USD",
+        "raw": "$39.99",
+        "list_price": "$10.00",
+        "asin": "B07WWYQJFR",
+        "link": "https://www.amazon.com/Treatlife-Required-Assistant-Single-Pole-Schedule/dp/B07WWYQJFR/ref=sr_1_117?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-117"
+      }
+    },
+    {
+      "position": 16,
+      "title": "AIDA Single Pole Triple Paddle Rocker Decorator Light Switch, 15 Amp Self-grounding Electrical Light Switches, Residential Grade, UL Listed (1 Pack, Glossy White)",
+      "asin": "B0C861YTWD",
+      "link": "https://www.amazon.com/AIDA-Decorator-Self-grounding-Electrical-Residential/dp/B0C861YTWD/ref=sr_1_118?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-118",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51yuhndm7kL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 83,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 9.89,
+          "currency": "USD",
+          "raw": "$9.89",
+          "asin": "B0C861YTWD",
+          "link": "https://www.amazon.com/AIDA-Decorator-Self-grounding-Electrical-Residential/dp/B0C861YTWD/ref=sr_1_118?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-118"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 9.89,
+        "currency": "USD",
+        "raw": "$9.89",
+        "asin": "B0C861YTWD",
+        "link": "https://www.amazon.com/AIDA-Decorator-Self-grounding-Electrical-Residential/dp/B0C861YTWD/ref=sr_1_118?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-118"
+      }
+    },
+    {
+      "position": 17,
+      "title": "LIDER Brushed Black Minimalist Design Decorator Switch, Frameless Paddle Wall Light Switch, On/Off Rocker Switch, Single Pole, Residential Grade, UL Listed, 3 Wire, 15A 120-277VAC, 5 Pack",
+      "asin": "B0CQ891PXZ",
+      "link": "https://www.amazon.com/LIDER-Minimalist-Decorator-Residential-120-277VAC/dp/B0CQ891PXZ/ref=sr_1_119?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-119",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/81Pk4q80XmL._AC_UL320_.jpg",
+      "unit_price": "$4.40$4.40/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.5,
+      "ratings_total": 84,
+      "is_small_business": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 21.99,
+          "currency": "USD",
+          "raw": "$21.99",
+          "list_price": "$4.40",
+          "asin": "B0CQ891PXZ",
+          "link": "https://www.amazon.com/LIDER-Minimalist-Decorator-Residential-120-277VAC/dp/B0CQ891PXZ/ref=sr_1_119?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-119"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 21.99,
+        "currency": "USD",
+        "raw": "$21.99",
+        "list_price": "$4.40",
+        "asin": "B0CQ891PXZ",
+        "link": "https://www.amazon.com/LIDER-Minimalist-Decorator-Residential-120-277VAC/dp/B0CQ891PXZ/ref=sr_1_119?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-119"
+      }
+    },
+    {
+      "position": 18,
+      "title": "ThunderWay 4-Way Decorator Wall Light Switches with Wallplates, 15A 120/277V UL Listed - On/Off Paddle Rocker, Self-Grounding - Residential and Commercial Grade (White, Pack of 2)",
+      "asin": "B0BXDC6F2M",
+      "link": "https://www.amazon.com/4-Way-Decorator-Switches-Wallplates-Listed/dp/B0BXDC6F2M/ref=sr_1_120?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-120",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51ioLfsBRcL._AC_UL320_.jpg",
+      "unit_price": "$7.00$7.00/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.5,
+      "ratings_total": 67,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.99,
+          "currency": "USD",
+          "raw": "$13.99",
+          "list_price": "$7.00",
+          "asin": "B0BXDC6F2M",
+          "link": "https://www.amazon.com/4-Way-Decorator-Switches-Wallplates-Listed/dp/B0BXDC6F2M/ref=sr_1_120?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-120"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.99,
+        "currency": "USD",
+        "raw": "$13.99",
+        "list_price": "$7.00",
+        "asin": "B0BXDC6F2M",
+        "link": "https://www.amazon.com/4-Way-Decorator-Switches-Wallplates-Listed/dp/B0BXDC6F2M/ref=sr_1_120?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-120"
+      }
+    },
+    {
+      "position": 19,
+      "title": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+      "asin": "B082LKCXV9",
+      "link": "https://www.amazon.com/GE-Switch-Neutral-Required-Bluetooth/dp/B082LKCXV9/ref=sr_1_121?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-121",
+      "recent_sales": "300+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71ieD7JCeFL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 3.7,
+      "ratings_total": 4261,
+      "is_small_business": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 29.98,
+          "currency": "USD",
+          "raw": "$29.98",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$44.98",
+          "asin": "B082LKCXV9",
+          "link": "https://www.amazon.com/GE-Switch-Neutral-Required-Bluetooth/dp/B082LKCXV9/ref=sr_1_121?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-121"
+        },
+        {
+          "symbol": "$",
+          "value": 44.98,
+          "currency": "USD",
+          "raw": "$44.98",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/GE-Switch-Neutral-Required-Bluetooth/dp/B082LKCXV9/ref=sr_1_121?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-121",
+          "asin": "B082LKCXV9"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 29.98,
+        "currency": "USD",
+        "raw": "$29.98",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$44.98",
+        "asin": "B082LKCXV9",
+        "link": "https://www.amazon.com/GE-Switch-Neutral-Required-Bluetooth/dp/B082LKCXV9/ref=sr_1_121?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-121"
+      }
+    },
+    {
+      "position": 20,
+      "title": "Legrand Pass & Seymour CSB20AC1WCC8 20 Amp 120/277V Hard Use Specification Grade Toggle Switch, Single Pole, Back and Side Wire, White (1 Count)",
+      "asin": "B000I3WAW0",
+      "link": "https://www.amazon.com/Legrand-CSB20AC1WCC8-120-volt-Alternating-Commercial/dp/B000I3WAW0/ref=sr_1_122?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-122",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51JbFuL8XeL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 121,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 3.75,
+          "currency": "USD",
+          "raw": "$3.75",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$8.86",
+          "asin": "B000I3WAW0",
+          "link": "https://www.amazon.com/Legrand-CSB20AC1WCC8-120-volt-Alternating-Commercial/dp/B000I3WAW0/ref=sr_1_122?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-122"
+        },
+        {
+          "symbol": "$",
+          "value": 8.86,
+          "currency": "USD",
+          "raw": "$8.86",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/Legrand-CSB20AC1WCC8-120-volt-Alternating-Commercial/dp/B000I3WAW0/ref=sr_1_122?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-122",
+          "asin": "B000I3WAW0"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 3.75,
+        "currency": "USD",
+        "raw": "$3.75",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$8.86",
+        "asin": "B000I3WAW0",
+        "link": "https://www.amazon.com/Legrand-CSB20AC1WCC8-120-volt-Alternating-Commercial/dp/B000I3WAW0/ref=sr_1_122?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-122"
+      }
+    },
+    {
+      "position": 21,
+      "title": "Leviton 5226-W WH COMBIN SW SP/PILOT LITE 15A120VAC",
+      "asin": "B0015BKZI0",
+      "link": "https://www.amazon.com/Leviton-5226-W-Single-Pole-Combination-Commercial/dp/B0015BKZI0/ref=sr_1_123?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-123",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61WRnAuGqtL._AC_UL320_.jpg",
+      "deal": {
+        "link": "https://www.amazon.com/gp/goldbox/",
+        "badge_text": "Limited time deal"
+      },
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 56,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.9,
+          "currency": "USD",
+          "raw": "$13.90",
+          "name": "Limited time deal",
+          "is_primary": true,
+          "list_price": "$19.87",
+          "asin": "B0015BKZI0",
+          "link": "https://www.amazon.com/Leviton-5226-W-Single-Pole-Combination-Commercial/dp/B0015BKZI0/ref=sr_1_123?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-123"
+        },
+        {
+          "symbol": "$",
+          "value": 19.87,
+          "currency": "USD",
+          "raw": "$19.87",
+          "name": "Limited time deal",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/Leviton-5226-W-Single-Pole-Combination-Commercial/dp/B0015BKZI0/ref=sr_1_123?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-123",
+          "asin": "B0015BKZI0"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.9,
+        "currency": "USD",
+        "raw": "$13.90",
+        "name": "Limited time deal",
+        "is_primary": true,
+        "list_price": "$19.87",
+        "asin": "B0015BKZI0",
+        "link": "https://www.amazon.com/Leviton-5226-W-Single-Pole-Combination-Commercial/dp/B0015BKZI0/ref=sr_1_123?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-123"
+      }
+    },
+    {
+      "position": 22,
+      "title": "SOZULAMP 3 Way Light Switch with Night Light-Easy to Install-No Neutral Required,Illuminated Three Way Switch with Light Sensor,15 Amp 110V,Residential Grade(2Pack,Dayligh LED)",
+      "asin": "B08CDNTFM3",
+      "link": "https://www.amazon.com/2Pack-SOZULAMP-Illuminated-Switch-Easy-Combination-Light-Decora/dp/B08CDNTFM3/ref=sr_1_124?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-124",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51sVCNRNPYL._AC_UL320_.jpg",
+      "unit_price": "$9.50$9.50/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.5,
+      "ratings_total": 742,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 18.99,
+          "currency": "USD",
+          "raw": "$18.99",
+          "list_price": "$9.50",
+          "asin": "B08CDNTFM3",
+          "link": "https://www.amazon.com/2Pack-SOZULAMP-Illuminated-Switch-Easy-Combination-Light-Decora/dp/B08CDNTFM3/ref=sr_1_124?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-124"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 18.99,
+        "currency": "USD",
+        "raw": "$18.99",
+        "list_price": "$9.50",
+        "asin": "B08CDNTFM3",
+        "link": "https://www.amazon.com/2Pack-SOZULAMP-Illuminated-Switch-Easy-Combination-Light-Decora/dp/B08CDNTFM3/ref=sr_1_124?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-124"
+      }
+    },
+    {
+      "position": 23,
+      "title": "AIDA Single Pole Double Paddle Rocker Decorator Light Switch, 15 Amp Self-grounding Electrical Light Switches, Residential Grade, UL Listed (1 Pack, Glossy White)",
+      "asin": "B0C89JXCF4",
+      "link": "https://www.amazon.com/AIDA-Decorator-Self-grounding-Electrical-Residential/dp/B0C89JXCF4/ref=sr_1_125?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-125",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51BTKIlAVxL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 176,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 9.99,
+          "currency": "USD",
+          "raw": "$9.99",
+          "asin": "B0C89JXCF4",
+          "link": "https://www.amazon.com/AIDA-Decorator-Self-grounding-Electrical-Residential/dp/B0C89JXCF4/ref=sr_1_125?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-125"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 9.99,
+        "currency": "USD",
+        "raw": "$9.99",
+        "asin": "B0C89JXCF4",
+        "link": "https://www.amazon.com/AIDA-Decorator-Self-grounding-Electrical-Residential/dp/B0C89JXCF4/ref=sr_1_125?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-125"
+      }
+    },
+    {
+      "position": 24,
+      "title": "Lutron Claro 15 Amp Single-Pole Rocker Switch with Locator Light, CA-1PSNL-WH, White",
+      "asin": "B0016LBTO8",
+      "link": "https://www.amazon.com/Lutron-CA-1PSNL-WH-15-Amp-Single-Locator/dp/B0016LBTO8/ref=sr_1_126?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-126",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Electrical Light Switches",
+          "id": "6291359011"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/5153QDBxnzL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.5,
+      "ratings_total": 310,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 17.43,
+          "currency": "USD",
+          "raw": "$17.43",
+          "asin": "B0016LBTO8",
+          "link": "https://www.amazon.com/Lutron-CA-1PSNL-WH-15-Amp-Single-Locator/dp/B0016LBTO8/ref=sr_1_126?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-126"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 17.43,
+        "currency": "USD",
+        "raw": "$17.43",
+        "asin": "B0016LBTO8",
+        "link": "https://www.amazon.com/Lutron-CA-1PSNL-WH-15-Amp-Single-Locator/dp/B0016LBTO8/ref=sr_1_126?dib=eyJ2IjoiMSJ9.SfIel0cSYxfVSbdi47_cLxz9wytgwp8jH9G1AzvrRndNkbQjb1V1mtsqnG_nFvtPcHX0yccko76ws68iWCFcdLCNy_rdPucWRz6u2gHwxmMEF6hMf689yh3AEVpfR-dIOxyC0tG6bJqSO28ioCACsoOe9EfkL7muYMhglmFTM4j0PEeDVID3II2-JJDGr5l-kvVCnrJTtwgk1txYX2QlfGPSCp3CJE6_yYuNC0o3EHJ_qFIPxsLnzxdxVsuTsyHOZSYC0ItN-gr-87xKeagNwm2EGwIr6WEzLCzlCTdMKuY.KO7bjOQF6B9Hh1jaffGnXlqzQIDXWO5woFgZmWz0yEg&dib_tag=se&keywords=light+switches&qid=1749237830&s=lamps-light&sr=1-126"
+      }
+    }
+  ],
+  "search_information": {
+    "results_text_raw": "97-120 of over 20,000 results for \"light switches\"",
+    "results_begin": 97,
+    "results_end": 120,
+    "total_results": 20000,
+    "search_term": "light switches"
+  },
+  "category_information": {
+    "is_landing_page": false
+  },
+  "pagination": {
+    "current_page": 5,
+    "current_page_link": "https://www.amazon.com/s/?k=light+switches&ref=nb_sb_noss_2&node=6291359011&page=5&s=relevancerank",
+    "next_page_link": "https://www.amazon.com/s/?k=light+switches&ref=nb_sb_noss_2&node=6291359011&page=6&s=relevancerank",
+    "total_pages": 400
+  },
+  "refinements": {
+    "prime": [
+      {
+        "name": "Free Shipping by Amazon",
+        "value": "n:228013||p_76/1249152011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_76%3A1249152011&s=relevancerank&dc&qid=1749237830&rnid=1249150011&ref=sr_nr_p_76_1&ds=v1%3ADe0fwIZu5kaRhQpjoHqUruLIxdOf4EoCfGT4%2FgrdtOo",
+        "refinement_display_name": "Prime"
+      }
+    ],
+    "departments": [
+      {
+        "name": "Tools & Home Improvement",
+        "value": "n/228013",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013&s=relevancerank&dc&qid=1749237830&ref=sr_ex_n_1&ds=v1%3ABF1qjSVkvrRAcY3LslKyS4t7fW%2Bt9BtMajOJdKyh88o",
+        "refinement_display_name": "Departments"
+      },
+      {
+        "name": "Electrical",
+        "value": "n/495266",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cn%3A495266&s=relevancerank&dc&qid=1749237830&ref=sr_ex_n_1&ds=v1%3AnXPAc8uOI4ae%2FAw2QhhVbf7395X2LJPRsEwuxOXsUUY",
+        "refinement_display_name": "Departments"
+      },
+      {
+        "name": "Switches & Dimmers",
+        "value": "n/495324",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cn%3A495266%2Cn%3A495324&s=relevancerank&dc&qid=1749237830&ref=sr_ex_n_1&ds=v1%3AIJUl6IKooe1J4Py3WTDLUSs3GXXHbfX44ifjc%2FR56MI",
+        "refinement_display_name": "Departments"
+      },
+      {
+        "name": "Wall Switches",
+        "value": "n/6291358011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cn%3A495266%2Cn%3A495324%2Cn%3A6291358011&s=relevancerank&dc&qid=1749237830&ref=sr_ex_n_1&ds=v1%3AC85EHr6dR3SoX5LDmY9rq3rtoyNwQQ8HBC2iuVO1jxQ",
+        "refinement_display_name": "Departments"
+      },
+      {
+        "name": "Light Switches",
+        "value": "n/6291359011",
+        "refinement_display_name": "Departments"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "4 Stars",
+        "value": "n:228013||p_72/1248909011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_72%3A1248909011&s=relevancerank&dc&qid=1749237830&rnid=1248907011&ref=sr_nr_p_72_1&ds=v1%3AXQ%2BYC4bK0GLOpY%2FEfcILHFyltimntPpnFmFpLzb1lbQ",
+        "refinement_display_name": "Reviews"
+      }
+    ],
+    "brand": [
+      {
+        "name": "ENERLITES",
+        "value": "n:228013||p_123/111972",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A111972&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_1&ds=v1%3Azdg%2FckHPu3CPT9igOpp%2F%2B2%2BYrxNaBMWcyyAXsw7u2O4",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "BESTTEN",
+        "value": "n:228013||p_123/155629",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A155629&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_2&ds=v1%3A5MLzo%2Ft913O3t3cuBhzRvmtR87q9u25T1DGPf1w3N2U",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Leviton",
+        "value": "n:228013||p_123/236836",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A236836&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_3&ds=v1%3Au4Y%2F3YknZzj%2FckUr8ynNcjE8yx2fxaEkh%2B457O8nFbo",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "GE",
+        "value": "n:228013||p_123/256793",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A256793&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_4&ds=v1%3Az2lGO4MZIxAPtvAbbBJT6HLH7amI24AyZg1649XPEiA",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Amico",
+        "value": "n:228013||p_123/240810",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A240810&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_5&ds=v1%3AlpraPOb172pf%2FWtIvfBfwtSTD8sPldKoLJNAG7JFGSc",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Lutron",
+        "value": "n:228013||p_123/245024",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A245024&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_6&ds=v1%3ALaI5n2aIZ60QGl3J4HbJbG8%2FkS9lnpygtHoVqpMpieQ",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Kasa Smart",
+        "value": "n:228013||p_123/655015",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A655015&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_7&ds=v1%3Ax82I7VcjDIPci5fY7%2FPFZg74yhVnXczie9rqjerqlwk",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "DEWENWILSgreencyclePass & SeymourTOPGREENERMOESGHome SmartTREATLIFEBaomain",
+        "value": "n:228013||undefined",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A314711&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_8&ds=v1%3Aix9OgQR%2FB9y8pvvNOfal1FXU5Fz2VjCVHP1D5h9hq34",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "DEWENWILS",
+        "value": "n:228013||p_123/314711",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A314711&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_8&ds=v1%3Aix9OgQR%2FB9y8pvvNOfal1FXU5Fz2VjCVHP1D5h9hq34",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "greencycle",
+        "value": "n:228013||p_123/138305",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A138305&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_9&ds=v1%3AnLwbv8n5TzcVAq7%2F%2Bo%2FxrGvrb4J9qjDNfno9eADYm6Y",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Pass & Seymour",
+        "value": "n:228013||p_123/313891",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A313891&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_10&ds=v1%3AvfJ%2B7KfRDm%2FACjKzDISV9dUxafhc4TBE8hSO2VS4KfE",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "TOPGREENER",
+        "value": "n:228013||p_123/105631",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A105631&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_11&ds=v1%3ApwUXzkkWz5RrjKWtlMaO8O4NNzfxOGgd6yLxG6F4a00",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "MOES",
+        "value": "n:228013||p_123/261340",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A261340&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_12&ds=v1%3AxafjsVC73BEnpwjecaH5JgMJzTLb0etflXwdzORjKEA",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "GHome Smart",
+        "value": "n:228013||p_123/1518775",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A1518775&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_13&ds=v1%3AbRrlifDGsx%2BmI%2FJreZuhe%2BuOdZ%2BDJarhkgvUgA93SHw",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "TREATLIFE",
+        "value": "n:228013||p_123/468849",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A468849&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_14&ds=v1%3AoLdJnHEzHtd1K8K4V5zg1ldRTrsntWy6OR34Wb8MQj0",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Baomain",
+        "value": "n:228013||p_123/266466",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A266466&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_15&ds=v1%3AF7WFIsFFSoRxnDsOCRp5dJXWnZBtu2QVdFuWxgkVx0Y",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Top Brands",
+        "value": "n:228013||p_n_feature_forty-one_browse-bin/119653281011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_forty-one_browse-bin%3A119653281011&s=relevancerank&dc&qid=1749237830&rnid=119653280011&ref=sr_nr_p_n_feature_forty-one_browse-bin_1&ds=v1%3AoagD2ysViKYGxBR1cXvXdswW%2FcW0AS6F3KaIWFjBzpE",
+        "refinement_display_name": "Brand"
+      }
+    ],
+    "eligible_for_free_shipping": [
+      {
+        "name": "Free Shipping by Amazon",
+        "value": "n:228013||p_76/1249152011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_76%3A1249152011&s=relevancerank&dc&qid=1749237830&rnid=1249150011&ref=sr_nr_p_76_1&ds=v1%3ADe0fwIZu5kaRhQpjoHqUruLIxdOf4EoCfGT4%2FgrdtOo",
+        "refinement_display_name": "Eligible for Free Shipping"
+      }
+    ],
+    "brands": [
+      {
+        "name": "ENERLITES",
+        "value": "n:228013||p_123/111972",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A111972&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_1&ds=v1%3Azdg%2FckHPu3CPT9igOpp%2F%2B2%2BYrxNaBMWcyyAXsw7u2O4",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "BESTTEN",
+        "value": "n:228013||p_123/155629",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A155629&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_2&ds=v1%3A5MLzo%2Ft913O3t3cuBhzRvmtR87q9u25T1DGPf1w3N2U",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Leviton",
+        "value": "n:228013||p_123/236836",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A236836&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_3&ds=v1%3Au4Y%2F3YknZzj%2FckUr8ynNcjE8yx2fxaEkh%2B457O8nFbo",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "GE",
+        "value": "n:228013||p_123/256793",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A256793&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_4&ds=v1%3Az2lGO4MZIxAPtvAbbBJT6HLH7amI24AyZg1649XPEiA",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Amico",
+        "value": "n:228013||p_123/240810",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A240810&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_5&ds=v1%3AlpraPOb172pf%2FWtIvfBfwtSTD8sPldKoLJNAG7JFGSc",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Lutron",
+        "value": "n:228013||p_123/245024",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A245024&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_6&ds=v1%3ALaI5n2aIZ60QGl3J4HbJbG8%2FkS9lnpygtHoVqpMpieQ",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Kasa Smart",
+        "value": "n:228013||p_123/655015",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A655015&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_7&ds=v1%3Ax82I7VcjDIPci5fY7%2FPFZg74yhVnXczie9rqjerqlwk",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "DEWENWILSgreencyclePass & SeymourTOPGREENERMOESGHome SmartTREATLIFEBaomain",
+        "value": "n:228013||undefined",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A314711&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_8&ds=v1%3Aix9OgQR%2FB9y8pvvNOfal1FXU5Fz2VjCVHP1D5h9hq34",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "DEWENWILS",
+        "value": "n:228013||p_123/314711",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A314711&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_8&ds=v1%3Aix9OgQR%2FB9y8pvvNOfal1FXU5Fz2VjCVHP1D5h9hq34",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "greencycle",
+        "value": "n:228013||p_123/138305",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A138305&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_9&ds=v1%3AnLwbv8n5TzcVAq7%2F%2Bo%2FxrGvrb4J9qjDNfno9eADYm6Y",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Pass & Seymour",
+        "value": "n:228013||p_123/313891",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A313891&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_10&ds=v1%3AvfJ%2B7KfRDm%2FACjKzDISV9dUxafhc4TBE8hSO2VS4KfE",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "TOPGREENER",
+        "value": "n:228013||p_123/105631",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A105631&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_11&ds=v1%3ApwUXzkkWz5RrjKWtlMaO8O4NNzfxOGgd6yLxG6F4a00",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "MOES",
+        "value": "n:228013||p_123/261340",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A261340&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_12&ds=v1%3AxafjsVC73BEnpwjecaH5JgMJzTLb0etflXwdzORjKEA",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "GHome Smart",
+        "value": "n:228013||p_123/1518775",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A1518775&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_13&ds=v1%3AbRrlifDGsx%2BmI%2FJreZuhe%2BuOdZ%2BDJarhkgvUgA93SHw",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "TREATLIFE",
+        "value": "n:228013||p_123/468849",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A468849&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_14&ds=v1%3AoLdJnHEzHtd1K8K4V5zg1ldRTrsntWy6OR34Wb8MQj0",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Baomain",
+        "value": "n:228013||p_123/266466",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_123%3A266466&s=relevancerank&dc&qid=1749237830&rnid=85457740011&ref=sr_nr_p_123_15&ds=v1%3AF7WFIsFFSoRxnDsOCRp5dJXWnZBtu2QVdFuWxgkVx0Y",
+        "refinement_display_name": "Brands"
+      }
+    ],
+    "top_brands_in_diy_and_tools": [
+      {
+        "name": "Top Brands",
+        "value": "n:228013||p_n_feature_forty-one_browse-bin/119653281011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_forty-one_browse-bin%3A119653281011&s=relevancerank&dc&qid=1749237830&rnid=119653280011&ref=sr_nr_p_n_feature_forty-one_browse-bin_1&ds=v1%3AoagD2ysViKYGxBR1cXvXdswW%2FcW0AS6F3KaIWFjBzpE",
+        "refinement_display_name": "Top Brands in DIY & Tools"
+      }
+    ],
+    "customer_reviews": [
+      {
+        "name": "4 Stars",
+        "value": "n:228013||p_72/1248909011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_72%3A1248909011&s=relevancerank&dc&qid=1749237830&rnid=1248907011&ref=sr_nr_p_72_1&ds=v1%3AXQ%2BYC4bK0GLOpY%2FEfcILHFyltimntPpnFmFpLzb1lbQ",
+        "refinement_display_name": "Customer Reviews"
+      }
+    ],
+    "circuit_type": [
+      {
+        "name": "1-way",
+        "value": "n:6291359011||p_n_feature_browse-bin/59788760011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_browse-bin%3A59788760011&s=relevancerank&dc&qid=1749237830&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_1&ds=v1%3ADUeUWcgQ3FdY8Cc3b%2FVXDtDqXCECK4kjzx8eDeHQp2A",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "2-way",
+        "value": "n:6291359011||p_n_feature_browse-bin/59788766011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_browse-bin%3A59788766011&s=relevancerank&dc&qid=1749237830&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_2&ds=v1%3AoewCXDtkrfVnWDA43vcwmJ3FBllrZlCUzuPKdSgw740",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "3-way",
+        "value": "n:6291359011||p_n_feature_browse-bin/59788768011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_browse-bin%3A59788768011&s=relevancerank&dc&qid=1749237830&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_3&ds=v1%3AeSO0eT3DWnH1ok0kYrJsqTrsMOlcRhLiTPDlyplcGz0",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "4-way",
+        "value": "n:6291359011||p_n_feature_browse-bin/59788759011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_browse-bin%3A59788759011&s=relevancerank&dc&qid=1749237830&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_4&ds=v1%3AEzuM%2BgMi6kxw%2FVFFab3OFB%2F0PFW87q4cUNs6dkXrw40",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "5-way",
+        "value": "n:6291359011||p_n_feature_browse-bin/59788771011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_browse-bin%3A59788771011&s=relevancerank&dc&qid=1749237830&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_5&ds=v1%3AZwER%2BnR0c4JTmPYP35kLPM5NZf5rad9Yc3WdEoTfo%2BY",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "6-way",
+        "value": "n:6291359011||p_n_feature_browse-bin/59788764011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_browse-bin%3A59788764011&s=relevancerank&dc&qid=1749237830&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_6&ds=v1%3ATeC0I%2FKg%2F5SF008Cx4Kreog9LbWQdIFez1arvULEtnA",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "8-way",
+        "value": "n:6291359011||p_n_feature_browse-bin/59788775011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_browse-bin%3A59788775011&s=relevancerank&dc&qid=1749237830&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_7&ds=v1%3Ad3ypF9gLpwFoaBBS06jMzNW8z9vuxshx8%2FXKKtQGhHc",
+        "refinement_display_name": "Circuit Type"
+      }
+    ],
+    "compatibility": [
+      {
+        "name": "Amazon Alexa",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366694011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366694011&s=relevancerank&dc&qid=1749237830&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_1&ds=v1%3AM%2BGr2GiYRYmvUlU2uBoOhivgQdqrDrlTspG78snlmoQ",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "Google Assistant",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366696011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366696011&s=relevancerank&dc&qid=1749237830&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_2&ds=v1%3ALvRTokTVxDga9D2vdf8DkpL4fMjEK5rB2PW1ZXprr2o",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "IFTTT",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366698011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366698011&s=relevancerank&dc&qid=1749237830&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_3&ds=v1%3A69AV9UD%2F6uIM86Z5G%2FAICia%2FCVHPAZxQUYO54YqKd9c",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "Almond",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366693011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366693011&s=relevancerank&dc&qid=1749237830&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_4&ds=v1%3AFJYBnunWOymfFlkRpDljcmodkV4b%2FwT%2Fix38%2FroZMLA",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "HomeKit",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366697011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366697011&s=relevancerank&dc&qid=1749237830&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_5&ds=v1%3AKqhKNLVEcsl39w81cXbZu%2B2qo4rFmJ8kggPR1aMkwbA",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "SmartThings",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366702011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366702011&s=relevancerank&dc&qid=1749237830&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_6&ds=v1%3AMeAxdzrJmgp9iZC3B64zLTfwQ9ilEvbd9ztUDag%2FLKY",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "Vera",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366703011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366703011&s=relevancerank&dc&qid=1749237830&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_7&ds=v1%3AoxdJigyY%2B%2BTHe%2FBll6cPGNmaqoHSV8zcB0gjJaK1iuM",
+        "refinement_display_name": "Compatibility"
+      }
+    ],
+    "condition": [
+      {
+        "name": "New",
+        "value": "n:228013||p_n_condition-type/6358196011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_condition-type%3A6358196011&s=relevancerank&dc&qid=1749237830&rnid=6358194011&ref=sr_nr_p_n_condition-type_1&ds=v1%3AAc%2BM%2B7o7SgOrHj7sdYwqQD7dalED0JR06CDicrooV2c",
+        "refinement_display_name": "Condition"
+      },
+      {
+        "name": "Used",
+        "value": "n:228013||p_n_condition-type/6358198011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_condition-type%3A6358198011&s=relevancerank&dc&qid=1749237830&rnid=6358194011&ref=sr_nr_p_n_condition-type_2&ds=v1%3AWFoGxocwDxv%2FHM7DZXONwVZkWL9RUVtv1MzehVjSSdc",
+        "refinement_display_name": "Condition"
+      }
+    ],
+    "connectivity_protocol": [
+      {
+        "name": "Wi-Fi",
+        "value": "n:6291359011||p_n_feature_fourteen_browse-bin/117243178011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_fourteen_browse-bin%3A117243178011&s=relevancerank&dc&qid=1749237830&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_1&ds=v1%3A8mWJdbciFM3DHf7OOpA3lWoW8iNFKGPh0PJHwW0inEI",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "ZigBee",
+        "value": "n:6291359011||p_n_feature_fourteen_browse-bin/117243180011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_fourteen_browse-bin%3A117243180011&s=relevancerank&dc&qid=1749237830&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_2&ds=v1%3AX5Ot6YYz6iLdu47%2F7I4em0vuf0DwawC0PPAD0N9A5cM",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "n:6291359011||p_n_feature_fourteen_browse-bin/117243182011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_fourteen_browse-bin%3A117243182011&s=relevancerank&dc&qid=1749237830&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_3&ds=v1%3ASiFMKDFn6B23uPgwazrD6ADGUP39zSYePvIEYcaMkhY",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "Matter",
+        "value": "n:6291359011||p_n_feature_fourteen_browse-bin/117243176011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_fourteen_browse-bin%3A117243176011&s=relevancerank&dc&qid=1749237830&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_4&ds=v1%3AwYn8Ivy1dtb4DMm0%2F%2Fu7OgflXsteJ%2BJ6%2BWwfklNrLhs",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "Z-Wave",
+        "value": "n:6291359011||p_n_feature_fourteen_browse-bin/117243186011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_fourteen_browse-bin%3A117243186011&s=relevancerank&dc&qid=1749237830&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_5&ds=v1%3AP1fHIHoq%2FxGUOyc6xPO7pto4lUiazoChVth2RE1p61Y",
+        "refinement_display_name": "Connectivity Protocol"
+      }
+    ],
+    "deals_and_discounts": [
+      {
+        "name": "All Discounts",
+        "value": "n:6291359011||p_n_deal_type/23566065011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_deal_type%3A23566065011&s=relevancerank&dc&qid=1749237830&rnid=23566063011&ref=sr_nr_p_n_deal_type_1&ds=v1%3A6pF77VASaNlD2FcPO9v9FMt%2BSs1AMBQIyXJDToosXPY",
+        "refinement_display_name": "Deals & Discounts"
+      },
+      {
+        "name": "Today's Deals",
+        "value": "n:6291359011||p_n_deal_type/23566064011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_deal_type%3A23566064011&s=relevancerank&dc&qid=1749237830&rnid=23566063011&ref=sr_nr_p_n_deal_type_2&ds=v1%3Ay49mxOtyyOLcDF8PxVAeabN5p131L0Q4k4oWO8A8CrY",
+        "refinement_display_name": "Deals & Discounts"
+      }
+    ],
+    "department": [
+      {
+        "name": "Tools & Home Improvement",
+        "value": "n/228013",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013&s=relevancerank&dc&qid=1749237830&ref=sr_ex_n_1&ds=v1%3ABF1qjSVkvrRAcY3LslKyS4t7fW%2Bt9BtMajOJdKyh88o",
+        "refinement_display_name": "Department"
+      },
+      {
+        "name": "Electrical",
+        "value": "n/495266",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cn%3A495266&s=relevancerank&dc&qid=1749237830&ref=sr_ex_n_1&ds=v1%3AnXPAc8uOI4ae%2FAw2QhhVbf7395X2LJPRsEwuxOXsUUY",
+        "refinement_display_name": "Department"
+      },
+      {
+        "name": "Switches & Dimmers",
+        "value": "n/495324",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cn%3A495266%2Cn%3A495324&s=relevancerank&dc&qid=1749237830&ref=sr_ex_n_1&ds=v1%3AIJUl6IKooe1J4Py3WTDLUSs3GXXHbfX44ifjc%2FR56MI",
+        "refinement_display_name": "Department"
+      },
+      {
+        "name": "Wall Switches",
+        "value": "n/6291358011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cn%3A495266%2Cn%3A495324%2Cn%3A6291358011&s=relevancerank&dc&qid=1749237830&ref=sr_ex_n_1&ds=v1%3AC85EHr6dR3SoX5LDmY9rq3rtoyNwQQ8HBC2iuVO1jxQ",
+        "refinement_display_name": "Department"
+      },
+      {
+        "name": "Light Switches",
+        "value": "n/6291359011",
+        "refinement_display_name": "Department"
+      }
+    ],
+    "amazon_certified": [
+      {
+        "name": "Works with Alexa",
+        "value": "n:6291359011||p_n_amazon_certified/16741513011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_amazon_certified%3A16741513011&s=relevancerank&dc&qid=1749237830&rnid=16741512011&ref=sr_nr_p_n_amazon_certified_1&ds=v1%3ASIwQeXVrrlyL9iYjl1UBsePR%2Fgq8e9%2Flm6fALuNHWAA",
+        "refinement_display_name": "Amazon Certified"
+      }
+    ],
+    "from_our_brands": [
+      {
+        "name": "Amazon Brands",
+        "value": "n:6291359011||p_n_feature_forty-seven_browse-bin/24677333011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A6291359011%2Cp_n_feature_forty-seven_browse-bin%3A24677333011&s=relevancerank&dc&qid=1749237830&rnid=21180941011&ref=sr_nr_p_n_feature_forty-seven_browse-bin_1&ds=v1%3A%2BipL0f%2B7TnwgtfVao7PtbIHv6QKkg%2FZTmJnHq40054g",
+        "refinement_display_name": "From Our Brands"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Energy Star",
+        "value": "n:228013||p_n_special_merchandising_browse-bin/544734011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_special_merchandising_browse-bin%3A544734011&s=relevancerank&dc&qid=1749237830&rnid=544733011&ref=sr_nr_p_n_special_merchandising_browse-bin_1&ds=v1%3A4ZfBgnpKWqDkYIf9H8LNWTTA%2B4K0SvckhLoHrDMUncM",
+        "refinement_display_name": "Certifications"
+      },
+      {
+        "name": "UL Listed",
+        "value": "n:228013||p_n_special_merchandising_browse-bin/5741531011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_special_merchandising_browse-bin%3A5741531011&s=relevancerank&dc&qid=1749237830&rnid=544733011&ref=sr_nr_p_n_special_merchandising_browse-bin_2&ds=v1%3AgVsOeiL%2FLspbK%2BtMgmUgvkkRz82HgGCTXWPc7ymgM3o",
+        "refinement_display_name": "Certifications"
+      }
+    ],
+    "seller": [
+      {
+        "name": "caifei Xue1",
+        "value": "n:228013||p_6/A2UUVBDGTTPJTD",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_6%3AA2UUVBDGTTPJTD&s=relevancerank&dc&qid=1749237830&rnid=339807011&ref=sr_nr_p_6_1&ds=v1%3ASsW8XpFMAYwuAkIS0c0eedlFurirtzKzut5MSr5ZA2g",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "Amazon.com",
+        "value": "n:228013||p_6/ATVPDKIKX0DER",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_6%3AATVPDKIKX0DER&s=relevancerank&dc&qid=1749237830&rnid=339807011&ref=sr_nr_p_6_2&ds=v1%3AmdVPUSuoqUD6SRriDGJeHPKAlFH3esvNX05bjMlgEkY",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "GuangZhouChengLuDianZiShangWuYouXianGongSiDelmitanLeikebaoArt PlatesTD.Shopthuyduongls",
+        "value": "n:228013||undefined",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_6%3AAYNFJSSRX9QP1&s=relevancerank&dc&qid=1749237830&rnid=339807011&ref=sr_nr_p_6_3&ds=v1%3AaWjpJEwj71zZ1we6%2FqQpR1VBMNVDe9IyjB4J1xSUo7o",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "GuangZhouChengLuDianZiShangWuYouXianGongSi",
+        "value": "n:228013||p_6/AYNFJSSRX9QP1",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_6%3AAYNFJSSRX9QP1&s=relevancerank&dc&qid=1749237830&rnid=339807011&ref=sr_nr_p_6_3&ds=v1%3AaWjpJEwj71zZ1we6%2FqQpR1VBMNVDe9IyjB4J1xSUo7o",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "Delmitan",
+        "value": "n:228013||p_6/A3MU8UF5OS5MT2",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_6%3AA3MU8UF5OS5MT2&s=relevancerank&dc&qid=1749237830&rnid=339807011&ref=sr_nr_p_6_4&ds=v1%3Ai3Gj4YGqAYK0RTdwWyx%2FPXs32cFvfvkdpRHQOXfiZ4w",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "Leikebao",
+        "value": "n:228013||p_6/A2GVP3VXQRRU3C",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_6%3AA2GVP3VXQRRU3C&s=relevancerank&dc&qid=1749237830&rnid=339807011&ref=sr_nr_p_6_5&ds=v1%3AszntaUr3q%2FSF1aGzLyf4UNMRfnOYeXitydK6Lff0A8s",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "Art Plates",
+        "value": "n:228013||p_6/A2J0N6G1BBZW3O",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_6%3AA2J0N6G1BBZW3O&s=relevancerank&dc&qid=1749237830&rnid=339807011&ref=sr_nr_p_6_6&ds=v1%3AsuUUEyxMzWPDUlZB5g8HNwUI6Rz5SifxjHVx404P9wM",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "TD.Shopthuyduongls",
+        "value": "n:228013||p_6/A2MCTZDDOUAU2X",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_6%3AA2MCTZDDOUAU2X&s=relevancerank&dc&qid=1749237830&rnid=339807011&ref=sr_nr_p_6_7&ds=v1%3ARDpszGb5lt%2FSCZyr6ZQDYLNOKZFo64he11U4AyPrT30",
+        "refinement_display_name": "Seller"
+      }
+    ],
+    "control_method": [
+      {
+        "name": "App",
+        "value": "n:228013||p_n_feature_thirty-three_browse-bin/19366679011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-three_browse-bin%3A19366679011&s=relevancerank&dc&qid=1749237830&rnid=19366678011&ref=sr_nr_p_n_feature_thirty-three_browse-bin_1&ds=v1%3AhJnn6%2FdjJSTZAhos52caQQa2uzSRFTqOsMvIQIKFk2o",
+        "refinement_display_name": "Control Method"
+      },
+      {
+        "name": "Voice",
+        "value": "n:228013||p_n_feature_thirty-three_browse-bin/19366680011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-three_browse-bin%3A19366680011&s=relevancerank&dc&qid=1749237830&rnid=19366678011&ref=sr_nr_p_n_feature_thirty-three_browse-bin_2&ds=v1%3A%2FkXqqWkXyoOV%2BgeOJ5lvkqwi3mj99RdpQKKhZYD0zsY",
+        "refinement_display_name": "Control Method"
+      }
+    ],
+    "premium_brands": [
+      {
+        "name": "Premium Brands",
+        "value": "n:228013||p_n_feature_keywords_browse-bin/204376014011",
+        "link": "https://www.amazon.com/s?k=light+switches&i=tools&rh=n%3A228013%2Cp_n_feature_keywords_browse-bin%3A204376014011&s=relevancerank&dc&qid=1749237830&rnid=204376013011&ref=sr_nr_p_n_feature_keywords_browse-bin_1&ds=v1%3A4okZb989SYPUD1YBuoswrMTWhLgKXgWJQj9bDwVF8yc",
+        "refinement_display_name": "Premium Brands"
+      }
+    ]
+  },
+  "video_blocks": [
+    {
+      "video_link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1b864dfd-f243-473f-9ec5-0c4224dba9c2.mp4/productVideoOptimized.mp4",
+      "thumbnail_link": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/1b864dfd-f243-473f-9ec5-0c4224dba9c2.mp4/r/THUMBNAIL_360P_FRAME_3_CAPTURE_2.JPG",
+      "campaign_id": "300008550042106",
+      "advertiser_id": "112987166802",
+      "has_audio": true,
+      "products": [
+        {
+          "asin": "B09X2V2LCX",
+          "link": "https://www.amazon.com/dp/B09X2V2LCX",
+          "title": "VOLISUN 24 Pack 6 inch Recessed Lighting, 5CCT LED Recessed Light with Junction Box, 2700K-5000K Selectable, 13W Eqv 120W, 1080LM Dimmable Canless Wafer Downlight, LED Ceiling Light ETL Certificated",
+          "is_prime": true,
+          "rating": 4.5,
+          "ratings_total": 351,
+          "price": {
+            "value": 109.17,
+            "currency": "USD",
+            "symbol": "$",
+            "raw": "109.17"
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,374 @@
+{
+  "product_title": "SOZULAMP 3 Way Light Switch with Night Light-Easy to Install-No Neutral Required,Illuminated Three Way Switch with Light Sensor,15 Amp 110V,Residential Grade(2Pack,Dayligh LED)",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "switch": {
+        "A@loud noise when flipped": {
+          "-": [
+            0,
+            25
+          ]
+        },
+        "B@paddle design": {
+          "+": [
+            6,
+            11
+          ]
+        },
+        "C@plastic joint in middle erodes and pops out": {
+          "-": [
+            15
+          ]
+        },
+        "D@rocker design": {
+          "+": [
+            41
+          ]
+        }
+      },
+      "LED lights": {
+        "E@very bright": {
+          "+": [
+            0
+          ]
+        },
+        "F@dim/low light emission": {
+          "-": [
+            3,
+            5,
+            13,
+            14,
+            20,
+            25,
+            41
+          ]
+        },
+        "G@located under the switch": {
+          "+": [
+            11
+          ]
+        },
+        "H@shines up or down": {
+          "+": [
+            7,
+            37
+          ]
+        },
+        "I@flickers": {
+          "-": [
+            23,
+            25
+          ]
+        },
+        "J@only shines upward": {
+          "-": [
+            12
+          ]
+        },
+        "K@lights at both ends of switch": {
+          "+": [
+            37,
+            42
+          ]
+        },
+        "L@diodes stopped working": {
+          "-": [
+            33,
+            44
+          ]
+        }
+      },
+      "sensor": {
+        "M@day/night sensor (tiny hole) is sensitive": {
+          "+": [
+            7,
+            37
+          ]
+        }
+      },
+      "wiring": {
+        "N@wire connectors for matching": {
+          "+": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well for several months": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@difficult to switch, wants to stay in position": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@works great": {
+          "+": {
+            "?": [
+              4,
+              8
+            ]
+          }
+        },
+        "d@easy to install": {
+          "+": {
+            "?": [
+              3,
+              5,
+              22,
+              26,
+              29,
+              34,
+              42,
+              43
+            ]
+          }
+        },
+        "e@LED comes on when area darkens": {
+          "+": {
+            "M": [
+              6
+            ]
+          }
+        },
+        "f@sensor sometimes activates from walking past": {
+          "-": {
+            "M": [
+              7
+            ]
+          }
+        },
+        "g@provides adequate nightlight brightness": {
+          "+": {
+            "?": [
+              9,
+              10,
+              38
+            ]
+          }
+        },
+        "h@lights up in low light conditions": {
+          "+": {
+            "M": [
+              11
+            ]
+          }
+        },
+        "i@switch stopped staying on after one year": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "j@other switch failed after two years": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "k@powerful enough for navigation without being bothersome": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "l@ambient light sensor minimizes unnecessary operation": {
+          "+": {
+            "M": [
+              22
+            ]
+          }
+        },
+        "m@light flickers horribly": {
+          "-": {
+            "I": [
+              23
+            ]
+          }
+        },
+        "n@does not operate like conventional 3-way switch": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "o@main switch must be on for slave switch to function": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "p@LED illumination stopped working after 5 months": {
+          "-": {
+            "L": [
+              33,
+              44
+            ]
+          }
+        },
+        "q@both switches stopped working after 5 months": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "r@switch does not turn light on": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "s@night light doesn't work": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "t@switches stopped working": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "u@sensor shuts off when light pointed at it": {
+          "+": {
+            "M": [
+              37
+            ]
+          }
+        }
+      },
+      "durability": {
+        "v@breaks within 9 months": {
+          "-": {
+            "C": [
+              15
+            ]
+          }
+        },
+        "w@low quality/flimsy design": {
+          "-": {
+            "C": [
+              15
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "hallway lighting": {
+        "+": {
+          "e": [
+            6
+          ],
+          "g": [
+            27
+          ],
+          "k": [
+            22
+          ],
+          "?": [
+            10,
+            38,
+            43
+          ]
+        },
+        "-": {
+          "f": [
+            3
+          ]
+        }
+      },
+      "stair lighting": {
+        "+": {
+          "g": [
+            9
+          ],
+          "k": [
+            22
+          ],
+          "?": [
+            34
+          ]
+        }
+      },
+      "bathroom lighting": {
+        "+": {
+          "?": [
+            11,
+            35,
+            46
+          ]
+        }
+      },
+      "finding switches in dark": {
+        "+": {
+          "?": [
+            16,
+            39,
+            43
+          ]
+        }
+      },
+      "nightlight replacement": {
+        "+": {
+          "g": [
+            9
+          ],
+          "?": [
+            21,
+            28
+          ]
+        },
+        "-": {
+          "f": [
+            14,
+            20
+          ]
+        }
+      },
+      "kitchen lighting": {
+        "+": {
+          "?": [
+            28
+          ]
+        }
+      },
+      "garage lighting": {
+        "+": {
+          "?": [
+            37
+          ]
+        }
+      },
+      "whole house installation": {
+        "+": {
+          "?": [
+            11,
+            13
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:30.787501"
+}

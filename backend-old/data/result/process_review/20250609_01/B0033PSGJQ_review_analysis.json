@@ -1,0 +1,268 @@
+{
+  "product_title": "Leviton 5634-GY 15 Amp, 120/277 Volt, Decora Brand Style Single-Pole, AC Combination Switch, Commercial Grade, Grounding, Gray",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 46,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@gray color matches well with other brands and fixtures": {
+          "+": [
+            1,
+            2,
+            6,
+            9,
+            11,
+            24,
+            30,
+            36,
+            37,
+            39,
+            40,
+            41
+          ]
+        },
+        "B@darker than expected appearance": {
+          "-": [
+            21
+          ]
+        },
+        "C@lacks brushed nickel color option": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "construction": {
+        "D@solid build quality": {
+          "+": [
+            0,
+            4,
+            16,
+            22,
+            35,
+            41
+          ]
+        },
+        "E@bulky thickness compared to standard switches": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "design": {
+        "F@modern decora style appearance": {
+          "+": [
+            14,
+            36,
+            43
+          ]
+        },
+        "G@removable tabs on both sides": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "tactile_feedback": {
+        "H@hollow click sound during operation": {
+          "-": [
+            5
+          ]
+        },
+        "I@high resistance when toggling": {
+          "-": [
+            5
+          ]
+        },
+        "J@definite tactile feedback when operating": {
+          "+": [
+            35
+          ]
+        },
+        "K@smooth switch operation": {
+          "+": [
+            25
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well for dual switch control": {
+          "+": {
+            "?": [
+              3,
+              6,
+              8,
+              10,
+              13,
+              14,
+              18,
+              31,
+              35,
+              38,
+              43
+            ]
+          }
+        },
+        "b@switches don't control different functions properly": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "c@allows independent control of two circuits": {
+          "+": {
+            "G": [
+              5,
+              18,
+              30
+            ]
+          }
+        }
+      },
+      "durability": {
+        "d@long-lasting reliability expected from brand": {
+          "+": {
+            "D": [
+              4,
+              5,
+              33
+            ]
+          }
+        },
+        "e@switch failure after 10 years of use": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "f@dead on arrival defect": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "installation": {
+        "g@easy installation process": {
+          "+": {
+            "?": [
+              14,
+              18,
+              20,
+              35,
+              36
+            ]
+          }
+        },
+        "h@installation challenges in older boxes": {
+          "-": {
+            "E": [
+              5
+            ]
+          }
+        }
+      },
+      "operational_feel": {
+        "i@doesn't feel as premium as single switches": {
+          "-": {
+            "H,I": [
+              5
+            ]
+          }
+        },
+        "j@prevents accidental operation": {
+          "+": {
+            "J": [
+              35
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom_applications": {
+        "+": {
+          "a": [
+            6,
+            18,
+            30,
+            41
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "kitchen_installations": {
+        "+": {
+          "a": [
+            19
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "outdoor_lighting_control": {
+        "+": {
+          "c": [
+            5
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "sink_area_lighting": {
+        "+": {
+          "a": [
+            8
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "single_gang_box_dual_control": {
+        "+": {
+          "c": [
+            5,
+            18,
+            41
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "replacement_for_failed_switches": {
+        "+": {
+          "a": [
+            15,
+            19,
+            37
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "modern_upgrade_from_old_switches": {
+        "+": {
+          "F": [
+            14
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:10.185218"
+}

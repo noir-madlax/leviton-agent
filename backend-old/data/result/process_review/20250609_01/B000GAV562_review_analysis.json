@@ -1,0 +1,248 @@
+{
+  "product_title": "Eaton 271W-BOX 15-Amps 120/277V Traditional Heavy Duty Grade Two Single-Pole Switches, White",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "Material/Build Quality": {
+        "A@Heavy duty construction": {
+          "+": [
+            6,
+            17,
+            34,
+            36,
+            38
+          ]
+        },
+        "B@Top quality materials": {
+          "+": [
+            2
+          ]
+        },
+        "C@Solid/sturdy build": {
+          "+": [
+            34,
+            38,
+            45
+          ]
+        },
+        "D@Heavy gauge metal tabs": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "Switch Lever": {
+        "E@Thick/fat switch levers": {
+          "+": [
+            28,
+            45
+          ]
+        }
+      },
+      "Mounting Ears": {
+        "F@Snap-off ears don't fit curved edge utility box covers properly": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "Wiring Configuration": {
+        "G@Metal tab for different switching arrangements": {
+          "+": [
+            45
+          ]
+        },
+        "H@Slightly different wiring configuration than other brands": {
+          "+": [
+            42
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Noise Level": {
+        "a@Makes loud clicking/snapping sounds": {
+          "-": {
+            "?": [
+              4,
+              12,
+              18,
+              19,
+              22
+            ]
+          }
+        },
+        "b@Audible click sound but acceptable": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "c@Strong/solid snap action": {
+          "+": {
+            "E": [
+              17,
+              35,
+              36
+            ]
+          }
+        }
+      },
+      "Operation": {
+        "d@Works as intended/expected": {
+          "+": {
+            "?": [
+              5,
+              9,
+              26,
+              33,
+              43
+            ]
+          }
+        },
+        "e@Stiff operation initially": {
+          "-": {
+            "?": [
+              19,
+              36
+            ]
+          }
+        },
+        "f@Bottom switch doesn't work": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "g@Doesn't work at all": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "h@Used regularly for a year without issues": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "i@Handles breaking over time": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "j@Easy to install": {
+          "+": {
+            "?": [
+              7,
+              14,
+              15,
+              24,
+              30,
+              42,
+              46
+            ]
+          }
+        },
+        "k@Difficult to push wires into place for screw down": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "l@Metal tab installation requires attention to instructions": {
+          "+": {
+            "G": [
+              45
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Garage applications": {
+        "+": {
+          "a": [
+            3
+          ]
+        }
+      },
+      "Kitchen light and garbage disposal control": {
+        "+": {
+          "d": [
+            44
+          ]
+        }
+      },
+      "Bathroom light and fan control": {
+        "+": {
+          "a": [
+            18
+          ]
+        }
+      },
+      "Washroom use": {
+        "+": {
+          "d": [
+            37
+          ]
+        }
+      },
+      "Splitting line feed to separate circuits": {
+        "+": {
+          "d": [
+            27
+          ]
+        }
+      },
+      "General household lighting": {
+        "+": {
+          "j": [
+            7,
+            15
+          ]
+        }
+      },
+      "Replacement for old/broken switches": {
+        "+": {
+          "d,j": [
+            1,
+            5,
+            9,
+            14,
+            23,
+            25,
+            42
+          ]
+        }
+      },
+      "Industrial applications": {
+        "+": {
+          "A": [
+            36
+          ]
+        }
+      },
+      "Utility box installations": {
+        "-": {
+          "F": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:20.186852"
+}

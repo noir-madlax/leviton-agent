@@ -1,0 +1,381 @@
+{
+  "product_title": "ENERLITES Decorator Paddle Rocker Light Switch, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, 15A 120V/277V, UL Listed, 91150-W-10PCS, White (10 Pack)",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 46,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@modern looking paddle/rocker design": {
+          "+": [
+            22,
+            24
+          ]
+        },
+        "B@white color that matches other switches": {
+          "+": [
+            25
+          ]
+        },
+        "C@color matches wall plates": {
+          "+": [
+            28
+          ]
+        },
+        "D@not true white, more off-white or slightly almond": {
+          "-": [
+            45
+          ]
+        }
+      },
+      "construction_materials": {
+        "E@cheap materials used": {
+          "-": [
+            8,
+            31
+          ]
+        },
+        "F@low build quality": {
+          "-": [
+            41,
+            42
+          ]
+        },
+        "G@cheaply made": {
+          "-": [
+            31,
+            36
+          ]
+        }
+      },
+      "paddle_mechanism": {
+        "H@paddle that can shift and slide to an angle": {
+          "-": [
+            27
+          ]
+        },
+        "I@paddle that pops out": {
+          "-": [
+            27,
+            38
+          ]
+        },
+        "J@face plate that breaks off": {
+          "-": [
+            8
+          ]
+        },
+        "K@button that pops out from wear": {
+          "-": [
+            36
+          ]
+        }
+      },
+      "hardware_components": {
+        "L@screws that are strong and hold wires well": {
+          "+": [
+            25
+          ]
+        },
+        "M@screws that tend to strip out when using cordless screw gun": {
+          "-": [
+            39
+          ]
+        },
+        "N@missing ground connection on some switches": {
+          "-": [
+            35
+          ]
+        },
+        "O@earth connection at different places on different switches": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "sound_characteristics": {
+        "P@click noise when turned on or off": {
+          "-": [
+            4,
+            6,
+            32
+          ]
+        },
+        "Q@slightly too loud and tinny sounding": {
+          "-": [
+            6
+          ]
+        },
+        "R@noisier than Leviton switches": {
+          "-": [
+            28
+          ]
+        },
+        "S@quiet switch tap": {
+          "+": [
+            25
+          ]
+        }
+      },
+      "trademark_marking": {
+        "T@no registered trademark (R) marking": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "packaging": {
+        "U@packaging came busted open": {
+          "-": [
+            29
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@fall apart after few months": {
+          "-": {
+            "E": [
+              7
+            ]
+          }
+        },
+        "b@all 10 switches fail within 3 months": {
+          "-": {
+            "E": [
+              8
+            ]
+          }
+        },
+        "c@4 switches failed within 3 years": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "d@over half of switches broke within 2 years": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "e@paddle pops out completely after 8 months": {
+          "-": {
+            "H,I": [
+              27
+            ]
+          }
+        },
+        "f@5 out of 30 break from simple day-to-day use": {
+          "-": {
+            "G": [
+              31
+            ]
+          }
+        },
+        "g@paddle pops out within few months": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "h@last 2 years with regular use": {
+          "-": {
+            "F": [
+              41
+            ]
+          }
+        },
+        "i@cracks develop from regular use": {
+          "-": {
+            "G": [
+              36
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "j@some switches defective out of box": {
+          "-": {
+            "?": [
+              5,
+              12
+            ]
+          }
+        },
+        "k@works on some outlets but not all": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "l@operation feels robust": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "m@works as advertised": {
+          "+": {
+            "?": [
+              10,
+              18,
+              19
+            ]
+          }
+        },
+        "n@one switch stopped working after a month": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "o@overall performance not very good": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "installation": {
+        "p@easy to install": {
+          "+": {
+            "?": [
+              13,
+              21,
+              25,
+              32,
+              37,
+              42
+            ]
+          }
+        },
+        "q@difficult to screw straight into plate covers": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        }
+      },
+      "quality_control": {
+        "r@switches seem collected from various sources": {
+          "-": {
+            "O": [
+              20
+            ]
+          }
+        },
+        "s@quality seems iffy": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "t@2 out of 6 were defective": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "single contact circuits": {
+        "+": {
+          "?": [
+            3
+          ]
+        }
+      },
+      "electrical remodel of kitchen, den and living room": {
+        "+": {
+          "?": [
+            3
+          ]
+        }
+      },
+      "indoor light switches replacement": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "house remodel": {
+        "-": {
+          "d": [
+            11
+          ]
+        }
+      },
+      "rental properties": {
+        "-": {
+          "c": [
+            9
+          ]
+        }
+      },
+      "replacing old outdated switches": {
+        "+": {
+          "?": [
+            21,
+            34
+          ]
+        }
+      },
+      "converting to momentary contact switches": {
+        "+": {
+          "?": [
+            15
+          ]
+        }
+      },
+      "replacing toggle switches with modern paddle switches": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "light areas only": {
+        "+": {
+          "h": [
+            41
+          ]
+        }
+      },
+      "areas with regular use": {
+        "-": {
+          "g": [
+            38
+          ]
+        }
+      },
+      "houses with kids": {
+        "-": {
+          "i": [
+            36
+          ]
+        }
+      },
+      "full house installation": {
+        "-": {
+          "f": [
+            31
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:31.907675"
+}

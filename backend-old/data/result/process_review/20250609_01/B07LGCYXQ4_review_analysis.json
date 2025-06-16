@@ -1,0 +1,154 @@
+{
+  "product_title": "TOPGREENER Kalide Dimmer Light Switch, LED Dimmer Switch, Full Range Dimming, Single Pole/3-Way, 120VAC, 60Hz, 300W LED/CFL, Neutral Wire Not Required, Wall Plate Included, Gold, 1 Pack",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 8,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@elegant and beautiful design": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "packaging": {
+        "B@face cover not included in package": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "connectivity": {
+        "C@lacks wifi function": {
+          "-": [
+            7
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well overall": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@functions very well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@works excellent with recessed lights": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@continues working after two months without problems": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "e@dimming works well with led bulbs": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "installation": {
+        "f@installation is easy": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "switch_configuration": {
+        "g@functions for either single pole or 3 way": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "connectivity_performance": {
+        "h@easy to connect with Alexa": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "app_usability": {
+        "i@easy to use the app": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "durability": {
+        "j@more sturdy than previous smart switches": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "nursery_lighting": {
+        "+": {
+          "A": [
+            1
+          ]
+        }
+      },
+      "recessed_lighting": {
+        "+": {
+          "c": [
+            3
+          ]
+        }
+      },
+      "phone_control": {
+        "+": {
+          "?": [
+            5
+          ]
+        }
+      },
+      "alexa_integration": {
+        "+": {
+          "h": [
+            6
+          ]
+        }
+      },
+      "app_control": {
+        "+": {
+          "i": [
+            6
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:11.212451"
+}

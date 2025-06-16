@@ -1,0 +1,339 @@
+{
+  "product_title": "Leviton 5224-2W 15 Amp, 120/277 Volt, Duplex Style Single-Pole/Single-Pole AC Combination Switch, Grounding, White",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 46,
+  "review_analysis": {
+    "phy": {
+      "packaging": {
+        "A@comes in amazon bubble mailer with no product box or padding": {
+          "-": [
+            0
+          ]
+        },
+        "B@delivered loose in amazon bag without original package": {
+          "-": [
+            1
+          ]
+        },
+        "C@packaging was just an envelope with no protection": {
+          "-": [
+            26
+          ]
+        },
+        "D@no screws included": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "color": {
+        "E@very white": {
+          "+": [
+            14
+          ]
+        },
+        "F@received almond instead of ordered white": {
+          "-": [
+            7
+          ]
+        },
+        "G@described as white but received beige": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "actuators": {
+        "H@actuators look and feel cheap with cheaper/weaker plastic and sharp corners": {
+          "-": [
+            38
+          ]
+        },
+        "I@very sharp edges on plastic": {
+          "-": [
+            33
+          ]
+        },
+        "J@has normal size switches rather than thick switches": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "wires": {
+        "K@no wires were color coded": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "terminals": {
+        "L@only offers screw terminals instead of slot type termination": {
+          "-": [
+            33
+          ]
+        }
+      },
+      "design": {
+        "M@two switches in the space of one": {
+          "+": [
+            32
+          ]
+        },
+        "N@fits on a single gang box": {
+          "+": [
+            35
+          ]
+        },
+        "O@uses same plate style as an outlet": {
+          "+": [
+            39
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works fine": {
+          "+": {
+            "?": [
+              0,
+              8,
+              41
+            ]
+          }
+        },
+        "b@only one of the two switches worked": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@worked great": {
+          "+": {
+            "?": [
+              2,
+              12,
+              26,
+              32,
+              34,
+              45
+            ]
+          }
+        },
+        "d@worked well": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@didn't work": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "f@working as intended": {
+          "+": {
+            "?": [
+              6,
+              10,
+              24
+            ]
+          }
+        },
+        "g@both switches turn both lights on with no separation of function": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "h@works very well": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "i@worked exactly as it should have": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "j@works as expected": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "k@works with Lutron Aurora": {
+          "+": {
+            "J": [
+              37
+            ]
+          }
+        }
+      },
+      "operation": {
+        "l@functions very smoothly": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "m@little stiff but assuming because it's new": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "n@not a quiet switch": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "o@actuation isn't snappy and extremely mushy feeling": {
+          "-": {
+            "H": [
+              33
+            ]
+          }
+        },
+        "p@action is sticky on one of the switches": {
+          "-": {
+            "H": [
+              38
+            ]
+          }
+        }
+      },
+      "durability": {
+        "q@solid product": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "r@very cheap feeling switch": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "s@high quality": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "t@great quality": {
+          "+": {
+            "?": [
+              14,
+              16
+            ]
+          }
+        },
+        "u@good quality": {
+          "+": {
+            "?": [
+              15,
+              16,
+              19
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "installation": {
+        "+": {
+          "a": [
+            0,
+            16,
+            21,
+            25,
+            28,
+            30,
+            34,
+            44
+          ],
+          "t": [
+            16
+          ],
+          "?": [
+            10
+          ]
+        }
+      },
+      "lighting project": {
+        "+": {
+          "j": [
+            23
+          ]
+        }
+      },
+      "separate bath light/fan on single switch": {
+        "+": {
+          "?": [
+            17
+          ]
+        }
+      },
+      "replacement of broken switch": {
+        "+": {
+          "c": [
+            26,
+            27
+          ],
+          "a": [
+            41
+          ],
+          "?": [
+            16,
+            43
+          ]
+        }
+      },
+      "space saving solution": {
+        "+": {
+          "M": [
+            32
+          ],
+          "N,O": [
+            39
+          ]
+        }
+      },
+      "redoing outlets and switches": {
+        "+": {
+          "E,t": [
+            14
+          ]
+        }
+      },
+      "adding another light in bathroom": {
+        "+": {
+          "M": [
+            39
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:30.752376"
+}

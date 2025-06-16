@@ -1,0 +1,391 @@
+{
+  "product_title": "Leviton E5603-MW Decora Edge 15 Amp 3-Way Rocker Switch, 10-Pack, White",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 28,
+  "review_analysis": {
+    "phy": {
+      "plastic extensions": {
+        "A@extended tabs above and below the box": {
+          "-": [
+            5
+          ]
+        },
+        "B@plastic at the top and bottom like tabs": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "wire flip tabs": {
+        "C@wire flip tabs for easy wiring": {
+          "+": [
+            24
+          ]
+        }
+      },
+      "flip down wire clamps": {
+        "D@flip down wire clamps for installation": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "lever terminals": {
+        "E@lever action wire connection": {
+          "+": [
+            17
+          ]
+        },
+        "F@lever terminals for quiet and smooth operation": {
+          "+": [
+            25
+          ]
+        }
+      },
+      "spring clamp": {
+        "G@spring clamp to hold wires": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "wire connection design": {
+        "H@wiring design is perfect": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "appearance": {
+        "I@nice clean bright white not off white": {
+          "+": [
+            25
+          ]
+        }
+      },
+      "materials": {
+        "J@quality of materials": {
+          "+": [
+            24
+          ]
+        }
+      },
+      "wire labels": {
+        "K@direction of wires labels with different colors are clear": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "measure line": {
+        "L@measure line at one corner along the edge": {
+          "+": [
+            18
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation ease": {
+        "a@simple and fast installation": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@incredibly easy to change out": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "c@made wiring a house way easier": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@quick installation does not feel like work": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@breeze to install": {
+          "+": {
+            "D": [
+              12
+            ]
+          }
+        },
+        "f@ease of installing switches": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "g@SO easy to install": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "h@saving a lot of time during installation": {
+          "+": {
+            "K,L": [
+              18
+            ]
+          }
+        },
+        "i@much safer and easier to install": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "j@so easy to install": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "k@easy to wire and install by DIYer": {
+          "+": {
+            "C": [
+              24
+            ]
+          }
+        },
+        "l@ease of install is crazy": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "m@easy to install and fast": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "safety": {
+        "n@safer installation": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "o@safer by not exposing hot contacts": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "p@definitely faster and safer": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "q@safety features with no exposed wires or screws": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "r@much safer vs backstabbing": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "s@leaving zero exposed wiring": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "t@work great and reliable": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "u@very solid connection": {
+          "+": {
+            "E": [
+              17
+            ]
+          }
+        },
+        "v@seem to hold over time": {
+          "+": {
+            "G": [
+              13
+            ]
+          }
+        }
+      },
+      "durability": {
+        "w@feel like could install over and over without pieces breaking": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "x@solid build": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "fit issues": {
+        "y@won't sit flush": {
+          "-": {
+            "A": [
+              2
+            ]
+          }
+        },
+        "z@screwless wall plates will NOT fit flush": {
+          "-": {
+            "A": [
+              5
+            ]
+          }
+        },
+        "aa@faceplate doesn't fit": {
+          "-": {
+            "B": [
+              8
+            ]
+          }
+        },
+        "ab@screwless faceplates did not work well": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "operation": {
+        "ac@quiet and smooth operation": {
+          "+": {
+            "F": [
+              25
+            ]
+          }
+        }
+      },
+      "wire handling": {
+        "ad@wires will spin, not as tight as screw clamp": {
+          "-": {
+            "G": [
+              13
+            ]
+          }
+        },
+        "ae@can only handle one wire per clamp": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacing outlets and switches": {
+        "+": {
+          "a": [
+            1
+          ],
+          "?": [
+            14
+          ]
+        }
+      },
+      "wiring a house": {
+        "+": {
+          "c": [
+            3
+          ]
+        }
+      },
+      "home renovation": {
+        "+": {
+          "g": [
+            16
+          ]
+        }
+      },
+      "replacing all receptacles in house": {
+        "+": {
+          "u": [
+            17
+          ]
+        }
+      },
+      "upgrading 28 year old house switches": {
+        "+": {
+          "?": [
+            20
+          ]
+        }
+      },
+      "replacing flip switches that made popping sound": {
+        "+": {
+          "j": [
+            21
+          ]
+        }
+      },
+      "upgrading to smart switches in multi-gang boxes": {
+        "+": {
+          "r": [
+            22
+          ]
+        }
+      },
+      "upgrading entire 25 year old home": {
+        "+": {
+          "l,s": [
+            25
+          ]
+        }
+      },
+      "replacing dozens of outlets": {
+        "+": {
+          "m": [
+            27
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:30.614673"
+}

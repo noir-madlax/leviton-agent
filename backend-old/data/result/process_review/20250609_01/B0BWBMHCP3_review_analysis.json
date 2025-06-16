@@ -1,0 +1,153 @@
+{
+  "product_title": "Eaton Universal Slide Dimmer 120V, Light Almond/White/Ivory",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 6,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks much better than old ones": {
+          "+": [
+            2
+          ]
+        },
+        "B@looks good": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "face plate": {
+        "C@three color options available - white, light almond and tan": {
+          "+": [
+            1
+          ]
+        },
+        "D@face can be easily changed by snapping together": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "build quality": {
+        "E@well made from trusted brand": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "packaging condition": {
+        "F@arrived in perfect condition": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming functionality": {
+        "a@dims": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@one unit did not dim except periodically with long delay": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@second dimmer dims with slight lag but hardly noticeable": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "d@works great": {
+          "+": {
+            "?": [
+              2,
+              4
+            ]
+          }
+        },
+        "e@works perfectly with dimmable LEDs": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "installation ease": {
+        "f@easy to install": {
+          "+": {
+            "?": [
+              1,
+              4
+            ]
+          }
+        },
+        "g@easy to exchange with old ones": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "h@electrician installing without issue": {
+          "+": {
+            "E": [
+              1
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "i@one unit blew up and started smoking when installed": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "color switching": {
+        "j@easy to switch colors": {
+          "+": {
+            "C,D": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED lighting": {
+        "+": {
+          "e": [
+            5
+          ]
+        }
+      },
+      "office installation": {
+        "+": {
+          "f,h": [
+            1
+          ]
+        }
+      },
+      "replacing old dimmers": {
+        "+": {
+          "d,g": [
+            2
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:13.727912"
+}

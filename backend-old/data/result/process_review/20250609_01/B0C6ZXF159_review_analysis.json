@@ -1,0 +1,326 @@
+{
+  "product_title": "meross 4 Pack Smart Dimmer Switch Single Pole Supports Apple HomeKit, Alexa Google Assistant & SmartThings, 2.4Ghz WiFi Light Switch for Dimmable LED, Neutral Wire Required, Remote Control Schedule",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 8,
+  "review_analysis": {
+    "phy": {
+      "switch buttons": {
+        "A@physical switch buttons present": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "wire ends": {
+        "B@wire ends show signs of previous installation": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "design": {
+        "C@flawed design": {
+          "-": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming capability": {
+        "a@doesn't dim far enough": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@2-way switches dim lights significantly more": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@at lowest setting too bright": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "responsiveness": {
+        "d@unresponsive to WiFi AND physical switch": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@physical switch buttons stop working when WiFi crashes": {
+          "-": {
+            "A": [
+              3
+            ]
+          }
+        },
+        "f@responsive": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "g@easy to add to HomeKit": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "h@connected well to phone and Siri": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@disconnect from WiFi": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "j@connects easily to Apple HomeKit": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "k@no issues with connectivity": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "l@connecting them to smart home is straight forward": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "m@lights can't be turned off": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "n@locked in on position": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "o@flickers all the time": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "p@works great": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "q@completely defective": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "r@failed after a couple of months": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "s@reliable": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "installation ease": {
+        "t@easy to install": {
+          "+": {
+            "?": [
+              4,
+              6
+            ]
+          }
+        },
+        "u@easy install": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "v@just as easy to install as any other light switch": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "setup ease": {
+        "w@easy to setup": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "x@easy to set up": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "integration": {
+        "y@integrate seamlessly with HomeKit": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "quality": {
+        "z@quality switch": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home lighting control": {
+        "+": {
+          "g": [
+            0
+          ],
+          "j": [
+            5
+          ],
+          "y": [
+            4
+          ]
+        },
+        "-": {
+          "a": [
+            0
+          ],
+          "d": [
+            1
+          ],
+          "m": [
+            1
+          ],
+          "n": [
+            1
+          ],
+          "o": [
+            2
+          ],
+          "r": [
+            2
+          ]
+        }
+      },
+      "smart home integration": {
+        "+": {
+          "l": [
+            7
+          ],
+          "k": [
+            7
+          ]
+        },
+        "-": {
+          "i": [
+            3
+          ],
+          "e": [
+            3
+          ]
+        }
+      },
+      "voice control with Siri": {
+        "+": {
+          "h": [
+            2
+          ]
+        },
+        "-": {
+          "r": [
+            2
+          ]
+        }
+      },
+      "circuit breaker restart required": {
+        "-": {
+          "e": [
+            3
+          ],
+          "i": [
+            3
+          ]
+        }
+      },
+      "multiple location installation": {
+        "-": {
+          "o": [
+            2
+          ]
+        }
+      },
+      "new house installation": {
+        "+": {
+          "t": [
+            4
+          ],
+          "w": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:22.334416"
+}

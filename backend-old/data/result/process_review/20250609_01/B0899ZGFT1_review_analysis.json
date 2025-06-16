@@ -1,0 +1,221 @@
+{
+  "product_title": "NineLeaf 2PK 15Amp Single Pole Rocker Interrupter Decorative Light Switches, 120-277V, Decorator Paddle Rocker Switch (UL Listed, White)",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 7,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@gaps at the top": {
+          "-": [
+            0
+          ]
+        },
+        "B@modern looking": {
+          "+": [
+            1
+          ]
+        },
+        "C@nice looking": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "build_quality": {
+        "D@cheap feeling": {
+          "-": [
+            0
+          ]
+        },
+        "E@plastic and metal are not flimsy": {
+          "+": [
+            4
+          ]
+        },
+        "F@build quality is good - nothing rough or dinged": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "packaging": {
+        "G@individually packaged": {
+          "+": [
+            4
+          ]
+        },
+        "H@no covers included": {
+          "+": [
+            4
+          ]
+        },
+        "I@individually wrapped in a box": {
+          "+": [
+            5
+          ]
+        },
+        "J@includes screws needed to install": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "connectors": {
+        "K@press-in quick connectors": {
+          "+": [
+            0
+          ]
+        },
+        "L@ground wire needs to be screwed in": {
+          "+": [
+            0
+          ]
+        },
+        "M@push-in or screw-type connections available": {
+          "+": [
+            4
+          ]
+        },
+        "N@push-in limited to 14ga wire": {
+          "+": [
+            4
+          ]
+        },
+        "O@typical wire connectors (wrap around screw or insert wire)": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "certifications": {
+        "P@UL listing": {
+          "+": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "switch_feel": {
+        "a@loud thunk sound instead of satisfying click": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@crisp switch mechanism (on/off)": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "installation": {
+        "c@very simple installation": {
+          "+": {
+            "K": [
+              0
+            ]
+          }
+        },
+        "d@easy to install": {
+          "+": {
+            "?": [
+              1,
+              2
+            ]
+          }
+        },
+        "e@easy to change out": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "f@easier to use in multi-gang boxes": {
+          "+": {
+            "H": [
+              4
+            ]
+          }
+        }
+      },
+      "fitment": {
+        "g@fitment is good": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "h@works as expected": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "i@no flickering": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "j@works great": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "safety": {
+        "k@passed rigorous testing for safety": {
+          "+": {
+            "P": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "ceiling fan controllers replacement": {
+        "+": {
+          "c": [
+            0
+          ]
+        }
+      },
+      "kitchen switch replacement": {
+        "+": {
+          "d,j": [
+            2
+          ]
+        }
+      },
+      "single light control from one location": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "general switch replacement": {
+        "+": {
+          "e,h": [
+            3,
+            5
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:50.603297"
+}

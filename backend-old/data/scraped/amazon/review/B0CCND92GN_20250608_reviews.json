@@ -1,0 +1,732 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:34:57.943191",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0CCND92GN",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 2,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0CCND92GN",
+    "title": "Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+    "brand": "WENGART",
+    "model_number": NaN,
+    "price_usd": 6.79,
+    "rating": 4.3,
+    "reviews_count": 93.0,
+    "category": "Light Switches",
+    "product_segment": "Multi-Function Combination Switches",
+    "product_url": "https://www.amazon.com/dp/B0CCND92GN"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R33H8I8PTLWZVJ",
+        "text": "Cheap quality",
+        "date": "Reviewed in the United States on June 1, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "I guess for the price it’s adequate. It’s cheap quality.",
+        "userName": "Harry S",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2V60GO02LKBRZ",
+        "text": "Did the trick. Served a niche function effectively, on a budget.",
+        "date": "Reviewed in the United States on May 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple and effective",
+        "userName": "james poindexter",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RV1OKQHU7TYMN",
+        "text": "Switch tab is really hard to remove requires digging into switch case to separate power",
+        "date": "Reviewed in the United States on February 20, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Usability",
+        "userName": "David O. Parks",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1WNDL0963YNUK",
+        "text": "My main difficulty installing this was clearance between housing and bolts heads. The clearance was too narrow to simply swap each wire from old to new switch, I needed to straighten, insert, and then bend each wire around the bolt. If the bolts were just a mm longer, I could have slipped on each wire hook fast and easy. Switch action is not as smooth as my old 1996 variety, but gets the job done. At each end of stroke, there is noticeable squish, requiring extra pressure to overcome the detent.",
+        "date": "Reviewed in the United States on February 10, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Tricky installation, squishy switch action",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1PBY3MWV5HSLY",
+        "text": "Easy to install.",
+        "date": "Reviewed in the United States on February 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Electric switch",
+        "userName": "Julio Irizarry Velez",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RUIH14VKFVIJE",
+        "text": "Positive on/off without loud click.",
+        "date": "Reviewed in the United States on February 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Solid switch.",
+        "userName": "Greg Wells",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1V3SX0WO0GPYW",
+        "text": "I bought 1 and the switching function was rough, so I opened it up to try and see why. Let's say I had a really hard time putting it back together (it has a lot of pieces inside). After getting it together the front case wouldn't close unless held together. I got it hooked up and 1 switch controlled all 4 lights. So I tossed it. I bought another one and after googling I Come to realize it was obviously my fault, I was supposed to snip the side pieces to separate the 2 switches. Hooked it up and it worked. The rough switching was the same on the 2nd one too. Must be a design flaw",
+        "date": "Reviewed in the United States on January 26, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "It switches rough",
+        "userName": "Jay Busa",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1P7U7NY3NI2D",
+        "text": "Awesome product.",
+        "date": "Reviewed in the United States on January 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Saves a lot of money if you can fix it.",
+        "userName": "Amazing Product",
+        "numberOfHelpful": 2,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R244P28BKQ6GXE",
+        "text": "Ez to put in. Looks great too",
+        "date": "Reviewed in the United States on November 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "Bill coverly",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R36IB33K6MJQ7V",
+        "text": "Very easy to install and working the best it can!",
+        "date": "Reviewed in the United States on June 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Functional",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R7JDE3WIHAF6X",
+        "text": "It’s a good product it performed as per specifications I like this very well",
+        "date": "Reviewed in the United States on March 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Double toggle switch",
+        "userName": "Abdul R.",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1NKLG76SCS0XL",
+        "text": "Good, quality double light switch at a great price! Thank you Wengart!",
+        "date": "Reviewed in the United States on March 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wengart Double Toggle Light Switch",
+        "userName": "Bygrace",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2ZWN2VJH7DP66",
+        "text": "i have installed many many plugins switches and the like in my nearly 25 yrs of electrical work, now i should say that i am not a qualified or certified electrician in any state but that dosnt matter, normally plugs and switches have a certain sturdyness of there build but this dual switch sorry to say dosnt scream sturdy product i can only assume like most everything else lately covid has dried up what little profit there was to be made in building a quality product so costs must be cut and corners prob did to, with this said i see no issue if its only being used for a couple led lights but not high draw devices, now all this is only my opinion and may or may not be right in one or all aspects who knows but be sure like allways to check the quality of any product",
+        "date": "Reviewed in the United States on November 25, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "works fine but in my opinion only use for leds no heavy load",
+        "userName": "Jamie S.",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0CCND92GN",
+        "productTitle": "Wengart Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 14,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 93,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 69
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1612D14SD9BF7",
+        "text": "This Wengart Double Toggle Switch is the standard bright white color. The install does take some electrical knowledge or an electrician for the job. The toggle switches work fine and cover screws are in the correct area so that the cover was a breeze to install. Great Product!",
+        "date": "Reviewed in the United States on November 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Bright White, Both Toggles Work, Easy Install, Very Happy!",
+        "userName": "Bobby",
+        "numberOfHelpful": 0,
+        "variationId": "B0CCND92GN",
+        "imageUrlList": null,
+        "variationList": [
+          "Model: Two Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 14,
+    "pages_scraped": 2,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

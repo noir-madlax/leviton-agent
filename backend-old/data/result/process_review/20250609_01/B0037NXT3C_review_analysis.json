@@ -1,0 +1,384 @@
+{
+  "product_title": "Leviton IllumaTech Dimmer Switch for 0-10V LED, Mark 7 Florescent Ballasts, wth LED Locator Light, IP710-DLZ, White with Ivory and Light Almond Faceplates",
+  "product_category": "Commercial 0-10V Dimmer Switches",
+  "total_reviews": 27,
+  "review_analysis": {
+    "phy": {
+      "push button": {
+        "A@push button component": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "box": {
+        "B@damaged packaging condition": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "appearance": {
+        "C@used condition appearance": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "design": {
+        "D@secondary potentiometer adjusts top brightness instead of bottom": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "lighted feature": {
+        "E@illuminated indicator": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "cover/faceplate": {
+        "F@replaceable faceplate pops off easily": {
+          "-": [
+            10
+          ]
+        },
+        "G@three different color faceplates included (white, beige, cream)": {
+          "+": [
+            15
+          ]
+        },
+        "H@interchangeable faceplates": {
+          "+": [
+            21
+          ]
+        }
+      },
+      "construction quality": {
+        "I@cheaply made and flimsy to touch": {
+          "-": [
+            18
+          ]
+        },
+        "J@well made": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "on/off switch": {
+        "K@noisy operation": {
+          "-": [
+            26
+          ]
+        }
+      }
+    },
+    "perf": {
+      "replacement functionality": {
+        "a@works well as replacement": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "installation": {
+        "b@easy to install": {
+          "+": {
+            "?": [
+              4,
+              6,
+              16,
+              21
+            ]
+          }
+        }
+      },
+      "LED compatibility": {
+        "c@works to dim 40W LED light": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "d@does not work with LED fixtures": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@works great with LED mirror": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "f@works well for custom LED ceiling light fixture": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "g@works well with lighted vanity mirror": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "h@works as advertised": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "i@works well for LED panels": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "j@works with dimmer packs and transformers for custom LED lighting": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "k@provides nice dimming curve": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "l@does not dim to low range, goes halfway then off": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "dimming performance": {
+        "m@fairly smooth dimming": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "n@full brightness matches non-dimming switch": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "o@dims pretty low": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "p@range dimming feature": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "q@limited voltage range 0.5V to 3.5V instead of full range": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "3-way configuration": {
+        "r@supports 3-way wiring with traveler wires": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "s@failures after few hours of installation": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "t@failed just shy of a year": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "u@lasted only 20 months before quitting": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "v@inconsistent performance across units": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "initial operation": {
+        "w@weird responses during initial installation but then worked well": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "cover retention": {
+        "x@cover pops off from small vibrations": {
+          "-": {
+            "F": [
+              10
+            ]
+          }
+        }
+      },
+      "switch refinement": {
+        "y@could be more refined": {
+          "-": {
+            "K": [
+              26
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "house remodeling": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "replacement switch": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "LED light dimming": {
+        "+": {
+          "c": [
+            4
+          ]
+        },
+        "-": {
+          "d": [
+            5
+          ]
+        }
+      },
+      "bathroom remodel with LED mirror": {
+        "+": {
+          "e": [
+            6
+          ]
+        }
+      },
+      "0-10v LED panel light control": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "overhead LED fixtures control": {
+        "+": {
+          "m,n,o,r": [
+            10
+          ]
+        }
+      },
+      "custom LED ceiling light fixture": {
+        "+": {
+          "f": [
+            13
+          ]
+        }
+      },
+      "lighted vanity mirror control": {
+        "+": {
+          "g": [
+            14
+          ]
+        }
+      },
+      "LED panels installation": {
+        "+": {
+          "h": [
+            16
+          ]
+        }
+      },
+      "custom LED lighting boards under countertops": {
+        "+": {
+          "j,p": [
+            21
+          ]
+        }
+      },
+      "testing fixtures with dimming systems": {
+        "+": {
+          "k": [
+            22
+          ]
+        }
+      },
+      "media room low lighting": {
+        "-": {
+          "l": [
+            23
+          ]
+        }
+      },
+      "LED recessed cans dimming": {
+        "-": {
+          "l": [
+            23
+          ]
+        }
+      },
+      "10vdc LED dimmer application": {
+        "+": {
+          "?": [
+            26
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:29.498229"
+}

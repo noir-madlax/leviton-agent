@@ -1,0 +1,459 @@
+{
+  "product_title": "Legrand radiant RH453PTCCCV6 450W Preset Decorator Rocker Dimmer Light Switch with Locator Light for Dimmable LED and CFL Bulbs, Single Pole/3-Way, White/Light Almond/Ivory (1 Count)",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@low profile design": {
+          "+": [
+            20
+          ]
+        },
+        "B@elegant design": {
+          "+": [
+            35
+          ]
+        },
+        "C@matte look and feel": {
+          "+": [
+            42
+          ]
+        },
+        "D@less prone to scratching and scuffing": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "slider": {
+        "E@large dimmer slider size": {
+          "+": [
+            29,
+            40
+          ]
+        },
+        "F@easy to manipulate slider": {
+          "+": [
+            29
+          ]
+        },
+        "G@slider allows quick brightness setting": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "LED indicator": {
+        "H@small LED indicator dot": {
+          "+": [
+            8,
+            20
+          ]
+        },
+        "I@pinpoint LED light to illuminate switch location": {
+          "+": [
+            35
+          ]
+        },
+        "J@LED bright enough to see in dark but not eyesore": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "terminals": {
+        "K@screw terminals instead of wire connections": {
+          "+": [
+            7,
+            42
+          ]
+        },
+        "L@back-wiring capability": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "switch feel": {
+        "M@loosey-goosey click, not solid": {
+          "-": [
+            7
+          ]
+        },
+        "N@crisp actuation and quality feel": {
+          "+": [
+            29
+          ]
+        }
+      },
+      "faceplates": {
+        "O@three different faceplate color options": {
+          "+": [
+            17,
+            22,
+            34
+          ]
+        }
+      },
+      "adjustment wheel": {
+        "P@small adjustment wheel for calibration": {
+          "+": [
+            10,
+            17,
+            24,
+            46
+          ]
+        },
+        "Q@adjustment wheel doesn't change much": {
+          "-": [
+            10
+          ]
+        },
+        "R@calibration adjustment requires switch plate removal": {
+          "-": [
+            27
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming performance": {
+        "a@works perfectly with dimming": {
+          "+": {
+            "?": [
+              2,
+              19
+            ]
+          }
+        },
+        "b@flickers at high and low settings": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@no flicker when dimming": {
+          "+": {
+            "?": [
+              6,
+              21,
+              30,
+              44
+            ]
+          }
+        },
+        "d@flicker at one location on slider near top": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "e@dimmer adjustment doesn't do good job of dimming": {
+          "-": {
+            "P": [
+              10
+            ]
+          }
+        },
+        "f@flickered and buzzed at all dimming levels": {
+          "-": {
+            "?": [
+              26,
+              42
+            ]
+          }
+        },
+        "g@brightness range from 30-40% to 100%": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "h@causes flickering with LED lights": {
+          "-": {
+            "?": [
+              41,
+              45,
+              48
+            ]
+          }
+        },
+        "i@doesn't get as bright as it should": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "j@glitches at highest brightness": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "k@bulbs dimly light when dimmer turned all way up": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "l@works great with LED lights": {
+          "+": {
+            "?": [
+              6,
+              23,
+              24
+            ]
+          }
+        },
+        "m@not compatible with certain bulbs": {
+          "-": {
+            "?": [
+              11,
+              13,
+              31
+            ]
+          }
+        },
+        "n@doesn't work well with certain LED bulbs": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "o@works with recessed LEDs but not track lights": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "p@doesn't work with LED 300 watts despite 450W rating": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "q@causes ceiling fans to be noisy": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "r@hard time with LEDs": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "s@not compatible with LED lights": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "installation": {
+        "t@easy installation": {
+          "+": {
+            "K": [
+              7,
+              42
+            ]
+          }
+        },
+        "u@easy to install": {
+          "+": {
+            "?": [
+              2,
+              16,
+              17,
+              18
+            ]
+          }
+        }
+      },
+      "durability": {
+        "v@never had issues with multiple units": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "w@defective, does not operate properly": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "x@two worked, one did not": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "wattage handling": {
+        "y@can handle high LED watts": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "z@450w max rating effective for 380w LED lighting": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacement of regular switches": {
+        "+": {
+          "t": [
+            5
+          ]
+        }
+      },
+      "use in bathrooms": {
+        "+": {
+          "v": [
+            8
+          ]
+        }
+      },
+      "use in foyer": {
+        "+": {
+          "v": [
+            8
+          ]
+        }
+      },
+      "use in living room": {
+        "+": {
+          "v": [
+            8
+          ]
+        }
+      },
+      "use with 15 Halo 6 LED lights": {
+        "-": {
+          "e": [
+            10
+          ]
+        }
+      },
+      "use with lighted exhaust fan": {
+        "-": {
+          "m": [
+            11
+          ]
+        }
+      },
+      "use with recessed LEDs": {
+        "+": {
+          "o": [
+            13
+          ]
+        }
+      },
+      "use with track lights": {
+        "-": {
+          "o": [
+            13
+          ]
+        }
+      },
+      "use with Vanoopee dimmable LED track lights": {
+        "+": {
+          "a": [
+            19
+          ]
+        }
+      },
+      "use with LCD can lights": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "use in media room with can lights": {
+        "+": {
+          "l": [
+            24
+          ]
+        }
+      },
+      "use with one sconce with three LED bulbs": {
+        "+": {
+          "?": [
+            26
+          ]
+        }
+      },
+      "use with eight 15 watt recessed LEDs": {
+        "-": {
+          "f": [
+            26
+          ]
+        }
+      },
+      "use with LED undercounter lights": {
+        "+": {
+          "?": [
+            32
+          ]
+        }
+      },
+      "use with LED ceiling fans": {
+        "-": {
+          "q": [
+            39
+          ]
+        }
+      },
+      "use with Globe Electric Ultra Slim LED recessed lighting": {
+        "-": {
+          "h": [
+            41
+          ]
+        }
+      },
+      "use with five different types of light fixtures": {
+        "-": {
+          "s": [
+            45
+          ]
+        }
+      },
+      "use with two small pendants": {
+        "-": {
+          "i,j": [
+            47
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:39.204872"
+}

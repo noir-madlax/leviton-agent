@@ -1,0 +1,421 @@
+{
+  "product_title": "Cloudy Bay in Wall Dimmer Switch for LED Light/CFL/Incandescent,3-Way Single Pole Dimmable Slide,600 Watt max,Cover Plate Included",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "Construction Quality": {
+        "A@Poor build quality with gaps developing": {
+          "-": [
+            28
+          ]
+        },
+        "B@Feels very low quality": {
+          "-": [
+            6
+          ]
+        },
+        "C@High quality feel": {
+          "+": [
+            4
+          ]
+        },
+        "D@Feels solid": {
+          "+": [
+            40
+          ]
+        },
+        "E@Cheaply made": {
+          "-": [
+            33
+          ]
+        },
+        "F@Physically coming apart": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "Switch Design": {
+        "G@Nice looking switch": {
+          "+": [
+            22
+          ]
+        },
+        "H@Neat look": {
+          "+": [
+            37
+          ]
+        },
+        "I@Nice simple design": {
+          "+": [
+            9
+          ]
+        },
+        "J@Perfect size and matches white color": {
+          "+": [
+            18
+          ]
+        },
+        "K@Looks off to the rear of the switches": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "Wiring": {
+        "L@Has red and one black wire that does not conform to residential wiring": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "Internal Components": {
+        "M@Pivot of the rocker broke on one side": {
+          "-": [
+            29
+          ]
+        },
+        "N@Toggle switch fell apart when tried to use": {
+          "-": [
+            36
+          ]
+        },
+        "O@Has thumbwheel dial under cover for adjustment": {
+          "+": [
+            21
+          ]
+        },
+        "P@Has wheel adjustment on inside to help adjust lowest dimmer setting": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Failed within a year": {
+          "-": {
+            "?": [
+              0,
+              27
+            ]
+          }
+        },
+        "b@Failed within two years": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "c@Broke after 4 years of regular use": {
+          "-": {
+            "F": [
+              13
+            ]
+          }
+        },
+        "d@Failed relatively quickly with rocker pivot breaking": {
+          "-": {
+            "M": [
+              29
+            ]
+          }
+        },
+        "e@More reliable than rotary type": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "Dimming Performance": {
+        "f@Barely dimmed with flickering on low": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "g@Does not dim at all": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "h@Dims perfectly": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@LED lights dimmed down considerable without flicker": {
+          "+": {
+            "O": [
+              21
+            ]
+          }
+        },
+        "j@Brightness goes from low to high and slightly less than high": {
+          "-": {
+            "P": [
+              31
+            ]
+          }
+        },
+        "k@Perfect brightness control": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "Flickering Issues": {
+        "l@Flickers even when turned all the way up": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "m@Lights flickering without adjusting dimmer": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "n@Started causing flickering in lights": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "o@Lights flicker every now and then despite adjustment": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "p@Light flickers when set to dim": {
+          "-": {
+            "E": [
+              33
+            ]
+          }
+        }
+      },
+      "Noise Issues": {
+        "q@Extremely loud buzzing noise": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "r@Constant buzzing/humming sound": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "s@Buzzing noise occurred after about a month": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "t@No noise from switch": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "u@Easy slide and quiet": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "Response Time": {
+        "v@Second or two delay from clicking switch to light turning on": {
+          "-": {
+            "P": [
+              10
+            ]
+          }
+        },
+        "w@Very responsive, no lag": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "Electrical Safety": {
+        "x@Switch exploded": {
+          "-": {
+            "L": [
+              7
+            ]
+          }
+        },
+        "y@Switch causes internal arcing": {
+          "-": {
+            "M": [
+              29
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "z@No longer switches": {
+          "-": {
+            "F": [
+              13
+            ]
+          }
+        },
+        "aa@On off switch does not work": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "bb@Did not work when installed": {
+          "-": {
+            "?": [
+              11,
+              23
+            ]
+          }
+        },
+        "cc@Works perfectly": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "dd@Works smoothly and as intended": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "ee@Works as intended": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Closet Installation": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "General House Installation": {
+        "+": {
+          "c": [
+            4
+          ]
+        }
+      },
+      "LED Light Control": {
+        "+": {
+          "i": [
+            9,
+            15,
+            21
+          ]
+        },
+        "-": {
+          "?": [
+            39
+          ]
+        }
+      },
+      "Hallway Light Control": {
+        "-": {
+          "r": [
+            12
+          ]
+        }
+      },
+      "Dining Room Light Control": {
+        "+": {
+          "k": [
+            18
+          ],
+          "?": [
+            25
+          ]
+        }
+      },
+      "Kitchen Light Control": {
+        "-": {
+          "N": [
+            36
+          ]
+        }
+      },
+      "Three Way Switch Installation": {
+        "+": {
+          "?": [
+            15
+          ]
+        },
+        "-": {
+          "?": [
+            22,
+            31
+          ]
+        }
+      },
+      "Incandescent Bulb Control": {
+        "-": {
+          "f": [
+            3
+          ]
+        }
+      },
+      "Replacement for Rotary Dimmer": {
+        "+": {
+          "e": [
+            19
+          ]
+        }
+      },
+      "Ceiling Light Control": {
+        "-": {
+          "j": [
+            31
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:32.047174"
+}

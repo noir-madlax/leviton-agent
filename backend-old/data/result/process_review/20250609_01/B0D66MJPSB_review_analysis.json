@@ -1,0 +1,73 @@
+{
+  "product_title": "Single Pole Toggle Light Switch, 15 Amp, 120 Volt, Framed, Electrical Wall Replacement, Residential and Commercial Grade, 10 Pack, Ivory",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 5,
+  "review_analysis": {
+    "phy": {
+      "sound": {
+        "A@produces clicking or slapping noise when operated": {
+          "-": [
+            0,
+            2
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works properly": {
+          "+": {
+            "?": [
+              0,
+              2,
+              4
+            ]
+          }
+        },
+        "b@fails to function": {
+          "-": {
+            "?": [
+              1,
+              3
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "c@has quality control issues with some units being defective": {
+          "-": {
+            "?": [
+              1,
+              2
+            ]
+          }
+        },
+        "d@passes ohm test but still doesn't work": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "electrical installation": {
+        "+": {
+          "a": [
+            0,
+            2,
+            4
+          ]
+        },
+        "-": {
+          "b": [
+            1,
+            3
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:54.027277"
+}

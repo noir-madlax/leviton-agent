@@ -1,0 +1,2559 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:28:50.408877",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B09LLY51DL",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B09LLY51DL",
+    "title": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+    "brand": "GHome",
+    "model_number": NaN,
+    "price_usd": 52.99,
+    "rating": 4.4,
+    "reviews_count": 690.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B09LLY51DL"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RUCW680AQ63R3",
+        "text": "Work great so far.",
+        "date": "Reviewed in the United States on April 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Thumbs up",
+        "userName": "Brad Franklin",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2JD45R0BBBCV5",
+        "text": "This is not 1-100 percent dimming. That is a lie. It is false advertising. There dimmable led light Is still insanely bright.",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not 1-100 percent dimming as advertised.",
+        "userName": "Shawn B",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2BNFEESVR92OW",
+        "text": "I love them there is no easier way to do this without having a lot of stress, the switch function is supper easygoing. If you follow the instructions you will have it made. I love them I have 12 I’m my home, connected to both Alexa and google, and the original app Goush. I endorse this product.",
+        "date": "Reviewed in the United States on January 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install, very very simple",
+        "userName": "REY",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61grKFpgwiL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3B5FGLP08BJBR",
+        "text": "Easy to install and connect to Alexa. Love how the switch responds to touch too.",
+        "date": "Reviewed in the United States on October 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy Install",
+        "userName": "Mike",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R8A09XAGGRSUI",
+        "text": "I love the option to turn the lights off with an app from another room. The dimmer is easy to install, but as described it utilizes a neutral wire. I had to run a new wire since I was replacing a single-pole switch (standard toggle switch). These look simple and modern which is the reason I chose them.",
+        "date": "Reviewed in the United States on September 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "simple, modern sleek look, functions well!",
+        "userName": "David Bessman",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2XL1GZLK5YDTU",
+        "text": "Totally spoiled by these. Easy to install and we haven't had any issues in the two years that we've been using them. I put these in the kids' rooms because they often forget to turn off their lights, so we can use Alexa to turn them off from downstairs. Not sure if I'm helping my kids out by removing the pain of having to run upstairs to turn lights off, but it saves me the trip when I come home and discover lights are on. :) I definitely recommend!",
+        "date": "Reviewed in the United States on July 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well, super convenient",
+        "userName": "Stu_G",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1RYSC4TYLZWI9",
+        "text": "Después de 1 mes dejaron de funcionar compre 10 de estas cosas y ninguno funciona ya, no hay soporte es gastar la plata hacer la compra de esta basura",
+        "date": "Reviewed in the United States on May 25, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "No compre eso",
+        "userName": "Andres Quiñones Orozco",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/1715df5c-fd29-4936-b05a-9e5d7677fc76/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RQPXDF53UDFP2",
+        "text": "Was nice for the first 6mo.,but after that only 1 of the 3 still works.",
+        "date": "Reviewed in the United States on April 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "3 out of 4 will not re-pair in Less than a year of having them.",
+        "userName": "JOE",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R10VUHLXFTOMH",
+        "text": "Not that great definitely better products out there.",
+        "date": "Reviewed in the United States on April 12, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "better options",
+        "userName": "Shahid",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61YlKFQJfQL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R4ACLIGB9G5HP",
+        "text": "Easy to install. It also works well with Alexa voice.",
+        "date": "Reviewed in the United States on March 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install. It also works well with Alexa voice.",
+        "userName": "Lou Schwartz",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R37VS4AC1O7SAD",
+        "text": "Had this switch installed for just over a year. Works great and it is easily controlled through the app. But the face plate has broken off from the switch. Contacted customer support and was asked to provide order number. Which I did not have saved in my purchase history for whatever reason. Disappointed that the only mechanical feature on the switch failed. Time will tell if the others installed at a later date start to do the same thing",
+        "date": "Reviewed in the United States on March 12, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Great switch while it works",
+        "userName": "Andrew",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61a5y1ePaEL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R23UCVUURXDE7O",
+        "text": "All 4 worked for a couple of days, but all of a sudden one of them stops working.",
+        "date": "Reviewed in the United States on February 28, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "3 of the 4 switches work",
+        "userName": "Jayesh",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1V90I16HGG935",
+        "text": "I replaced the switch for the light over my kitchen sink, and my kitchen lights. I also replaced the switches for my shower stall light and the bathroom lights. Now I can ask Alexa to turn them on, dim or brighten them, and turn them off. Love it!",
+        "date": "Reviewed in the United States on February 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good quality at a great price",
+        "userName": "Tomio Yamawaki II",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3VNNA7KAM1UIE",
+        "text": "Easy to physically install. Make sure you have a dedicated 2.4GHz wifi band available. Had lots of trouble registering dimmer switch to my Netgear using simultaneous dual band 2.4 & 5.0 until I off turned the simultaneous broadcast and used dedicated 2.4 band. Then, it was piece of cake. Installed two of these for LED high hats. Dimmest setting is still quite bright. I like that you can slide your finger instead of annoying clicking. Only click is on/off. I'd recommend these.",
+        "date": "Reviewed in the United States on February 17, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Dimmest setting not particularly dim",
+        "userName": "aussie_jeffs",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2594MT4JTVMGH",
+        "text": "Easy to install and works great!",
+        "date": "Reviewed in the United States on February 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart Light Switch",
+        "userName": "Meaghan B.",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R37QPJEP72AVQN",
+        "text": "Product looks nice but simply appears to be of low quality. I’ve had three switches die on me in the last 12 months - go to turn the lights on and it’s just straight up dead. Product support was modestly helpful the first time but made me send about 10 videos to prove that their product was actually defective. Now with the latest failure the status light won’t even turn on, switch is completely dead and I’m left with no lights in the room yet again. Just spend the money on a real brand that works - this isn’t it.",
+        "date": "Reviewed in the United States on January 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t Bother - Dies Within Months (I’ve had 3 die on me in a year)",
+        "userName": "Brad Allworth",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RXO5EKBSUGL03",
+        "text": "None of them would program to work remotely only manually.",
+        "date": "Reviewed in the United States on January 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Total waste of money",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R187DMJ7ZQBGYP",
+        "text": "Everything is cool except a few small changes I’d recommend to the manufacturer. 1. The switch base is really big which makes the connections difficult to put in the electrical box. Hopefully technology improves and the switch box will get smaller in later models. 2. It’s difficult to see which switches are on or off when multiple switches in 1 box. Make the light brighter on the switch symbol when the light is on. 3. The timer doesn’t allow dimming.",
+        "date": "Reviewed in the United States on December 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Jill Glassman",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2U19V3H37AMF9",
+        "text": "I have multiple gHome (Gosund) products. I wanted to install some dimmers for use with the same app. They work, but don't seem to dim the lights far enough down for my liking. Plus, the dimming portion of the switch can be a bit finicky to set desired brightness, but they are used primarily through the app for automation purposes. Installation is what you'd expect from this kind of product. There is a bit of an issue with room in the box because of the extra pigtails and wire nuts, but doable.",
+        "date": "Reviewed in the United States on November 28, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "They work \"ok\"",
+        "userName": "Darryl C.",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3IM3VRT225DVL",
+        "text": "I love the product. The customer service is great. The response time is amazing.",
+        "date": "Reviewed in the United States on October 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "The customer support is great.",
+        "userName": "Sadel Joseph",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1EEMNAVRO1JYP",
+        "text": "I only fitted one of the pack of four in April and in August it suddenly stopped working one day. The green indicator light was on but pressing the button or attempting to switch it on via voice control worked. Replaced with one of the three spares and all ok but not able to get a replacement for the dead unit as return window closed. Surely there is a consumer right to have 12 months warranty?",
+        "date": "Reviewed in the United States on October 8, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed in less than 6 months",
+        "userName": "Jamie G",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R18KRJGJTO7LG6",
+        "text": "We’ve been through so many switches and they keep failing. The customer service is very slow and haven’t received any replacements. We gave up on this product.",
+        "date": "Reviewed in the United States on October 2, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Will stop working",
+        "userName": "The Papa J",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3LHFOUANDZMRC",
+        "text": "Got 25+ switches installed and they have started failing within 6 months. Switching to different brand. Let’s see how those work. Now it’s about 20 months since the first ones were installed. 3 more gone in last two weeks. 50% gone in 20 months.",
+        "date": "Reviewed in the United States on September 24, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Hit or miss … several failed within 6 months, many more in 20 months",
+        "userName": "Rupesh Kumar",
+        "numberOfHelpful": 2,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RJ24UG844GMOC",
+        "text": "This switch keeps turning off in 15 min when dimmed 100%",
+        "date": "Reviewed in the United States on September 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Turning off flagging it over heated after 15 min",
+        "userName": "Sapan",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R10DK3Z334I1H3",
+        "text": "Works well with google! Allows me to dim to 6% which is excellent! Highly recommended!",
+        "date": "Reviewed in the United States on July 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "I dont have Alexa - but it works well with google!",
+        "userName": "KarPet",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1O18XXEHTOGCX",
+        "text": "No problem with product. Everyone works perfect",
+        "date": "Reviewed in the United States on July 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2U2KAKYY2D43Y",
+        "text": "Very easy to install. Keep an open mind! Make sure you have Gosund installed with Alexa. Install in Gosund and Alexa takes over. Beautiful instrument ans well manufactured",
+        "date": "Reviewed in the United States on April 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light control with Alexa",
+        "userName": "dannielou",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2F26WTCB0A9HS",
+        "text": "I like the product",
+        "date": "Reviewed in the United States on March 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Like it",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RX7U7SQFVCC8V",
+        "text": "I returned it -",
+        "date": "Reviewed in the United States on March 30, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Instructions are not easy to understand -",
+        "userName": "Photography by George",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3DOAI9FNSSTGE",
+        "text": "Not worth the money",
+        "date": "Reviewed in the United States on March 18, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Okay switches",
+        "userName": "Krishna",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RQA64PLAKVB3M",
+        "text": "The switches work as advertised. They look nice and provide a lot of value for your hard earn cash.",
+        "date": "Reviewed in the United States on March 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value and quality",
+        "userName": "Rafael Andrés",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RKQNMIQC93WAE",
+        "text": "Installed with ease. But will not DIM by command. Product is not at all as expected. I have multiple Alexa Enabled device and I have to say that this one of the worst to do simple tasks. Only on and off works, better off getting a better quality or just on and off voice controlled. Will dim manually only which is overly disappointing.",
+        "date": "Reviewed in the United States on February 27, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor Product.",
+        "userName": "Kerwin Stephens",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1D99TINIGGJSK",
+        "text": "These are mediocre at best. They're advertised to work with the Amazon Alexa app however G-Home has allowed their integration to fail and there is now no no way to attach it to your alexa app for voice control. It doesn't work with Zingbee Capable Hubs or Zwave Capable hubs. in essence it's a cheaply made dimmer switch with no cloud connectivity unless you user their Terrible app.",
+        "date": "Reviewed in the United States on February 15, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "As of 2023 no longer works with Alexa",
+        "userName": "Jax",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R34E559XXK61N",
+        "text": "This works fine once installed but what a big switch to get stuffed into an outlet box. I would not recommend purchase. I bought four and after installing one I regret the other three.",
+        "date": "Reviewed in the United States on January 23, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "A BIG SWITCH",
+        "userName": "Leslie A Martin",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2TLIF9UWJU430",
+        "text": "Everything is easy and worked as is except Dimmer wouldn’t dim with my existing lightbulbs. However, I just find out that it has to have dimmable lightbulb in order to make it work. A little Disappointed about that because seller didn’t state it in advance.",
+        "date": "Reviewed in the United States on December 31, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "A little disappointed because dimmer couldn’t dim my existing lightbulbs",
+        "userName": "Philip",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R15OS1AP6UA2V",
+        "text": "The touch plate for dimming seems like a good idea, but it's not. When you first enter a room the light switch is, typically, not visible and you reach over to flip/press the switch to turn on the lights. Well, with this dimmer, if you don't press the very bottom of the switch you are going to just get whatever random dimming level you happen to be touching. At night this is annoying because I don't want the bathroom to come on full-intensity if I get up in the middle of the night. It's a design that just doesn't work in the practical world. Other than that, it works fine.",
+        "date": "Reviewed in the United States on December 26, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Awkward design and you constantly change dimming levels without intending to do so",
+        "userName": "RG",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1462DIK38E87X",
+        "text": "extremely easy to install",
+        "date": "Reviewed in the United States on November 22, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "product totally easy to install and 100% recommended",
+        "userName": "Jhonatan Arevalo",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R12JW0WFIL9JG3",
+        "text": "Best off brand switches I’ve bought and I’ve bought a lot. These are great and super easy to install and use. Very pleased.",
+        "date": "Reviewed in the United States on November 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Better than expected.",
+        "userName": "Lloyd J Gaines",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3NZBTM6L4VUE6",
+        "text": "This is a product which is not branded. The app is downloaded in the internet or the Apple Store (Gosund). However, it’s content is Chinese. This is not evident in the packaging and description.",
+        "date": "Reviewed in the United States on October 22, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Buyers Beware",
+        "userName": "Andy",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1FQ3BSRSP1L",
+        "text": "WE have some special lighting that we couldn't' change out to smart bulbs, so we used this to achieve dimming with them and they are working great with the Alexa control. Installation is straight forward and easy with the included instructions, just be sure you have a neutral wire to do this!",
+        "date": "Reviewed in the United States on October 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome Alexa control of older halogens....",
+        "userName": "Spikeypup",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2I7A211S0R3G3",
+        "text": "Make sure you have neutral wire, one of my switch does not have neutral it wont work, but the other work fine.",
+        "date": "Reviewed in the United States on October 1, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Neutral Wire Required",
+        "userName": "Monkeycow",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3O97UT7Q57956",
+        "text": "These work fine although like most smart switches you need all the room available in the electrical box. If yours is crammed with wires this might take some rearranging. Overall happy with the \"Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, UL Certified, No Hub Required, White, 4Pack\".",
+        "date": "Reviewed in the United States on September 11, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Fills the Electrical Box, Works Fine",
+        "userName": "Webb",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R5NLGH9UP7WES",
+        "text": "This is the second house that we are upgrading existing light switches to dimmable smart switches. Generally easy to change out existing switches, and relatively very easy to connect to Alexa. Once installed you will love this upgrade. Try to purchase when are on sale at <$16.50 each price point. Will buy more of these.",
+        "date": "Reviewed in the United States on September 11, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Relatively easy to upgrade existing switches",
+        "userName": "Bob B",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RN9N4FA9UZHDO",
+        "text": "Update 01/13/2023: In less than a year, barely more than 6 months actually, two of the four switches have failed. One stopped working completely, and the other still functions manually, but no longer has any Wi-Fi connection. In both cases, yes, I have disconnected from power and reconnected to attempt to reset it completely but they simply don't work anymore. With two of them going bad so quick. I'm confident the other two will soon as well. Dropping my rating to one star for something so short-lived. Original Review: See my quick video review. I use these in four different rooms in my basement - all four working great. Dimming capacity and effectiveness will depend on your lights as much or more than this dimmer. That said, I don't get super dim light at the lowest setting with any of the lights I have (and I'm using this dimming switch with 3 different manufactures of lights). Super easy to add a switch, name it, and control it form the Smart Life app on Android, and easy to add to Google Home once you've done that. Hope it's obvious if you're here reading reviews that you'll need some electrical knowledge, tools, and experience - or need to hire an electrician to install this for you. Highly recommended.",
+        "date": "Reviewed in the United States on August 12, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Working great with Smart Life app",
+        "userName": "green_earth",
+        "numberOfHelpful": 4,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ce4cb351-271b-4de8-916e-6a08b32dba14/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1CNW4ZH303VLS",
+        "text": "I really like this switch. Installation is easy, adding it to Alexa is impressively easy and controlling it is a breeze. It is very adjustable, you can turn the brightness up or down by as little as 1%.",
+        "date": "Reviewed in the United States on August 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install, easy to use",
+        "userName": "DisseminateJoy",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2Z5MV26OJ28OK",
+        "text": "Easy to install. Works with Google or Alexa. I have not tried using Siri. My only complaint is they do not work with multi switch outlets. My hallway and dining room lights have switches on either side if the room.",
+        "date": "Reviewed in the United States on July 17, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "J. Podvin",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1V8M4HUHYEW74",
+        "text": "Took me little while to figure out how to connect with Alexa, still give 5 stars.",
+        "date": "Reviewed in the United States on July 13, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent product!",
+        "userName": "Julia",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RYVD0UFLKB4JM",
+        "text": "With my house being built in 1990 and having done previous wiring projects, I ordered these with confidence knowing that I had a neutral wire. These came well packaged and upon opening saw there was a well made complete set for fully replacing existing switches including cover plates and new wire nuts. I cut power and went to the first switch I wanted to replace. Upon opening the cover and pulling the switch I saw that there was only one wire coming in to the box. This can't be right, normally there is a power feed wire coming from the bottom of the box and a distribution wire going to the light at the top of the box. What weird set-up was this? Turns out several of my switches are \"end of run\". This means that power goes to the light fixture first instead of the switch and what should be your neutral wire is now a hot return wire. This set-up will NOT work with these dimmers as they rely on the neutral to supply power to the switch itself so it can stay in contact with Alexa and the phone app/router. Sadly, I was not able to connect these to all of the lights I had intended. This was in no way the fault of the product and I will be using two of the four dimmers in switches that do have the two wire configuration. Be sure to check the switches you intend to replace before purchasing this set. Make sure you have two wires coming in to the box and not one! The dimmers themselves are very nice and work manually by sliding your finger up and down the switch to dim/brighten your lights. Very easy to use manually or with the app. Of course the real benefit is connecting these to Alexa and voice controlling your dimmers. This was easy to do and to rename the switches to what you would like. This is a terrific set of dimmers and I highly recommend, just wished I had checked my existing switches before ordering these.",
+        "date": "Reviewed in the United States on June 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Neutral wire - a cautionary tale",
+        "userName": "Dean G.",
+        "numberOfHelpful": 8,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/41LR-PE-1rL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/41mfrWplPcL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/611hlUvLE5L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61QOU+lWHHL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61Wtva6cwmL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61XJp-MgjNL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61uZRBodhSL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/ac85d952-f4a6-4bd2-8267-675189ec24aa/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1ND7Q5X1UY22D",
+        "text": "I installed three of these side-by-side to replace a single dimmer switch that was on the fritz and two regular switches. One thing I was not prepared for (although it makes perfect sense now) is that unlike a regular witch, you MUST have the neutral, hot-in, and hot-out connected (a normal switch is just hot in and hot out). This wasn't a huge deal, but it did require extra labor to unbundle the neutral wires in the conduit box (and replace the conduit box entirely, but that isn't the fault of this product). The app works well enough, and the Alexa integration is very nice - especially when building routines (I now have a good morning route that will turn the kitchen light on to minimum brightness so I can get my day started at 4am). My two complaints against this product are both fairly minor. The first is a minor annoyance, not really a big deal: there is a delay before turning on or off the light when pressing the physical button. The second issue I have is the physical dimmer feature. I still don't know if you're meant to tap where you want the dimmer to be set (i.e., just tap the top portion of the lights) or if you're meant to slide your finger, but regardless which way I try, sometimes it registers my touch, other times it doesn't. And other times it'll just make it max brightness regardless where I tap. All in all, at about $17 per switch at the time of writing, it is really hard to beat the value. If you can rely on the app/Alexa integration for setting the dim or be patient with the physical dimmer, it's really not that bad. Again: For the price, they're fully functional, look nice, and work well enough.",
+        "date": "Reviewed in the United States on May 31, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Integrates easily with Alexa, works really good, but the dimming feature is hit or miss",
+        "userName": "Robert Brady",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71kuVX-GcGL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81RSIZxRjWL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09LLY51DL",
+        "productTitle": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 58,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 691,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 72
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RR0JYZ61A5VTL",
+        "text": "These were pretty simple to install and connect to Alexa. I cannot comment on the longevity of the dimmer switches but so far, they are a great replacement to my old ones!",
+        "date": "Reviewed in the United States on May 21, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple to install and connect to Alexa",
+        "userName": "KPhil",
+        "numberOfHelpful": 0,
+        "variationId": "B09LLY51DL",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 4"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

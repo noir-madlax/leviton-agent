@@ -1,0 +1,2440 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:44:57.133789",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08RRM8VH5",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08RRM8VH5",
+    "title": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 38.96,
+    "rating": 4.5,
+    "reviews_count": 1429.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B08RRM8VH5"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1ZIFRZQMACRKT",
+        "text": "Easy to use",
+        "date": "Reviewed in the United States on May 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Eazy to setup",
+        "userName": "Frank",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "REHZ5JEZTM5UC",
+        "text": "The quality and smart features of these dimmer switches are excellent! The app is intuitive and offers a decent level of customization, including fade speed control and LED indicator settings. The fact that they gained Matter support through a simple app-based firmware update is fantastic and future-proofs them nicely. Just a word of warning: I received older, 1st-generation switches in boxes labeled for the newer 2nd-generation when I ordered \"Like New.\" It seems someone engaged in a switch-and-return scam. While the product itself is great, be wary of \"Like New\" listings.",
+        "date": "Reviewed in the United States on April 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Solid Dimmers, Questionable \"Like New\" Condition",
+        "userName": "Lynn Chen",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61Jqv2HMJNL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2RHU1334U14BC",
+        "text": "Works perfectly",
+        "date": "Reviewed in the United States on March 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Ligth",
+        "userName": "Dto",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RDI55ZN2D3VFL",
+        "text": "This is an exercise in frustration, can’t recommend. First you have the issue that you probably can’t just remove the switches and replace them because you need a neutral and most switches won’t have one. If you are lucky the neutral is at least in the box, if not game over. Then just when you think you are done, you point your phone at the QR code to connect and it tells you to contact the homeowner to get it to work. Wow, not helpful. Then you go through their app. Their app at least seems better than the Kasa app, but I wanted the switches to work on Apple Homekit. After more than an hour I still have only two of three working on that app. It should be as simple as point phone at QR code, but that tells me to wait for an extended period of time then gives up.",
+        "date": "Reviewed in the United States on March 18, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Frustrating",
+        "userName": "Jesse Rorabaugh",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R38WD452DWG2CE",
+        "text": "Very happy with these switches. So far I have added 5 to Apple Homekit to replace some older smart switches that woudn't connect. I would recommend professional installation if you don't have at least a basic knowledge of home wiring, but if you do, install is super easy. Set up is also super easy, wire switch, click add device to Apple Home app, scan the QR code and you are in business.",
+        "date": "Reviewed in the United States on March 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switches for Apple Homekit.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1CXGDL8RJOL9M",
+        "text": "Lasted all of 2 months. Disconnected and will not reconnect. Do not buy.",
+        "date": "Reviewed in the United States on March 10, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not reliable.",
+        "userName": "S. Woodward",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2S0G75ATPGVM2",
+        "text": "This is not the first time to buy Levition smart switch, I bought a lots for my friend family upgrade, and it did the amazing job to make the light getting easy controlled, thanks.",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "good product with good quality",
+        "userName": "Ray",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R10K955HQNMNIE",
+        "text": "Easily the best dimmer switches I’ve ever used. And the blue tooth operation is flawless, not to mention convent. Well worth the cost and a little time for installation and set up. Customer service is above and beyond any customer service I’ve ever dealt with. Prompt, knowledgeable, patient and curtious. Great people to work with. I will be replacing several other switches with these. I highly recommend Leviton Smart Switches.",
+        "date": "Reviewed in the United States on February 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well worth the cost.",
+        "userName": "Placeholder",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2QA5V2PCM7HCW",
+        "text": "Bought this based on the good reviews despite the extra cost of other dimmers. Easy to replace my old dimmer. Just have to confirm neutral wire is in your outlet box. Unit is not too bulky so it’s easy to fit into the box. I used the Leviton app first. App detected the dimmer via Bluetooth and I added it to the app without issue. The app has a few additional controls like max/min bulb intensity. Then I added the dimmer to Apple HomeKit on the first try. I can control dimmer intensity through HomeKit in addition to on/off. Satisfied with purchase.",
+        "date": "Reviewed in the United States on February 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install. App and HomeKit work on first try",
+        "userName": "medhchang",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RKTMABV4INQJ3",
+        "text": "Installed in just a few minutes and setup the app. Quality seems very good and works well so far.",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Happy",
+        "userName": "MATT",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2C1VX2AKCLQG4",
+        "text": "Reviewing \"Dimmer\": Replacing old WiFi dimmer in Master Bedroom. My critical feature was that it would dim low. My previous WiFi dimmer would dim until the bulbs (all dimmable LEDs) would cut out. Newer dimmers don't seem to do that - even when adjusted to their maximum range. I bought two new ones previous to this; one dimmed to maybe 30%, the next to maybe 20%, this one I would say went to 10%. I decided that was the best I was going to get and was acceptable. Besides that aspect, this is a great dimmer - definitely the best of all I tried. I like that it is a push top to turn on, bottom to turn off switch (dimmer adjustment is on the right). I really like that the locator light when the switch is turned off is very dim (some are just too bright for a bedroom). The instructions and software are top par, very high quality, and the software allows for a lot of adjustment and customization. The only issue I had was with Matter. I did the software update and got it hooked up, but it kept disconnecting from Alexa. I didn't pursue a fix to this and instead opted to hook it up to Alexa through the app - which worked fine and no disconnecting issues since. If you're looking for something basic and/or if being able to dim very low is not important to you, you'll find other products on Amazon that will do the job decently for less money. If you are hard set on Matter, read a different review, but if not and you want top of the line and are willing to pay for it, this is a definite buy.",
+        "date": "Reviewed in the United States on December 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Quality and Features",
+        "userName": "Ed M.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3D44C1CO31DR",
+        "text": "These do not home up to regular switches or at least from this company. Switch lasted 3 days until it completely stopped working.",
+        "date": "Reviewed in the United States on December 29, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Defective - stopped working after 3 days",
+        "userName": "Layla-H",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2VXTPCE7F0XNP",
+        "text": "Of the 5 switches and 2 plugs I got and programmed, 2 switches remember their programming. And programming is a tremendous pain. This is the one switch that remembered its programming, but either the companion switch lost connectivity to this one or this forgot it.",
+        "date": "Reviewed in the United States on December 27, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "It forgets, at least the other gen 2 switches and plugs do",
+        "userName": "Brian Excarnate",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R36FF7H1JKW26H",
+        "text": "Paired this with switch-dimmable LED garage lights from Costco, and this switch causes the lights to flicker, even at full power. Swapped with normal on-off switch and no flicker. Back to this one and flicker is back. Basically unusable.",
+        "date": "Reviewed in the United States on December 20, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Causes flicker",
+        "userName": "Jacob F.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2BFDSSW3BMBHE",
+        "text": "Works as it supposed to, so far best HomeKit light switch I’ve owned.",
+        "date": "Reviewed in the United States on December 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect!",
+        "userName": "G. Bora",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1L6Q8287B5TRC",
+        "text": "I have a number of Leviton ZWave switches and plugs already. They came with both a white and almond switch cover/face plate. I purchased these WiFi switches to augment what I already have. However, they ONLY come with a white switch cover/faceplate. I called Leviton and was informed that I could change the color for an additional fee. Amazon is selling the color change kit for $3.96. Why should you have to pay more just to change the color? They are already expensive. I will be returning these and looking for another option!",
+        "date": "Reviewed in the United States on November 21, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Only comes white White face plate! Change color for additional fee.",
+        "userName": "Mark Arnaud",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RVFWZJIO8AY9H",
+        "text": "After a half hour on the phone with (a very nice) support tech at Leviton... This will not work with my \"ASD LED 24 Inch Wall Mount Vanity Lighting Fixture | 25W 1750LM 3000K-5000K 120V, 3CCT, Dimmable, (https://www.amazon.com/gp/product/B08MJ4XFF8/ref=ppx_yo_dt_b_search_asin_title?ie=UTF8&psc=1) The symptoms were that it would flash on and off every 2 seconds, but would not turn the lamp on or off either via the dimmer switch or through the app. Maybe the 24W was too low? The tech did not know.",
+        "date": "Reviewed in the United States on November 13, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Did not work with my low wattage LED lamp",
+        "userName": "S. Podell",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3URAGCF1OQ2RF",
+        "text": "Installed easily, works great. Simple to setup with the app and Alexa.",
+        "date": "Reviewed in the United States on October 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "RC",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R26C0TY2QC674R",
+        "text": "They cost a lot and do not last. I have had two fail in two years. The cheap ones last longer and cost 1/3 the price.",
+        "date": "Reviewed in the United States on September 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does not last",
+        "userName": "Marc H.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RKFFRTTI9WNT7",
+        "text": "The only thing that came in the box was the heavily used switch. All of the other expected items, such as cover, screws, wiring nuts, and instructions were missing. I can't even imagine how this was passed through as a renewed item.",
+        "date": "Reviewed in the United States on September 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Heavily issued item sold as renewed",
+        "userName": "Lev",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2BWC4370NPGW2",
+        "text": "I changed all my outlets and switches. Awesome home improvement products. Face plate makes the product look amazing.",
+        "date": "Reviewed in the United States on September 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome product",
+        "userName": "M. E. Wilson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RTBKXSFA70MH4",
+        "text": "Tried a TP link and a Kasa smart switch in our master with 6 LED's on the same switch and the breaker would trip. Installed this switch and it worked perfectly.",
+        "date": "Reviewed in the United States on August 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great with multiple LED's",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R19CA8GFAZRS53",
+        "text": "Product great. Amazon shipping NOT. Amazon logistics needs to have forward looking software to know not to ship to an address using usps that has usps forwarding turned on.!",
+        "date": "Reviewed in the United States on July 29, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Amazon has a shipping bug",
+        "userName": "Bill",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2QMMJZUOJ4AN9",
+        "text": "Very easy to install with thorough instructions! Works great!",
+        "date": "Reviewed in the United States on July 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "Amy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2RELXIFJWD2PH",
+        "text": "I bought 30 of these switches to replace non-smart rocker switches. They worked well at first, but I have now lost three of them. They disconnect from the internet and randomly turn lights on and off. There is no way to keep the switch in the off position so I had to unscrew the bulbs from their sockets (the switches control recessed ceiling lights) until I could replace the switch. I attempted to reset the switches and to update the firmware, but nothing works. I replaced two switches, but I think I will go back to the good old reliable mechanical switch as replacements as these things continue to fail. It appears that the problem that I am having isn't unique to me as many others have reported the same issue. If you want smart switches I recommend looking at brands other than Leviton.",
+        "date": "Reviewed in the United States on July 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed After One Year Of Use",
+        "userName": "Rich R.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1ZORERHKFJHMB",
+        "text": "Very easy to install and set up. Ive installed other Leviton products, like the light switches and incorrect wiring instructions caused a lot of added difficulty. This was pretty much a plug and play set up as the device was automatically in set up mode. All I had to do was add it to my Leviton app. NO HUB REQUIRED!",
+        "date": "Reviewed in the United States on July 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easiest Install Ever",
+        "userName": "R. Olson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1F2ILBUI4J9AL",
+        "text": "I purchased this switch based on a strong recommendation from a relative who has dozens installed with no issues related to connectivity or reliability. Setup was straightforward, but my experience took a drastic turn when I attempted to add the switch to HomeKit using Matter. Firstly, this switch does not support Matter out of the box. You are required to enroll in a beta program and install beta firmware on the switch to enable Matter functionality. Even after doing so, I encountered persistent issues. Despite numerous attempts to connect, including resetting the device, restarting my router and phone, and trying every troubleshooting step I could find, the switch simply would not pair with HomeKit via Matter. After some research, I discovered forum posts suggesting that Matter requires a 2.4GHz-only Wi-Fi network. I have a Google Nest Wi-Fi Pro router, which doesn’t allow disabling specific Wi-Fi bands. It's worth noting that I have several other Matter-enabled devices from different brands that connected seamlessly without needing to adjust any network settings. I even exchanged the switch for a new one, thinking I might have received a faulty unit, but the problem persisted. Leviton's claim that this switch supports Matter is, in my opinion, misleading. You’re required to A) sign up for a beta program, B) install beta firmware, and C) have a router that allows disabling specific Wi-Fi bands—all of which other brands do not require for their Matter-enabled devices. In summary, if you’re looking for a seamless Matter experience, this switch is not the way to go.",
+        "date": "Reviewed in the United States on July 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Does NOT support matter!",
+        "userName": "Dayv B",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1ZG9FJ6PPI4WR",
+        "text": "We wanted to replaced our existing Wemo light switch and wanted something that worked without using a hub or anything else. Came across the Leviton, which was perfect - easy to install, easy to use and does what it does with only the app. Plenty of control available, but we really just needed an on/off function with dimmer. Contemplating replacing all our Wemo with this.",
+        "date": "Reviewed in the United States on June 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Convenience at your finger tips",
+        "userName": "Victor",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R19G6V7ZXA5XAP",
+        "text": "I installed another brand of wi-fi dimmer switch several years ago. It was SUCH a pain to install, having to change my wifi source, and then every few months it would disconnect and I'd have to go through the whole process from the beginning. When it failed a few days ago, I uninstalled it from my wall and threw it across the room. I knew there HAD to be something easier and better. Leviton was a brand known for reliability and so I bought this one. Installing it was like night and day compared to the other one. The instructions were simple and it just worked the first time with no drama or having to change my wifi source. It connected perfectly to Alexa and my Google Nest app too. I wish I had found this switch several years ago, it would have saved much aggravation.",
+        "date": "Reviewed in the United States on June 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "So Much Easier Than the \"Other Brand\"",
+        "userName": "AlanD",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1EZTV22ZEBIMV",
+        "text": "I would like to be able to configure the switch to turn off after some mount of time. Since most of my lights are on the dimmer version of this switch, we primarily use these for exhaust fans. Spot/Flood lights are the other use case. Both of these would benefit from a timeout.",
+        "date": "Reviewed in the United States on June 20, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Disappointing features",
+        "userName": "Ian Ward",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3E9205FOXQUR8",
+        "text": "I have several different brands of these smart dimmers. This one is by far the best despite the extra cost. It's the only one I've found that is smooth and customizable turning on and off, and there is no flickering whatsoever. Well worth the extra few dollars. Had one small glitch with one but support was helpful getting it working again without having to uninstall it.",
+        "date": "Reviewed in the United States on June 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "No flickering, high quality",
+        "userName": "Kevyn",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3TWQCY13AZP9I",
+        "text": "Excellent product, works fantastic",
+        "date": "Reviewed in the United States on May 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Needs white wire for com.",
+        "userName": "Ted",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3PZP0L0YTEDNS",
+        "text": "Switch works. I have 30+ of them integrated with HomeKit. Initially had an issue with them sporadically being 'No Response' in HomeKit, but this resolved when I changed my network (from Orbi to Unifi). Tread carefully in the Leviton early access Matter program if you are into that sort of thing. My one complaint with Leviton is that their iOS app currently does not directly integrate with HomeKit; you have to add the device to both (if you want firmware updates from Leviton). Also which they would just adopt Thread...would be a game changer. CHECK PRICING AT HOME DEPOT. I have purchased a bunch of these from Amazon and realized too late that: i) Home Depot has the same switch for $10 less (based on pricing I am seeing today); and ii) the Home Depot packaging includes color change plates, which are $5-$8 a each on Amazon.",
+        "date": "Reviewed in the United States on May 17, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Check Home Depot pricing",
+        "userName": "Jeffrey Herr",
+        "numberOfHelpful": 5,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1W3IZGWEICPV",
+        "text": "I replaced my router, and consequently lost the ability to access my switches through the app. Leviton stuck with me and actually helped me solve a router problem that was effecting many other devices. Nothing buy high praise from me.",
+        "date": "Reviewed in the United States on May 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "The tech support is awesome!",
+        "userName": "Jonathan Niezing",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R24JRPNHOZOE4H",
+        "text": "avoid these dimmers and switches. They constantly lose connectivity and when they do work its only for a few days at a time.",
+        "date": "Reviewed in the United States on May 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "constant problems",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3302A6ANY1ZB7",
+        "text": "This is the best yet. They have made this easy. If you have some basic electrical ability you can do this. It has wires not screw in, easier. Alexa integration was so easy.",
+        "date": "Reviewed in the United States on April 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy",
+        "userName": "Michael B",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RBDTAB4U90VZB",
+        "text": "I installed these after trying two other products which didn't quite fit in my two-gang box. These fit perfectly and worked perfectly with the Leviton app and when enabled with Alexa. These cost $30 more than the Shelly and the Kasa, but the quality was worth the extra $30.",
+        "date": "Reviewed in the United States on April 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Mark M",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1LJ8VHIFDM85S",
+        "text": "Works great. I added it to the My Leviton app and upgraded to the Matter firmware. I was then able to successfully add it to HomeKit as a Matter accessory. I then paired it to a Leviton Decora Smart Anywhere switch for \"physical\" control. Finally I was able to group the outlet with some non-Leviton outlets in HomeKit and it all works great together as I can control a group of outlets together with one physical switch.",
+        "date": "Reviewed in the United States on April 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with HomeKit via Matter, Leviton Companion Switch",
+        "userName": "L. Sanchez",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R366XBWQO4OATQ",
+        "text": "To get past installation, I had to deal with connectivity issues and then patch the switches via the phone app. It's not difficult to do once you get the switches to behave themselves for a moment. All I had to do was to reset the router. Resetting the router got all the switches to reconnect to Wifi at once. In the My Leviton app, I went to the \"...\" of the device -> Device Settings -> Device Health -> Check for Firmware Update. Upgraded to version 1.6.4 and don't seem to have any issues now. After that, I didn't have any issues. My Leviton seems to work with Google Assistant just fine. Nice to have these light switches set up for my \"Good Morning\" and \"Bedtime\" routines. They don't disconnect from both the power and Wifi when someone turns off a light switch like the smart LED light bulbs do, which is great.",
+        "date": "Reviewed in the United States on April 5, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works good once you get past installation.",
+        "userName": "Brad",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3YUN0NLYK0H9",
+        "text": "I ordered two of these and one just doesn’t work after 2 days. The other one works just fine and both are wired the same. The second one makes it the light flicker ever so often and it’s not connected to the app. very upset.",
+        "date": "Reviewed in the United States on April 2, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don’t know what’s wrong with it",
+        "userName": "Maria",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RCVEND8AEXYML",
+        "text": "TLDR: This is working well with Matter and Home Assistant over wifi; if I have any issues with reliability I will update. Note: I have many Zigbee \"gen 1\" Leviton dimmers DG6HD. They are still (mostly) my favorite excepting two things, 1 they seem to be at least softly discontinued, not advertised anymore and hard to find in stock, 2: the D26HD supports double tap to max brightness, which the Zigbee DG6HD does not have. Because of these 2 reasons, I reluctantly tried the D26HD and find it an acceptable alternative; however, I'd still prefer a Thread or Zigbee-based version as D26HD requires a My Leviton account, access to your wifi, access to your precision location on your mobile, access to your wi-fi password, and Internet access, and is harder to set up than Zigbee switches for those who know what is Zigbee and have a Zigbee hub. If you want Matter you have to use My Leviton to set it up first, opt into Matter early access, and upgrade your firmware. This was \"easy enough\". Not as easy as Zigbee you click one button in Home Assistant and done though. The Zigbee versions also allow access to fade in/out timers, but Matter mode does not, at least in HA as of writing this review; however, you can configure it via My Leviton app. I have not yet tested if the device works when restricted from the Internet in Matter mode. I use this with the DD00R companion for multi-location dimming. I did not want to use the \"anywhere\" battery-operated switches so utilized existing multi-pole wiring. Wiring is standard. Compared to DG6HD's screw terminals the D26HD uses pigtails -- some find this as a pro, some as con. The DD00R is compatible with the double tap to max on / off, which surprised me since it was made for gen 1 devices that don't support it; HOWEVER, if you double tap the DD00R quickly it recognizes as a single tap while on the D26HD it works perfectly. Using remote control via My Leviton and via Matter through Home Assistant appears instant. I opted to use My Leviton as little as possible so I use Google Assistant integration via Home Assistant instead of My Leviton. In Home Assistant Matter only the on/off and dim level is supported, which for me supports all everyday use case. In My Leviton you can change bulb type, min and max dim power levels, and fade on and fade off time settings in 0.5 second increments and upgrade firmware, which is a \"one time\" expected use for me. In general, I am anti-wifi for smart devices due to the lower reliability I've typically witnessed and inappropriate for battery-powered devices, but as a wired device it is OK enough, although if Leviton drops cloud support you lose the advanced configuration functionality. I still prefer the privacy-centric features and cloud-free Zigbee DG6HD, but again they seem to be on the way out. A great improvement will be when Matter comes out-of-the-box so you can enroll it without Internet or My Leviton, and if the advanced features can be supported (if possible) via Matter.",
+        "date": "Reviewed in the United States on April 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "A reasonable replacement for the seemingly deprecated DG6HD",
+        "userName": "gillius",
+        "numberOfHelpful": 15,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1HDQJ3SY3NUJ3",
+        "text": "I have numerous Leviton smart switches and plugs but this was my first wall switch dimmer which I needed for a new light fixture in the living room. Once it was installed I was able to quickly add it to my Leviton app and the living room so I can now turn on or off every light in the room. Also added it to a couple of different scenes (activities), one of which allows me to turn it on dimmed in the early morning hours. When setting it up I liked that there were many controls for how it dimmed and how far it would dim. Works great and am very happy with the Leviton smart switches and plugs.",
+        "date": "Reviewed in the United States on April 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer for new living room light",
+        "userName": "iPod Tom",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RW6W5GMSJD13B",
+        "text": "Ya lo revise con un especialista y me dice que es algo del interruptor, solo deja su luz encendida con la aplicación de Alexa",
+        "date": "Reviewed in the United States on March 26, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "No regula muy bien la luz",
+        "userName": "Sebastian Gomez",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/9d5578d3-f37d-4318-a417-31340646828f/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2J8TCYYOUEL9S",
+        "text": "We purchased this product for our media room to give it an ambient field when you’re watching movies my husband did the installing but it was fairly easy for him. It took him about 15 to 20 minutes to get it installed and I love that it connects to our Alexa app Where we can utilize this from our phone to adjust the lighting or to turn it off",
+        "date": "Reviewed in the United States on March 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Makes life a bit easier",
+        "userName": "Chanel Connect",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R11JL1Q01Y31NM",
+        "text": "Product originally got hung up with some Amazon nightmare where it wasn’t shipped yet but I couldn’t cancel it either, sat like that for about 2 weeks. I eventually bought another one which arrive the next day (really?!). The original one finally showed up the day after the second one arrived. What a pain Amazon. Anyways, the product was in mint condition and packaged well. The dimmer switch had clear and easy to use instructions compared to the competition (great job there, as tech items usually seem to fail in this department). The installation was easy and when it came to linking it up with Apple HomeKit, it was a breeze. Happened right away when I restored power to the switch. Had it for about a week now and never lost connection or have any issues with it directly. Now, that being said, the dimmer switch is great, but like many smart dimmer switches they have glitches with your existing lighting. Like flickering and jumpy step dimming. I have both problems and I want to add, since I have experience with many types of these switches, it’s not really the switches fault. Years ago I found out if you buy cheap LED lights (even though you think you didn’t…you have) you will have some glitches. Now, I have some led lights that I spent almost twice the price as the majority of other lights in my house, they did not have any glitches, they worked smoothly and flawlessly. So maybe keep that in mind. I personally don’t mind the glitches, because I’m saving a fortune using cheaper led lights, I really don’t mind, because when you have over 50-100 led lights in your house, expensive led lights can break the bank fast. I also want to add, that I’ve been using this companies products for a few years now and I really like them compared to the rest. I like the controlled dimming ability and the integration with Apple HomeKit. I recommend this product to my family, friends and all who read this review. Happy shopping!!",
+        "date": "Reviewed in the United States on March 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "GMac",
+        "numberOfHelpful": 11,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1MAMNO6H07XIM",
+        "text": "I purchased this remote dimmer for my outdoor front door and garage sconce lights. I programmed it to automatically come on at dusk, and off around 11pm; later on the weekends. I can override and operate my lights from anywhere / anytime. Great for when I'm on vacation or out late on a night around town. I should have purchased this years sooner.",
+        "date": "Reviewed in the United States on March 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Outdoor Lights On at Dusk Everyday",
+        "userName": "Dante",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R69LA5WTJRF3H",
+        "text": "This switch is exactly what I was looking for. Very straight forward instructions on the connection. It allows you to dim the lights as well as schedule it to come on when you want it to. AKA “Vacation Mode” if you are looking for a programmable dimmer switch, look no further.",
+        "date": "Reviewed in the United States on March 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "AMAZING",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1GJDGXWZ6B2Y0",
+        "text": "Product is great but Connectivity and App. Did reset couple of times, works for sometime and disconnects/goes offline. Sometimes it turns on and off by itself which is frustrating..",
+        "date": "Reviewed in the United States on March 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Great product with Horrible connectivity and app",
+        "userName": "Firoz",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2R26XE9OAO0ZF",
+        "text": "This dimmer switch works seamless with the app. It also works well from the switch as well. Super fast reaction with nice dimming.",
+        "date": "Reviewed in the United States on February 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wifi dimmer switch",
+        "userName": "Tom A",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08RRM8VH5",
+        "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 277,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 1429,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 78
+          },
+          "fourStar": {
+            "percentage": 9
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1P746O5Q5DEQ",
+        "text": "Super easy install. If you know how to install electric equipment, or you have a decent amount of knowledge you can simply and with no problem install this yourself. If not, I highly recommend you hire an experienced licensed electrician. I’m handy and I was able to install this and under five minutes. I use it with my Alexa and it’s perfect.",
+        "date": "Reviewed in the United States on February 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Steven G.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

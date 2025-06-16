@@ -1,0 +1,765 @@
+{
+  "product_title": "Amazon Basics Smart Dimmer Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks good": {
+          "+": [
+            2
+          ]
+        },
+        "B@looks nice": {
+          "+": [
+            24
+          ]
+        },
+        "C@well-built and sturdy feel": {
+          "+": [
+            13
+          ]
+        },
+        "D@not cheap or flimsy feel": {
+          "+": [
+            13
+          ]
+        },
+        "E@hollow sounding and feels cheap": {
+          "-": [
+            22
+          ]
+        },
+        "F@very scratched": {
+          "-": [
+            23
+          ]
+        },
+        "G@dry wall plaster all over it": {
+          "-": [
+            23
+          ]
+        },
+        "H@looks bad": {
+          "-": [
+            27
+          ]
+        }
+      },
+      "dimensions": {
+        "I@takes up a lot more space in wall box than standard switches": {
+          "-": [
+            46
+          ]
+        },
+        "J@width and depth are considerable": {
+          "-": [
+            46
+          ]
+        },
+        "K@standard size": {
+          "+": [
+            38
+          ]
+        }
+      },
+      "wiring_requirements": {
+        "L@requires neutral wire": {
+          "-": [
+            4,
+            13
+          ]
+        },
+        "M@won't work without neutral": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "components": {
+        "N@missing wire connectors": {
+          "-": [
+            23
+          ]
+        },
+        "O@missing face plate": {
+          "-": [
+            23
+          ]
+        },
+        "P@missing documentation": {
+          "-": [
+            23
+          ]
+        },
+        "Q@little plastic clip at bottom": {
+          "+": [
+            6
+          ]
+        },
+        "R@mounting plate screws don't line up": {
+          "-": [
+            27
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              12,
+              15,
+              25,
+              30,
+              33,
+              34,
+              47
+            ]
+          }
+        },
+        "b@installation process surprisingly simple": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "c@easy installation": {
+          "+": {
+            "?": [
+              21,
+              33
+            ]
+          }
+        },
+        "d@installed in about 30 minutes": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "e@quick install": {
+          "+": {
+            "?": [
+              35,
+              36
+            ]
+          }
+        },
+        "f@seamless install": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "g@works great with Alexa": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "h@connected easily to Alexa": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "i@easy to connect back to Alexa": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "j@connected to Alexa directly": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "k@seamlessly connected to Alexa": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "l@worked perfectly with Alexa": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "m@not working with Alexa in Mexico": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "n@Alexa was unable to connect": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "dimming_function": {
+        "o@dimming feature smooth and responsive": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "p@dimming feature very useful": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "q@works great as dimmer": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "r@dimmer works great": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "s@can calibrate the dimming": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "t@lights won't dim": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "u@will not go down low enough on 100 watt bulb": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "v@cannot handle even 50 watts of LED bulbs": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "w@will shut off at max brightness due to overloading": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "x@works great": {
+          "+": {
+            "?": [
+              0,
+              32,
+              34
+            ]
+          }
+        },
+        "y@working great": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "z@works well": {
+          "+": {
+            "?": [
+              10,
+              21
+            ]
+          }
+        },
+        "aa@worked great for a year": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ab@lights flicker": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "ac@unexplained LED flickering issues": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ad@persistent flickering issues": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ae@flickers on most settings": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "af@sometimes flickers on anything but lowest settings": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "ag@all defective junk": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ah@multiple fail and replacements fail too": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ai@goes unresponsive": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "aj@device is unresponsive": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ak@half the time Alexa app says device is unresponsive": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "al@neither switch would switch": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "am@likes to turn off lights at any given time": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "an@frequently turns off lights just to mess with me": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "ao@worked for a day and then died": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "ap@stopped working after a month": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "aq@have to press button a few times to turn light on or off": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ar@worked for ONE month": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "as@power will light up switch but doesn't work": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "at@doesn't shut off but will turn on and dim correctly": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "au@stopped responding": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "av@would not turn light on or off": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "aw@light brightness changing on its own": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "ax@light would go dim and then brighten up": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "power_handling": {
+        "ay@as soon as load applied dropped to 34v": {
+          "-": {
+            "E": [
+              22
+            ]
+          }
+        },
+        "az@only dim lights available": {
+          "-": {
+            "E": [
+              22
+            ]
+          }
+        }
+      },
+      "current_leakage": {
+        "ba@leaks energy": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "bb@lights very faintly lit when in off position": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "bc@switch leaks power when off": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "bd@LED bulbs still glow even when off": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "be@susceptible to phantom loads causing slight dim when off": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "bf@current still flows when off almost like night light": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "bg@small current flowing which lights LEDs when off": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "instructions": {
+        "bh@good instructions": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "bi@instructions were clear": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "bj@included instructions easy to follow": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "bk@installation video super easy to follow": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "setup": {
+        "bl@easy setup": {
+          "+": {
+            "?": [
+              3,
+              36
+            ]
+          }
+        },
+        "bm@setup straightforward": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "bn@quick setup": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "bo@2 minutes to setup on Alexa": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "bp@very easy to set up": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "voice_control": {
+        "+": {
+          "g": [
+            2
+          ],
+          "h": [
+            13
+          ],
+          "i": [
+            15
+          ],
+          "j": [
+            32
+          ],
+          "k": [
+            37
+          ],
+          "l": [
+            45
+          ],
+          "?": [
+            18,
+            44
+          ]
+        }
+      },
+      "smart_home_integration": {
+        "+": {
+          "?": [
+            13,
+            18
+          ]
+        }
+      },
+      "lighting_control": {
+        "+": {
+          "o": [
+            13
+          ],
+          "p": [
+            11
+          ],
+          "q": [
+            10
+          ],
+          "r": [
+            33
+          ],
+          "?": [
+            38,
+            44
+          ]
+        }
+      },
+      "scheduling": {
+        "+": {
+          "?": [
+            11,
+            13
+          ]
+        }
+      },
+      "outdoor_lighting": {
+        "+": {
+          "?": [
+            11,
+            25
+          ]
+        }
+      },
+      "chandelier_control": {
+        "+": {
+          "q": [
+            10
+          ]
+        },
+        "-": {
+          "v": [
+            3
+          ],
+          "w": [
+            3
+          ]
+        }
+      },
+      "LED_compatibility": {
+        "+": {
+          "?": [
+            10
+          ]
+        },
+        "-": {
+          "v": [
+            3
+          ],
+          "w": [
+            3
+          ],
+          "bc": [
+            37
+          ],
+          "bd": [
+            37
+          ]
+        }
+      },
+      "bedroom_use": {
+        "+": {
+          "?": [
+            38
+          ]
+        }
+      },
+      "kitchen_use": {
+        "+": {
+          "?": [
+            44
+          ]
+        }
+      },
+      "garage_use": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "patio_lighting": {
+        "+": {
+          "p": [
+            11
+          ]
+        }
+      },
+      "multi_person_control": {
+        "-": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "GFCI_compatibility": {
+        "-": {
+          "?": [
+            25
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:26.286125"
+}

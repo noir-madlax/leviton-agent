@@ -1,0 +1,462 @@
+{
+  "product_title": "Lutron Credenza LED+ 100-Watt Plug-In Lamp Dimmer Switch, TTCL-100H-BL, Black",
+  "product_category": "Plug-In Portable Dimmer Controls",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "cord": {
+        "A@cord is quite long": {
+          "+": [
+            4
+          ]
+        },
+        "B@cord length could be longer": {
+          "-": [
+            42
+          ]
+        },
+        "C@two cords required (lamp cord to outlet, dimmer cord back)": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "slider_control": {
+        "D@slider control sits nicely on lamp table": {
+          "+": [
+            19
+          ]
+        },
+        "E@slider motion feels like grinding": {
+          "-": [
+            11
+          ]
+        },
+        "F@detent has harder slide feel compared to older versions": {
+          "-": [
+            2
+          ]
+        },
+        "G@detent used to have smooth feel in older versions": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "indicator_light": {
+        "H@red indicator removed from newer versions": {
+          "-": [
+            2
+          ]
+        },
+        "I@lacks light-up button for visibility in dark": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "build_quality": {
+        "J@feels cheap": {
+          "-": [
+            11
+          ]
+        },
+        "K@overall decrease in quality compared to older versions": {
+          "-": [
+            2
+          ]
+        },
+        "L@solidly built": {
+          "+": [
+            24
+          ]
+        },
+        "M@compact and nicely designed": {
+          "+": [
+            16
+          ]
+        },
+        "N@good quality": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "plug_connection": {
+        "O@plugging lamp was very difficult due to internal misalignment": {
+          "-": [
+            1
+          ]
+        },
+        "P@prone to polarity reversal causing failure": {
+          "-": [
+            39
+          ]
+        }
+      },
+      "non_slip_feature": {
+        "Q@features non-slip rubber strips on bottom": {
+          "+": [
+            19
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "R@positive click when turned fully off": {
+          "+": [
+            24
+          ]
+        },
+        "S@makes electrical popping sounds before failure": {
+          "-": [
+            38
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_functionality": {
+        "a@smooth dimming with no flickering": {
+          "+": {
+            "?": [
+              19,
+              45
+            ]
+          }
+        },
+        "b@no dimming, only bright to off": {
+          "-": {
+            "?": [
+              5,
+              33
+            ]
+          }
+        },
+        "c@reduces brightness by half with erratic slider": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@causes light flickering": {
+          "-": {
+            "?": [
+              6,
+              15,
+              22,
+              25,
+              28,
+              36,
+              46
+            ]
+          }
+        },
+        "e@flicker-free operation with LED": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "f@very uneven brightness control": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "g@not much difference between lowest and highest settings": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "h@works with LEDs": {
+          "+": {
+            "?": [
+              1,
+              43
+            ]
+          }
+        },
+        "i@does not work with compact fluorescent bulbs": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "j@works with dimmable LED bulbs": {
+          "+": {
+            "?": [
+              19,
+              45
+            ]
+          }
+        },
+        "k@works with incandescent bulbs": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "l@doesn't work with LED Christmas lights": {
+          "-": {
+            "?": [
+              8,
+              26
+            ]
+          }
+        },
+        "m@works to dim LED Christmas lights": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "heat_generation": {
+        "n@gets quite hot during use": {
+          "-": {
+            "?": [
+              25,
+              44
+            ]
+          }
+        }
+      },
+      "noise": {
+        "o@makes electric buzzing sound": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "p@no buzzing experienced": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "durability": {
+        "q@failed after few months": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "r@lasted 5 years": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "s@loses full power capability over time": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "t@switch makes popping sounds and dies": {
+          "-": {
+            "S": [
+              38
+            ]
+          }
+        },
+        "u@fear unplugging may cause malfunction": {
+          "-": {
+            "O": [
+              1
+            ]
+          }
+        }
+      },
+      "ease_of_use": {
+        "v@easy to use": {
+          "+": {
+            "?": [
+              0,
+              3,
+              7
+            ]
+          }
+        },
+        "w@easy to set up": {
+          "+": {
+            "?": [
+              7,
+              42
+            ]
+          }
+        },
+        "x@requires moving slider to maximum to turn on": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "y@works most of the time": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "z@two of three work perfectly": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "reptile_heat_lamps": {
+        "+": {
+          "?": [
+            0,
+            18,
+            41
+          ]
+        }
+      },
+      "reading_lamps": {
+        "+": {
+          "h": [
+            1
+          ]
+        }
+      },
+      "bedroom_lamps": {
+        "+": {
+          "v": [
+            7
+          ]
+        }
+      },
+      "nightstand_lighting": {
+        "-": {
+          "H": [
+            2
+          ]
+        }
+      },
+      "sconces": {
+        "+": {
+          "A": [
+            4
+          ]
+        }
+      },
+      "Christmas_tree_lights": {
+        "-": {
+          "l": [
+            8,
+            25
+          ]
+        },
+        "+": {
+          "m": [
+            27
+          ]
+        }
+      },
+      "under_counter_LED_lighting": {
+        "+": {
+          "?": [
+            9
+          ]
+        }
+      },
+      "nighttime_TV_viewing": {
+        "+": {
+          "?": [
+            12
+          ]
+        }
+      },
+      "elderly_assistance": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "table_lamps": {
+        "+": {
+          "a": [
+            14,
+            43
+          ]
+        }
+      },
+      "bearded_dragon_basking_bulb": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "bedside_lighting": {
+        "+": {
+          "L": [
+            24
+          ]
+        }
+      },
+      "antique_lamp_balancing": {
+        "+": {
+          "?": [
+            31
+          ]
+        }
+      },
+      "string_lights_ambiance": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "cozy_bedroom_lighting": {
+        "+": {
+          "?": [
+            40
+          ]
+        }
+      },
+      "desk_lamp": {
+        "+": {
+          "j": [
+            45
+          ]
+        }
+      },
+      "corner_lamp_with_multiple_bulbs": {
+        "+": {
+          "?": [
+            47
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:07.304066"
+}

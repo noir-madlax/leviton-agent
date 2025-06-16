@@ -1,0 +1,374 @@
+{
+  "product_title": "Kasa Smart Light Switch HS200, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required , White, HS200",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@modern flair appearance": {
+          "+": [
+            47
+          ]
+        },
+        "B@LED ring visibility": {
+          "-": [
+            28
+          ]
+        },
+        "C@backlit when off": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "size": {
+        "D@smaller/less deep interior than average smart switch": {
+          "+": [
+            19
+          ]
+        },
+        "E@requires large outlet box": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "material": {
+        "F@overpriced plastic construction": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "wiring": {
+        "G@wire pigtails instead of screw terminals": {
+          "-": [
+            40
+          ]
+        }
+      },
+      "button": {
+        "H@much harder to depress, sometimes needs a thump": {
+          "-": [
+            21
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@engineered to fail after warranty expires": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "b@died in 3 years 6 months": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "c@failed within a year": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "d@quality has dropped, low durability": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "e@rock-solid after 3 months": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "f@no issues after a year": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "g@connection issues with Kasa app on phones": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "h@requires 2.4 GHz wifi connection": {
+          "-": {
+            "?": [
+              20,
+              42
+            ]
+          }
+        },
+        "i@connection problems during setup": {
+          "-": {
+            "?": [
+              6,
+              25
+            ]
+          }
+        },
+        "j@refuses to connect to new wifi provider": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "k@connects immediately/very easily": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "l@seamless wireless and Alexa connection": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "m@no longer connects to WiFi": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "n@making clicking sound, light going on and off": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "o@started to click and went bad": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "p@turn off by themselves, flickering on and off": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "q@light no longer turns off, only dims": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "r@works great": {
+          "+": {
+            "?": [
+              1,
+              3
+            ]
+          }
+        },
+        "s@always work very well": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "t@won't operate manually": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "u@sometimes delayed or turns on then right back off": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "installation": {
+        "v@easy to install": {
+          "+": {
+            "?": [
+              2,
+              3,
+              7,
+              10,
+              13,
+              24,
+              47
+            ]
+          }
+        },
+        "w@fits easier into old/not very deep boxes": {
+          "+": {
+            "D": [
+              19
+            ]
+          }
+        },
+        "x@may be tight in older homes": {
+          "-": {
+            "E": [
+              35
+            ]
+          }
+        },
+        "y@did not work with house's wiring configuration": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "app_functionality": {
+        "z@app works great": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "aa@phone app is buggy": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ab@IFTTT integration very responsive": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_automation": {
+        "+": {
+          "r": [
+            7,
+            8,
+            38
+          ],
+          "s": [
+            23
+          ],
+          "z": [
+            7
+          ]
+        },
+        "-": {
+          "?": [
+            32
+          ]
+        }
+      },
+      "porch_light_control": {
+        "+": {
+          "?": [
+            13,
+            35,
+            46
+          ]
+        }
+      },
+      "vacation_rental_control": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "Alexa_integration": {
+        "+": {
+          "k": [
+            29
+          ],
+          "l": [
+            37
+          ],
+          "?": [
+            7,
+            8,
+            24,
+            30,
+            39
+          ]
+        },
+        "-": {
+          "aa": [
+            33
+          ]
+        }
+      },
+      "scheduling": {
+        "+": {
+          "?": [
+            22,
+            39,
+            46
+          ]
+        }
+      },
+      "remote_control": {
+        "+": {
+          "?": [
+            10,
+            22,
+            39
+          ]
+        }
+      },
+      "fan_control": {
+        "+": {
+          "?": [
+            40
+          ]
+        }
+      },
+      "garage_carriage_lights": {
+        "+": {
+          "?": [
+            25
+          ]
+        },
+        "-": {
+          "i": [
+            25
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:27.653162"
+}

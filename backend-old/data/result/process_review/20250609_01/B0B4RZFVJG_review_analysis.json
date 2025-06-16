@@ -1,0 +1,262 @@
+{
+  "product_title": "Duplex Rocker Combination Decorator Switch,120VAC 15Amp,Ground Terminal,Residential/Commercial Grade,2 Individual Switches,UL Listed,Pack of 2,White",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 20,
+  "review_analysis": {
+    "phy": {
+      "construction": {
+        "A@well-made": {
+          "+": [
+            0,
+            12
+          ]
+        },
+        "B@good quality": {
+          "+": [
+            1,
+            12,
+            13,
+            16
+          ]
+        },
+        "C@individually wrapped to prevent scratches or stains": {
+          "+": [
+            2
+          ]
+        },
+        "D@burnt plastic circuit board smell": {
+          "-": [
+            4
+          ]
+        },
+        "E@copper tab between two loads that can be broken off": {
+          "+": [
+            4
+          ]
+        },
+        "F@well-designed": {
+          "+": [
+            11,
+            17
+          ]
+        },
+        "G@sturdy feel": {
+          "+": [
+            12
+          ]
+        },
+        "H@fit correctly": {
+          "+": [
+            16
+          ]
+        },
+        "I@pre-installed jumper plate on common/hot side": {
+          "+": [
+            17
+          ]
+        },
+        "J@well-labelled in English": {
+          "+": [
+            17
+          ]
+        },
+        "K@does not come with cover": {
+          "-": [
+            19
+          ]
+        }
+      },
+      "operation": {
+        "L@rock easily": {
+          "+": [
+            12
+          ]
+        },
+        "M@not too loud when used": {
+          "+": [
+            5
+          ]
+        },
+        "N@switch position flip is very light": {
+          "-": [
+            15
+          ]
+        },
+        "O@does not click into position": {
+          "-": [
+            15
+          ]
+        },
+        "P@push-to-flip operation": {
+          "+": [
+            17
+          ]
+        }
+      },
+      "terminals": {
+        "Q@non-standard color coding using black for hot and brass for load/neutral and ground": {
+          "-": [
+            17
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works fine": {
+          "+": {
+            "?": [
+              0,
+              4,
+              8
+            ]
+          }
+        },
+        "b@works great": {
+          "+": {
+            "?": [
+              5,
+              6
+            ]
+          }
+        },
+        "c@works super well": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "d@working well": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "e@work perfectly": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "f@did not work at first": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "installation": {
+        "g@easy to install": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@easy to install in decora-style face plate": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "durability": {
+        "i@expected to last a long time": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "j@uncertain about long-term durability": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "switch_position_feedback": {
+        "k@difficult to realize switch is on or off": {
+          "-": {
+            "N": [
+              15
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom applications": {
+        "+": {
+          "a": [
+            4
+          ]
+        }
+      },
+      "heat/vent/light combo control": {
+        "+": {
+          "a": [
+            4
+          ]
+        }
+      },
+      "independent switch operation": {
+        "+": {
+          "E": [
+            4
+          ]
+        }
+      },
+      "small LED light control": {
+        "+": {
+          "c": [
+            8
+          ]
+        }
+      },
+      "outdoor porch TV installation": {
+        "+": {
+          "?": [
+            9
+          ]
+        }
+      },
+      "single gang box dual switch installation": {
+        "+": {
+          "?": [
+            12,
+            14
+          ]
+        }
+      },
+      "decora-style face plate installation": {
+        "+": {
+          "h": [
+            17
+          ]
+        }
+      },
+      "same circuit loads": {
+        "+": {
+          "I": [
+            17
+          ]
+        }
+      },
+      "separate circuit loads": {
+        "+": {
+          "E": [
+            17
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:18.257267"
+}

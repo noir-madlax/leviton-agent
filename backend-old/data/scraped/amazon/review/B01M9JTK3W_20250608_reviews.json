@@ -1,0 +1,836 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T23:22:20.238448",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B01M9JTK3W",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 2,
+    "fetched_all_available_reviews": true
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1MFOHHD78RGKS",
+        "text": "This dimmer did not make me happy. It requires a separate neutral, which may or may not already be present if you’re trying to replace an existing dimmer. Way overkill for my needs.",
+        "date": "Reviewed in the United States on January 17, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Complicated; Finicky; Requires Separate Neurtral",
+        "userName": "Peter",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1O1XM1W57SL2V",
+        "text": "Legrand is always a quality product. Definitely my go to on Dimmers, switches, outlets. Was an electrician for years and never let us down. Have installed hundreds of these. Always Dim! All that being said it is best to turn of power at circuit box! Yes your saftey is most important but... if you arc the Dimmer or send unbalanced current through it you have a good chance of frying the Dimmer! (Been shocked while I fried a Dimmer! TURN off CIRCUIT!)",
+        "date": "Reviewed in the United States on October 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It's a Dimmer",
+        "userName": "Cre",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3596MMK8NYI9E",
+        "text": "Product goes bad after a few weeks. Installed two. Both did not flicker for a few weeks. Now each flickers. Warranty from Legrand is to replace and not refund money. Do not buy. You will own non-returnable junk.",
+        "date": "Reviewed in the United States on August 30, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "LED's Flicker",
+        "userName": "Erik",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1B4JNKLOJQU71",
+        "text": "This one is a bit pricey compared to other dimmers, but only one that works with my under cabinet low voltage lighting. Dimmers bought at Lowe's or Home Depot made the lights flicker. I hope this one lasts a little longer than the first one, I only got 5 years use from the first dimmer. In my opinion dimers should last longer. Only issue I had was setting the lower and upper brightness. I had trouble understanding the instructions on how to set these levels and probably should have contacted tech support. I did get lucky with the setting got the upper level brightness right, but the lights don't fade when turning on or off. I ok with not having that feature.",
+        "date": "Reviewed in the United States on November 19, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great with low voltage lighting.",
+        "userName": "Barney Jr.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3MTX53K1EWPI5",
+        "text": "This was the 6th dimmer I tried and it worked flawlessly. No wonder it's twice the price of regular dimmers and out of stock at times.",
+        "date": "Reviewed in the United States on April 1, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good for high wattage lamps/bulbs",
+        "userName": "Yery Gonzalez",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RVA3YLDP8GZ07",
+        "text": "I bought this dimmer due to the tankless water heater I installed. Because of the way the heater elements cycle on and off, the LEDs in the bathroom would flicker if the dimmer is below about 50% and the hot water is on. I bought a half dozen LED dimmers of different types and from different brands in my attempt to get rid of the flickering. Sadly, it doesn't seem like any dimmer can combat this phenomenon, though this dimmer cured another problem that I didn't expect. This house already had a generic 10-bulb hollywood globe fixture in that bathroom when we moved in. I replaced the bulbs with dimmable LEDs and a Lutron LED dimmer and discovered the bulbs would buzz as soon as the dimmer was moved from full brightness, then got louder the dimmer you went. I just figured these bulbs just happened to be noisy and dealt with it. In the course of testing all of the dimmers for this project, every one of them- including this one- was just as noisy as the original Lutron, until I switched this one to reverse-phase (also called ELV) dimming. As soon as I flipped that tiny little switch and pushed the cal button to save it... Silence. Not a sound. All of that buzzing I had dealt with for years (because I thought it was normal) was now totally gone, just because of this dimmer. Seven dimmers tested from Lutron, Leviton, Eaton, and GE, and this Legrand is the only one that silenced things. Completely worth the price to not have to deal with that noise every time I turn on the lights, and that wasn't even the original purpose of the testing. I have to admit it took me a few minutes to get the programming to work properly, and the mistake I was making there was not using the appropriate-sized tool to press the cal button- it requires a fairly firm press and your finger won't do it. In addition to switching from forward to reverse phase, I turned off the auto-cal feature and manually set my lowest dimming point to the lowest the switch allows. Also, I'd like it if the mounting flanges were metal instead of plastic, though this is more of a preference as the plastic didn't cause any problem. So a bit of a long review, but with the hours of testing I put in with so many different dimmers, this one deserves some recognition. Excellent product.",
+        "date": "Reviewed in the United States on February 24, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Expensive, but solved a problem no other dimmer could",
+        "userName": "Paul M.",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R38V7W8AGSNZRJ",
+        "text": "Replace defective sw. in bathroom",
+        "date": "Reviewed in the United States on January 30, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Installation & re-wiring requirements are important requisites prior to removal of old.",
+        "userName": "norm",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1ODVDS24AQKK6",
+        "text": "Dimmer matches the rest of our 'Legrand' wall switches. Programmable low and high light levels are an attractive option that really do allow a wider light range tailored to the lamp connected. The locator light is perfect. Just a small point of light that can be seen in the dark when you need to locate the switch. The locator is NOT a night light. (Why it's called a 'locator' light....) The major problem is the delay turning the lights ON, that have not been able solve. Have two of these dimmers each controlling the same model of light. One has a 1 to 2 second delay, the other has a 4 to 5 second delay which has become amazingly annoying. Only 4 seconds perhaps but if you count it out it's enough to be into the room (or wherever) and wondering if the light is going to come on. Trying to decipher the issue.",
+        "date": "Reviewed in the United States on December 6, 2020",
+        "rating": "2.0 out of 5 stars",
+        "title": "Good, Except for the annoying ON delay",
+        "userName": "John W.",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RN91UX0GZE77Y",
+        "text": "Easy install!",
+        "date": "Reviewed in the United States on October 18, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what I was looking for.",
+        "userName": "Juan C. Balcazar",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2CUE3XCBAI6E",
+        "text": "After trying less expensive dimmers, I was tired of the constant flickering of my LED bulbs. It didn't seem to matter which bulbs I tried. I purchase this dimmer and haven't seen the light flicker once, so it really does adjust to the bulb as advertised. I've purchaed another for a 2nd location.",
+        "date": "Reviewed in the United States on October 3, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "This Dimmer Really Works",
+        "userName": "kary8285",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2TAFUR26UPMYU",
+        "text": "Does not work. We have new up-to-code wiring on a new construction.",
+        "date": "Reviewed in the United States on August 20, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Save your $",
+        "userName": "rick",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2FH8QDDIH4IIH",
+        "text": "quality is very good",
+        "date": "Reviewed in the United States on July 8, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "great product",
+        "userName": "Raneman",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RCGBBC5MPX0ZH",
+        "text": "These are the best switches I've found for LED lights.",
+        "date": "Reviewed in the United States on March 8, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best for LED",
+        "userName": "Brian Bates",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2QFMJE989MA2J",
+        "text": "Some of the dimmers worked others did not.",
+        "date": "Reviewed in the United States on February 11, 2020",
+        "rating": "3.0 out of 5 stars",
+        "title": "Some of the dimmers worked others did not.",
+        "userName": "Douglas Johnson",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2YUEOYGIXMEWM",
+        "text": "Did the job",
+        "date": "Reviewed in the United States on November 28, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked",
+        "userName": "Brandon",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RAFRCKNHLQD2Y",
+        "text": "Short answer: Buy the next step down (half the cost). Long answer: We just upgraded all our lighting - new, top-of-the-line led lights throughout the house. These dimmers were recommended by the lighting expert at our local high end store, as being ones that would move forward and adapt as led technology changes (which it apparently is doing rapidly). We now have 45 of these installed throughout, and they are a huge hassle - if they even work. If programmed to actually dim (their default dim status is very bright - might as well not use a dimmer at all) then they may, or may not, turn on your lights. Seriously. Example, in our kitchen: two switches and their six lights all come on - the third which controls the three lights over our island? Either won't work at all, or just turns on one. The other two might kick in later. Several other won't work at all. It's kinda like having our own personal gremlins in the house. Answer: call Legrand, right? Wrong. One of the techs was nice to me, but not helpful - another was rude to my electrician, who is a master, and a friend, and a great guy. Basically saying to replace them, they would have to send out an engineer. Thankfully our local big-box hardware store, where the electrician bought most of the switches, is willing to take and trade them down, even w/out the original packaging. Final bit: they may be 'smart', but they sure act stupid. (For the record, yes our wiring is all to code and installed in the last decade - yes neutral grounds were used - yes all enclosed literature/instructions were read and followed).",
+        "date": "Reviewed in the United States on October 10, 2019",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not worth the extra money",
+        "userName": "getsamam",
+        "numberOfHelpful": 9,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B01M9JTK3W",
+        "productTitle": "Legrand - Pass & Seymour Radiant Dimmer Light Switch, Single Pole Dimmer Switch with LED Locator, Interchangeable Faceplate White, Ivory, Light Almond, RH703PTUTCCCV4, 1 Count",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 17,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 62,
+        "productRating": "4.2 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 66
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 10
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RKO9D9K66UKUO",
+        "text": "After installing this dimmer in my living room, my LED lights can dim all the way down and they don't buzz at all. I really like that this dimmer is compatible with all sorts of loads (I do not want to have to check for compatibility before buying light bulbs etc). I've have installed this dimmer in every room if I could, but it does require a neutral wire, so I was only able to.",
+        "date": "Reviewed in the United States on March 14, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well, needs a neutral line.",
+        "userName": "vivian",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 17,
+    "pages_scraped": 2,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

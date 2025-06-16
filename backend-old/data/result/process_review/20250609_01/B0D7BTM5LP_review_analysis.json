@@ -1,0 +1,233 @@
+{
+  "product_title": "ELEGRP Digital Dimmer Light Switch for 300W Dimmable LED/CFL and 600W Incandescent/Halogen, LED Slide Dimmer Light Switch, Single Pole/3-Way, Wall Plate Included, Matte White, UL Listed, 10 Pack",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 11,
+  "review_analysis": {
+    "phy": {
+      "build quality": {
+        "A@sturdy construction": {
+          "+": [
+            2
+          ]
+        },
+        "B@well built construction": {
+          "+": [
+            6
+          ]
+        },
+        "C@defective units out of box": {
+          "-": [
+            1
+          ]
+        },
+        "D@low quality construction": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "appearance": {
+        "E@beautiful looking design": {
+          "+": [
+            2
+          ]
+        },
+        "F@looks great": {
+          "+": [
+            6
+          ]
+        },
+        "G@nice and aesthetic appearance": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "face plates": {
+        "H@nice face plates included": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "power indicator": {
+        "I@light showing power": {
+          "+": [
+            8
+          ]
+        }
+      }
+    },
+    "perf": {
+      "compatibility": {
+        "a@not compatible with high quality lights or some satco brand": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "b@30% failure rate": {
+          "-": {
+            "C": [
+              1
+            ]
+          }
+        },
+        "c@intermittent functionality": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "d@most dimmers did not work": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@works great": {
+          "+": {
+            "A": [
+              2
+            ]
+          }
+        },
+        "f@no issues with functionality": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "g@functional with no complaints": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@no issues after over a month": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "i@work really well": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "sound": {
+        "j@mild buzzing sound from couple of dimmers": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "k@few dimmers flicker": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "l@lights flicker when dimmed": {
+          "-": {
+            "D": [
+              10
+            ]
+          }
+        }
+      },
+      "installation": {
+        "m@easy to install": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "durability": {
+        "n@won't crap out fast": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home renovation projects": {
+        "+": {
+          "e": [
+            2
+          ]
+        }
+      },
+      "multiple projects": {
+        "+": {
+          "f": [
+            4
+          ]
+        }
+      },
+      "entire home replacement": {
+        "+": {
+          "i": [
+            9
+          ]
+        }
+      },
+      "three-way switch applications": {
+        "+": {
+          "I": [
+            8
+          ]
+        }
+      },
+      "led tape lighting": {
+        "-": {
+          "l": [
+            10
+          ]
+        }
+      },
+      "regular light fixtures": {
+        "-": {
+          "l": [
+            10
+          ]
+        }
+      },
+      "can lights": {
+        "-": {
+          "l": [
+            10
+          ]
+        }
+      },
+      "old house updates": {
+        "+": {
+          "F,H": [
+            6
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:22.016699"
+}

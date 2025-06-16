@@ -1,0 +1,233 @@
+{
+  "timestamp": "2025-06-07T17:31:06.113314",
+  "interaction_type": "consolidate_taxonomy",
+  "cache_key": "40046ecf4ac76cfb",
+  "context": {
+    "taxonomy_a_categories": [
+      "Basic Standard Dimmer Switches",
+      "Commercial 0-10V Dimmer Switches",
+      "Digital Display Dimmer Switches",
+      "Dual Circuit Dimmer Switches",
+      "Electronic Low Voltage Dimmer Switches",
+      "Fan and Light Combination Dimmer Controls",
+      "Handheld Remote Control Dimmer Switches",
+      "LED Compatible Dimmer Switches",
+      "Motion Sensor Integrated Dimmer Switches",
+      "Multi-Location Companion Dimmer Switches",
+      "Plug-In Portable Dimmer Controls",
+      "Rocker Style Dimmer Switches",
+      "Rotary Knob Dimmer Switches",
+      "Slide Control Dimmer Switches",
+      "Smart Dimmer Remote Accessories",
+      "Smart Hub-Dependent Dimmer Switches",
+      "Smart Wi-Fi Enabled Dimmer Switches",
+      "Toggle Style Dimmer Switches",
+      "Touch Activated Dimmer Switches",
+      "USB Powered Dimmer Switches"
+    ],
+    "taxonomy_b_categories": [
+      "Dual Function Dimmer Switches",
+      "LED Compatible Dimmer Switches",
+      "Low Voltage Dimmer Switches",
+      "Plug-in Dimmer Switches",
+      "Rotary Dimmer Switches",
+      "Smart WiFi Dimmer Switches"
+    ],
+    "expected_a_ids": [
+      "A_0",
+      "A_1",
+      "A_10",
+      "A_11",
+      "A_12",
+      "A_13",
+      "A_14",
+      "A_15",
+      "A_16",
+      "A_17",
+      "A_18",
+      "A_19",
+      "A_2",
+      "A_3",
+      "A_4",
+      "A_5",
+      "A_6",
+      "A_7",
+      "A_8",
+      "A_9"
+    ],
+    "expected_b_ids": [
+      "B_0",
+      "B_1",
+      "B_2",
+      "B_3",
+      "B_4",
+      "B_5"
+    ],
+    "taxonomy_a_with_ids": {
+      "Smart Wi-Fi Enabled Dimmer Switches": {
+        "definition": "Dimmer switches with built-in Wi-Fi connectivity for direct wireless control and smart home integration without requiring separate hubs, e.g. wireless dimmers with app control, voice assistant compatible dimmers, WiFi-enabled smart home dimmers",
+        "ids": [
+          "A_0"
+        ]
+      },
+      "Smart Hub-Dependent Dimmer Switches": {
+        "definition": "Dimmer switches requiring a separate hub or bridge for smart functionality and wireless communication, e.g. hub-dependent smart dimmers, proprietary wireless protocol dimmers",
+        "ids": [
+          "A_1"
+        ]
+      },
+      "Toggle Style Dimmer Switches": {
+        "definition": "Dimmer switches featuring traditional toggle or flip-style controls for on/off and brightness adjustment, e.g. toggle dimmers, flip-style dimmers, toggle switches with integrated dimming",
+        "ids": [
+          "A_2"
+        ]
+      },
+      "Touch Activated Dimmer Switches": {
+        "definition": "Dimmer switches operated by touch interface without physical sliding or rotating controls, e.g. touch-sensitive dimmers, capacitive touch light controls, tap-activated dimmers",
+        "ids": [
+          "A_3"
+        ]
+      },
+      "Digital Display Dimmer Switches": {
+        "definition": "Dimmer switches featuring digital displays or LED indicators for precise control feedback, e.g. LCD display dimmers, digital readout light controls",
+        "ids": [
+          "A_4"
+        ]
+      },
+      "Rotary Knob Dimmer Switches": {
+        "definition": "Dimmer switches controlled by rotating knob or dial mechanism for brightness adjustment, e.g. twist-control dimmers, rotary dial light switches, knob-style dimmers",
+        "ids": [
+          "A_5"
+        ]
+      },
+      "Slide Control Dimmer Switches": {
+        "definition": "Dimmer switches with sliding control mechanism for linear brightness adjustment, e.g. slider dimmers, linear slide controls, slide-style light dimmers",
+        "ids": [
+          "A_6"
+        ]
+      },
+      "Fan and Light Combination Dimmer Controls": {
+        "definition": "Dimmer switches designed to control both ceiling fans and lights with separate controls, e.g. dual-function fan-light dimmers, combination fan speed and light brightness controls",
+        "ids": [
+          "A_7"
+        ]
+      },
+      "Commercial 0-10V Dimmer Switches": {
+        "definition": "Specialized dimmer switches using 0-10V control signals for commercial LED drivers, fluorescent ballasts, and low voltage lighting systems, e.g. 0-10V protocol dimmers, commercial LED panel dimmers, ELV dimmers",
+        "ids": [
+          "A_8"
+        ]
+      },
+      "Smart Dimmer Remote Accessories": {
+        "definition": "Companion devices and mounting accessories for smart dimmer switch systems, e.g. wireless remotes, wall mounting kits, companion switches",
+        "ids": [
+          "A_9"
+        ]
+      },
+      "Rocker Style Dimmer Switches": {
+        "definition": "Dimmer switches with rocker-style paddle controls for light adjustment, e.g. rocker dimmers, paddle dimmers",
+        "ids": [
+          "A_10"
+        ]
+      },
+      "Basic Standard Dimmer Switches": {
+        "definition": "Basic dimmer switches without specialized control mechanisms or smart features, e.g. conventional dimmers, basic light dimmers",
+        "ids": [
+          "A_11"
+        ]
+      },
+      "Plug-In Portable Dimmer Controls": {
+        "definition": "Portable dimmer controls that plug into outlets for table lamps and portable lighting, e.g. lamp dimmers, plug-in light controls",
+        "ids": [
+          "A_12"
+        ]
+      },
+      "Motion Sensor Integrated Dimmer Switches": {
+        "definition": "Dimmer switches with integrated motion detection for automatic lighting control, e.g. occupancy sensor dimmers, motion-activated dimmers",
+        "ids": [
+          "A_13"
+        ]
+      },
+      "Multi-Location Companion Dimmer Switches": {
+        "definition": "Secondary dimmer switches designed to work with primary dimmers in multi-location setups, e.g. remote dimmers, auxiliary dimmers",
+        "ids": [
+          "A_14"
+        ]
+      },
+      "Dual Circuit Dimmer Switches": {
+        "definition": "Dimmer switches that control two separate lighting circuits from a single device, e.g. dual dimmers, two-circuit dimmers",
+        "ids": [
+          "A_15"
+        ]
+      },
+      "LED Compatible Dimmer Switches": {
+        "definition": "Dimmer switches specifically designed for dimmable LED bulbs and fixtures with optimized compatibility, e.g. LED-compatible dimmers, LED+ dimmer switches",
+        "ids": [
+          "A_16"
+        ]
+      },
+      "Electronic Low Voltage Dimmer Switches": {
+        "definition": "Specialized dimmer switches designed for electronic low voltage lighting systems and transformers, e.g. ELV dimmers, low voltage compatible dimmers",
+        "ids": [
+          "A_17"
+        ]
+      },
+      "Handheld Remote Control Dimmer Switches": {
+        "definition": "Dimmer switches that include dedicated wireless remote controls for operation, e.g. magnetic remote dimmers, handheld remote dimmers",
+        "ids": [
+          "A_18"
+        ]
+      },
+      "USB Powered Dimmer Switches": {
+        "definition": "Dimmer switches designed for USB-powered LED strips and low voltage lighting applications, e.g. USB inline dimmers, LED strip controllers",
+        "ids": [
+          "A_19"
+        ]
+      }
+    },
+    "taxonomy_b_with_ids": {
+      "Smart WiFi Dimmer Switches": {
+        "definition": "Dimmer switches with wireless connectivity and smart home integration capabilities, e.g. WiFi-enabled dimmers, Z-Wave dimmers, smart home compatible dimmers",
+        "ids": [
+          "B_0"
+        ]
+      },
+      "LED Compatible Dimmer Switches": {
+        "definition": "Dimmer switches specifically designed for LED and CFL lighting compatibility, e.g. LED-optimized dimmers, CFL compatible dimmers, low voltage LED dimmers",
+        "ids": [
+          "B_1"
+        ]
+      },
+      "Rotary Dimmer Switches": {
+        "definition": "Dimmer switches operated by rotating knobs or dials for brightness control, e.g. knob-style dimmers, dial dimmers, rotary control dimmers",
+        "ids": [
+          "B_2"
+        ]
+      },
+      "Dual Function Dimmer Switches": {
+        "definition": "Dimmer switches that combine dimming with additional functions like fan control or multiple load control, e.g. fan and light dimmers, dual dimmer switches, combination control switches",
+        "ids": [
+          "B_3"
+        ]
+      },
+      "Plug-in Dimmer Switches": {
+        "definition": "Portable dimmer devices that plug into outlets for lamp and appliance control, e.g. plug-in lamp dimmers, outlet dimmers, portable dimming controls",
+        "ids": [
+          "B_4"
+        ]
+      },
+      "Low Voltage Dimmer Switches": {
+        "definition": "Dimmer switches designed for low voltage DC applications and LED strip lighting, e.g. DC dimmers, LED strip controllers, low voltage brightness controllers",
+        "ids": [
+          "B_5"
+        ]
+      }
+    }
+  },
+  "prompt": "You are a taxonomy consolidation specialist.\n\n**YOUR TASK:** Consolidate two product taxonomies by identifying similar categories and grouping them together, while preserving the specificity and distinctiveness of each category type.\n\n**INPUT TAXONOMIES:**\n\nTaxonomy A (Current Consolidated):\n{\n  \"Smart Wi-Fi Enabled Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with built-in Wi-Fi connectivity for direct wireless control and smart home integration without requiring separate hubs, e.g. wireless dimmers with app control, voice assistant compatible dimmers, WiFi-enabled smart home dimmers\",\n    \"ids\": [\n      \"A_0\"\n    ]\n  },\n  \"Smart Hub-Dependent Dimmer Switches\": {\n    \"definition\": \"Dimmer switches requiring a separate hub or bridge for smart functionality and wireless communication, e.g. hub-dependent smart dimmers, proprietary wireless protocol dimmers\",\n    \"ids\": [\n      \"A_1\"\n    ]\n  },\n  \"Toggle Style Dimmer Switches\": {\n    \"definition\": \"Dimmer switches featuring traditional toggle or flip-style controls for on/off and brightness adjustment, e.g. toggle dimmers, flip-style dimmers, toggle switches with integrated dimming\",\n    \"ids\": [\n      \"A_2\"\n    ]\n  },\n  \"Touch Activated Dimmer Switches\": {\n    \"definition\": \"Dimmer switches operated by touch interface without physical sliding or rotating controls, e.g. touch-sensitive dimmers, capacitive touch light controls, tap-activated dimmers\",\n    \"ids\": [\n      \"A_3\"\n    ]\n  },\n  \"Digital Display Dimmer Switches\": {\n    \"definition\": \"Dimmer switches featuring digital displays or LED indicators for precise control feedback, e.g. LCD display dimmers, digital readout light controls\",\n    \"ids\": [\n      \"A_4\"\n    ]\n  },\n  \"Rotary Knob Dimmer Switches\": {\n    \"definition\": \"Dimmer switches controlled by rotating knob or dial mechanism for brightness adjustment, e.g. twist-control dimmers, rotary dial light switches, knob-style dimmers\",\n    \"ids\": [\n      \"A_5\"\n    ]\n  },\n  \"Slide Control Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with sliding control mechanism for linear brightness adjustment, e.g. slider dimmers, linear slide controls, slide-style light dimmers\",\n    \"ids\": [\n      \"A_6\"\n    ]\n  },\n  \"Fan and Light Combination Dimmer Controls\": {\n    \"definition\": \"Dimmer switches designed to control both ceiling fans and lights with separate controls, e.g. dual-function fan-light dimmers, combination fan speed and light brightness controls\",\n    \"ids\": [\n      \"A_7\"\n    ]\n  },\n  \"Commercial 0-10V Dimmer Switches\": {\n    \"definition\": \"Specialized dimmer switches using 0-10V control signals for commercial LED drivers, fluorescent ballasts, and low voltage lighting systems, e.g. 0-10V protocol dimmers, commercial LED panel dimmers, ELV dimmers\",\n    \"ids\": [\n      \"A_8\"\n    ]\n  },\n  \"Smart Dimmer Remote Accessories\": {\n    \"definition\": \"Companion devices and mounting accessories for smart dimmer switch systems, e.g. wireless remotes, wall mounting kits, companion switches\",\n    \"ids\": [\n      \"A_9\"\n    ]\n  },\n  \"Rocker Style Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with rocker-style paddle controls for light adjustment, e.g. rocker dimmers, paddle dimmers\",\n    \"ids\": [\n      \"A_10\"\n    ]\n  },\n  \"Basic Standard Dimmer Switches\": {\n    \"definition\": \"Basic dimmer switches without specialized control mechanisms or smart features, e.g. conventional dimmers, basic light dimmers\",\n    \"ids\": [\n      \"A_11\"\n    ]\n  },\n  \"Plug-In Portable Dimmer Controls\": {\n    \"definition\": \"Portable dimmer controls that plug into outlets for table lamps and portable lighting, e.g. lamp dimmers, plug-in light controls\",\n    \"ids\": [\n      \"A_12\"\n    ]\n  },\n  \"Motion Sensor Integrated Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with integrated motion detection for automatic lighting control, e.g. occupancy sensor dimmers, motion-activated dimmers\",\n    \"ids\": [\n      \"A_13\"\n    ]\n  },\n  \"Multi-Location Companion Dimmer Switches\": {\n    \"definition\": \"Secondary dimmer switches designed to work with primary dimmers in multi-location setups, e.g. remote dimmers, auxiliary dimmers\",\n    \"ids\": [\n      \"A_14\"\n    ]\n  },\n  \"Dual Circuit Dimmer Switches\": {\n    \"definition\": \"Dimmer switches that control two separate lighting circuits from a single device, e.g. dual dimmers, two-circuit dimmers\",\n    \"ids\": [\n      \"A_15\"\n    ]\n  },\n  \"LED Compatible Dimmer Switches\": {\n    \"definition\": \"Dimmer switches specifically designed for dimmable LED bulbs and fixtures with optimized compatibility, e.g. LED-compatible dimmers, LED+ dimmer switches\",\n    \"ids\": [\n      \"A_16\"\n    ]\n  },\n  \"Electronic Low Voltage Dimmer Switches\": {\n    \"definition\": \"Specialized dimmer switches designed for electronic low voltage lighting systems and transformers, e.g. ELV dimmers, low voltage compatible dimmers\",\n    \"ids\": [\n      \"A_17\"\n    ]\n  },\n  \"Handheld Remote Control Dimmer Switches\": {\n    \"definition\": \"Dimmer switches that include dedicated wireless remote controls for operation, e.g. magnetic remote dimmers, handheld remote dimmers\",\n    \"ids\": [\n      \"A_18\"\n    ]\n  },\n  \"USB Powered Dimmer Switches\": {\n    \"definition\": \"Dimmer switches designed for USB-powered LED strips and low voltage lighting applications, e.g. USB inline dimmers, LED strip controllers\",\n    \"ids\": [\n      \"A_19\"\n    ]\n  }\n}\n\nTaxonomy B (New Batch):\n{\n  \"Smart WiFi Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with wireless connectivity and smart home integration capabilities, e.g. WiFi-enabled dimmers, Z-Wave dimmers, smart home compatible dimmers\",\n    \"ids\": [\n      \"B_0\"\n    ]\n  },\n  \"LED Compatible Dimmer Switches\": {\n    \"definition\": \"Dimmer switches specifically designed for LED and CFL lighting compatibility, e.g. LED-optimized dimmers, CFL compatible dimmers, low voltage LED dimmers\",\n    \"ids\": [\n      \"B_1\"\n    ]\n  },\n  \"Rotary Dimmer Switches\": {\n    \"definition\": \"Dimmer switches operated by rotating knobs or dials for brightness control, e.g. knob-style dimmers, dial dimmers, rotary control dimmers\",\n    \"ids\": [\n      \"B_2\"\n    ]\n  },\n  \"Dual Function Dimmer Switches\": {\n    \"definition\": \"Dimmer switches that combine dimming with additional functions like fan control or multiple load control, e.g. fan and light dimmers, dual dimmer switches, combination control switches\",\n    \"ids\": [\n      \"B_3\"\n    ]\n  },\n  \"Plug-in Dimmer Switches\": {\n    \"definition\": \"Portable dimmer devices that plug into outlets for lamp and appliance control, e.g. plug-in lamp dimmers, outlet dimmers, portable dimming controls\",\n    \"ids\": [\n      \"B_4\"\n    ]\n  },\n  \"Low Voltage Dimmer Switches\": {\n    \"definition\": \"Dimmer switches designed for low voltage DC applications and LED strip lighting, e.g. DC dimmers, LED strip controllers, low voltage brightness controllers\",\n    \"ids\": [\n      \"B_5\"\n    ]\n  }\n}\n\n**UNDERSTANDING THE INPUT:**\n- Taxonomy A is the existing consolidated taxonomy with categories A_0, A_1, A_2, etc.\n- Taxonomy B is a new batch taxonomy with categories B_0, B_1, B_2, etc.\n- Each category ID represents a specific product category with its own definition\n- Your goal is to consolidate these by grouping similar categories while maintaining their distinctiveness\n\n**CONSOLIDATION INSTRUCTIONS:**\n1. **Identify similar categories** - Group categories from both taxonomies that represent the same or very similar product types based on their definitions\n2. **Preserve specificity** - When consolidating, maintain the specific nature of each category type rather than creating broader, more generic categories\n3. **Create precise names** - Use clear, descriptive names (words separated by spaces) for consolidated categories; each category must represent a SINGULAR, SPECIFIC concept with NO OVERLAP; RENAME categories when needed to make them more distinguishing and specific than the originals\n4. **Include all category IDs** - Each consolidated category contains ALL the original category IDs that belong to the same concept\n5. **Write focused definitions** - Create a precise definition for each consolidated category that clearly describes the specific product type, ending with \"e.g.\" and specific product subtypes (NEVER include brand names, model numbers, or proprietary product line names)\n6. **Ensure completeness** - Every A_* and B_* ID must appear exactly once in the result\n7. **Maintain consistent granularity** - All consolidated categories must be at the same level of specificity\n8. **Ensure mutual exclusivity** - Categories must have clear, non-overlapping boundaries\n\n**CRITICAL RULES:**\n- **Completeness**: Every original category ID must be included exactly once in the \"ids\" arrays\n- **Format**: Return pure JSON only - no explanations or formatting\n- **Consolidation**: Group only categories that represent essentially the same product type - do not force unrelated categories together\n- **Specificity**: Maintain the specific nature of product categories - avoid creating overly broad or generic groupings\n- **Naming**: Use professional, descriptive category names with words separated by spaces; each category must represent ONE specific concept with clear boundaries; IMPROVE original names to be more distinguishing and specific when consolidating\n- **Granularity**: Maintain consistent level of specificity across all consolidated categories\n- **Exclusivity**: Ensure categories are mutually exclusive with no overlap\n- **Definitions**: Each consolidated category must have a \"definition\" field with precise description ending with \"e.g.\" and product subtypes\n\n**EXPECTED OUTPUT FORMAT:**\n{\n  \"Consolidated Category Name 1\": {\n    \"definition\": \"..., e.g. ...\",\n    \"ids\": [\"A_0\", \"B_1\"]\n  },\n  \"Consolidated Category Name 2\": {\n    \"definition\": \"..., e.g. ...\",\n    \"ids\": [\"A_1\"]\n  },\n  \"Consolidated Category Name 3\": {\n    \"definition\": \"..., e.g. ...\",\n    \"ids\": [\"B_0\"]\n  },\n  ...\n}",
+  "response": "{\n  \"Smart Wi-Fi Enabled Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with built-in Wi-Fi connectivity for direct wireless control and smart home integration without requiring separate hubs, e.g. wireless dimmers with app control, voice assistant compatible dimmers, WiFi-enabled smart home dimmers\",\n    \"ids\": [\"A_0\", \"B_0\"]\n  },\n  \"Smart Hub-Dependent Dimmer Switches\": {\n    \"definition\": \"Dimmer switches requiring a separate hub or bridge for smart functionality and wireless communication, e.g. hub-dependent smart dimmers, proprietary wireless protocol dimmers\",\n    \"ids\": [\"A_1\"]\n  },\n  \"Toggle Style Dimmer Switches\": {\n    \"definition\": \"Dimmer switches featuring traditional toggle or flip-style controls for on/off and brightness adjustment, e.g. toggle dimmers, flip-style dimmers, toggle switches with integrated dimming\",\n    \"ids\": [\"A_2\"]\n  },\n  \"Touch Activated Dimmer Switches\": {\n    \"definition\": \"Dimmer switches operated by touch interface without physical sliding or rotating controls, e.g. touch-sensitive dimmers, capacitive touch light controls, tap-activated dimmers\",\n    \"ids\": [\"A_3\"]\n  },\n  \"Digital Display Dimmer Switches\": {\n    \"definition\": \"Dimmer switches featuring digital displays or LED indicators for precise control feedback, e.g. LCD display dimmers, digital readout light controls\",\n    \"ids\": [\"A_4\"]\n  },\n  \"Rotary Knob Dimmer Switches\": {\n    \"definition\": \"Dimmer switches controlled by rotating knob or dial mechanism for brightness adjustment, e.g. twist-control dimmers, rotary dial light switches, knob-style dimmers\",\n    \"ids\": [\"A_5\", \"B_2\"]\n  },\n  \"Slide Control Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with sliding control mechanism for linear brightness adjustment, e.g. slider dimmers, linear slide controls, slide-style light dimmers\",\n    \"ids\": [\"A_6\"]\n  },\n  \"Fan and Light Combination Dimmer Controls\": {\n    \"definition\": \"Dimmer switches designed to control both ceiling fans and lights with separate controls, e.g. dual-function fan-light dimmers, combination fan speed and light brightness controls\",\n    \"ids\": [\"A_7\", \"B_3\"]\n  },\n  \"Commercial 0-10V Dimmer Switches\": {\n    \"definition\": \"Specialized dimmer switches using 0-10V control signals for commercial LED drivers, fluorescent ballasts, and low voltage lighting systems, e.g. 0-10V protocol dimmers, commercial LED panel dimmers, ELV dimmers\",\n    \"ids\": [\"A_8\"]\n  },\n  \"Smart Dimmer Remote Accessories\": {\n    \"definition\": \"Companion devices and mounting accessories for smart dimmer switch systems, e.g. wireless remotes, wall mounting kits, companion switches\",\n    \"ids\": [\"A_9\"]\n  },\n  \"Rocker Style Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with rocker-style paddle controls for light adjustment, e.g. rocker dimmers, paddle dimmers\",\n    \"ids\": [\"A_10\"]\n  },\n  \"Basic Standard Dimmer Switches\": {\n    \"definition\": \"Basic dimmer switches without specialized control mechanisms or smart features, e.g. conventional dimmers, basic light dimmers\",\n    \"ids\": [\"A_11\"]\n  },\n  \"Plug-In Portable Dimmer Controls\": {\n    \"definition\": \"Portable dimmer controls that plug into outlets for table lamps and portable lighting, e.g. lamp dimmers, plug-in light controls\",\n    \"ids\": [\"A_12\", \"B_4\"]\n  },\n  \"Motion Sensor Integrated Dimmer Switches\": {\n    \"definition\": \"Dimmer switches with integrated motion detection for automatic lighting control, e.g. occupancy sensor dimmers, motion-activated dimmers\",\n    \"ids\": [\"A_13\"]\n  },\n  \"Multi-Location Companion Dimmer Switches\": {\n    \"definition\": \"Secondary dimmer switches designed to work with primary dimmers in multi-location setups, e.g. remote dimmers, auxiliary dimmers\",\n    \"ids\": [\"A_14\"]\n  },\n  \"Dual Circuit Dimmer Switches\": {\n    \"definition\": \"Dimmer switches that control two separate lighting circuits from a single device, e.g. dual dimmers, two-circuit dimmers\",\n    \"ids\": [\"A_15\"]\n  },\n  \"LED Compatible Dimmer Switches\": {\n    \"definition\": \"Dimmer switches specifically designed for dimmable LED bulbs and fixtures with optimized compatibility, e.g. LED-compatible dimmers, LED+ dimmer switches\",\n    \"ids\": [\"A_16\", \"B_1\"]\n  },\n  \"Electronic Low Voltage Dimmer Switches\": {\n    \"definition\": \"Specialized dimmer switches designed for electronic low voltage lighting systems and transformers, e.g. ELV dimmers, low voltage compatible dimmers\",\n    \"ids\": [\"A_17\"]\n  },\n  \"Handheld Remote Control Dimmer Switches\": {\n    \"definition\": \"Dimmer switches that include dedicated wireless remote controls for operation, e.g. magnetic remote dimmers, handheld remote dimmers\",\n    \"ids\": [\"A_18\"]\n  },\n  \"USB Powered Dimmer Switches\": {\n    \"definition\": \"Dimmer switches designed for USB-powered LED strips and low voltage lighting applications, e.g. USB inline dimmers, LED strip controllers\",\n    \"ids\": [\"A_19\", \"B_5\"]\n  }\n}",
+  "model_name": "claude-sonnet-4-20250514",
+  "model_temperature": 0.15,
+  "batch_id": null,
+  "category": null
+}

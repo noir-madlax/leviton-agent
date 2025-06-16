@@ -1,0 +1,353 @@
+{
+  "product_title": "Leviton 5627-W 20 Amp, 120/277 Volt, Decora Single-Pole / Single-Pole AC Combination Switch, Commercial Grade, Grounding, White",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "terminals": {
+        "A@clearly marked terminals on the back": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "screws": {
+        "B@screw heads strip out easily": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "color": {
+        "C@standard white color": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "plastic_support": {
+        "D@thin plastic section across center as weak support": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "rocker_mechanism": {
+        "E@rocker tab inside held by center plastic": {
+          "-": [
+            10
+          ]
+        },
+        "F@top rocker tab": {
+          "-": [
+            17
+          ]
+        },
+        "G@rocks side to side": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "appearance": {
+        "H@smudges and black stuff on surface": {
+          "-": [
+            20
+          ]
+        },
+        "I@very good looking": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "amperage_rating": {
+        "J@20 amp rating": {
+          "+": [
+            1,
+            8,
+            19,
+            30,
+            33,
+            38,
+            39,
+            46
+          ]
+        }
+      },
+      "size": {
+        "K@fits in normal single switch place": {
+          "+": [
+            13,
+            16
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@straightforward installation": {
+          "+": {
+            "A": [
+              1
+            ]
+          }
+        },
+        "b@easy to install": {
+          "+": {
+            "?": [
+              9,
+              29,
+              42
+            ]
+          }
+        },
+        "c@wired up fine with no problems": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "tactile_feel": {
+        "d@firm but not overly stiff feel when toggling": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "e@feels more substantial than standard light switch": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "f@nice smooth action": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "durability": {
+        "g@seems durable after a month of use": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "h@center plastic snapped within 2 weeks": {
+          "-": {
+            "D": [
+              10
+            ]
+          }
+        },
+        "i@top rocker tab broke after 1.5 years": {
+          "-": {
+            "F": [
+              17
+            ]
+          }
+        },
+        "j@lasted about a year then replaced and dead after 3 months": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        }
+      },
+      "load_handling": {
+        "k@handles high-amp bathroom fan/heater load": {
+          "+": {
+            "J": [
+              1
+            ]
+          }
+        },
+        "l@handles large loads at 120 volts": {
+          "+": {
+            "J": [
+              19
+            ]
+          }
+        },
+        "m@handles 16 amp infrared heater": {
+          "+": {
+            "J": [
+              4
+            ]
+          }
+        },
+        "n@handles two 20amp infrared heating elements": {
+          "+": {
+            "J": [
+              46
+            ]
+          }
+        }
+      },
+      "operation": {
+        "o@effectively controls bathroom fan and heater without issues": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "p@works as expected/described": {
+          "+": {
+            "?": [
+              3,
+              5,
+              6,
+              11,
+              12,
+              29,
+              32,
+              35,
+              37,
+              40,
+              41,
+              43,
+              45,
+              46
+            ]
+          }
+        },
+        "q@power engaged on 1 switch after failure": {
+          "-": {
+            "D": [
+              10
+            ]
+          }
+        },
+        "r@quiet operation": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "aesthetics": {
+        "s@blends seamlessly with other switches": {
+          "+": {
+            "C": [
+              1
+            ]
+          }
+        },
+        "t@matched other switches in house perfectly": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom_fan_heater": {
+        "+": {
+          "k,o": [
+            1
+          ],
+          "?": [
+            7,
+            16,
+            28,
+            33,
+            39
+          ]
+        },
+        "-": {
+          "h,q": [
+            10
+          ]
+        }
+      },
+      "outdoor_infrared_heater": {
+        "+": {
+          "m": [
+            4
+          ],
+          "n": [
+            46
+          ],
+          "?": [
+            26
+          ]
+        }
+      },
+      "garbage_disposal": {
+        "+": {
+          "l": [
+            8
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "?": [
+            15
+          ]
+        }
+      },
+      "ceiling_fan_and_light": {
+        "+": {
+          "?": [
+            15,
+            22,
+            34
+          ]
+        }
+      },
+      "recess_lights": {
+        "+": {
+          "?": [
+            23
+          ]
+        }
+      },
+      "heat_lamp": {
+        "+": {
+          "l": [
+            19
+          ],
+          "?": [
+            33
+          ]
+        }
+      },
+      "curio_cabinet_lighting": {
+        "+": {
+          "?": [
+            27
+          ]
+        }
+      },
+      "undercabinet_lighting": {
+        "+": {
+          "?": [
+            15
+          ]
+        }
+      },
+      "dual_element_heater": {
+        "+": {
+          "?": [
+            26
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:29.133317"
+}

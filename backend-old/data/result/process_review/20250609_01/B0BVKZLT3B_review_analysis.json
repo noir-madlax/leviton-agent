@@ -1,0 +1,484 @@
+{
+  "product_title": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 38,
+  "review_analysis": {
+    "phy": {
+      "Brand": {
+        "A@Leviton brand": {
+          "+": [
+            0,
+            6,
+            14,
+            18,
+            19,
+            21,
+            23,
+            25,
+            35
+          ]
+        }
+      },
+      "Size": {
+        "B@Larger than standard non-smart switch": {
+          "-": [
+            21,
+            23
+          ]
+        },
+        "C@Big to set in a crowded box": {
+          "-": [
+            34
+          ]
+        }
+      },
+      "Wiring": {
+        "D@Has wires coming out (no screw terminals or insert holes)": {
+          "+": [
+            23
+          ]
+        },
+        "E@Requires neutral wire connection": {
+          "+": [
+            21
+          ]
+        }
+      },
+      "Accessories": {
+        "F@Comes with screwless wall plate": {
+          "+": [
+            23
+          ]
+        }
+      },
+      "Build Quality": {
+        "G@Cheaply made": {
+          "-": [
+            16
+          ]
+        },
+        "H@High quality": {
+          "+": [
+            23
+          ]
+        },
+        "I@Cheap circuitry that doesn't hold up": {
+          "-": [
+            33
+          ]
+        },
+        "J@Established name brand": {
+          "+": [
+            35
+          ]
+        }
+      },
+      "Internal Components": {
+        "K@Internal relay": {
+          "-": [
+            28
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Pairing/Connection": {
+        "a@Easy pairing with dual band router at 2.4GHz": {
+          "+": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@WiFi connection seamless to establish": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "c@WiFi connection remarkably stable without drops": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "d@Could not connect to app or HomeKit": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "e@Easy to connect to internet": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "f@Easily connects with wifi system": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "g@Easy to connect": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "h@Get confused if power returns before WiFi": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "i@Easy install": {
+          "+": {
+            "?": [
+              2,
+              7,
+              9,
+              22,
+              26,
+              27,
+              31
+            ]
+          }
+        },
+        "j@Simple installation": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "k@Install just like a normal switch": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "l@Easy to install in uncrowded switchbox": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "m@Works great": {
+          "+": {
+            "?": [
+              2,
+              7,
+              10,
+              12,
+              15,
+              22,
+              26,
+              35,
+              36
+            ]
+          }
+        },
+        "n@Reliability unparalleled": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "o@Very reliable": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "p@95% reliable": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "q@1000 times more stable than other brands": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "r@Went offline after two months": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "s@More than half failed at some point": {
+          "-": {
+            "K": [
+              28
+            ]
+          }
+        },
+        "t@Don't appear to last": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "u@Only got a year's use": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "v@Failed after 4-5 years": {
+          "-": {
+            "I": [
+              33
+            ]
+          }
+        },
+        "w@Failed twice with paddle fan": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "x@Function well as intended": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "y@Works as advertised": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "z@Works when internet is down": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "aa@Contacts close but no power applied": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Power Consumption": {
+        "ab@Draw very low vampire power": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "ac@Not compatible with SmartThings": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "ad@Works with voice control": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ae@Integrates with Alexa easily": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "af@Works with Alexa and Google": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "ag@Support matter": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "App Performance": {
+        "ah@App works great": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "ai@App very easy to use": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "aj@App works well": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "ak@Ads added to app": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Timer/Scheduling": {
+        "+": {
+          "a,e,f": [
+            2,
+            3,
+            12,
+            18,
+            19,
+            21,
+            22,
+            23,
+            27
+          ]
+        }
+      },
+      "Remote Control": {
+        "+": {
+          "ah,ai": [
+            3,
+            12,
+            18,
+            21,
+            31
+          ]
+        }
+      },
+      "Bathroom Heater Fan Control": {
+        "+": {
+          "m,ah": [
+            12
+          ]
+        }
+      },
+      "Christmas Decorations Control": {
+        "+": {
+          "m,e": [
+            21
+          ]
+        }
+      },
+      "Porch Light Control": {
+        "+": {
+          "m,e": [
+            21
+          ]
+        }
+      },
+      "Multiple Switches in Large House": {
+        "+": {
+          "m,i": [
+            22
+          ]
+        }
+      },
+      "Voice Control Integration": {
+        "+": {
+          "ad,ae,af": [
+            18,
+            22,
+            26,
+            37
+          ]
+        }
+      },
+      "Night Lights Setup": {
+        "+": {
+          "i": [
+            9
+          ]
+        }
+      },
+      "Party Time Control": {
+        "+": {
+          "i": [
+            9
+          ]
+        }
+      },
+      "Helping Elderly Neighbors": {
+        "+": {
+          "i": [
+            9
+          ]
+        }
+      },
+      "Outside Lights Control": {
+        "+": {
+          "m,e": [
+            22,
+            31
+          ]
+        }
+      },
+      "Paddle Fan Control": {
+        "-": {
+          "w,aa": [
+            34
+          ]
+        }
+      },
+      "Off-Grid Living": {
+        "+": {
+          "ab,q": [
+            36
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:02:33.253326"
+}

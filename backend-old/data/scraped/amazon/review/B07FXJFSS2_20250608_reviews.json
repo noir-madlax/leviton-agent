@@ -1,0 +1,782 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:09:32.141585",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07FXJFSS2",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 2,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07FXJFSS2",
+    "title": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+    "brand": "BESTTEN",
+    "model_number": NaN,
+    "price_usd": 85.99,
+    "rating": 4.6,
+    "reviews_count": 866.0,
+    "category": "Light Switches",
+    "product_segment": "Single Pole Rocker Switches",
+    "product_url": "https://www.amazon.com/dp/B07FXJFSS2"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3DH9NHZKT0TYP",
+        "text": "Quality not good",
+        "date": "Reviewed in the United States on September 5, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Low quality",
+        "userName": "mushfik",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RQ1EU8X8451RC",
+        "text": "We purchase these in bulk for all of our remodels. They are easy to work with, great durability and such a nice clean look. Love em!",
+        "date": "Reviewed in the United States on December 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value",
+        "userName": "Zaiiira",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RTDJLAUD7GN9B",
+        "text": "We repainted all of the inside of our home and the old switches and outlets looked dingy with age. Everything installed easily and gave the fresh paint a nice look. Three way switches were a little tricky, but one I figured out how they installed the old ones, they worked fine.",
+        "date": "Reviewed in the United States on September 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice upgrade to my whole house",
+        "userName": "BillyOh",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1A39HA7VOWKZJ",
+        "text": "High Quality and packaging.",
+        "date": "Reviewed in the United States on May 16, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "High Quality and packaging.",
+        "userName": "armand",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1OM3JFDTQDJKX",
+        "text": "Wanted to update switches and recpetables on a 63 year old house. Lights were flickering so needed to find thupdated. Started replacing switches and looks much better. Next were the plugs and started finding corroded common w idea and signs of Heaton the white wires. Wires were plugged into the back of the old switches and connections were weak. Put new receptables in and used the screws to secure the wires. Flickering lights improved a lot. Need to finish the rest of the house and all should stop flickering.. New style switches and receptables look nice and updated.",
+        "date": "Reviewed in the United States on February 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wanted to save money on a total house update.",
+        "userName": "Bvers",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "REU0OPG7YIG4V",
+        "text": "everytime you try to plug something in you have to really jam it in. my wife isn't strong enough to use the plugs. game them away and used the old kind that actually work.",
+        "date": "Reviewed in the United States on October 27, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "a joke putting in",
+        "userName": "R Moore",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3RAPP9XI7CD0V",
+        "text": "Good for the price.",
+        "date": "Reviewed in the United States on September 3, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate",
+        "userName": "R. Cheung",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R287EY45NP9EQ8",
+        "text": "Like - good price Dislike - the whole for wires are small",
+        "date": "Reviewed in the United States on January 28, 2020",
+        "rating": "4.0 out of 5 stars",
+        "title": "Fast service",
+        "userName": "Satinder Verma",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R86XC3G12SES6",
+        "text": "I used it to renovate my home",
+        "date": "Reviewed in the United States on November 18, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice product and easy to install",
+        "userName": "Wilder Saint fort",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3FZS14K5HKX1C",
+        "text": "Was impressed the way it was package when it arrived. I am building my house and everything cost too much. I was able to save quite a bit , more importantly it is east to install and good quality.",
+        "date": "Reviewed in the United States on October 30, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value",
+        "userName": "klOdessa",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R300Q2LT9ZZWPX",
+        "text": "Great product",
+        "date": "Reviewed in the United States on October 23, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for updating old sockets",
+        "userName": "Rodney Foster",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2BSI6LRW363SQ",
+        "text": "Love the bulk pack. Saved money compared to buying at local hardware store. Easy to install and they look great.",
+        "date": "Reviewed in the United States on October 18, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Outlets",
+        "userName": "TD",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2CHJZBGWX0Z4Z",
+        "text": "I purchased this 50 pack for my home renovation project. After researching on amazon, lowes and home depot, this seemed to have the best price. My contractor has no problems installing the new buttons and they are a true white in color ( which it’s super important for me. Fortunately, They have been working fine untill now which is a bit over a month since installation.",
+        "date": "Reviewed in the United States on October 17, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good deal for a 50 pack",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1X7J8395K1W85",
+        "text": "Excellent Product",
+        "date": "Reviewed in Canada on June 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light Switches",
+        "userName": "Enzaa",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07FXJFSS2",
+        "productTitle": "[50 Pack] BESTTEN Single Pole Decorator Wall Light Switch with Wallplate, 15A 120/277V, On/Off Rocker Paddle Interrupter, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 15,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 867,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3FY6V6G2PZJ0Z",
+        "text": "For the price good deal",
+        "date": "Reviewed in Canada on September 12, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Recommended",
+        "userName": "Labradorlooney",
+        "numberOfHelpful": 0,
+        "variationId": "B07FXJFSS2",
+        "imageUrlList": null,
+        "variationList": [
+          "Number of Items: 50"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 15,
+    "pages_scraped": 2,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

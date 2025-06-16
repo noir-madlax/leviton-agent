@@ -1,0 +1,364 @@
+{
+  "product_title": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, DVCL-153P-WH-3, White, 3 Pack",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "build_quality": {
+        "A@poor_overall_quality": {
+          "-": [
+            0,
+            3
+          ]
+        },
+        "B@cheap_plasticky_sound_and_feel": {
+          "-": [
+            4
+          ]
+        },
+        "C@hollow_plasticky_click_when_pressed": {
+          "-": [
+            4
+          ]
+        },
+        "D@faint_metallic_sound_like_vibrating_metal_piece": {
+          "-": [
+            4
+          ]
+        },
+        "E@high_quality_product": {
+          "+": [
+            6,
+            23
+          ]
+        },
+        "F@good_quality": {
+          "+": [
+            10
+          ]
+        }
+      },
+      "color_appearance": {
+        "G@not_true_white_color_appears_gray": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "H@takes_more_force_than_regular_switch_then_snaps_too_quickly": {
+          "-": [
+            4
+          ]
+        },
+        "I@switches_reversed_up_was_off_down_was_on": {
+          "-": [
+            1
+          ]
+        },
+        "J@one_switch_was_loose_but_still_worked": {
+          "-": [
+            13
+          ]
+        }
+      },
+      "adjustment_features": {
+        "K@adjustment_lever_on_body_for_minimum_dim_setting": {
+          "+": [
+            5,
+            25,
+            37,
+            39
+          ]
+        }
+      },
+      "packaging_contents": {
+        "L@no_wire_nuts_included": {
+          "-": [
+            16,
+            27,
+            29,
+            35,
+            46
+          ]
+        },
+        "M@missing_installation_hardware": {
+          "-": [
+            20,
+            35
+          ]
+        },
+        "N@no_plate_included": {
+          "-": [
+            15
+          ]
+        }
+      },
+      "condition_on_arrival": {
+        "O@received_used_switches_with_electrical_tape_cut_wires": {
+          "-": [
+            8,
+            12,
+            35
+          ]
+        },
+        "P@arrived_damaged_box_condition": {
+          "-": [
+            8,
+            22
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@switches_fail_within_short_time": {
+          "-": {
+            "A": [
+              0,
+              3
+            ]
+          }
+        },
+        "b@one_switch_doesnt_work_in_multipack": {
+          "-": {
+            "?": [
+              7,
+              12,
+              22
+            ]
+          }
+        },
+        "c@dimmer_stopped_working_after_24_hours": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "d@simple_reliable_performance": {
+          "+": {
+            "?": [
+              33,
+              36
+            ]
+          }
+        }
+      },
+      "dimming_functionality": {
+        "e@dimmer_worked_normally_despite_switch_reversal": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "f@fantastic_dimming_function": {
+          "+": {
+            "K": [
+              5
+            ]
+          }
+        },
+        "g@good_dimming_range": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "h@allows_precise_control_of_brightness": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "i@works_well_with_led_bulbs_no_glow_when_off": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "j@started_flickering_when_set_below_50_percent": {
+          "-": {
+            "?": [
+              18,
+              26,
+              48
+            ]
+          }
+        },
+        "k@no_buzzing_with_recessed_lights": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "l@straight_turned_on_light_no_dim_functionality": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "installation": {
+        "m@easy_to_install": {
+          "+": {
+            "?": [
+              2,
+              25,
+              31,
+              32,
+              34,
+              37
+            ]
+          }
+        },
+        "n@fits_perfectly": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "o@installation_directions_lacking_color_codes": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "led_compatibility": {
+        "p@handles_12_recessed_led_lights_no_problem": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "q@works_with_dimmable_led_bulbs_as_expected": {
+          "+": {
+            "?": [
+              28,
+              41
+            ]
+          }
+        },
+        "r@adjustment_valuable_for_led_lights": {
+          "+": {
+            "K": [
+              25
+            ]
+          }
+        }
+      },
+      "electrical_safety": {
+        "s@sparked_when_turning_on": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "residential_lighting_control": {
+        "+": {
+          "m,g,h": [
+            2,
+            11,
+            25,
+            34,
+            38
+          ]
+        },
+        "-": {
+          "a,j": [
+            18,
+            19,
+            26
+          ]
+        }
+      },
+      "led_flood_bulb_ceiling_control": {
+        "+": {
+          "q": [
+            18,
+            21
+          ]
+        },
+        "-": {
+          "j": [
+            18
+          ]
+        }
+      },
+      "recessed_lights_control": {
+        "+": {
+          "p,k": [
+            11,
+            30,
+            45
+          ]
+        }
+      },
+      "bathroom_exhaust_and_towel_warmer_control": {
+        "+": {
+          "d": [
+            33
+          ]
+        }
+      },
+      "professional_electrical_contractor_use": {
+        "+": {
+          "d": [
+            17,
+            36,
+            42
+          ]
+        }
+      },
+      "home_remodeling_projects": {
+        "+": {
+          "m": [
+            25,
+            34
+          ]
+        },
+        "-": {
+          "c": [
+            19
+          ]
+        }
+      },
+      "kitchen_pot_lights_control": {
+        "+": {
+          "r": [
+            25
+          ]
+        }
+      },
+      "living_room_chandelier_control": {
+        "+": {
+          "r": [
+            25
+          ]
+        }
+      },
+      "music_studio_led_lighting_control": {
+        "+": {
+          "r": [
+            25
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:01.426303"
+}

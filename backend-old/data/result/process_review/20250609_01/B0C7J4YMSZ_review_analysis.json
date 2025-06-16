@@ -1,0 +1,154 @@
+{
+  "product_title": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+  "product_category": "Commercial 0-10V Dimmer Switches",
+  "total_reviews": 7,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@small form factor": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "compatibility": {
+        "B@fits in single-gang box with standard toggle switch": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "wiring": {
+        "C@requires purple dimmer wire connection in addition to red load wire": {
+          "-": [
+            4
+          ]
+        },
+        "D@does not wire up like standard dimmer with just positive negative and neutral wires": {
+          "-": [
+            4
+          ]
+        },
+        "E@has built in relay": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "pairing button": {
+        "F@has pair button for setup": {
+          "+": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming control": {
+        "a@provides precise 0-10V control": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@works with 0-10V LEDs": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "c@works with 1-10v dimming lights": {
+          "+": {
+            "E": [
+              6
+            ]
+          }
+        }
+      },
+      "power control": {
+        "d@relay cuts power to device when turning off": {
+          "+": {
+            "E": [
+              3,
+              6
+            ]
+          }
+        }
+      },
+      "pairing": {
+        "e@requires fast cadence triple press for pairing": {
+          "+": {
+            "F": [
+              0
+            ]
+          }
+        },
+        "f@pairing was easy": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "g@worked flawlessly after setup": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@works perfectly": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@does not install like standard dimmer switch": {
+          "-": {
+            "C,D": [
+              4
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Zwave home automation": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "control of LED wall packs for exterior lighting": {
+        "+": {
+          "a,d": [
+            3
+          ]
+        }
+      },
+      "garage lighting with LED strip lights": {
+        "+": {
+          "b,g": [
+            5
+          ]
+        }
+      },
+      "control high bay UFO lights through HomeAssistant": {
+        "+": {
+          "c,h": [
+            6
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:13.565429"
+}

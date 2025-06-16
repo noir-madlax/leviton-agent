@@ -1,0 +1,1936 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:21:18.099372",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0BVKZLT3B",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 4,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0BVKZLT3B",
+    "title": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 37.84,
+    "rating": 4.4,
+    "reviews_count": 762.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B0BVKZLT3B"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RCIIC5S9MJS0",
+        "text": "I've had trouble getting other brands of wifi witches to pair with my dual band router. Most of those are 2.4 GHz and don't want to pair with with my 2.4GHz/5GHz router. I have returned items because they wouldn't pair. I saw a YouTube video about installing wifi switches and the guy said he had no pairing problems with Leviton wifi switches at 2.4GHz. He was right. I installed it and in less than five minutes it was paired and working. To reduce a lot of frustration I highly recommend the Leviton wifi switches.",
+        "date": "Reviewed in the United States on May 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Reduce pairing frustration with this wifi switch",
+        "userName": "Dusty Dave",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RKR4HP13ZZ48N",
+        "text": "It's a great smart dimmer. How much more would this cost of Trump's tariffs are enacted?",
+        "date": "Reviewed in the United States on May 3, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "They're great bird spikes. How much more would this cost of Trump's tariffs are enacted?",
+        "userName": "Washedupmiddleagedwhitedude",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3GB7NT74VYCNS",
+        "text": "Easy install. Works great. Timer that works on a schedule or can turn on at dusk.",
+        "date": "Reviewed in the United States on April 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy timer switch",
+        "userName": "Baseball guy",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RX9873BTMFQB3",
+        "text": "This is really nice for controlling/ setting up your light on a schedule. And, the app is very easy to use for creating schedules awa manually turning lights on or off.",
+        "date": "Reviewed in the United States on March 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice app & works great",
+        "userName": "Bob S",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2MBEJ423L1WWW",
+        "text": "I have bought this brand for years. I tried a couple of others that were cheaper, but they were later replaced due to failure. Their customer service is extraordinary. They are always willing to help, no matter how old the devices.",
+        "date": "Reviewed in the United States on March 27, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "The only brand i will buy",
+        "userName": "Jim M",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1BKHJYU9IGOBI",
+        "text": "Function well as intended",
+        "date": "Reviewed in the United States on March 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switch",
+        "userName": "K. Agbi",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R31UY0GOV635NE",
+        "text": "Impresionante. Me encantan. Automatización sin cables y sin panel. Todos desde la app My Leviton y se opera con gran facilidad con Alexa",
+        "date": "Reviewed in the United States on March 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Me encantan los Leviton wifi",
+        "userName": "Juan Miguel Jaramillo",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R24DBYP833FFCQ",
+        "text": "Works great",
+        "date": "Reviewed in the United States on March 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "Seninho fernandes",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3ED5PAYRV5PW8",
+        "text": "Good product",
+        "date": "Reviewed in the United States on March 14, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "works well",
+        "userName": "Tom S",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1RSA1V1G6ZD2X",
+        "text": "I have several switches and plugs around the house. I like to make things go on and off when I want them. Set up for night lights and some for party time. Easy to install and setup. I have even done it for next door older folks, to make their life easer.",
+        "date": "Reviewed in the United States on March 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fun and easy to configure.",
+        "userName": "MICHAEL GROGAN",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R35HBLNSRE2FID",
+        "text": "Works great and reliably. Simple installation, the WiFi connection was seamless to establish, and the WiFi connection has been remarkably stable without any drops. This is the second smart switch that I have purchased and installed - the favorable experience with the first smart switch prompted the second purchase.",
+        "date": "Reviewed in the United States on February 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install and reliable operation",
+        "userName": "Disgruntled no more",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1YWXYLVUQ7HAS",
+        "text": "Box says compatible with SmartThings, but it isn't. Had to return.",
+        "date": "Reviewed in the United States on February 26, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not compatible",
+        "userName": "Robin Fuller",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1XSTQSLIH8ISA",
+        "text": "The app works great. I can easily turn on my bathroom heater fan brforw i get outbof bed and have it run on schedules in the morning so the bathroom is toasty warm each morning. I'm very happy so far. Do yourself a favor and buy some WAGO connectors forbthe installation.",
+        "date": "Reviewed in the United States on February 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great with my 1500 watt bathroom vent and heater fan unit!",
+        "userName": "D.Day",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RC9JG1G3SLBCI",
+        "text": "This worked for about two months. Then it went offline. I followed all the directions for troubleshooting. Nothing. I uninstalled the unit, rewired, and nothing. Reset my router. Nothing, I will go back to a manual switch.",
+        "date": "Reviewed in the United States on February 18, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "$40 for two months of usefulness",
+        "userName": "Goodenuf",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3MMM8DNXGU5E1",
+        "text": "Any Leviton smart switch or outlet are outstanding. Extremely easy to set up and reliability is unparalleled. Awesome products. I wouldn’t even consider buying a different manufacturers product.",
+        "date": "Reviewed in the United States on February 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Outstanding Product",
+        "userName": "Craig Capitelli",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2WFBMI30ARLB1",
+        "text": "Works great, but read instructions carefully",
+        "date": "Reviewed in the United States on February 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light Timer",
+        "userName": "Whistle Creek Railroad",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RI3QI4O6D0RCI",
+        "text": "Good switch but could be better. Cheaply made but works. For the price I Wish they would make it a little better and more reliable. Needs improvement and needs to be a little cheaper",
+        "date": "Reviewed in the United States on February 12, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good switch",
+        "userName": "PK",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2AI2YOKSZ8B56",
+        "text": "Outstanding productand very well priced",
+        "date": "Reviewed in the United States on February 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "quality",
+        "userName": "LD Marketing",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RN5CX1BFSWS1M",
+        "text": "The Leviton switch is a gem. This switch controls (8) Lumary Smart Recessed lights. With the app, I can control the lights while away from home and pre-set schedules for both morning & evening usage.",
+        "date": "Reviewed in the United States on January 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with voice control, Hey Google, Amazon Alexa",
+        "userName": "Carolyn West",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2ENDTGMGLXILP",
+        "text": "The Leviton was the only switch I found that didn't need a hub to operate. Install just like a normal switch, download the app, and you're done. I now schedule the front garage and porch lights to come on at dusk and turn off at 11 pm. They also have wall outlets available as well that will do the same. No need for apple, google, or any other hubs.",
+        "date": "Reviewed in the United States on January 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "No hub needed!",
+        "userName": "Doug",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R6X103R4PQ1ZP",
+        "text": "After I installed the switch I tried to connect to the Leviton app but it kept giving me an error message. I also tried to connect to HomeKit with no luck. I tried to find an answer to the error message through Leviton but finally gave up and returned it.",
+        "date": "Reviewed in the United States on January 16, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Could not connect to app or HomeKit",
+        "userName": "James A Garcia",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2NL5G0Y8Y9WF3",
+        "text": "I installed this switch to control my porch light (which at Christmas powers my Christmas decorations). I installed it in a three gang box that was already crowded with wires. The switch is larger than a standard non-smart switch and requires a neutral wire connection. Even though I had to add a new neutral wire from the existing neutral wires in the box to connect the switch, I got everything to fit. I control all of my plugs and switches with the Leviton app. Easy to connect to the internet, set up schedules, etc. Have experienced no problems with any of my Leviton smart products.",
+        "date": "Reviewed in the United States on January 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product. Works well",
+        "userName": "Bonnie",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1LNWZN0HA23VM",
+        "text": "I have these all over a 6k+ sq. ft. 2 story house (for inside and outside lights), all integrated with \"Alexa\" and set-up with schedules. They work great! Easy to install and set-up in the app.",
+        "date": "Reviewed in the United States on January 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "I have dozens of these. Love them!!",
+        "userName": "Mrfixit",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2ZF98WNVVU1T2",
+        "text": "First, Leviton is high quality, no question. This is not my first automatic Leviton switch, this was a second buy. This switch comes with a nice screwless wall plate, which you can use if you have a lone switch to replace. It easily connects with your wifi system using your phone and the MyLeviton app, where you can set up schedules for on and off times, including basing them on sundown or sunrise. For instance, I set mine to come on ten minutes after sunset and go off at 10:30pm, every day. Now, installation: Is this for a DIYer or for an electrician to install? If you know nothing about house wiring, don't plan on doing this yourself. Nothing wrong with how it's built, but you can run into interesting issues when you open a box with, say, three or four other switches in it. It may seem to have a confusing jumble of wires, the switch you're replacing may have no neutral (white) coming to it, and you'll need to figure out which wire goes to the source and which goes to the load. All that said, if you DO know what you're doing with house wiring, this is a snap to install (aside from the problems just mentioned). The switch is likely larger than the one you're replacing, and there may be scant room for it. The switch has wires coming out of it (i.e., no screw terminals or insert holes) that you attach to existing wiring with wire nuts, and you need to cram all that in the box. Note that this switch can be used in two-way or three-way configurations. Full disclosure, I have used it only in two-way on/off applications.",
+        "date": "Reviewed in the United States on January 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to set up with an on/off schedule...",
+        "userName": "PowerClyde",
+        "numberOfHelpful": 5,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1H41JM0Y6DAT1",
+        "text": "We managed to install the switches ourselves, but could not get them programmed. The helpline was quick, and the person was English speaking and we got them programmed in no time at all. Very happy to get this done because I was dreading having to be on a helpline for hours at a time and that did not happen.",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Support was great",
+        "userName": "C. Harmon",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R3290UGNETSFJT",
+        "text": "Reliable, easy to connect and use.",
+        "date": "Reviewed in the United States on December 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Leviton devices are great!",
+        "userName": "Jim",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2G1U5GKXAX6J0",
+        "text": "Product works great and is easy to install. Integrates with Alexa easily. I wish that they would include color change plates, or create some kind of bundle available on Amazon. I had to go to the Leviton website to purchase the color change plates I needed.",
+        "date": "Reviewed in the United States on December 23, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Mark",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RE8QRHDS8ZHTJ",
+        "text": "This light switch is easy to install and control with the Leviton app. I have programmed it to turn on at dusk and turn off at dawn. Using the app I can turn the light on and off when I want as well. I have used other smart switches from other brand companies and they were not as easy to install or control, the last ge one I had only lasted 7 months before dying.",
+        "date": "Reviewed in the United States on December 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and use",
+        "userName": "PG",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RTGU8CJWP7CGS",
+        "text": "I have 35 of these switches. More than half of the 35 has failed at some point. Leviton will have you jumping through hoops to proof it the switch and not your Wi-Fi. It has always been the switch. The internal relay just stopped working. They have you take a picture of the switch in the wall. You have to wait 10 days or more to get a new switch. If you have multiple switches on a breaker, it flips them out when you turn the power off and back on to replace the switch. If I only knew this 5 years ago, I would not have gone with Leviton.",
+        "date": "Reviewed in the United States on November 20, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Garbage",
+        "userName": "Check2master",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2W85KBW5VOJ5U",
+        "text": "Unfortunately, these switches don't appear to last. This (expensive) switch replaces one that is out of warranty and has stopped working, and now a second switch has stopped working. I've punted and am replacing many of my Leviton switches with less expensive (Kasa) ones that appear to work fine, are better designed, and last longer. I don't recommend Leviton Smart Switches because they don't last, and they are poorly designed (from my POV).",
+        "date": "Reviewed in the United States on November 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Replacing a 5 year old switch that stopped working",
+        "userName": "RWm",
+        "numberOfHelpful": 4,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R1ZV47RYCBOXTU",
+        "text": "I had these in my old house, but the problem I had with them is I only got a year's use out of them at a time. These don't seem to last like they should. My smoke detectors batteries last longer than these do.",
+        "date": "Reviewed in the United States on November 17, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "They go out often",
+        "userName": "James K.",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R26V1B5WQ10323",
+        "text": "Easy installation and connects to their app. You can be anywhere and with a click turn on your outside lights.",
+        "date": "Reviewed in the United States on November 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Really handy",
+        "userName": "Long time Amazon customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R10UG5V979JKN7",
+        "text": "Tried to use support instead of sending back to Amazon. Big mistake. Support has taken many days and asked for numerous additional items. Finally gave up and returned switch. I have a number of these and they are very reliable.",
+        "date": "Reviewed in the United States on November 5, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Defective switch poor support",
+        "userName": "billb",
+        "numberOfHelpful": 3,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2BL11Z1LPK6DN",
+        "text": "Cool concept! It works as advertised ... for a while. Three switches installed. Two failed after 4 yrs, the third lasted 5 yrs. One day they just quit and didn't work via wi-fi, nor manually toggling it. Tested them with multi-meter and nothing. Suspect cheap circuitry that simply doesn't hold up. Save yourself some money and install a standard switch.",
+        "date": "Reviewed in the United States on October 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Fails in a few years",
+        "userName": "M Undesser",
+        "numberOfHelpful": 2,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R2MP3G3AU9PTRQ",
+        "text": "Big to set in a crowded box. Running a paddle fan on it.....it failed twice....contacts close ...you can hear them click no power applied to fan . Ordered a third we will see how long it lasts. My home is a smart home and I have no issues with any products. Easy to.install in an uncrowded switchbox.The app works well. I do not like that they added advertisements to the app which is annoying. I recommend the product. The app use to be good till thr greed took over.",
+        "date": "Reviewed in the United States on October 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "95% reliable app was great till ads were added.",
+        "userName": "Stanley B.",
+        "numberOfHelpful": 7,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R13VHJHCWER8D0",
+        "text": "A bit more expensive than you cheap-o Tuya switches but when it comes to electricity, I want something that is not going to catch fire in my wall. These work great and come from and established name brand.",
+        "date": "Reviewed in the United States on September 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switches",
+        "userName": "Ken",
+        "numberOfHelpful": 2,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "R10SHE2IHCNXN8",
+        "text": "Installed these in 3 of my houses now, and they always work great. Only SLIGHT issue is, if you lose power and they turn back on before your WiFi is back up, they may get a little confused. But still 1000 times more stable than any other smart switch brand I’ve tried. Install is easy. If you’re living off grid like I am, they draw very low vampire power.",
+        "date": "Reviewed in the United States on September 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Other brands need not apply",
+        "userName": "303SnowWolf",
+        "numberOfHelpful": 5,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0BVKZLT3B",
+        "productTitle": "Leviton Decora Smart Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D215S-1RW, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 38,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 764,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 74
+          },
+          "fourStar": {
+            "percentage": 11
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 9
+          }
+        },
+        "reviewId": "RVZ72UM8SO4OG",
+        "text": "I really like the support matter. It works with Alexa and Google. Works wow when the internet is down. It had been solid for th last 6 months. No problems. Easy to use.",
+        "date": "Reviewed in the United States on August 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switch",
+        "userName": "Kar reviews",
+        "numberOfHelpful": 2,
+        "variationId": "B0BVKZLT3B",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 38,
+    "pages_scraped": 4,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

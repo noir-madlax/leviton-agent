@@ -1,0 +1,474 @@
+{
+  "product_title": "GHome Smart Switch,Smart Wi-Fi Light Switch for Lights Works with Alexa and Google Home 2.4Ghz, Single-Pole,Neutral Wire Required,UL Certified,Voice Control (4 Pack)",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "dimensions": {
+        "A@deep/large size requiring spacious wall boxes": {
+          "-": [
+            24,
+            44
+          ]
+        }
+      },
+      "wiring": {
+        "B@requires neutral wire for installation": {
+          "-": [
+            18
+          ]
+        },
+        "C@missing wires in package": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "indicator_light": {
+        "D@green LED at bottom": {
+          "+": [
+            45
+          ]
+        },
+        "E@faint green light when failed": {
+          "-": [
+            23
+          ]
+        },
+        "F@no light when off": {
+          "+": [
+            42
+          ]
+        },
+        "G@light up for night guidance without being too bright": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "certification": {
+        "H@UL certified": {
+          "+": [
+            16,
+            18
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@100% failure rate within 60 days": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@failure within a week": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@all failed within a month": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "d@stopped working after 2 months": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@2 of 4 stopped working after one month": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "f@only 5 of 10 switches working properly": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "g@2 not working after 2 months": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "h@original stopped working after a year": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "i@constantly disconnect and don't respond for hours": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "j@one died after 3 months": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "k@two failed after 2 years": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "l@lost connectivity after 1 year": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "m@4 malfunctioned, lose ability to connect to network": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "n@stopped working after flipping breaker": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "o@works flawlessly": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "p@work well": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "responsiveness": {
+        "q@slight delay in turning on": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "r@no delay between button press and switch response": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "s@inconsistent response to voice commands": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "t@2.4GHz only": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "u@keeps disconnecting from internet": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "v@connected to app immediately without hassle": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "w@app kept disconnecting during setup": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "x@very easy pairing to WiFi": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "manual_operation": {
+        "y@physical switch stopped responding while app still works": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "z@will not work manually": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "aa@fail manual operation": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "bb@works manually but lost smart connectivity": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "cc@pressing switch has no effect": {
+          "-": {
+            "D": [
+              45
+            ]
+          }
+        }
+      },
+      "updateability": {
+        "dd@updateable": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "installation": {
+        "ee@easy to install": {
+          "+": {
+            "?": [
+              7,
+              10,
+              11,
+              13,
+              25,
+              42,
+              46,
+              47
+            ]
+          }
+        },
+        "ff@quick and straightforward installation": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "gg@tricky to install if wall box already full": {
+          "-": {
+            "A": [
+              24
+            ]
+          }
+        },
+        "hh@could not fit into metal single gang boxes": {
+          "-": {
+            "A": [
+              44
+            ]
+          }
+        },
+        "ii@installation more complicated due to neutral wire requirement": {
+          "-": {
+            "B": [
+              18
+            ]
+          }
+        }
+      },
+      "setup": {
+        "jj@easy setup": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "kk@setup was nightmare": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ll@setup challenging despite simple instructions": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "mm@awfully hard to setup": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "nn@very easy to connect to app": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_integration": {
+        "+": {
+          "v": [
+            16
+          ],
+          "x": [
+            33
+          ],
+          "?": [
+            13,
+            21,
+            28,
+            30,
+            33,
+            38,
+            41,
+            47
+          ]
+        },
+        "-": {
+          "s": [
+            18
+          ],
+          "?": [
+            28,
+            29
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "?": [
+            16,
+            21,
+            41,
+            47
+          ]
+        },
+        "-": {
+          "s": [
+            18
+          ]
+        }
+      },
+      "app_control": {
+        "+": {
+          "?": [
+            13,
+            16,
+            22,
+            47
+          ]
+        },
+        "-": {
+          "?": [
+            32
+          ]
+        }
+      },
+      "scheduling_timers": {
+        "+": {
+          "?": [
+            13,
+            22,
+            41
+          ]
+        },
+        "-": {
+          "?": [
+            20
+          ]
+        }
+      },
+      "remote_control": {
+        "+": {
+          "?": [
+            47
+          ]
+        }
+      },
+      "night_guidance": {
+        "+": {
+          "G": [
+            3
+          ]
+        }
+      },
+      "security_complement": {
+        "+": {
+          "?": [
+            47
+          ]
+        }
+      },
+      "three_way_switching": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "single_pole_switching": {
+        "+": {
+          "?": [
+            21,
+            33
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:08.452100"
+}

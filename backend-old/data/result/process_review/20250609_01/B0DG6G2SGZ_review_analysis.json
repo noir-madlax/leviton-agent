@@ -1,0 +1,413 @@
+{
+  "product_title": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, Black",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 18,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks great against white walls with black doors": {
+          "+": [
+            1
+          ]
+        },
+        "B@sleek looking": {
+          "+": [
+            2,
+            3
+          ]
+        },
+        "C@looks modern and sleek": {
+          "+": [
+            14
+          ]
+        },
+        "D@beautiful dimmers": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "size": {
+        "E@not too big": {
+          "+": [
+            1
+          ]
+        },
+        "F@need a deeper box for installation": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "color options": {
+        "G@available in black color": {
+          "+": [
+            2,
+            6,
+            13,
+            16
+          ]
+        },
+        "H@only came in white previously": {
+          "-": [
+            13
+          ]
+        },
+        "I@available in light almond and black": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "button interface": {
+        "J@toggle button design": {
+          "+": [
+            4
+          ]
+        },
+        "K@non-toggle takes getting used to": {
+          "-": [
+            9
+          ]
+        },
+        "L@best interface from any DIY smart switch": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "switch mechanics": {
+        "M@good quality switch mechanics": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "wall plate compatibility": {
+        "N@can use standard deco wall plate": {
+          "+": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              2,
+              4,
+              8
+            ]
+          }
+        },
+        "b@medium level install skills required": {
+          "-": {
+            "F": [
+              3
+            ]
+          }
+        },
+        "c@not good for older homes pre 2000": {
+          "-": {
+            "F": [
+              3
+            ]
+          }
+        },
+        "d@uneasy installation": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "e@simple install": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "setup and configuration": {
+        "f@less than a minute to set up in app": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "g@easy to configure": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@very easy to set up using Bluetooth option": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "i@setup with Kasa App kind of tricky": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "dimming functionality": {
+        "j@dim well": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "k@can dim to specific percentage": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "l@light dimmed but did not respond to app or Alexa": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "m@work perfectly with LED transformers to dim undercounter lights": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "smart home integration": {
+        "n@works perfectly with Google": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "o@works well with Alexa": {
+          "+": {
+            "?": [
+              1,
+              13
+            ]
+          }
+        },
+        "p@Alexa integration is bulletproof": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "q@simple integration with Alexa": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "r@works with kasa app, google home and alexa": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "s@did not respond to Alexa": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "app features": {
+        "t@grouping ability is top notch": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "u@can control other switches remotely from one switch": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "v@missing fade rate on schedule feature": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "w@white version has fade rate feature but black version doesn't": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "x@works as expected": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "y@works great": {
+          "+": {
+            "?": [
+              6,
+              12
+            ]
+          }
+        },
+        "z@work like a charm": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "aa@manufacturing defect": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "homekit compatibility": {
+        "ab@white version gets homekit option but black one doesn't": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "whole home automation": {
+        "+": {
+          "a,f,g": [
+            1
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "use with dimmable light bulbs": {
+        "+": {
+          "j": [
+            1
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "control via app": {
+        "+": {
+          "B": [
+            2
+          ]
+        },
+        "-": {
+          "i,l": [
+            14
+          ]
+        }
+      },
+      "voice control with Alexa": {
+        "+": {
+          "k,o,p,q": [
+            1,
+            9,
+            10,
+            13
+          ]
+        },
+        "-": {
+          "s": [
+            14
+          ]
+        }
+      },
+      "home assistant integration": {
+        "+": {
+          "y": [
+            6
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "undercounter lighting": {
+        "+": {
+          "m": [
+            10
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "sunrise simulator": {
+        "+": {
+          "?": []
+        },
+        "-": {
+          "v": [
+            11
+          ]
+        }
+      },
+      "ecosystem integration with other Kasa products": {
+        "+": {
+          "?": [
+            13
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "homekit integration": {
+        "+": {
+          "?": [
+            17
+          ]
+        },
+        "-": {
+          "ab": [
+            17
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:58.217942"
+}

@@ -1,0 +1,106 @@
+{
+  "product_title": "TP-Link Tapo Smart Dimmer Switch, Single Pole, Neutral Wire Required, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, White, Tapo S500D(4-Pack)",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 4,
+  "review_analysis": {
+    "phy": {
+      "wiring requirements": {
+        "A@requires both hot and neutral wires": {
+          "-": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@connects to WiFi effectively": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@connects to Tapo app successfully": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@difficult to connect to app": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@no connection issues experienced": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "adjustability": {
+        "e@very adjustable settings": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "f@works as expected": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "g@does what it states": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "h@does the job": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "durability": {
+        "i@switch died after 1 month": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Alexa integration": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "wall switch replacement": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:09.537855"
+}

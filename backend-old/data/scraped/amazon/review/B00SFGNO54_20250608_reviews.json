@@ -1,0 +1,2594 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:48:20.002141",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B00SFGNO54",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B00SFGNO54",
+    "title": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+    "brand": "GE",
+    "model_number": NaN,
+    "price_usd": 14.99,
+    "rating": 4.4,
+    "reviews_count": 2929.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Rocker Style Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B00SFGNO54"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3QCXIOK684GH5",
+        "text": "I ordered and installed a number of these back in September 2022. Within a year one started making the light flicker at in-between power levels. Now I have had four of them break making it impossible to turn them on or off. The white post in the cover eventually breaks under normal use. These switches are not durable. I bought another brand to replace them, switches that simply have a slider for on/off and dimming whickhwould seem to be more durable by design.",
+        "date": "Reviewed in the United States on May 11, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "They Didn’t Last",
+        "userName": "adoughe",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71vcVjMIsnL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RDO2TQTMV6QQD",
+        "text": "The buzzing is especially loud when the brightness is lower. Lights also occasionally flicker. Properly installed. How hard is it to make a dimmable light switch? Listen closely in the video for buzzing, in a quiet room I can hear it from the other side.",
+        "date": "Reviewed in the United States on April 16, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Buzzes, has a delay, doesn't dim all the way",
+        "userName": "epiklyfail",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/612cbf7e-2688-4775-a532-f24ac7028a17/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3QRED6EJDJ8MU",
+        "text": "Easy switch to install don’t use up much electric box space and believe me my house has those nailed in ones yes 10p nails right through the box uggg nifty 50s lol the switch fit perfectly with room to spare too easy to use yes your right nothings perfect there is a half second delay not instant on has a relay and compositor in it so it can dim those led bulbs and no flickering or self shut down from over heating as with other brands Ugg I used Philips led dimmable bulbs 2~60w equivalent sram to be a good pairing oh this switch must be properly grounded had to find and dig out those bare wires Ugg to save time they used to twist them together behind the box the only hard part for me",
+        "date": "Reviewed in the United States on April 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great quality switch",
+        "userName": "Ernest Wasserbach",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/5199yQbp-4L._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1V5P4WERZHQBS",
+        "text": "After about a year light started flickering. Upon inspection we found out it was the switch, poor design.",
+        "date": "Reviewed in the United States on February 11, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor design, fails after a while",
+        "userName": "KD",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2PABDVXIWM0SJ",
+        "text": "OK dimmer but flickers at low settings. Spend a little more and get a better one. Has some nice features but not great for LED",
+        "date": "Reviewed in the United States on January 22, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "OK but flickers LEDs at low settings. Spend a little more and get a better one. If you have LEDs",
+        "userName": "KM",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R34XJ1IGM1LY6B",
+        "text": "Liked everything about it.",
+        "date": "Reviewed in the United States on December 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works",
+        "userName": "Bill Mumford",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2WHQBITAXCFNQ",
+        "text": "Installed this in our primary bathroom, which has a light fixture that contains eight LED bulbs and can be too bright if you’re getting up to use the bathroom at night. The dimming function works smoothly, and the option to set a minimum brightness is useful. Just one minor gripe: The audible “click” you hear when turning the switch on is surprisingly loud, especially at night when the house is quiet.",
+        "date": "Reviewed in the United States on November 18, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well, but the “click” is a bit loud",
+        "userName": "A. Plaut",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RNE5HY6FHHYVG",
+        "text": "What can I say? It turns the lights on and off. With the built in dimmer slide it dims the lights. What an amazing concept. A light switch that works as expected.",
+        "date": "Reviewed in the United States on November 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Oh wow a light switch",
+        "userName": "Dwolfo",
+        "numberOfHelpful": 3,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1JEPR8ZPMFMN2",
+        "text": "Lights stayed on and never fully shut off. Went with a different LED compatible switch and it worked.",
+        "date": "Reviewed in the United States on October 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn’t work for my LEDs",
+        "userName": "MDNE",
+        "numberOfHelpful": 2,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RUQMR53GEPAD0",
+        "text": "I purchased two of these GE rocker style dimmer. It was the switch I I selected as it had dimmer feature and manufactured by famous GE, and was reasonably priced. The order was back ordered by several weeks so I called off my licensed electrician until they arrived on August 13, 2024. Electrician was a month out and came to install them on September 16, 2024. Unfortunately, one worked as it should and one was defected. The electrician performed a simple test on the defective switch, which confirmed it was inoperable. I wish I knew there was a test I could have performed within the 30 return period, now the cost for the good switch just doubled. It is said that if you have one foot in a pail of hot water and one foot in a pail of cold water, statically you are comfortable - but a 50% \"reject\" on this famous brand of switch has earned it 2 1/2 star rating, not very comfortable.",
+        "date": "Reviewed in the United States on September 27, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "HAVE SWITCHED CHECKED BY ELECTRICIAN IF INSTALLATION DELAYED BEYOND ALLOWED RETURN",
+        "userName": "Robert C.",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R28OU1PP0MLZOY",
+        "text": "I do regular maintenance and upgrades to a few dozen rentals...and when a dimmer is called for (see-LED recessed fixtures), this is the one I go to everytime. Not the absolute cheapest available but ease of install and 100% reliability make the extra few bucks well worth it to me. Looks great, functions even better. No noise, no flicker, no problems.",
+        "date": "Reviewed in the United States on June 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "My go-to dimmer",
+        "userName": "Eric Stanley",
+        "numberOfHelpful": 3,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3O2R4G7B4N3AJ",
+        "text": "Excellent product.",
+        "date": "Reviewed in the United States on May 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RIA9WOHCKCZD",
+        "text": "We were having a problem with the original dimmer switch we had purchased with our LED light no being able to dim below half way, without the lights flashing and strobing. We bought this switch, swapped it out, works perfectly. Can have the light fully dimmed or turned up all the way, with no problem. Good product!",
+        "date": "Reviewed in the United States on March 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switch",
+        "userName": "Irmo Doctor",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RFF3WI9Q99BOB",
+        "text": "Works once installed. The one thing is that the rocker switch is detachable to select the type of lights used. If it isn't positioned exactly right when the faceplate is installed, the rocker switch doesn't work.",
+        "date": "Reviewed in the United States on March 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good Dimmer Switch",
+        "userName": "V",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2OBMTQM3WPR3G",
+        "text": "Electrician installed it, but switch did not work. Wanted to return it, but it was outside of the return window.",
+        "date": "Reviewed in the United States on February 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Switch Did Not Work",
+        "userName": "Amanda Esten",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2A40C1U4KOZTS",
+        "text": "Not perfect but worked better wth LED light fixture than older dimmer (pre-LED). Like small built in LED night light.",
+        "date": "Reviewed in the United States on February 14, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works pretty well with LED overhead light fixture",
+        "userName": "Wes",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RDMCCZXJFVXXM",
+        "text": "This dimmer does not dim very well. There seems to be a hesitation of the light when dimming and does not dim as low as I would like. The three way function leaves a small amount of voltage on the lights even after I turn it off.",
+        "date": "Reviewed in the United States on February 7, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not a smooth dimmer",
+        "userName": "Hugo",
+        "numberOfHelpful": 2,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RIH11XMZUXLZN",
+        "text": "Installed and it turned the light on and dimmed it smoothly but, after a little while it stop dimming. Contacted Amazon and they are sending a replacement within two days. This model was less then $20 and I hope it works out well. Will update if the new one works out. Update: The replacement came and worked out well. The slider seems to operate very smoothly. Lights do not flicker like my original dimmer switch after I put in dimmable light bulbs. Will buy again to replace another dimmer switch I have in the same room but, operate a different set of lights",
+        "date": "Reviewed in the United States on January 20, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Won’t dim",
+        "userName": "Bob Weir",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R16LKENQWG22AO",
+        "text": "solid product, works like a charm, easy to install.",
+        "date": "Reviewed in the United States on December 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "super easy to install!",
+        "userName": "M. Xia",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2BW7EC9I9POFC",
+        "text": "The dimmer does not work at all. I replaced with another one under $9.00 and everything worked as expected",
+        "date": "Reviewed in the United States on November 21, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "The dimmer does not work at all.",
+        "userName": "Jose M. Roques",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3HZF6O91B4B1M",
+        "text": "Switch failed mechanically (rocker loose, didn't click on/off) after about 1 year. Would have been great if it had just lasted.",
+        "date": "Reviewed in the United States on July 5, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Rocker Failed",
+        "userName": "David",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1D723LI42QBJA",
+        "text": "Worked as advertised, easy to install. 5 *",
+        "date": "Reviewed in the United States on June 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works.",
+        "userName": "Chicago John",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2G05C5UCQP2PB",
+        "text": "Install was easy and has been working great for months.",
+        "date": "Reviewed in the United States on May 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Discreet dimmer switch",
+        "userName": "CarGuy",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2RY6FDLDELD3H",
+        "text": "Works well with my dimmable LED bulbs. No flickering",
+        "date": "Reviewed in the United States on May 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great!",
+        "userName": "Greg K.",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2DS9TNVV87I58",
+        "text": "Not even 6 months later installing, the pressure from wires in a multi-gang box broke the plastic off the front sides, not to mention the dimmer slider itself it stuck. These are cheap contractor-grade, I really recommend buying something a little more $ (even from GE), that is more durable.",
+        "date": "Reviewed in the United States on May 3, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very cheap plastic, DOES NOT WORK IN MULTI-GANG BOX",
+        "userName": "elliottlinx",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RHZ9N1CVJDT7F",
+        "text": "Cheaply made",
+        "date": "Reviewed in the United States on April 11, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Very Cheap",
+        "userName": "CU D.",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2H7BROUEEIEUS",
+        "text": "Both switches were obviously used! Both switches didn't work. My fault for not checking items as soon a I got them. When I went to install them weeks later I discovered this but it was passed the 30 day return window.",
+        "date": "Reviewed in the United States on April 11, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Purchased new but recieved 2 used open packages.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RZQ8S8OXOMMH7",
+        "text": "Very easy to wire, works great",
+        "date": "Reviewed in the United States on April 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switch",
+        "userName": "Jim d",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R27MD9A4Z3CC6C",
+        "text": "The dimmer function stopped working just at the one year mark. Having to buy a new switch.",
+        "date": "Reviewed in the United States on April 5, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dimmer function stopped working",
+        "userName": "S. Moser",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3PLS0QJWUH0XH",
+        "text": "Great look and value, however my LED ceiling lights flicker when dimmed below 50%",
+        "date": "Reviewed in the United States on March 30, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Flickering",
+        "userName": "Brandon",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RNH9XQ8O5S4SG",
+        "text": "The dimmer slide does not move easily",
+        "date": "Reviewed in the United States on March 8, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dimmer slide problematic",
+        "userName": "Derek M.",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R13AKCLQ0PBGZN",
+        "text": "Looks nice and works well. Simple to install.",
+        "date": "Reviewed in the United States on March 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "Hector R.",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RGSSPUFARQSC",
+        "text": "Works perfectly, straightforward 3 wire install. NOTE---there is no Faceplate included with this--only the actual switch. I didn't need a faceplate, but if you're replacing a normal toggle switch, you'll need to buy a new faceplate also. Took one star off for this---they should mention that in the listing since the majority of other switches on AMAZON include a new faceplate. I bought this because it was name-brand GE.",
+        "date": "Reviewed in the United States on February 17, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works perfectly, but BEWARE--no FACEPLATE included",
+        "userName": "Dan in Johnstown, OH",
+        "numberOfHelpful": 3,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1T2G3LAXPCTUT",
+        "text": "This switch was literally broken before I opened the box, I didn't know this though, so I installed it only to find it was junk. Do yourself a favor and do not buy this product.",
+        "date": "Reviewed in the United States on February 8, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broken upon arrival",
+        "userName": "Jordan Taylor",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2FAVKKNF8NK76",
+        "text": "Easy to install, easy to use, and it looks good, too.",
+        "date": "Reviewed in the United States on February 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "A good product.",
+        "userName": "Bill B.",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2W11BFWJXG70C",
+        "text": "Its a good dimmer with a design flaw. When the switch is in the on position the bottom of the rocker sticks out pass the dimmer slider which is about 1/8 inch from the rocker its should be further away bigger or on the side",
+        "date": "Reviewed in the United States on January 21, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "First off there is no value for the money anymore",
+        "userName": "Rexxwood",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2BVGWAE0RRYBP",
+        "text": "Works great. Less expensive than from the big box stores",
+        "date": "Reviewed in the United States on January 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "verl",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3IVI2IF65XB2D",
+        "text": "Switch performs as-described. Easy installation, fits great and works on incandescent lamps.",
+        "date": "Reviewed in the United States on January 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "As Described",
+        "userName": "JH",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1EQ59LBJ6FDSU",
+        "text": "Or should I say slider. I like the configuration. It's easy to install.",
+        "date": "Reviewed in the United States on January 3, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Paddle switch with a twist",
+        "userName": "B Decent",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R3BW56JUO1HFCI",
+        "text": "I was looking for a dimmer switch for recessed lighting (6 bulbs) but wanted it to match the adjacent switch (in the two gang box). This fit the bill… it’s a little smaller due to the slider, but still has similar aesthetics & function to satisfy my snobbery. The switch fit perfectly and works flawlessly. The price was also a major factor…and (not sure why exactly) but I felt more confident with it being a GE product. I’m sure to buy more…",
+        "date": "Reviewed in the United States on December 27, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Traditional LED dimmer at the right price",
+        "userName": "James",
+        "numberOfHelpful": 2,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61JSoKi0EFL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "RH8PORDGD75D9",
+        "text": "Easy install. Perfect fit. Good light control. Zero hum or noise when dimming LEDs",
+        "date": "Reviewed in the United States on December 27, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great decorator rocker dimmer switch",
+        "userName": "Brandon N.",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R9SYIH7EHPEC7",
+        "text": "I installed three of the GE dimmer switches in the basement. They replaced the original paddle switch so the Grandkids will still be able to turn on the lights. The dimmer functionailty works as expected. Very happy with product.",
+        "date": "Reviewed in the United States on December 12, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install and dimmer function is great",
+        "userName": "Richard Wolschlager",
+        "numberOfHelpful": 2,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51+YFcmaUGL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1058F4FXCY0QH",
+        "text": "Package to wall in 10 min. Wish I had installed this sooner",
+        "date": "Reviewed in the United States on November 25, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install works great",
+        "userName": "Heidi",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R21SH3ZT1DT3H",
+        "text": "Easy to install, the ones were Flared so added a little time to the install as I have the click lock connections for soldered ends. Dims when on low and kind of flickers.",
+        "date": "Reviewed in the United States on November 8, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dinner switch shorts out of too low.",
+        "userName": "Collyn nolan",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/3add2e6f-5c7b-49ce-ae05-c064a037ca80/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "REE134TAQ99PC",
+        "text": "I am pleased that it works properly without flicker. I tried two other units from different manufacturers, they flickered when dimming. It is controlling 9 LED bulbs, 90 watts total. Easy to install, no issues.",
+        "date": "Reviewed in the United States on November 5, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well, no flicker.",
+        "userName": "Superbacana",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R19VIG4L9I5ZHT",
+        "text": "Works a dim perfectly",
+        "date": "Reviewed in the United States on November 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Me like!",
+        "userName": "john caro",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R134FJM8LAIF4I",
+        "text": "Single household, kitchen, bathroom, hallway installation. All 3 dimmers broke. A plastic piece inside breaks and makes the dimmer useless.",
+        "date": "Reviewed in the United States on October 21, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "All 3 failed in just about 2 years",
+        "userName": "uwesdrusa",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R1VYQ3CT0CIH8D",
+        "text": "Less than half the Home Depot price for a dimmable rocker switch. Easy to install. Good directions. Highly recommend.",
+        "date": "Reviewed in the United States on October 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great value",
+        "userName": "R. Neuman",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R2UX58NHF5WOQ1",
+        "text": "Light switches should last year's. In less than 3 months it stopped working.",
+        "date": "Reviewed in the United States on October 14, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lasted less than 3 months",
+        "userName": "Epster",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00SFGNO54",
+        "productTitle": "GE Rocker Dimmer Switch Rocker On/Off Light Switch Dimmer Switches for LED Lights Single Pole Energy Saving UL Listed White 10464",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 283,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2930,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 6
+          }
+        },
+        "reviewId": "R359SBGK8XX0K8",
+        "text": "Now I can enjoy having the right level of light where I need it. This dimmer works well and was indeed easy to install.",
+        "date": "Reviewed in the United States on October 6, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "very good product",
+        "userName": "Ken H",
+        "numberOfHelpful": 0,
+        "variationId": "B00SFGNO54",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Style: Rocker Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

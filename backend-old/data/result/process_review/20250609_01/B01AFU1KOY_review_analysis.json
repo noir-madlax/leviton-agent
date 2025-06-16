@@ -1,0 +1,678 @@
+{
+  "product_title": "Decora Smart Dimmer Switch Companion for Multi-Location Dimming (Not for Stand-Alone use), 120/277VAC, 60Hz, DD00R-DLZ, White, Ivory, Light Almond",
+  "product_category": "Multi-Location Companion Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@has LED indicator lights": {
+          "+": [
+            2,
+            30,
+            39,
+            42
+          ],
+          "-": [
+            32,
+            42
+          ]
+        },
+        "B@has rocker switch design": {
+          "-": [
+            4
+          ]
+        },
+        "C@has momentary buttons disguised as rocker switch": {
+          "-": [
+            4
+          ]
+        },
+        "D@has clean look": {
+          "+": [
+            26
+          ]
+        },
+        "E@has 8 lights instead of 4": {
+          "-": [
+            32
+          ]
+        },
+        "F@has clear window in packaging": {
+          "+": [
+            20
+          ]
+        }
+      },
+      "build_quality": {
+        "G@well built": {
+          "+": [
+            2
+          ]
+        },
+        "H@feels like cheap plastic junk": {
+          "-": [
+            42
+          ]
+        },
+        "I@significantly inferior quality to master dimmer": {
+          "-": [
+            42
+          ]
+        },
+        "J@physical switches are clunky": {
+          "-": [
+            46
+          ]
+        },
+        "K@parts falling off or internal parts breaking": {
+          "-": [
+            19
+          ]
+        },
+        "L@air gap switch comes off when pressed at the top": {
+          "-": [
+            32
+          ]
+        },
+        "M@mounting screws strip almost immediately": {
+          "-": [
+            37
+          ]
+        }
+      },
+      "size": {
+        "N@takes up more room in box leaving less room for wires": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "wiring": {
+        "O@has external wires rather than wiring into screws": {
+          "+": [
+            37
+          ]
+        },
+        "P@doesn't have neutral lead built in": {
+          "-": [
+            34
+          ]
+        },
+        "Q@doesn't have ground wire attached": {
+          "-": [
+            34
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@stops working after 2-3 years": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@works reliably": {
+          "+": {
+            "?": [
+              1,
+              5,
+              7,
+              15,
+              17,
+              18
+            ]
+          }
+        },
+        "c@remotes only work occasionally": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "d@flakes out frequently and requires constant pairing": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "e@switches disappear from Z-Wave network periodically": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "f@lost ability to talk zwave": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "g@switch can get disabled by mistake": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "h@worked flawlessly for years": {
+          "+": {
+            "?": [
+              21,
+              39
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@easy to install": {
+          "+": {
+            "?": [
+              0,
+              1,
+              7,
+              9,
+              18,
+              21,
+              33
+            ]
+          }
+        },
+        "j@installation can be tricky": {
+          "-": {
+            "N": [
+              2
+            ]
+          }
+        },
+        "k@30 seconds setup once installed": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "l@installation was straightforward": {
+          "+": {
+            "?": [
+              18,
+              39
+            ]
+          }
+        },
+        "m@pain to install due to specific wiring requirements": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "n@much easier to install than main switch": {
+          "+": {
+            "O": [
+              37
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "o@works great with Alexa and Google Assistant": {
+          "+": {
+            "?": [
+              1,
+              11,
+              29,
+              39,
+              45,
+              47
+            ]
+          }
+        },
+        "p@hub has extremely poor range": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "q@connectivity between switches and hub is poor": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "r@troubling to maintain connection to HomeKit": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "s@doesn't work with some mesh network features": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "t@flawless integration with Google Home": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "u@integrates with Alexa well": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "v@controls device properly": {
+          "+": {
+            "?": [
+              0,
+              1,
+              5,
+              7,
+              15,
+              17,
+              18
+            ]
+          }
+        },
+        "w@stops controlling device while app/Alexa still work": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "x@can work with Homekit, Google and Alexa": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "y@dimmer switch can also be on/off": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "z@works well with counterpart devices for multiple locations": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "aa@doesn't need any setup since it communicates with other switch": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "bb@doesn't work exactly like a 3-way switch": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "cc@indicators and dimming functionality works like a champ": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "dd@LED indicators lag the master": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "ee@controlling dimming levels has significant lag": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "ff@can't turn off dimming indicator": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "gg@click but light doesn't turn on if not pressed hard enough": {
+          "-": {
+            "J": [
+              46
+            ]
+          }
+        },
+        "hh@can adjust maximum light setting and dim to percentage": {
+          "+": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "ii@both switches show current dimming level": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "jj@able to set dimming level via Alexa": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "kk@didn't turn on LED lights": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "durability": {
+        "ll@gets a little warm occasionally": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "mm@dimmer switch keeps popping out": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "nn@question durability": {
+          "-": {
+            "mm": [
+              45
+            ]
+          }
+        }
+      },
+      "software": {
+        "oo@receives frequent software updates with new features": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "pp@Leviton app always works well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "qq@lights randomly started turning off/on": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "rr@My Leviton app made setup easy": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ss@app says switches not connected": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "tt@switches will not respond to app commands": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "multi-location control": {
+        "+": {
+          "z": [
+            2
+          ],
+          "aa": [
+            10
+          ],
+          "cc": [
+            30
+          ],
+          "b": [
+            5,
+            17,
+            18
+          ]
+        },
+        "-": {
+          "c": [
+            21
+          ],
+          "bb": [
+            10
+          ]
+        }
+      },
+      "3-way switch configuration": {
+        "+": {
+          "b": [
+            5,
+            17,
+            18,
+            30,
+            39
+          ],
+          "l": [
+            18,
+            39
+          ],
+          "cc": [
+            30
+          ]
+        },
+        "-": {
+          "m": [
+            42
+          ],
+          "?": [
+            27,
+            28
+          ]
+        }
+      },
+      "4-way switch configuration": {
+        "+": {
+          "b": [
+            20
+          ],
+          "?": [
+            20
+          ]
+        }
+      },
+      "smart home automation": {
+        "+": {
+          "o": [
+            1,
+            11,
+            29,
+            39,
+            45,
+            47
+          ],
+          "x": [
+            2
+          ],
+          "t": [
+            29
+          ],
+          "u": [
+            39
+          ],
+          "jj": [
+            39
+          ]
+        },
+        "-": {
+          "p": [
+            14
+          ],
+          "q": [
+            14
+          ],
+          "r": [
+            23
+          ],
+          "s": [
+            24
+          ]
+        }
+      },
+      "voice control with Alexa": {
+        "+": {
+          "o": [
+            1,
+            11,
+            29,
+            39,
+            45,
+            47
+          ],
+          "u": [
+            39
+          ],
+          "jj": [
+            39
+          ],
+          "hh": [
+            38
+          ]
+        }
+      },
+      "voice control with Google Assistant": {
+        "+": {
+          "o": [
+            11,
+            29
+          ],
+          "t": [
+            29
+          ]
+        }
+      },
+      "HomeKit integration": {
+        "+": {
+          "x": [
+            2
+          ]
+        },
+        "-": {
+          "r": [
+            23
+          ]
+        }
+      },
+      "LED light control": {
+        "+": {
+          "hh": [
+            38
+          ],
+          "?": [
+            39
+          ]
+        },
+        "-": {
+          "kk": [
+            44
+          ]
+        }
+      },
+      "whole house lighting control": {
+        "+": {
+          "b": [
+            7
+          ],
+          "?": [
+            31
+          ]
+        }
+      },
+      "bedroom lighting": {
+        "+": {
+          "hh": [
+            38
+          ],
+          "o": [
+            38
+          ]
+        }
+      },
+      "kitchen lighting": {
+        "+": {
+          "o": [
+            47
+          ]
+        }
+      },
+      "manual operation during wifi outage": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "night-time lighting": {
+        "+": {
+          "?": [
+            6
+          ]
+        },
+        "-": {
+          "?": [
+            6
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:58.023975"
+}

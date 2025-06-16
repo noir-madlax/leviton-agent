@@ -1,0 +1,289 @@
+{
+  "product_title": "BESTTEN 10 Pack Single Pole Decorator Light Switch with Wallplate, 15A 120/277V, Rocker Paddle Wall Switch, On/Off Interrupter for LED and Other Lamps, UL Listed, White",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@off-white or bone color rather than pure white": {
+          "-": [
+            0,
+            6,
+            16,
+            29
+          ]
+        },
+        "B@almond color instead of advertised white": {
+          "-": [
+            6
+          ]
+        },
+        "C@cream color": {
+          "-": [
+            16
+          ]
+        },
+        "D@color matches nicely": {
+          "+": [
+            15
+          ]
+        },
+        "E@attractive appearance": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "cover_plate": {
+        "F@too thin and flexes during installation": {
+          "-": [
+            7
+          ]
+        },
+        "G@holes don't line up properly": {
+          "-": [
+            15
+          ]
+        },
+        "H@small size may expose areas around switch": {
+          "-": [
+            37
+          ]
+        },
+        "I@provides clean finished look": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "rocker_mechanism": {
+        "J@plastic is thin and brittle": {
+          "-": [
+            32
+          ]
+        },
+        "K@plastic hinge breaks off easily": {
+          "-": [
+            32
+          ]
+        },
+        "L@squishy with lot of give before click": {
+          "-": [
+            15
+          ]
+        }
+      },
+      "surface_quality": {
+        "M@black smudge stain that cannot be cleaned": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "design": {
+        "N@sleek decorator-style design": {
+          "+": [
+            35,
+            40
+          ]
+        },
+        "O@modern appearance": {
+          "+": [
+            27,
+            34,
+            40
+          ]
+        }
+      },
+      "wire_compatibility": {
+        "P@difficult to use with 12 gauge wire": {
+          "-": [
+            46
+          ]
+        },
+        "Q@easy with 14 gauge wire": {
+          "+": [
+            46
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works fine": {
+          "+": {
+            "?": [
+              0,
+              14,
+              28,
+              30,
+              36,
+              39
+            ]
+          }
+        },
+        "b@gets stuck in middle position": {
+          "-": {
+            "J": [
+              2
+            ]
+          }
+        },
+        "c@high defective rate": {
+          "-": {
+            "K": [
+              32
+            ]
+          }
+        }
+      },
+      "durability": {
+        "d@poor long-term reliability": {
+          "-": {
+            "J,K": [
+              32
+            ]
+          }
+        },
+        "e@reliable after extended use": {
+          "+": {
+            "?": [
+              10,
+              28
+            ]
+          }
+        }
+      },
+      "sound": {
+        "f@loud clicking noise": {
+          "-": {
+            "?": [
+              15,
+              16
+            ]
+          }
+        },
+        "g@inconsistent sound levels between units": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "tactile_feel": {
+        "h@cheap feeling operation": {
+          "-": {
+            "L": [
+              16,
+              39
+            ]
+          }
+        },
+        "i@solid action": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "quality_control": {
+        "j@high rate of defective units in packaging": {
+          "-": {
+            "?": [
+              17,
+              20,
+              21,
+              42
+            ]
+          }
+        }
+      },
+      "color_matching": {
+        "k@does not match other brand products": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "l@switch and accessories don't match each other": {
+          "-": {
+            "A": [
+              38
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_renovation": {
+        "+": {
+          "N,O": [
+            11,
+            27,
+            28,
+            34,
+            40
+          ]
+        }
+      },
+      "whole_house_replacement": {
+        "+": {
+          "?": [
+            10,
+            27,
+            44
+          ]
+        }
+      },
+      "construction_projects": {
+        "+": {
+          "?": [
+            36
+          ]
+        }
+      },
+      "older_home_upgrades": {
+        "+": {
+          "N,O": [
+            11,
+            31
+          ]
+        }
+      },
+      "residential_applications": {
+        "+": {
+          "a": [
+            12,
+            41
+          ]
+        }
+      },
+      "color_matching_projects": {
+        "-": {
+          "k,l": [
+            0,
+            38
+          ]
+        }
+      },
+      "quiet_environment_applications": {
+        "-": {
+          "f": [
+            15
+          ]
+        }
+      },
+      "12_gauge_wire_installations": {
+        "-": {
+          "P": [
+            46
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:21.718771"
+}

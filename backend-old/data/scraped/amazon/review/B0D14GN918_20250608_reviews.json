@@ -1,0 +1,693 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T23:19:54.002913",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0D14GN918",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 2,
+    "fetched_all_available_reviews": true
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2JJ5K9SAFZLR",
+        "text": "Please see my disclaimer for Vine provided items at the end of this review. This dimmer switch is quite nice for the price. It is claimed to support up to 300w for LED lighting. So guess what I did. I hooked it up to a 300w (a real 300w) street light to test its' mettle! Surprisingly, neither blew up. The LED street light certainly was not happy, as it was not intended to be dimmed by PWM on the input voltage. The light has a dimmable LED driver power supply that uses an external signal to tell it what output level to set. Regardless, the dimmer did work and dimmed the light, without failing. So I am going to say the dimmer switch gets a pass for that test. Will it survive long term with a full 300w string of LED lights in a home? Can not say for sure, but it did not heat up much of show any signs of issue during my test. The ON/OFF switch on the dimmer feels robust. It has a nice positive snap when you flip it. The dimmer slider also feels nice as well. Not cheap and flimsy like many cheaper dimmers tend to feel. There is also an adjustment wheel on the top right of the slider to trim the dimmers activation range, to better fit the actual load of your installation. So that's nice. I think this unit will have a long service life, if not abused. Aesthetics are highly subjective due to individual taste. I am perfectly ok with a dimmer switch looking like a dimmer switch, instead of some abstract piece of art. What I do very much dislike are those dimmers with the tiny slider that is nearly impossible to feel or use in the dark. A nice large slider is far more preferable in my opinion. I do not think this Ecoeler switch looks ugly at all. In fact, I think it looks nicer than many of the other dimmer options available today. The included wall plate may not be to taste, or work well for all installations. That's not really much to worry over thought. Use your own, or the plates that match the rest of your home. For the $10 this switch was priced at when I ordered, I think that is a great value. The price is currently higher at $13, which is still not a bad value. I would wait and see if the price goes back down if you need to purchase more than a few. Price: $9.99 (at time of order) Quality: Good Value: Good Vine Review Program Disclaimer: My goal as a reviewer, as part of the Vine program, is to provide clear and informant feedback on product details that matter to YOU. I review every item from the position of a product I have PAID for. Cost, quality, and value are all vital points in the decision to purchase a product. I hope my reviews will be insightful and enlightening for all readers, and ultimately help you make that purchase decision. Leave me a thumbs up if I've been able to help you determine if a product is worth buying.",
+        "date": "Reviewed in the United States on June 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice quality dimmer switch for the price",
+        "userName": "USAP",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RPI4VTIC29BMJ",
+        "text": "This is a well built dimmer switch. It dims my lights smoothly with no buzzing. It's sturdy. The design isn't the prettiest, but it's very good for somebody who has hand motor control issues. The slide is easy to move and your finger won't slip off it easily. The switch is also easy to use. I don't need to do this, but I can operate it with my elbow. There are a couple of minor things I don't like about it. It's not quite the same color as my other white switches that came with the house. It's a little bulky compared to another that I installed, so it's a bit crowded in the junction box.",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works well as a dimmer.",
+        "userName": "Keith A",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R3BLUPWB24CM9A",
+        "text": "And it's ugly. But at it's most basic of functions, it works. The slider is a bit sensitive in the middle range, the range where you will, most likely, use the dimmer most of the time. A gentle touch is required in that range to get the setting you are looking for. Outside of that middle 33%, the lights are either very bright, or very dim, but they do still seem to respond to the sliders movement in those upper and lower ranges. Bottom line, the slider is, odly, not uniform in it's application of brightness. This switch, like so many, uses pigtails that take up a lot of room in the box. Trimming them down a bit is one option, cramming them all into the hole is another. But there are better options for connections in 2025, and a 5-star switch will use those modern, improved connections. The switch plate cover that comes with this switch is a bit smaller than a standard switch plate cover, and that was noticeble in my installation. It also sits a bit higher than the switch leaving it recessed within the cover. Changing to a standard cover solves these problems. I did, however, appreaciate that the manufacturer used standard #1 square bit screws in lieu of phillips screws, which you often see in these budget switch options.",
+        "date": "Reviewed in the United States on May 24, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "It's a budget switch.",
+        "userName": "K9NSP",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71W0XNAzrML._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71WDIVkIwgL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81yJRAPloaL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1P9GMCGEXXY2W",
+        "text": "The switch is exactly as described and works well. It was easy to install and blends in well with the other switches.",
+        "date": "Reviewed in the United States on May 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Blends with existing switches and outlets.",
+        "userName": "CP",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1MHYOREZ2B1TE",
+        "text": "Works well and was a somewhat easy replacement to a standard 3 way switch.",
+        "date": "Reviewed in the United States on May 17, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Keir A Dykstra",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R2PXV4BB25BURQ",
+        "text": "This dimmer switch works very well on dimmable LED fixtures and incandescent bulbs. It was able to dim a quality dimmable LED fixture from full brightness to barely on in a nice smooth motion. There was no flicker or humming at any brightness level (your results may vary based on the fixture or bulb). It works in both single switch ot 3-way applications. Use only one dimmer in 3- or 4-way applications. One challenge is that it has permanently installed lead wires, not lugs. You’ll need room in your box for the switch (which is large like most dimmers) and 4 wire nuts to connect it. My only objection is that it's not the prettiest thing, with the separate switch and slide dimmer handle in a decorator-style package. Some other similar products look more like the classic decorator-style paddle switches, but cost a lot more. Regardless, you can't beat the price for something that works well, especially when purchased in multi-packs. And each one includes a switch plate for a single-gang box and the wire nuts to install it.",
+        "date": "Reviewed in the United States on May 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Budget dimmer switch",
+        "userName": "Dagger",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1BHOLK8PSZ57R",
+        "text": "Good quality dimmer that also functions as a 3 way switch. The instructions are very clear. I have a 3-way and dimmer but one of my switches stopped responding. I didn't even know a 3-way dimmer was available. This works great. I was able to install it in no time. It functions very well. There is no flickering and the 3-way works as always. It's a really good value for this switch. I have never seen anything come close to this switch at this price range. Very good product.",
+        "date": "Reviewed in the United States on May 15, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great 3-way + dimmer switch!",
+        "userName": "AmznCust",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RIAG49ATBFLXV",
+        "text": "This dimmer switch performs exceptionally well and was very easy to install. I followed the instructions carefully and made sure to match the wires correctly—everything worked perfectly on the first try. For the price, it delivers excellent performance with no flickering or instability. The build quality feels solid and not cheap at all. It's a great upgrade from older dimmers, offering a cleaner, more modern look. Overall, I’m very satisfied with this purchase and would definitely recommend it.",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Performance and Easy Installation",
+        "userName": "Anh D.",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1MKMBG24NCHUR",
+        "text": "This is about \"ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White\" by ECOELER, priced at $10 for this review. This is a budget dimmer switch, with good looks but a cheap feeling on the slider. It is easy to install/wire and replace a switch or old dimmer. It comes prewired (pigtail thin wires coming out of the black box, no screw terminals) that are already stripped an tinned (even the second load wire, for 3 way switching) that will probably need to be carefully insulated or cut the bare length off (for normal, single pole installation); I had to use wago connectors as the switch's wires are substantially thinner than my house's 14AWG Romex single core wiring. It works with LEDs, kind of: It goes from a 5-10% to 100% intensity with a very abrupt/sharp transition somewhere in the middle of the slider range, playing with the adjustment wheel moves the transition slider-position but does not make the brightness control any less abrupt. Trying to set the lights at 50% to 75% is an exercise in patience and needs the softest of touches and several tries, and if that intermediate intensity is achieved, it only lasts until the switch is turned off, as the lights come back at min next time they are switched back on. There is also flickering at an intermediate intensity (!!) not at the min like most other dimmer switches (this maybe because I tested with only one 12W LED). All in all it mostly works and it is listed at pretty low price. Personally, I am not going to use this switch, and I will probably be going with a better quality smart/wifi dimmer switch",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Cheap and it mostly works",
+        "userName": "Maria del Mar",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "RDFTBN3972UJ8",
+        "text": "This dimmer checks all the boxes: -3-way support -Range adjustment -Major certifications (At least they are printed on the unit) -No buzzing The dimmer works as advertised but I feel the styling and functionality is so-so. A horizontal toggle can be confusing to people. If you like this type of dimmer, no hesitations in suggesting you buy this one.",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "A decent value if you like this style.",
+        "userName": "Thumb Guy",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61v3D2aFdpL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71JeBOhhSVL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71T8gb2dYIL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71sE9h0-q3L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71t01hY-rdL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1ZVDVIO0NAMU9",
+        "text": "I had one of those 80's dial dimmers in my bathroom. I was not a big fan. I could turn it almost halfway before the light would kick on. This installed in minutes and works much more efficiently. It gives me a much better range of dimming. Perfect fit. Cover plate included. Better cost than Home Depot or Lowes.",
+        "date": "Reviewed in the United States on May 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Upgrade from the old 80's one we had before",
+        "userName": "Dave Stanzito",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R6CYO6Q7EPLUR",
+        "text": "This can work on a 3 way switch to dim lights which is a real bonus. This one change can really be a game changer in an older home. It allows you to have different light quality without having to rewire your home.",
+        "date": "Reviewed in the United States on April 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great way to add a dimmer to a 3 way light.",
+        "userName": "Jack Grambo",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0D14GN918",
+        "productTitle": "ECOELER Rocker Dimmer Switch, Single Pole/3-Way LED Slide Dimmer Light Switch LED, CFL, Halogen and Incandescent Bulbs, Wall Plate Included, ETL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 13,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 14,
+        "productRating": "4.4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 56
+          },
+          "fourStar": {
+            "percentage": 28
+          },
+          "threeStar": {
+            "percentage": 16
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1PFROEHIL5D2V",
+        "text": "Simple, efficient dimmer switch that is easy to install and has separate controls for on-off and a slide for dimming. It's easy to see what is needed to adjust the lights, as well as to turn them on or off. Got this to replace a dimmer switch that requires a long hold to turn off. This is inexpensive ($9.99) and good value. I liked that the unit can be used with a 3-wire (no neutral) or 4-wire system (with neutral).",
+        "date": "Reviewed in the United States on April 19, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Simple to use and install",
+        "userName": "C J Spencer",
+        "numberOfHelpful": 0,
+        "variationId": "B0D14GN918",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 - Pack",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 13,
+    "pages_scraped": 2,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

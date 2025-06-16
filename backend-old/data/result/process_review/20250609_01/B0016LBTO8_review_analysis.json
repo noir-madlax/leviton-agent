@@ -1,0 +1,288 @@
+{
+  "product_title": "Lutron Claro 15 Amp Single-Pole Rocker Switch with Locator Light, CA-1PSNL-WH, White",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 47,
+  "review_analysis": {
+    "phy": {
+      "locator light": {
+        "A@very dim brightness": {
+          "-": [
+            1,
+            4,
+            6,
+            10,
+            14,
+            15,
+            17,
+            20,
+            21,
+            26,
+            27,
+            40
+          ]
+        },
+        "B@small size": {
+          "-": [
+            14,
+            18,
+            45
+          ]
+        },
+        "C@centered position on paddle": {
+          "-": [
+            18,
+            23,
+            40
+          ]
+        },
+        "D@amber/orange color": {
+          "+": [
+            18
+          ]
+        },
+        "E@rectangular bar shape": {
+          "-": [
+            14,
+            18
+          ]
+        },
+        "F@neon bulb technology": {
+          "-": [
+            17,
+            40
+          ]
+        }
+      },
+      "switch construction": {
+        "G@sturdy build quality": {
+          "+": [
+            18,
+            27
+          ]
+        },
+        "H@compact body size": {
+          "+": [
+            40
+          ]
+        },
+        "I@made in Korea": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "switch mechanism": {
+        "J@loud click sound": {
+          "-": [
+            14,
+            18,
+            32
+          ]
+        },
+        "K@positive snap action": {
+          "+": [
+            21,
+            27
+          ]
+        },
+        "L@stiff click action": {
+          "-": [
+            40
+          ]
+        }
+      },
+      "electrical design": {
+        "M@no neutral wire required": {
+          "+": [
+            40
+          ]
+        },
+        "N@high resistance path to ground": {
+          "-": [
+            31
+          ]
+        }
+      }
+    },
+    "perf": {
+      "illumination functionality": {
+        "a@locator light fails to work": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@barely visible in dark": {
+          "-": {
+            "A,B": [
+              1,
+              4,
+              15,
+              26,
+              40,
+              43
+            ]
+          }
+        },
+        "c@not visible from side angle": {
+          "-": {
+            "B": [
+              14,
+              45
+            ]
+          }
+        },
+        "d@provides adequate wayfinding": {
+          "+": {
+            "A": [
+              34,
+              44
+            ]
+          }
+        }
+      },
+      "electrical performance": {
+        "e@voltage bleed when off": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "f@current bleeding causing light glow": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "g@lights stay dimly on without ground": {
+          "-": {
+            "N": [
+              31
+            ]
+          }
+        },
+        "h@no light leakage with LEDs": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "durability": {
+        "i@long-lasting construction": {
+          "+": {
+            "G": [
+              39
+            ]
+          }
+        },
+        "j@neon bulb lifespan concerns": {
+          "-": {
+            "F": [
+              40
+            ]
+          }
+        }
+      },
+      "installation": {
+        "k@easy to install": {
+          "+": {
+            "H": [
+              3,
+              21,
+              33,
+              40
+            ]
+          }
+        },
+        "l@fits in older small boxes": {
+          "+": {
+            "H": [
+              40
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "garage lighting": {
+        "+": {
+          "d": [
+            1
+          ]
+        },
+        "-": {
+          "b": [
+            1
+          ]
+        }
+      },
+      "bedroom switches": {
+        "+": {
+          "k": [
+            18
+          ]
+        },
+        "-": {
+          "c": [
+            14
+          ]
+        }
+      },
+      "bathroom wayfinding": {
+        "-": {
+          "b": [
+            26,
+            27
+          ]
+        }
+      },
+      "low light navigation": {
+        "+": {
+          "d": [
+            34,
+            44
+          ]
+        }
+      },
+      "interior lighting control": {
+        "+": {
+          "k": [
+            13
+          ]
+        }
+      },
+      "replacement for failed switches": {
+        "+": {
+          "i": [
+            39
+          ]
+        }
+      },
+      "whole house installation": {
+        "-": {
+          "b": [
+            40
+          ]
+        }
+      },
+      "LED light circuits": {
+        "+": {
+          "h": [
+            9
+          ]
+        },
+        "-": {
+          "f": [
+            11
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:22.904707"
+}

@@ -1,0 +1,2550 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:42:24.198433",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0076HPM8A",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0076HPM8A",
+    "title": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 14.07,
+    "rating": 4.5,
+    "reviews_count": 6134.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Slide Control Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0076HPM8A"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1ERLTZBHRV8OF",
+        "text": "Works great",
+        "date": "Reviewed in the United States on June 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switch with dimmer",
+        "userName": "Barbara",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3AAI97NHL70S0",
+        "text": "Very good dimmer switch for any ceiling light.",
+        "date": "Reviewed in the United States on June 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switch",
+        "userName": "The Doctor (Brad)",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1IMNVJ3BRFRJM",
+        "text": "works well... replaced defaulty unit. These dimmers die after a few years, but thankfully they're easy to swap out.",
+        "date": "Reviewed in the United States on June 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dims Well",
+        "userName": "Stevil",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R5VSUFL2DBNWH",
+        "text": "Installed them in my new kitchen and they work very well! Good quality.",
+        "date": "Reviewed in the United States on June 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product!",
+        "userName": "Alina DENARIE",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2WVZ6XCI0EFO6",
+        "text": "Don’t let the pictures fool you this comes with no faceplate. Easy to install but now a faceplate needs to be ordered separately",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Pictures misleading",
+        "userName": "Candelario Robles Jr",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R24C4WNH8HG0P6",
+        "text": "good",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "good",
+        "userName": "darren yu",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R21DSAT2ZP1Z9E",
+        "text": "We needed a dimmer switch to control four overhead LED can lights. This one was easy to install and works perfectly. This is a reliable and quality brand, too!",
+        "date": "Reviewed in the United States on May 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent Dimmer, Easy to Install",
+        "userName": "A. Sawyer",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1IWWEKKQB9UNF",
+        "text": "Easy peasy. Smooth",
+        "date": "Reviewed in the United States on May 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2MXUOZVDGYTCE",
+        "text": "excellent, works great. Easy to install",
+        "date": "Reviewed in the United States on May 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Highest quality on the market",
+        "userName": "Vivianne",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RFBISO0ZDOSL",
+        "text": "1st one blew within a month, 2nd one blew recently and just replaced for the 3rd time",
+        "date": "Reviewed in the United States on May 23, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Keeps blowing",
+        "userName": "Dawn Mitsopoulos",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R21PYJUZNRO579",
+        "text": "Easy to install, works as described",
+        "date": "Reviewed in the United States on May 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "G",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R15CDWXIMEAACD",
+        "text": "This control moves easily and dims the light without flickering. Easy to install. Good instructions included.",
+        "date": "Reviewed in the United States on May 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smooth and easy adjustment",
+        "userName": "Jim Link",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R37CXFZ7F78HYJ",
+        "text": "Easy to install and works great! Got a quote for replacing the dimmet $70 and five minutes work done!",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "5 minutes install and works great",
+        "userName": "rocxiao",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61j7km4PIML._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R7ZY19YEPIHXY",
+        "text": "Easy Install. Great Features.",
+        "date": "Reviewed in the United States on April 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice Quality Convenient Switch",
+        "userName": "Jason Herold",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3OERQIT7PH397",
+        "text": "good",
+        "date": "Reviewed in the United States on April 30, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "elctric box",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R11R27PQ8P8DCG",
+        "text": "Replaced 2 dimmer switches (that were working fine) with these based on looks. Big mistake. Now neither work as well as they did before. One controls some strip lights over cooktop. Despite programming them over and over they will not allow full brightness or dimness and they slightly flicker on lowest setting. The other controls 2 LEDs above same cooktop and flicker while toggling and when at lowest setting they all of a sudden turn themselves back up to high all by themselves! Weird. I reprogrammed and checked the wiring to no avail. If it was just one of them then I would chalk it up to a fluke but it's BOTH of them. Replaced them with the original dimmers and now they work fine again. Can't recommend.",
+        "date": "Reviewed in the United States on April 21, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Ghost Controls",
+        "userName": "Sir Shopsalot",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RMZVUTD00074Z",
+        "text": "We bought one of these for a new bathroom remodel. Dimmed all the way works great, as well as full power. But anything in between flickers, bad. Not of and on like in some of the video reviews, but enough to make you want to replace the switch, which I plan on doing, asap.",
+        "date": "Reviewed in the United States on April 11, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flickers, a lot.",
+        "userName": "Quentin P.",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3V5MXCRDYFFBU",
+        "text": "Easy to install and works well id buy again if needed",
+        "date": "Reviewed in the United States on April 10, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good",
+        "userName": "Jennifer",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R26UXOC917GKX6",
+        "text": "I am a huge fan of Leviton products over cheaper knockoff brands. I bought this dimmer switch for the chandelier in our dining room. The chandelier has dimmable LED bulbs and this dimmer switch dims them smoothly and accurately without any flickering (had problems with cheaper brands). I also like the fact that it has a separate on/off switch from the dimmer itself. I can go from full brightness to barely visible light, so the range of dimming it outstanding. This switch works with both LED and incandescent bulbs and is great value for the money. I expect that it will last for years to come.",
+        "date": "Reviewed in the United States on April 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy Install, No LED Flicker, Smooth Dimming",
+        "userName": "Jeffrey S",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RU5FHYL7IAVVK",
+        "text": "Item was used. Missing a screw to screw into the electrical box. Copper wires stripped and twisted already. Light switch showed signs of wear. Plastic packaging open as well.",
+        "date": "Reviewed in the United States on April 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Missing Parts and used",
+        "userName": "JL",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/7173eSJ7CmL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71C8224NjPL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71xIz7PHtiL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2Q04VUUNE2H12",
+        "text": "Caused really bad flickering in my new dimmable led light. Would not recommend.",
+        "date": "Reviewed in the United States on April 2, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flickering",
+        "userName": "Housebythebeach",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2JXW9H5GULHN2",
+        "text": "Super easy to install, just took a few minutes. Used with my LED Flat Panel Light Surface Mount lights.",
+        "date": "Reviewed in the United States on April 1, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great, easy to install",
+        "userName": "Doyle Tatum",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RN363RXJ9Z6FC",
+        "text": "Excellent dimmer switch. Set this up with a intermatic 24 hour mechanical 24 hr timer, as a 3 way. Works great.",
+        "date": "Reviewed in the United States on March 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very reliable and compatible",
+        "userName": "Glen",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1WJG9KD62OU4Q",
+        "text": "Installed this switch to control 7 dimmable LED bulb can lights. It failed within 2 weeks. Replaced the switch like-for-like with another one. Failed within 2 weeks.",
+        "date": "Reviewed in the United States on March 24, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed within weeks.",
+        "userName": "Andy Lee",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2R2VDYF3OVG06",
+        "text": "Package was cut open. Parts were missing (wire nuts). Worst of all, the ground wire was clipped and not useful. Clearly not new but was sold as new. total misrepresentation.",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Sold as new but clearly used and damaged.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71M+8AyxdWL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71aZqrnWZwL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71zOwwS3p0L._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3PFBUX6CTAA2X",
+        "text": "Works great. I replaced my old dimmer control which you adjusted by turning a knob with this. I like that you can set the brightness and turn it on or off separately. The old switch you had to turn it all the way to the left to turn it off and then turn it the other way to turn it on and then find the desired brightness every time. With this one, there is an on and off switch and a slider for the brightness. When you turn the light off, the next time you turn it on, it is set to the same brightness. I have an old house so the ground wire is attached to the metal box so it was a bit confusing trying to install the new switch. I’m not an electrician so I was worried that I was going to burn the house down. But I and my house are still here so I guess I installed it correctly.",
+        "date": "Reviewed in the United States on March 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great dimmer switch",
+        "userName": "Momo",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1G6WBNYG92A5Z",
+        "text": "A little confusing at first but once you read the instructions and view a YouTube video of the product it’s pretty simple. I used it to connect one sconce so the neutral and 3 way wire were obsolete. I used the included caps to seal them. Make sure you don’t mix up the line and load wires. My wires were both black. Use a multimeter to check for power then shut the breaker off for safety. My load wire was a thicker gauge wire which made it a simple transfer. The switch was pretty soft to the touch not a loud snap. The dimmer toggle moved smoothly. I will replace other outlets using this item in the future. Btw, I ordered another one via the used but like new option and it was a mess. There is no quality control.",
+        "date": "Reviewed in the United States on March 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install but don’t buy it used",
+        "userName": "ac",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71Ta2w-y2qL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71fniBT7uRL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2JOKRBL0JETXN",
+        "text": "Excellent product, most pleased. Worked like a charm.",
+        "date": "Reviewed in the United States on March 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent!",
+        "userName": "LuvCats",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RAP00WKCJ2KE8",
+        "text": "We bought this switch to replace a switch that has a round knob. This one works much better for us. If it lasts it will prove to be very good...so far so good.",
+        "date": "Reviewed in the United States on March 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "So Far So Good",
+        "userName": "Ellen",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1IPGQMGNWLU1N",
+        "text": "There is a slight delay in the diming slider which is frustrating",
+        "date": "Reviewed in the United States on March 10, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Delay in slider",
+        "userName": "indira balkaran",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R30PW9OVA5WPK0",
+        "text": "I installed this switch with led lights and they flickered and had a delay turning on.",
+        "date": "Reviewed in the United States on March 4, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "It flickers",
+        "userName": "Austin Blodgett",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1P2KT9UUYXK51",
+        "text": "as expected",
+        "date": "Reviewed in the United States on March 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "served my purpose",
+        "userName": "Jack T.",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2JEPTLF9VHSSU",
+        "text": "Good Switch. Quality stuff.",
+        "date": "Reviewed in the United States on February 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Stuff",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3LN517TBYKY4B",
+        "text": "The dimmer function stopped working for me after 7 months. Before then it was great. If you read the reviews you’ll see a pattern of this so I’d strongly recommend avoiding so you don’t have the hassle of having to buy/install another one.",
+        "date": "Reviewed in the United States on February 12, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "There is a pattern of these failing within a year",
+        "userName": "atter",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R37VXMJJEWAX5U",
+        "text": "I've installed 50 of these over the years, and they've always worked great. But, this latest batch does not allow you to set the minimum light level low enough for my preference. Even using the special AB switch does not make the lights go low enough. All three of the new switches I just bought on Amazon have this problem and on three different sets of lights.",
+        "date": "Reviewed in the United States on February 11, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Light level won't go low enough",
+        "userName": "Super techie",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RZ5WXTPB6C8C8",
+        "text": "We bought this to put our 4 LED lights on a dimmer. It was easy to install and works great. Would buy again!",
+        "date": "Reviewed in the United States on February 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Katie",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RD5VP5I9SEGM1",
+        "text": "Easy install. Works great. Buy it you will like it.",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "works great",
+        "userName": "Skip C Walnut Creek CA",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RL51FOPZWERDC",
+        "text": "Great switch and dimmer. Read the programming with A and B switches. Min worked great. It should program all 3 levels. Where dimmer is when you move from A to B determines which of the 3 levels you are then setting.",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great functionality",
+        "userName": "Tim Yahr",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1TZB73U92PQ79",
+        "text": "Please tell me which faceplate to order.",
+        "date": "Reviewed in the United States on January 26, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "No Faceplate",
+        "userName": "Valerie B. Wang",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1CQG0DXTBJM5Z",
+        "text": "Install was easy and quality appears to be good, but no Locator LED as stated in specifications. Disappointing as I need to find these switches in the dark (like the old ones I replaced). I double-checked specs before ordering as I knew I needed that feature.",
+        "date": "Reviewed in the United States on January 26, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good, but no Locator LED as Advertised?",
+        "userName": "Choreo",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1DA9CCJ1A10TE",
+        "text": "Changed bathroom lighting and then is what we used, works great.",
+        "date": "Reviewed in the United States on January 25, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs",
+        "userName": "Theresa Anderson",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2L6K6FMY2XQZX",
+        "text": "Would you believe this is how it arrived? Inside a bag with the package obviously torn open and then taped up. Even the ends are stripped so this was obviously used. Needless to say it didn't work and when I tested it with my volt meter I couldn't open the ckt. What a waste of time.",
+        "date": "Reviewed in the United States on January 23, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Used junk",
+        "userName": "Bwalter",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71xluTmk+JL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81h-sG4m7gL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1SUWAYSVGV003",
+        "text": "I bought 5 of these to replace old dimmer switches in the house for LED dimming bulbs. Everything was fine until one started failing its dimming features. I changed the bulbs and checked wiring to ensure everything was fine and got another switch which fixed the issue. No switch should have such poor longevity. Would not recommend for my next electric build.",
+        "date": "Reviewed in the United States on January 10, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dimming stopped working after 8 months",
+        "userName": "Y.",
+        "numberOfHelpful": 2,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R34ZD3M1ACO70P",
+        "text": "The light still turns on and off but I can no longer dim it. I installed the dimmer in August and it failed in January. That's only 5 months. Surely they can do better.",
+        "date": "Reviewed in the United States on January 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed after only 5 months",
+        "userName": "Conure",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "RV2ZMHI5CGXNQ",
+        "text": "I would have given this 5 stars: it works better than others I bought recently on Amazon. The others included a matching wall plate. This does not, and it was difficult to find one that was compatible. Worse, I did not know I needed a wall plate until it was delivered (see small print on dimmer package), since the Amazon description omits this fact.",
+        "date": "Reviewed in the United States on January 9, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Great dimmer switch, no wall plate",
+        "userName": "Arra Avakian",
+        "numberOfHelpful": 3,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71Eum2rnO3L._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R3QOIAZWMFB7PF",
+        "text": "Advertised as new.",
+        "date": "Reviewed in the United States on December 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Scratched with repackaged box",
+        "userName": "publius",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R2PB122JRMKF9C",
+        "text": "The slider doesn't work effectively anymore. Its always either high or low. No in between. Sometimes it always stays high even after the slider is on low end. Not worth it. Dont recommend buying it.",
+        "date": "Reviewed in the United States on December 27, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working in 3 months",
+        "userName": "Shueb",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R20OIE40YKEOA9",
+        "text": "After 6 months it stopped working properly. Might be I got a bad one. Worked great until after 6 months.",
+        "date": "Reviewed in the United States on December 22, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Stoped working",
+        "userName": "Nighlwing",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R23545C4DNWDE9",
+        "text": "easily installed by do-it-yourselfer",
+        "date": "Reviewed in the United States on December 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "easy installation",
+        "userName": "Robert Karriker",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0076HPM8A",
+        "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 1691,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 6141,
+        "productRating": "4.5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 76
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 4
+          }
+        },
+        "reviewId": "R1P7SI4JEGMFGT",
+        "text": "Replaced older slider dimmer which the cap kept coming off.",
+        "date": "Reviewed in the United States on December 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "Michael Miller",
+        "numberOfHelpful": 0,
+        "variationId": "B0076HPM8A",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

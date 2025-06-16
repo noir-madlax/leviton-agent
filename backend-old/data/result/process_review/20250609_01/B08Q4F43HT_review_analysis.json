@@ -1,0 +1,469 @@
+{
+  "product_title": "Enbrighten Zigbee Smart Light Switch, QuickFit & SimpleWire, Pairs Directly with Echo Show 10, Echo Studio, Eero Pro 6, Alexa & Google Assistant, Smart Light Switch, 43078",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 34,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@paddle design with standard appearance": {
+          "+": [
+            8
+          ]
+        },
+        "B@ivory switch paddle included": {
+          "+": [
+            5
+          ]
+        },
+        "C@ivory paddle slightly lighter shade than other switches": {
+          "-": [
+            5
+          ]
+        },
+        "D@blue LED indicator light": {
+          "-": [
+            1,
+            25
+          ],
+          "+": [
+            8
+          ]
+        },
+        "E@bone/white switches included": {
+          "+": [
+            19
+          ]
+        }
+      },
+      "construction": {
+        "F@well made": {
+          "+": [
+            0,
+            6
+          ]
+        },
+        "G@audible click on relay": {
+          "-": [
+            19
+          ]
+        }
+      },
+      "wiring": {
+        "H@screw terminals with clamp down style": {
+          "+": [
+            8
+          ]
+        },
+        "I@multiple wire entries at each terminal": {
+          "+": [
+            8
+          ]
+        },
+        "J@all connections via screw terminals": {
+          "+": [
+            8
+          ]
+        },
+        "K@no wire leads from switch": {
+          "+": [
+            8
+          ]
+        },
+        "L@requires neutral wire": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "dimensions": {
+        "M@fits in average sized electrical box": {
+          "+": [
+            11
+          ]
+        },
+        "N@will not fit in super shallow wall box": {
+          "-": [
+            11
+          ]
+        },
+        "O@fits in 4 gang box": {
+          "+": [
+            19
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "F": [
+              0
+            ],
+            "H": [
+              8
+            ],
+            "I": [
+              8
+            ],
+            "J": [
+              8
+            ],
+            "K": [
+              8
+            ],
+            "?": [
+              6,
+              17,
+              26,
+              27
+            ]
+          }
+        },
+        "b@simple wire setup": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "pairing": {
+        "c@paired instantly": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "d@pairing easy": {
+          "+": {
+            "?": [
+              6,
+              17,
+              29
+            ]
+          }
+        },
+        "e@immediate pairing": {
+          "+": {
+            "?": [
+              8,
+              26,
+              32
+            ]
+          }
+        },
+        "f@discovery with Alexa difficult": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "g@failed to pair": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@putting in pairing mode not intuitive": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "i@flawless function": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "j@work correctly only sometimes": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "k@become unavailable multiple times daily": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "l@non-operational despite receiving power": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "m@failed within 6 months": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "n@most reliable": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "o@does not drop connection": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "p@last forever": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "responsiveness": {
+        "q@react instantly": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "r@super responsive": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "s@responsive and quick": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "t@instantaneous response": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "u@wifi switches slower to respond": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "zigbee_functionality": {
+        "v@function as zigbee routers": {
+          "+": {
+            "?": [
+              0,
+              2
+            ]
+          }
+        },
+        "w@work well as zigbee router/repeater": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "x@acts as zigbee radio/repeater": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "monitoring": {
+        "y@provide basic power monitoring": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "z@measures wattage": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "aa@only reports on or off": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "led_control": {
+        "ab@blue LED controllable": {
+          "+": {
+            "D": [
+              8,
+              27
+            ]
+          }
+        },
+        "ac@unable to turn off blue LED": {
+          "-": {
+            "D": [
+              25
+            ]
+          }
+        }
+      },
+      "advanced_features": {
+        "ad@does not sense double/triple taps": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "ae@does not report long holds": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "af@voice control disabled": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_automation": {
+        "+": {
+          "c": [
+            0
+          ],
+          "i": [
+            0
+          ],
+          "v": [
+            0
+          ],
+          "d": [
+            6
+          ],
+          "q": [
+            6
+          ],
+          "r": [
+            12
+          ],
+          "e": [
+            18
+          ],
+          "n": [
+            30
+          ],
+          "o": [
+            11
+          ]
+        },
+        "-": {
+          "k": [
+            1
+          ],
+          "af": [
+            16
+          ]
+        }
+      },
+      "3_way_lighting": {
+        "+": {
+          "a": [
+            0
+          ],
+          "?": [
+            2,
+            5
+          ]
+        }
+      },
+      "replacing_old_switches": {
+        "+": {
+          "?": [
+            2,
+            7
+          ]
+        },
+        "-": {
+          "g": [
+            3
+          ],
+          "l": [
+            3
+          ]
+        }
+      },
+      "outdoor_lighting": {
+        "+": {
+          "a": [
+            8
+          ],
+          "e": [
+            8
+          ],
+          "s": [
+            13
+          ]
+        }
+      },
+      "bathroom_automation": {
+        "+": {
+          "z": [
+            9
+          ]
+        }
+      },
+      "garage_lighting": {
+        "+": {
+          "d": [
+            13
+          ],
+          "s": [
+            13
+          ]
+        }
+      },
+      "pantry_automation": {
+        "+": {
+          "e": [
+            26
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:31.168605"
+}

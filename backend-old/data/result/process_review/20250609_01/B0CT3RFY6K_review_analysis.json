@@ -1,0 +1,365 @@
+{
+  "product_title": "Lutron Maestro LED+ Dual Dimmer and Switch | 75-Watt LED Bulbs/2.5A Fans, Single-Pole | MACL-L3S25-WH | White",
+  "product_category": "Dual Circuit Dimmer Switches",
+  "total_reviews": 35,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@extremely deep and wide with heat sinks": {
+          "-": [
+            33
+          ]
+        },
+        "B@very compact": {
+          "+": [
+            11
+          ]
+        }
+      },
+      "design": {
+        "C@typical excellent Lutron design": {
+          "+": [
+            11
+          ]
+        },
+        "D@very well made and designed": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "build_quality": {
+        "E@typical excellent Lutron build": {
+          "+": [
+            11
+          ]
+        }
+      },
+      "internal_electronics": {
+        "F@internal electronics in modern switches that are affected by each other": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "switch_configuration": {
+        "G@upper switch is dimmer and lower is on/off switch": {
+          "+": [
+            12
+          ]
+        },
+        "H@top button is dimmer, bottom button controls second light and is not dimmer": {
+          "+": [
+            23
+          ]
+        },
+        "I@LED dimmer on top and separate single pole switch on bottom on single yoke": {
+          "+": [
+            33
+          ]
+        },
+        "J@fan switch side has 3 specific speeds": {
+          "-": [
+            16
+          ]
+        }
+      },
+      "sound": {
+        "K@loud noticeable click from inside when turned on": {
+          "-": [
+            29
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@did not work from day 1": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@works perfectly": {
+          "+": {
+            "?": [
+              2,
+              4,
+              7,
+              8
+            ]
+          }
+        },
+        "c@didn't work when wired up": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "d@LEDs blinked and ceiling fan wouldn't turn off initially": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@works perfectly after bulb change": {
+          "+": {
+            "F": [
+              6
+            ]
+          }
+        },
+        "f@quit working after 2 months": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@works well": {
+          "+": {
+            "E": [
+              11
+            ]
+          }
+        },
+        "h@failed after 32 days": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "i@switch once installed did not work": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "j@non-dimmable switch was automatically on": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "k@both were bad out of the box": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "l@switch works as it should": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "m@does exactly what it is supposed to do": {
+          "+": {
+            "D": [
+              32
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "n@dimming features work well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "o@dims as should": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "p@dims fixture perfectly": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "q@LED lights randomly flicker after installation": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "r@dimmer switch is awesome": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "memory_function": {
+        "s@keeps same light setting when shut off": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "t@has memory for light output": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "installation": {
+        "u@easy to install": {
+          "+": {
+            "?": [
+              2,
+              7,
+              14,
+              26
+            ]
+          }
+        },
+        "v@super easy according to electrician": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "w@easy installation": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "x@need extra deep box or it won't work": {
+          "-": {
+            "A": [
+              33
+            ]
+          }
+        }
+      },
+      "switch_operation": {
+        "y@switch side stuck closed out of the box": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "z@works perfect with GE LED lightbulbs": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "aa@does not work for second light due to 3 specific speeds": {
+          "-": {
+            "J": [
+              16
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom_fan_light": {
+        "+": {
+          "b": [
+            3
+          ]
+        }
+      },
+      "ceiling_fan_and_light_fixtures": {
+        "+": {
+          "e": [
+            6
+          ]
+        }
+      },
+      "vanity_light_and_fan_control": {
+        "+": {
+          "b": [
+            7
+          ]
+        }
+      },
+      "coach_lights_and_exterior_entry_light": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "outdoor_lighting_with_dusk_to_dawn_control": {
+        "+": {
+          "G": [
+            12
+          ]
+        }
+      },
+      "island_lights_and_breakfast_table": {
+        "+": {
+          "?": [
+            19
+          ]
+        }
+      },
+      "vanity_room_bathroom": {
+        "+": {
+          "H": [
+            23
+          ]
+        }
+      },
+      "lighting_fixture_and_ceiling_fan_in_single_box": {
+        "+": {
+          "t": [
+            30
+          ]
+        }
+      },
+      "wall_lighting_and_exhaust_fan_control": {
+        "+": {
+          "r": [
+            31
+          ]
+        }
+      },
+      "porch_recessed_lights_and_door_wall_light": {
+        "+": {
+          "?": [
+            34
+          ]
+        }
+      },
+      "garbage_disposal_control": {
+        "-": {
+          "j": [
+            24
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:40.431992"
+}

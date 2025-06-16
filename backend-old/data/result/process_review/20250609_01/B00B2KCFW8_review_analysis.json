@@ -1,0 +1,374 @@
+{
+  "product_title": "adorne, sofTap, Home Lighting Controls, Dimmer Light Switch, 3 Way Dimmer Switch, White, Single Pole Dimmer Switch, ADTP703TUW4",
+  "product_category": "Touch Activated Dimmer Switches",
+  "total_reviews": 19,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks great and awesome": {
+          "+": [
+            0,
+            1,
+            5
+          ]
+        },
+        "B@beautiful design": {
+          "+": [
+            1
+          ]
+        },
+        "C@classy appearance": {
+          "+": [
+            9
+          ]
+        },
+        "D@modern accent look": {
+          "+": [
+            6
+          ]
+        },
+        "E@clean look, nicer than average dimmer": {
+          "+": [
+            7
+          ]
+        },
+        "F@looks cool and pretty": {
+          "+": [
+            13
+          ]
+        },
+        "G@looks fantastic": {
+          "+": [
+            17
+          ]
+        },
+        "H@Adorne styling initially strange but grows on you": {
+          "+": [
+            17
+          ]
+        }
+      },
+      "construction": {
+        "I@good quality construction with solid feel": {
+          "+": [
+            17
+          ]
+        },
+        "J@good fit and finish despite plastic materials": {
+          "+": [
+            17
+          ]
+        },
+        "K@impressed build quality": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "size_compatibility": {
+        "L@new Le Grand product line not backward compatible in size": {
+          "-": [
+            12
+          ]
+        },
+        "M@different size and doesn't match old frame": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "wiring_requirements": {
+        "N@requires three wires": {
+          "+": [
+            4
+          ]
+        },
+        "O@needs neutral wire connection": {
+          "+": [
+            15
+          ]
+        },
+        "P@requires special plates": {
+          "-": [
+            18
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well": {
+          "+": {
+            "?": [
+              0,
+              2,
+              5
+            ]
+          }
+        },
+        "b@works as advertised": {
+          "+": {
+            "N": [
+              4
+            ]
+          }
+        },
+        "c@didn't work": {
+          "-": {
+            "?": [
+              3,
+              12
+            ]
+          }
+        },
+        "d@works as expected": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@does the job": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "f@dimmer works great": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "g@clean dimming": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "h@fades out to black, not snap off": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "i@great quality dimmer": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "j@smooth action": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "k@returns to previous dimmed level": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "l@30-second fade feature funky with sudden shut-off": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "LED_compatibility": {
+        "m@works with TCP LED lamps": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "n@works great with 5 recessed LEDs": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "o@works with 15W Recessed Panel Light": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "p@works very well with LED bulbs without flickering": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "q@doesn't cure buzzing with LED lights": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "r@will not work well with non-dimmable bulbs": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "installation": {
+        "s@easy to install": {
+          "+": {
+            "?": [
+              5,
+              6,
+              9,
+              17
+            ]
+          }
+        },
+        "t@not easy installation": {
+          "-": {
+            "P": [
+              18
+            ]
+          }
+        },
+        "u@takes a lot of work": {
+          "-": {
+            "P": [
+              18
+            ]
+          }
+        },
+        "v@not just replacement for standard switch": {
+          "-": {
+            "P": [
+              18
+            ]
+          }
+        }
+      },
+      "heat_management": {
+        "w@handles 150 watt load great, barely getting warm": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "night_visibility": {
+        "x@night light allows switch to be seen in dark": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "calibration": {
+        "y@self-calibrating feature works very well": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "configuration": {
+        "z@works in standard or 3-way configuration": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_lighting": {
+        "+": {
+          "m,n,o,p": [
+            2,
+            7,
+            10,
+            11,
+            17
+          ]
+        },
+        "-": {
+          "q": [
+            14
+          ]
+        }
+      },
+      "kitchen_renovation": {
+        "+": {
+          "D,K,s": [
+            6
+          ]
+        }
+      },
+      "patio_lighting": {
+        "+": {
+          "l": [
+            16
+          ]
+        }
+      },
+      "recessed_lighting": {
+        "+": {
+          "n,w": [
+            2,
+            15
+          ]
+        }
+      },
+      "mood_lighting": {
+        "+": {
+          "h,l": [
+            16
+          ]
+        }
+      },
+      "older_building_without_three_wires": {
+        "-": {
+          "N": [
+            4
+          ]
+        }
+      },
+      "replacement_for_old_dimmer": {
+        "-": {
+          "L,M": [
+            12
+          ]
+        }
+      },
+      "high_load_applications": {
+        "+": {
+          "w": [
+            15
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:38.084500"
+}

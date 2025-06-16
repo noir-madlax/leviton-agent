@@ -1,0 +1,132 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:34:05.753494",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0DTDFCFW9",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 1,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0DTDFCFW9",
+    "title": "Single Pole Decorator Light Switch, 15A 120/277V, Paddle Rocker, On/Off Wall Switch, Residential Grade, White, UL/CUL Certified (2-Pack)",
+    "brand": "HANIVERSE",
+    "model_number": NaN,
+    "price_usd": 9.99,
+    "rating": 5.0,
+    "reviews_count": 2.0,
+    "category": "Light Switches",
+    "product_segment": "Single Pole Rocker Switches",
+    "product_url": "https://www.amazon.com/dp/B0DTDFCFW9"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DTDFCFW9",
+        "productTitle": "HANIVERSE Single Pole Decorator Light Switch, 15A 120/277V, Paddle Rocker, On/Off Wall Switch, Residential Grade, White, UL/CUL Certified (2-Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2,
+        "productRating": "5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 100
+          },
+          "fourStar": {
+            "percentage": 0
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R30F0JUX3UZQRI",
+        "text": "These work well as light switches. Easy to install and works as expected.",
+        "date": "Reviewed in the United States on May 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Tiffany and Justin Frazier",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DTDFCFW9",
+        "productTitle": "HANIVERSE Single Pole Decorator Light Switch, 15A 120/277V, Paddle Rocker, On/Off Wall Switch, Residential Grade, White, UL/CUL Certified (2-Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 2,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2,
+        "productRating": "5 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 100
+          },
+          "fourStar": {
+            "percentage": 0
+          },
+          "threeStar": {
+            "percentage": 0
+          },
+          "twoStar": {
+            "percentage": 0
+          },
+          "oneStar": {
+            "percentage": 0
+          }
+        },
+        "reviewId": "R1WWVQ5CJPNXPQ",
+        "text": "These are nothing fancy - but that's not a bad thing. They're solidly made and not flimsy, and have a good \"click\" as they switch. There are both screws and push-in connections on the back. Some cheaper switches are missing one or the other, so it's a nice thing that these have both. They use standard screws and decora plates, and so far everything fits well.",
+        "date": "Reviewed in the United States on May 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice basic switch",
+        "userName": "brock",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71LKNaDQ-WL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81fDddbhr7L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/81sfVrbPBgL._SY88.jpg"
+        ],
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 2,
+    "pages_scraped": 1,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

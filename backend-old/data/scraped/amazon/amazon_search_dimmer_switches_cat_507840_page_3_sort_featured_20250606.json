@@ -1,0 +1,1676 @@
+{
+  "request_info": {
+    "success": true,
+    "credits_used": 9,
+    "credits_remaining": 91,
+    "credits_used_this_request": 1
+  },
+  "request_parameters": {
+    "type": "search",
+    "amazon_domain": "amazon.com",
+    "page": "3",
+    "search_term": "dimmer switches",
+    "category_id": "507840",
+    "sort_by": "featured",
+    "exclude_sponsored": "true"
+  },
+  "request_metadata": {
+    "created_at": "2025-06-06T19:22:59.786Z",
+    "processed_at": "2025-06-06T19:23:03.745Z",
+    "total_time_taken": 3.96,
+    "amazon_url": "https://www.amazon.com/s/?k=dimmer+switches&ref=nb_sb_noss_2&node=507840&page=3&s=relevancerank"
+  },
+  "search_results": [
+    {
+      "position": 1,
+      "title": "DEWENWILS Dimmer Switch for LED Lights, 600W Incandescent/Halogen and 150W CFL/LED, Single-Pole or 3-Way Dimmer Light Switch, ETL ＆ cUL Listed, White, 2 Packs",
+      "asin": "B0D62QM98H",
+      "link": "https://www.amazon.com/DEWENWILS-Dimmer-Incandescent-Halogen-Single-Pole/dp/B0D62QM98H/ref=sr_1_52?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-52",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61ROB-c9KnL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.4,
+      "ratings_total": 90,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 21.99,
+          "currency": "USD",
+          "raw": "$21.99",
+          "asin": "B0D62QM98H",
+          "link": "https://www.amazon.com/DEWENWILS-Dimmer-Incandescent-Halogen-Single-Pole/dp/B0D62QM98H/ref=sr_1_52?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-52"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 21.99,
+        "currency": "USD",
+        "raw": "$21.99",
+        "asin": "B0D62QM98H",
+        "link": "https://www.amazon.com/DEWENWILS-Dimmer-Incandescent-Halogen-Single-Pole/dp/B0D62QM98H/ref=sr_1_52?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-52"
+      }
+    },
+    {
+      "position": 2,
+      "title": "Lutron Maestro LED+ Dual Dimmer and Switch | 75-Watt LED Bulbs/2.5A Fans, Single-Pole | MACL-L3S25-WH | White",
+      "asin": "B0CT3RFY6K",
+      "link": "https://www.amazon.com/Lutron-Maestro-75-Watt-Single-Pole-MACL-L3S25-WH/dp/B0CT3RFY6K/ref=sr_1_53?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-53",
+      "recent_sales": "500+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71OAVsRl9xL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 118,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 71.38,
+          "currency": "USD",
+          "raw": "$71.38",
+          "asin": "B0CT3RFY6K",
+          "link": "https://www.amazon.com/Lutron-Maestro-75-Watt-Single-Pole-MACL-L3S25-WH/dp/B0CT3RFY6K/ref=sr_1_53?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-53"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 71.38,
+        "currency": "USD",
+        "raw": "$71.38",
+        "asin": "B0CT3RFY6K",
+        "link": "https://www.amazon.com/Lutron-Maestro-75-Watt-Single-Pole-MACL-L3S25-WH/dp/B0CT3RFY6K/ref=sr_1_53?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-53"
+      }
+    },
+    {
+      "position": 3,
+      "title": "Zooz 700 Series Z-Wave Plus 0-10 V Dimmer ZEN54 | Z-Wave Hub Required (Sold Separately)",
+      "asin": "B0C7J4YMSZ",
+      "link": "https://www.amazon.com/Z-Wave-Dimmer-ZEN54-Required-Separately/dp/B0C7J4YMSZ/ref=sr_1_54?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-54",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51Xz28ks9CL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.4,
+      "ratings_total": 258,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 43.95,
+          "currency": "USD",
+          "raw": "$43.95",
+          "asin": "B0C7J4YMSZ",
+          "link": "https://www.amazon.com/Z-Wave-Dimmer-ZEN54-Required-Separately/dp/B0C7J4YMSZ/ref=sr_1_54?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-54"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 43.95,
+        "currency": "USD",
+        "raw": "$43.95",
+        "asin": "B0C7J4YMSZ",
+        "link": "https://www.amazon.com/Z-Wave-Dimmer-ZEN54-Required-Separately/dp/B0C7J4YMSZ/ref=sr_1_54?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-54"
+      }
+    },
+    {
+      "position": 4,
+      "title": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+      "asin": "B0055VD9HK",
+      "link": "https://www.amazon.com/Lutron-Dimmable-Incandescent-Single-Pole-TGCL-153PH-IV/dp/B0055VD9HK/ref=sr_1_55?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-55",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71Qr87sbXHL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 2461,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 22.97,
+          "currency": "USD",
+          "raw": "$22.97",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$24.97",
+          "asin": "B0055VD9HK",
+          "link": "https://www.amazon.com/Lutron-Dimmable-Incandescent-Single-Pole-TGCL-153PH-IV/dp/B0055VD9HK/ref=sr_1_55?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-55"
+        },
+        {
+          "symbol": "$",
+          "value": 24.97,
+          "currency": "USD",
+          "raw": "$24.97",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/Lutron-Dimmable-Incandescent-Single-Pole-TGCL-153PH-IV/dp/B0055VD9HK/ref=sr_1_55?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-55",
+          "asin": "B0055VD9HK"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 22.97,
+        "currency": "USD",
+        "raw": "$22.97",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$24.97",
+        "asin": "B0055VD9HK",
+        "link": "https://www.amazon.com/Lutron-Dimmable-Incandescent-Single-Pole-TGCL-153PH-IV/dp/B0055VD9HK/ref=sr_1_55?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-55"
+      }
+    },
+    {
+      "position": 5,
+      "title": "Lutron Sunnata Touch Dimmer Switch with Wallplate with LED+ Advanced Technology, for LED and Incandescent, 3 Way/Multi Location, STCL-153MW-WH, White",
+      "asin": "B0BX4KH8HV",
+      "link": "https://www.amazon.com/Lutron-Wallplate-Technology-Incandescent-STCL-153MW-WH/dp/B0BX4KH8HV/ref=sr_1_56?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-56",
+      "recent_sales": "200+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51LrFOIuF-L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 411,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 46.2,
+          "currency": "USD",
+          "raw": "$46.20",
+          "asin": "B0BX4KH8HV",
+          "link": "https://www.amazon.com/Lutron-Wallplate-Technology-Incandescent-STCL-153MW-WH/dp/B0BX4KH8HV/ref=sr_1_56?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-56"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 46.2,
+        "currency": "USD",
+        "raw": "$46.20",
+        "asin": "B0BX4KH8HV",
+        "link": "https://www.amazon.com/Lutron-Wallplate-Technology-Incandescent-STCL-153MW-WH/dp/B0BX4KH8HV/ref=sr_1_56?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-56"
+      }
+    },
+    {
+      "position": 6,
+      "title": "BESTTEN Super Slim Quiet Dimmer Switch, Max 300W LED, CFL Lights and 600W Incandescent, Halogen, Single Pole or 3-Way Dimmer, Slide Dimmable Light Switch, ETL Listed, White",
+      "asin": "B0D1QZ78XT",
+      "link": "https://www.amazon.com/BESTTEN-Incandescent-Halogen-Single-Pole-Dimmable/dp/B0D1QZ78XT/ref=sr_1_57?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-57",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61VsZVsTI9L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 175,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 11.99,
+          "currency": "USD",
+          "raw": "$11.99",
+          "asin": "B0D1QZ78XT",
+          "link": "https://www.amazon.com/BESTTEN-Incandescent-Halogen-Single-Pole-Dimmable/dp/B0D1QZ78XT/ref=sr_1_57?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-57"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 11.99,
+        "currency": "USD",
+        "raw": "$11.99",
+        "asin": "B0D1QZ78XT",
+        "link": "https://www.amazon.com/BESTTEN-Incandescent-Halogen-Single-Pole-Dimmable/dp/B0D1QZ78XT/ref=sr_1_57?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-57"
+      }
+    },
+    {
+      "position": 7,
+      "title": "ELEGRP Digital Rotating Dimmer Switch for Dimmable LED, CFL and Incandescent Light Lamp Bulbs, Single Pole / 3-Way Rotary Dimmer Switch, Wall Plate Included, UL Listed (1 Pack, Matte White)",
+      "asin": "B09V7HG417",
+      "link": "https://www.amazon.com/ELEGRP-Rotating-Dimmable-Incandescent-Included/dp/B09V7HG417/ref=sr_1_58?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-58",
+      "recent_sales": "200+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/417JV3wI56L._AC_UL320_.jpg",
+      "unit_price": "$1.30$1.30/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 302,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 12.99,
+          "currency": "USD",
+          "raw": "$12.99",
+          "list_price": "$1.30",
+          "asin": "B09V7HG417",
+          "link": "https://www.amazon.com/ELEGRP-Rotating-Dimmable-Incandescent-Included/dp/B09V7HG417/ref=sr_1_58?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-58"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 12.99,
+        "currency": "USD",
+        "raw": "$12.99",
+        "list_price": "$1.30",
+        "asin": "B09V7HG417",
+        "link": "https://www.amazon.com/ELEGRP-Rotating-Dimmable-Incandescent-Included/dp/B09V7HG417/ref=sr_1_58?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-58"
+      }
+    },
+    {
+      "position": 8,
+      "title": "1-Gang Satin Solid Brass Rotary Dimmer Switch, 15A 120V AC Wall Mount, TRIAC/Leading Edge 1-Way Compatible, Dimmable LED Light Control with Knob, Faceplate & Dimming Module",
+      "asin": "B0DTTB139J",
+      "link": "https://www.amazon.com/Leading-Compatible-Dimmable-Control-Faceplate/dp/B0DTTB139J/ref=sr_1_59?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-59",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61fFYF+EFFL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 5,
+      "ratings_total": 2,
+      "is_small_business": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 76.99,
+          "currency": "USD",
+          "raw": "$76.99",
+          "asin": "B0DTTB139J",
+          "link": "https://www.amazon.com/Leading-Compatible-Dimmable-Control-Faceplate/dp/B0DTTB139J/ref=sr_1_59?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-59"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 76.99,
+        "currency": "USD",
+        "raw": "$76.99",
+        "asin": "B0DTTB139J",
+        "link": "https://www.amazon.com/Leading-Compatible-Dimmable-Control-Faceplate/dp/B0DTTB139J/ref=sr_1_59?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-59"
+      }
+    },
+    {
+      "position": 9,
+      "title": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+      "asin": "B07SXDFH38",
+      "link": "https://www.amazon.com/Feit-Electric-DIM-Compatible-Assistant/dp/B07SXDFH38/ref=sr_1_60?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-60",
+      "recent_sales": "200+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61xANNrUY7L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 1483,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 18.69,
+          "currency": "USD",
+          "raw": "$18.69",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$24.99",
+          "asin": "B07SXDFH38",
+          "link": "https://www.amazon.com/Feit-Electric-DIM-Compatible-Assistant/dp/B07SXDFH38/ref=sr_1_60?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-60"
+        },
+        {
+          "symbol": "$",
+          "value": 24.99,
+          "currency": "USD",
+          "raw": "$24.99",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/Feit-Electric-DIM-Compatible-Assistant/dp/B07SXDFH38/ref=sr_1_60?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-60",
+          "asin": "B07SXDFH38"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 18.69,
+        "currency": "USD",
+        "raw": "$18.69",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$24.99",
+        "asin": "B07SXDFH38",
+        "link": "https://www.amazon.com/Feit-Electric-DIM-Compatible-Assistant/dp/B07SXDFH38/ref=sr_1_60?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-60"
+      }
+    },
+    {
+      "position": 10,
+      "title": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150W/Single-Pole or 3-Way, Light Almond (2-Pack)",
+      "asin": "B00P4FGRYO",
+      "link": "https://www.amazon.com/Lutron-Dimmable-Halogen-Incandescent-Single-Pole/dp/B00P4FGRYO/ref=sr_1_61?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-61",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51qTTm7IrQL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.9,
+      "ratings_total": 5,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 65.95,
+          "currency": "USD",
+          "raw": "$65.95",
+          "asin": "B00P4FGRYO",
+          "link": "https://www.amazon.com/Lutron-Dimmable-Halogen-Incandescent-Single-Pole/dp/B00P4FGRYO/ref=sr_1_61?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-61"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 65.95,
+        "currency": "USD",
+        "raw": "$65.95",
+        "asin": "B00P4FGRYO",
+        "link": "https://www.amazon.com/Lutron-Dimmable-Halogen-Incandescent-Single-Pole/dp/B00P4FGRYO/ref=sr_1_61?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-61"
+      }
+    },
+    {
+      "position": 11,
+      "title": "Philips Hue Smart Wireless Dimmer Switch V2 (Installation-Free, Exclusive Philips Hue Lights) for Indoor Home Lighting, Livingroom, Bedroom",
+      "asin": "B08PKMT2DV",
+      "link": "https://www.amazon.com/Philips-Hue-Wireless-Installation-Free-Exclusive/dp/B08PKMT2DV/ref=sr_1_62?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-62",
+      "recent_sales": "600+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/51HHVsvXi7L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 12567,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 31,
+          "currency": "USD",
+          "raw": "$31.00",
+          "asin": "B08PKMT2DV",
+          "link": "https://www.amazon.com/Philips-Hue-Wireless-Installation-Free-Exclusive/dp/B08PKMT2DV/ref=sr_1_62?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-62"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 31,
+        "currency": "USD",
+        "raw": "$31.00",
+        "asin": "B08PKMT2DV",
+        "link": "https://www.amazon.com/Philips-Hue-Wireless-Installation-Free-Exclusive/dp/B08PKMT2DV/ref=sr_1_62?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-62"
+      }
+    },
+    {
+      "position": 12,
+      "title": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Compatible with Alexa and Google Home, UL Certified, No Hub Required, Black",
+      "asin": "B0DG6G2SGZ",
+      "link": "https://www.amazon.com/Kasa-Smart-Compatible-Certified-Required/dp/B0DG6G2SGZ/ref=sr_1_63?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-63",
+      "recent_sales": "300+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61C3hsyi5HL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.5,
+      "ratings_total": 41955,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 21.99,
+          "currency": "USD",
+          "raw": "$21.99",
+          "list_price": "$5.00",
+          "asin": "B0DG6G2SGZ",
+          "link": "https://www.amazon.com/Kasa-Smart-Compatible-Certified-Required/dp/B0DG6G2SGZ/ref=sr_1_63?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-63"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 21.99,
+        "currency": "USD",
+        "raw": "$21.99",
+        "list_price": "$5.00",
+        "asin": "B0DG6G2SGZ",
+        "link": "https://www.amazon.com/Kasa-Smart-Compatible-Certified-Required/dp/B0DG6G2SGZ/ref=sr_1_63?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-63"
+      }
+    },
+    {
+      "position": 13,
+      "title": "Leviton IllumaTech Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, IPL06-10Z, White with Ivory and Light Almond Faceplates",
+      "asin": "B0076HPMK8",
+      "link": "https://www.amazon.com/Leviton-IPL06-10Z-IllumaTech-Universal-Incandescent/dp/B0076HPMK8/ref=sr_1_67?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-67",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71hhyRy4i5L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 437,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 24.76,
+          "currency": "USD",
+          "raw": "$24.76",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$27.24",
+          "asin": "B0076HPMK8",
+          "link": "https://www.amazon.com/Leviton-IPL06-10Z-IllumaTech-Universal-Incandescent/dp/B0076HPMK8/ref=sr_1_67?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-67"
+        },
+        {
+          "symbol": "$",
+          "value": 27.24,
+          "currency": "USD",
+          "raw": "$27.24",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/Leviton-IPL06-10Z-IllumaTech-Universal-Incandescent/dp/B0076HPMK8/ref=sr_1_67?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-67",
+          "asin": "B0076HPMK8"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 24.76,
+        "currency": "USD",
+        "raw": "$24.76",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$27.24",
+        "asin": "B0076HPMK8",
+        "link": "https://www.amazon.com/Leviton-IPL06-10Z-IllumaTech-Universal-Incandescent/dp/B0076HPMK8/ref=sr_1_67?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-67"
+      }
+    },
+    {
+      "position": 14,
+      "title": "Legrand Pass & Seymour LSCLDC163PWCCV4 450W LS Series Preset Dimmer Light Switch for Dimmable LED and CFL Bulbs Plus 1.6A Fan Control, Single Pole/3-Way, White (1 Count)",
+      "asin": "B01N1229L4",
+      "link": "https://www.amazon.com/Legrand-Seymour-Control-LSCLDC163PWCCV4-TradeMaster174/dp/B01N1229L4/ref=sr_1_68?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-68",
+      "recent_sales": "100+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71A65-hOa9L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 366,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 39.79,
+          "currency": "USD",
+          "raw": "$39.79",
+          "asin": "B01N1229L4",
+          "link": "https://www.amazon.com/Legrand-Seymour-Control-LSCLDC163PWCCV4-TradeMaster174/dp/B01N1229L4/ref=sr_1_68?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-68"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 39.79,
+        "currency": "USD",
+        "raw": "$39.79",
+        "asin": "B01N1229L4",
+        "link": "https://www.amazon.com/Legrand-Seymour-Control-LSCLDC163PWCCV4-TradeMaster174/dp/B01N1229L4/ref=sr_1_68?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-68"
+      }
+    },
+    {
+      "position": 15,
+      "title": "BESTTEN Super Slim Digital Led Dimmer Switch with Air Gap Power Cut Off Switch, 3 Button Control, Single Pole or 3 Way Dimmable Dimmer, Screwless Wallplate Included, ETL Listed, White",
+      "asin": "B08JTFN5CN",
+      "link": "https://www.amazon.com/BESTTEN-Dimmable-Screwless-Wallplate-Included/dp/B08JTFN5CN/ref=sr_1_69?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-69",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61dRC+XYaFL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.1,
+      "ratings_total": 247,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 14.99,
+          "currency": "USD",
+          "raw": "$14.99",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$18.99",
+          "asin": "B08JTFN5CN",
+          "link": "https://www.amazon.com/BESTTEN-Dimmable-Screwless-Wallplate-Included/dp/B08JTFN5CN/ref=sr_1_69?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-69"
+        },
+        {
+          "symbol": "$",
+          "value": 18.99,
+          "currency": "USD",
+          "raw": "$18.99",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/BESTTEN-Dimmable-Screwless-Wallplate-Included/dp/B08JTFN5CN/ref=sr_1_69?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-69",
+          "asin": "B08JTFN5CN"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 14.99,
+        "currency": "USD",
+        "raw": "$14.99",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$18.99",
+        "asin": "B08JTFN5CN",
+        "link": "https://www.amazon.com/BESTTEN-Dimmable-Screwless-Wallplate-Included/dp/B08JTFN5CN/ref=sr_1_69?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-69"
+      }
+    },
+    {
+      "position": 16,
+      "title": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+      "asin": "B07RJ14FBS",
+      "link": "https://www.amazon.com/Lutron-Aurora-Dimmer-Philips-Z3-1BRL-WH-L0/dp/B07RJ14FBS/ref=sr_1_70?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-70",
+      "recent_sales": "400+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61ZOaHZBtTL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 2900,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 39.95,
+          "currency": "USD",
+          "raw": "$39.95",
+          "name": "Primary",
+          "is_primary": true,
+          "list_price": "$50.00",
+          "asin": "B07RJ14FBS",
+          "link": "https://www.amazon.com/Lutron-Aurora-Dimmer-Philips-Z3-1BRL-WH-L0/dp/B07RJ14FBS/ref=sr_1_70?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-70"
+        },
+        {
+          "symbol": "$",
+          "value": 50,
+          "currency": "USD",
+          "raw": "$50.00",
+          "name": "Original",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/Lutron-Aurora-Dimmer-Philips-Z3-1BRL-WH-L0/dp/B07RJ14FBS/ref=sr_1_70?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-70",
+          "asin": "B07RJ14FBS"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 39.95,
+        "currency": "USD",
+        "raw": "$39.95",
+        "name": "Primary",
+        "is_primary": true,
+        "list_price": "$50.00",
+        "asin": "B07RJ14FBS",
+        "link": "https://www.amazon.com/Lutron-Aurora-Dimmer-Philips-Z3-1BRL-WH-L0/dp/B07RJ14FBS/ref=sr_1_70?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-70"
+      }
+    },
+    {
+      "position": 17,
+      "title": "GHome Smart Dimmer Switch Work with Alexa Google Home, Single Pole 2.4GHz Wi-Fi Switch for Dimmable LED CFL INC Light Bulbs, Neutral Wire Required, Not 3 Way, No Hub Required, 4Pack",
+      "asin": "B09LLY51DL",
+      "link": "https://www.amazon.com/Assistant-Single-Pole-Dimmable-Certified-Required/dp/B09LLY51DL/ref=sr_1_71?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-71",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61jy3j37VQL._AC_UL320_.jpg",
+      "unit_price": "$13.25$13.25/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.4,
+      "ratings_total": 690,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 52.99,
+          "currency": "USD",
+          "raw": "$52.99",
+          "list_price": "$13.25",
+          "asin": "B09LLY51DL",
+          "link": "https://www.amazon.com/Assistant-Single-Pole-Dimmable-Certified-Required/dp/B09LLY51DL/ref=sr_1_71?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-71"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 52.99,
+        "currency": "USD",
+        "raw": "$52.99",
+        "list_price": "$13.25",
+        "asin": "B09LLY51DL",
+        "link": "https://www.amazon.com/Assistant-Single-Pole-Dimmable-Certified-Required/dp/B09LLY51DL/ref=sr_1_71?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-71"
+      }
+    },
+    {
+      "position": 18,
+      "title": "Legrand radiant RH453PDBCCV6 450W Preset Decorator Rocker Dimmer Light Switch with Locator Light for Dimmable LED and CFL Bulbs, Single Pole/3-Way, Dark Bronze (1 Count)",
+      "asin": "B0734VSNGH",
+      "link": "https://www.amazon.com/Legrand-radiant-RH453PDBCCV6-Decorator-Dimmable/dp/B0734VSNGH/ref=sr_1_72?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-72",
+      "recent_sales": "100+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61dJd-r4TWL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 558,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 34.88,
+          "currency": "USD",
+          "raw": "$34.88",
+          "asin": "B0734VSNGH",
+          "link": "https://www.amazon.com/Legrand-radiant-RH453PDBCCV6-Decorator-Dimmable/dp/B0734VSNGH/ref=sr_1_72?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-72"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 34.88,
+        "currency": "USD",
+        "raw": "$34.88",
+        "asin": "B0734VSNGH",
+        "link": "https://www.amazon.com/Legrand-radiant-RH453PDBCCV6-Decorator-Dimmable/dp/B0734VSNGH/ref=sr_1_72?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-72"
+      }
+    },
+    {
+      "position": 19,
+      "title": "Lutron Diva Smart Dimmer Switch ELV+ for Caseta Smart Lighting (Lutron Smart Hub Required), 250-Watt LED, Neutral Required, DVRF-5NE-WH, White",
+      "asin": "B0DBJ9RC3M",
+      "link": "https://www.amazon.com/Lutron-Systems-Required-250-Watt-DVRF-5NE-WH/dp/B0DBJ9RC3M/ref=sr_1_73?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-73",
+      "recent_sales": "100+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/71DuXyJNatL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.7,
+      "ratings_total": 27,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 139.95,
+          "currency": "USD",
+          "raw": "$139.95",
+          "asin": "B0DBJ9RC3M",
+          "link": "https://www.amazon.com/Lutron-Systems-Required-250-Watt-DVRF-5NE-WH/dp/B0DBJ9RC3M/ref=sr_1_73?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-73"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 139.95,
+        "currency": "USD",
+        "raw": "$139.95",
+        "asin": "B0DBJ9RC3M",
+        "link": "https://www.amazon.com/Lutron-Systems-Required-250-Watt-DVRF-5NE-WH/dp/B0DBJ9RC3M/ref=sr_1_73?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-73"
+      }
+    },
+    {
+      "position": 20,
+      "title": "2Pack UL Listed Rotary Dimmer Switch with1.8m/5.9ft Extension Power Cord for Halogen and Incandescent Bulbs lamp, Compatible with LED dimmable Lights",
+      "asin": "B07RNJ351J",
+      "link": "https://www.amazon.com/PLUSPOE-with1-5m-extension-Incandescent-Compatible/dp/B07RNJ351J/ref=sr_1_74?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-74",
+      "recent_sales": "50+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/613+17ZoRGL._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 1432,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.98,
+          "currency": "USD",
+          "raw": "$13.98",
+          "asin": "B07RNJ351J",
+          "link": "https://www.amazon.com/PLUSPOE-with1-5m-extension-Incandescent-Compatible/dp/B07RNJ351J/ref=sr_1_74?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-74"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.98,
+        "currency": "USD",
+        "raw": "$13.98",
+        "asin": "B07RNJ351J",
+        "link": "https://www.amazon.com/PLUSPOE-with1-5m-extension-Incandescent-Compatible/dp/B07RNJ351J/ref=sr_1_74?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-74"
+      }
+    },
+    {
+      "position": 21,
+      "title": "BESTTEN 10 Pack Super Slim Slide Dimmer Light Switch, Quiet Dimmer Switch, Single Pole or 3 Way Dimmable Switch, Max 300W LED, CFL, 600W Incandescent, Wall Plate Included, ETL Listed, White",
+      "asin": "B0DWJHD9G1",
+      "link": "https://www.amazon.com/BESTTEN-Dimmer-Dimmable-Incandescent-Included/dp/B0DWJHD9G1/ref=sr_1_75?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-75",
+      "availability": {
+        "raw": "Only 18 left in stock - order soon."
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/613FiaTEfPL._AC_UL320_.jpg",
+      "unit_price": "$7.80$7.80/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.8,
+      "ratings_total": 9,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 77.99,
+          "currency": "USD",
+          "raw": "$77.99",
+          "name": "Save 6%",
+          "is_primary": true,
+          "list_price": "$7.80",
+          "asin": "B0DWJHD9G1",
+          "link": "https://www.amazon.com/BESTTEN-Dimmer-Dimmable-Incandescent-Included/dp/B0DWJHD9G1/ref=sr_1_75?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-75"
+        },
+        {
+          "symbol": "$",
+          "value": 82.99,
+          "currency": "USD",
+          "raw": "$82.99",
+          "name": "Save 6%",
+          "is_rrp": true,
+          "link": "https://www.amazon.com/BESTTEN-Dimmer-Dimmable-Incandescent-Included/dp/B0DWJHD9G1/ref=sr_1_75?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-75",
+          "asin": "B0DWJHD9G1"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 77.99,
+        "currency": "USD",
+        "raw": "$77.99",
+        "name": "Save 6%",
+        "is_primary": true,
+        "list_price": "$7.80",
+        "asin": "B0DWJHD9G1",
+        "link": "https://www.amazon.com/BESTTEN-Dimmer-Dimmable-Incandescent-Included/dp/B0DWJHD9G1/ref=sr_1_75?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-75"
+      }
+    },
+    {
+      "position": 22,
+      "title": "Feit Electric Wi-Fi Smart Dimmer Light Switch, 3 Pack, White",
+      "asin": "B0D4YFCTHV",
+      "link": "https://www.amazon.com/Feit-Electric-Wi-Fi-Dimmer-Switch/dp/B0D4YFCTHV/ref=sr_1_76?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-76",
+      "recent_sales": "500+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/61hzyyKU4uL._AC_UL320_.jpg",
+      "unit_price": "$11.92$11.92/count",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.6,
+      "ratings_total": 88,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 35.75,
+          "currency": "USD",
+          "raw": "$35.75",
+          "list_price": "$11.92",
+          "asin": "B0D4YFCTHV",
+          "link": "https://www.amazon.com/Feit-Electric-Wi-Fi-Dimmer-Switch/dp/B0D4YFCTHV/ref=sr_1_76?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-76"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 35.75,
+        "currency": "USD",
+        "raw": "$35.75",
+        "list_price": "$11.92",
+        "asin": "B0D4YFCTHV",
+        "link": "https://www.amazon.com/Feit-Electric-Wi-Fi-Dimmer-Switch/dp/B0D4YFCTHV/ref=sr_1_76?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-76"
+      }
+    },
+    {
+      "position": 23,
+      "title": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+      "asin": "B07KZJRQYW",
+      "link": "https://www.amazon.com/Maxxima-Decorative-Electrical-Compatible-Included/dp/B07KZJRQYW/ref=sr_1_77?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-77",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/515pL6dsz5L._AC_UL320_.jpg",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.3,
+      "ratings_total": 3112,
+      "is_small_business": true,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 13.99,
+          "currency": "USD",
+          "raw": "$13.99",
+          "asin": "B07KZJRQYW",
+          "link": "https://www.amazon.com/Maxxima-Decorative-Electrical-Compatible-Included/dp/B07KZJRQYW/ref=sr_1_77?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-77"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 13.99,
+        "currency": "USD",
+        "raw": "$13.99",
+        "asin": "B07KZJRQYW",
+        "link": "https://www.amazon.com/Maxxima-Decorative-Electrical-Compatible-Included/dp/B07KZJRQYW/ref=sr_1_77?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-77"
+      }
+    },
+    {
+      "position": 24,
+      "title": "0-10V LED Dimmer Switch, Low Voltage Dimmer Switch for Dimmable LED Lights, CFL, Halogen and Incandescent Bulbs, Single-Pole or 3-Way, Wallplate Included, ETL Listed (White, 1 Pack)",
+      "asin": "B092ZGJ3PB",
+      "link": "https://www.amazon.com/KEYGMA-Dimmable-Incandescent-Single-Pole-Wallplate/dp/B092ZGJ3PB/ref=sr_1_78?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-78",
+      "recent_sales": "100+ bought in past month",
+      "availability": {
+        "raw": null
+      },
+      "categories": [
+        {
+          "name": "Dimmer Switches",
+          "id": "507840"
+        }
+      ],
+      "image": "https://m.media-amazon.com/images/I/511sO2Q9pgL._AC_UL320_.jpg",
+      "unit_price": "$5.49$5.49/ounce",
+      "is_prime": true,
+      "is_amazon_fresh": false,
+      "is_whole_foods_market": false,
+      "rating": 4.2,
+      "ratings_total": 218,
+      "prices": [
+        {
+          "symbol": "$",
+          "value": 23.59,
+          "currency": "USD",
+          "raw": "$23.59",
+          "list_price": "$5.49",
+          "asin": "B092ZGJ3PB",
+          "link": "https://www.amazon.com/KEYGMA-Dimmable-Incandescent-Single-Pole-Wallplate/dp/B092ZGJ3PB/ref=sr_1_78?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-78"
+        }
+      ],
+      "price": {
+        "symbol": "$",
+        "value": 23.59,
+        "currency": "USD",
+        "raw": "$23.59",
+        "list_price": "$5.49",
+        "asin": "B092ZGJ3PB",
+        "link": "https://www.amazon.com/KEYGMA-Dimmable-Incandescent-Single-Pole-Wallplate/dp/B092ZGJ3PB/ref=sr_1_78?dib=eyJ2IjoiMSJ9.e0z3J90_uj57mQ7qXeRfBKArAtJLuCVabbfoGnxam9X58bmCb6tpO_Nxn6RHTMcWnDgKd47T5cM6j8Z35QZGtNSMl6r8CMxIkJAJwr7aDAw4NjxnVSS7ZSwpuXTNTU4w-5Ry3cdatEz5lK6q40XJlJ-8bII9jLR0hy9WNAKgIt2aI4qp1UwLfc7qZQZ-R3WZ6SaoCGU6JqzCCBhd5EzB7I4U4fy3pTBxdViLzS6_TqyTxQnpGpG4x59o9I9gGsnK6tT55x--8kYRLadqksnVjx3YonBNajKux07W6PsyZS8.dwsSnLth0sfKzC2v3GfZ7Ka8JPuyPitXeD0qRU84dMs&dib_tag=se&keywords=dimmer+switches&qid=1749237780&s=lamps-light&sr=1-78"
+      }
+    }
+  ],
+  "search_information": {
+    "results_text_raw": "49-72 of over 1,000 results for \"dimmer switches\"",
+    "results_begin": 49,
+    "results_end": 72,
+    "total_results": 1000,
+    "search_term": "dimmer switches"
+  },
+  "category_information": {
+    "is_landing_page": false
+  },
+  "pagination": {
+    "current_page": 3,
+    "current_page_link": "https://www.amazon.com/s/?k=dimmer+switches&ref=nb_sb_noss_2&node=507840&page=3&s=relevancerank",
+    "next_page_link": "https://www.amazon.com/s/?k=dimmer+switches&ref=nb_sb_noss_2&node=507840&page=4&s=relevancerank",
+    "total_pages": 79
+  },
+  "refinements": {
+    "prime": [
+      {
+        "name": "Free Shipping by Amazon",
+        "value": "n:228013||p_76/1249152011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_76%3A1249152011&s=relevancerank&dc&qid=1749237780&rnid=1249150011&ref=sr_nr_p_76_1&ds=v1%3ABgDDvd1Kr075qyryAFbu4CGyyWg7G%2Bswz%2FpuE4gUB%2FM",
+        "refinement_display_name": "Prime"
+      }
+    ],
+    "departments": [
+      {
+        "name": "Tools & Home Improvement",
+        "value": "n/228013",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013&s=relevancerank&dc&qid=1749237780&ref=sr_ex_n_1&ds=v1%3AJJUQ3hWoJR8QNM3WXsfFzgI9iPuzZPmih39BCTfVl%2F0",
+        "refinement_display_name": "Departments"
+      },
+      {
+        "name": "Electrical",
+        "value": "n/495266",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cn%3A495266&s=relevancerank&dc&qid=1749237780&ref=sr_ex_n_1&ds=v1%3AFgm1o3A0vixjTXihhxKDp5BAtRyqgpDnIscd2IoIwjw",
+        "refinement_display_name": "Departments"
+      },
+      {
+        "name": "Switches & Dimmers",
+        "value": "n/495324",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cn%3A495266%2Cn%3A495324&s=relevancerank&dc&qid=1749237780&ref=sr_ex_n_1&ds=v1%3A%2FB%2BcFzawPHb1i9a%2FL2mV6rEEas86Sxb7KA%2B6fJC42A0",
+        "refinement_display_name": "Departments"
+      },
+      {
+        "name": "Wall Switches",
+        "value": "n/6291358011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cn%3A495266%2Cn%3A495324%2Cn%3A6291358011&s=relevancerank&dc&qid=1749237780&ref=sr_ex_n_1&ds=v1%3AtXOVN7ZDNXSRR81v0l8daZEKN4Ni5hukZ7uVQSgLHgQ",
+        "refinement_display_name": "Departments"
+      },
+      {
+        "name": "Dimmer Switches",
+        "value": "n/507840",
+        "refinement_display_name": "Departments"
+      }
+    ],
+    "reviews": [
+      {
+        "name": "4 Stars",
+        "value": "n:228013||p_72/1248909011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_72%3A1248909011&s=relevancerank&dc&qid=1749237780&rnid=1248907011&ref=sr_nr_p_72_1&ds=v1%3AEfRqLOm7CUNJlp9BzYJamKWKIwyfKtUJkT9pcTK7ak0",
+        "refinement_display_name": "Reviews"
+      }
+    ],
+    "brand": [
+      {
+        "name": "ELEGRP",
+        "value": "n:228013||p_123/358093",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A358093&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_1&ds=v1%3AwkpSIuElutztZ0ZGXNe%2FBlVxSuMwfC%2BQq47t8pG4zMk",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Lutron",
+        "value": "n:228013||p_123/245024",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A245024&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_2&ds=v1%3AKcXSton9lUGWuxaGZUh2YVfY3xcka1SfIJHe%2BMgx%2B88",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Leviton",
+        "value": "n:228013||p_123/236836",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A236836&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_3&ds=v1%3AglFaugp6k6wSBBjQv%2FDwZWIW%2FWRuGf%2F4x8xUg79yGDY",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "BESTTEN",
+        "value": "n:228013||p_123/155629",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A155629&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_4&ds=v1%3AGFb3neuVm%2FhPjrvIZxlpRRsWFKmco2D8APlIH72aBVk",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Kasa Smart",
+        "value": "n:228013||p_123/655015",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A655015&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_5&ds=v1%3Amh%2B6ET8%2BpxwggBCTa5lIFvmIt71o4q5Z0sAjZ6FKlQM",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Amico",
+        "value": "n:228013||p_123/240810",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A240810&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_6&ds=v1%3A5vrl7ewDN81HoCzfwkSA2%2BE74uKw8%2F0gLLTCGxhDzbU",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "GE",
+        "value": "n:228013||p_123/256793",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A256793&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_7&ds=v1%3AWRsW6TeQjRKTIFO1IHbizTu0o6wrxQmPQh6c96eEhdk",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Pass & SeymourTOPGREENERMaxximaFeit Electric",
+        "value": "n:228013||undefined",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A313891&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_8&ds=v1%3AyGqKHczNizjiSpIcaLW3f3PaxYbUtdZdiEuwPfqbwkk",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Pass & Seymour",
+        "value": "n:228013||p_123/313891",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A313891&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_8&ds=v1%3AyGqKHczNizjiSpIcaLW3f3PaxYbUtdZdiEuwPfqbwkk",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "TOPGREENER",
+        "value": "n:228013||p_123/105631",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A105631&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_9&ds=v1%3AGW8nFUYSYS5H2Cjtsxxx9KpRq4PlKH0RgIlpy3TqAoE",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Maxxima",
+        "value": "n:228013||p_123/4256",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A4256&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_10&ds=v1%3ACZU%2BYBxWqvrL9v%2BUMXHCO3i2f6iOg0G8eixHFjP2FvI",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Feit Electric",
+        "value": "n:228013||p_123/251098",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A251098&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_11&ds=v1%3AZJDTtlRPvogdyuz7bx8uhVBHw%2BeJ2e90CHxq2jqqMRQ",
+        "refinement_display_name": "Brand"
+      },
+      {
+        "name": "Top Brands",
+        "value": "n:228013||p_n_feature_forty-one_browse-bin/119653281011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_forty-one_browse-bin%3A119653281011&s=relevancerank&dc&qid=1749237780&rnid=119653280011&ref=sr_nr_p_n_feature_forty-one_browse-bin_1&ds=v1%3Ax4Yq713%2B5hy8NWhJgNoWjWllJ6D%2BqjlOQIMIiBammyY",
+        "refinement_display_name": "Brand"
+      }
+    ],
+    "eligible_for_free_shipping": [
+      {
+        "name": "Free Shipping by Amazon",
+        "value": "n:228013||p_76/1249152011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_76%3A1249152011&s=relevancerank&dc&qid=1749237780&rnid=1249150011&ref=sr_nr_p_76_1&ds=v1%3ABgDDvd1Kr075qyryAFbu4CGyyWg7G%2Bswz%2FpuE4gUB%2FM",
+        "refinement_display_name": "Eligible for Free Shipping"
+      }
+    ],
+    "brands": [
+      {
+        "name": "ELEGRP",
+        "value": "n:228013||p_123/358093",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A358093&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_1&ds=v1%3AwkpSIuElutztZ0ZGXNe%2FBlVxSuMwfC%2BQq47t8pG4zMk",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Lutron",
+        "value": "n:228013||p_123/245024",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A245024&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_2&ds=v1%3AKcXSton9lUGWuxaGZUh2YVfY3xcka1SfIJHe%2BMgx%2B88",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Leviton",
+        "value": "n:228013||p_123/236836",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A236836&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_3&ds=v1%3AglFaugp6k6wSBBjQv%2FDwZWIW%2FWRuGf%2F4x8xUg79yGDY",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "BESTTEN",
+        "value": "n:228013||p_123/155629",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A155629&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_4&ds=v1%3AGFb3neuVm%2FhPjrvIZxlpRRsWFKmco2D8APlIH72aBVk",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Kasa Smart",
+        "value": "n:228013||p_123/655015",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A655015&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_5&ds=v1%3Amh%2B6ET8%2BpxwggBCTa5lIFvmIt71o4q5Z0sAjZ6FKlQM",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Amico",
+        "value": "n:228013||p_123/240810",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A240810&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_6&ds=v1%3A5vrl7ewDN81HoCzfwkSA2%2BE74uKw8%2F0gLLTCGxhDzbU",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "GE",
+        "value": "n:228013||p_123/256793",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A256793&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_7&ds=v1%3AWRsW6TeQjRKTIFO1IHbizTu0o6wrxQmPQh6c96eEhdk",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Pass & SeymourTOPGREENERMaxximaFeit Electric",
+        "value": "n:228013||undefined",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A313891&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_8&ds=v1%3AyGqKHczNizjiSpIcaLW3f3PaxYbUtdZdiEuwPfqbwkk",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Pass & Seymour",
+        "value": "n:228013||p_123/313891",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A313891&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_8&ds=v1%3AyGqKHczNizjiSpIcaLW3f3PaxYbUtdZdiEuwPfqbwkk",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "TOPGREENER",
+        "value": "n:228013||p_123/105631",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A105631&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_9&ds=v1%3AGW8nFUYSYS5H2Cjtsxxx9KpRq4PlKH0RgIlpy3TqAoE",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Maxxima",
+        "value": "n:228013||p_123/4256",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A4256&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_10&ds=v1%3ACZU%2BYBxWqvrL9v%2BUMXHCO3i2f6iOg0G8eixHFjP2FvI",
+        "refinement_display_name": "Brands"
+      },
+      {
+        "name": "Feit Electric",
+        "value": "n:228013||p_123/251098",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_123%3A251098&s=relevancerank&dc&qid=1749237780&rnid=85457740011&ref=sr_nr_p_123_11&ds=v1%3AZJDTtlRPvogdyuz7bx8uhVBHw%2BeJ2e90CHxq2jqqMRQ",
+        "refinement_display_name": "Brands"
+      }
+    ],
+    "top_brands_in_diy_and_tools": [
+      {
+        "name": "Top Brands",
+        "value": "n:228013||p_n_feature_forty-one_browse-bin/119653281011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_forty-one_browse-bin%3A119653281011&s=relevancerank&dc&qid=1749237780&rnid=119653280011&ref=sr_nr_p_n_feature_forty-one_browse-bin_1&ds=v1%3Ax4Yq713%2B5hy8NWhJgNoWjWllJ6D%2BqjlOQIMIiBammyY",
+        "refinement_display_name": "Top Brands in DIY & Tools"
+      }
+    ],
+    "customer_reviews": [
+      {
+        "name": "4 Stars",
+        "value": "n:228013||p_72/1248909011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_72%3A1248909011&s=relevancerank&dc&qid=1749237780&rnid=1248907011&ref=sr_nr_p_72_1&ds=v1%3AEfRqLOm7CUNJlp9BzYJamKWKIwyfKtUJkT9pcTK7ak0",
+        "refinement_display_name": "Customer Reviews"
+      }
+    ],
+    "circuit_type": [
+      {
+        "name": "3-way",
+        "value": "n:507840||p_n_feature_browse-bin/59788768011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_browse-bin%3A59788768011&s=relevancerank&dc&qid=1749237780&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_1&ds=v1%3Ar%2BbVLsoERzWKi4VxyqtrQCiyjsNF6SmapbUjQdAoTU0",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "1-way",
+        "value": "n:507840||p_n_feature_browse-bin/59788760011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_browse-bin%3A59788760011&s=relevancerank&dc&qid=1749237780&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_2&ds=v1%3AAaFYvOZfdGXkN0bAIgOeUI4nnoBuvJws9HVQ2AjY7ds",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "2-way",
+        "value": "n:507840||p_n_feature_browse-bin/59788766011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_browse-bin%3A59788766011&s=relevancerank&dc&qid=1749237780&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_3&ds=v1%3Ag5gQXYPmDQfqXKKq97%2F9VMvIDUASUyH4Jxm9oyC%2FPTg",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "4-way",
+        "value": "n:507840||p_n_feature_browse-bin/59788759011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_browse-bin%3A59788759011&s=relevancerank&dc&qid=1749237780&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_4&ds=v1%3A%2FUaWkXp5rQgSGizF71omrMdxEBscn1RuoMk6mMcSUlM",
+        "refinement_display_name": "Circuit Type"
+      },
+      {
+        "name": "5-way",
+        "value": "n:507840||p_n_feature_browse-bin/59788771011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_browse-bin%3A59788771011&s=relevancerank&dc&qid=1749237780&rnid=59788734011&ref=sr_nr_p_n_feature_browse-bin_5&ds=v1%3AF19nQN4z9yWXikq8845sa211vyXaPKuQ7kezfByw5ag",
+        "refinement_display_name": "Circuit Type"
+      }
+    ],
+    "compatibility": [
+      {
+        "name": "Amazon Alexa",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366694011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366694011&s=relevancerank&dc&qid=1749237780&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_1&ds=v1%3A5LBsH5T9pDjNevE8L0VZ5L4469XqOkPeAgPW3jO286w",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "Google Assistant",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366696011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366696011&s=relevancerank&dc&qid=1749237780&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_2&ds=v1%3AiOWligeoP4sos%2BwkNrpidwmybhCUuPSZUCSmSyMJhKc",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "Almond",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366693011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366693011&s=relevancerank&dc&qid=1749237780&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_3&ds=v1%3AmMAj1ha7CCBeUE2pEnYy4onWwyVzFU9HfsjxsTvBeY4",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "IFTTT",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366698011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366698011&s=relevancerank&dc&qid=1749237780&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_4&ds=v1%3ACJMgwCpHTHXBy89koEOjwritl04TWE5t5pzWgHbrJkk",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "Insteon",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366699011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366699011&s=relevancerank&dc&qid=1749237780&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_5&ds=v1%3AJH9%2F%2BcO6zsHc1khySql%2FzNNAStMgYfJkoE3uZz0cdDo",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "SmartThings",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366702011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366702011&s=relevancerank&dc&qid=1749237780&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_6&ds=v1%3ARkpY4KhzrIlHNUPnZItLhFPWUO750GWhr7XwihWh2nE",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "Vera",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366703011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366703011&s=relevancerank&dc&qid=1749237780&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_7&ds=v1%3ATz2LySfdFjXpbTDbxe3QepXSS6dFIsxgdcbu3AuiKYM",
+        "refinement_display_name": "Compatibility"
+      },
+      {
+        "name": "Wink",
+        "value": "n:228013||p_n_feature_thirty-five_browse-bin/19366705011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-five_browse-bin%3A19366705011&s=relevancerank&dc&qid=1749237780&rnid=19366692011&ref=sr_nr_p_n_feature_thirty-five_browse-bin_8&ds=v1%3AEqNeXshejCbCIPeb6GAbFpFDAxXtwhcStbKMam%2FQkKQ",
+        "refinement_display_name": "Compatibility"
+      }
+    ],
+    "connectivity_protocol": [
+      {
+        "name": "Wi-Fi",
+        "value": "n:507840||p_n_feature_fourteen_browse-bin/117243178011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_fourteen_browse-bin%3A117243178011&s=relevancerank&dc&qid=1749237780&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_1&ds=v1%3AezQMPYsGeIH6%2BJTFf%2FIirUPhOzXuljFvEAWZlnyBl90",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "Bluetooth",
+        "value": "n:507840||p_n_feature_fourteen_browse-bin/117243182011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_fourteen_browse-bin%3A117243182011&s=relevancerank&dc&qid=1749237780&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_2&ds=v1%3AvcWdNLqqQWR7Z8Rwb9FXnBOBwoXQLhxrBM28bY%2FAIuQ",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "ZigBee",
+        "value": "n:507840||p_n_feature_fourteen_browse-bin/117243180011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_fourteen_browse-bin%3A117243180011&s=relevancerank&dc&qid=1749237780&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_3&ds=v1%3Age6wGK9NlIIajhzZlnXru8s85GqlKR2Vsh7cJDJzlQA",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "Z-Wave",
+        "value": "n:507840||p_n_feature_fourteen_browse-bin/117243186011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_fourteen_browse-bin%3A117243186011&s=relevancerank&dc&qid=1749237780&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_4&ds=v1%3AWrF875KWZMeZmjOQBAx2k5mDipnM07gTekBOYhMLTjc",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "Insteon",
+        "value": "n:507840||p_n_feature_fourteen_browse-bin/117243184011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_fourteen_browse-bin%3A117243184011&s=relevancerank&dc&qid=1749237780&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_5&ds=v1%3AlBX66sKdMRYGY4sUxb06e2sQp%2BlKVyPXHFKJAn8GAPM",
+        "refinement_display_name": "Connectivity Protocol"
+      },
+      {
+        "name": "Matter",
+        "value": "n:507840||p_n_feature_fourteen_browse-bin/117243176011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_feature_fourteen_browse-bin%3A117243176011&s=relevancerank&dc&qid=1749237780&rnid=117243169011&ref=sr_nr_p_n_feature_fourteen_browse-bin_6&ds=v1%3ASZFlra5Ve5f0OXpLyOyrj1f32J3%2FLaO8PSwZXpLyfKk",
+        "refinement_display_name": "Connectivity Protocol"
+      }
+    ],
+    "condition": [
+      {
+        "name": "New",
+        "value": "n:228013||p_n_condition-type/6358196011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_condition-type%3A6358196011&s=relevancerank&dc&qid=1749237780&rnid=6358194011&ref=sr_nr_p_n_condition-type_1&ds=v1%3AwhC%2Bi6830vCpfCNkWISMr7etaBUtMZJknVMCNJDXoW0",
+        "refinement_display_name": "Condition"
+      },
+      {
+        "name": "Used",
+        "value": "n:228013||p_n_condition-type/6358198011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_condition-type%3A6358198011&s=relevancerank&dc&qid=1749237780&rnid=6358194011&ref=sr_nr_p_n_condition-type_2&ds=v1%3AWl6N1mKoYrC31l%2B2bYyM%2FQTVZx6wMMjasdZqcom0ZF8",
+        "refinement_display_name": "Condition"
+      }
+    ],
+    "deals_and_discounts": [
+      {
+        "name": "All Discounts",
+        "value": "n:507840||p_n_deal_type/23566065011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_deal_type%3A23566065011&s=relevancerank&dc&qid=1749237780&rnid=23566063011&ref=sr_nr_p_n_deal_type_1&ds=v1%3Ar52E0G6n3ZfeC0%2BhBnx%2FSSoAGFejxHrXq%2F9h5zXz5MQ",
+        "refinement_display_name": "Deals & Discounts"
+      },
+      {
+        "name": "Today's Deals",
+        "value": "n:507840||p_n_deal_type/23566064011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_deal_type%3A23566064011&s=relevancerank&dc&qid=1749237780&rnid=23566063011&ref=sr_nr_p_n_deal_type_2&ds=v1%3AVjiW1zfhH6MzpM8155BEIFikUQUd6uEc7jU3pOjoNEU",
+        "refinement_display_name": "Deals & Discounts"
+      }
+    ],
+    "department": [
+      {
+        "name": "Tools & Home Improvement",
+        "value": "n/228013",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013&s=relevancerank&dc&qid=1749237780&ref=sr_ex_n_1&ds=v1%3AJJUQ3hWoJR8QNM3WXsfFzgI9iPuzZPmih39BCTfVl%2F0",
+        "refinement_display_name": "Department"
+      },
+      {
+        "name": "Electrical",
+        "value": "n/495266",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cn%3A495266&s=relevancerank&dc&qid=1749237780&ref=sr_ex_n_1&ds=v1%3AFgm1o3A0vixjTXihhxKDp5BAtRyqgpDnIscd2IoIwjw",
+        "refinement_display_name": "Department"
+      },
+      {
+        "name": "Switches & Dimmers",
+        "value": "n/495324",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cn%3A495266%2Cn%3A495324&s=relevancerank&dc&qid=1749237780&ref=sr_ex_n_1&ds=v1%3A%2FB%2BcFzawPHb1i9a%2FL2mV6rEEas86Sxb7KA%2B6fJC42A0",
+        "refinement_display_name": "Department"
+      },
+      {
+        "name": "Wall Switches",
+        "value": "n/6291358011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cn%3A495266%2Cn%3A495324%2Cn%3A6291358011&s=relevancerank&dc&qid=1749237780&ref=sr_ex_n_1&ds=v1%3AtXOVN7ZDNXSRR81v0l8daZEKN4Ni5hukZ7uVQSgLHgQ",
+        "refinement_display_name": "Department"
+      },
+      {
+        "name": "Dimmer Switches",
+        "value": "n/507840",
+        "refinement_display_name": "Department"
+      }
+    ],
+    "amazon_certified": [
+      {
+        "name": "Works with Alexa",
+        "value": "n:507840||p_n_amazon_certified/16741513011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A507840%2Cp_n_amazon_certified%3A16741513011&s=relevancerank&dc&qid=1749237780&rnid=16741512011&ref=sr_nr_p_n_amazon_certified_1&ds=v1%3AWDdy1tzTV3uibDe4FpxNT9Vn%2BeMg1ESIEskgBaN%2F1ls",
+        "refinement_display_name": "Amazon Certified"
+      }
+    ],
+    "certifications": [
+      {
+        "name": "Energy Star",
+        "value": "n:228013||p_n_special_merchandising_browse-bin/544734011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_special_merchandising_browse-bin%3A544734011&s=relevancerank&dc&qid=1749237780&rnid=544733011&ref=sr_nr_p_n_special_merchandising_browse-bin_1&ds=v1%3AiNlC%2B6K3JndxytBOIEKM%2F3MI%2BQJJ9wzqViwd8pjFnsE",
+        "refinement_display_name": "Certifications"
+      },
+      {
+        "name": "UL Listed",
+        "value": "n:228013||p_n_special_merchandising_browse-bin/5741531011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_special_merchandising_browse-bin%3A5741531011&s=relevancerank&dc&qid=1749237780&rnid=544733011&ref=sr_nr_p_n_special_merchandising_browse-bin_2&ds=v1%3AqJuBQyQ06%2B9kTGhcApx9Ni3Pdqs2ygzGxP4Ip03gZQY",
+        "refinement_display_name": "Certifications"
+      }
+    ],
+    "control_method": [
+      {
+        "name": "App",
+        "value": "n:228013||p_n_feature_thirty-three_browse-bin/19366679011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-three_browse-bin%3A19366679011&s=relevancerank&dc&qid=1749237780&rnid=19366678011&ref=sr_nr_p_n_feature_thirty-three_browse-bin_1&ds=v1%3AA0hAHXU0vnSA%2FRiLZvOPLH0Afj1MwUyDHjP25j6o9Bg",
+        "refinement_display_name": "Control Method"
+      },
+      {
+        "name": "Voice",
+        "value": "n:228013||p_n_feature_thirty-three_browse-bin/19366680011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_thirty-three_browse-bin%3A19366680011&s=relevancerank&dc&qid=1749237780&rnid=19366678011&ref=sr_nr_p_n_feature_thirty-three_browse-bin_2&ds=v1%3AM0%2B3ltyDvykh1J1mJAloRkbRkOjwHtCrwd07yT8L4LU",
+        "refinement_display_name": "Control Method"
+      }
+    ],
+    "seller": [
+      {
+        "name": "guangzhouxianglinshangmaoyouxiang",
+        "value": "n:228013||p_6/AWS2G2Z7T8144",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_6%3AAWS2G2Z7T8144&s=relevancerank&dc&qid=1749237780&rnid=339807011&ref=sr_nr_p_6_1&ds=v1%3Ae0P2MpiWvg7TkNSk64cPl8anbHGXONVJ7Y9b1ReXrlE",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "GuangZhouLiangJinShangMaoYouXianGongS",
+        "value": "n:228013||p_6/AQHPN2DKDL4KR",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_6%3AAQHPN2DKDL4KR&s=relevancerank&dc&qid=1749237780&rnid=339807011&ref=sr_nr_p_6_2&ds=v1%3AN506jPLfbxU9HUvwhAvtM5NY%2FnsrsSlu%2B0S8YVnNupk",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "Amazon.comWangTao FanBinShangMaoShaoJingWen GeBangShangMaonisuishewangluokejiyouxiangongsihefeinaiguanzhuodianzishangwuyouxiangongsi",
+        "value": "n:228013||undefined",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_6%3AATVPDKIKX0DER&s=relevancerank&dc&qid=1749237780&rnid=339807011&ref=sr_nr_p_6_3&ds=v1%3AS0vcsJBllWyKK8lWDcdcOQh5%2FV%2BvVaXcurptivKScAY",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "Amazon.com",
+        "value": "n:228013||p_6/ATVPDKIKX0DER",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_6%3AATVPDKIKX0DER&s=relevancerank&dc&qid=1749237780&rnid=339807011&ref=sr_nr_p_6_3&ds=v1%3AS0vcsJBllWyKK8lWDcdcOQh5%2FV%2BvVaXcurptivKScAY",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "WangTao FanBinShangMao",
+        "value": "n:228013||p_6/A3LUV51CRWCGTA",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_6%3AA3LUV51CRWCGTA&s=relevancerank&dc&qid=1749237780&rnid=339807011&ref=sr_nr_p_6_4&ds=v1%3AKtRxRN%2BC7JeJg8uX0aGwBgBJgGUrLfqYuc%2Bdn2xQaSc",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "ShaoJingWen GeBangShangMao",
+        "value": "n:228013||p_6/A1WFY5HVT7LYL1",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_6%3AA1WFY5HVT7LYL1&s=relevancerank&dc&qid=1749237780&rnid=339807011&ref=sr_nr_p_6_5&ds=v1%3AdfO%2BIM3MB87Y3ZUK8Mz7d13W%2F94MRnfAZYN6COLmUck",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "nisuishewangluokejiyouxiangongsi",
+        "value": "n:228013||p_6/A3LRA7K01SFFV8",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_6%3AA3LRA7K01SFFV8&s=relevancerank&dc&qid=1749237780&rnid=339807011&ref=sr_nr_p_6_6&ds=v1%3Ap0SonC5yNsIFsybvgv%2FKcKmmWSHxSjzsglXZzCrcxw4",
+        "refinement_display_name": "Seller"
+      },
+      {
+        "name": "hefeinaiguanzhuodianzishangwuyouxiangongsi",
+        "value": "n:228013||p_6/A1FM0OGGIQZFO5",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_6%3AA1FM0OGGIQZFO5&s=relevancerank&dc&qid=1749237780&rnid=339807011&ref=sr_nr_p_6_7&ds=v1%3ACxXX1dcllpWlcOhIWT7orHF2aIFhNib3cmv%2BkaUyaQM",
+        "refinement_display_name": "Seller"
+      }
+    ],
+    "premium_brands": [
+      {
+        "name": "Premium Brands",
+        "value": "n:228013||p_n_feature_keywords_browse-bin/204376014011",
+        "link": "https://www.amazon.com/s?k=dimmer+switches&i=tools&rh=n%3A228013%2Cp_n_feature_keywords_browse-bin%3A204376014011&s=relevancerank&dc&qid=1749237780&rnid=204376013011&ref=sr_nr_p_n_feature_keywords_browse-bin_1&ds=v1%3AAa2gx3%2FE9%2FvAkXLK8xz7OpYbbR7zr%2FIxCLmKSQ6Q%2F%2Bk",
+        "refinement_display_name": "Premium Brands"
+      }
+    ]
+  },
+  "ad_blocks": [
+    {
+      "campaign_id": "3957862060201",
+      "brand_logo": "https://m.media-amazon.com/images/S/al-na-9d5791cf-3faf/82df81a4-11f8-413c-8a43-cbead78552f7._CR0,0,1200,1200_AC_SX130_SY60_CB1169409_QL70_.jpg",
+      "advertiser_id": "200047299207441",
+      "ad_id": "200047299207441",
+      "link": "https://aax-us-iad.amazon.com/x/c/JLX7yHnC6fQRFE8J_lhMvt4AAAGXRrJP-AEAAAH2AQBvbm9fdHhuX2JpZDUgICBvbm9fdHhuX2ltcDEgICARNtUp/https://www.amazon.com/stores/page/530CCA6F-D85A-4F60-BC7D-93630F483D88/?_encoding=UTF8&store_ref=SB_A013790120RDYXGCQX9SB-A07097961TR9545MKR62V&pd_rd_plhdr=t&aaxitk=c13fbc67a0bf7cfd8791913222b68854&hsa_cr_id=9076986710201&lp_asins=B07CTLVRZX%2CB07S29S7QD%2CB0CMQKDNDQ&lp_query=dimmer%20switches&lp_slot=auto-sparkle-hsa-tetris&ref_=sbx_be_s_sparkle_lsi4d_bkgd&pd_rd_w=Rct60&content-id=amzn1.sym.c22103a5-23b0-460b-bbaf-8872aab7e9b8%3Aamzn1.sym.c22103a5-23b0-460b-bbaf-8872aab7e9b8&pf_rd_p=c22103a5-23b0-460b-bbaf-8872aab7e9b8&pf_rd_r=CF8TB28P58P9KVFTGM6Y&pd_rd_wg=ZjzVH&pd_rd_r=24f94e2a-730e-4e3a-bf0e-cdea066835e4",
+      "title": "Dimmer Light Switch Setting the Perfect Mood",
+      "store_link": "https://www.amazon.com/stores/page/530CCA6F-D85A-4F60-BC7D-93630F483D88/?_encoding=UTF8&store_ref=SB_A013790120RDYXGCQX9SB-A07097961TR9545MKR62V&pd_rd_plhdr=t&aaxitk=c13fbc67a0bf7cfd8791913222b68854&hsa_cr_id=9076986710201&lp_asins=B07CTLVRZX%2CB07S29S7QD%2CB0CMQKDNDQ&lp_query=dimmer%20switches&lp_slot=auto-sparkle-hsa-tetris&ref_=sbx_be_s_sparkle_lsi4d_cta&pd_rd_w=Rct60&content-id=amzn1.sym.c22103a5-23b0-460b-bbaf-8872aab7e9b8%3Aamzn1.sym.c22103a5-23b0-460b-bbaf-8872aab7e9b8&pf_rd_p=c22103a5-23b0-460b-bbaf-8872aab7e9b8&pf_rd_r=CF8TB28P58P9KVFTGM6Y&pd_rd_wg=ZjzVH&pd_rd_r=24f94e2a-730e-4e3a-bf0e-cdea066835e4",
+      "store_id": "530CCA6F-D85A-4F60-BC7D-93630F483D88",
+      "store_name": "BESTTEN Modern Dimmer",
+      "products": [
+        {
+          "asin": "B07CTLVRZX",
+          "link": "https://www.amazon.com/dp/B07CTLVRZX",
+          "image": "https://m.media-amazon.com/images/I/71xtW3KRZUL._AC_SR160,134_CB1169409_QL70_.jpg",
+          "title": "BESTTEN 10 Pack Dimmer Light Switch, Single-Pole or 3-Way Dimmer Switches, 120V, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulbs, Decorator Wallplate Included, UL Listed, White",
+          "is_prime": true,
+          "rating": 4,
+          "ratings_total": 6009
+        },
+        {
+          "asin": "B07S29S7QD",
+          "link": "https://www.amazon.com/dp/B07S29S7QD",
+          "image": "https://m.media-amazon.com/images/I/514RmEOs7QL._AC_SR160,134_CB1169409_QL70_.jpg",
+          "title": "BESTTEN 2 Pack Dimmer Light Switch, Universal Lighting Control, Single Pole or 3 Way, Compatible with LED Dimmable Lamp, CFL, Incandescent, Halogen Bulb, Decorator Wallplate Included, UL Listed, White",
+          "is_prime": true,
+          "rating": 4,
+          "ratings_total": 6009
+        },
+        {
+          "asin": "B0CMQKDNDQ",
+          "link": "https://www.amazon.com/dp/B0CMQKDNDQ",
+          "image": "https://m.media-amazon.com/images/I/61ArhfE8XOL._AC_SR160,134_CB1169409_QL70_.jpg",
+          "title": "BESTTEN Super Slim Dimmer Light Switch, Quiet Rocker, Max 300W LED, CFL, 600W Incandescent, Single Pole or 3 Way Dimmable Switch with Screwless Wallplate, ETL Listed, 3 Pack, White",
+          "is_prime": true,
+          "rating": 4,
+          "ratings_total": 131
+        }
+      ]
+    }
+  ],
+  "video_blocks": [
+    {
+      "video_link": "https://d1f0esyb34c1g2.cloudfront.net/transcode/storyTeller/A2VRWFTK1O6VGO/1640078965224/82fd42cf-97aa-4f5d-bb5e-4288ed8e7119/1640079016461sbv.mp4",
+      "thumbnail_link": "https://d1f0esyb34c1g2.cloudfront.net/transcode/storyTeller/A2VRWFTK1O6VGO/1640078965224/82fd42cf-97aa-4f5d-bb5e-4288ed8e7119/1640079016461.0000000.jpg",
+      "campaign_id": "200042595721441",
+      "advertiser_id": "28228452605",
+      "has_audio": true,
+      "products": [
+        {
+          "asin": "B07CTLVRZX",
+          "link": "https://www.amazon.com/dp/B07CTLVRZX",
+          "title": "BESTTEN 10 Pack Dimmer Light Switch, Single-Pole or 3-Way Dimmer Switches, 120V, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulbs, Decorator Wallplate Included, UL Listed, White",
+          "is_prime": true,
+          "rating": 4,
+          "ratings_total": 6009,
+          "price": {
+            "value": 69.99,
+            "currency": "USD",
+            "symbol": "$",
+            "raw": "69.99"
+          }
+        }
+      ]
+    }
+  ]
+}

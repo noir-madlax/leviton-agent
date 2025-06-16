@@ -1,0 +1,46 @@
+You are tasked with merging verbatims from customer reviews about {{PRODUCT}} into a JSON hierarchy focusing on product performance and behaviors. The input data is provided in the following format:
+ID: verbatim
+
+Output the final JSON in this format:
+{
+    "l1": {
+        "l2": {
+            "l3": [ID1, ID2, ...]
+        }
+    }
+}
+
+Follow these steps to complete the task:
+
+1. Language and Key Format:
+   - Each category level (l1, l2, l3) must be in Chinese translation with English in parentheses: "中文 (English)"
+
+2. Category Content Requirements:
+   - Categories must represent concrete, specific performance attributes or behaviors
+   - All category names must describe actual observed behaviors or performance characteristics, not abstract groupings
+   - Group similar performance patterns together even if verbatims use different wording
+   - Include specific measurements or numbers only if they represent consistent performance thresholds
+   - Avoid generic descriptors like "quality", "performance", "general", "miscellaneous", "other"
+
+3. Hierarchy Rules:
+   - Start categorization from specific performance aspects rather than generic categories such as "performance", "quality", or "features"
+   - Each child category must represent a more specific manifestation or aspect of its parent's performance characteristic
+   - Categories at the same level must be mutually exclusive, with no behavioral overlap
+   - A performance attribute or behavior must not be reused across different levels
+   - Avoid abstract groupings that could apply to multiple unrelated performance aspects
+
+4. Verbatim Processing Rules:
+   - If a verbatim describes multiple performance aspects, extract them and include its ID in multiple relevant categories
+   - Specific performance details and measurements in verbatims should be preserved
+   - Each ID must belong to at least one category group
+   - Focus on actual observed behaviors rather than user interpretations
+
+5. Review and refine the structure:
+   - Replace any abstract groupings with specific performance characteristics
+   - Combine categories if their distinction is based on abstract concepts rather than actual performance differences
+   - Ensure each category represents a distinct, observable behavior or performance attribute
+   - Ensure no ID from the input is omitted in the output
+
+6. Output the JSON only
+[[INPUT]]
+{{INPUT}}

@@ -1,0 +1,354 @@
+{
+  "product_title": "Lutron Maestro Fan Control and Light Dimmer for Dimmable LEDs, Incandescent, and Halogen Bulbs, Single-Pole, MACL-LFQ-WH, White",
+  "product_category": "Fan and Light Combination Dimmer Controls",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Single gang switch for dual functions": {
+          "+": [
+            20,
+            38
+          ]
+        },
+        "B@Modern appearance": {
+          "+": [
+            20,
+            29,
+            43
+          ]
+        },
+        "C@Deeper than regular switch": {
+          "-": [
+            23
+          ]
+        },
+        "D@No cover plate included": {
+          "-": [
+            6,
+            25
+          ]
+        },
+        "E@Rocker switches for on/off": {
+          "+": [
+            13
+          ]
+        },
+        "F@Side controls for fan speed and dimmer": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "LED Indicators": {
+        "G@Dim LED indicators for each control visible in dark": {
+          "+": [
+            7,
+            21
+          ]
+        },
+        "H@Green LEDs greatly dimmed when off for nighttime": {
+          "+": [
+            21
+          ]
+        },
+        "I@LED indicators flickering": {
+          "-": [
+            5,
+            9,
+            47
+          ]
+        }
+      },
+      "Wiring": {
+        "J@Wire connection difficulty": {
+          "-": [
+            10
+          ]
+        },
+        "K@Supplied wire nuts and screws": {
+          "+": [
+            37
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@Easy to install": {
+          "+": {
+            "?": [
+              0,
+              2,
+              8,
+              39
+            ]
+          }
+        },
+        "b@Installation can be tough": {
+          "-": {
+            "C": [
+              23
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "c@Works well initially then fails": {
+          "-": {
+            "?": [
+              5,
+              12,
+              15,
+              17,
+              33,
+              47
+            ]
+          }
+        },
+        "d@Failed after specific timeframes": {
+          "-": {
+            "?": [
+              11,
+              12,
+              15
+            ]
+          }
+        },
+        "e@Circuit sensitivity causing failure": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Light Control": {
+        "f@Light dimming works well": {
+          "+": {
+            "?": [
+              10,
+              13,
+              23,
+              39,
+              48
+            ]
+          }
+        },
+        "g@High range of brightness": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "h@No flickering with proper bulbs": {
+          "+": {
+            "?": [
+              10,
+              23,
+              49
+            ]
+          }
+        },
+        "i@Light pops on randomly": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "j@Light delay and flickering": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "k@Lights turn off when fan is on": {
+          "-": {
+            "?": [
+              26,
+              28,
+              32,
+              45
+            ]
+          }
+        }
+      },
+      "Fan Control": {
+        "l@Fan speed control works well": {
+          "+": {
+            "?": [
+              13,
+              23,
+              25
+            ]
+          }
+        },
+        "m@Fan works occasionally": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "n@Fan ramps up to high and won't shut off": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "o@Fan makes whining noise and barely spins": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "p@No buzzing at any speed": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "Memory Function": {
+        "q@Remembers settings": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "r@Works with specific fans": {
+          "+": {
+            "?": [
+              7,
+              19,
+              23
+            ]
+          }
+        },
+        "s@Compatibility issues with certain fans": {
+          "-": {
+            "?": [
+              1,
+              18,
+              22,
+              24,
+              28,
+              31
+            ]
+          }
+        },
+        "t@LED bulb compatibility issues": {
+          "-": {
+            "?": [
+              2,
+              9,
+              32
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "u@Knobs don't break or fall off": {
+          "+": {
+            "B": [
+              3
+            ]
+          }
+        },
+        "v@Should last 20 years for the price": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Ceiling Fan Control": {
+        "+": {
+          "r": [
+            3,
+            7,
+            13,
+            19,
+            23,
+            42,
+            44,
+            49
+          ]
+        },
+        "-": {
+          "s": [
+            2,
+            18,
+            22,
+            24,
+            28,
+            31,
+            45
+          ]
+        }
+      },
+      "Bathroom Fan and Light": {
+        "+": {
+          "f": [
+            12,
+            14,
+            20
+          ]
+        }
+      },
+      "Outdoor Deck Fan/Light": {
+        "+": {
+          "f,l": [
+            48
+          ]
+        }
+      },
+      "Bedroom Control": {
+        "+": {
+          "q": [
+            21,
+            42
+          ]
+        },
+        "-": {
+          "c": [
+            11
+          ]
+        }
+      },
+      "Living Room Control": {
+        "+": {
+          "h": [
+            49
+          ]
+        }
+      },
+      "Replacement Switch": {
+        "+": {
+          "a": [
+            0,
+            49
+          ]
+        },
+        "-": {
+          "c": [
+            11
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:54:00.312241"
+}

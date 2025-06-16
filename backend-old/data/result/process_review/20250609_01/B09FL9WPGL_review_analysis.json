@@ -1,0 +1,484 @@
+{
+  "product_title": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 24,
+  "review_analysis": {
+    "phy": {
+      "lights and glow": {
+        "A@has lights and glow feature": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "appearance": {
+        "B@nice looking": {
+          "+": [
+            0,
+            9
+          ]
+        },
+        "C@great look": {
+          "+": [
+            3
+          ]
+        },
+        "D@modern look with sleek profile": {
+          "+": [
+            15
+          ]
+        },
+        "E@creates modern look for home": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "dimensions": {
+        "F@4 inches, standard single switch size, smaller than pictures indicate": {
+          "-": [
+            12
+          ]
+        },
+        "G@only little wider than a single smart switch": {
+          "-": [
+            16
+          ]
+        }
+      },
+      "touchscreen": {
+        "H@LCD touchscreen": {
+          "+": [
+            3
+          ]
+        },
+        "I@touch screen functionality": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "hardware finishing": {
+        "J@good finishing of hardware": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "face plate": {
+        "K@face plate keeps falling off": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "neutral wire requirement": {
+        "L@requires neutral wire": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "moodlight ring": {
+        "M@has moodlight ring": {
+          "+": [
+            17
+          ]
+        }
+      }
+    },
+    "perf": {
+      "WiFi connectivity": {
+        "a@does not stay connected to WiFi": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@keeps losing internet connection": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@cannot hold internet connection for extended time": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "d@loses WiFi functionality and requires reboot to reconnect": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@initial WiFi connection is fast and easy but challenging to reconnect after drop": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "f@cannot connect to WiFi": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "g@stopped connecting to wifi in less than a year": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@won't stay connected to Wi-Fi": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "i@needs router to be on 2.4 GHz for stable connection": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "customization": {
+        "j@has lot of features that can be customized": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "k@interface lighting and customization": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "l@customization is easy": {
+          "+": {
+            "I": [
+              15
+            ]
+          }
+        },
+        "m@fun to change the buttons": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "touch response": {
+        "n@great touch response with no issues after nearly a year": {
+          "+": {
+            "H": [
+              3
+            ]
+          }
+        }
+      },
+      "installation": {
+        "o@easy to wire and install": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "p@install was simple": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "q@easy to install": {
+          "+": {
+            "?": [
+              9,
+              15
+            ]
+          }
+        }
+      },
+      "setup": {
+        "r@initial setup is fast": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "s@setup was not hard": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "smart home integration": {
+        "t@does not stay connected to Alexa": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "u@will not work with Alexa": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "v@seamless smart home integration": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "w@controllable with app or via Amazon Alexa/google voice assistant": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "x@error linking to Amazon": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "software quality": {
+        "y@software is poor": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "z@software is horrible": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "aa@app needs to fix errors": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "ab@functionality is quite not there": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ac@does not dim as claimed": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "ad@courtesy light needs improvements": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "durability": {
+        "ae@died after 18 months": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "af@very dependable": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "interface": {
+        "ag@lousy interface not user friendly": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "factory reset issue": {
+        "ah@restarts and goes back to factory settings": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "date and time display": {
+        "ai@shows date and time on one but not the other": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "WiFi mesh capability": {
+        "aj@is mesh WiFi booster and integrates well with eero WiFi mesh system": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "manual control": {
+        "ak@can control manually like normal switch even without internet": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "moodlight programming": {
+        "al@moodlight ring can be programmed to come on at sunset and turn off at sunrise": {
+          "+": {
+            "M": [
+              17
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replace 1 gang Light/Vent/Heat switch": {
+        "+": {
+          "o": [
+            1
+          ]
+        }
+      },
+      "set auto timer for vent fan": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "upgrade from standard toggle switches": {
+        "+": {
+          "C": [
+            3
+          ]
+        }
+      },
+      "control lights via app": {
+        "+": {
+          "w": [
+            3
+          ]
+        }
+      },
+      "replace 3gang and 2gang switches during remodeling": {
+        "+": {
+          "p": [
+            8
+          ]
+        }
+      },
+      "link mutual switches to a circuit": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "replace two gang switch": {
+        "-": {
+          "G": [
+            16
+          ]
+        }
+      },
+      "control six separate lights from single wall plate": {
+        "+": {
+          "?": [
+            17
+          ]
+        }
+      },
+      "make switch easy to spot at night": {
+        "+": {
+          "al": [
+            17
+          ]
+        }
+      },
+      "label virtual buttons and pick images": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "replace row of three switches": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "not compatible with Smart Life": {
+        "-": {
+          "?": [
+            7
+          ]
+        }
+      },
+      "uses proprietary app": {
+        "-": {
+          "?": [
+            7
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:09:38.611744"
+}

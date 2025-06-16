@@ -1,0 +1,457 @@
+{
+  "product_title": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Classic paddle design with soft-glow light bar": {
+          "+": [
+            0,
+            10
+          ]
+        },
+        "B@Traditional rocker switch appearance": {
+          "+": [
+            4,
+            42
+          ]
+        },
+        "C@Slider for dimming control": {
+          "+": [
+            0,
+            10,
+            39,
+            42
+          ]
+        },
+        "D@LED light indicator on dimmer slide": {
+          "+": [
+            20,
+            28,
+            34,
+            42
+          ]
+        },
+        "E@No screws on mounting plate": {
+          "+": [
+            42
+          ]
+        },
+        "F@Special cover plate required": {
+          "-": [
+            5
+          ]
+        },
+        "G@Does not come with wall plate as advertised": {
+          "-": [
+            36,
+            48
+          ]
+        },
+        "H@Not flush like other model": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "Construction Quality": {
+        "I@Higher construction quality than non-smart version": {
+          "+": [
+            29
+          ]
+        },
+        "J@Loose and rattly parts in non-smart version": {
+          "-": [
+            29
+          ]
+        },
+        "K@Frayed wires and painted screws indicating used product": {
+          "-": [
+            35
+          ]
+        },
+        "L@Missing screws and faceplates": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "Wiring Requirements": {
+        "M@Does not require neutral wire": {
+          "+": [
+            0,
+            10,
+            13,
+            20,
+            25,
+            26,
+            42
+          ]
+        }
+      },
+      "Size": {
+        "N@Requires full size light switch junction box": {
+          "-": [
+            45
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@Straightforward installation": {
+          "+": {
+            "M": [
+              0,
+              42
+            ]
+          }
+        },
+        "b@Easy to install": {
+          "+": {
+            "?": [
+              6,
+              13,
+              15,
+              21,
+              30,
+              31,
+              34,
+              49
+            ]
+          }
+        },
+        "c@Quick installation process": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "d@Works well in 3-way setup": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "e@Precise dimming control": {
+          "+": {
+            "C": [
+              0,
+              10
+            ]
+          }
+        },
+        "f@Smooth dimming without flickering": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "g@Bright flashes during dimming between 30-80%": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "h@Current leakage causing LED glow when off": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "i@Does not work with many dimmable bulbs": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "j@Eliminates light fluctuation compared to old dimmer": {
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "k@Fire lighting effect at levels under 50%": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "Smart Features": {
+        "l@Seamless app control": {
+          "+": {
+            "?": [
+              0,
+              19
+            ]
+          }
+        },
+        "m@Voice command compatibility with Alexa and Google": {
+          "+": {
+            "?": [
+              0,
+              10,
+              14,
+              23
+            ]
+          }
+        },
+        "n@Schedule and scene setting capability": {
+          "+": {
+            "?": [
+              0,
+              10
+            ]
+          }
+        },
+        "o@Smart Away feature": {
+          "+": {
+            "?": [
+              0,
+              10
+            ]
+          }
+        },
+        "p@High and low trim control from app": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "q@Physical slide dimmer locks in tap brightness": {
+          "+": {
+            "C": [
+              39
+            ]
+          }
+        },
+        "r@Glitchy with automations": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "s@Does not sync with wifi": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "t@Reliable operation": {
+          "+": {
+            "?": [
+              0,
+              23,
+              25
+            ]
+          }
+        },
+        "u@Rock solid performance": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "v@Never fails": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "w@One unit broke after 2 months": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "x@Product was defective": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "y@Stopped working after less than two months": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "Hub Dependency": {
+        "z@Requires hub for smart features": {
+          "-": {
+            "?": [
+              3,
+              21,
+              33,
+              42,
+              45
+            ]
+          }
+        },
+        "aa@Hub makes it more reliable": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "ab@Does not require internet access": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "Energy Efficiency": {
+        "ac@Energy-saving with LED bulbs": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "Pairing": {
+        "ad@Easy pairing with hub": {
+          "+": {
+            "?": [
+              0,
+              10
+            ]
+          }
+        },
+        "ae@Does not pair properly without hub": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Smart home integration": {
+        "+": {
+          "a,l,m": [
+            0,
+            8,
+            14,
+            22,
+            25
+          ]
+        },
+        "-": {
+          "z": [
+            33
+          ]
+        }
+      },
+      "Older homes without neutral wire": {
+        "+": {
+          "M,a": [
+            10,
+            25,
+            26,
+            42
+          ]
+        }
+      },
+      "Lighting ambiance control": {
+        "+": {
+          "e,f,n": [
+            19
+          ]
+        }
+      },
+      "3-way switch applications": {
+        "+": {
+          "d": [
+            2,
+            22
+          ]
+        }
+      },
+      "Kitchen lighting with multiple groups": {
+        "+": {
+          "u": [
+            40
+          ]
+        }
+      },
+      "Bedroom lighting upgrade": {
+        "+": {
+          "a,l,m": [
+            42
+          ]
+        }
+      },
+      "Whole house lighting system": {
+        "+": {
+          "t,u": [
+            37,
+            40
+          ]
+        }
+      },
+      "LED lighting compatibility": {
+        "+": {
+          "f,ac": [
+            19
+          ]
+        },
+        "-": {
+          "h,i": [
+            8
+          ]
+        }
+      },
+      "Voice control applications": {
+        "+": {
+          "m": [
+            10,
+            14,
+            42
+          ]
+        }
+      },
+      "Scene and schedule automation": {
+        "+": {
+          "n,o": [
+            0,
+            10
+          ]
+        },
+        "-": {
+          "r": [
+            17
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:27.284061"
+}

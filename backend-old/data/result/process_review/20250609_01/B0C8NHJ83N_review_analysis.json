@@ -1,0 +1,268 @@
+{
+  "product_title": "Inline Lamp Switch 2-Pack, Full Range Rotary Dimmer Switch, Cord Switch Replacement for Floor Lamp, Table Lamp, Pendant Light, Fit for Incandescent, Halogen Bulbs, Dimmable LED Lights",
+  "product_category": "Plug-In Portable Dimmer Controls",
+  "total_reviews": 15,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@excessively large dimensions": {
+          "-": [
+            0,
+            11
+          ]
+        }
+      },
+      "construction": {
+        "B@well constructed build quality": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "wiring_diagram": {
+        "C@incorrect wiring diagram showing wrong switch location": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "connection_method": {
+        "D@requires wire stripping instead of plug-in prongs": {
+          "-": [
+            5
+          ]
+        }
+      },
+      "pcb_components": {
+        "E@trimmer potentiometer on PCB for dimming range adjustment": {
+          "+": [
+            2
+          ]
+        },
+        "F@inductor component": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "switch_quality": {
+        "G@very good switch quality": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "rotary_knob": {
+        "H@rotary knob control": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "instructions": {
+        "I@wrong instructions provided": {
+          "-": [
+            9
+          ]
+        },
+        "J@online instructions do not match product": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "screws": {
+        "K@wrong screws provided - wood screws instead of machine screws": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "wire_gauge_compatibility": {
+        "L@wire gauge limitations not specified in description": {
+          "-": [
+            13
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_capability": {
+        "a@allows adjustable dimming range": {
+          "+": {
+            "E": [
+              2
+            ]
+          }
+        },
+        "b@enables even non-flickering dimming": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@provides variable dimming from full off to full on": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "d@insufficient dimming range for bright LEDs": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "e@fails to provide dimming - only works as on/off switch": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "f@causes rapid blinking at 2/3 position": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "noise_generation": {
+        "g@produces very slight buzz in mid dimming range": {
+          "-": {
+            "F": [
+              2
+            ]
+          }
+        }
+      },
+      "installation": {
+        "h@fairly simple assembly": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@easy to install": {
+          "+": {
+            "?": [
+              6,
+              10
+            ]
+          }
+        },
+        "j@simple installation process taking about 10 minutes": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "k@works fine when properly wired": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "l@works fantastic": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "m@works great": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "n@does the job for the price": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "o@incompatible with larger gauge wire": {
+          "-": {
+            "L": [
+              13
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_lamp_dimming": {
+        "+": {
+          "b": [
+            4
+          ],
+          "l": [
+            7
+          ]
+        }
+      },
+      "standard_60w_equivalent_LED_bulb_dimming": {
+        "+": {
+          "l": [
+            7
+          ]
+        }
+      },
+      "inline_dimmer_for_lamps": {
+        "+": {
+          "m": [
+            10
+          ]
+        }
+      },
+      "bedside_lamp_modification": {
+        "+": {
+          "?": [
+            11
+          ]
+        }
+      },
+      "6_arm_chandelier_application": {
+        "+": {
+          "n": [
+            12
+          ]
+        },
+        "-": {
+          "d": [
+            12
+          ]
+        }
+      },
+      "25W_LED_work_light": {
+        "-": {
+          "e": [
+            14
+          ]
+        }
+      },
+      "dimmable_LED_bulb_requirement": {
+        "+": {
+          "c": [
+            10
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:26.061653"
+}

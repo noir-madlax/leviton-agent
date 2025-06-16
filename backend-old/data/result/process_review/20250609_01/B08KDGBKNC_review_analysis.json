@@ -1,0 +1,316 @@
+{
+  "product_title": "CML Single Pole Decorator Light Switch, 20 Pack Rocker Paddle Wall Switch, 15A 120/277V, On/Off Interrupter, UL Listed, White",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 31,
+  "review_analysis": {
+    "phy": {
+      "Material": {
+        "A@Made of cheap plastic": {
+          "-": [
+            12
+          ]
+        },
+        "B@Made of polycarbonate that cracks": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "Color": {
+        "C@Off-white color instead of white": {
+          "-": [
+            0,
+            1,
+            7,
+            8,
+            10,
+            24
+          ]
+        },
+        "D@Gloss ivory color instead of gloss white": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "Design": {
+        "E@Lightweight": {
+          "+": [
+            13
+          ]
+        },
+        "F@Compact size that doesn't take much space in electrical box": {
+          "+": [
+            13
+          ]
+        },
+        "G@Has holes on the back for hookup": {
+          "-": [
+            6
+          ]
+        },
+        "H@Has satisfying click": {
+          "+": [
+            18
+          ]
+        },
+        "I@Has gaps at the top of the switch": {
+          "-": [
+            15
+          ]
+        }
+      },
+      "Ground Terminal": {
+        "J@Ground terminal is hard to work with": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "Paddle/Switch Cover": {
+        "K@Tab on switch cover breaks off": {
+          "-": [
+            25
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Breaks easily and won't last more than 6 months": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Cracks develop in paddles within 2 years": {
+          "-": {
+            "B": [
+              9
+            ]
+          }
+        },
+        "c@Tab breaks off causing switch cover to fly": {
+          "-": {
+            "K": [
+              25
+            ]
+          }
+        },
+        "d@Not sturdy": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "e@Switch doesn't stay when switched": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "f@Switch stays only 9 out of 10 times": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "g@Works very well": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@Works well": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "i@Light stops working after few weeks": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "j@Burns out right after installation": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "Build Quality": {
+        "k@Well built": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "l@Built well": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "m@High quality": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "n@Great quality": {
+          "+": {
+            "?": [
+              19,
+              29
+            ]
+          }
+        },
+        "o@Low quality": {
+          "-": {
+            "A": [
+              12
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "p@Easy to install": {
+          "+": {
+            "?": [
+              17,
+              18
+            ]
+          }
+        },
+        "q@Easier to manage wires": {
+          "+": {
+            "F": [
+              13
+            ]
+          }
+        },
+        "r@Back holes don't work for hookup": {
+          "-": {
+            "G": [
+              6
+            ]
+          }
+        }
+      },
+      "Appearance": {
+        "s@Looks identical to brand-name ones": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "t@Looks very good": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "u@Look nice": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "v@Does not match with white wall plates": {
+          "-": {
+            "C": [
+              0,
+              1,
+              24
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Switching from toggle to paddle switch": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "Replacing old toggle switches": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "Replacing all light switches in house": {
+        "-": {
+          "b": [
+            9
+          ]
+        }
+      },
+      "House remodeling": {
+        "+": {
+          "n": [
+            16,
+            19
+          ]
+        }
+      },
+      "House flipping": {
+        "+": {
+          "n": [
+            19
+          ]
+        }
+      },
+      "Daughter's room": {
+        "+": {
+          "?": [
+            2
+          ]
+        }
+      },
+      "General light switching": {
+        "+": {
+          "g": [
+            5
+          ]
+        }
+      },
+      "Electrical installation by electrician": {
+        "-": {
+          "d": [
+            8
+          ]
+        }
+      },
+      "Replacement switches": {
+        "+": {
+          "h": [
+            23
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:37.471957"
+}

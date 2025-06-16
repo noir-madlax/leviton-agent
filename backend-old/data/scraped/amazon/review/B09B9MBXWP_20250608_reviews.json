@@ -1,0 +1,1195 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:15:50.700827",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B09B9MBXWP",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 3,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B09B9MBXWP",
+    "title": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+    "brand": "mankk",
+    "model_number": NaN,
+    "price_usd": 8.99,
+    "rating": 4.6,
+    "reviews_count": 161.0,
+    "category": "Light Switches",
+    "product_segment": "Inline Cord Control Switches",
+    "product_url": "https://www.amazon.com/dp/B09B9MBXWP"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1OBJ7I4K4U9HG",
+        "text": "Important install tips for this item: If you like to have the LED light on, when you turn on the switch. Connect the LED light side toward to device direction. The no LED light side connects to the plug direction. . If you want the LED light ALWAYS ON, then connect the LED light toward the plug direction. There is a connect hole under the connect screw head. Don’t need to wrap the wire around the connect screw. Just insert the wire into the hole then tighten up the screw. This is very user friendly and easy.",
+        "date": "Reviewed in the United States on April 8, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "User and installer friendly inline switch with LED light",
+        "userName": "Wesley Chang",
+        "numberOfHelpful": 2,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71fzrqTIN4L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71jECHeizkL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RNYW3LQFDOS5L",
+        "text": "Easy to assemble and use -- Not like those hard to grip \"Roller type switches -- Sturdy hardware -- Nice led \"ON\" indicator -- I used for switching my soldering iron on and off --Also useful for under cabinet LED lighting -- Table lamp lighting -- Fan power control -- Led light strip. power -- Highly recommend .",
+        "date": "Reviewed in the United States on January 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very sturdy and assembly was easy",
+        "userName": "Are2 Dee2",
+        "numberOfHelpful": 2,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/412yQ7V3NVL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51O5PTHeuCL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/613IfQ1uwnL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2KMYPG3NG8URZ",
+        "text": "It was an add onto a under counter lighting system",
+        "date": "Reviewed in the United States on October 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Adapted well",
+        "userName": "Coffee fan",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3DPYJC132M6VK",
+        "text": "It works very well but had to glue it to the wall no screw holes in back to mount",
+        "date": "Reviewed in the United States on March 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "In line switch",
+        "userName": "Ray Goodman",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R23B3L3R21DYX9",
+        "text": "Used to add a physical On/Off switch to a mini iron that didn't have a switch, only a temperature control (it was on as soon as you plugged it in)",
+        "date": "Reviewed in the United States on March 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "Erik Johnson",
+        "numberOfHelpful": 3,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/8cf57dc9-6acc-4fa9-8713-f01e1f365e9a/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2844XN3GRSD1C",
+        "text": "Used this switch on a hanging light bulb / china ball in a closet that has no electricity. I installed it right on the lamp cord, which already had a thumb switch, but very close to the bulb, where I couldn't reach it. *** Please note: Directions are on the product page - they don't send directions in the package. If you have never installed a switch like this before, make sure you read the directions and watch a few videos online. :) Prior to buying this switch, I was using a cube switch, which was cumbersome and often fell off. I had to keep taping it to the door jamb. *Indicator Light* this switch has an indicator light. You can install it two ways; depending on the direction you install it, the indicator light either a. stays on all the time, or b. turns on when the light is turned off. I love being able to see the switch. My closet is completely dark otherwise. Highly recommend. It's attractive and does the job.",
+        "date": "Reviewed in the United States on February 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install; love the red indicator light",
+        "userName": "Dilara",
+        "numberOfHelpful": 2,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/611X6ra2exL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3DVI3ZIQ2GY17",
+        "text": "Replaced the awkward rotary switch I has. this is much better, a sleek appearance and nice on/off feel!",
+        "date": "Reviewed in the United States on December 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "nice switch",
+        "userName": "jp2222",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R12L01OII7G509",
+        "text": "Good compact switch",
+        "date": "Reviewed in the United States on October 26, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as described",
+        "userName": "Works as described, recommend this product.",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/8ef54dbb-600e-4383-b132-7992aff4ee61/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3M1BOJ1SHD03M",
+        "text": "Added these switches inline of LED strip light in garage over workbench. Work great. No issues with installation or use.",
+        "date": "Reviewed in the United States on October 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work great",
+        "userName": "DDBYYZ",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R13S18DPG1I6TA",
+        "text": "Words exactly as described, would buy again.",
+        "date": "Reviewed in the United States on April 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Words exactly as described, would buy again.",
+        "userName": "Uncle Al",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3MUL8WXVRMHUG",
+        "text": "was great",
+        "date": "Reviewed in the United States on April 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "easy to get to work",
+        "userName": "johnnie stone",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R199UFXAWY96GC",
+        "text": "Works well for my lamp and feels like a good quality",
+        "date": "Reviewed in the United States on March 21, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "Eli",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R186H20QVZ5I3F",
+        "text": "Very easy to install, took about two minutes. Fit the 16 gauge wire on my hanging lamp perfectly. Thanks to the guy who mentioned it in the reviews!",
+        "date": "Reviewed in the United States on January 17, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fits a 16 gauge wire",
+        "userName": "Nancy Stewart",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RGFA6VRU03ZI5",
+        "text": "Pleased with quality. Fast shipping.",
+        "date": "Reviewed in the United States on January 11, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Lighted in-line switch",
+        "userName": "Barry",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RA4C4O240ELWA",
+        "text": "These are super nice heavy duty inline switches.",
+        "date": "Reviewed in the United States on December 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Switches!",
+        "userName": "ILoveLivingRural",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3PF0N2K6XLC19",
+        "text": "Liked everything about these. Need very small screwdriver to take out screws.",
+        "date": "Reviewed in the United States on December 4, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Wrll desighed, worked out great! Good quality.",
+        "userName": "Ken",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3GDCM8ASN62P6",
+        "text": "Easy to use but the switches do not have any strain relief feature.",
+        "date": "Reviewed in the United States on September 10, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy to use but no strain relief",
+        "userName": "M Linden",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1RLDTEJ6DU6T6",
+        "text": "The item was very easy to install worked great!",
+        "date": "Reviewed in the United States on August 31, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "The switch worked great!",
+        "userName": "T Bone",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1868S9QL6X797",
+        "text": "Once I figured out the procedure to attach wires inside the switch all was great. (no instructions with switch). So, when you go to connect wires inside the switch, strip the wires back about 1/4\". Don't try to wrap the wire around the screw head, just back the screw almost all the way out and insert the stripped wire in under the screw and tighten the screw. Wow was that easy! Switch works great and it even has an \"ON\" pilot light. Would buy again.",
+        "date": "Reviewed in the United States on August 27, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Switch",
+        "userName": "The Oily Guy",
+        "numberOfHelpful": 4,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2J9HKGF7DCT1B",
+        "text": "I like how it works in a tight spot",
+        "date": "Reviewed in the United States on August 12, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "It looks great where I need it to be",
+        "userName": "Leon Andrews",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2KPQV9I50B3GZ",
+        "text": "work as necessay",
+        "date": "Reviewed in the United States on March 30, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "worked",
+        "userName": "Jack s.",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3CEJJNYUPTFNP",
+        "text": "The hanging lamp I used it for had to be inplugged to turn it off--very inconvenient. So this little inline switch solved the problem. It was easy to install.",
+        "date": "Reviewed in the United States on March 22, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Makes turning on/off very convenient.",
+        "userName": "Joey",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09B9MBXWP",
+        "productTitle": "mankk 4PCS Appliance Inline Cord Switch AC 250V 10A On Off Lamp Bulb Wall Line Button Control Switch with Red LED Indicator Light",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 23,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 162,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 75
+          },
+          "fourStar": {
+            "percentage": 16
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R19WG6KNZASSEV",
+        "text": "For some electric cords going to test boards where it was a pain to constantly have to get up and plug them in for power and unplug them momentarily whenever making changes, these are the ticket I needed;. Easy to install on the cords. No wrap-around required. Wires held by compression screws. Nice to have indicator lights to remind then the switch is turned on, too.",
+        "date": "Reviewed in the United States on January 22, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly what I was looking for",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09B9MBXWP",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 23,
+    "pages_scraped": 3,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

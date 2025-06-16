@@ -1,0 +1,46 @@
+{
+  "product_title": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150W/Single-Pole or 3-Way, Light Almond (2-Pack)",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 3,
+  "review_analysis": {
+    "phy": {
+      "switch": {
+        "A@produces noise during operation": {
+          "-": [
+            2
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming functionality": {
+        "a@works great with LED lights": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "overall functionality": {
+        "b@works well": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "controlling LED lights": {
+        "+": {
+          "a": [
+            2
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:41.004967"
+}

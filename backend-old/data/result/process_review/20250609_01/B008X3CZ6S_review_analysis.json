@@ -1,0 +1,173 @@
+{
+  "product_title": "Lutron Maestro LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150W/Single-Pole or Multi-Location, MACL-153M-BI, Biscuit",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 10,
+  "review_analysis": {
+    "phy": {
+      "Color": {
+        "A@Has yellow tint instead of pure white": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "Instructions": {
+        "B@Poor quality instructions": {
+          "-": [
+            9
+          ]
+        },
+        "C@Instructions mention tagged wires that don't exist": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "Electronics": {
+        "D@Contains electronic components that can be damaged": {
+          "+": [
+            6
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation": {
+        "a@Easy to install": {
+          "+": {
+            "?": [
+              2,
+              4,
+              5,
+              8
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "b@Works with CFL and LED light bulbs": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@Will not work as dimmer for LED array": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "d@Specifically designed for LEDs, CFLs and incandescents": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@Works with LED lights in 3-way installation": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "f@Works with LED retrofit ceiling can lights": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "Dimming Performance": {
+        "g@Does not turn LED lights completely off": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@LED lights still glow in off position at lower level": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@Works perfectly without adjustments": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "Color Matching": {
+        "j@Does not match other white Lutron dimmers": {
+          "-": {
+            "A": [
+              3
+            ]
+          }
+        }
+      },
+      "Safety": {
+        "k@Electronics can be damaged if wired hot": {
+          "-": {
+            "D": [
+              6
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Ceiling fan lighting": {
+        "+": {
+          "b": [
+            4
+          ]
+        }
+      },
+      "LED retrofit ceiling can lights": {
+        "+": {
+          "f": [
+            5
+          ]
+        }
+      },
+      "LED lamp dimming": {
+        "+": {
+          "d,i": [
+            6
+          ]
+        }
+      },
+      "3-way LED light installation": {
+        "+": {
+          "e": [
+            7
+          ]
+        }
+      },
+      "General lighting control": {
+        "+": {
+          "a,i": [
+            2,
+            8
+          ]
+        }
+      },
+      "LED lighting in off position": {
+        "-": {
+          "h": [
+            9
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:17.084038"
+}

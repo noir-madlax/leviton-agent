@@ -1,0 +1,297 @@
+{
+  "product_title": "CML Single Pole Decorator Light Switch, 20 Pack Rocker Paddle Wall Switch, 15A 120/277V, On/Off Interrupter, UL Listed, White",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 31,
+  "review_analysis": {
+    "phy": {
+      "Material": {
+        "A@Made of cheap plastic": {
+          "-": [
+            12
+          ]
+        },
+        "B@Made of polycarbonate that cracks": {
+          "-": [
+            9
+          ]
+        }
+      },
+      "Color": {
+        "C@Off-white color instead of white": {
+          "-": [
+            0,
+            1,
+            7,
+            8,
+            10,
+            24
+          ]
+        },
+        "D@Gloss ivory color instead of gloss white": {
+          "-": [
+            8
+          ]
+        }
+      },
+      "Design": {
+        "E@Lightweight construction": {
+          "+": [
+            13
+          ]
+        },
+        "F@Compact size that doesn't take much space in electrical box": {
+          "+": [
+            13
+          ]
+        },
+        "G@Has holes on the back for hookup": {
+          "-": [
+            6
+          ]
+        },
+        "H@Has satisfying click": {
+          "+": [
+            18
+          ]
+        },
+        "I@Has gaps at the top of switch": {
+          "-": [
+            15
+          ]
+        }
+      },
+      "Ground Terminal": {
+        "J@Hard to work with ground terminal": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "Switch Tab": {
+        "K@Tab breaks off switch cover": {
+          "-": [
+            25
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Will break and won't last more than 6 months": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Cracks develop in paddles within 2 years": {
+          "-": {
+            "B": [
+              9
+            ]
+          }
+        },
+        "c@Tab breaks off causing cover to fly": {
+          "-": {
+            "K": [
+              25
+            ]
+          }
+        },
+        "d@Not sturdy enough": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "e@Switch doesn't stay when switched": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "f@Switch stays only 9 out of 10 times": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "g@Works very well": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "h@Works well": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "i@Light stops working after few weeks": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "j@Burns out right after installation": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "k@Back holes don't work for hookup": {
+          "-": {
+            "G": [
+              6
+            ]
+          }
+        },
+        "l@Easy to install": {
+          "+": {
+            "?": [
+              17,
+              18
+            ]
+          }
+        },
+        "m@Easier to manage wires": {
+          "+": {
+            "F": [
+              13
+            ]
+          }
+        }
+      },
+      "Quality": {
+        "n@Low quality": {
+          "-": {
+            "A": [
+              12
+            ]
+          }
+        },
+        "o@High quality": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "p@Great quality": {
+          "+": {
+            "?": [
+              19,
+              29
+            ]
+          }
+        },
+        "q@Well built": {
+          "+": {
+            "?": [
+              13,
+              14
+            ]
+          }
+        }
+      },
+      "Appearance": {
+        "r@Doesn't match white plates": {
+          "-": {
+            "C": [
+              0,
+              1,
+              24
+            ]
+          }
+        },
+        "s@Color stands out aggressively": {
+          "-": {
+            "C": [
+              24
+            ]
+          }
+        },
+        "t@Looks identical to brand-name ones": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "u@Looks very good": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "v@Look nice": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Switching from toggle to paddle switch": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "Daughter's room": {
+        "+": {
+          "?": [
+            2
+          ]
+        }
+      },
+      "House remodeling": {
+        "+": {
+          "p": [
+            16,
+            19,
+            27
+          ]
+        }
+      },
+      "Replacing light switches in new house": {
+        "-": {
+          "b": [
+            9
+          ]
+        }
+      },
+      "Replace some switches": {
+        "+": {
+          "h": [
+            23
+          ]
+        }
+      },
+      "General electrical work": {
+        "-": {
+          "j": [
+            26
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T00:53:54.814697"
+}

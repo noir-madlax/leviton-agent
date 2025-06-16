@@ -1,0 +1,302 @@
+{
+  "product_title": "DEWENWILS 2 Pack Touch Dimmer Switch, Plug and Play Lamp Touch Control Pad, Touch Lamp Switch, Dimmable LED/CFL Lights, and Incandescent Bulbs, Dimmer Extension Cord, ETL Listed, White",
+  "product_category": "Plug-In Portable Dimmer Controls",
+  "total_reviews": 26,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@compact and space-saving design": {
+          "+": [
+            21
+          ]
+        }
+      },
+      "cord": {
+        "B@extra long cord on controller": {
+          "+": [
+            8
+          ]
+        },
+        "C@very thin cables": {
+          "-": [
+            20
+          ]
+        },
+        "D@touch pad on cord for flexible placement": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "touch_sensor": {
+        "E@touch sensor requires bare skin contact": {
+          "+": [
+            22
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              1,
+              5
+            ]
+          }
+        }
+      },
+      "operation": {
+        "b@works as advertised": {
+          "+": {
+            "?": [
+              0,
+              1,
+              7
+            ]
+          }
+        },
+        "c@works perfectly": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@works great": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "e@works very well": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "f@working flawlessly": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "g@works fine as expected": {
+          "+": {
+            "?": [
+              23,
+              24
+            ]
+          }
+        },
+        "h@would not work with any lamps": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "i@didn't work straight out of the box": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "j@stopped working after couple months": {
+          "-": {
+            "C": [
+              20
+            ]
+          }
+        },
+        "k@electrical short in both units": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "l@easy tap operation for on/off": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "m@touch control for dimming adjustment": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "n@remembers last dimming state": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "o@does not dim down very far": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "p@could not change intensity high or low": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "q@constantly flicker with LED bulbs": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "r@only three settings with flickering": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "convenience": {
+        "s@very convenient": {
+          "+": {
+            "?": [
+              6,
+              15
+            ]
+          }
+        },
+        "t@easy to use": {
+          "+": {
+            "?": [
+              10,
+              15
+            ]
+          }
+        },
+        "u@super convenient for hard to reach lamps": {
+          "+": {
+            "D": [
+              15
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "v@restricts to single type bulb": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "w@does not work with LED bulbs": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "durability": {
+        "x@potential reliability concerns": {
+          "-": {
+            "C": [
+              20
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedside_lighting": {
+        "+": {
+          "b": [
+            8
+          ],
+          "s": [
+            15
+          ],
+          "?": [
+            17
+          ]
+        },
+        "-": {
+          "w": [
+            18
+          ]
+        }
+      },
+      "night_lighting": {
+        "+": {
+          "m": [
+            14
+          ],
+          "o": [
+            9
+          ]
+        }
+      },
+      "lamp_control_for_arthritis": {
+        "+": {
+          "t": [
+            10
+          ]
+        }
+      },
+      "ceiling_light_control": {
+        "+": {
+          "f": [
+            22
+          ]
+        }
+      },
+      "closet_lighting": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "general_lamp_dimming": {
+        "+": {
+          "g": [
+            24
+          ]
+        },
+        "-": {
+          "h": [
+            12
+          ],
+          "i": [
+            13
+          ]
+        }
+      },
+      "pairing_with_lamp_base": {
+        "+": {
+          "?": [
+            16
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:20.219673"
+}

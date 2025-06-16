@@ -1,0 +1,500 @@
+{
+  "product_title": "Lee Electric 209DN 600-Watt Door Light Switch,White",
+  "product_category": "Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Material": {
+        "A@Made with plastic components": {
+          "-": [
+            2,
+            6,
+            32
+          ]
+        },
+        "B@Made with metal components": {
+          "+": [
+            6
+          ]
+        },
+        "C@Not much plastic, solidly built": {
+          "+": [
+            49
+          ]
+        }
+      },
+      "Appearance": {
+        "D@Best looking switch of this type": {
+          "+": [
+            2
+          ]
+        },
+        "E@Gold detail": {
+          "+": [
+            19
+          ]
+        },
+        "F@Brass finish has look and texture of brass spray paint": {
+          "-": [
+            38
+          ]
+        },
+        "G@Nice appearance": {
+          "+": [
+            42
+          ]
+        }
+      },
+      "Dimensions": {
+        "H@Perfect dimensions to match defective switch": {
+          "+": [
+            34
+          ]
+        },
+        "I@Length about one eighth of an inch too long": {
+          "-": [
+            28
+          ]
+        },
+        "J@Cover plate measured 3.5 inch length": {
+          "+": [
+            30
+          ]
+        },
+        "K@Face plate same width as gang box": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "Construction": {
+        "L@Gang box made by folding metal origami style with no connected seams": {
+          "-": [
+            38
+          ]
+        },
+        "M@Gang box not very rigid and can be easily deformed": {
+          "-": [
+            38
+          ]
+        },
+        "N@Well made item": {
+          "+": [
+            3
+          ]
+        },
+        "O@Cheaply made": {
+          "-": [
+            32
+          ]
+        }
+      },
+      "Internal Components": {
+        "P@Interior guts of the switch": {
+          "-": [
+            6
+          ]
+        },
+        "Q@Internal plastic switch that snaps into assembly": {
+          "-": [
+            32
+          ]
+        },
+        "R@Button component": {
+          "-": [
+            29
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Wear out after a few years": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@Failed in less than 2 years": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "c@Lasted almost 2 years to the day": {
+          "-": {
+            "P": [
+              6
+            ]
+          }
+        },
+        "d@Wore out in less than 1 year": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "e@Switch stuck on after working great": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "f@Don't last, had 5 go bad since 2016": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "g@Only last 2-3 years, not very durable": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "h@Lasted 9 years before going out": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "i@No work after year and half": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "j@Failed in under a year": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "k@Lasted little over a year": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "l@Both failed within a year": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "m@Last about 1-2 years": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "n@Failed after two years": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "o@Switch stuck after two weeks": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "p@Stopped working after about 7 months": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "q@First one lasted 6 years": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "r@First one lasted 5 years": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "s@Old switch lasted 40+ years": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "t@Works as intended": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "u@Working fine": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "v@Work great": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "w@Switch worked well": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "x@Works as expected": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "y@Works like it should": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "z@Product worked as advertised": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "aa@Works great": {
+          "+": {
+            "?": [
+              20,
+              25
+            ]
+          }
+        },
+        "ab@Works well": {
+          "+": {
+            "?": [
+              30,
+              33
+            ]
+          }
+        },
+        "ac@Working perfectly": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "ad@Works great": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "Activation Force": {
+        "ae@Low force needed to activate with significant breakaway": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "af@Small force to keep depressed": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "ag@Easy to install": {
+          "+": {
+            "?": [
+              0,
+              33,
+              34,
+              39,
+              41
+            ]
+          }
+        },
+        "ah@Slightly difficult to install": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "ai@Can be pain to align": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "aj@Quick install": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "ak@Easy replacement": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "al@Install was straight forward": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "am@Not easy to install once doors already in": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "an@Much easier install with new door frame": {
+          "+": {
+            "?": [
+              49
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Replacement Switch": {
+        "+": {
+          "t": [
+            0
+          ],
+          "u": [
+            1
+          ],
+          "x": [
+            8
+          ],
+          "y": [
+            11
+          ],
+          "z": [
+            13
+          ],
+          "H": [
+            34
+          ],
+          "ac": [
+            28
+          ],
+          "ag": [
+            34
+          ],
+          "aj": [
+            19
+          ],
+          "ak": [
+            23
+          ]
+        }
+      },
+      "Pantry Door Switch": {
+        "+": {
+          "aa": [
+            18,
+            20
+          ],
+          "ab": [
+            30
+          ]
+        },
+        "-": {
+          "c": [
+            6
+          ],
+          "k": [
+            35
+          ],
+          "l": [
+            37
+          ],
+          "m": [
+            40
+          ],
+          "p": [
+            47
+          ]
+        }
+      },
+      "Basement Door Switch": {
+        "-": {
+          "d": [
+            7
+          ]
+        }
+      },
+      "Closet Door Switch": {
+        "+": {
+          "aa": [
+            25
+          ]
+        }
+      },
+      "Kitchen Pantry Door": {
+        "-": {
+          "l": [
+            37
+          ]
+        }
+      },
+      "New Installation": {
+        "-": {
+          "am": [
+            42
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:35.004828"
+}

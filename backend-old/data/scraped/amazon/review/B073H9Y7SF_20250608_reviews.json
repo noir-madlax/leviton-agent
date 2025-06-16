@@ -1,0 +1,1952 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:49:42.906375",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B073H9Y7SF",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 4,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B073H9Y7SF",
+    "title": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 17.99,
+    "rating": 4.6,
+    "reviews_count": 146.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Rotary Knob Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B073H9Y7SF"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R35W6FDZ8PRCH4",
+        "text": "Good Dimmer Switch. I have purchased 2 of these and both work well, even with LED lighting. I personally like the rotary style and am glad they are still available. They include different color knobs to suit your needs as well.",
+        "date": "Reviewed in the United States on April 7, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect For LED Lighting",
+        "userName": "Shopper",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1QJ0WBGCXDDO9",
+        "text": "So easy to find on Amazon , so difficult to find elsewhere. Installed and working well.",
+        "date": "Reviewed in the United States on February 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Quality switch",
+        "userName": "Richard A",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1S745YGQLEX4Y",
+        "text": "We have multiple dimmer switches on one panel and one of them was not working well...it was 30 years old. I did not want to replace all three as the other two still work great. However, I was unable to find this style in any of the local home improvement stores. I turned to Amazon and there it was! It came with multiple knobs to match the color of the existing ones, and the replacement is almost perfect. This controls multiple recessed LED lights and does so perfectly. No flickering at all!",
+        "date": "Reviewed in the United States on January 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Unable to find this style anywhere",
+        "userName": "Bettina",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RYREYJENSFOWC",
+        "text": "👍🏼",
+        "date": "Reviewed in the United States on December 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Recommend",
+        "userName": "Tonya",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1883VG7DXPGHF",
+        "text": "It did a nice job",
+        "date": "Reviewed in the United States on December 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Rose gold",
+        "userName": "Suzanne",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R171D6HVM81163",
+        "text": "Running 9 “LiteHistory Dimmable E26 led Bulb 6W” lamps. No flicker, takes them down to the lowest possible bit of light. Just an awesome product. Will buy again.",
+        "date": "Reviewed in the United States on November 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Will buy again.",
+        "userName": "Louis Newman",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2KEYS1OSUA2PG",
+        "text": "Easy to install, works well. Hard to find in my local stores",
+        "date": "Reviewed in the United States on November 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "g miller",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R11QGNMWBS6GFK",
+        "text": "Works fine on LED lights. We had an older dimmer that was prematurely burning out our LED spots in cans. I told the boss that the dimmer probably was the cause, so we changed it to this dimmer instead. The dimming action is much smoother with the Leviton. The old one used to jump around and get bright and and there was little control over dimming. This dimmer returns fine dimming control and I think it's much easier on the LED lights since it's purposefully designed for CFL and LED lights. I like that this came with three different trim knobs for different colors of ivory, since it's always difficult to match the wall plate color based on a photo. I was able to match the wall plate color perfectly. One criticism, though, the knob sticks out from the wall plate a little more pronounced than the old dimmer did. I think this is caused by the fact this is a \"punch on-off\" design rather than a \"turn clockwise to turn on\" design. The unit can handle SPST, 3 Way and 4 way wiring, too, so it's versatile.",
+        "date": "Reviewed in the United States on October 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works on LED lights",
+        "userName": "Marvin W.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R4O1U14F10YO2",
+        "text": "Easy to install and works perfectly",
+        "date": "Reviewed in the United States on September 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good guality",
+        "userName": "Wade L. Barras,Jr.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3BZGJL21NLKKT",
+        "text": "Easy to install",
+        "date": "Reviewed in the United States on April 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Uncle Harley",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R23NKJI2HD6YK1",
+        "text": "The push button switch does not snap on or lock in so it can fall off pretty easily!",
+        "date": "Reviewed in the United States on February 20, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Loose knob",
+        "userName": "Paul Blair",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1EOBMPYPLVLD8",
+        "text": "Stopped working in a week. Second one.",
+        "date": "Reviewed in the United States on January 2, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working in a week",
+        "userName": "Hotboxdp",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R39I77BIX9ZB03",
+        "text": "It does the job. Great dimmer and comes with several knobs.",
+        "date": "Reviewed in the United States on October 16, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "MM",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2MDPHC8GTDE7M",
+        "text": "Just what I needed and easy to install",
+        "date": "Reviewed in the United States on October 12, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked",
+        "userName": "shawn",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2Y1KAL3RBUTPT",
+        "text": "Simple to install. Works great!",
+        "date": "Reviewed in the United States on August 23, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Just what we needed",
+        "userName": "DeanyL - NJ",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R19WZQE8821KCA",
+        "text": "Works well with LED bulbs.",
+        "date": "Reviewed in the United States on July 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "DanW",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1XOSF40L97H3I",
+        "text": "Very easy to install....just match the colored wires on the dimmer to the ones in the box.",
+        "date": "Reviewed in the United States on November 15, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect for 3 way application",
+        "userName": "RayBlehar",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3KQ2DT7AHAX1T",
+        "text": "Works perfectly with Cree dimmable led bulbs. No flickers.",
+        "date": "Reviewed in the United States on April 17, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "No flicker with LED",
+        "userName": "The Real one",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1MN9F0FEQAVYU",
+        "text": "good.",
+        "date": "Reviewed in the United States on February 22, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "good.",
+        "userName": "oy",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1B9FI32YNIAM",
+        "text": "Easy installation. Works perfectly.",
+        "date": "Reviewed in the United States on December 30, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Ignore the negative reviews",
+        "userName": "Renee M",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2GO0MP7DL7O8A",
+        "text": "No one died and the house didn’t burn down.",
+        "date": "Reviewed in the United States on July 24, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "DiY electrical, I got this",
+        "userName": "Erin Moriarty",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RABPKDXCVE5H7",
+        "text": "LED lights don’t flicker!. 2 or 3 way application",
+        "date": "Reviewed in the United States on March 31, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "LED dimming without the flickering",
+        "userName": "R",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R27XL3X91ZYHW0",
+        "text": "Easy to install Works good Yeaaa me",
+        "date": "Reviewed in the United States on March 15, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "MamaDukes",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1Y8AFMDUO3K44",
+        "text": "Does what its supposed to do. Installed easily in 70's home with old wiring. Dims and no buzzing with LEDs.",
+        "date": "Reviewed in the United States on February 8, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "Ken in Erie",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3RAQA78P1ZR68",
+        "text": "Used these to update older incandescent-era dimmers. Working great with dimmable LED bulbs. The locator light is a neat feature.",
+        "date": "Reviewed in the United States on January 29, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product, great price.",
+        "userName": "WayWard",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3JKF8GHS7JZ61",
+        "text": "I wanted a simple dimming control for my LED lighting. This worked perfectly (better than a slide dimmer).",
+        "date": "Reviewed in the United States on January 28, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple to install and Dims my LED's",
+        "userName": "hollajamer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R14B3VL1GXN2NR",
+        "text": "After obtaining the model number for our 30-year old dimmer from Leviton, we bought this same model hoping we could use just the knob to replace our broken knob without paying an electrician to change the entire unit. Our old knob's post requires an open circle shape, and this newer model's post hole is D shaped.",
+        "date": "Reviewed in the United States on January 9, 2020",
+        "rating": "2.0 out of 5 stars",
+        "title": "The dimmer knob does not fit older RDL06-10Z models with circular posts. This is D shaped.",
+        "userName": "Babette",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2ZOGFZ8N46IJ8",
+        "text": "Replacement for defective dimmer. Good product, right price.",
+        "date": "Reviewed in the United States on December 16, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product and good price.",
+        "userName": "SSCBURG",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1KMC9GN931RRX",
+        "text": "Good for the price",
+        "date": "Reviewed in the United States on October 8, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "Olivia choquette",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2PN1MAK61TWIL",
+        "text": "My dimmer broke after 28 years and I have never replaced a switch before. It was easy with good instructions and only took less than 30 minutes and works great and only cost 14 bucks, probably saving me over 200 if I had hired someone.",
+        "date": "Reviewed in the United States on September 12, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Well, Good Price, Good Instructions",
+        "userName": "KarenM",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R394UIM0RK7NA6",
+        "text": "It Worked Like A Charm",
+        "date": "Reviewed in the United States on August 19, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "It Lite Up Bright",
+        "userName": "Joseph R. Flocco",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1TZZOZ356YIDC",
+        "text": "I had a standard bulb to replace with a Led. I used a non dimmable Led bulb and it failed in a week so I replaced the Led bulb and switch with this dimmable option and works perfect.",
+        "date": "Reviewed in the United States on August 14, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Woeks perfect with dimmable Led bulb",
+        "userName": "lokkaman",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3080XU1T0SQVA",
+        "text": "A rotary dimmer, in my professional opinion, is the easiest to operate. Many dimmers require you to push, slide, hold, and generally make love to it to operate your lights. The rotary is quick and easy to operate. Another advantage is that it uses a standard, old-fashioned switch plate, as opposed to a Decora-style plate with the large rectangular opening. This may not be big deal, until you start putting multiple switches at one location. A three-gang switch box, for instance, where you have a combination of standard toggle switches and dimmers can be hard to find a plate with the configuration you need. Keep it simple. We only buy universal application, like this dimmer, because it does all types of bulbs and is either single or three-way. Can't beat it for simplicity and ease of customer use.",
+        "date": "Reviewed in the United States on June 7, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to operate and fits standard switch plate.",
+        "userName": "Anna Amp",
+        "numberOfHelpful": 7,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "RR3GIKVEJUAXN",
+        "text": "I used it for a BR40 65 Watt dimmable LED bulb. Although it works, it is poor are the lower levels of light and never can take the intensity to zero. It always stays lite at a dim level and when you turn the knob up it kind of flickers unit partially turned up. It appears the design still cannot eliminate the leakage to shut the bulb off completely. May because it is not designed just for LED's but tries to do both LED & Incandescence bulbs. Please design one for LED's only and maybe it would work better.",
+        "date": "Reviewed in the United States on March 17, 2019",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works OK but not great",
+        "userName": "Al Bud",
+        "numberOfHelpful": 7,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1341KDPNR4RYI",
+        "text": "This replaced the old 6683 version - just installed and works as expected. Needed the -10Z (which can be wired as a single switch or as a 3-way). I needed 3-way because of the switch across the room that turns the light on and off as well. I followed the wiring instructions - good to go. Hoping for longevity - time will tell.",
+        "date": "Reviewed in the United States on February 10, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well - hoping for longevity",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R1KS6DOMN8U4WJ",
+        "text": "We're using it to dim LED's around the bathroom mirror. This won't dim them over the full range....it stops dimming when the lights are still plenty bright. I'm an engineer so of course I know everything ;) Seriously, I've designed light dimmers and motor speed controls many times and I know exactly what is wrong with the design. These should be designed with a tiny microprocessor which checks the current through the wires periodically and calibrates the half-cycle ramp. If Leviton wants to pay me, I'll design one that does that. It wouldn't add but a few cents to the cost.",
+        "date": "Reviewed in the United States on December 15, 2017",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't dim all the way",
+        "userName": "John Webshopper",
+        "numberOfHelpful": 24,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R13H4G7XJG1BNG",
+        "text": "This switch was easy to install and came as advertised with two different buttons. We used it to replace one that looked just like it in a 3-way installation and it works well. It does hum a bit when dimmed to 50% or less but it is only noticeable if your standing right next to it.",
+        "date": "Reviewed in Canada on February 3, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great - Easy to Install",
+        "userName": "Judi",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2N95P6DOJGXZC",
+        "text": "Does the job. Better since it has a push button on/off",
+        "date": "Reviewed in Canada on December 5, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Does the job",
+        "userName": "Sumit",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R3B3VFHD2RVMJF",
+        "text": "This switch is NOT for LED use. I bought this switch for use with LED's, hooked it up and it buzzes loudly and doesn't adjust properly.",
+        "date": "Reviewed in Canada on September 14, 2020",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not for LED use!",
+        "userName": "Dave Clifton",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B073H9Y7SF",
+        "productTitle": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 40,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 146,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 2
+          }
+        },
+        "reviewId": "R2SUCKGHPGIMY5",
+        "text": "The Rotary Dimmer Switch is PERFECT!!!! I am so very happy that you had it and that you messaged me when it was in stock. Also, it arrived safely at the Post Office. Thanks so very much.",
+        "date": "Reviewed in Canada on December 29, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Product!!!",
+        "userName": "Mona Walrond",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 40,
+    "pages_scraped": 4,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

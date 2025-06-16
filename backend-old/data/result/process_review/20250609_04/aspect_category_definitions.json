@@ -1,0 +1,599 @@
+{
+  "category_definitions": {
+    "physical_categories": {
+      "Button Interface": {
+        "definition": "Physical button controls, layouts, and activation methods including touch-activated interfaces, e.g. button layout changes, on/off buttons, scene selection buttons, touch-activated interfaces",
+        "ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "25",
+          "45",
+          "64",
+          "92",
+          "93",
+          "94",
+          "95",
+          "121"
+        ]
+      },
+      "Magnetic Systems": {
+        "definition": "Magnetic attachment and holding mechanisms, e.g. magnets holding remote to mount, magnetic strength between versions",
+        "ids": [
+          "6",
+          "7"
+        ]
+      },
+      "Aesthetic Design": {
+        "definition": "Visual appearance, color, and styling characteristics, e.g. modern sleek look, color matching issues, slim profile, clean design",
+        "ids": [
+          "8",
+          "9",
+          "10",
+          "11",
+          "16",
+          "17",
+          "21",
+          "30",
+          "35",
+          "36",
+          "56",
+          "76",
+          "77",
+          "78",
+          "79",
+          "80",
+          "87",
+          "88",
+          "89",
+          "90",
+          "101",
+          "102",
+          "103",
+          "104"
+        ]
+      },
+      "Physical Mounting": {
+        "definition": "Installation hardware and mounting mechanisms including wall mounts and magnetic attachments, e.g. wall mount with screw or adhesive options, magnetic mounting strength, stick-on plates",
+        "ids": [
+          "12",
+          "13",
+          "68"
+        ]
+      },
+      "Power Management": {
+        "definition": "Battery life and power-related physical characteristics, e.g. battery lasting upwards of a year, power capacity specifications",
+        "ids": [
+          "14",
+          "53",
+          "54"
+        ]
+      },
+      "Material Construction": {
+        "definition": "Build materials, structural integrity, and manufacturing quality, e.g. polycarbonate construction, plastic quality, sturdy vs flimsy materials, solid construction",
+        "ids": [
+          "15",
+          "18",
+          "19",
+          "20",
+          "33",
+          "34",
+          "37",
+          "41",
+          "51",
+          "66",
+          "70",
+          "71",
+          "72",
+          "73",
+          "74",
+          "75",
+          "105",
+          "106",
+          "107"
+        ]
+      },
+      "Slider Controls": {
+        "definition": "Physical sliding mechanisms for dimming and control adjustment, e.g. smooth responsive sliders, stiff slider movement, slide bar operation",
+        "ids": [
+          "22",
+          "23",
+          "24"
+        ]
+      },
+      "Electrical Connections": {
+        "definition": "Wire connections, terminals, and electrical interface components, e.g. load wire marking, ground terminals, hot wire connections, push-in connections, wire routing difficulties",
+        "ids": [
+          "26",
+          "39",
+          "42",
+          "47",
+          "48",
+          "49",
+          "50",
+          "60",
+          "61",
+          "62",
+          "67",
+          "81",
+          "99",
+          "100"
+        ]
+      },
+      "Cover Components": {
+        "definition": "Removable covers, face plates, and protective housing elements, e.g. cover plates that snap on, face plates breaking off, screw-secured covers, included wall plates",
+        "ids": [
+          "27",
+          "28",
+          "29",
+          "43",
+          "58",
+          "65",
+          "91",
+          "114",
+          "115",
+          "116",
+          "117"
+        ]
+      },
+      "Physical Dimensions": {
+        "definition": "Size, depth, and spatial fit characteristics within electrical installations, e.g. optimal depth for wall box, compact form factor, fitting in electrical boxes",
+        "ids": [
+          "31",
+          "32",
+          "38",
+          "44",
+          "55",
+          "57",
+          "86",
+          "118",
+          "119"
+        ]
+      },
+      "Mechanical Operation": {
+        "definition": "Physical switch mechanisms, tactile feedback, and operational feel, e.g. rocker switch clicks, smooth quiet operation, squeaking sounds, satisfying click feedback",
+        "ids": [
+          "40",
+          "63",
+          "69",
+          "108",
+          "109",
+          "110",
+          "111",
+          "112",
+          "113"
+        ]
+      },
+      "Visual Indicators": {
+        "definition": "LED lights, status indicators, and visual feedback elements on the device, e.g. blue LED indicator lights, green status lights, brightness of indicator symbols",
+        "ids": [
+          "46",
+          "59",
+          "96",
+          "97",
+          "98"
+        ]
+      },
+      "OUT_OF_SCOPE": {
+        "definition": "Aspects that are too vague, generic, or unclear to categorize meaningfully",
+        "ids": [
+          "52",
+          "120"
+        ]
+      },
+      "Internal Mechanisms": {
+        "definition": "Internal moving parts and adjustment components, e.g. rocker pivots breaking, toggle switches falling apart, thumbwheel dials, internal adjustment wheels",
+        "ids": [
+          "82",
+          "83",
+          "84",
+          "85"
+        ]
+      }
+    },
+    "performance_categories": {
+      "Smart Home Integration": {
+        "definition": "Aspects related to connecting and working with smart home ecosystems, apps, and voice assistants, e.g. Philips Hue app connectivity, HomeKit pairing, Alexa integration, WiFi connection issues",
+        "ids": [
+          "0",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5",
+          "7",
+          "18",
+          "122",
+          "163",
+          "174",
+          "175",
+          "176",
+          "177",
+          "178",
+          "179"
+        ]
+      },
+      "Installation Experience": {
+        "definition": "Aspects related to the setup and wiring process during initial installation, e.g. easy installation, confusing wiring diagrams, no neutral wire required, tough installation process",
+        "ids": [
+          "6",
+          "31",
+          "32",
+          "33",
+          "34",
+          "35",
+          "56",
+          "57",
+          "58",
+          "77",
+          "98",
+          "126"
+        ]
+      },
+      "Operational Reliability": {
+        "definition": "Aspects concerning consistent day-to-day performance and dependability over time, e.g. always works when activated, requires multiple button presses, stops working after months, consistent performance",
+        "ids": [
+          "8",
+          "9",
+          "10",
+          "11",
+          "36",
+          "37",
+          "38",
+          "45",
+          "46",
+          "47",
+          "48",
+          "49",
+          "50",
+          "63",
+          "65",
+          "73",
+          "75",
+          "80",
+          "82",
+          "84",
+          "85",
+          "86",
+          "88",
+          "90",
+          "91",
+          "92",
+          "93",
+          "99",
+          "102",
+          "106",
+          "110",
+          "111",
+          "125",
+          "152",
+          "153",
+          "154",
+          "155",
+          "156",
+          "157",
+          "165",
+          "166",
+          "167",
+          "168",
+          "169",
+          "170",
+          "171",
+          "172",
+          "183",
+          "184",
+          "185",
+          "186",
+          "187",
+          "188",
+          "189"
+        ]
+      },
+      "Physical Durability": {
+        "definition": "Aspects concerning the physical robustness and longevity of hardware components, e.g. paddles cracking, tabs breaking off, switches breaking easily, well-built construction",
+        "ids": [
+          "12",
+          "41",
+          "42",
+          "43",
+          "44",
+          "51",
+          "52",
+          "53",
+          "54",
+          "55",
+          "94",
+          "95",
+          "100",
+          "127",
+          "128",
+          "129",
+          "130",
+          "131"
+        ]
+      },
+      "Dimming Performance": {
+        "definition": "Aspects specifically about brightness control capabilities and quality, e.g. smooth dimming operation, precise brightness control, limited dimming range, flickering at low settings",
+        "ids": [
+          "13",
+          "14",
+          "15",
+          "23",
+          "24",
+          "25",
+          "26",
+          "27",
+          "39",
+          "40",
+          "66",
+          "67",
+          "70",
+          "103",
+          "104",
+          "120",
+          "132",
+          "133",
+          "134",
+          "135",
+          "136",
+          "137",
+          "158",
+          "159",
+          "160",
+          "161",
+          "162"
+        ]
+      },
+      "User Interface Experience": {
+        "definition": "Aspects related to ease of use, control methods, and interaction design, e.g. intuitive button controls, customizable scenes, difficult to aim in dark, user-friendly operation",
+        "ids": [
+          "16",
+          "17",
+          "19",
+          "20",
+          "64",
+          "72",
+          "74",
+          "79",
+          "81",
+          "83",
+          "114",
+          "119",
+          "121",
+          "181",
+          "182"
+        ]
+      },
+      "OUT_OF_SCOPE": {
+        "definition": "Aspects that are too generic, vague, or don't provide specific actionable feedback about product performance",
+        "ids": [
+          "21",
+          "22",
+          "191",
+          "192"
+        ]
+      },
+      "Device Compatibility": {
+        "definition": "Aspects about working effectively with different bulb types, electrical systems, and equipment, e.g. LED bulb compatibility, works with ceiling fans, voltage requirements, multi-way setups",
+        "ids": [
+          "28",
+          "29",
+          "30",
+          "68",
+          "71",
+          "96",
+          "97",
+          "105",
+          "109",
+          "115",
+          "116",
+          "117",
+          "118",
+          "164"
+        ]
+      },
+      "Aesthetic Integration": {
+        "definition": "Aspects concerning visual appearance and how well the device fits with home decor, e.g. looks identical to brand-name switches, matches wall plates, visual appeal",
+        "ids": [
+          "59",
+          "60",
+          "61",
+          "62"
+        ]
+      },
+      "Audio and Visual Feedback": {
+        "definition": "Aspects about sounds, lights, and other sensory feedback from the device, e.g. buzzing noise, quiet operation, indicator lights, flickering issues",
+        "ids": [
+          "69",
+          "89",
+          "107",
+          "108",
+          "112",
+          "113",
+          "138",
+          "139",
+          "140",
+          "141",
+          "142",
+          "143",
+          "144",
+          "145",
+          "146",
+          "147"
+        ]
+      },
+      "Electrical Performance": {
+        "definition": "Aspects concerning electrical safety, power handling, and circuit behavior, e.g. overheating issues, electrical arcing, power outages, proper load handling",
+        "ids": [
+          "76",
+          "78",
+          "87",
+          "101",
+          "150",
+          "151",
+          "173",
+          "190"
+        ]
+      },
+      "Purchase Value": {
+        "definition": "Aspects related to cost-effectiveness and overall value proposition, e.g. worth the money, good value for price, expensive for features offered",
+        "ids": [
+          "123",
+          "124",
+          "193",
+          "194",
+          "195",
+          "196",
+          "197"
+        ]
+      },
+      "Response Timing": {
+        "definition": "Aspects related to how quickly the device reacts to user inputs and commands, e.g. delay when pressing buttons, responsive activation, lag in voice commands",
+        "ids": [
+          "148",
+          "149",
+          "180"
+        ]
+      }
+    },
+    "use_case_categories": {
+      "Room Specific Lighting": {
+        "definition": "Lighting control for specific rooms and spaces throughout the home, e.g. bedroom lighting, bathroom lighting, hallway lighting, kitchen lighting, dining room lighting, closet installation",
+        "ids": [
+          "0",
+          "3",
+          "10",
+          "11",
+          "14",
+          "19",
+          "26",
+          "52",
+          "55",
+          "56",
+          "57",
+          "61",
+          "65",
+          "67",
+          "68",
+          "76"
+        ]
+      },
+      "Property Management": {
+        "definition": "Lighting solutions for rental properties and guest accommodations, e.g. rental property lighting, guest control, guest room fan control",
+        "ids": [
+          "1",
+          "7",
+          "42"
+        ]
+      },
+      "OUT_OF_SCOPE": {
+        "definition": "Aspects that are too generic or unclear to categorize meaningfully",
+        "ids": [
+          "2",
+          "27",
+          "28",
+          "51",
+          "53",
+          "58",
+          "59",
+          "73",
+          "74",
+          "78"
+        ]
+      },
+      "Ceiling Fan Control": {
+        "definition": "Control and dimming of ceiling fans and their integrated lighting systems, e.g. bedroom fan control, bathroom fan and light control, Hunter ceiling fan control, multiple fans in home",
+        "ids": [
+          "4",
+          "9",
+          "41",
+          "43",
+          "44",
+          "45",
+          "46",
+          "47",
+          "49"
+        ]
+      },
+      "Ambiance and Scene Control": {
+        "definition": "Creating specific lighting moods and cycling through different lighting scenes, e.g. romantic lighting, room ambiance control, scene cycling, nighttime use",
+        "ids": [
+          "5",
+          "6",
+          "12",
+          "13",
+          "71"
+        ]
+      },
+      "Smart Home Integration": {
+        "definition": "Integration with home automation systems and voice control platforms, e.g. home automation with Alexa, smart home integration, remote control from another room via app",
+        "ids": [
+          "8",
+          "62",
+          "63",
+          "64",
+          "72"
+        ]
+      },
+      "LED Light Management": {
+        "definition": "Control and dimming of various LED lighting applications and installations, e.g. LED strip dimming, under cabinet LED lighting, recessed LED lights, LED ceiling light control",
+        "ids": [
+          "15",
+          "16",
+          "17",
+          "20",
+          "31",
+          "32",
+          "37",
+          "39",
+          "50",
+          "54",
+          "66"
+        ]
+      },
+      "Renovation and Construction": {
+        "definition": "Installation during home improvement projects and new construction, e.g. house remodeling, renovation projects, house flipping, modular home installation",
+        "ids": [
+          "18",
+          "24",
+          "25",
+          "75",
+          "77"
+        ]
+      },
+      "Switch Replacement and Upgrades": {
+        "definition": "Replacing existing switches with newer models or different switch types, e.g. replacing old toggle switches, replacement for rotary dimmer, switching from toggle to paddle switch",
+        "ids": [
+          "21",
+          "22",
+          "23",
+          "29",
+          "48",
+          "60",
+          "70"
+        ]
+      },
+      "Specialty and Custom Applications": {
+        "definition": "Unique or specialized lighting control applications beyond standard home lighting, e.g. fuel gauge dimming, auto stereo control, camper van LED lights, makeup mirror lighting",
+        "ids": [
+          "30",
+          "33",
+          "34",
+          "35",
+          "36",
+          "38",
+          "40",
+          "69"
+        ]
+      }
+    }
+  },
+  "generation_info": {
+    "categorization_date": "2025-06-09T04:59:20.060703",
+    "model_used": "claude-sonnet-4-20250514",
+    "total_products_processed": 10
+  }
+}

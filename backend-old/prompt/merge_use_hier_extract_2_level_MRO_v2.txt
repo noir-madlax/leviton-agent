@@ -1,0 +1,41 @@
+You are tasked with merging verbatims from customer reviews about {{PRODUCT}} into a JSON hierarchy. The input data is provided in the following format:
+ID: verbatim
+
+Output the final JSON in this format:
+{
+    "l1": {
+        "l2": [ID1, ID2, ...]
+    }
+}
+
+Follow these steps to complete the task:
+
+1. Category Content Requirements:
+   - Each category level (l1, l2) must represent concrete, specific use cases or applications
+   - All category names must describe actual end-uses, not abstract groupings
+   - Group similar concepts together even if verbatims use different wording
+   - Exclude specific measurements or numbers in category names
+   - Avoid generic descriptors like "properties", "general", "miscellaneous", "other", "type"
+
+2. Hierarchy Rules:
+   - Start categorization from specific end-uses rather than generic categories such as "environment", "application", "usage", or "device"
+   - Each child category must represent a more specific real-world use case of its parent's concept
+   - Categories at the same level must be mutually exclusive, with no conceptual overlap
+   - A category name or concept must not be reused across different levels
+   - Avoid abstract groupings that could apply to multiple unrelated uses
+
+3. Verbatim Processing Rules:
+   - If a verbatim contains multiple concepts, extract them and include its ID in multiple relevant categories
+   - Details in verbatims should be preserved
+   - Each ID must belong to at least one category groups
+
+4. Review and refine the structure:
+   - Replace any abstract groupings with specific end-uses
+   - Combine categories if their distinction is based on abstract concepts rather than actual usage differences
+   - Ensure each category represents a distinct, concrete use case
+   - Ensure no ID from the input is omitted in the output.
+
+5. Output the JSON only
+
+[[INPUT]]
+{{INPUT}}

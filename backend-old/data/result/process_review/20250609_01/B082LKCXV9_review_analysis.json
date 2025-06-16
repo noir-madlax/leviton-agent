@@ -1,0 +1,362 @@
+{
+  "product_title": "GE CYNC Smart Light Switch, Paddle Style, No Neutral Wire Required, Bluetooth and 2.4 GHz WiFi 3-Wire Switch, Works with Amazon Alexa and Google Home, White (1 Pack)",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "wiring": {
+        "A@no neutral wire requirement": {
+          "+": [
+            2,
+            5,
+            8,
+            13,
+            17,
+            26,
+            34,
+            43,
+            46
+          ]
+        },
+        "B@ground wire": {
+          "+": [
+            14,
+            35
+          ]
+        }
+      },
+      "adapter": {
+        "C@included bulb adapter": {
+          "-": [
+            2,
+            16,
+            17,
+            38,
+            45
+          ],
+          "+": [
+            13,
+            35,
+            46
+          ]
+        }
+      },
+      "indicator": {
+        "D@WiFi indicator light": {
+          "-": [
+            8,
+            17
+          ]
+        },
+        "E@flashing green light during setup": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "design": {
+        "F@clean design": {
+          "+": [
+            43
+          ]
+        }
+      },
+      "app": {
+        "G@Cync app interface": {
+          "-": [
+            10,
+            13,
+            48
+          ],
+          "+": [
+            13,
+            35,
+            43
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@WiFi connection stability": {
+          "-": {
+            "?": [
+              3,
+              4,
+              5,
+              7,
+              8,
+              9,
+              11,
+              17,
+              18,
+              20,
+              24,
+              28,
+              32,
+              34,
+              39,
+              44,
+              49
+            ]
+          },
+          "+": {
+            "?": [
+              12,
+              14,
+              43,
+              46
+            ]
+          }
+        },
+        "b@2.4GHz WiFi requirement": {
+          "-": {
+            "?": [
+              17
+            ]
+          },
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "c@Bluetooth mesh connectivity": {
+          "-": {
+            "?": [
+              39
+            ]
+          },
+          "+": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "installation": {
+        "d@ease of installation": {
+          "+": {
+            "?": [
+              3,
+              12,
+              13,
+              14,
+              33,
+              37,
+              42,
+              43,
+              46
+            ]
+          }
+        },
+        "e@setup process": {
+          "-": {
+            "G": [
+              13,
+              17
+            ]
+          },
+          "+": {
+            "?": [
+              12,
+              13,
+              46
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "f@light flickering": {
+          "-": {
+            "C": [
+              2,
+              16,
+              18,
+              40
+            ]
+          },
+          "+": {
+            "C": [
+              12
+            ]
+          }
+        },
+        "g@bulb compatibility": {
+          "-": {
+            "?": [
+              15,
+              16,
+              19
+            ]
+          },
+          "+": {
+            "?": [
+              12,
+              14
+            ]
+          }
+        },
+        "h@device lifespan": {
+          "-": {
+            "?": [
+              5,
+              27,
+              41
+            ]
+          }
+        },
+        "i@reset requirement": {
+          "-": {
+            "?": [
+              4,
+              7,
+              8,
+              24,
+              28,
+              44
+            ]
+          }
+        }
+      },
+      "integration": {
+        "j@voice assistant compatibility": {
+          "+": {
+            "?": [
+              6,
+              12,
+              13,
+              14,
+              35,
+              42,
+              43,
+              46
+            ]
+          },
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "k@app functionality": {
+          "-": {
+            "G": [
+              48
+            ]
+          },
+          "+": {
+            "G": [
+              43
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home automation": {
+        "+": {
+          "j": [
+            6,
+            12,
+            13,
+            14,
+            35,
+            42,
+            43,
+            46
+          ]
+        },
+        "-": {
+          "a": [
+            3,
+            4,
+            5,
+            7,
+            8,
+            9,
+            11,
+            17,
+            18,
+            20,
+            24,
+            28,
+            32,
+            34,
+            44,
+            49
+          ]
+        }
+      },
+      "basement lighting": {
+        "+": {
+          "d": [
+            12
+          ]
+        },
+        "-": {
+          "c": [
+            39
+          ]
+        }
+      },
+      "laundry room control": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "front door lighting": {
+        "+": {
+          "d": [
+            14
+          ]
+        }
+      },
+      "pool lighting": {
+        "+": {
+          "A": [
+            35
+          ]
+        }
+      },
+      "ceiling fan control": {
+        "-": {
+          "f": [
+            1,
+            29,
+            45
+          ]
+        }
+      },
+      "kitchen lighting": {
+        "-": {
+          "a": [
+            32
+          ]
+        }
+      },
+      "outlet control": {
+        "-": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "3-way switch setup": {
+        "-": {
+          "?": [
+            19
+          ]
+        },
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:11.558201"
+}

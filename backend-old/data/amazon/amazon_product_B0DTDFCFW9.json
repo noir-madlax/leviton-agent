@@ -1,0 +1,121 @@
+{
+  "title": "Single Pole Decorator Light Switch, 15A 120/277V, Paddle Rocker, On/Off Wall Switch, Residential Grade, White, UL/CUL Certified (2-Pack)",
+  "location": "Delivering to Rochester 03867",
+  "product_information": {
+    "Package Dimensions": "4.41 x 2.87 x 1.73 inches; 3.84 ounces",
+    "Date First Available": "January 18, 2025",
+    "Manufacturer": "HANIVERSE",
+    "ASIN": "B0DTDFCFW9",
+    "Best Sellers Rank": "Best Sellers Rank:  #116,004 in Tools & Home Improvement (See Top 100 in Tools & Home Improvement)    #365 in Electrical Light Switches       #365 in Electrical Light Switches",
+    "Customer Reviews": "#365 in Electrical Light Switches"
+  },
+  "brand": "",
+  "brand_url": "/s/ref=bl_dp_s_web_0?ie=UTF8&search-alias=aps&field-keywords=HANIVERSE",
+  "description": "",
+  "price": "$9.99",
+  "list_price": "$9.99",
+  "exact_price": "",
+  "other_used_pricing": "",
+  "price_symbol": "$",
+  "is_prime_exclusive": false,
+  "is_frequently_returned": false,
+  "number_of_people_bought": "",
+  "shipping_info": "FREE Wednesday, June 11 on orders shipped by Amazon over $35",
+  "availability_status": "Only 20 left in stock - order soon.",
+  "aplus": true,
+  "previous_price": "",
+  "is_coupon_exists": false,
+  "coupon_text": "",
+  "main_image": "https://m.media-amazon.com/images/I/31l3EhKGE1L._SY445_SX342_QL70_FMwebp_.jpg",
+  "images_of_specified_asin": [
+    "https://m.media-amazon.com/images/I/61xOy0KpQyL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/51JbtIOVCjL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/619WjvpcUvL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/61m8vF7lNZL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/61hQFOjd5YL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/51eJ-cEXvWL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/61PT1ykPqmL._SL1000_.jpg"
+  ],
+  "images": [
+    "https://m.media-amazon.com/images/I/61xOy0KpQyL._SL1500_.jpg",
+    "https://m.media-amazon.com/images/I/51JbtIOVCjL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/619WjvpcUvL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/61m8vF7lNZL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/61hQFOjd5YL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/51eJ-cEXvWL._SL1000_.jpg",
+    "https://m.media-amazon.com/images/I/61PT1ykPqmL._SL1000_.jpg"
+  ],
+  "number_of_videos": 0,
+  "product_category": "Tools & Home Improvement›Electrical›Switches & Dimmers›Wall Switches›Light Switches",
+  "category_id": "6291359011",
+  "average_rating": "5.0",
+  "feature_bullets": [
+    "Wide Voltage Compatibility：Supports a voltage range of 120V-277V, 15Amp, making it suitable for various electrical systems. It ensures stable and reliable performance in both residential and commercial settings",
+    "Durable Construction：Made from high-quality materials, this switch is durable and resistant to aging. The single-pole toggle switch is easy to operate and has a long lifespan, capable of withstanding frequent use",
+    "Easy Installation：Designed for easy installation with clear instructions provided. Even non-professionals can install it effortlessly, saving time and effort",
+    "Versatile Applications：Ideal for a wide range of applications, including residential and commercial settings. It can be used for lighting, small appliances, and commercial equipment control",
+    "UL Certified Safety：This switch is UL certified, meeting the stringent safety standards in the US. The white color offers a sleek and versatile look that matches any decor style"
+  ],
+  "total_reviews": "2 ratings",
+  "total_answered_questions": "",
+  "other_sellers": [],
+  "customization_options": {
+    "color": [],
+    "size": [],
+    "style": []
+  },
+  "merchant_info": "HANIVERSE",
+  "ships_from": "AmazonAmazonShipsfromAmazon",
+  "sold_by": "HANIVERSE",
+  "author": {
+    "title": "",
+    "description": "var postCsmCountMetric = function postCountMetric(metricName, value) {if (window.ue) {ue.count(metricName, value); } }; try {P.when(\"A\").execute('vse-vw-dp-card', function(A) {var widget = A.$('.vse-vw-dp' ); if (widget.length) {var isMetricRecorded = false; var widgetInViewMetrics = function widgetInViewMetrics () {if (isMetricRecorded) {A.off('scroll', widgetInViewMetrics); return; } if (A.onScreen(widget, 0)) {var requestId = window.ue ? window.ue.id : ''; if (false) {var successCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestSuccess:vse-vw-dp-card', 1); }; var errorCallback = function () {postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequestError:vse-vw-dp-card', 1); }; postCsmCountMetric('ive:csm:widgetScrolledInView:weblabTriggerBatchRequest:vse-vw-dp-card', 1); var payload = {weblabNames: [], requestId: requestId }; A.ajax(\"/vap/ew/weblabtrigger/batch/v2\", {params: payload, paramsFormat: 'json', crossDomain: true, method: 'POST', withCredentials: true, contentType: 'application/json', success: successCallback, error: errorCallback }); isMetricRecorded = true; } if (false) {if (window.ue.trigger) {var triggerInCsmWeblab = ''; if (triggerInCsmWeblab.indexOf(':') !== -1) {var weblabNameAndTreatment = triggerInCsmWeblab.split(':'); window.ue.trigger(weblabNameAndTreatment[0], weblabNameAndTreatment[1]); postCsmCountMetric('ive:csm:widgetScrolledInView:csmWeblabTrigger:vse-vw-dp-card:', 1); } } } } }; A.on('scroll', widgetInViewMetrics); } }); } catch (exception) {postCsmCountMetric('vse-vw-dp-card' + 'weblabTrigger:exception'); if (window.ueLogError) {var message = 'Exception when trigger Weblab on scroll into the view '; if (false) {message += ''; } var additionalInfo = {logLevel: 'ERROR', attribution: 'ive-trigger-on-scroll', message: message }; window.ueLogError(exception, additionalInfo); } } VideosHelp others learn more about this product by uploading a video!Upload your video"
+  },
+  "customers_freuqently_viewed": [],
+  "products_related_to_this_item": [],
+  "customer_who_bought_this_item_also_bought": [],
+  "customers_say": "",
+  "customer_sentiments": [],
+  "ratings_distribution": [
+    {
+      "rating": 5,
+      "distribution": "100"
+    },
+    {
+      "rating": 4,
+      "distribution": "0"
+    },
+    {
+      "rating": 3,
+      "distribution": "0"
+    },
+    {
+      "rating": 2,
+      "distribution": "0"
+    },
+    {
+      "rating": 1,
+      "distribution": "0"
+    }
+  ],
+  "customer_reviews": [
+    {
+      "customer_name": "brockbrock",
+      "customer_profile": "/gp/profile/amzn1.account.AF5QYR27OUI3KQ4JDCHVUYME5XLQ/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsNice basic switch",
+      "date": "Reviewed in the United States on May 2, 2025",
+      "review_snippet": "These are nothing fancy - but that's not a bad thing. They're solidly made and not flimsy, and have a good \"click\" as they switch.There are both screws and push-in connections on the back. Some cheaper switches are missing one or the other, so it's a nice thing that these have both.They use standard screws and decora plates, and so far everything fits well."
+    },
+    {
+      "customer_name": "Tiffany and Justin Frazier",
+      "customer_profile": "/gp/profile/amzn1.account.AFO7EPZG7236JV5KUM32LIHYVTSA/ref=cm_cr_dp_d_gw_tr?ie=UTF8",
+      "thumbnail": "https://images-na.ssl-images-amazon.com/images/G/01/x-locale/common/grey-pixel.gif",
+      "rating": "5.0 out of 5 stars",
+      "review_title": "5.0 out of 5 starsEasy to install",
+      "date": "Reviewed in the United States on May 6, 2025",
+      "review_snippet": "These work well as light switches. Easy to install and works as expected."
+    }
+  ]
+}

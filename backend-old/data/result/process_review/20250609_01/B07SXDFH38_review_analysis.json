@@ -1,0 +1,470 @@
+{
+  "product_title": "Feit Electric Smart Dimmer Switch, Neutral Wire Required for Installation, Compatible with Amazon Alexa and Google Assistant, Smart Dimmer Light Switch, White, Model:DIM/WiFi",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Installation": {
+        "A@Challenging to install in 3-way configuration": {
+          "-": [
+            0,
+            26,
+            31,
+            36,
+            42
+          ]
+        },
+        "B@Easy installation process": {
+          "+": [
+            14,
+            16,
+            17,
+            23,
+            35,
+            37,
+            41,
+            49
+          ]
+        },
+        "C@Missing load screw and internal screw plate": {
+          "-": [
+            5
+          ]
+        },
+        "D@Metal plate instead of plastic for mounting": {
+          "+": [
+            21
+          ]
+        },
+        "E@Screw terminals instead of wire leads": {
+          "+": [
+            21
+          ]
+        },
+        "F@Small light indicator in switch": {
+          "+": [
+            16
+          ]
+        },
+        "G@Requires neutral wire connection": {
+          "+": [
+            10,
+            39,
+            46
+          ]
+        }
+      },
+      "Build Quality": {
+        "H@Defective units with faulty remote switch functionality": {
+          "-": [
+            36,
+            42
+          ]
+        },
+        "I@Used/returned product sold as new": {
+          "-": [
+            20,
+            38
+          ]
+        },
+        "J@Missing switch in package": {
+          "-": [
+            11
+          ]
+        },
+        "K@Cracked plastic insert and missing retainers": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "Wiring": {
+        "L@Red/yellow terminal always hot after correct wiring": {
+          "-": [
+            26
+          ]
+        },
+        "M@Requires power and common at end of chain for 3-way setup": {
+          "-": [
+            39
+          ]
+        },
+        "N@Need pigtail neutral wire especially with adjacent switches": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming Performance": {
+        "a@Works well with dimmable LED and incandescent bulbs": {
+          "+": {
+            "D": [
+              46
+            ],
+            "E": [
+              46
+            ],
+            "?": [
+              47
+            ]
+          }
+        },
+        "b@Limited dimming capability with LED lights": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "c@Inconsistent dimming with some Feit LED bulbs": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "d@Multiple dimming levels available": {
+          "+": {
+            "?": [
+              9,
+              16
+            ]
+          }
+        },
+        "e@Smooth manual operation and control": {
+          "+": {
+            "F": [
+              6
+            ]
+          }
+        },
+        "f@Remembers light level after power cycle": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "Smart Functionality": {
+        "g@Works with 2.4 GHz WiFi only": {
+          "+": {
+            "?": [
+              1,
+              40
+            ]
+          }
+        },
+        "h@Easy app setup and device detection": {
+          "+": {
+            "?": [
+              14,
+              23
+            ]
+          }
+        },
+        "i@Compatible with SmartLife app": {
+          "+": {
+            "?": [
+              13,
+              21,
+              27
+            ]
+          }
+        },
+        "j@Alexa integration and voice control": {
+          "+": {
+            "?": [
+              6,
+              13,
+              17,
+              22,
+              24,
+              37,
+              46,
+              47
+            ]
+          }
+        },
+        "k@Google Home integration": {
+          "+": {
+            "?": [
+              4,
+              18
+            ]
+          }
+        },
+        "l@Scheduling and automation features": {
+          "+": {
+            "?": [
+              4,
+              16,
+              24,
+              32,
+              49
+            ]
+          }
+        },
+        "m@Motion sensor integration capability": {
+          "+": {
+            "?": [
+              4,
+              13
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "n@Stops dimming after 1-2 years of use": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "o@Switch fails to turn off completely": {
+          "-": {
+            "?": [
+              3,
+              33
+            ]
+          }
+        },
+        "p@Goes offline and cannot reconnect": {
+          "-": {
+            "?": [
+              18,
+              25,
+              27,
+              29
+            ]
+          }
+        },
+        "q@Stable and reliable long-term performance": {
+          "+": {
+            "D": [
+              46
+            ],
+            "E": [
+              46
+            ]
+          }
+        },
+        "r@WiFi password change causes permanent connection issues": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "s@Incompatible with integral LED fixtures": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "t@Doesn't work with non-dimmable bulbs": {
+          "-": {
+            "?": [
+              46,
+              47
+            ]
+          }
+        },
+        "u@Causes dim glow when set to off with certain LED fixtures": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "v@Interference between WiFi switch and WiFi bulbs": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "w@Makes horrible noise when used with fans": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "3-Way Configuration": {
+        "x@Turns 3-way circuit into 2-way with bypassed switch": {
+          "-": {
+            "L": [
+              26
+            ]
+          }
+        },
+        "y@Works fine in 3-way when properly wired": {
+          "+": {
+            "G": [
+              21
+            ],
+            "M": [
+              39
+            ],
+            "?": [
+              41,
+              42,
+              46
+            ]
+          }
+        },
+        "z@Requires both switches to be Feit brand": {
+          "-": {
+            "H": [
+              36
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home Automation": {
+        "+": {
+          "j": [
+            6,
+            13,
+            17,
+            22,
+            24,
+            37,
+            46,
+            47
+          ],
+          "l": [
+            4,
+            16,
+            24,
+            32,
+            49
+          ],
+          "m": [
+            4,
+            13
+          ]
+        }
+      },
+      "Outdoor Lighting Control": {
+        "+": {
+          "l": [
+            4,
+            16,
+            32
+          ],
+          "?": [
+            49
+          ]
+        }
+      },
+      "Movie Watching Ambiance": {
+        "+": {
+          "d": [
+            24
+          ],
+          "e": [
+            6
+          ]
+        }
+      },
+      "Security Lighting": {
+        "+": {
+          "l": [
+            49
+          ],
+          "m": [
+            4,
+            13
+          ]
+        }
+      },
+      "Energy Savings": {
+        "+": {
+          "d": [
+            4
+          ]
+        }
+      },
+      "Remote Control When Away": {
+        "+": {
+          "i": [
+            13
+          ],
+          "?": [
+            49
+          ]
+        }
+      },
+      "Bathroom Lighting Automation": {
+        "-": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "3-Way Hallway Control": {
+        "+": {
+          "y": [
+            39,
+            41,
+            42,
+            46
+          ]
+        },
+        "-": {
+          "x": [
+            26
+          ],
+          "z": [
+            36
+          ],
+          "M": [
+            39
+          ]
+        }
+      },
+      "Replacing Loud Timer Switches": {
+        "+": {
+          "l": [
+            32
+          ]
+        }
+      },
+      "DIY Home Improvement": {
+        "+": {
+          "B": [
+            14,
+            16,
+            17,
+            23,
+            35,
+            37,
+            41,
+            49
+          ]
+        },
+        "-": {
+          "A": [
+            0,
+            26,
+            31,
+            36,
+            42
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:02:35.707248"
+}

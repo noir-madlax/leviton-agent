@@ -1,0 +1,338 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:46:57.679253",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0DRZ77JQT",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 1,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0DRZ77JQT",
+    "title": "TP-Link Tapo Matter Smart Dimmer Switch, Single Pole, Neutral Wiring & 2.4 GHz WiFi Required, Compatible with Alexa, Siri, Google Home, Bixby, UL Certified Light Switch, (4-Pack)",
+    "brand": "TP-Link",
+    "model_number": NaN,
+    "price_usd": 65.99,
+    "rating": 4.3,
+    "reviews_count": 821.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0DRZ77JQT"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DRZ77JQT",
+        "productTitle": "TP-Link Tapo Matter Smart Dimmer Switch, Single Pole, Neutral Wiring & 2.4 GHz WiFi Required, Compatible with Alexa, Siri, Google Home, Bixby, UL Certified Light Switch, (4-Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 6,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 824,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3CZ4PKQEZ0ZHM",
+        "text": "This product does not work!!! Won't connect with HomeKit! Also cannot support multi switch set up for hallways. Tapo support is horrible and a complete waste of time. Spent over a month going back and forth with Tapo and finally both Amazon and Tapo refused to allow return of product! $455 down the drain",
+        "date": "Reviewed in the United States on June 4, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "THIS PRODUCT IS A NiGHTMARE",
+        "userName": "Dean Brown",
+        "numberOfHelpful": 0,
+        "variationId": "B0DRZ77JQT",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer",
+          "Size: 4-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DRZ77JQT",
+        "productTitle": "TP-Link Tapo Matter Smart Dimmer Switch, Single Pole, Neutral Wiring & 2.4 GHz WiFi Required, Compatible with Alexa, Siri, Google Home, Bixby, UL Certified Light Switch, (4-Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 6,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 824,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2FJBQG0SSAG5B",
+        "text": "Disconnect every day from google home. They work without issue in Tapo app, but who uses that app every day. Please fix this",
+        "date": "Reviewed in the United States on June 2, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Disconnect from Google Home every day",
+        "userName": "Ravileos",
+        "numberOfHelpful": 0,
+        "variationId": "B0DRZ77JQT",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer",
+          "Size: 4-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DRZ77JQT",
+        "productTitle": "TP-Link Tapo Matter Smart Dimmer Switch, Single Pole, Neutral Wiring & 2.4 GHz WiFi Required, Compatible with Alexa, Siri, Google Home, Bixby, UL Certified Light Switch, (4-Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 6,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 824,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R24LJHWUX7OBNC",
+        "text": "one of the product has issue, instead of company send replacement, they send me to goose chase. do not buy this product.",
+        "date": "Reviewed in the United States on May 13, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "do not buy this product",
+        "userName": "rafick margusian",
+        "numberOfHelpful": 0,
+        "variationId": "B0DRZ77JQT",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer",
+          "Size: 4-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DRZ77JQT",
+        "productTitle": "TP-Link Tapo Matter Smart Dimmer Switch, Single Pole, Neutral Wiring & 2.4 GHz WiFi Required, Compatible with Alexa, Siri, Google Home, Bixby, UL Certified Light Switch, (4-Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 6,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 824,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1TTX0YZ7VGYQ3",
+        "text": "Easy to install, and very smooth operation, even on LEDs. Integrates easily into the Tapo app. Had no.ptoblem getting them to fit the wall box, but be aware that they are deeper than a standard switch. Allows a set to program min and max levels as well as to program 5 presets. Was able to set to supper low light level. I will be installing a lot more of these .. Most important, we can turn the lights off with our phone, from the bed!!!!",
+        "date": "Reviewed in the United States on April 10, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "These are GREAT!!!!",
+        "userName": "JVamazon",
+        "numberOfHelpful": 0,
+        "variationId": "B0DRZ77JQT",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer",
+          "Size: 4-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DRZ77JQT",
+        "productTitle": "TP-Link Tapo Matter Smart Dimmer Switch, Single Pole, Neutral Wiring & 2.4 GHz WiFi Required, Compatible with Alexa, Siri, Google Home, Bixby, UL Certified Light Switch, (4-Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 6,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 824,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R14RMJI33X6D3K",
+        "text": "This has issues. when you Turn OFF the switch. This turns off and then Flicks One time and then goes off. I tried with multiple New Lights before writing this review.",
+        "date": "Reviewed in the United States on March 15, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flicker Issue.",
+        "userName": "AC",
+        "numberOfHelpful": 0,
+        "variationId": "B0DRZ77JQT",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer",
+          "Size: 4-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0DRZ77JQT",
+        "productTitle": "TP-Link Tapo Matter Smart Dimmer Switch, Single Pole, Neutral Wiring & 2.4 GHz WiFi Required, Compatible with Alexa, Siri, Google Home, Bixby, UL Certified Light Switch, (4-Pack)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 6,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 824,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 71
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R22EJ8BW1CJAWB",
+        "text": "Bought set of 4, arrived promptly. I live in an old apartment building with 115 year old wiring, so the super had to work out how to connect neutral and ground. Was fiddly for him to do for first switch; each subsequent one took under 10 minutes. Total time for me to connect switches to app and then also to Google was under 15 minutes. First one again fiddly (had to reset it and start again, as there is a short window from connecting to to the app during which time you must set up the connection to Google home); others were completed within about 6 minutes.",
+        "date": "Reviewed in the United States on February 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works easily and exactly as advertised.",
+        "userName": "Jonathan F",
+        "numberOfHelpful": 0,
+        "variationId": "B0DRZ77JQT",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer",
+          "Size: 4-Pack"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 6,
+    "pages_scraped": 1,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

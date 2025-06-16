@@ -1,0 +1,2548 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:18:04.228662",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B003AUCKLO",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B003AUCKLO",
+    "title": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 17.0,
+    "rating": 4.6,
+    "reviews_count": 443.0,
+    "category": "Light Switches",
+    "product_segment": "LED Illuminated Indicator Switches",
+    "product_url": "https://www.amazon.com/dp/B003AUCKLO"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2R8PSQ67ERR36",
+        "text": "Has retainers for stranded wires, needs a neutral wire for light, over priced.",
+        "date": "Reviewed in the United States on February 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "as advertised",
+        "userName": "B K.",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R20X1UA7VG88SN",
+        "text": "Works great. Little tricky hooking up the lighted switch. Yay YouTube videos 🙂",
+        "date": "Reviewed in the United States on January 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent product",
+        "userName": "George Robards",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2S187MS7W11JD",
+        "text": "Could not make it work. Wanted it to show red to remind me outdoor ceiling fan was on. Could wire it to show red but fan would not turn on. I could wire it to turn on fan but switch would not show red . Instruction very small and hard to read. Need better illustrations.",
+        "date": "Reviewed in the United States on July 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Need better assembly instructions",
+        "userName": "Bradley Bruns",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R73OT5FPQ56T0",
+        "text": "Not being an electrician, I needed a light switch that could indicate if the attic lights were illuminated. I ordered the switch with the hopes of installing it myself. After reading the instructions, I was able to easily install the switch. It is very simple. This is a very good product that served my purposes.",
+        "date": "Reviewed in the United States on July 10, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "Doug O",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R23K6IXEUA5YQ4",
+        "text": "If you want to have a switch with a pilot light to see when a light is turned on, especially for lights outside of the house, and replace an existing 3-way switch that doesn’t have a pilot light with this product, you are likely to be disappointed as it probably won’t work and the product description isn’t clear enough to explain what it can and can’t do.",
+        "date": "Reviewed in the United States on April 6, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not a direct replacement for a 3-way switch",
+        "userName": "Pete",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R14COKAMTRW9TJ",
+        "text": "I wanted to replace my old bedroom hot water circulator timer, which began giving me problems, with a switch to save on electricity. The timer was set to run two hours in the morning and two hours at night to cover the times we got up and went to bed. With the switch we run the circulator only when we need it, which is about 10 minutes a day. Instead of a basic single pole switch I opted for this Leviton PLR 20amp switch with a lighted toggle. It's larger than a normal on/off switch so it takes more room in electrical box and it requires a neutral wire for the light to work. I bought a deep double old construction outlet box because I wanted to keep the existing outlet and install the switch in the same box. It required a little work getting the original outlet box out without much damage to the sheet rock. The deep box provided plenty of room for the outlet, the new switch, and the wires. I love the lighted switch. it's built to last and the bright red light is a great reminder to turn the circulator off. The only con are the directions...the five installation options are printed on a small piece of paper and require a magnifying glass to read. Not a problem if you have basic electrical skills and know how you want to wire it. I used a jumper from the outlet in the same box to provide a neutral for the switch.",
+        "date": "Reviewed in the United States on March 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Sturdy Switch...Highly recommend.",
+        "userName": "ken",
+        "numberOfHelpful": 2,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3C2DLJA6PFYC6",
+        "text": "This item was used for an outside deck light inside one of my rentals. Due to the inside curtains / blinds, I found that renters didn’t notice that the outside deck light was left on all night Love the red light that is lit up when the outside deck light is on, as it allows the renter to see that the outside light is on from inside. Easy to install.",
+        "date": "Reviewed in the United States on January 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked perfectly",
+        "userName": "Robyn",
+        "numberOfHelpful": 2,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2BD6R4XE4NX5U",
+        "text": "Well made switch. Shipped quick, liked price. Reason light would not light traced to an open netural wire.",
+        "date": "Reviewed in the United States on January 18, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Lighted switch single pole",
+        "userName": "Roger W Stone",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R34MU24FPL9ABN",
+        "text": "Great product!",
+        "date": "Reviewed in the United States on November 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Looks good!",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3KZ5T8HGLCU34",
+        "text": "The pilot light only lights up when the load is off. The description is wrong. If someone can prove me wrong I'll change my review. Finally figured it out. Wire a neutral to the 120v pilot light pole for lit when load is on.",
+        "date": "Reviewed in the United States on October 21, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Only lights when load is off.",
+        "userName": "NOYDB",
+        "numberOfHelpful": 4,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1FWIXAD0OT2GU",
+        "text": "Exactly as advertised",
+        "date": "Reviewed in the United States on August 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good product",
+        "userName": "Robert",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3NNDWZ9B7L8MS",
+        "text": "Does what I need it to do.",
+        "date": "Reviewed in the United States on July 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Switch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1AUP7140X4BY2",
+        "text": "This was installed along with a red plate that says \"Emergency Shutoff\" for the furnace. Now there is no chance that any future person will misunderstand the purpose of the switch. The instructions were easy to understand. We installed the switch so the light is \"on\" when the switch is \"on\" and vice versa.",
+        "date": "Reviewed in the United States on June 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Installed as an upgrade -- looks good",
+        "userName": "E&A",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3VR1XO57DZROC",
+        "text": "I tried some other cheaper Leviton w a white led and it was terrible. This one is heavy duty, no leakage and you know in the light or dark that the switch is on. Nice bright red light",
+        "date": "Reviewed in the United States on June 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Bright",
+        "userName": "sIR sHOE",
+        "numberOfHelpful": 2,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1CBNHW58SFXFU",
+        "text": "Only worked for a few seconds Will not buy electrical items from Amazon again",
+        "date": "Reviewed in the United States on June 9, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective",
+        "userName": "Dar.T",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2N7OZHHZ9QEZ7",
+        "text": "20 amp toggle with built-in pilot light. Easy to install and replace standard toggles. Included wiring diagram show various possible configurations to match your application.",
+        "date": "Reviewed in the United States on March 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Leviton Quality",
+        "userName": "Paul",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3BWB2UA8M69NL",
+        "text": "Installed to switch my exhaust fan in workshop which is behind a filter assembly so it's difficult to tell if it is on. This is a very well made 20AMP switch, the instruction sheet was precise and easy to understand including diagrams for each of the wiring options. I did have to photograph the sheet on my phone and up-size it a bit but that is my eyes, not their fault. Yeah, a little pricey, what isn't nowadays. This is a very nice switch and I suspect will last as long as I need it. I wired as a pilot (indicator light on when load is energized) and single switch, it can also be wired several other ways.",
+        "date": "Reviewed in the United States on March 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect for my application",
+        "userName": "Wild Bill",
+        "numberOfHelpful": 2,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R170P7SOL4G9OP",
+        "text": "It turns on and off as needed. The pilot light is bright enough for 110v purposes. Make sure it is correctly installed and you should get good long use out if this pilot light switch.",
+        "date": "Reviewed in the United States on January 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It's a switch",
+        "userName": "Elijah",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R372WD20K0BVBT",
+        "text": "I use it to turn on the AC / DC charger for my batteries, Works great ... Love the switch Good quality",
+        "date": "Reviewed in the United States on January 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect for the job",
+        "userName": "KJ",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61058NNgy3L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R6OJ5DKNM6842",
+        "text": "My husband always leaves the basement lights on. With this switch, we know if he left the lights on. I also know where he is in the house.",
+        "date": "Reviewed in the United States on December 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "You know you left the lights on",
+        "userName": "Jose",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R22N251A9V77RA",
+        "text": "Does not work with LED lighting Had to send them back. But a good idea for incandescent lighting.",
+        "date": "Reviewed in the United States on September 20, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Only works with incandescent light",
+        "userName": "J R D",
+        "numberOfHelpful": 2,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1SZUF4DRL6HVA",
+        "text": "Need to tie a neutral or ground to the switch for the light to work. This was not very clear in the instructions. Added the neutral wire and everything works great. It is a great reminder I have my air compressor on.",
+        "date": "Reviewed in the United States on August 15, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked great.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2SGF2ZJEHGW81",
+        "text": "Replaced old safty switch",
+        "date": "Reviewed in the United States on May 15, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Safty first",
+        "userName": "Les Hurst",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3MFKMDCELSMK7",
+        "text": "I have been an electrician for 47 yrs. This is the first \"top brand switch\" I've purchased that failed, after 7 months in service. Contacted Leviton,, they told me switch has a 10 yr warranty. Sent them all necessary receipts, Have not heard anything back. I don't think replacing a $20 switch to keep a customer happy will bankrupt their Company!",
+        "date": "Reviewed in the United States on January 4, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "I Got A Bad One!",
+        "userName": "Dave",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R25XQ4A5Z6NWAF",
+        "text": "Used switch for pet bed heater. Heater on switch lights. Works as intended.",
+        "date": "Reviewed in the United States on December 29, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "knowing when switch is on.",
+        "userName": "blackattack3",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3W34HJQJ43OVA",
+        "text": "i recently added an exterior outlet post at my shed. I did connect to a GFI outlet but also wanted an interior switch. The lighted switch is an added feature to insure it is turned off when not in use",
+        "date": "Reviewed in the United States on December 21, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "safet first",
+        "userName": "WIGS",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1I1S0VI5X23BU",
+        "text": "The original \"service switch\" on my gas furnace was wearing out, so I'd figured that I'd replace it, with added flare. This Leviton switch has a smooth but affirmative action and glows a lovely share of orangey-red (like smoldering coals). It requires a neutral (white) wire connection to provide a steady glow, but all switches should have them nearby (look deep into the back of the switch box). In my case, I needed to add a little jumper wire (had a spare white wire from a recent Romex job) between the existing neutral bundle in the box and this new pilot light switch. Also pictured here is a 'Morris 83496 Emergency Metal Switch Plate, Gas, 1 Gang, Red' and a 'Clear Light Switch Guards, 3 - Pack | Toggle Style | Child Safety Cover | Light Switch Protection | Two Levels of Security | Home and Office' to help indicate what the purpose of this switch is and to discourage accidental flipping.",
+        "date": "Reviewed in the United States on December 8, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Pilot Light Switch for Furnace",
+        "userName": "Pongoxbongo",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81VvIHwKm+L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3UVRXY7VT0EKP",
+        "text": "I'm no dummy but not everyone's an electrican. I bought this to replace our attic light so the illuminated switch would remind us it was on. There where zero instructions in the package and despite several attempts I have yet to get the switch and the light on at the same time. Its a good switch but it needs more info. Cost them two stars.",
+        "date": "Reviewed in the United States on December 4, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "NO INSTRUCTIONS WITH IT!",
+        "userName": "Willie",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1EX2UBJAVDFNE",
+        "text": "Installs like any other switch and lights up brightly when in the ON position.",
+        "date": "Reviewed in the United States on November 22, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "No problems at all",
+        "userName": "gary s.",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2X7FHI1FWR3L7",
+        "text": "This part is obsolete, so we were exited to find it on Amazon. Our customer was happy that we were able to make the repair so quickly.",
+        "date": "Reviewed in the United States on September 9, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "It fixed the customer's system",
+        "userName": "B. Stiner",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RXXYW89A7Z5C1",
+        "text": "It worked for the purpose I bought it for. Good product!",
+        "date": "Reviewed in the United States on July 9, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Leviton 20-amp",
+        "userName": "jjjcorsi",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R39QEV75L68AFG",
+        "text": "This was clearly used and has been shorted out. Not at all the condition that I was expecting for a $15 switch.",
+        "date": "Reviewed in the United States on June 14, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "So much for “new”",
+        "userName": "John",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/B1YEBiPza+S._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/C1QXvEehv+S._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RXTF9C0VTOIWM",
+        "text": "Used for camper hot water heater switch. Working great. The red switch is always on even when I turn the switch off. I was hoping it would turn on when I turn the switch on. I'm not sure how to make it work this way. So many different configurations to wire it up.",
+        "date": "Reviewed in the United States on April 24, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Durability is great",
+        "userName": "David Allday",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2VQERZM7YGGUH",
+        "text": "Leviton makes good switches but this 20 amp pilot switch was broken and second hand with some rust and grime. Amazon described it as: Sold by: Amazon.com Services LLC $17.75 Condition: New They should be ashamed of themselves, then look into who perpetrated this deception.",
+        "date": "Reviewed in the United States on April 16, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Switch is used, dirty and broken!",
+        "userName": "Arthur Nelson",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R20CKGBB5BW2AC",
+        "text": "I installed these on ceiling fan switches hoping that people will notice the light being on and turn the fans off when they leave. Use as large a box as possible for these switches. I was using 12 gauge wire so this large switch and four wires take a lot of room in the box.",
+        "date": "Reviewed in the United States on April 12, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Handy Lighted Switch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3RPIP6QME89ZX",
+        "text": "Nothing to dislike it’s a indicating switch.",
+        "date": "Reviewed in the United States on April 10, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lighted switch.",
+        "userName": "G",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2UK2AXPP8RI69",
+        "text": "Solid switch.",
+        "date": "Reviewed in the United States on April 1, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Heavy Duty",
+        "userName": "Robert",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R6Q1LGHPB4LBW",
+        "text": "Perfect for situations of having a red lighted toggle to indicate that switch is in the “on” position. Excellent for dark room or area! Also available in additional colors.",
+        "date": "Reviewed in the United States on February 19, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Top Shelf Switch",
+        "userName": "Wes",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3B8PB9L4S0UUH",
+        "text": "Very much important part hi grade hi voltage take time to install read maintenance manual for safety reasons check breaker unit for issues first before Service",
+        "date": "Reviewed in the United States on February 9, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Hi grade very important part",
+        "userName": "Ronald D Harris Sr.",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/91GPU7EXVqL._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/91IBDm5drPL._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/91z2CTzpi8L._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R29CDT2CFV23ZY",
+        "text": "The air compressor in my shop is directly below our 2nd floor guest bedroom. There must be a tiny air leak because it frequently starts somewhat unexpectedly any time of day or night, and it's LOUD ... like meteorite has hit the house. Decided recently to add a pilot light switch so that I can turn it on/off somewhat more conveniently. The handle is bright enough to be noticable when I'm turning all the lights in for the evening. Thought about other options (e.g. motion sensor) but this seems to be the best option for now. I stared at the wiring instructions for a while before I decided to just read the other reviews. The instructions that come with the switch are a bit unclear and the font size is so small anyway it's difficult (for me) to read anyway. A similar Hubble pilot light switch costs a bit less but it was out-of-stock at my local big box so I bought this on Amazon. It's rated 20 amps so definitely adequate for most household applications, including a shop air compressor.",
+        "date": "Reviewed in the United States on February 8, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Pilot Light for an Air Compressor",
+        "userName": "cross_wings_wood",
+        "numberOfHelpful": 2,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/81N06VbX0mL._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/81sQRCmjvdL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2DUHW5OAMKGUY",
+        "text": "Great product just as described",
+        "date": "Reviewed in the United States on February 7, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "Theopolis James",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1KMJGVKCO22ON",
+        "text": "Our roof de-icer is connected to a switched outlet, and even with labels for the \"on\" and \"off\" position, it was tough to tell at a glance whether the unit was on. This switch has made it perfectly simple to look and know immediately, without turning on the lights or even making it all the way down the basement stairs. Much simpler to keep from forgetting to turn it off, too - the light makes a perfectly visible reminder. Can't comment on installation, as I had our electrician do that, though it seemed to go quickly and simply enough. She mentioned that it was nice to have a solid 20-amp switch for just this kind of application, and she plans on keeping it in mind to recommend to others. :)",
+        "date": "Reviewed in the United States on January 19, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect when asking \"is it on?\"",
+        "userName": "C. Thomas",
+        "numberOfHelpful": 3,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/81d8Hppt6wL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RH7LTZXTLVTMU",
+        "text": "This is a completely misleading product advertisement! I’ve read others and it is pretty clear that I am not alone. I ordered a toggle light switch that would glow red when “ON” in order to remind me to turn it off. I am not an electrician and didn’t realize I’d need to be, or hire one to install a light switch. It turns the outside light on and off - but it does not glow when on. It works no better that the one I just replaced! Waste of time and money",
+        "date": "Reviewed in the United States on January 5, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worthless - does not glow red when on!",
+        "userName": "Robert",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R936WP897IE1X",
+        "text": "The description is flat out wrong. A neutral wire is required in order for the switch to be illuminated.",
+        "date": "Reviewed in the United States on December 26, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't work without a neutral wire",
+        "userName": "Leo",
+        "numberOfHelpful": 2,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3RBACAY5WA5WQ",
+        "text": "Installed this to replace my current garage light switch. I wanted a way to know if my garage light was on, without having to open the door. Well made, commercial quality. My only ding for this is... if you want it to light up, you need to connect the neutral/white wire to the upper left of the switch, else it will work but not glow red when on. Also, I was under the impression there was a pilot light in the off position. No matter how I wired it, that never came on. *Leviton - include instructions for the neutral wire/white wire to be installed as well for the switch to glow red when ON.",
+        "date": "Reviewed in the United States on December 12, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome plug, just what I needed to let me know if the Garage light is on.",
+        "userName": "Michael K.",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3OMTV4K2KIVSD",
+        "text": "Once I got it wired correctly, it worked fine. Just what I needed to remind me that the bathroom fan was running. I found that to get the the lighted switch to be on when the fixture it is connected to is on, I had to follow the second instruction set (Single Pole Pilot Light). Essentially the power feeding the fixture (load), is then connected back the switch at screw 2 to power the lighted switch.",
+        "date": "Reviewed in the United States on November 26, 2020",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works as advertised... careful with the directions",
+        "userName": "Paul M",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R31ULUCPH87ZNX",
+        "text": "Easy to install and does exactly what it is supposed to do.",
+        "date": "Reviewed in the United States on April 1, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect way to indicate that a circuit is left on",
+        "userName": "Joe",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2B0ZGPOURZJ5F",
+        "text": "Our RV came with an electric/gas combo water heater. The gas turn on switch is with the control panel for most other things like the water pump, lights, check the fluid levels, slide out, etc. However, the electric switch for it is in side the cabinet under the sink. The water heater would often get left on when we returned home and be wasting energy heating up water when we're not in there using it. So, we purchased this switch, cut a hole in the cabinet to the outside and now we can clearly see when the water heater is on!!! Much easier access, too, rather than bending over to get under the small sink cabinets. I suppose the priciness of this item is more supply and demand...how many people ever need one of these? The opposite switch (lighted when the power to it is off like for a switch in a bathroom for you to see at night is only illuminated when the lights are out so you can find it) is much more popular and all that we were able to find at a local hardware store.",
+        "date": "Reviewed in the United States on January 4, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "A bit pricey, but just what I wanted",
+        "userName": "Christine",
+        "numberOfHelpful": 2,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ZVVXDLJ1N1QJ",
+        "text": "Easy to install but my son thought it was a mouse trap made by a 3D printer because it looks really cheap.",
+        "date": "Reviewed in the United States on December 27, 2019",
+        "rating": "2.0 out of 5 stars",
+        "title": "Very cheap looking in person",
+        "userName": "alisa austin",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B003AUCKLO",
+        "productTitle": "Leviton 1221-PLR 20-Amp, 120 Volt, Toggle Pilot Light, Illuminated On, Req, Neutral Single-Pole AC Quiet Switch, Extra Heavy Duty Grade, Self Grounding, Red",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 97,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 443,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 77
+          },
+          "fourStar": {
+            "percentage": 13
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R19AGAPO31NJWQ",
+        "text": "Light does not work",
+        "date": "Reviewed in the United States on December 26, 2019",
+        "rating": "3.0 out of 5 stars",
+        "title": "No light",
+        "userName": "D Dose",
+        "numberOfHelpful": 0,
+        "variationId": "B003AUCKLO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: Red"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

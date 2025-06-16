@@ -1,0 +1,29 @@
+{
+  "product_title": "GHome Smart 3 Way Dimmer Switch, 3 Way Smart Switch for Light Compatible with Alexa, Google Assistant, Neutral Wire Needed, 2.4GHz WiFi Light Switch, UL Certified, No Hub Required, 3 Pack",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 1,
+  "review_analysis": {
+    "phy": {
+      "firmware": {
+        "A@firmware becomes inoperable after update": {
+          "-": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@becomes inoperable after firmware update": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {}
+  },
+  "processed_date": "2025-06-09T01:11:05.140286"
+}

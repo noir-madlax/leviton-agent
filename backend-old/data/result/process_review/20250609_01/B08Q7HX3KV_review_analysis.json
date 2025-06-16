@@ -1,0 +1,430 @@
+{
+  "product_title": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+  "product_category": "USB Powered Dimmer Switches",
+  "total_reviews": 31,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@compact and small form factor": {
+          "+": [
+            0,
+            6
+          ]
+        }
+      },
+      "button": {
+        "B@touch-activated button interface": {
+          "+": [
+            6,
+            7,
+            9
+          ]
+        },
+        "C@blue LED indicator light on button": {
+          "+": [
+            7,
+            17,
+            28,
+            30
+          ],
+          "-": [
+            21,
+            26
+          ]
+        }
+      },
+      "wiring": {
+        "D@4-wire configuration": {
+          "+": [
+            15
+          ]
+        },
+        "E@stiff and hard to route wires": {
+          "-": [
+            11
+          ]
+        },
+        "F@heat shrink wrapper that is bulky": {
+          "-": [
+            11
+          ]
+        },
+        "G@disconnected wire upon arrival": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "construction": {
+        "H@appears nicely made": {
+          "+": [
+            21
+          ]
+        },
+        "I@packaged properly": {
+          "+": [
+            21
+          ]
+        }
+      },
+      "specifications": {
+        "J@12V max 36 watt capacity": {
+          "+": [
+            6
+          ]
+        },
+        "K@cannot handle 2 amps or higher current": {
+          "-": [
+            11
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works beautifully for intended purpose": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@requires training and time to get used to sensitivity": {
+          "+": {
+            "B": [
+              1
+            ]
+          }
+        },
+        "c@complete failure to work": {
+          "-": {
+            "?": [
+              2,
+              4,
+              19,
+              22
+            ]
+          }
+        },
+        "d@LED lights fade up and down with no on-off control": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "e@dimmer function does not work while light works": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "f@perfect performance for LED applications": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "g@silent operation without flicker": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@steady dimming with slow brightness adjustment": {
+          "+": {
+            "B": [
+              7
+            ]
+          }
+        },
+        "i@does not work with multi-colored LEDs": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "j@one touch on/off and dimming by holding finger": {
+          "+": {
+            "B": [
+              9
+            ]
+          }
+        },
+        "k@worked for only 3 hours before failure": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "l@fantastic and user-friendly electronics": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "m@cannot shut off, stays on all the time": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "n@stops working properly under higher current loads": {
+          "-": {
+            "K": [
+              11
+            ]
+          }
+        },
+        "o@works great with proper electrical knowledge": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "p@requires separate isolated circuits for proper operation": {
+          "+": {
+            "D": [
+              12
+            ]
+          }
+        },
+        "q@functions as dimmer only, not on-off switch": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "r@works perfectly when installed correctly": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "s@simple and intuitive control": {
+          "+": {
+            "B": [
+              15
+            ]
+          }
+        },
+        "t@only blue circle light works, no dimming or turn off": {
+          "-": {
+            "C": [
+              16
+            ]
+          }
+        },
+        "u@remembers last brightness setting": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "v@no control over lights, stays where it was": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "w@lights up blue but no functionality": {
+          "-": {
+            "C": [
+              22
+            ]
+          }
+        },
+        "x@worked for few minutes then stopped": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "y@overheats and becomes very hot to touch": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "z@died within one day of use": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "aa@blue light went out after 3 weeks": {
+          "-": {
+            "C": [
+              26
+            ]
+          }
+        },
+        "ab@works very well for applications": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "ac@works great when wiring instructions followed": {
+          "+": {
+            "D": [
+              28
+            ]
+          }
+        },
+        "ad@stopped working after 4th try": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "ae@performed exactly same functions as original": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "durability": {
+        "af@short lifespan with multiple failures": {
+          "-": {
+            "?": [
+              11,
+              24,
+              25
+            ]
+          }
+        },
+        "ag@continues to work after blue light failure": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "ah@works with voltage range 6.9-11.75 VDC": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "ai@only works with 2-wire LED strips": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "lamp building": {
+        "+": {
+          "f": [
+            5
+          ]
+        },
+        "-": {
+          "c": [
+            2
+          ]
+        }
+      },
+      "cabinet LED lighting": {
+        "+": {
+          "f": [
+            5
+          ],
+          "s": [
+            15
+          ]
+        }
+      },
+      "under-counter lighting": {
+        "+": {
+          "g": [
+            6
+          ]
+        }
+      },
+      "custom power supply illumination": {
+        "+": {
+          "l": [
+            11
+          ]
+        }
+      },
+      "12V fan control": {
+        "+": {
+          "l": [
+            11
+          ]
+        }
+      },
+      "fuel gauge dimming": {
+        "-": {
+          "t": [
+            16
+          ]
+        }
+      },
+      "camper van LED puck lights": {
+        "+": {
+          "j": [
+            17
+          ]
+        }
+      },
+      "under cabinet LED strip lighting": {
+        "+": {
+          "u": [
+            18
+          ]
+        }
+      },
+      "auto stereo/CD unit": {
+        "+": {
+          "ab": [
+            27
+          ]
+        }
+      },
+      "LED light strip dimming": {
+        "+": {
+          "ac": [
+            28
+          ]
+        }
+      },
+      "makeup mirror lighting": {
+        "+": {
+          "ae": [
+            30
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:00:33.267809"
+}

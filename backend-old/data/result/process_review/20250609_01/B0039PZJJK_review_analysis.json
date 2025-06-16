@@ -1,0 +1,349 @@
+{
+  "product_title": "Leviton 5621-2W 20 Amp, 120/277 Volt Decora Plus Rocker Single-Pole AC Quiet Switch, White",
+  "product_category": "High Amperage Rocker Switches",
+  "total_reviews": 45,
+  "review_analysis": {
+    "phy": {
+      "amperage_rating": {
+        "A@Actual product part number rated for 15 amps despite 20 amp advertising": {
+          "-": [
+            0
+          ]
+        },
+        "B@Handles 20 amps vs 15 amps on other models": {
+          "+": [
+            20
+          ]
+        },
+        "C@20 amp switch capability": {
+          "+": [
+            32,
+            40,
+            42
+          ]
+        }
+      },
+      "construction": {
+        "D@Heavy duty construction": {
+          "+": [
+            7,
+            33
+          ]
+        },
+        "E@Solid construction": {
+          "+": [
+            44
+          ]
+        },
+        "F@Well constructed rocker assembly": {
+          "+": [
+            44
+          ]
+        },
+        "G@Solid feel": {
+          "+": [
+            24,
+            25
+          ]
+        },
+        "H@Well made": {
+          "+": [
+            38
+          ]
+        }
+      },
+      "terminals": {
+        "I@Terminals are NOT back mount": {
+          "-": [
+            13
+          ]
+        },
+        "J@Back and side wiring capability": {
+          "+": [
+            27
+          ]
+        },
+        "K@Simple yet positive wire connections to screw/plates": {
+          "+": [
+            44
+          ]
+        }
+      },
+      "screws": {
+        "L@Grounding screws aren't locked in, backing fumbles around when undone": {
+          "-": [
+            9
+          ]
+        },
+        "M@Side screws can become disconnected from internal nut if backed out too far": {
+          "-": [
+            27
+          ]
+        },
+        "N@One screw not screwed into threading and could not be tightened": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "mechanism": {
+        "O@Switching mechanism not smooth or easy": {
+          "-": [
+            21
+          ]
+        },
+        "P@Soft bump feeling instead of click": {
+          "-": [
+            14
+          ]
+        },
+        "Q@Soft clump sound and wet cardboard thud when activated": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "surface": {
+        "R@Embossed name on switch harbors bacteria and viruses": {
+          "-": [
+            18
+          ]
+        },
+        "S@No longer perfectly smooth for cleaning": {
+          "-": [
+            18
+          ]
+        }
+      },
+      "appearance": {
+        "T@Looks great": {
+          "+": [
+            5,
+            38,
+            39
+          ]
+        },
+        "U@Look and feel great": {
+          "+": [
+            15
+          ]
+        },
+        "V@Matches decor switches": {
+          "+": [
+            16
+          ]
+        }
+      }
+    },
+    "perf": {
+      "electrical_performance": {
+        "a@Handled amperage that previous switch couldn't without getting warm": {
+          "+": {
+            "C": [
+              30
+            ]
+          }
+        },
+        "b@Could potentially cause fires due to misadvertised amperage": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "c@No overheating issues": {
+          "+": {
+            "K": [
+              44
+            ]
+          }
+        }
+      },
+      "operation": {
+        "d@Functions well": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "e@Works perfectly": {
+          "+": {
+            "?": [
+              1,
+              4
+            ]
+          }
+        },
+        "f@Operates smoothly and functions perfectly": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "g@Smooth and easy operation": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "h@Works as advertised": {
+          "+": {
+            "?": [
+              8,
+              12
+            ]
+          }
+        }
+      },
+      "sound": {
+        "i@Quiet operation": {
+          "+": {
+            "?": [
+              25,
+              34
+            ]
+          }
+        },
+        "j@True quiet switch": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "k@Not quiet, clicks": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "l@Gross soft clump sound": {
+          "-": {
+            "P,Q": [
+              14
+            ]
+          }
+        }
+      },
+      "durability": {
+        "m@One year service without trouble": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "n@Failed to perform due to screw issue": {
+          "-": {
+            "N": [
+              17
+            ]
+          }
+        }
+      },
+      "installation": {
+        "o@Easy to install": {
+          "+": {
+            "?": [
+              4,
+              5,
+              19
+            ]
+          }
+        },
+        "p@Fit perfectly": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "q@Installed easily": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "r@Installed without trouble": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "s@Installation is a snap": {
+          "+": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "t@No issues installing": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "outdoor_fans": {
+        "+": {
+          "?": [
+            3
+          ]
+        }
+      },
+      "kitchen_circuits": {
+        "+": {
+          "?": [
+            7
+          ]
+        }
+      },
+      "house_lighting": {
+        "+": {
+          "e": [
+            4
+          ]
+        }
+      },
+      "garbage_disposal": {
+        "+": {
+          "C": [
+            33,
+            40
+          ]
+        }
+      },
+      "in_ceiling_heater_for_shower": {
+        "+": {
+          "C": [
+            32
+          ]
+        }
+      },
+      "bathroom_dimmer": {
+        "+": {
+          "?": [
+            29
+          ]
+        }
+      },
+      "matching_smart_switch": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:56.834274"
+}

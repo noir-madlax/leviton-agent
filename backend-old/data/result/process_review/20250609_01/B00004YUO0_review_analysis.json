@@ -1,0 +1,235 @@
+{
+  "product_title": "Leviton 1451-2WM 15 Amp, 120 Volt, Toggle Framed Single-Pole Ac Quiet Switch, Residential Grade, Grounding, 10-Pack, White",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@scratches and dings on visible parts": {
+          "-": [
+            4,
+            16
+          ]
+        },
+        "B@elegant/nice looking appearance": {
+          "+": [
+            3,
+            10
+          ]
+        }
+      },
+      "construction": {
+        "C@solid construction": {
+          "+": [
+            18
+          ]
+        },
+        "D@well made and well engineered": {
+          "+": [
+            46
+          ]
+        },
+        "E@slim profile and proper fit": {
+          "+": [
+            46
+          ]
+        }
+      },
+      "material": {
+        "F@high-quality materials": {
+          "+": [
+            18
+          ]
+        },
+        "G@lower-grade plastic": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "toggle": {
+        "H@good feel in up position with locking": {
+          "+": [
+            9
+          ]
+        },
+        "I@spongy feel in down position": {
+          "-": [
+            9
+          ]
+        },
+        "J@satisfying toggle feel": {
+          "+": [
+            14
+          ]
+        },
+        "K@nice feel flipping on and off": {
+          "+": [
+            46
+          ]
+        }
+      },
+      "terminals": {
+        "L@screw terminals available": {
+          "+": [
+            5,
+            28
+          ]
+        },
+        "M@push-in holes rated for 14 gauge wire": {
+          "+": [
+            35
+          ]
+        }
+      },
+      "manufacturing": {
+        "N@made in USA": {
+          "+": [
+            1,
+            7,
+            35
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@long-lasting for many years": {
+          "+": {
+            "F": [
+              18
+            ]
+          }
+        },
+        "b@repeated failure and breaking": {
+          "-": {
+            "G": [
+              2
+            ]
+          }
+        },
+        "c@constant on/off switching without failure": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "d@reduced risk of damage over time": {
+          "+": {
+            "C": [
+              18
+            ]
+          }
+        }
+      },
+      "operation": {
+        "e@quiet operation": {
+          "+": {
+            "?": [
+              0,
+              43
+            ]
+          }
+        },
+        "f@smooth switching": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "g@sliding dimmer-like feel when turning off": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "h@positive click switching on": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "i@reliable operation": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "j@safe and reliable operation": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "k@works as expected": {
+          "+": {
+            "?": [
+              8,
+              40,
+              45
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "residential applications": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "household light switching": {
+        "+": {
+          "a,c": [
+            5,
+            32
+          ]
+        }
+      },
+      "bathroom light switches": {
+        "-": {
+          "b": [
+            2
+          ]
+        }
+      },
+      "house switch replacement": {
+        "+": {
+          "k": [
+            1,
+            27,
+            29,
+            36
+          ]
+        }
+      },
+      "emergency backup switches": {
+        "+": {
+          "?": [
+            32
+          ]
+        }
+      },
+      "15 amp 120 volt applications": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:30.125254"
+}

@@ -1,0 +1,364 @@
+{
+  "product_title": "AIDA 15 Amp Toggle Light Switch, 4 Way, Grounding Screw, Residential Grade Electrical Wall Switch, UL Listed (White, 10 Pack)",
+  "product_category": "Four Way Multi-Location Control Switches",
+  "total_reviews": 26,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@white color": {
+          "+": [
+            1,
+            11,
+            16
+          ]
+        }
+      },
+      "dimensions": {
+        "B@shorter toggle than standard switches": {
+          "-": [
+            9,
+            18
+          ]
+        },
+        "C@bigger box size": {
+          "+": [
+            8
+          ]
+        },
+        "D@switch not as long as old switches": {
+          "+": [
+            8
+          ]
+        },
+        "E@shorter and wider than other brands": {
+          "-": [
+            21
+          ]
+        },
+        "F@will not fit standard cover plates": {
+          "-": [
+            25
+          ]
+        }
+      },
+      "labeling": {
+        "G@no on/off words on toggle": {
+          "+": [
+            8,
+            14,
+            20
+          ]
+        }
+      },
+      "wiring": {
+        "H@no push-in back wire option, screw terminals only": {
+          "-": [
+            9,
+            12,
+            14,
+            19
+          ]
+        },
+        "I@ground screw at bottom": {
+          "+": [
+            14
+          ]
+        }
+      },
+      "construction": {
+        "J@clean and sharp plastic molding": {
+          "+": [
+            13
+          ]
+        },
+        "K@clear metal work": {
+          "+": [
+            13
+          ]
+        },
+        "L@cheaply made": {
+          "-": [
+            25
+          ]
+        }
+      },
+      "connection_points": {
+        "M@lower right corner connection issues": {
+          "-": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connection_reliability": {
+        "a@no or intermittent connection": {
+          "-": {
+            "M": [
+              0
+            ]
+          }
+        },
+        "b@works fine when squeezed": {
+          "+": {
+            "M": [
+              0
+            ]
+          }
+        }
+      },
+      "switching_action": {
+        "c@crisp switch action, not sloppy": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "d@firm and positive toggle action without snap sound": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "e@quiet snap on and off, no loud clicking": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "f@smooth and quick switch operation": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "g@easy to switch on and off smoothly": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "h@very clicky action feel and sound": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@feel awkward when flipped": {
+          "-": {
+            "B": [
+              18
+            ]
+          }
+        },
+        "j@don't stick out far from switch plate": {
+          "-": {
+            "B": [
+              18
+            ]
+          }
+        }
+      },
+      "durability": {
+        "k@very durable": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "l@feel solid": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "m@sturdy": {
+          "+": {
+            "?": [
+              16,
+              23
+            ]
+          }
+        },
+        "n@solidly constructed": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "versatility": {
+        "o@can be used as 3 way as well as 4 way": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "p@can be used for 2 way and 4 way": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "q@can be used as single pole or 4 way": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "installation": {
+        "r@easy to install": {
+          "+": {
+            "?": [
+              4,
+              6,
+              7,
+              11
+            ]
+          }
+        },
+        "s@straightforward installation": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "t@more pain to install due to no back wire option": {
+          "-": {
+            "H": [
+              9
+            ]
+          }
+        },
+        "u@need to make loop and use screw for wires": {
+          "-": {
+            "H": [
+              12
+            ]
+          }
+        }
+      },
+      "appearance": {
+        "v@look good": {
+          "+": {
+            "?": [
+              6,
+              11
+            ]
+          }
+        },
+        "w@feel and look low quality": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "x@look off when combined with other switches": {
+          "-": {
+            "B": [
+              9
+            ]
+          }
+        },
+        "y@don't match other brand switches": {
+          "-": {
+            "E": [
+              21
+            ]
+          }
+        }
+      },
+      "fit": {
+        "z@fits perfectly in box": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "aa@fit well": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacing old switches": {
+        "+": {
+          "r,v,aa": [
+            1,
+            11
+          ]
+        },
+        "-": {
+          "y": [
+            21
+          ]
+        }
+      },
+      "home renovation and electrical updates": {
+        "+": {
+          "r,s,m": [
+            16
+          ]
+        }
+      },
+      "replacing beige/almond colored switches": {
+        "+": {
+          "g": [
+            15
+          ]
+        }
+      },
+      "4-way switching with traveler wire": {
+        "+": {
+          "?": [
+            14
+          ]
+        }
+      },
+      "home projects": {
+        "+": {
+          "?": [
+            20,
+            22
+          ]
+        }
+      },
+      "bulk switch replacement in house": {
+        "+": {
+          "c": [
+            13
+          ]
+        }
+      },
+      "cost-effective alternative to local stores": {
+        "+": {
+          "?": [
+            21,
+            23
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:29.661189"
+}

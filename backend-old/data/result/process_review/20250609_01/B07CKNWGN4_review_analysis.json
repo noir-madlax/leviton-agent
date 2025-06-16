@@ -1,0 +1,415 @@
+{
+  "product_title": "TREATLIFE Smart Dimmer Switch, Single-Pole Smart Switch for Dimmable Bulbs, 2.4GHz WiFi Smart Light Switch Works with Alexa and Google Home, APP Remote Control, Neutral Wire Required",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "Switch Design": {
+        "A@Touch sensor interface for dimming control": {
+          "+": [
+            7,
+            24,
+            26,
+            36,
+            43
+          ],
+          "-": [
+            7,
+            36,
+            37
+          ]
+        },
+        "B@Physical button for on/off operation": {
+          "+": [
+            26
+          ],
+          "-": [
+            37,
+            39
+          ]
+        },
+        "C@LED indicators on switch": {
+          "+": [
+            12,
+            26,
+            35
+          ]
+        },
+        "D@Modern appearance and aesthetics": {
+          "+": [
+            26,
+            44
+          ]
+        },
+        "E@Compact size for installation": {
+          "+": [
+            40
+          ]
+        }
+      },
+      "Build Quality": {
+        "F@Component quality and materials": {
+          "-": [
+            35
+          ]
+        },
+        "G@Tactile feedback quality": {
+          "-": [
+            39
+          ]
+        }
+      },
+      "Wiring and Connections": {
+        "H@Wire labeling and connection points": {
+          "-": [
+            16
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Reliability": {
+        "a@Durability over time": {
+          "+": {
+            "?": [
+              11
+            ]
+          },
+          "-": {
+            "?": [
+              2,
+              21,
+              25,
+              27,
+              29,
+              33,
+              35,
+              37,
+              41
+            ]
+          }
+        },
+        "b@Wi-Fi connectivity stability": {
+          "+": {
+            "?": [
+              5,
+              31
+            ]
+          },
+          "-": {
+            "?": [
+              14,
+              19,
+              20,
+              42,
+              44
+            ]
+          }
+        },
+        "c@Overall functionality reliability": {
+          "+": {
+            "?": [
+              4,
+              8,
+              9,
+              31,
+              38
+            ]
+          },
+          "-": {
+            "?": [
+              0,
+              12,
+              22,
+              46
+            ]
+          }
+        }
+      },
+      "Dimming Performance": {
+        "d@Dimming range and control": {
+          "+": {
+            "A": [
+              8,
+              24,
+              26
+            ]
+          },
+          "-": {
+            "?": [
+              39,
+              43
+            ]
+          }
+        },
+        "e@Light flickering issues": {
+          "+": {
+            "?": [
+              5
+            ]
+          },
+          "-": {
+            "?": [
+              5,
+              41,
+              46
+            ]
+          }
+        },
+        "f@Precision of dimming adjustments": {
+          "+": {
+            "A": [
+              8
+            ]
+          },
+          "-": {
+            "A": [
+              37
+            ]
+          }
+        }
+      },
+      "Smart Features": {
+        "g@Voice control integration": {
+          "+": {
+            "?": [
+              8,
+              9,
+              13,
+              28,
+              36
+            ]
+          },
+          "-": {
+            "?": [
+              19,
+              44
+            ]
+          }
+        },
+        "h@App functionality and control": {
+          "+": {
+            "?": [
+              6,
+              8,
+              24,
+              31
+            ]
+          },
+          "-": {
+            "?": [
+              10,
+              20,
+              25,
+              44
+            ]
+          }
+        },
+        "i@Scheduling and automation features": {
+          "+": {
+            "?": [
+              8,
+              37
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "j@Ease of installation process": {
+          "+": {
+            "?": [
+              6,
+              8,
+              17,
+              18,
+              32,
+              33,
+              34,
+              43
+            ]
+          },
+          "-": {
+            "H": [
+              16
+            ]
+          }
+        },
+        "k@Setup and pairing process": {
+          "+": {
+            "?": [
+              6,
+              31
+            ]
+          },
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "LED Compatibility": {
+        "l@Compatibility with LED bulbs": {
+          "+": {
+            "?": [
+              36
+            ]
+          },
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        }
+      },
+      "Button Operation": {
+        "m@On/off button responsiveness": {
+          "+": {
+            "B": [
+              26
+            ]
+          },
+          "-": {
+            "B": [
+              37,
+              39
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Smart Home Integration": {
+        "+": {
+          "g": [
+            8,
+            9,
+            13,
+            28,
+            36
+          ],
+          "h": [
+            8,
+            24,
+            31
+          ]
+        },
+        "-": {
+          "g": [
+            19,
+            44
+          ],
+          "h": [
+            10,
+            20,
+            25,
+            44
+          ]
+        }
+      },
+      "Home Lighting Control": {
+        "+": {
+          "c": [
+            4,
+            8,
+            9,
+            31,
+            38
+          ],
+          "d": [
+            8,
+            24,
+            26
+          ],
+          "j": [
+            6,
+            8,
+            17,
+            18,
+            32,
+            33,
+            34,
+            43
+          ]
+        },
+        "-": {
+          "a": [
+            2,
+            21,
+            25,
+            27,
+            29,
+            33,
+            35,
+            37,
+            41
+          ],
+          "c": [
+            0,
+            12,
+            22,
+            46
+          ],
+          "e": [
+            5,
+            41,
+            46
+          ]
+        }
+      },
+      "Ambient Lighting Creation": {
+        "+": {
+          "d": [
+            8,
+            24,
+            26
+          ],
+          "f": [
+            8
+          ]
+        },
+        "-": {
+          "f": [
+            37
+          ]
+        }
+      },
+      "Cost-Effective Smart Home Upgrade": {
+        "+": {
+          "?": [
+            9,
+            23,
+            32
+          ]
+        }
+      },
+      "Manual Light Control": {
+        "+": {
+          "m": [
+            26
+          ]
+        },
+        "-": {
+          "m": [
+            37,
+            39
+          ]
+        }
+      },
+      "Home Assistant Integration": {
+        "+": {
+          "?": [
+            24,
+            35
+          ]
+        },
+        "-": {
+          "?": [
+            15
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:27.128878"
+}

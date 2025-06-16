@@ -1,0 +1,2638 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:24:36.727170",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B00081I0EO",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B00081I0EO",
+    "title": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+    "brand": "Lutron",
+    "model_number": NaN,
+    "price_usd": 6.98,
+    "rating": 4.8,
+    "reviews_count": 2133.0,
+    "category": "Light Switches",
+    "product_segment": "Three Way Multi-Location Control Switches",
+    "product_url": "https://www.amazon.com/dp/B00081I0EO"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3W1J1Q0BANEF2",
+        "text": "When we did construction in our new home, the electrician put another brand of switches in and said they were fine. I have to disagree with him so I bought this brand and I’m so happy I did my lights don’t flicker. I have some switches on dimmers some without from now on I will never use another light switch besides this brand.",
+        "date": "Reviewed in the United States on April 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Light switches",
+        "userName": "Pasquale",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RYHIL6S52M4M9",
+        "text": "Weak materials. Broke more than installed.",
+        "date": "Reviewed in the United States on March 31, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Cheap material",
+        "userName": "Alex Huizar",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3RF2ZEK8ANM4D",
+        "text": "Brand new out of the box . It kept shorting out defective. Has to run to Lowes to buy switch to complete install. Didn't bother to try to return it. Will never by this brand again",
+        "date": "Reviewed in the United States on February 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor quality.",
+        "userName": "Tony Tesoriero",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R5ACSS7E1Y2I5",
+        "text": "Easy to install and looks nice. To me it looks very modern. It's definitely an upgrade to our home. Installs like any other switch. I did run out and get different caps because I felt the ones this came with weren't adequate, however that's just me being technical. They are your typical everyday caps that are in every home. Dims well and has a small light bar on the side that looks slick. Zero noise when turning it on and it truly feels well built. Fits a little snug compared to other switches but you'll just need to menuver it to the plate. I put it in a four plate outlet and did just fine.",
+        "date": "Reviewed in the United States on November 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Well",
+        "userName": "R. Stark",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3DFAGI1CGUM37",
+        "text": "Much more definitive \"click\" then other brands. Just feel like more of a luxury switch.",
+        "date": "Reviewed in the United States on July 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love ghey way these feel",
+        "userName": "BLD",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3GB2333TH2TUN",
+        "text": "Does what we need it to do for our mudroom. We love the lutron lights.",
+        "date": "Reviewed in the United States on July 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as expected",
+        "userName": "Allie",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3S7C42TJ9KGCE",
+        "text": "My husband is an electrician and asks for these only in our home. I like the way it says \"Lutron\" very tiny on it. Don't waste time and $ on the cheap ones.",
+        "date": "Reviewed in the United States on June 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worth the extra $",
+        "userName": "Arienne Wyatt",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R12ON18GWYHA6N",
+        "text": "Good looking switch that does a great job.",
+        "date": "Reviewed in the United States on June 11, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I really like the look thise switched give you.",
+        "userName": "WB",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R21IGE3L47DXM1",
+        "text": "The switch is a nice clean look after adding the Lutron cover, which is sold seperately. The screws are not exposed.",
+        "date": "Reviewed in the United States on May 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Clean Look",
+        "userName": "Tarheel",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51Pd6k+hFHL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2PR6FY2Y5J7OQ",
+        "text": "I like the higher end look when using with diva dimmers and lutron screwless plates.",
+        "date": "Reviewed in the United States on February 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Matches up with Lutron Diva Dimmers.",
+        "userName": "Don",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3JYBZG4MBZ046",
+        "text": "It’s good quality product, easy to install and beautiful design",
+        "date": "Reviewed in the United States on January 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love the look",
+        "userName": "RedFox",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1LU0NQJ1SFAKC",
+        "text": "After an interior facelift on our dining room we decided to upgrade the switches and outlets. This switch installed easily and works as described.",
+        "date": "Reviewed in the United States on January 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good switch",
+        "userName": "3tech",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3D6IURLQWTXXZ",
+        "text": "2 months into using these, 3 out of 7 stopped working. Had my electrician come check it out in case he did something wrong, but it's the switch. These are too expensive for them to stop working so quickly.",
+        "date": "Reviewed in the United States on November 15, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working",
+        "userName": "Slim",
+        "numberOfHelpful": 2,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3PLMSRQILS4B3",
+        "text": "I received a used unit when I paid for a new one. Packaging was damaged and parts outside of packaging.",
+        "date": "Reviewed in the United States on September 1, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Paid for new, received used",
+        "userName": "Cesar",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2NYAJA96NLKVQ",
+        "text": "The Claro switch by Lutron is far more expensive than the comparable Leviton switch. If it weren’t for uniformity, I would not have bought it. Also, the wire plug in terminal on the back of the switch would not accept a regular sized wired.",
+        "date": "Reviewed in the United States on August 9, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Expensive!",
+        "userName": "KHKL",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R205Z78WKZECV7",
+        "text": "Great simple replacement switch. A little cheap to not come with a face plate, otherwise great.",
+        "date": "Reviewed in the United States on June 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Performs exactly as expected",
+        "userName": "la.ghost",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3AIML0ASZB3PB",
+        "text": "These were extremely easy to install, I swapped out traditional light switches. Now I want to switch them all out! I love the clean and modern look!",
+        "date": "Reviewed in the United States on March 10, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Upgraded light switch!",
+        "userName": "Boxermamaldjbm",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1RFUQF3KBURBS",
+        "text": "Beautiful design, great quality switch, easy to install",
+        "date": "Reviewed in the United States on February 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best",
+        "userName": "Roma",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R584SO90GHQI4",
+        "text": "On the lest side is regular and on their right side is Lutron. You can tell it is Way more loud. Other wise is good. I will replace it.",
+        "date": "Reviewed in the United States on February 5, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Loud! Very loud.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 5,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/786296c2-f201-409a-80a8-e1bd83b4e8a0/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R16D6U21H3I322",
+        "text": "Good switch. Got a couple of these to add to a 3 switch layout. My Garage lights are on a schedule with a Caseta but didn’t need it for the other two switches so I got two of these to fill in the layout . They work well, solid clicks",
+        "date": "Reviewed in the United States on November 10, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Solid Rocker",
+        "userName": "Carlton Robinzine",
+        "numberOfHelpful": 2,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2YCILDZSEYK9K",
+        "text": "Arrived quickly and good price",
+        "date": "Reviewed in the United States on September 7, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value for the price",
+        "userName": "Joseph Asermely",
+        "numberOfHelpful": 2,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R27R36ATTC7HG6",
+        "text": "Nice basic switch.",
+        "date": "Reviewed in the United States on September 5, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice basic switch.",
+        "userName": "HikingInSierras",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2OKM4WIEDGOGB",
+        "text": "Decent price for matching looks with other Lutron controls. But it feels clunky with a distinct snapping sound, not the soft click and light touch of some other rocker switches.",
+        "date": "Reviewed in the United States on August 18, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Clunky but dors the job.",
+        "userName": "EEEEHAW",
+        "numberOfHelpful": 3,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RDPI5XG65D145",
+        "text": "Like this product great to be less dirupptive to people sleeping in close proximity when you have different schedules.",
+        "date": "Reviewed in the United States on May 20, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimming is great!",
+        "userName": "kathleen C.",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R251O4UVSNVRFK",
+        "text": "Re-outfitted my entire home with Lutron outlets, switches, and faceplates. You can really tell the difference in quality between Lutron and other brands. They might be more expensive, but the solid feel and quality of materials makes them totally worth it.",
+        "date": "Reviewed in the United States on March 7, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worth it... you get what you pay for.",
+        "userName": "ReyAce",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2DLCPR6EXHWY0",
+        "text": "These are easy to install and look great as I get my home ready to sell. The only thing is the direction of the how you use the switch is weird to me. To turn the light on, you push in the bottom of the switch - meaning when the lights are on the top of the toggle is sticking out. This may just be a user preference, but I would prefer to hit the top of the toggle to turn the light on as it makes more sense to me. This can be remedied by removing the toggle plate and switching the position, but then the Lutron logo is upside down. As other reviewers said, the switch makes a nice click when it turns on/off and I like that. One other thing to mention is that my switch boxes are pretty small and full of wires bc this is an old house, so it was difficult for me to make everything fit but that's just unique to my house.",
+        "date": "Reviewed in the United States on February 15, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy to Install, Look Great, but Switch Use Direction is Weird",
+        "userName": "Stephanie Marks",
+        "numberOfHelpful": 9,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1FHTIBN38KXMP",
+        "text": "I am replacing all the switches in my home with rockers, and these were priced well and worked great. Love 'em.",
+        "date": "Reviewed in the United States on January 11, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love Lutron Switches",
+        "userName": "nickybaseball",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R26B69U3EW6DHP",
+        "text": "x",
+        "date": "Reviewed in the United States on December 30, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "x",
+        "userName": "John K.",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RFCDDSQDEQGUM",
+        "text": "Can't go wrong with a basic Lutron switch. Much nicer to use than standard flip switches and looks more executive even at home.",
+        "date": "Reviewed in the United States on December 18, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best switches",
+        "userName": "PortlandGuy",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3UU2EC2HUMBHK",
+        "text": "Great quality but costs more. Better construction than competing brands. Lutron has various colors and sells outlets & dimmers too so you can use one brand throughout the house.",
+        "date": "Reviewed in the United States on December 17, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great quality but costs more",
+        "userName": "Modric",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3UMUG77XTZ4XE",
+        "text": "These didn't last a year. They cracked and needed to be replaced.",
+        "date": "Reviewed in the United States on December 13, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Cracked within the year",
+        "userName": "Joe Smith",
+        "numberOfHelpful": 4,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R27P7QQDT6H85L",
+        "text": "I always use Lutron products. These switches have a positive click on and off and last way longer than others.",
+        "date": "Reviewed in the United States on October 18, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron is the best",
+        "userName": "Steve7514",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1F79RHJQG4FQT",
+        "text": "See above.",
+        "date": "Reviewed in the United States on October 13, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised.",
+        "userName": "Gee-ko",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2ZD5L4RQP469D",
+        "text": "This product is easy to install and looks good and is durable",
+        "date": "Reviewed in the United States on August 24, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "This product looks good and was easy to install",
+        "userName": "StephanieL",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R355G4UGK5AWA5",
+        "text": "I have installed Leviton switches throughout my house but I figured for my family room I would install the Lutron as they seem nicer (to me at least). While installing the 3-way, I was tightening the screw on the hot wire and the switch snapped in half (the black housing in the back) rendering the switch useless. I have replaced all the switches in my house and not once did I run into this issue with any of the other Lutron or Leviton switches. With that being said, I will be sticking with Leviton. Lutron, while looking and feeling nicer than Leviton seems more fragile.",
+        "date": "Reviewed in the United States on July 22, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Snapped in half while installing",
+        "userName": "Feroz Kiyani",
+        "numberOfHelpful": 7,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R16S0L0EEF8VJ7",
+        "text": "We needed a variety of styles (4 ways, on/off, dimmers) for our kitchen/hallway and lutron provided the rocker style in all of them and all were matching white (it's amazing how white varies between manufactures). We have all lutron switches in the kitchen and hallway and will slowly replace all our others- easy to install and works great.",
+        "date": "Reviewed in the United States on June 24, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Matches great",
+        "userName": "Lisar",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R6OSM4U6Q3DSZ",
+        "text": "I bought 2 of these switches. I spent 2 hours trouble shooting my wiring after installation because I couldn’t get the lights to turn on properly. When the wiring kept checking out I finally started trouble shooting the switches with a meter and one of the positions was open and it would never work. The other switch’s body fell apart after I rewired it a couple of times when I was troubleshooting. Would never by these again.",
+        "date": "Reviewed in the United States on June 2, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective product, poor quality",
+        "userName": "S. Brand",
+        "numberOfHelpful": 3,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3QHBN44NE52W7",
+        "text": "Bought a bunch of these lutron switches, good quality",
+        "date": "Reviewed in the United States on May 4, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Lutron is one of the best",
+        "userName": "Juve",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3D4HR07PQDM4D",
+        "text": "Beautiful clean switches. And with the correct snap on plates, there are no visible screws or attachments. Perfect for a modern house",
+        "date": "Reviewed in the United States on April 29, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Beautiful clean look",
+        "userName": "ME",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2GYQBMI6KQLCL",
+        "text": "This is the one - spendy but that click is the most satisfying of all the clicks. Verges on orgasmic really, so be prepared and aware. Again, the plastic is really nice.",
+        "date": "Reviewed in the United States on April 13, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Click-bate in a good way.",
+        "userName": "Patrick Murphy",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RKRLXGM4SFIP4",
+        "text": "They look good next to my smart switches, used them on the other ends of my 3 way smart switches. One of the three I ordered snapped apart in my hand on install though so kind of disappointed there. Otherwise, they look and operate good. Will be ordering more.",
+        "date": "Reviewed in the United States on March 28, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good but kinda weak.",
+        "userName": "Brandon S.",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/91ccvuLplsL._SY88.jpg"
+        ],
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R4914YOSPIJ9B",
+        "text": "Easy and simple to install.",
+        "date": "Reviewed in the United States on March 16, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product",
+        "userName": "Edwin F Davis",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RZ6HYGNFPZR8L",
+        "text": "At a glance it looks no different than most other switches but definitely feels more sturdy to the touch. I replaced my Levitons with these and am much happier with the feel and sound it makes when you turn it off or on.",
+        "date": "Reviewed in the United States on November 29, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "Gabriel Marusic",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1497P85RAL2XL",
+        "text": "No surprises! Works as expected !",
+        "date": "Reviewed in the United States on October 18, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product: Works as expected!",
+        "userName": "Ricardo Ribeiro",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RP7SAZJMME0R8",
+        "text": "I am wiring our new “CAT5 cottage” on the Texas Gulf Coast using Lutron dimmers and switches, just like we have in our house in Houston. Lutron makes high quality switchgear, but like a lot of electrical stuff, the documentation is dumbed-down severely. Today I spend over an hour trying to make a 3-way circuit work using this switch with a Lutron dimmer at the other end. Turns-out that Lutron doesn’t put the “common” terminal in the same place as everybody else (alone, at one end of the switch), AND my switches DID NOT HAVE a different colored screw for common (all screws were brass colored). Apparently they ran-out of black screws at the factory in Korea. And (as noted in one of the QUESTIONS, the “common” is not marked on the body of the switch anywhere. The Lutron “common” terminal is (a) on the END with two terminals, AND (b) on the SIDE with two terminals. Once I figured that out (from the wiring diagram, NOT the installation instruction) it worked great.",
+        "date": "Reviewed in the United States on October 4, 2020",
+        "rating": "3.0 out of 5 stars",
+        "title": "WARNING: “Common” Terminal isn’t in the “common” place",
+        "userName": "Harris A. Reynolds Jr.",
+        "numberOfHelpful": 2,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2Y6V4TJI5IQSW",
+        "text": "Love these switches.",
+        "date": "Reviewed in the United States on September 3, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love these switches.",
+        "userName": "Mark",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3TMIZNZDG2T",
+        "text": "Exactly what I ordered, great price.",
+        "date": "Reviewed in the United States on August 10, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome",
+        "userName": "Kathy",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3FXBBXF4TJ44E",
+        "text": "Literally disintegrated in my hands upon install. Cheapest plastic ever. I have installed smart Lutron wifi switches. They have been solid. Either this product is fake or pure weak sauce.",
+        "date": "Reviewed in the United States on July 1, 2020",
+        "rating": "1.0 out of 5 stars",
+        "title": "Fragile",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R11YOQLZCC7JYW",
+        "text": "It's a switch. Thank you. -- Ahmed, age 5 and 3/4 (and dada)",
+        "date": "Reviewed in the United States on June 27, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "a switch",
+        "userName": "Roy Martin",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B00081I0EO",
+        "productTitle": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 167,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2133,
+        "productRating": "4.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 87
+          },
+          "fourStar": {
+            "percentage": 8
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R35NJR5YN59FO4",
+        "text": "Bought from Amazon and it was missing all of the screws. Dint know if Lutron forgot include them, or if this was returned from another customer and not fully checked.",
+        "date": "Reviewed in the United States on June 15, 2020",
+        "rating": "4.0 out of 5 stars",
+        "title": "Missing parts",
+        "userName": "Complexlitigator",
+        "numberOfHelpful": 0,
+        "variationId": "B00081I0EO",
+        "imageUrlList": null,
+        "variationList": [
+          "Color: White",
+          "Size: 1 Pack",
+          "Pattern Name: Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

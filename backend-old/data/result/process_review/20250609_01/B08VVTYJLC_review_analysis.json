@@ -1,0 +1,220 @@
+{
+  "product_title": "Legrand Radiant RH453PWPW 450W Preset Decorator Rocker Dimmer Light Switch with Locator Light and Screwless Wall Plate for Dimmable LED and CFL Bulbs, Single Pole/3-Way, White (1 Count)",
+  "product_category": "Rocker Style Dimmer Switches",
+  "total_reviews": 10,
+  "review_analysis": {
+    "phy": {
+      "Paddle/Rocker Design": {
+        "A@Paddle style matches other switches in house": {
+          "+": [
+            0
+          ]
+        },
+        "B@Clean appearance": {
+          "+": [
+            4
+          ]
+        },
+        "C@Larger, decor style and upscale appearance": {
+          "+": [
+            5
+          ]
+        },
+        "D@Good looking design": {
+          "+": [
+            6
+          ]
+        },
+        "E@Square design": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "Slider": {
+        "F@Smooth slider operation": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "Wiring Configuration": {
+        "G@One ground, one black to upper left, one black to lower right for proper operation": {
+          "+": [
+            6
+          ]
+        },
+        "H@Load may be opposite on new switch compared to older switches": {
+          "+": [
+            7
+          ]
+        }
+      },
+      "Power Rating": {
+        "I@Labeled 450W but buzzes over 200W LED": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "Plastic Carrier": {
+        "J@Plastic carrier can be pulled in too far if over-tightened": {
+          "-": [
+            4
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Dimming Range": {
+        "a@Good range to control brightness": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Does not properly dim LED string lights - flickers at 10% then goes to soft glow": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "Power Handling": {
+        "c@Buzzing noise over 200W LED load": {
+          "-": {
+            "I": [
+              1
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "d@Easy to install": {
+          "+": {
+            "?": [
+              2,
+              4
+            ]
+          }
+        },
+        "e@Easy placement with proper wiring": {
+          "+": {
+            "G": [
+              6
+            ]
+          }
+        },
+        "f@Fits flush against wall unless drywall is uneven": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "Operation": {
+        "g@Works great with no issues": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "h@No flickering, seamless use": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "i@Switch works opposite if wired incorrectly": {
+          "-": {
+            "G": [
+              6
+            ]
+          }
+        }
+      },
+      "Reliability": {
+        "j@No issues after replacing all switches in house": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "k@Working well months after replacement": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "Quality": {
+        "l@Great quality and function": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Matching existing paddle switches in house": {
+        "+": {
+          "A": [
+            0
+          ]
+        }
+      },
+      "Replacing all dimmer switches in house": {
+        "+": {
+          "g,j": [
+            0
+          ]
+        }
+      },
+      "Overhead ceiling LED lights in remodeled kitchen": {
+        "+": {
+          "g": [
+            3
+          ]
+        }
+      },
+      "Replacing every socket in new home for room completion": {
+        "+": {
+          "C": [
+            5
+          ]
+        }
+      },
+      "Functional light switch with dimmer": {
+        "+": {
+          "d,e": [
+            6
+          ]
+        }
+      },
+      "Replacement for older dimmer switch": {
+        "+": {
+          "k": [
+            7
+          ]
+        }
+      },
+      "Dimming LED string lights": {
+        "-": {
+          "b": [
+            8
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:22.998219"
+}

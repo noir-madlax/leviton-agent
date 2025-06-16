@@ -1,0 +1,2544 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:41:47.317934",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B095X5HTLS",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B095X5HTLS",
+    "title": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+    "brand": "Amazon",
+    "model_number": NaN,
+    "price_usd": 19.99,
+    "rating": 4.3,
+    "reviews_count": 5959.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B095X5HTLS"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RY94Y3LGS640C",
+        "text": "Works flawlessly. Easy to install. It even paired automatically with Alexa. Have to say this switch is pretty darn good. If the instructions look overwhelming at first there's a myriad of very simple videos you can watch that take you through which wires do what. You don't have to know anything about residential electrical wiring to get it to work. Nice product hope it lasts a long time.",
+        "date": "Reviewed in the United States on May 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to Install and operate",
+        "userName": "Robbie Clopton",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RGZ2DMHXEF9T5",
+        "text": "Item arrived and had clearly been opened previously. Wall plate, mounting screws, and wire nuts all missing from box.",
+        "date": "Reviewed in the United States on May 10, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Items missing from box",
+        "userName": "WStewart",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R7XNJUUUAFBU",
+        "text": "Figuring out the wiring with my 3-way switch setup was a bit tricky, but once I got it sorted, everything worked perfectly. Took some patience, but I’m proud I was able to get it done. Solid product overall!",
+        "date": "Reviewed in the United States on April 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "3 Way Switch",
+        "userName": "NeesH",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RRROW1KYLXU1F",
+        "text": "Works fine easy install the product itself is great however I dislike the fact that it’s so restricted into the Alexa ecosystem unlike similar products with matter support especially with all of the recent Alexa plus and excessive ads they force and now I need to replace them so that I can move away from it I would just suggest matter is that you can always switch ecosystems.",
+        "date": "Reviewed in the United States on April 22, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Restrictive",
+        "userName": "Dovid S.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2PQB5JXWZ5VNR",
+        "text": "Not a wiring issue replaced a non smart dimmer, double checked wiring did not work at all. Old dimmer switched worked fine when I swapped it back out. Returning. I am concerned about quality control if they would ship out a non functional product.",
+        "date": "Reviewed in the United States on February 2, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dead on arrival.",
+        "userName": "Tim D.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3ENGOMX5SKM0J",
+        "text": "Installed 3 of the 4 I received and all of them involved some elbow grease to jam into the electrical box. Was unable to install the 4th one since I found that if the light fixture you are sending it to does not accommodate dimming, it will start to slowly turn itself on (like it does with all these switches to be \"fancy\") but then turns itself off around 60% like it blew a fuse. Yes, I should have bought a switch when all I needed was a switch, but at the time the sale made the dimmer a cheaper option and didn't realize it would be an issue. Lesson learned.",
+        "date": "Reviewed in the United States on January 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great, but huge body to cram in",
+        "userName": "Stefan K.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3SGFB3MEY2H8E",
+        "text": "I try to install this Smart switch but was unable to get it to work. Honestly, I'm not sure if the switch was faulty or user error, but I went exactly by the directions and I've installed several of these before. When I did return it, I was charged a restocking fee. The restocking fee is the main reason for my one star rating.",
+        "date": "Reviewed in the United States on January 8, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Item didn't work.. but ...",
+        "userName": "Laura L",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3020LJ4TGOS69",
+        "text": "The lowest dimmer setting (1%) only actually dims about 60% so even at 1%, the lights are still too bright. Would be great if it stepped all the way down to off..",
+        "date": "Reviewed in the United States on December 28, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Easy to install but doesnt dim enough",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RZL7N1XCKGRSC",
+        "text": "Switch is defective and I'm not the only one who has had this issue after digging deeper to solve my problem. Goggle it and you'll see. Light switches were working fine for a few months when randomly I would go into the room and find the light was on and thought someone left it on. (Not the case.) When i went to turn it off i would have to push the button twice for it to turn the light off. Thought that was weird too but never really looked into it deeper because its a room hardly went into. However I went into the room today and randomly the light turned on all by itself. When I mentioned this to my wife she told me she finds the light on all the time. When I contacted Amazon about the issue I was told it is only warrantied for 30 days and I quote by customer support \"we can not make any exceptions\". Nonsense! She was not rude in anyway, nor was I. The switches were cheap, Less than $40 bucks for 2 of them. I will not be buying any more Amazon Basic switches or for that matter Amazon Labeled products again. If you cant stand behind your product and certainly for more than 30 days, then its not worth buying. Junk switch.",
+        "date": "Reviewed in the United States on December 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Defective",
+        "userName": "Lewis P.",
+        "numberOfHelpful": 4,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2UYI8G8756M8Z",
+        "text": "Easily replaced previous dimmer switch with this economical smart switch. The Alexa app immediately recognized the switch. Alexa operation did not require a routine. Just had to say,”Alexa, set X to X%.”",
+        "date": "Reviewed in the United States on November 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great economical smart switch",
+        "userName": "Greg Beck",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3H5BLH5CDDYH3",
+        "text": "My wife wanted to control ceiling can lights using Alexa after getting used to controlling lamps. Cost of purchasing 6 ea Alexa dimmable flood lights was prohibitive and it would be increased ongoing replacement costs. Installed in 3 way operation with other switch being a standard switch. Easy install. Looks good. Operation of physical switch and dimmer feel high quality. Alexa setup was very easy. Recommend purchase",
+        "date": "Reviewed in the United States on November 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "My wife thinks I’m a superhero",
+        "userName": "Papa fla",
+        "numberOfHelpful": 2,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3THZ8QW8EPYU2",
+        "text": "I really like the look and feel of the switch. What I did not like is every time I turned it on, it was at full brightness and I had to adjust. I do not use Alexa. So I uninstalled the switch and installed a Lutron that stays at the setting you set it to",
+        "date": "Reviewed in the United States on November 6, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Does not return to Dim Level",
+        "userName": "The Superman",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RJTN0XC3MRH17",
+        "text": "Product works great. Instructions make it easy to install. Also connecting to Alexa is easy and works great.",
+        "date": "Reviewed in the United States on October 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works awesome and easy to use.",
+        "userName": "Awesome little vacuum cleaner for the price. Works great on stairs and flat surfaces. The attachments help out a lot.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/617jxOOgrSL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RLHECKGCVSJMT",
+        "text": "I ordered this light switch in early March. From early on, it has had this annoying problem of shutting off and back on again frequently, randomly, on its own. It is a rapid dim, then bright. Sometimes it does it two or three times in an hour. Other times it does it a couple times a day. Now I see that the return policy is only 30 days. I'd like a replacement. I bought several other Amazon Basics dimmer switches, albeit single-pole, and I've not had any trouble with the others, just this one.",
+        "date": "Reviewed in the United States on October 18, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Faulty, and NO Refund or Return After 30 Days",
+        "userName": "Greg Dutton",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3M32RRHBQQGP1",
+        "text": "Love the switches, they work great with Alexa",
+        "date": "Reviewed in the United States on September 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switches",
+        "userName": "Larry Davis",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/619yg4U-ALL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2Z452PZ9LK65O",
+        "text": "This replaced a push on/off rotary which was shot. Totally quiet and just a gentle tap for on/off or to brighten or dim. Easily installed, good instructions and great price!",
+        "date": "Reviewed in the United States on September 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works beautifully!",
+        "userName": "Judy45",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RA8QTEOLWMWSD",
+        "text": "I've bought several of these switches and installed them in multiple locations. All of them had intermittent issues, and most failed in a few months. Not a bargain at all. Like other amazon basics hardware I have purchased it would have been better to buy a reliable product from a name brand, even at a higher price.",
+        "date": "Reviewed in the United States on September 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor quality, unreliable and short lived",
+        "userName": "Jerry Brady",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RU30HX3YX1C3H",
+        "text": "Bought less than 7 months ago, could not process replacement in app, could not process replacement via chat, asked to email. Spent more time on replacement than the cost of the switch.",
+        "date": "Reviewed in the United States on August 31, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broken switch, lights blinking",
+        "userName": "Christopher White",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f178ab9f-962a-4e5c-918a-e57ca2cafa8e/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R6RPSF3MAKMU5",
+        "text": "Good price and interfaces with Alexa well, but doesn't dim on verbal commands well and sometimes changes dim level without warning. Note: The wiring needs this to go to the light, then the traveler is just a high/low change. So if the traveler gets power or loses power then it reads it as a flipped switch. So you can figure out wiring diagrams for more than 3 ways.",
+        "date": "Reviewed in the United States on August 30, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Inconsistent performance",
+        "userName": "Michael",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2HLOYHPLZEPC2",
+        "text": "Overall, it does what I expected it to. I installed mine in tandem with a standard wall switch. A few things to note: 1) If installing using a standard switch as the other switch, you may not choose which light switch it replaces, the smart switch MUST replace the load switch (connected to the light fixture), and you MUST make a minor modification to the way the standard switch is wired. I didn't realize this when I ordered, and was not able to position the smart switch at the most convenient of the two switch locations. 2) The instructions include a wiring diagram, but unless you are comfortable and familiar with identifying which wires in your walls are what, you may have difficulty. It is not as simple as red-to-red, black-to-black. In my case, red had to go to a black wire, brown went to red, and so on. 3) Overall, the switch functions as I'd expect, with the exception that when set below 75% and the light starts in OFF with the switch DOWN, the standard switch must be toggled on and off twice for the light to turn off. Above 75% brightness, the standard switch functions as normal, and if the light is ON with the switch DOWN, the switch functions as normal. Its odd, but not a deal breaker. I even tried a replacement smart switch, but experienced the same behavior. See my video demonstrating the quirky behavior. You can find a very helpful video on youtube if you search for the video titled \"Correctly Install Amazon WiFi 3 Way Smart Switch\" by The Home Improvement Channel",
+        "date": "Reviewed in the United States on August 27, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Functions, but with a quirk….",
+        "userName": "Michael D.",
+        "numberOfHelpful": 3,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/f6b69395-2e4e-4bd2-a86d-325759bd17a5/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1XNYL5LRT5L2P",
+        "text": "-------- Another update April 2025 Fantastic when it works but it is an unreliable product. Every few weeks it stops responding to Alexa. I try once or twice per day to go through the set up procedure, after 2 or 3 days it will reconnect and work for another few weeks. Next time it happens I'll only try to redo the setup on one of them. I moved a WiFi (amazon EERO 6+) access point and get full bars on my phone near the switch. Echo Dot on the dresser next to the switch reports Good signal and a download speed of 97 Mbps. I am a handicapped senior and being able to ask Alexa to turn on the light when I have to get up in the middle of the night is an excellent use case for these products. ------- Stopped responding to Alexa Feb 2025 After 7 months I knocked off two stars because both switches stopped communicating with Alexa. I tried everything I found online. Technical support said they would process a refund, which would have been nice but an electrician costs more that the switches to install them. Turns out they never did issue a credit probably because it was too late. They did not seem to have any inclination to troubleshoot. Nice product but evidently they are unreliable. ---------- Just bought it in Aug 2024: I like it. It took 5 min to install the first one and about 2 min for the second. I especially like that I didn't need another unvetted foreign app on my phone to use it. When Amazon comes out with their branded dimming lamp plugs, I throw out or give away the ones I use now. Letting Amazon set up the device on shipping meant all I had to do was come up with a better name than \"first switch\" and assign it to a room. The only downside is dimming LED lights is ..uh.. non-linear. The difference between 5 and 10% is greater than 50 to 100% but it was the same for the dumb dimmer switches they replaced. I believe it is a featurew of LED lights. A suggestion to the software geniuses at Amazon: it be nice to be able to use light meter app on my phone to calibrate a lumen output to dimmer percentage. --------",
+        "date": "Reviewed in the United States on August 24, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Nice, when it works but often stops responding to Alexa for days",
+        "userName": "Joe in Los Angeles",
+        "numberOfHelpful": 4,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61QYBYtzysL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1JBFE6YAF9091",
+        "text": "You need to determine what your existing circuit configuration is before starting. The Amazon Basics smart dimmer is not a “drop in” replacement for an existing 3-way switch/dimmer). Additionally, if using smart dimmer in a circuit with an existing (dumb) standard 3-way switch, you will need to reconfigure wiring to connect the common of dumb switch directly to the (always hot) Line feed and disconnect (spare/tape) one of the existing switch travelers.",
+        "date": "Reviewed in the United States on August 24, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "3-Way Wiring instructions are lacking",
+        "userName": "Roderick K.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2DOVTXLGX0VOP",
+        "text": "to more than $50 each so time to look at options and this was easy to install and program. Will buy more",
+        "date": "Reviewed in the United States on August 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I had another (Named Brand) switches and they have kept increasing their prices",
+        "userName": "Stephen R.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R47RLE2WDUWJH",
+        "text": "First there was a review that said these flicker with dimmable led bulbs. That is not correct. I am using these in two places with completely different types of led bulbs (integral ceiling flush and screw-in exterior) and they dim just fine. In most respects these dimmers are great. I did have an issue with a 1way dimmer (not 3way) that flickered and it was removed, reinstalled and the problem went away. However, there is an issue where the 3 way might come on by itself for no reason and they always come on after a power interruption. I have 15 other Amazon smart switches, outlets and 1 way dimmers. No other smart switch has the problem about coming on. Only the 3 way has the problem. My 3 ways are connected such that there is one smart 3 way and the other switch is on/off only.",
+        "date": "Reviewed in the United States on August 9, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "3way switch functions well for most things but has flaws not found in other Amazon smart devices",
+        "userName": "RickP",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2L7FL45R328F",
+        "text": "If you want your lights to turn on randomly and loose connection frequently then buy this switch. No energy saving here. Pure waste of money. I bought 3 of these and they all failed around the same time. Stay away!!!",
+        "date": "Reviewed in the United States on August 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "One year update they all suck",
+        "userName": "Flete",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3C9JVYUTRJIDL",
+        "text": "Edit: 07/26/2024 I realized that the product only uses one of the traveler leads so I used the other traveler line to bring the line lead to the satellite. Problems solved and the product works great as a very cost effect addition to my Amazon ecosystem... I would prefer to move to all Matter-based products but so far that isn't cost-effective. __________________________________ I was excited to be able to use the smart switch on just the satellite box (where the load line is) but you have to have the hot line in both the main and the satellite box for this to work. I either missed that or it wasn't in the product description.",
+        "date": "Reviewed in the United States on July 25, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Requires a line lead in the satellite box",
+        "userName": "Cam",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2X9TJL5G7XP26",
+        "text": "This Amazon basic 3 way smart switch was installed by electrician. I tried setting up this swich multiple times, but am not able to setup! Soent more than 5 hours combined on two separate days, watched many YouTube videos about setup, did factory reset/ pairing mode (blinking green light) but this switch doesn't connect!",
+        "date": "Reviewed in the United States on July 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Unable to Pair and setup",
+        "userName": "Utpal Kant",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2E33TSZKYGVUG",
+        "text": "Amazon 3-Way Dimmer Smart Switch I just don’t get it. I’ve tried every possible combination of wiring and it just won’t work properly. Only upon wiring it the way it is outlined in the manual can I get it to work…somewhat. Wiring it the way it is outlined in the manual will cause the unit to throw a fault. This will allow the lights to turn off and on, but upon dimming, will have the Amazon switch turn off, and only upon cycling power to the switch will it come back on. Even if dimming is not used, the switch will eventually shut down if it notices the fault for too long. ***Confirmed circuit is correct; works with original Lutron 3-way dimmer switch, and simple 3-way switch. Bulbs are not LED, and a 60W, 120W, 180W, or 240W load, will not change the outcome. Tried a second, new, set of Amazon Smart 3-way Dimmer switches, same deal.",
+        "date": "Reviewed in the United States on July 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "No combination of wiring works",
+        "userName": "Hugh C.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1HBR6SK1F7WPT",
+        "text": "I like the ease of use, but it didn’t last long!",
+        "date": "Reviewed in the United States on June 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed after one year",
+        "userName": "Phil Jones",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R29ORA52UOK0V9",
+        "text": "uses one switch as a master turns on by itself all the time ridiculous find another 3 way switch",
+        "date": "Reviewed in the United States on June 16, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "not a true 3 way switch",
+        "userName": "CSP",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3FAV552NJ6FBT",
+        "text": "Hard to install for a 3-way, requires changing the way the traveler wires work. And then the remote switch is kind of hit and miss as othyers have said. DO NOT BUY if you want it for a 3-way.",
+        "date": "Reviewed in the United States on June 8, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Required rewiring, and ended up strobing",
+        "userName": "P. Tato",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RE5BQOV36HJ3H",
+        "text": "I put these in several rooms throughout the house. Work seamlessly with Alexa. Can turn on, off or dim",
+        "date": "Reviewed in the United States on June 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work great",
+        "userName": "craig Anderson",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3PTJESOY7F6GY",
+        "text": "Had received an email from Amazon before the 3 way light switch had even arrived. It fully explained the setup. I installed it and opened my alexa app. Wow, it immediately displayed a pop-up and said it was ready. That was it.",
+        "date": "Reviewed in the United States on May 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exceptionally easy to install. Works great!",
+        "userName": "BJJ",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R27Y6US1AQ53FQ",
+        "text": "Love these switches, I have about 10 in my new house. THey work great once you get them installed. The only issue I had was that the Frustration Free setup didnt work. The Alexa app couldn't find the switch. I'd scan the QR code and the app would say \"That's not a setup code\" Oh really, it was the only one available. I tried on a new switch and the box QR code - the one with the key by it - didn't work either. Oh well, just hold the power button for about 1- seconds, the green/red light flashes and bingo, the app will find the switch and you are in business.",
+        "date": "Reviewed in the United States on May 21, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Frustration Free setup is Frustrating ... but still a great switch",
+        "userName": "Matthew C.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R17KG2WENEST9S",
+        "text": "Update: the next day I was able to make changes in the settings—changing the type of device and the brightness. Not sure why the Alexa app locked the settings for this device only although verbally or physically pressing the buttons on the switched worked. I was also able to setup a routine. I updated the overall rating from 1 to 2 stars. I’ve never had this problem with any devices I’ve setup—nearly 100 devices. I have 50+ devices I’ve set up for home automation and this is by far the worst. Thought it would be the easiest since it is newer and is using the MATTER standard. Once I got it configured it is now locked so I can’t make changes—such as selecting the switch as a light is grayed out. The Alexa app won’t change the brightness yet I can change brightness with voice or the physical switch. You would think an Amazon Basic device would work the best with Amazon Echo app. Nope. And I can’t create a routine. I can’t select options. And lastly other devices that worked well are having issues…ever since installing and configuring this switch. I will NEVER buy an Amazon Basics switch again. I will go back to the trusted brands I have used for a decade without issues.",
+        "date": "Reviewed in the United States on May 20, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not working well- troublesome",
+        "userName": "Mark R",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1OL40SLU9SUG6",
+        "text": "Nice design, solidly made, works well. Great price. Could not ask for anything more. Do note that this does require a neutral(white) wire.",
+        "date": "Reviewed in the United States on May 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well for an inexpensive switch.",
+        "userName": "BLD",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R4IVVWQ67CK3P",
+        "text": "This dimmer did not work properly from the beginning.",
+        "date": "Reviewed in the United States on April 12, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Bad 3-way",
+        "userName": "David Wallace",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2EC0K6HTYK6IU",
+        "text": "I was a little leery that the online description as of 04/06/24 said this switch uses just one traveler wire. 3 way circuits always have two travelers. But I wanted to check it out their innovation as I have Amazon plugs and Echos in my house. I have also installed multiple single pole and 3 way smart switches from other brands. I know how to wire two travelers, I've got neutral wires, and my existing setup had two working standard 3 way switches that functioned just fine. BTW, the included instructions showed a different wiring setup than the one in the product description. Unfortunately, neither worked for my setup. 5 stars for innovation reduced to 1 star for execution. The positive: once it was hooked up, Alexa did automatically sense the switch, connect to WiFi, and add it to My Devices. The negatives: I was never able to get the switch to function as designed with my LED fixture, the Amazon switch, and a standard switch in the circuit. I am assuming this may have something to do with the low power draw or the dimmer function (not likely, I know). In the best wiring configuration - I tried them all - I could turn the fixture on and off from the Alexa app - but once I used the standard switch it turned off and would only flicker on briefly when I flipped the standard switch. Also, when the fixture was lit it buzzed (search for the other brands that use the technology that eliminates this). No shorts, not incorrect wiring. I disconnected all the wiring, started from scratch, and used an NCV and a meter to confirm the continuity on each wire. Same results. I swapped the smart switch with the standard switch just in case I incorrectly identified the \"load\" side. Same results. I put the old standard 3 way switch back and everything worked with no buzz. Insanity is trying the same thing over and over with the same results. So I am returning this switch and suggest that if you are using a single low power LED fixture and a standard switch you try a smart switch that accommodates two travelers in its wiring, doesn't need to be on the \"load\" side, and doesn't cause buzzing.",
+        "date": "Reviewed in the United States on April 7, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "YMMV: Did not work with only my LED fixture and a traditional 3 way switch in the circuit",
+        "userName": "B. Ware",
+        "numberOfHelpful": 2,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RT9QTULUFNB74",
+        "text": "I recently purchased the Amazon Basics 3-Way Smart Dimmer Switch and I have been extremely impressed with its functionality and ease of use. As someone who has been slowly converting my home into a smart home, I have tried out various brands and products, but this switch from Amazon Basics stands out as one of the best. First and foremost, the installation process was surprisingly simple. I was worried that I would have to hire an electrician to install the switch, but with the help of the detailed instructions provided, I was able to do it myself in just a few minutes. The switch does require a neutral wire, so make sure to check your wiring before purchasing. Once installed, I was able to connect the switch to my WiFi network and link it to my Alexa device without any issues. The 2.4 Ghz WiFi connection is strong and reliable, and I haven't experienced any connectivity problems or delays in controlling the switch with my voice commands. The dimming function is one of the standout features of this switch. I love being able to adjust the brightness of my lights with just a simple voice command or through the Amazon Alexa app. It's a small but convenient feature that adds a touch of luxury to my home. Another great aspect of this switch is its sleek design. The white color blends in seamlessly with my home decor, and the compact size (2.91 x 4.65 x 1.62 inches) means it fits in standard wall box. It also has a soft LED indicator light that is not too bright or distracting. Overall, I am extremely satisfied with my purchase of the Amazon Basics 3-Way Smart Dimmer Switch. It's a high-quality product at an affordable price point, and the fact that it's from Amazon Basics gives me peace of mind in terms of its reliability and customer service. I would highly recommend this switch to anyone looking to make their home a little smarter and more convenient.",
+        "date": "Reviewed in the United States on March 24, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love it.",
+        "userName": "David D",
+        "numberOfHelpful": 17,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2AR2SKA65QC7G",
+        "text": "I don’t know what it is but this product mixed with my light fixture in my living room = insanity. Every time I turn it off it just turns itself back on. Sometimes it waits 10min. Sometimes it immediately turns on. It makes no sense. I had to delete ALLL of my routines. It still did it. I cannot handle it. I would not recommend this possessed nonsense to anyone. All of the single pole switches work fine. It’s simply the three way switches it hates. I had a licensed electrician install it as well and it still is doing this. I then tried installing a new switch myself, same problem.",
+        "date": "Reviewed in the United States on March 10, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Possessed? 🫨",
+        "userName": "Devin",
+        "numberOfHelpful": 2,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/52e04112-c21f-40a3-878d-5bdd10e3a189/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R21TGDBKVNFA04",
+        "text": "Worked but its auto dialing people automatically, anytime day or night; OVER TIME TO RETURN? FRB25",
+        "date": "Reviewed in the United States on March 2, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worked but its auto dialing people automatically, anytime day or night; OVER TIME TO RETURN?",
+        "userName": "Bou",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2AOH0D9RCXRMH",
+        "text": "Easy install. Dimmer does not work with flood lights. Alexa won’t recognize switch. So got an expensive simple switch.",
+        "date": "Reviewed in the United States on February 28, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Works but not great",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2HIIK2BLUU2ZA",
+        "text": "Using to replace a kitchen dimmer switch. Installation was quick and easy. Hooking up to Alexa was fast. The problem is it keeps turning on by itself without any rhyme or reason. Tell Alexa to turn it off, it turns of for a second, then pops right back on. sometimes it takes 3 or four tries to get it to turn off. Please note, keep your packaging as I threw mine away as soon as I thought it was working fine. I'm ordering a new one to try again as I have had good luck with Amazon products in the past. This time I'll keep the packaging.",
+        "date": "Reviewed in the United States on February 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "won't stop turning on",
+        "userName": "J. Maiden",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RNHYZB8EEKFF9",
+        "text": "Have you ever tried to get tech support on Amazon? I was on the phone for close to 45 minutes, and got bounced from one person to another. I never spoke with a person who was any help. This is a 3 way switch , with only one traveler wire? How do you hook up two traveler wires, which to my knowledge is how all 3 way switchs are wired, so they can work. The instructions even mention two traveler wires, in the beginning of the instructions, but talk about only one traveler wire at the end. Look at other 3 way switches , and their instruction show 2 traveler wires and have a place to land two traveler wires. Not sure how anyone has got this to work correctly? It also mentions that this smart switch has to be in the box that has the load wire, or it will not work. All the requirements were followed, but never got it to work correctly. GOOD LUCK if you buy this for a 3 way application with a dummy switch on one side.",
+        "date": "Reviewed in the United States on February 21, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Only one traveler wire",
+        "userName": "Doris Van Leeuwen",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2BOF16AIFYHH5",
+        "text": "First one did not work. Second one works mostly. I use this in a 3 way switch position with a non smart switch attached. I followed the instruction which tell you to have this switch go to the lights not the standard switch. So my issue is that the non smart switch works sometimes. Other times you have to switch it a couple of times to get it to turn off the light. The other thing is the dim feature. At low the lights flicker sometimes. Also twice the light has turned on without anyone telling it to. I would probably recommend trying another brand but it was too much work to swap this with another one for me.",
+        "date": "Reviewed in the United States on February 19, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "It works ok...",
+        "userName": "JCrow",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2U9VHQ31SHMIL",
+        "text": "This works great once I figured out that you need to attach it to a 2.4g router not the 5g that is commonly found. This detail is not mentioned in the installation instructions. You need to dig deep to get the manual from the listing.",
+        "date": "Reviewed in the United States on January 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Must use 2.4g not 5g router",
+        "userName": "A Dad",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2KPDS58T6DBKC",
+        "text": "My Echo Dot found it and connected before I could add it. Works great by voice, app, or touch.",
+        "date": "Reviewed in the United States on January 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install and connection.",
+        "userName": "Aaron K Wolfe",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R41LDJOU0KFGK",
+        "text": "Ordered 12 of these from used thinking I'd save some money, all 12 were broken and missing parts. Waste of time and money. You have been warned",
+        "date": "Reviewed in the United States on January 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Do not buy the used ones",
+        "userName": "Tom hitz",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1Q91ORN48LTV4",
+        "text": "I couldn't make it to work with a regular 3way switch in the other side, only with identical smart one. When I wire two smart ones they both show up on alexa, I click \"forget\" but they keep coming up Can't change the LED color (other brands allow that) which makes it look odd near other ones",
+        "date": "Reviewed in the United States on January 17, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Disappointing",
+        "userName": "Dave H",
+        "numberOfHelpful": 0,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X5HTLS",
+        "productTitle": "Amazon Basics Smart Dimmer Switch, 3-Way, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 193,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1AR3ZR5S6UG9G",
+        "text": "1. This switch only works as a dimmer when connected immediately adjacent to the load (light). 2. The instructions are not complete. 3. The device does not physically mount well with other switches, creating an ugly or even unsafe mount. 4. If two smart switches are used, dimming is not available on one of them. 5. The ad does not adequately describe this product. Returning the item.",
+        "date": "Reviewed in the United States on January 14, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Incomplete product information",
+        "userName": "Rollin",
+        "numberOfHelpful": 2,
+        "variationId": "B095X5HTLS",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: 3-Way Dimmer"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

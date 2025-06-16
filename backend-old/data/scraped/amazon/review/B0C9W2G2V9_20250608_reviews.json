@@ -1,0 +1,272 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:32:23.213217",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0C9W2G2V9",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 1,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0C9W2G2V9",
+    "title": "Leviton No-Neutral Decora Smart Dimmer Switch, Requires MLWSB Wi-Fi Bridge to Work with My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, DN6HD-1RW, White",
+    "brand": "Leviton",
+    "model_number": NaN,
+    "price_usd": 41.35,
+    "rating": 3.8,
+    "reviews_count": 19.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0C9W2G2V9"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C9W2G2V9",
+        "productTitle": "Leviton No-Neutral Decora Smart Dimmer Switch, Requires MLWSB Wi-Fi Bridge to Work with My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, DN6HD-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 5,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 13
+          },
+          "twoStar": {
+            "percentage": 16
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3D6GGBUC6UIXG",
+        "text": "This allowed me to put my shower fan on a timer since nobody knows how to turn off a switch",
+        "date": "Reviewed in the United States on February 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great",
+        "userName": "Scarecrowoif2",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C9W2G2V9",
+        "productTitle": "Leviton No-Neutral Decora Smart Dimmer Switch, Requires MLWSB Wi-Fi Bridge to Work with My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, DN6HD-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 5,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 13
+          },
+          "twoStar": {
+            "percentage": 16
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R141SGHD2S90GG",
+        "text": "Several years ago I replaced all my dimmers with “Smart” dimmers. Not sure exactly what the extra wire is in my house, but it IS NOT a neutral and nothing worked unless manually from each individual dimmer. Went back through and put all old dimmers back in. Fast-forward a bit and I found this line from Leviton that works without a neutral and through a WiFi Bridge that connects to WiFi. I tested several while getting started and they worked great. It has dimmers & switches working through the WiFi Bridge and plugs & dimmer plugs connecting directly to WiFi Between dimmers and switches I probably have almost 30, and about 20 WiFi Smart plugs all working perfectly!",
+        "date": "Reviewed in the United States on January 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works with No Neutral",
+        "userName": "Tony C.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C9W2G2V9",
+        "productTitle": "Leviton No-Neutral Decora Smart Dimmer Switch, Requires MLWSB Wi-Fi Bridge to Work with My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, DN6HD-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 5,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 13
+          },
+          "twoStar": {
+            "percentage": 16
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1M014B6VOW20N",
+        "text": "Hey google, turn on the lights. No more looking down the hallway and having to get up to turn off the lights. The dimmer is an added plus.",
+        "date": "Reviewed in the United States on January 26, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Get you some automation",
+        "userName": "Ms. T",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C9W2G2V9",
+        "productTitle": "Leviton No-Neutral Decora Smart Dimmer Switch, Requires MLWSB Wi-Fi Bridge to Work with My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, DN6HD-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 5,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 13
+          },
+          "twoStar": {
+            "percentage": 16
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R39OZYUM4MHWTN",
+        "text": "Works as advertised, set up a bit tricky, needed to try twice to add to existing Smart Home network w/wifi bridge, but it eventually worked. This happened with other products as well. Also needed to redo schedules, but once running, works as intended.",
+        "date": "Reviewed in the United States on November 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0C9W2G2V9",
+        "productTitle": "Leviton No-Neutral Decora Smart Dimmer Switch, Requires MLWSB Wi-Fi Bridge to Work with My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, DN6HD-1RW, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 5,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 19,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 13
+          },
+          "twoStar": {
+            "percentage": 16
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R23O3D47MSM8CI",
+        "text": "The switch is beautiful and works very well for up to 4 LED bulbs, but fails dramatically at six bulbs on the circuit. With six LED bulbs at full brightness, the switch repeatedly turns on, then flickers off and reboots (I tried with three different switches, and all behaved the same). Fortunately, Leviton’s app allows you to set a maximum brightness percentage and the switch can handle the six bulbs at just under 50%. It’s unfortunate they won’t go brighter without killing the switch. I haven’t had problems with the bridge, but it’s plugged in only 6 feet from the switch.",
+        "date": "Reviewed in the United States on September 4, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Use only for limited number of bulbs",
+        "userName": "Mike Wessler",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 5,
+    "pages_scraped": 1,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

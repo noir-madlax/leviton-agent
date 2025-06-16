@@ -1,0 +1,382 @@
+{
+  "product_title": "Legrand radiant TM870WSLCC10 15 Amp Rocker Wall Switch with Locator Light, Single Pole Decorator Light Switches, White (1 Count)",
+  "product_category": "LED Illuminated Indicator Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "LED indicator light": {
+        "A@tiny pinpoint size": {
+          "-": [
+            8,
+            11,
+            15,
+            21,
+            23,
+            28,
+            33,
+            36,
+            39,
+            40,
+            41,
+            42
+          ]
+        },
+        "B@white color": {
+          "+": [
+            12,
+            21,
+            33,
+            41
+          ]
+        },
+        "C@green color": {
+          "+": [
+            14
+          ]
+        },
+        "D@positioned above switch": {
+          "+": [
+            14,
+            33,
+            40
+          ]
+        },
+        "E@positioned at switch edge": {
+          "+": [
+            23
+          ]
+        },
+        "F@pencil point size": {
+          "-": [
+            14,
+            41
+          ]
+        },
+        "G@pinhole sized": {
+          "+": [
+            33
+          ]
+        }
+      },
+      "Switch housing": {
+        "H@screws go inside housing under pressure": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "Switch appearance": {
+        "I@clean and sleek look": {
+          "+": [
+            9
+          ]
+        },
+        "J@company name impressed into plastic": {
+          "-": [
+            9
+          ]
+        },
+        "K@off white color rather than pure white": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "Switch construction": {
+        "L@solid and sturdy feel": {
+          "+": [
+            12,
+            24,
+            33,
+            47
+          ]
+        },
+        "M@substantial feel": {
+          "+": [
+            41
+          ]
+        },
+        "N@good build quality": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "Switch sound": {
+        "O@loud click sound": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "Rocker paddle": {
+        "P@smooth tactile feel": {
+          "+": [
+            33
+          ]
+        },
+        "Q@clean feel": {
+          "+": [
+            24
+          ]
+        }
+      }
+    },
+    "perf": {
+      "LED functionality": {
+        "a@LED stopped working after 4 years": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@LED indicator goes out after few minutes": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "c@LED indicator does not work": {
+          "-": {
+            "?": [
+              17,
+              20,
+              25,
+              43,
+              44
+            ]
+          }
+        },
+        "d@LED failed after a year": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "e@LED works in off position": {
+          "+": {
+            "A": [
+              15,
+              40
+            ]
+          }
+        },
+        "f@LED provides location in darkness": {
+          "+": {
+            "A": [
+              5,
+              7,
+              12,
+              13,
+              21,
+              24,
+              29,
+              30,
+              33,
+              47
+            ]
+          }
+        },
+        "g@LED too dim to see from room distance": {
+          "-": {
+            "A": [
+              8,
+              11,
+              15,
+              36,
+              39
+            ]
+          }
+        },
+        "h@LED brightness adequate for close range": {
+          "+": {
+            "A": [
+              29,
+              33
+            ]
+          }
+        }
+      },
+      "Switch operation": {
+        "i@works well with installation": {
+          "+": {
+            "?": [
+              1,
+              2,
+              10,
+              18,
+              19,
+              24,
+              28,
+              35,
+              45
+            ]
+          }
+        },
+        "j@finicky to hook up": {
+          "-": {
+            "H": [
+              1
+            ]
+          }
+        },
+        "k@does not work with generator power": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "l@works fine with mains power": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "m@does not work with LED bulbs": {
+          "-": {
+            "?": [
+              8,
+              37,
+              40
+            ]
+          }
+        },
+        "n@works with incandescent and halogen": {
+          "+": {
+            "?": [
+              8,
+              40
+            ]
+          }
+        },
+        "o@leaked voltage with LED bulb": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "p@will not randomly toggle": {
+          "+": {
+            "P": [
+              33
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "q@quality construction": {
+          "+": {
+            "L,M,N": [
+              2,
+              5,
+              8
+            ]
+          }
+        }
+      },
+      "Dirt collection": {
+        "r@collects dirt and grime": {
+          "-": {
+            "J": [
+              9
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Bathroom application": {
+        "+": {
+          "f": [
+            5,
+            12
+          ]
+        },
+        "-": {
+          "g": [
+            5
+          ]
+        }
+      },
+      "Bedroom application": {
+        "+": {
+          "f,h": [
+            5,
+            29
+          ]
+        }
+      },
+      "Dark room navigation": {
+        "+": {
+          "f": [
+            5,
+            7,
+            13,
+            21,
+            24,
+            29
+          ]
+        }
+      },
+      "Garage application": {
+        "-": {
+          "g": [
+            36,
+            39
+          ]
+        }
+      },
+      "Closet application": {
+        "+": {
+          "f": [
+            15,
+            29
+          ]
+        }
+      },
+      "General household use": {
+        "+": {
+          "i": [
+            2,
+            10,
+            18,
+            19
+          ]
+        }
+      },
+      "Replacement for old switches": {
+        "+": {
+          "i,q": [
+            2,
+            12,
+            24
+          ]
+        }
+      },
+      "LED lighting circuits": {
+        "-": {
+          "m,o": [
+            8,
+            37,
+            40
+          ]
+        }
+      },
+      "Incandescent lighting circuits": {
+        "+": {
+          "n": [
+            8,
+            40
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:28.490875"
+}

@@ -1,0 +1,461 @@
+{
+  "product_title": "Onite 2PCS LED Strip Dimmer Switch, USB Female to Male Extension Cord with Dimmable Rotary Switch",
+  "product_category": "USB Powered Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "switch/dial": {
+        "A@has turning knob with zero resistance": {
+          "-": [
+            3
+          ]
+        },
+        "B@is physical dial rather than push button": {
+          "+": [
+            11
+          ]
+        },
+        "C@has click function for on/off": {
+          "+": [
+            17,
+            40
+          ]
+        },
+        "D@dial is very large and bulky": {
+          "-": [
+            36,
+            48
+          ]
+        },
+        "E@whole dimmer wheel assembly is oversized": {
+          "-": [
+            36
+          ]
+        }
+      },
+      "construction": {
+        "F@made of lightweight plastic": {
+          "-": [
+            17
+          ]
+        },
+        "G@doesn't feel overly sturdy": {
+          "-": [
+            17
+          ]
+        },
+        "H@PCB looks decent": {
+          "+": [
+            4
+          ]
+        },
+        "I@USB leads poorly soldered with bad wire stripping": {
+          "-": [
+            4
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_functionality": {
+        "a@doesn't dim at all, just turns on": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@requires rolling switch all the way to end to turn on": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "c@needs to be scrolled 3 times around": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "d@smoothly dims light with no issues": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "e@works perfectly for dialing in brightness level": {
+          "+": {
+            "B": [
+              11
+            ]
+          }
+        },
+        "f@allows cranking light up to full brightness or dimming to pale night light": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "g@dims in very small steps": {
+          "+": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "h@barely dims then just shuts off": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "i@causes flicker at lowest levels": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "j@brightness potentiometer has terrible taper, feels linear when should be logarithmic": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "k@lowest settings don't do anything, gets bright quickly from 60% onward": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "l@device can go from off to barely on to full power": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "m@has been in use for over 3 years and is excellent": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "n@only one out of two worked": {
+          "-": {
+            "?": [
+              16,
+              23,
+              24
+            ]
+          }
+        },
+        "o@one doesn't work at all": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "p@works with simple USB LEDs but not complex LED drivers with voltage/current regulating circuits": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "q@doesn't allow controller use and can only choose one color and one setting": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "r@color change cycle won't start unless power is on max": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "s@doesn't work with USB fan, causes whining noise": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "safety": {
+        "t@has safety concerns due to poor soldering": {
+          "-": {
+            "I": [
+              4
+            ]
+          }
+        }
+      },
+      "ease_of_movement": {
+        "u@moves easily when bumped or slightly touched": {
+          "-": {
+            "A": [
+              3
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED strip lights": {
+        "+": {
+          "e": [
+            0
+          ]
+        },
+        "-": {
+          "a,b,c": [
+            0
+          ]
+        }
+      },
+      "neon art/faux neon LED lighting for atmosphere": {
+        "+": {
+          "?": [
+            1
+          ]
+        }
+      },
+      "extremely bright LED lights": {
+        "+": {
+          "?": [
+            5
+          ]
+        }
+      },
+      "IKEA bedside lamp with USB-A charger": {
+        "+": {
+          "?": [
+            7
+          ]
+        }
+      },
+      "neon sign": {
+        "+": {
+          "g": [
+            26
+          ]
+        },
+        "-": {
+          "h,o": [
+            27
+          ]
+        }
+      },
+      "USB lighted gadgets": {
+        "+": {
+          "?": [
+            9
+          ]
+        }
+      },
+      "led neon looking signs that were extremely bright": {
+        "+": {
+          "?": [
+            10
+          ]
+        }
+      },
+      "LEGO light kits to lower voltage and prevent burnout": {
+        "+": {
+          "e": [
+            11
+          ]
+        }
+      },
+      "strip of LEDs under molding as computer hutch backlight": {
+        "+": {
+          "f,m": [
+            12
+          ]
+        }
+      },
+      "simple USB LED lights": {
+        "+": {
+          "?": [
+            14
+          ]
+        }
+      },
+      "vinyl record holder LED lights that were too bright": {
+        "+": {
+          "?": [
+            17
+          ]
+        }
+      },
+      "rooftop tent with light strip": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "LED night-light": {
+        "+": {
+          "d": [
+            20
+          ]
+        }
+      },
+      "SHEIN neon style lights for rooms": {
+        "+": {
+          "?": [
+            21
+          ]
+        }
+      },
+      "USB powered picture lights that are too bright": {
+        "+": {
+          "?": [
+            23
+          ]
+        },
+        "-": {
+          "n": [
+            23
+          ]
+        }
+      },
+      "small USB neon sign": {
+        "+": {
+          "g": [
+            26
+          ]
+        }
+      },
+      "TV LED backlight that was too bright": {
+        "+": {
+          "?": [
+            29
+          ]
+        }
+      },
+      "small neon signs": {
+        "+": {
+          "?": [
+            30
+          ]
+        }
+      },
+      "Luigi statue as night light": {
+        "+": {
+          "?": [
+            31
+          ]
+        }
+      },
+      "string lights with portable power banks": {
+        "+": {
+          "?": [
+            33
+          ]
+        }
+      },
+      "USB desktop fan": {
+        "-": {
+          "s": [
+            34
+          ]
+        }
+      },
+      "fairy lights for manual control": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "LED strips in tent": {
+        "+": {
+          "?": [
+            36
+          ]
+        }
+      },
+      "USB powered fans and small items": {
+        "+": {
+          "?": [
+            37
+          ]
+        }
+      },
+      "LED lamp that cycles through colors": {
+        "+": {
+          "l": [
+            39
+          ]
+        },
+        "-": {
+          "r": [
+            39
+          ]
+        }
+      },
+      "RV or campsite USB lights": {
+        "+": {
+          "?": [
+            41
+          ]
+        }
+      },
+      "VOKARO USB Lights that warm up": {
+        "+": {
+          "?": [
+            42
+          ]
+        }
+      },
+      "two LED lamps for microscope": {
+        "+": {
+          "?": [
+            44
+          ]
+        }
+      },
+      "light strip in roof top tent": {
+        "+": {
+          "?": [
+            46
+          ]
+        }
+      },
+      "5V strings of faerie lights": {
+        "+": {
+          "?": [
+            47
+          ]
+        }
+      },
+      "slim LED light connected to computer": {
+        "-": {
+          "D": [
+            48
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:38.834572"
+}

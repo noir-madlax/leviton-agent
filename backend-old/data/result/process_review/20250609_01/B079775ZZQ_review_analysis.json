@@ -1,0 +1,549 @@
+{
+  "product_title": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "Material": {
+        "A@Cheap-feeling plastic construction": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "Controls": {
+        "B@Physical +/- buttons for dimming": {
+          "-": [
+            12
+          ]
+        },
+        "C@Toggle switch requiring bottom push for operation": {
+          "-": [
+            23
+          ]
+        },
+        "D@Dimmer positioned at tip of switch": {
+          "+": [
+            20
+          ]
+        }
+      },
+      "Design": {
+        "E@Clean appearance on wall": {
+          "+": [
+            13
+          ]
+        },
+        "F@Nice and clean design": {
+          "+": [
+            27
+          ]
+        },
+        "G@Snap-on outlet cover without screws": {
+          "-": [
+            27
+          ]
+        },
+        "H@Outlet cover doesn't match other covers": {
+          "-": [
+            27
+          ]
+        }
+      },
+      "Internal Components": {
+        "I@Internal relay component": {
+          "-": [
+            1
+          ]
+        },
+        "J@Internal circuitry without overheating signs": {
+          "+": [
+            37
+          ]
+        },
+        "K@Transformer component": {
+          "+": [
+            29
+          ]
+        }
+      },
+      "Wiring": {
+        "L@Requires neutral wire": {
+          "+": [
+            23,
+            34
+          ]
+        },
+        "M@Two unlabeled wires and screws": {
+          "-": [
+            44
+          ]
+        }
+      },
+      "LED Indicator": {
+        "N@Circular light on switch": {
+          "+": [
+            37
+          ]
+        },
+        "O@Red blinking LED status": {
+          "-": [
+            40
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Fails after 2 years": {
+          "-": {
+            "?": [
+              0,
+              2
+            ]
+          }
+        },
+        "b@Fails within first year": {
+          "-": {
+            "?": [
+              1,
+              4,
+              22,
+              28
+            ]
+          }
+        },
+        "c@Multiple failures in short timeframe": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "d@Stops working after 4 months": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "e@Burns out in 5 months": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "f@Fails after 14 months": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "g@All units lost connection over time": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "Electrical Function": {
+        "h@Fails to energize load/connected device": {
+          "-": {
+            "I": [
+              1
+            ]
+          }
+        },
+        "i@Powers on but doesn't turn on light": {
+          "-": {
+            "?": [
+              1,
+              28
+            ]
+          }
+        },
+        "j@Randomly powers off then recovers": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "k@Stops working due to voltage fluctuation": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "l@Physical switch doesn't work": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "m@No longer controls lights but responds to Wi-Fi": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "Dimming Performance": {
+        "n@Light levels jump without smooth transitions": {
+          "-": {
+            "B": [
+              12
+            ]
+          }
+        },
+        "o@Settings change back to full brightness automatically": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "p@Works well for fine-tuning dimming": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "q@Prevents accidental brightness changes": {
+          "+": {
+            "D": [
+              20
+            ]
+          }
+        },
+        "r@Eliminates light flickering at low brightness": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "Response Time": {
+        "s@Slight delay between pressing switch and light turning on": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "Wi-Fi Connectivity": {
+        "t@Maintains network connectivity while failing to control load": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "u@Local access only error": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "v@Pairing failure with network": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "w@Will not connect to WiFi": {
+          "-": {
+            "O": [
+              40,
+              45
+            ]
+          }
+        },
+        "x@Won't reset to connect to WiFi": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "y@Does not connect following instructions and reset attempts": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        }
+      },
+      "App Integration": {
+        "z@Can be interacted with via smart device apps": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "aa@App can connect but commands don't work": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "ab@Lost link with app": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "ac@Easy to install": {
+          "+": {
+            "?": [
+              6,
+              7,
+              8,
+              10,
+              18
+            ]
+          }
+        },
+        "ad@Transformer won't fit with too many 14 gauge wires": {
+          "-": {
+            "K": [
+              29
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "ae@Not compatible with Smartlife": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "af@Works with Google and Alexa": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "ag@Works with Alexa and brand new lights": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "ah@Works great with echo devices": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "ai@Works with smarthings app": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "aj@Integrates into Google Home ecosystem": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "ak@Three pack not Matter compatible while single pack is": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "al@No Matter compatibility but still functional": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "Setup": {
+        "am@App setup is very quick": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "an@Setup was pretty easy": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "ao@Easy setup": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "ap@Easy to setup": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "aq@Easy to integrate with Alexa": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "Features": {
+        "ar@Soft on and off feature": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "as@Fade off feature": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "at@Double tap, triple tap, and long hold actions": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Kitchen lighting control": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "Bathroom lighting control": {
+        "+": {
+          "?": [
+            8,
+            29
+          ]
+        }
+      },
+      "Kitchen cabinet lights control": {
+        "+": {
+          "?": [
+            8
+          ]
+        }
+      },
+      "Family room lighting for TV watching": {
+        "+": {
+          "ar": [
+            7
+          ]
+        }
+      },
+      "Outdoor lights control in sealed box": {
+        "+": {
+          "?": [
+            10
+          ]
+        }
+      },
+      "Phone control of lights": {
+        "+": {
+          "?": [
+            12,
+            13,
+            39
+          ]
+        }
+      },
+      "Alexa voice control": {
+        "+": {
+          "af": [
+            13,
+            36
+          ]
+        }
+      },
+      "Smart home integration": {
+        "+": {
+          "?": [
+            16
+          ]
+        }
+      },
+      "LED ceiling lights control": {
+        "-": {
+          "?": [
+            37
+          ]
+        }
+      },
+      "Dimmable light control": {
+        "+": {
+          "p": [
+            33
+          ]
+        }
+      },
+      "Outside lights automation for sunset/sunrise": {
+        "+": {
+          "?": [
+            43
+          ]
+        }
+      },
+      "Older home wiring compatibility": {
+        "+": {
+          "?": [
+            46
+          ]
+        }
+      },
+      "Replacing non-smart dimmer switch": {
+        "+": {
+          "r": [
+            42
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:31.131611"
+}

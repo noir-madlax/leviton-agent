@@ -1,0 +1,2 @@
+total_products,total_volume,avg_price,median_price,total_brands,avg_volume_per_product,price_range
+231,80050,32.34632034632035,22.97,48,346.53679653679654,"{'min': 2.68, 'max': 629.55}"

@@ -1,0 +1,519 @@
+{
+  "product_title": "Legrand Radiant 150-Watt Single-Pole/3-Way LED Advanced Dimmer, White",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Rocker switch with side slider design": {
+          "+": [
+            15,
+            18,
+            25,
+            33,
+            34,
+            38,
+            42,
+            45,
+            47,
+            48
+          ]
+        },
+        "B@Large dimmer slider size": {
+          "+": [
+            25,
+            34
+          ]
+        },
+        "C@Compact size": {
+          "+": [
+            27
+          ]
+        },
+        "D@Standard decorator switch size": {
+          "+": [
+            18,
+            49
+          ]
+        },
+        "E@Slightly larger than regular switch": {
+          "-": [
+            41,
+            46
+          ]
+        },
+        "F@Deeper profile than some other dimmers": {
+          "-": [
+            35,
+            43
+          ]
+        },
+        "G@Rectangular face that may protrude from thin wall plates": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "Build Quality": {
+        "H@Well-made plastic that doesn't feel cheap or brittle": {
+          "+": [
+            30
+          ]
+        },
+        "I@Hefty, solid construction": {
+          "+": [
+            43
+          ]
+        },
+        "J@Better build quality than some competitors": {
+          "+": [
+            43
+          ]
+        }
+      },
+      "Wiring": {
+        "K@Standard switch with three screws for 2-way and 3-way use": {
+          "+": [
+            25
+          ]
+        },
+        "L@No pigtails, uses screw terminals": {
+          "+": [
+            25
+          ]
+        },
+        "M@Combo backstab and clamp wire connections": {
+          "+": [
+            30,
+            38,
+            42
+          ]
+        },
+        "N@Stranded ground wire with wire nut instead of ground screw": {
+          "-": [
+            35,
+            38
+          ]
+        },
+        "O@Two spots for back-wiring on each terminal, fits 12ga wire": {
+          "+": [
+            35
+          ]
+        },
+        "P@Sticks back only 1 1/8 inch into work box": {
+          "+": [
+            35
+          ]
+        },
+        "Q@About as wide as typical GFI": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "Switch Operation": {
+        "R@Serious spring driving rocker switch requiring more effort": {
+          "-": [
+            35
+          ]
+        },
+        "S@Louder click than normal switches": {
+          "-": [
+            35
+          ]
+        },
+        "T@Positive click feel": {
+          "+": [
+            30
+          ]
+        },
+        "U@Solid rocker switch feel": {
+          "+": [
+            45
+          ]
+        }
+      },
+      "Slider Operation": {
+        "V@Smooth slider operation": {
+          "+": [
+            26,
+            28,
+            30,
+            35,
+            40,
+            42,
+            44
+          ]
+        },
+        "W@Slider harder to move but prevents accidental dimming": {
+          "+": [
+            26
+          ]
+        },
+        "X@Stiff slider initially, improves with use": {
+          "-": [
+            41
+          ]
+        },
+        "Y@Easy to use slider": {
+          "+": [
+            30,
+            34
+          ]
+        }
+      },
+      "Features": {
+        "Z@QR code label for installation instructions": {
+          "+": [
+            25
+          ]
+        },
+        "AA@Calibration button for adjusting dimming range": {
+          "+": [
+            7,
+            29,
+            30,
+            32,
+            36,
+            38,
+            42,
+            43
+          ]
+        },
+        "AB@Hi and low limit settings": {
+          "+": [
+            7,
+            36
+          ]
+        },
+        "AC@Burst mode feature": {
+          "+": [
+            29,
+            36,
+            38,
+            42
+          ]
+        },
+        "AD@Soft start feature": {
+          "+": [
+            38,
+            42
+          ]
+        },
+        "AE@No dial adjustment feature": {
+          "-": [
+            10
+          ]
+        }
+      },
+      "Appearance": {
+        "AF@Attractive, modern appearance": {
+          "+": [
+            24,
+            28,
+            45,
+            46
+          ]
+        },
+        "AG@Clean, streamlined look": {
+          "+": [
+            28,
+            45,
+            46
+          ]
+        },
+        "AH@Matches other switches aesthetically": {
+          "+": [
+            18,
+            41,
+            49
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Reliability": {
+        "a@Multiple units failing within 2-4 months": {
+          "-": {
+            "?": [
+              0,
+              1,
+              3,
+              5,
+              8,
+              11
+            ]
+          }
+        },
+        "b@Dead on arrival": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "c@Long-term reliable operation": {
+          "+": {
+            "?": [
+              9,
+              13,
+              17,
+              20,
+              22,
+              23,
+              24
+            ]
+          }
+        }
+      },
+      "LED Compatibility": {
+        "d@Eliminates LED flicker": {
+          "+": {
+            "?": [
+              2,
+              24,
+              26,
+              30,
+              37,
+              42,
+              45
+            ]
+          }
+        },
+        "e@Works well with various LED fixtures": {
+          "+": {
+            "?": [
+              6,
+              17,
+              23,
+              29,
+              34,
+              38,
+              42,
+              44,
+              45,
+              48
+            ]
+          }
+        },
+        "f@Handles LED dimming range issues": {
+          "+": {
+            "AA": [
+              29,
+              30,
+              32
+            ]
+          }
+        },
+        "g@Smooth LED dimming without buzzing": {
+          "+": {
+            "?": [
+              30,
+              37,
+              42,
+              43
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "h@Easy installation process": {
+          "+": {
+            "K,L,M": [
+              7,
+              13,
+              18,
+              20,
+              24,
+              25,
+              27,
+              28,
+              30,
+              32,
+              34,
+              38,
+              42,
+              44,
+              47,
+              49
+            ]
+          }
+        },
+        "i@Challenging installation due to size": {
+          "-": {
+            "E,Q": [
+              41,
+              46
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "j@Works in single-pole configuration": {
+          "+": {
+            "K": [
+              1,
+              5,
+              21,
+              24,
+              38,
+              39
+            ]
+          }
+        },
+        "k@Works in 3-way configuration": {
+          "+": {
+            "K": [
+              14,
+              17,
+              21,
+              26,
+              27,
+              32,
+              42,
+              43
+            ]
+          }
+        },
+        "l@Maintains slider position independent of on/off": {
+          "+": {
+            "A": [
+              34
+            ]
+          }
+        },
+        "m@Good dimming range": {
+          "+": {
+            "AA": [
+              33,
+              44
+            ]
+          }
+        },
+        "n@Slight power limitation even at maximum": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "o@Slight delay when powering on": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        }
+      },
+      "Power Handling": {
+        "p@150W maximum load appropriate for LED use": {
+          "+": {
+            "?": [
+              25,
+              30
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Residential lighting control": {
+        "+": {
+          "c,d,e,h,j,k": [
+            6,
+            9,
+            13,
+            14,
+            16,
+            17,
+            18,
+            19,
+            20,
+            21,
+            23,
+            24,
+            28,
+            34,
+            38,
+            39,
+            40,
+            42,
+            44,
+            45,
+            47,
+            48,
+            49
+          ]
+        },
+        "-": {
+          "a": [
+            0,
+            1,
+            3,
+            5,
+            8,
+            11
+          ]
+        }
+      },
+      "Kitchen lighting": {
+        "+": {
+          "k": [
+            8,
+            14
+          ]
+        }
+      },
+      "Bathroom lighting": {
+        "+": {
+          "e,h": [
+            16,
+            24,
+            32,
+            34,
+            37
+          ]
+        }
+      },
+      "Bedroom lighting": {
+        "+": {
+          "h": [
+            18,
+            28
+          ]
+        }
+      },
+      "Recessed lighting": {
+        "+": {
+          "e": [
+            8,
+            38,
+            49
+          ]
+        }
+      },
+      "Ceiling fan light control": {
+        "-": {
+          "a": [
+            8
+          ]
+        }
+      },
+      "Ambient lighting": {
+        "+": {
+          "d,m": [
+            16
+          ]
+        }
+      },
+      "Energy saving": {
+        "+": {
+          "p": [
+            19
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:16.497572"
+}

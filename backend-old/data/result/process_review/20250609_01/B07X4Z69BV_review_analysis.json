@@ -1,0 +1,427 @@
+{
+  "product_title": "Nexete Smart Wi-Fi Double Light Switch, 2 in1 Single Pole Switch Compatible with Alexa Google Assistant & IFTTT,Remote Control, Timing Function No Hub Required (1-Pack Double)",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@attractive visual design": {
+          "+": [
+            4,
+            46
+          ]
+        }
+      },
+      "size": {
+        "B@compact form factor": {
+          "+": [
+            4
+          ]
+        },
+        "C@dual switches in single gang box": {
+          "+": [
+            11,
+            16
+          ]
+        }
+      },
+      "buttons": {
+        "D@touch-sensitive buttons that don't physically push in": {
+          "+": [
+            16
+          ]
+        },
+        "E@good sensitivity of push button": {
+          "+": [
+            2
+          ]
+        },
+        "F@difficult to activate buttons requiring multiple touches": {
+          "-": [
+            40
+          ]
+        }
+      },
+      "led_indicators": {
+        "G@blue LED lights on switch buttons": {
+          "-": [
+            13
+          ]
+        },
+        "H@LED indicators present": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "wiring": {
+        "I@requires neutral wire for operation": {
+          "-": [
+            6,
+            28
+          ]
+        },
+        "J@uses stranded wire leads requiring wire nuts or crimp connectors": {
+          "-": [
+            34
+          ]
+        },
+        "K@incorrect labeling on back of switch": {
+          "-": [
+            33
+          ]
+        }
+      },
+      "construction": {
+        "L@good build quality": {
+          "+": [
+            3
+          ]
+        },
+        "M@overheating issues": {
+          "-": [
+            39
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@wifi connection fails after 5 months": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@wifi connectivity constantly disconnects": {
+          "-": {
+            "?": [
+              11,
+              12,
+              33,
+              38,
+              41,
+              44
+            ]
+          }
+        },
+        "c@stable wifi connection without interference": {
+          "+": {
+            "?": [
+              9,
+              17
+            ]
+          }
+        },
+        "d@cannot connect to wifi network": {
+          "-": {
+            "?": [
+              36,
+              42
+            ]
+          }
+        },
+        "e@poor wifi reception": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "f@requires 2.4GHz bandwidth instead of 5GHz": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        }
+      },
+      "durability": {
+        "g@device dies after 2 months with unresponsive buttons": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "h@lasts approximately 2 years": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "i@stops functioning after few weeks": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "j@device failure after 2 months": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "k@functions well overall": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "l@works flawlessly": {
+          "+": {
+            "?": [
+              6,
+              9
+            ]
+          }
+        },
+        "m@works exactly as intended": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "n@randomly turns lights off after 15 minutes": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "o@turns on and off randomly": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "p@Google Home only recognizes one switch instead of two": {
+          "-": {
+            "?": [
+              26
+            ]
+          }
+        },
+        "q@third switch doesn't function": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "smart_integration": {
+        "r@works well with Alexa": {
+          "+": {
+            "?": [
+              1,
+              14,
+              15,
+              16,
+              19,
+              24,
+              25,
+              37,
+              45
+            ]
+          }
+        },
+        "s@works well with Google Home": {
+          "+": {
+            "?": [
+              30,
+              32
+            ]
+          }
+        },
+        "t@rarely works with Alexa": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "u@Alexa connection requires frequent reconnection": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "v@app setup works but Alexa integration fails": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        }
+      },
+      "setup": {
+        "w@easy and fast setup process": {
+          "+": {
+            "?": [
+              2,
+              8,
+              10,
+              15,
+              19,
+              29,
+              32,
+              37,
+              45
+            ]
+          }
+        },
+        "x@app cannot find device during setup": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "y@difficult to program with Alexa": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "z@loses setup mode during pairing": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "power_recovery": {
+        "aa@good power outage recovery": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "voltage_sensitivity": {
+        "ab@very sensitive to voltage fluctuations": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_lighting_control": {
+        "+": {
+          "r": [
+            1
+          ],
+          "l": [
+            6
+          ],
+          "k": [
+            0
+          ],
+          "w": [
+            10,
+            19
+          ],
+          "r,s": [
+            30
+          ]
+        },
+        "-": {
+          "a": [
+            2
+          ],
+          "b": [
+            11,
+            12
+          ],
+          "d": [
+            36,
+            42
+          ]
+        }
+      },
+      "client_installations": {
+        "+": {
+          "?": [
+            5
+          ]
+        }
+      },
+      "front_lamp_and_porch_light_control": {
+        "+": {
+          "r,w": [
+            19
+          ]
+        }
+      },
+      "alarm_integration_for_wake_up": {
+        "+": {
+          "r": [
+            24
+          ]
+        }
+      },
+      "yard_landscaping_light_automation": {
+        "-": {
+          "e": [
+            33
+          ]
+        }
+      },
+      "replacing_three_way_switches": {
+        "+": {
+          "m": [
+            34
+          ]
+        }
+      },
+      "manual_operation_only": {
+        "+": {
+          "?": [
+            36
+          ]
+        }
+      },
+      "dock_lighting": {
+        "-": {
+          "b": [
+            44
+          ]
+        }
+      },
+      "general_smart_home_integration": {
+        "+": {
+          "?": [
+            21,
+            22,
+            23,
+            27,
+            31
+          ]
+        },
+        "-": {
+          "j,o": [
+            47
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:02:47.535397"
+}

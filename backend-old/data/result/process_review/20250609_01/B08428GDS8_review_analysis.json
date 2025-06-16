@@ -1,0 +1,447 @@
+{
+  "product_title": "Enbrighten Zigbee Dimmer, QuickFit & SimpleWire, Pairs Directly with Echo Studio/Show 10/Plus 1st & 2nd Gen, Works WIth Alexa, Google Assistant, White & Light Almond, Smart Light Switch, 43080",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "dimensions": {
+        "A@deeper than regular switches": {
+          "-": [
+            9
+          ]
+        },
+        "B@housing too large to fit two in one box": {
+          "-": [
+            29
+          ]
+        }
+      },
+      "appearance": {
+        "C@looks like normal switch": {
+          "+": [
+            6
+          ]
+        },
+        "D@matches decor with light almond paddle option": {
+          "+": [
+            2
+          ]
+        },
+        "E@blue indicator light": {
+          "+": [
+            4,
+            5
+          ],
+          "-": [
+            4,
+            39
+          ]
+        }
+      },
+      "connections": {
+        "F@back-connect screw-type connections": {
+          "+": [
+            8
+          ]
+        },
+        "G@rear-screw ground": {
+          "+": [
+            8
+          ]
+        },
+        "H@neutral pigtail included": {
+          "+": [
+            12
+          ]
+        },
+        "I@simple wire connections": {
+          "+": [
+            45
+          ]
+        },
+        "J@no jumper wires just lugs": {
+          "+": [
+            35
+          ]
+        }
+      },
+      "build_quality": {
+        "K@well-constructed": {
+          "+": [
+            35
+          ]
+        },
+        "L@smallest form factor": {
+          "+": [
+            45
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@go offline regularly requiring power cycle": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@zigbee will fail and not pair again": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "c@disconnects frequently": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "d@paired flawlessly": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@connected easily": {
+          "+": {
+            "?": [
+              5,
+              12,
+              15,
+              20,
+              31
+            ]
+          }
+        },
+        "f@not recognized by Philips Hue Hub": {
+          "-": {
+            "?": [
+              8,
+              42
+            ]
+          }
+        },
+        "g@works with SmartThings Hub": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "h@expands Zigbee mesh network": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "i@bulbs flash 5 times at full brightness when dimmed": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "j@lights flicker when dimming": {
+          "-": {
+            "?": [
+              7,
+              29,
+              32,
+              36,
+              38,
+              44,
+              47
+            ]
+          }
+        },
+        "k@buzzing at brightness below 100%": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "l@switches hum": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "m@dims properly": {
+          "+": {
+            "?": [
+              4,
+              5,
+              16,
+              46
+            ]
+          }
+        },
+        "n@minimum dim level not low enough": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "o@doesn't remember last dimming setting": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        }
+      },
+      "durability": {
+        "p@failed after six months": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "q@stopped responding after 3 months": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "r@stopped working after 1 year": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "s@trouble free": {
+          "+": {
+            "K": [
+              35
+            ]
+          }
+        }
+      },
+      "automation": {
+        "t@only exposes on/off events not tap events": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "u@doesn't support double-tap automations": {
+          "-": {
+            "?": [
+              5,
+              12
+            ]
+          }
+        },
+        "v@no way to read back state": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "w@no dimmer functionality with SmartThings": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "x@no fade on/fade off": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "installation": {
+        "y@easy to install": {
+          "+": {
+            "F,G,H,I,J": [
+              8,
+              12,
+              20,
+              31,
+              49
+            ]
+          }
+        },
+        "z@installation complicated": {
+          "-": {
+            "A": [
+              46
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "aa@not compatible with standard 3-way configuration": {
+          "-": {
+            "?": [
+              17,
+              24
+            ]
+          }
+        },
+        "ab@good job handling 3-way 4-way configurations with add-on": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ac@poor LED compatibility": {
+          "-": {
+            "?": [
+              32,
+              36,
+              38,
+              47
+            ]
+          }
+        },
+        "ad@works well with LED lighting": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home Assistant integration": {
+        "+": {
+          "d,e,m": [
+            4,
+            5,
+            6,
+            12,
+            15,
+            20,
+            31
+          ]
+        },
+        "-": {
+          "a,b": [
+            0,
+            28
+          ]
+        }
+      },
+      "3-way switch configuration": {
+        "+": {
+          "ab": [
+            2
+          ]
+        },
+        "-": {
+          "aa": [
+            17,
+            24
+          ]
+        }
+      },
+      "LED bulb dimming": {
+        "+": {
+          "ad,m": [
+            16
+          ]
+        },
+        "-": {
+          "i,j,ac": [
+            1,
+            7,
+            29,
+            32,
+            36,
+            38,
+            44,
+            47
+          ]
+        }
+      },
+      "Alexa integration": {
+        "+": {
+          "g": [
+            6
+          ]
+        },
+        "-": {
+          "f": [
+            19,
+            30
+          ]
+        }
+      },
+      "SmartThings integration": {
+        "+": {
+          "g": [
+            37
+          ]
+        },
+        "-": {
+          "w": [
+            23
+          ]
+        }
+      },
+      "Philips Hue integration": {
+        "-": {
+          "f": [
+            8,
+            42
+          ]
+        }
+      },
+      "Zigbee mesh expansion": {
+        "+": {
+          "h": [
+            16,
+            18
+          ]
+        }
+      },
+      "mood lighting": {
+        "-": {
+          "j": [
+            17
+          ]
+        }
+      },
+      "bedroom use": {
+        "-": {
+          "E": [
+            4
+          ]
+        }
+      },
+      "automation scenes": {
+        "-": {
+          "t,u": [
+            2,
+            5,
+            12
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:31.390887"
+}

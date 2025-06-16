@@ -1,0 +1,391 @@
+{
+  "product_title": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "slider": {
+        "A@slider control mechanism": {
+          "+": [
+            0,
+            10,
+            23,
+            24,
+            27,
+            44,
+            47
+          ]
+        },
+        "B@slider movement smoothness": {
+          "+": [
+            10,
+            24
+          ],
+          "-": [
+            27
+          ]
+        }
+      },
+      "switch": {
+        "C@separate on/off switch from dimmer": {
+          "+": [
+            16,
+            23
+          ]
+        },
+        "D@switch operation feel": {
+          "+": [
+            24
+          ]
+        }
+      },
+      "faceplate": {
+        "E@no faceplate included": {
+          "-": [
+            4,
+            36,
+            42
+          ]
+        }
+      },
+      "appearance": {
+        "F@visual appearance/looks": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "LED indicator": {
+        "G@missing locator LED": {
+          "-": [
+            37
+          ]
+        }
+      },
+      "packaging": {
+        "H@damaged/opened packaging": {
+          "-": [
+            17,
+            22,
+            39,
+            43
+          ]
+        }
+      },
+      "components": {
+        "I@missing parts/screws": {
+          "-": [
+            17,
+            22
+          ]
+        },
+        "J@damaged wires": {
+          "-": [
+            17,
+            22,
+            39
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming": {
+        "a@smooth dimming without flickering": {
+          "+": {
+            "A": [
+              10,
+              16
+            ]
+          },
+          "-": {
+            "?": [
+              13,
+              14,
+              18,
+              28
+            ]
+          }
+        },
+        "b@dimming range capability": {
+          "+": {
+            "A": [
+              16
+            ]
+          },
+          "-": {
+            "?": [
+              13,
+              32
+            ]
+          }
+        },
+        "c@dimming function failure": {
+          "-": {
+            "?": [
+              31,
+              40,
+              41,
+              44,
+              45
+            ]
+          }
+        },
+        "d@dimming response delay": {
+          "-": {
+            "B": [
+              27,
+              28
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "e@product longevity": {
+          "+": {
+            "?": [
+              16
+            ]
+          },
+          "-": {
+            "?": [
+              2,
+              8,
+              21,
+              31,
+              40,
+              41,
+              44,
+              45
+            ]
+          }
+        },
+        "f@overall functionality": {
+          "+": {
+            "?": [
+              0,
+              2,
+              3,
+              5,
+              7,
+              9,
+              11,
+              15,
+              16,
+              19,
+              20,
+              25,
+              26,
+              29,
+              30,
+              33,
+              34,
+              35,
+              38,
+              47
+            ]
+          },
+          "-": {
+            "?": [
+              13,
+              39
+            ]
+          }
+        }
+      },
+      "installation": {
+        "g@ease of installation": {
+          "+": {
+            "?": [
+              4,
+              5,
+              7,
+              9,
+              10,
+              11,
+              12,
+              15,
+              19,
+              24,
+              33,
+              34,
+              37,
+              46
+            ]
+          }
+        },
+        "h@instruction quality": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "i@LED bulb compatibility": {
+          "+": {
+            "?": [
+              5,
+              16,
+              19,
+              20,
+              33,
+              38,
+              40
+            ]
+          },
+          "-": {
+            "?": [
+              18,
+              28
+            ]
+          }
+        },
+        "j@programming capability": {
+          "+": {
+            "?": [
+              35
+            ]
+          },
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "quality": {
+        "k@build quality": {
+          "+": {
+            "?": [
+              3,
+              5,
+              6,
+              7,
+              12,
+              16,
+              30,
+              37
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "ceiling light control": {
+        "+": {
+          "f": [
+            1
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "kitchen lighting": {
+        "+": {
+          "f": [
+            3
+          ]
+        },
+        "-": {
+          "a": [
+            13
+          ]
+        }
+      },
+      "LED can lights control": {
+        "+": {
+          "f": [
+            5
+          ]
+        },
+        "-": {
+          "e": [
+            21
+          ]
+        }
+      },
+      "bathroom lighting": {
+        "+": {
+          "f": [
+            14,
+            38
+          ]
+        },
+        "-": {
+          "a": [
+            14
+          ]
+        }
+      },
+      "dining room chandelier": {
+        "+": {
+          "a,i": [
+            16
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "LED flat panel lights": {
+        "+": {
+          "f": [
+            19
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "timer integration": {
+        "+": {
+          "f": [
+            20
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "sconce control": {
+        "+": {
+          "g": [
+            24
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      },
+      "general LED lighting": {
+        "+": {
+          "f": [
+            33,
+            40
+          ]
+        },
+        "-": {
+          "a": [
+            18,
+            28
+          ]
+        }
+      },
+      "replacement for old dimmers": {
+        "+": {
+          "f": [
+            23,
+            26,
+            47
+          ]
+        },
+        "-": {
+          "?": []
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:01.896852"
+}

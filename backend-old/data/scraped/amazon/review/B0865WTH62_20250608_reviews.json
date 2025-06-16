@@ -1,0 +1,2432 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:40:10.585536",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0865WTH62",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0865WTH62",
+    "title": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+    "brand": "GE",
+    "model_number": NaN,
+    "price_usd": 14.99,
+    "rating": 4.3,
+    "reviews_count": 967.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Plug-In Portable Dimmer Controls",
+    "product_url": "https://www.amazon.com/dp/B0865WTH62"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R344PETW7N38U",
+        "text": "Does not completely shut off LED light. Which makes it useless. If being fully off relies on running the dimmer circuit then this would be a power vampire device.",
+        "date": "Reviewed in the United States on February 27, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "LED never fully off",
+        "userName": "Todd",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2CAB6503IRGDY",
+        "text": "...learn not to burn",
+        "date": "Reviewed in the United States on February 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "...it got a short so I threw it out",
+        "userName": "Rodger P.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3KIN82G0JD2NO",
+        "text": "Works as intended.",
+        "date": "Reviewed in the United States on January 18, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Highly recommend",
+        "userName": "JuBe",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3208CEASJ9YKA",
+        "text": "Not cheaply made works great.",
+        "date": "Reviewed in the United States on January 7, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works great.",
+        "userName": "joe navejar",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RIVIEAX0EPBPZ",
+        "text": "This item was bought because the lighting store I took my vintage floor lamp to didn't want to install a dimmer (as I requested) into the new wiring. Instead, they went online - printed out the page for this product and told me to order it instead of them doing the job they agreed to do. The quality seems ok - I'm not sure how the sliding dimmer switch will hold up long term. The lamp is something I don't use everyday but is set up in a reading nook in my office. Time will tell about it's longevity and durability. It seems a bit plasticy - but everything seems that way now a day. At the end of the day - it does dim the lamp (which is what I purchased it to do). I'll update this review in the future once I've had a chance to use it more.",
+        "date": "Reviewed in the United States on January 5, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "It Dims....",
+        "userName": "CeeCee",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RO4NAQWBCQHZ9",
+        "text": "This a simple device which actually works and is a no brainer to hook up. Solved the problem of having to take the lamp in for a very expensive repair.",
+        "date": "Reviewed in the United States on January 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Really works! Eaasy fix!",
+        "userName": "Micycle",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R14XS8OQZMLTMC",
+        "text": "Replaced one Very old and failing…this is smooth sliding & no blinking at any points from minimum to maximum",
+        "date": "Reviewed in the United States on December 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to use & setup",
+        "userName": "joe",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3EGP491W6N9V0",
+        "text": "At first it seemed to work just fine, but as time went on, I'd experience bulb flickering once in a while. I wanted to try a different brand of LED bulbs, but my SO didn't want to change. We hardly ever used the dimming, so it was removed and is now unused.",
+        "date": "Reviewed in the United States on December 28, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Intermittant bulb flicker",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R38RQKIROK3V7G",
+        "text": "100% of power delivers a fraction of total power. No way to set.",
+        "date": "Reviewed in the United States on December 1, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "100% does not work",
+        "userName": "Ed Martinez",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RFB3UKWRQ7A56",
+        "text": "Replaced an older, outdated version. Working well.",
+        "date": "Reviewed in the United States on November 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great service.",
+        "userName": "Evelyn",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3O3RH5YYJ0EUM",
+        "text": "No-brainer to use, looks good, works great.",
+        "date": "Reviewed in the United States on October 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as expected",
+        "userName": "Colorado Bootman",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3SOLZN9OJO0W1",
+        "text": "I've been trying to be funny. I finally got my medication and I don't care what I'm typing. I'll do more of these another time. Oh yeah, no these dimmer switches are imperative for mood lighting. I think the ability to adjust the intensity of the light of the room to individual taste is important. Being able to dim the lights in a room helps me. 5 stars. This is one of my important pieces of tech.",
+        "date": "Reviewed in the United States on October 17, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer switches are like sandwiches...imsorrynevermind.",
+        "userName": "ILoveMountains",
+        "numberOfHelpful": 2,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R30E6EADSIPU2A",
+        "text": "I’m using this on an old-school style pole lamp in my living room. Didn’t need or want an additional remote control so this slider style dimmer is fine and it works well with the LED dimming bulb. No complaints!",
+        "date": "Reviewed in the United States on September 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works!",
+        "userName": "Captain ET",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2RR2BOOVGX2RY",
+        "text": "- slide control is wide enough for Big Toe to control dimmer function - works great with my floor lamp -",
+        "date": "Reviewed in the United States on September 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "good dimmer",
+        "userName": "nopost",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2KBJVH24EZLC",
+        "text": "i have bought 5 of the and none of these work now 2 dont work at all 3 dont dim",
+        "date": "Reviewed in the United States on September 7, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "terrible",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2ASCOJ1XGT3VY",
+        "text": "Used this with a heat lamp for baby chickens. Was able to dial in the temp in their pen using the slider and a temp gun. Chicks were always cozy and happy at the right temp. Had no issue controlling a 200watt bulb.",
+        "date": "Reviewed in the United States on September 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for heat lamps",
+        "userName": "Dann",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R4E9RAB5T42KH",
+        "text": "First, I can't believe I never knew these type of dimmers existed. I can now say that I don't think I could do without them! I have two of these for our bedroom lamps on our nightstands and they are so convenient. My husband goes to bed early and I dim my lamp to where I can see when I come into the bedroom. But it's dim enough that it doesn't disturb his sleep. I bought another brand for a lamp in the family room, but believe me, the dimmer switch on this lamp slides a lot smoother. I like this one the best. I've not ever heard any humming or seen any flickering of the lights. I highly recommend this dimmer switch. I also like the fact you can operate it with your foot. 10 out of 10.",
+        "date": "Reviewed in the United States on September 2, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "The best dimmer",
+        "userName": "Jaha8005",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2SVZUNEK7YVJ8",
+        "text": "I hung it in the headboard.",
+        "date": "Reviewed in the United States on August 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect for bedrooms",
+        "userName": "Rose",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3ETAYCPJ4QQ36",
+        "text": "Just plugged it in and it works great! Also, I've had other dimmers emit a humming noise and this one is totally silent. Great product!",
+        "date": "Reviewed in the United States on August 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "rabl",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2Z4JUL14D6Z4B",
+        "text": "Easiest dimmer ever!",
+        "date": "Reviewed in the United States on May 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple to use! Exactly what I wanted to dim the rope lights a little.",
+        "userName": "Bobbi",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RQILDOM7FDR9G",
+        "text": "Works as advertised. Price seemed fair.",
+        "date": "Reviewed in the United States on May 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "Gregory F Shimko",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RQ529ZKMSWXDN",
+        "text": "We have some floor lamps. Works great, Thanks",
+        "date": "Reviewed in the United States on April 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "O.corral",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3SGSDVAN6SF1T",
+        "text": "Had a hard wired dimmer for my pole lamp that died- rewired for two prong to plug into this unit. Works as represented.",
+        "date": "Reviewed in the United States on April 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as represented",
+        "userName": "kwwebb",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R29I97JAZ05QGZ",
+        "text": "I was led to believe that the light would shut completely off and it doesn’t",
+        "date": "Reviewed in the United States on April 18, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Disappointed",
+        "userName": "Phyl",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3ZYF9YJQQ9HG",
+        "text": "Excellent dimmer, works very smoothly. It is very stable and quiet. The unique feature allowing scaling the range of dimming is super useful. It will be my go to dimmer for LED lights!",
+        "date": "Reviewed in the United States on March 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent dimmer!",
+        "userName": "Matt",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RFHUD6VB98UJ8",
+        "text": "Nice quality dimmer switch that made it easy to convert an older lamp with incandescent dimmer on it to LED dimmer.",
+        "date": "Reviewed in the United States on March 18, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great To update from incandescent to LED bulb dimmer control",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2QMMI789LHS1P",
+        "text": "Great product, does not flicker like most of the other dimmers on the market",
+        "date": "Reviewed in the United States on March 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Non flickering dimmer",
+        "userName": "Patrick Wick",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R26T66YOMNW74S",
+        "text": "Compact and well designed. Works as advertised.",
+        "date": "Reviewed in the United States on March 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "Michael H Diamant",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1C6M6K8H7TPLM",
+        "text": "Nice dimmer...BUT...LED lights do not turn off but keep glowing.",
+        "date": "Reviewed in the United States on February 22, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "LED lights do not turn off.",
+        "userName": "territory",
+        "numberOfHelpful": 3,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1XYEIPV3QGJD8",
+        "text": "Inexpensive and compact",
+        "date": "Reviewed in the United States on February 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Inexpensive and compact",
+        "userName": "thomas c prager",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RSS007H0PBDZN",
+        "text": "Dims but does not completely shut off led light. Which makes it useless Update: returned and received full refund.",
+        "date": "Reviewed in the United States on February 8, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "No off / sent back / refund, good Seller",
+        "userName": "cuda",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2CXHWF2UQWNRB",
+        "text": "Took it out of the box, and it doesn't work",
+        "date": "Reviewed in the United States on January 2, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "does not work",
+        "userName": "jp",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3EWZNHES77WPV",
+        "text": "Works well",
+        "date": "Reviewed in the United States on December 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "easy to use",
+        "userName": "gary",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RSOZEUUKQP079",
+        "text": "I've had this quite a while now. It works as expected, not sure what the \"set\" feature actually does. It's lightweight and does slip around a bit on hard floors. I would have loved the cords on either side instead of two cords coming out from one side, but that's probs just me being picky.",
+        "date": "Reviewed in the United States on December 27, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "A good option",
+        "userName": "Crimson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1H56X7WMZ3CLK",
+        "text": "This dimmer is literally plug in and use. No issues at all and very pleased with the performance. As others have mentioned, completely turning the lamp off requires manually doing so, but where I’m using it creates no issues. I used a small Command Strip to attach the dimmer to the back of my desk for easy access.",
+        "date": "Reviewed in the United States on December 23, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Perfectly!",
+        "userName": "JEA",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R38EQ6GXEUKKFZ",
+        "text": "Small, discreet, easy to operate. The floor lamp in my living room easily hooked up to this dimmer, and it's on a timer, too. I like awakening to a little light in my room, and having it go on around dusk as well. Great product!",
+        "date": "Reviewed in the United States on December 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent!",
+        "userName": "Shari Schreiber, M.A.",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R100VKZTVSDQNZ",
+        "text": "swell",
+        "date": "Reviewed in the United States on December 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Swell",
+        "userName": "JAMES BEIRNE",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2YWXASEB9ORNG",
+        "text": "Someone stepped too hard on my old light dimmer and it cracked. This one is very easy to use and just a light touch with you foot slides the mechanism to the brightness that you want. Very easy to use and install.",
+        "date": "Reviewed in the United States on December 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works beautifully",
+        "userName": "AZ Retiree",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RAG3HVYTQIMT3",
+        "text": "To light a lamp",
+        "date": "Reviewed in the United States on November 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to use...perfect item",
+        "userName": "Steven J Capaldi",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3ABW0II2SNHCD",
+        "text": "arrived presto and worked presto.",
+        "date": "Reviewed in the United States on November 7, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "excellent dimmer switch",
+        "userName": "MAX",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R338LB0X21XQIK",
+        "text": "The way you have to set this unit up is to make sure the LIGHT switch is OFF before plugging it in. Well, there is no \"off' switch on plug-in light strips like Christmas lights, so it doesn't work for squat with those. A table lamp with its own switch, maybe.",
+        "date": "Reviewed in the United States on October 22, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "not for 'christmas' lights, dimmable or not",
+        "userName": "C. Rinker",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1MELYF5C621PX",
+        "text": "I had an hold halogen, I changed to dimming LED bulb but the dimmer was dead. I just cut the cord, added a plug and connected it to this dimmer... et voila!! I now have a perfectly working LED and dimmable light!!",
+        "date": "Reviewed in the United States on October 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Did the trick!",
+        "userName": "OMPBLUSA",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3RX4C7WL8XCLA",
+        "text": "I can set the lighting at any brightness. I love it! Update: lasted14 months. I guess that’s OK for the money. I liked it well enough I’m going to buy another one.",
+        "date": "Reviewed in the United States on September 12, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great!",
+        "userName": "Marilynk",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R2LMCX2EFDNSNW",
+        "text": "It had a short in the wiring.",
+        "date": "Reviewed in the United States on September 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Had a short right out of box",
+        "userName": "Dbs",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3DP61G9YDW3JJ",
+        "text": "Good",
+        "date": "Reviewed in the United States on September 2, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good",
+        "userName": "Shay",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R1MLKQN1LEJUIS",
+        "text": "I bought this for a set of dimmable LED string lights, and the positive things I can say about it are that 1) it doesn't make the lights flicker, and 2) it does dim the lights more smoothly than other dimmers I've tried. Unfortunately, as many other reviews have noted, it won't turn the lights completely off, no matter how far you push the slider or what you do with the \"Set\" button. In my case, the maximum brightness is also slightly lower than what I get if I plug the lights directly into the wall outlet. In retrospect, I wish I had returned this while I still had the chance.",
+        "date": "Reviewed in the United States on August 28, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Doesn't turn all the way off, and doesn't reach full brightness",
+        "userName": "James Carlson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R405WUWTR90XD",
+        "text": "Exactly the product I expected. Represented accurately.",
+        "date": "Reviewed in the United States on August 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well done.",
+        "userName": "Dues 4 Blues",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R201H437F8BOLT",
+        "text": "Smelled like burning. Not recommended",
+        "date": "Reviewed in the United States on August 14, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Smelled like burning. Not recommended",
+        "userName": "SKW",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "R3SH5WMW8ALHBE",
+        "text": "Used for my torchiere LED lamp -- a good pairing. The dimmer can be operated by foot or hand. Nice to adjust for ranges from cleaning to TV viewing. There is an thoughtful adjustment to set the low range of dimming if there is flickering at the lowest levels.",
+        "date": "Reviewed in the United States on August 5, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "James Tomkinson",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0865WTH62",
+        "productTitle": "DEWENWILS Plug in Dimmer Switch for Lamp, Push/Foot Dimmer Plug, Table Lamp Dimmer for Dimmable LED/CFL/Incandescent Bulb, Full Range Slide Control, 5 ft Extension Cord, ETL Listed, Black",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 222,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 178,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 70
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 7
+          }
+        },
+        "reviewId": "RPW33IPLLDYU7",
+        "text": "This is a very bad quality dimer. Never worked.",
+        "date": "Reviewed in the United States on August 5, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn’t work",
+        "userName": "S@amy B",
+        "numberOfHelpful": 0,
+        "variationId": null,
+        "imageUrlList": null,
+        "variationList": [],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

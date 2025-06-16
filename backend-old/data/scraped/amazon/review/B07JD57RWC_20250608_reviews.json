@@ -1,0 +1,236 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:30:46.541745",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07JD57RWC",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 1,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07JD57RWC",
+    "title": "TOPGREENER Kalide Dimmer Light Switch, Pair with 12V Power Supply, 3-Way or Single-Pole, 12/24 V LED Dimmer Switch, TGSDS-1224-W, White",
+    "brand": "TOPGREENER",
+    "model_number": NaN,
+    "price_usd": 29.99,
+    "rating": 3.8,
+    "reviews_count": 102.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Electronic Low Voltage Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B07JD57RWC"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07JD57RWC",
+        "productTitle": "TOPGREENER Kalide Dimmer Light Switch, Pair with 12V Power Supply, 3-Way or Single-Pole, 12/24 V LED Dimmer Switch, TGSDS-1224-W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 4,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 102,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 25
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R39I3HB5YK027J",
+        "text": "I bought two of these hoping the reviews were wrong. They hardly dim the lights. Maybe about 50% but if you are looking for a dimmer that truly gives you low light these are not it.",
+        "date": "Reviewed in the United States on February 23, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "They don't dim.",
+        "userName": "Emily Richards",
+        "numberOfHelpful": 0,
+        "variationId": "B07JD57RWC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 12-24V",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07JD57RWC",
+        "productTitle": "TOPGREENER Kalide Dimmer Light Switch, Pair with 12V Power Supply, 3-Way or Single-Pole, 12/24 V LED Dimmer Switch, TGSDS-1224-W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 4,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 102,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 25
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "RP0KH00SJVT4K",
+        "text": "It was missing the adjustment wheel, so not useful.",
+        "date": "Reviewed in the United States on September 4, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Missing product feature",
+        "userName": "paul mankiewich",
+        "numberOfHelpful": 0,
+        "variationId": "B07JD57RWC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 12-24V",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07JD57RWC",
+        "productTitle": "TOPGREENER Kalide Dimmer Light Switch, Pair with 12V Power Supply, 3-Way or Single-Pole, 12/24 V LED Dimmer Switch, TGSDS-1224-W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 4,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 102,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 25
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3K1G7HOO468FX",
+        "text": "Tried using this for 12v puck lights on a 12v circuit. This switch dims from 12.4v to 11.8v so basically nothing. Not noticeable anyway. Garbage product.",
+        "date": "Reviewed in the United States on August 14, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dimmer does not dim, missing adjustment wheel.",
+        "userName": "Isaiahm",
+        "numberOfHelpful": 0,
+        "variationId": "B07JD57RWC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 12-24V",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07JD57RWC",
+        "productTitle": "TOPGREENER Kalide Dimmer Light Switch, Pair with 12V Power Supply, 3-Way or Single-Pole, 12/24 V LED Dimmer Switch, TGSDS-1224-W, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 4,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 102,
+        "productRating": "3.8 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 47
+          },
+          "fourStar": {
+            "percentage": 25
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 14
+          }
+        },
+        "reviewId": "R3IGG07RI7BOET",
+        "text": "No problems wiring and installing this dimmer for my undercabinet kitchen 12v puck lights. It works but...2 things were not as expected. First, the dimmer does NOT dim from 100%-0% (or even close). The most it will dim is about 50%. This is enough for me but be aware. Second, my dimmer did not have the adjustment wheel as shown in the product picture. Again, not a problem for me. But be aware.",
+        "date": "Reviewed in the United States on February 22, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "It Works But...",
+        "userName": "JB",
+        "numberOfHelpful": 2,
+        "variationId": "B07JD57RWC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 12-24V",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 4,
+    "pages_scraped": 1,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

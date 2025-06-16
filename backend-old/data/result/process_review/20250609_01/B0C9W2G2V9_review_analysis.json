@@ -1,0 +1,147 @@
+{
+  "product_title": "Leviton No-Neutral Decora Smart Dimmer Switch, Requires MLWSB Wi-Fi Bridge to Work with My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, DN6HD-1RW, White",
+  "product_category": "Smart Wi-Fi Enabled Dimmer Switches",
+  "total_reviews": 5,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@beautiful design": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "wiring": {
+        "B@works without neutral wire": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works as advertised": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "b@works great": {
+          "+": {
+            "?": [
+              0,
+              1
+            ]
+          }
+        },
+        "c@works very well for up to 4 LED bulbs": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "d@fails dramatically at six bulbs on the circuit": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "e@repeatedly turns on, then flickers off and reboots with six LED bulbs at full brightness": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "f@can handle six bulbs at just under 50% maximum brightness": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "g@works through WiFi Bridge": {
+          "+": {
+            "B": [
+              1
+            ]
+          }
+        },
+        "h@setup a bit tricky, needed to try twice to add to existing Smart Home network": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "i@dimmer functionality works": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "shower fan timer control": {
+        "+": {
+          "b": [
+            0
+          ]
+        }
+      },
+      "smart home automation with multiple devices": {
+        "+": {
+          "b,g": [
+            1
+          ]
+        }
+      },
+      "voice control lighting": {
+        "+": {
+          "i": [
+            2
+          ]
+        }
+      },
+      "hallway lighting control": {
+        "+": {
+          "?": [
+            2
+          ]
+        }
+      },
+      "scheduled lighting control": {
+        "+": {
+          "a": [
+            3
+          ]
+        }
+      },
+      "LED bulb control up to 4 bulbs": {
+        "+": {
+          "c": [
+            4
+          ]
+        }
+      },
+      "LED bulb control for 6 bulbs at reduced brightness": {
+        "+": {
+          "f": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:13.202216"
+}

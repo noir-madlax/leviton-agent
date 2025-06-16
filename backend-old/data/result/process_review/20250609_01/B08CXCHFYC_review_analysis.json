@@ -1,0 +1,489 @@
+{
+  "product_title": "DEWENWILS Wireless Light Switch and Receiver Kit, No in-Wall Wiring Required,Remote Control Wall Switch Lighting Fixture for Ceiling Lights, Fans, Lamps,100 Ft RF Range, Programmable",
+  "product_category": "RF Wireless Remote Control Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "design": {
+        "A@strange appearance that doesn't look like normal switches": {
+          "-": [
+            29
+          ]
+        },
+        "B@cheap plastic feel": {
+          "-": [
+            19,
+            29
+          ]
+        },
+        "C@learn button can easily get bumped by wires": {
+          "-": [
+            48
+          ]
+        },
+        "D@attractive appearance": {
+          "+": [
+            45
+          ]
+        }
+      },
+      "components": {
+        "E@missing ceiling piece attached to actual light": {
+          "-": [
+            16
+          ]
+        },
+        "F@battery contact issues": {
+          "-": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@stopped working after 2 months": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "b@worked for one day then began to fail": {
+          "-": {
+            "F": [
+              0
+            ]
+          }
+        },
+        "c@defective from origin": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "d@arcing after install with pop and flash": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "e@turns on but doesn't turn off": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "f@replacement failed after one week": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "g@sometimes stuck in on position requiring multiple toggles": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "h@does not work at all": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "i@switch did not work": {
+          "-": {
+            "B": [
+              19
+            ]
+          }
+        },
+        "j@not functional after several days": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "k@turns on fine but won't turn off": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "l@failed to shut off power": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "m@one of three units didn't work": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "n@worked great for couple months then failed": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "o@works when it wants to": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "p@off switch doesn't work most times": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "q@not very responsive, sometimes button doesn't work": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "r@gets glitchy and won't function properly when remote is vertical": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "s@works great and reliable": {
+          "+": {
+            "?": [
+              4,
+              9,
+              14,
+              15,
+              27,
+              35
+            ]
+          }
+        },
+        "t@works perfectly as expected": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "u@turns light on every time": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "v@works well with no problems for over a year": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "w@works as designed": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "range": {
+        "x@needs clear path between light and switch": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "y@doesn't work 15 feet away near window frame": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "z@doesn't work 5 feet from light": {
+          "-": {
+            "?": [
+              10,
+              21
+            ]
+          }
+        },
+        "aa@off function needs to be within 2 feet of receiver": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ab@off function needs to be within 1 foot not 100 feet": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "ac@works fine when held next to light": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "ad@works at 30 feet distance": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "button_responsiveness": {
+        "ae@hard to turn on, need to press very hard and hold": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "af@need to press power button about 10 times": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "ag@slow speed to respond to remote clicks": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "ah@easy to turn off once turned on": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "interference": {
+        "ai@LED bulbs nearby can cause interference": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "aj@doesn't work well with LED bulbs, works better with incandescent": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "ak@works reliably with dimmable LED bulbs": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "installation": {
+        "al@easy to install": {
+          "+": {
+            "?": [
+              1,
+              4,
+              6,
+              8,
+              9,
+              17,
+              18,
+              27,
+              28,
+              34,
+              42,
+              45
+            ]
+          }
+        },
+        "am@requires some skill to install receiver": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "an@installation was an issue because learn button gets bumped": {
+          "-": {
+            "C": [
+              48
+            ]
+          }
+        },
+        "ao@need to program remote before installation": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "ceiling_lights": {
+        "+": {
+          "s": [
+            17,
+            27
+          ],
+          "al": [
+            17,
+            27
+          ]
+        },
+        "-": {
+          "e": [
+            7
+          ],
+          "z": [
+            10
+          ],
+          "k": [
+            22
+          ]
+        }
+      },
+      "garage_lighting": {
+        "+": {
+          "w": [
+            35
+          ],
+          "ad": [
+            35
+          ]
+        }
+      },
+      "closet_lighting": {
+        "-": {
+          "z": [
+            10
+          ]
+        }
+      },
+      "bathroom_lighting": {
+        "+": {
+          "s": [
+            46
+          ]
+        }
+      },
+      "shop_lighting": {
+        "+": {
+          "?": [
+            24
+          ]
+        }
+      },
+      "family_room_hanging_lights": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "ceiling_fan_control": {
+        "+": {
+          "al": [
+            18
+          ]
+        }
+      },
+      "replacing_pull_chain_switches": {
+        "+": {
+          "al": [
+            18
+          ]
+        },
+        "-": {
+          "z": [
+            10
+          ]
+        }
+      },
+      "inaccessible_light_switches": {
+        "+": {
+          "s": [
+            9
+          ],
+          "al": [
+            9
+          ]
+        }
+      },
+      "avoiding_surface_wiring": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "solid_brick_wall_homes": {
+        "+": {
+          "s": [
+            29
+          ]
+        }
+      },
+      "low_current_loads_like_60W_bulbs": {
+        "+": {
+          "al": [
+            42
+          ]
+        }
+      },
+      "LED_light_fixtures": {
+        "+": {
+          "s": [
+            27
+          ]
+        },
+        "-": {
+          "ai": [
+            8
+          ],
+          "aj": [
+            39
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:37.234084"
+}

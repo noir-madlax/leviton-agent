@@ -1,0 +1,364 @@
+{
+  "product_title": "Leviton L1461-2W Single-Pole Switch, White",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 28,
+  "review_analysis": {
+    "phy": {
+      "night light feature": {
+        "A@has illuminated border/surround": {
+          "+": [
+            0,
+            6,
+            10,
+            13,
+            19,
+            23
+          ]
+        },
+        "B@provides white light": {
+          "+": [
+            19,
+            23
+          ]
+        },
+        "C@light brightness appropriate for nighttime": {
+          "+": [
+            0,
+            3,
+            4,
+            7,
+            9,
+            13,
+            16,
+            23
+          ],
+          "-": [
+            14,
+            22
+          ]
+        },
+        "D@light always stays on": {
+          "-": [
+            12
+          ]
+        },
+        "E@light color is green": {
+          "-": [
+            27
+          ]
+        },
+        "F@only upper left corner lights up": {
+          "-": [
+            27
+          ]
+        },
+        "G@light is very dim when toggle is off": {
+          "-": [
+            27
+          ]
+        }
+      },
+      "toggle design": {
+        "H@lacks on/off labeling": {
+          "-": [
+            11,
+            14
+          ]
+        },
+        "I@has solid white toggle": {
+          "+": [
+            14
+          ]
+        },
+        "J@has clear ring around toggle": {
+          "+": [
+            3
+          ],
+          "-": [
+            27
+          ]
+        }
+      },
+      "construction quality": {
+        "K@well made": {
+          "+": [
+            2,
+            4,
+            20,
+            24,
+            25
+          ]
+        },
+        "L@has internal design issues": {
+          "-": [
+            5
+          ]
+        },
+        "M@has audible click": {
+          "+": [
+            1
+          ]
+        },
+        "N@has side screws and quick hookup options": {
+          "+": [
+            23
+          ]
+        }
+      },
+      "terminal configuration": {
+        "O@identical to three-way version with paper plug": {
+          "-": [
+            11
+          ]
+        },
+        "P@retains common terminal label": {
+          "-": [
+            11
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0,
+              25
+            ]
+          }
+        },
+        "b@50/50 chance of correct orientation": {
+          "-": {
+            "H": [
+              11
+            ],
+            "O": [
+              11
+            ]
+          }
+        },
+        "c@requires upside down installation for proper operation": {
+          "-": {
+            "H": [
+              11
+            ],
+            "O": [
+              11
+            ]
+          }
+        }
+      },
+      "switching performance": {
+        "d@works as described": {
+          "+": {
+            "?": [
+              0,
+              7,
+              17,
+              18
+            ]
+          }
+        },
+        "e@solid switching action": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "f@good toggle action with appropriate resistance": {
+          "+": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "g@can be iffy after a few years": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "durability": {
+        "h@lasts forever": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "i@fails in less than 1 year": {
+          "-": {
+            "L": [
+              5
+            ]
+          }
+        },
+        "j@causes internal arcing": {
+          "-": {
+            "L": [
+              5
+            ]
+          }
+        }
+      },
+      "visibility": {
+        "k@easy to find in dark": {
+          "+": {
+            "A": [
+              0,
+              4,
+              6,
+              7,
+              9,
+              16,
+              23
+            ]
+          }
+        },
+        "l@not visible during day": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "m@difficult to tell switch position at glance": {
+          "-": {
+            "D": [
+              12
+            ]
+          }
+        }
+      },
+      "LED compatibility": {
+        "n@causes LED ghosting with 1-2 lights": {
+          "-": {
+            "?": [
+              15,
+              21,
+              26
+            ]
+          }
+        },
+        "o@works fine with 4+ LED lights": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "dark areas": {
+        "+": {
+          "k": [
+            0,
+            3,
+            4,
+            6,
+            7,
+            9,
+            13,
+            16,
+            23
+          ]
+        }
+      },
+      "restrooms and closets": {
+        "+": {
+          "k": [
+            3
+          ]
+        }
+      },
+      "guest bathroom": {
+        "+": {
+          "k": [
+            13
+          ]
+        }
+      },
+      "master bathroom": {
+        "+": {
+          "e": [
+            10
+          ]
+        }
+      },
+      "garage": {
+        "+": {
+          "?": [
+            22
+          ]
+        },
+        "-": {
+          "i": [
+            5
+          ]
+        }
+      },
+      "storage room": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "bedroom": {
+        "-": {
+          "C": [
+            14,
+            22
+          ]
+        }
+      },
+      "hallway": {
+        "+": {
+          "k": [
+            14,
+            23
+          ]
+        }
+      },
+      "outside lights": {
+        "-": {
+          "m": [
+            12
+          ]
+        }
+      },
+      "LED shop lights": {
+        "-": {
+          "n": [
+            26
+          ]
+        }
+      },
+      "upgrade from builder grade switches": {
+        "+": {
+          "e": [
+            10
+          ]
+        }
+      },
+      "replacement for older neon switches": {
+        "+": {
+          "B": [
+            19
+          ]
+        },
+        "-": {
+          "n": [
+            15
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:04:24.915950"
+}

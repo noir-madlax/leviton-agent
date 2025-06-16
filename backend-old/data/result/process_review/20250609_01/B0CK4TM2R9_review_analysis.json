@@ -1,0 +1,185 @@
+{
+  "product_title": "Greencycle 3 Way Decora Switch - White, 4 Pack Three Way/Single Pole Rocker Switch, 15A 120/277V, On/Off Paddle Interrupter, Residential/Commercial Grade, UL/CUL Listed",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 14,
+  "review_analysis": {
+    "phy": {
+      "Materials": {
+        "A@Not made of cheap flimsy materials": {
+          "+": [
+            2
+          ]
+        }
+      },
+      "Appearance": {
+        "B@Good looking": {
+          "+": [
+            2
+          ]
+        },
+        "C@Gap at top of switch": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "Build Quality": {
+        "D@Good quality construction": {
+          "+": [
+            0,
+            2,
+            8,
+            9,
+            11,
+            13
+          ]
+        }
+      },
+      "Action Mechanism": {
+        "E@Nice smooth click": {
+          "+": [
+            2
+          ]
+        },
+        "F@Smooth action": {
+          "+": [
+            5
+          ]
+        }
+      },
+      "Packaging": {
+        "G@Arrived in perfect condition": {
+          "+": [
+            0
+          ]
+        },
+        "H@Came nicely packaged and undamaged": {
+          "+": [
+            12
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Functionality": {
+        "a@Work fine": {
+          "+": {
+            "?": [
+              0,
+              1,
+              5,
+              10
+            ]
+          }
+        },
+        "b@Works very well": {
+          "+": {
+            "A,E": [
+              2
+            ]
+          }
+        },
+        "c@Don't work": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@Works great": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "e@Durable switches to last a long time": {
+          "+": {
+            "A": [
+              2
+            ]
+          }
+        },
+        "f@Quality seems as good as any other": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "g@Easy to install": {
+          "+": {
+            "?": [
+              2,
+              6,
+              7
+            ]
+          }
+        }
+      },
+      "Usability": {
+        "h@Easy to use": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "House lighting switches replacement": {
+        "+": {
+          "a": [
+            1
+          ]
+        },
+        "-": {
+          "c": [
+            3
+          ]
+        }
+      },
+      "Home upgrade project": {
+        "+": {
+          "b,g": [
+            2
+          ]
+        }
+      },
+      "Replacing cracked switches": {
+        "+": {
+          "g": [
+            6
+          ]
+        }
+      },
+      "Home project": {
+        "+": {
+          "f": [
+            8
+          ]
+        }
+      },
+      "House moving - replacing all switches": {
+        "+": {
+          "a": [
+            10
+          ]
+        }
+      },
+      "House flipping projects": {
+        "+": {
+          "d": [
+            13
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:19.512159"
+}

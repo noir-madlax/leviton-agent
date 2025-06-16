@@ -1,0 +1,642 @@
+{
+  "product_title": "MOES Smart Double Light Switches, 2.4GHz Wi-Fi 2 Gang Single Pole Switch, Netural Wire Required, Inteligente Switch Combo Work with Alexa Google Assistant, Remote Controlgle Assistant, Remote Control",
+  "product_category": "WiFi Connected Smart Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@sleek and neat looking design": {
+          "+": [
+            8,
+            25
+          ]
+        },
+        "B@nice finish": {
+          "+": [
+            29
+          ]
+        },
+        "C@modern appearance": {
+          "+": [
+            36
+          ]
+        },
+        "D@fabulous look": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "size": {
+        "E@1 gang standard size matching US household switches": {
+          "+": [
+            9,
+            20
+          ]
+        }
+      },
+      "button_type": {
+        "F@push button design": {
+          "+": [
+            6
+          ]
+        },
+        "G@snap on cover plate": {
+          "-": [
+            45
+          ]
+        }
+      },
+      "electrical_specs": {
+        "H@10 Amp capacity limitation": {
+          "-": [
+            41
+          ]
+        },
+        "I@accepts only small gauge wire": {
+          "-": [
+            41
+          ]
+        },
+        "J@not UL approved, only CE approved for European use": {
+          "-": [
+            41
+          ]
+        }
+      },
+      "physical_button": {
+        "K@physical button controls": {
+          "+": [
+            1,
+            3,
+            7,
+            38,
+            40,
+            43
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@fails to connect to wifi": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@connects to wifi with no problems": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "c@easy to connect to wifi": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "d@connects up with no issues": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "e@wifi connectivity is great": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "f@really easy to connect to phone": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "g@loses connection with WiFi after some time": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "h@only works on 2.4GHz band": {
+          "+": {
+            "?": [
+              27,
+              33,
+              47
+            ]
+          }
+        },
+        "i@connection to Alexa worked for a day then would not stay connected": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        }
+      },
+      "durability": {
+        "j@lasts 6 months exactly then becomes unresponsive": {
+          "-": {
+            "K": [
+              1
+            ]
+          }
+        },
+        "k@physical button becomes unresponsive after 1 year": {
+          "-": {
+            "K": [
+              3
+            ]
+          }
+        },
+        "l@stopped working after 7 months": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "m@all stop responding to button within 3-6 months": {
+          "-": {
+            "K": [
+              7
+            ]
+          }
+        },
+        "n@switch stopped working after about a year": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "o@no longer sending voltage to device": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "p@switches barely work after 6 months": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "q@on/off is very erratic, takes 10-15 tries": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "r@physical buttons no longer function properly after 6 months": {
+          "-": {
+            "K": [
+              40
+            ]
+          }
+        },
+        "s@need to hold button for 3-4 seconds with 3-4 second delay": {
+          "-": {
+            "K": [
+              40
+            ]
+          }
+        },
+        "t@buttons didn't work often after 6 months": {
+          "-": {
+            "K": [
+              42
+            ]
+          }
+        },
+        "u@smart features stopped working after 8 months": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "v@won't turn on/off unless pressed many times after 8 months": {
+          "-": {
+            "K": [
+              43
+            ]
+          }
+        },
+        "w@built so poorly, concerned about breaking": {
+          "-": {
+            "?": [
+              46
+            ]
+          }
+        },
+        "x@click becomes imprecise after some time": {
+          "-": {
+            "K": [
+              48
+            ]
+          }
+        },
+        "y@failed after exactly 6 months, totally dead": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "z@stopped working after three months": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "aa@works as intended": {
+          "+": {
+            "?": [
+              4,
+              15
+            ]
+          }
+        },
+        "ab@works without any problem": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "ac@works perfectly": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ad@switch functions well": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "ae@works great manually or through Alexa": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "af@works flawlessly": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ag@works really fast and accurate": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ah@works really well": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "ai@100% reliable via automation": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "aj@worked perfectly with wifi and Alexa without disconnecting": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "ak@one freeze up where it turned on lights and refused to respond": {
+          "-": {
+            "?": [
+              47
+            ]
+          }
+        },
+        "al@doesn't turn on lights manually and doesn't connect to network": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        }
+      },
+      "installation": {
+        "am@easy to install": {
+          "+": {
+            "E": [
+              8,
+              13,
+              14,
+              18,
+              20,
+              32,
+              45
+            ]
+          }
+        },
+        "an@straightforward installation": {
+          "+": {
+            "?": [
+              21,
+              24
+            ]
+          }
+        },
+        "ao@physical installation was straightforward and easy": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ap@really easy installation": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        }
+      },
+      "app_performance": {
+        "aq@inferior app with multiple issues": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "ar@app won't help connect to new Wi-Fi network": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "as@app's add-device function won't find the switch": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "at@no search function to find device": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "au@app is trash, use SmartLife instead": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "av@easy app & configuration": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "aw@app setup was quick and simple": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "ax@easy to add to App": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "ay@easy setup and use in app": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "smart_integration": {
+        "az@works with alexa and google assistant": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ba@integration with google home": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "bb@works with Google assistant": {
+          "+": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "bc@linked with Google Home": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "bd@integration to SmartThings and Alexa are easier": {
+          "+": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "be@works with Google setup": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "bf@Alexa was able to control both switches": {
+          "+": {
+            "?": [
+              45
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bathroom_lighting_and_ventilation": {
+        "+": {
+          "c": [
+            3
+          ]
+        },
+        "-": {
+          "t,u": [
+            42
+          ]
+        }
+      },
+      "general_lighting_control": {
+        "+": {
+          "aa,ab,ac,ad,ae,af,ag,ah": [
+            4,
+            8,
+            11,
+            18,
+            21,
+            31,
+            33,
+            35
+          ]
+        }
+      },
+      "voice_control_with_alexa": {
+        "+": {
+          "az,bd,bf": [
+            10,
+            16,
+            19,
+            23,
+            31,
+            44,
+            45
+          ]
+        },
+        "-": {
+          "i": [
+            43
+          ]
+        }
+      },
+      "smart_home_automation": {
+        "+": {
+          "ai,az,ba,bb,bc,bd,be": [
+            7,
+            9,
+            19,
+            20,
+            21,
+            24,
+            33,
+            37,
+            39,
+            45
+          ]
+        },
+        "-": {
+          "ak": [
+            47
+          ]
+        }
+      },
+      "elderly_and_accessibility": {
+        "+": {
+          "az": [
+            19
+          ]
+        }
+      },
+      "double_light_control": {
+        "+": {
+          "ac": [
+            13,
+            21,
+            45
+          ]
+        }
+      },
+      "closet_lighting_with_motion_detection": {
+        "+": {
+          "bd": [
+            24
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "ac": [
+            38
+          ]
+        },
+        "-": {
+          "p,q": [
+            38
+          ]
+        }
+      },
+      "vanity_light_and_fan_control": {
+        "-": {
+          "t,u": [
+            42
+          ]
+        }
+      },
+      "ceiling_fan_control": {
+        "+": {
+          "bf": [
+            45
+          ]
+        }
+      },
+      "smart_bulb_switch_replacement": {
+        "+": {
+          "ap": [
+            37
+          ]
+        }
+      },
+      "home_remodeling": {
+        "+": {
+          "C,D": [
+            36
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:02:45.079987"
+}

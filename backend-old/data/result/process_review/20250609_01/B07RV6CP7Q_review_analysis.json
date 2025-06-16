@@ -1,0 +1,222 @@
+{
+  "product_title": "ENERLITES Single Pole Decorator Paddle Light Switch, Commercial Grade, 20A 120V-277V, Grounding Screw, Back Insert and Side Terminals, 91200-W-10PCS, White (10 Pack)",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 13,
+  "review_analysis": {
+    "phy": {
+      "build_quality": {
+        "A@poor_construction_quality": {
+          "-": [
+            1,
+            4,
+            5,
+            10,
+            11
+          ]
+        },
+        "B@heavy_duty_construction": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "mechanism": {
+        "C@lack_of_resistance_in_switching_mechanism": {
+          "-": [
+            4,
+            5
+          ]
+        },
+        "D@overly_sensitive_spring_loaded_mechanism": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "terminal_screws": {
+        "E@terminal_screw_tightening_affects_switch_operation": {
+          "-": [
+            11
+          ]
+        }
+      }
+    },
+    "perf": {
+      "position_retention": {
+        "a@switches_do_not_stay_in_set_position": {
+          "-": {
+            "A": [
+              1,
+              2,
+              5,
+              10
+            ]
+          }
+        },
+        "b@switches_automatically_flip_back_to_off": {
+          "-": {
+            "A": [
+              1
+            ]
+          }
+        },
+        "c@switches_randomly_turn_themselves_off": {
+          "-": {
+            "D": [
+              7
+            ]
+          }
+        },
+        "d@switches_teeter_back_and_forth": {
+          "-": {
+            "A": [
+              10
+            ]
+          }
+        }
+      },
+      "switching_operation": {
+        "e@switches_will_not_toggle_into_place": {
+          "-": {
+            "A": [
+              3
+            ]
+          }
+        },
+        "f@switches_will_not_toggle_on": {
+          "-": {
+            "A": [
+              3
+            ]
+          }
+        },
+        "g@switches_will_not_toggle_off": {
+          "-": {
+            "A": [
+              3
+            ]
+          }
+        },
+        "h@switches_do_not_click_fully_into_on_position": {
+          "-": {
+            "C": [
+              4
+            ]
+          }
+        },
+        "i@switches_will_not_fully_seat_in_off_position": {
+          "-": {
+            "A": [
+              5
+            ]
+          }
+        },
+        "j@switches_will_not_change_position_at_all": {
+          "-": {
+            "A": [
+              5
+            ]
+          }
+        },
+        "k@switches_barely_click_to_turn_on_when_terminal_screw_tightened": {
+          "-": {
+            "E": [
+              11
+            ]
+          }
+        }
+      },
+      "electrical_performance": {
+        "l@causes_lights_to_flicker": {
+          "-": {
+            "A": [
+              6,
+              10
+            ]
+          }
+        },
+        "m@wire_arcing_risk_when_screw_loosened": {
+          "-": {
+            "E": [
+              11
+            ]
+          }
+        }
+      },
+      "quality_consistency": {
+        "n@extremely_inconsistent_quality_control": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "o@high_defect_rate": {
+          "-": {
+            "?": [
+              0,
+              5,
+              12
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "p@works_as_needed": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "residential_lighting": {
+        "+": {
+          "B": [
+            8
+          ]
+        },
+        "-": {
+          "a,b,l": [
+            1
+          ],
+          "a": [
+            2
+          ],
+          "e,f,g": [
+            3
+          ],
+          "h": [
+            4
+          ],
+          "l,d": [
+            10
+          ],
+          "k": [
+            11
+          ]
+        }
+      },
+      "house_construction_project": {
+        "-": {
+          "e,f,g": [
+            3
+          ]
+        }
+      },
+      "electrical_installation_project": {
+        "-": {
+          "h": [
+            4
+          ],
+          "n,o": [
+            5
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:17.516665"
+}

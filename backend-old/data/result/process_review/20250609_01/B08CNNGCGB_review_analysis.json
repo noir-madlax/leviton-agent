@@ -1,0 +1,55 @@
+{
+  "product_title": "Eaton Universal Toggle Dimmer 120V",
+  "product_category": "Toggle Style Dimmer Switches",
+  "total_reviews": 4,
+  "review_analysis": {
+    "phy": {
+      "switch handles": {
+        "A@interchangeable with different color options": {
+          "+": [
+            0,
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimmer function": {
+        "a@works but is sensitive with LED lights": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "b@works as expected": {
+          "+": {
+            "?": [
+              2,
+              3
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "matching house switches": {
+        "+": {
+          "A": [
+            1
+          ]
+        }
+      },
+      "use with LED lights": {
+        "-": {
+          "a": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:36.706793"
+}

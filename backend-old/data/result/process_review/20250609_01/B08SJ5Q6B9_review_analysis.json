@@ -1,0 +1,331 @@
+{
+  "product_title": "Leviton 5603-2AW Antimicrobial 15 Amp 120/277V Decora Rocker 3-Way AC Quiet Switch, White",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 42,
+  "review_analysis": {
+    "phy": {
+      "Design": {
+        "A@Functional design": {
+          "+": [
+            0
+          ]
+        },
+        "B@Decora style design": {
+          "+": [
+            27,
+            40
+          ]
+        },
+        "C@Modern look": {
+          "+": [
+            3
+          ]
+        },
+        "D@Attractive appearance": {
+          "+": [
+            8
+          ]
+        },
+        "E@Nice modern touch from decora style": {
+          "+": [
+            27
+          ]
+        }
+      },
+      "Finish": {
+        "F@Smooth finish": {
+          "+": [
+            5
+          ]
+        },
+        "G@Great neutral white color": {
+          "+": [
+            27
+          ]
+        },
+        "H@Grey color instead of white": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "Construction": {
+        "I@Well made": {
+          "+": [
+            6,
+            39
+          ]
+        },
+        "J@Quality construction": {
+          "+": [
+            1,
+            5,
+            8,
+            14,
+            38
+          ]
+        },
+        "K@Built to last": {
+          "+": [
+            39
+          ]
+        },
+        "L@Plastic material": {
+          "+": [
+            34
+          ]
+        }
+      },
+      "Physical Features": {
+        "M@Larger surface area": {
+          "+": [
+            27
+          ]
+        },
+        "N@Leviton branding stamped on face": {
+          "+": [
+            19,
+            37
+          ]
+        },
+        "O@Missing top box screw": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "Wiring Configuration": {
+        "P@Load post in different location": {
+          "+": [
+            11
+          ]
+        },
+        "Q@Three screws in different layout": {
+          "+": [
+            40
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Functionality": {
+        "a@Works well": {
+          "+": {
+            "?": [
+              2,
+              4,
+              7,
+              20,
+              28,
+              29,
+              39
+            ]
+          }
+        },
+        "b@Works perfectly": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@Does exactly what 3-way switch should do": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "d@Turns lights on and off": {
+          "+": {
+            "?": [
+              20,
+              23
+            ]
+          }
+        }
+      },
+      "Sound": {
+        "e@Makes slight click when pressed": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "f@Switches are quiet": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "g@Nice satisfying click": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "h@Don't last forever in high frequency use": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "i@Will still work in ten years": {
+          "+": {
+            "J": [
+              34
+            ]
+          }
+        },
+        "j@Quality and durability": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "Maintenance": {
+        "k@Much easier to clean": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "l@Easy to install": {
+          "+": {
+            "?": [
+              3,
+              4,
+              5,
+              7,
+              14,
+              15,
+              18,
+              35
+            ]
+          }
+        },
+        "m@Good fit": {
+          "+": {
+            "?": [
+              0,
+              14
+            ]
+          }
+        },
+        "n@Easy replacement": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "o@Easier to configure into multi-gang applications": {
+          "+": {
+            "B": [
+              27
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "House lighting replacement": {
+        "+": {
+          "l": [
+            2,
+            3,
+            25
+          ],
+          "a": [
+            2
+          ],
+          "b": [
+            3
+          ]
+        },
+        "-": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "Replacing old/faded switches": {
+        "+": {
+          "l": [
+            5
+          ],
+          "?": [
+            5,
+            10,
+            22,
+            39
+          ]
+        }
+      },
+      "3-way circuits": {
+        "+": {
+          "c": [
+            11
+          ],
+          "?": [
+            10,
+            39,
+            40
+          ]
+        }
+      },
+      "Bathroom use": {
+        "-": {
+          "h": [
+            16
+          ]
+        }
+      },
+      "Outside lights for security": {
+        "+": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "Apartment light switches": {
+        "+": {
+          "a": [
+            29
+          ],
+          "f": [
+            29
+          ]
+        }
+      },
+      "Multi-gang applications": {
+        "+": {
+          "o": [
+            27
+          ]
+        }
+      },
+      "Smart switch integration": {
+        "+": {
+          "?": [
+            27
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:24.751375"
+}

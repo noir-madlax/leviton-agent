@@ -1,0 +1,600 @@
+{
+  "product_title": "TREATLIFE 3 Way Smart Dimmer Switch 2 Pack, 2 Master Dimmer Switch Compatible with Alexa, Google Assistant, 2.4GHz WiFi Light Switch APP Remote Control, Neutral Wire Needed, Schedule, No Hub Required",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@yellowish tone compared to other white products": {
+          "-": [
+            34
+          ]
+        },
+        "B@attractive/nice looking design": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "dimensions": {
+        "C@massive box size": {
+          "-": [
+            48
+          ]
+        }
+      },
+      "wiring": {
+        "D@pre-attached wires instead of using existing wall cables": {
+          "-": [
+            48
+          ]
+        }
+      },
+      "internal_components": {
+        "E@ESP8266 boards": {
+          "-": [
+            8
+          ]
+        },
+        "F@relay": {
+          "-": [
+            8
+          ]
+        },
+        "G@smart module": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "buttons": {
+        "H@button layout with brightness buttons easy to press and on/off big enough": {
+          "+": [
+            29
+          ]
+        },
+        "I@buttons require pressing to dim up or down": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "packaging": {
+        "J@boxed as if it was a return item with worn out edges": {
+          "-": [
+            12
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@fail after a while": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@some faulty out of the box": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "c@started having issues after 2 years": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@stopped connecting to Wi-Fi after about 2 years": {
+          "-": {
+            "E": [
+              8
+            ]
+          }
+        },
+        "e@relay failed after about 2 years": {
+          "-": {
+            "F": [
+              8
+            ]
+          }
+        },
+        "f@ESP8266 boards burned out and became very hot when powered": {
+          "-": {
+            "E": [
+              8
+            ]
+          }
+        },
+        "g@unit with failed relay became hot to touch": {
+          "-": {
+            "F": [
+              8
+            ]
+          }
+        },
+        "h@lost all wifi functionality after a few months then quit working": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "i@replacement lost wireless functionality after couple months": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "j@smart module died after just over two years": {
+          "-": {
+            "G": [
+              24
+            ]
+          }
+        },
+        "k@stopped working after 5 months": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "l@switch starts to malfunction every other week": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "m@unreliable": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "n@work pretty well with no huge complaint for almost 2 years": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "o@works really good": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "p@works wonders": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "q@does what it's supposed to do": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "r@one doesn't work and other flickers on arrival": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "s@manual switches would sometimes work and sometimes not after few months": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "t@manual switches do not work at all and light turns off half minute later": {
+          "-": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "u@never stay connected to wifi": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "v@disconnect within 24 hours and are no longer smart": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "w@few switches started to disconnect after over 1 year": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "x@lost internet connection after 16 months": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "y@switches get deleted from app time and time again": {
+          "-": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "z@would not connect to wifi": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "aa@suddenly starts flashing and cannot turn them off": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        },
+        "ab@flicker and come on unexpectedly when other switch on circuit is used": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "ac@won't come on at all": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "ad@work as expected after installation": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "wifi_connectivity": {
+        "ae@disconnect from wifi and show red status": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "af@detected couple times out of 10 attempts during wifi repair": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ag@app never able to update final step of wifi saving": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ah@device would no longer go into wifi pairing mode": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "ai@resetting only re-enables wireless functionality for few moments": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "electrical_behavior": {
+        "aj@both travelers powered in ON state, both off in OFF state": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ak@dumps up to 120V with mass current briefly on neutral line when powering on": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "al@causes voltage leak into neutral of other smart switches": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "am@send signals through electrical system causing issues with LED bulbs": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "an@remains powered on lowest setting on one traveler when switch restarts": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "ao@makes click when turning on and off even through Alexa": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "ap@may cause light to flicker": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "installation": {
+        "aq@fairly easy to install": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "ar@very easy to install": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "as@very easy to hook up to smart home": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "at@easy to install": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        },
+        "au@connections very simple and fast": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "av@bulky and pain to fit everything in box": {
+          "-": {
+            "C,D": [
+              48
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "aw@second switch cannot be powered switch": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "ax@not code compliant for 3-ways": {
+          "-": {
+            "aj": [
+              9
+            ]
+          }
+        },
+        "ay@only works on hot power end of 3-way circuit, can't use on load side": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "az@cannot be used with 3-way presence sensor": {
+          "-": {
+            "ay": [
+              23
+            ]
+          }
+        },
+        "ba@not compatible with kasa switches": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        },
+        "bb@only works with regular mechanical switch": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home_lighting_control": {
+        "+": {
+          "n,o,p": [
+            1,
+            3,
+            4
+          ]
+        },
+        "-": {
+          "a,m": [
+            0
+          ]
+        }
+      },
+      "three_way_setup": {
+        "+": {
+          "o": [
+            3
+          ]
+        },
+        "-": {
+          "s,t": [
+            11
+          ]
+        }
+      },
+      "smart_home_integration": {
+        "+": {
+          "as": [
+            6
+          ]
+        },
+        "-": {
+          "u,v": [
+            25
+          ]
+        }
+      },
+      "voice_control_with_alexa": {
+        "+": {
+          "?": [
+            10,
+            21,
+            22,
+            27,
+            39,
+            40,
+            46
+          ]
+        },
+        "-": {
+          "w": [
+            27
+          ]
+        }
+      },
+      "whole_house_installation": {
+        "+": {
+          "?": [
+            13,
+            22,
+            26,
+            45
+          ]
+        },
+        "-": {
+          "?": [
+            20,
+            25
+          ]
+        }
+      },
+      "remote_control": {
+        "+": {
+          "?": [
+            22,
+            40
+          ]
+        },
+        "-": {
+          "w": [
+            27
+          ]
+        }
+      },
+      "dimming_functionality": {
+        "+": {
+          "?": [
+            22,
+            26,
+            29
+          ]
+        },
+        "-": {
+          "I": [
+            14
+          ]
+        }
+      },
+      "LED_light_control": {
+        "-": {
+          "am": [
+            15
+          ]
+        }
+      },
+      "outdoor_lighting": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "fan_and_light_control": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      },
+      "kitchen_dining_entryway": {
+        "-": {
+          "u,v": [
+            25
+          ]
+        }
+      },
+      "bedroom_control": {
+        "+": {
+          "?": [
+            22
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:18.807254"
+}

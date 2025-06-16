@@ -1,0 +1,2222 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:08:53.407925",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B07ZJ7CPJC",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B07ZJ7CPJC",
+    "title": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+    "brand": "ELEGRP",
+    "model_number": NaN,
+    "price_usd": 17.79,
+    "rating": 4.7,
+    "reviews_count": 755.0,
+    "category": "Light Switches",
+    "product_segment": "Three Way Multi-Location Control Switches",
+    "product_url": "https://www.amazon.com/dp/B07ZJ7CPJC"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1145HVM6LFKQV",
+        "text": "Easy to install, bulk 3-way switch.",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "buyerofthings",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R11QTDSYJ5QHQC",
+        "text": "Swapped out some switches with these 3-way switches. There’s no doubt you’ve flipped the switch with these. The throw is very stiff. User preference tho I guess. Would buy again.",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "3 way switches",
+        "userName": "Nick",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3IC5T70AMTJ7",
+        "text": "Been used for a while and no complaints",
+        "date": "Reviewed in the United States on April 13, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "No complaints so far",
+        "userName": "Repairitall",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R21IGNQW9MDZX",
+        "text": "The amount of pressure required to 'flip' the switch is excessive. If it takes 4 oz. of pressure to flip a normal \"silent\" light switch - these take about 2 lbs. This is a subjective description but it is very different from any modern era silent switch I've seen. The effort required is more in keeping with the switches of 40 years ago that made a pronounced \"click\" when you toggled them (maybe even more). I am one day over the return period or I would return them all. As is I am stuck with 10 switches that I will not use. If you don't care how much effort required to flip it, they are probably okay.",
+        "date": "Reviewed in the United States on March 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Too much pressure/effort required to flip these switches",
+        "userName": "PZ",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3ORI3EJY5PW10",
+        "text": "The switches are heavy duty and made to last.",
+        "date": "Reviewed in the United States on January 24, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well made switch",
+        "userName": "JWJ",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R182IN5AD6MMKJ",
+        "text": "Was perfect for my Airbnb remodel and was much cheaper then from the physical store.",
+        "date": "Reviewed in the United States on December 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked for both sides",
+        "userName": "Dillon w Mcneff",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R27NYYOVK3B8NN",
+        "text": "I have been using these three ways throughout my 1937 farmhouse you walk through multiple rooms to get to the next and I wanted to be able to turn on lights as you go. I have also used them for single pole switches as well and they work great. Before I install them I showed them to my electrician to get his opinion and he thought they were well made as well. Much more affordable than anything I could find in a big box store.",
+        "date": "Reviewed in the United States on November 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well made and great brand",
+        "userName": "Deanne Hobbs",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RAGM1FKCTY0LJ",
+        "text": "Works good",
+        "date": "Reviewed in the United States on October 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wall switch",
+        "userName": "Larry Hoffman",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3QYCV1A2LWOUU",
+        "text": "Better priced than local stores! Work great!",
+        "date": "Reviewed in the United States on August 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Price",
+        "userName": "Gina Marrale",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1X45U8492YIWN",
+        "text": "Changing the switches in my house from old to new. And no complaints",
+        "date": "Reviewed in the United States on July 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great!",
+        "userName": "Mack Brown",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R265XN3JD9E65O",
+        "text": "Well made, but the wire insert ports are too small, need to use screw posts",
+        "date": "Reviewed in the United States on July 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Well made was expecting inferior product for the price",
+        "userName": "Naomi",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R18M4KXBUDIJ51",
+        "text": "Good price and easy install.",
+        "date": "Reviewed in the United States on June 28, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R28CM615DF64D8",
+        "text": "Great quality,performance easy installation and look good.",
+        "date": "Reviewed in the United States on June 12, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "L.R. Fontenot",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R5PV1N4LDTIZX",
+        "text": "Good product",
+        "date": "Reviewed in the United States on June 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good",
+        "userName": "C.W",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2INFKBHEOFNRC",
+        "text": "Just as advertised",
+        "date": "Reviewed in the United States on April 30, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works as advertised",
+        "userName": "Shawn H.",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R3MQFZYVIOMEOE",
+        "text": "That work perfectly, I replaced my three way switches last week. And no problem with it. Thank you",
+        "date": "Reviewed in the United States on April 7, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "abraham perez",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R11S6N1TNKIG7E",
+        "text": "This house was built in the late seventies and all the switches felt kinda gummy and not making the best contact. They look and feel like new now!",
+        "date": "Reviewed in the United States on March 15, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Like new",
+        "userName": "AARON J. BOND",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61xYzBx7ZuL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2IB83WDZ4XM6V",
+        "text": "Inexpensive and seems to be of fair quality for 15A switches.",
+        "date": "Reviewed in the United States on January 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value for quiet switches.",
+        "userName": "Dendy",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R30O1CAZ23LPLR",
+        "text": "They are light switches. If you don't know how to install them hire an electrician",
+        "date": "Reviewed in the United States on December 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "they work like they are suppose to",
+        "userName": "Clarice Taylor",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R34HBVSF7TWYZ3",
+        "text": "Bought during Covid shortage, big box store out of stock. Usually use Leviton switches, but these were close to same quality.",
+        "date": "Reviewed in the United States on November 22, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good switches",
+        "userName": "Michael V.",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RD5WAPKZ0BT2Z",
+        "text": "I installed three way and breaker kept tripping. I assumed was my issue but tried another switch from box of 10. Same problem. Went to home depot got a Leviton. Wired same way. No issues. Would not buy",
+        "date": "Reviewed in the United States on July 21, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Read before buying",
+        "userName": "J. Queenan",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R16H09K9D2N683",
+        "text": "Easy to install and work well",
+        "date": "Reviewed in the United States on June 27, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Kelli Shepherd",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R28QYLDICF9274",
+        "text": "Good quality.",
+        "date": "Reviewed in the United States on April 25, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It's a switch",
+        "userName": "Placeholder",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RHT4TFQV6L308",
+        "text": "Nice switches, but the action LOUD. Like, snap your fingers loud. Returned them immediately",
+        "date": "Reviewed in the United States on April 12, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "LOUD action",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RYD0KMPX6ML3D",
+        "text": "These work and look nice but the toggle is pretty stiff compared to other switches.",
+        "date": "Reviewed in the United States on February 27, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Very stiff",
+        "userName": "Adam",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2ZLJFRV4F3W13",
+        "text": "We are replacing some the switches in our house to white. These got the job done but you do need to use a little more force to flip the switches on and off. Nothing you won’t get use to but you can definitely tell a difference from these and switches in other rooms.",
+        "date": "Reviewed in the United States on September 28, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Got the job done!",
+        "userName": "Emily",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R24L3FM99UESAN",
+        "text": "I dont have a review",
+        "date": "Reviewed in the United States on March 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "I dont have a title",
+        "userName": "Kelli",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1IXW7FYCHUNUG",
+        "text": "Fácil de instalar",
+        "date": "Reviewed in the United States on January 22, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exelente calidad",
+        "userName": "Bianchi",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1ULZR2WS4PMTY",
+        "text": "Good value for quality component.",
+        "date": "Reviewed in the United States on October 19, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good Value",
+        "userName": "I&C Engineer",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R14YLFJ8XDUMKR",
+        "text": "I wish to tell my best about the fast delivery, this is quiet disturbing i have to work during week to have my project finish and already have the parts ! :) As you know now, i am electrician, There is some yearly regulation broadcast to our members. First one tab of the screw mounting of the switch have a copper plate, this very important, it needs to be on the life circuit, we don't show instructions about that. Second, the ON/OFF imcription we can't see it easily, i know when you have to flip a switch you just try, but why you print a ON/OFF releif even though we can't see it, this is why i downgrade 1 star. Rest is perfect, nice product and will consider for reference !",
+        "date": "Reviewed in the United States on August 18, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Best for immediate replacement",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 3,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1IJEU21QB632G",
+        "text": "I have the need to turn on the lights, going from up stairs or down the stairs. Or entering the kitchen from the back door, or from the livingroom. This is a great way to do it your self. The information on how to hook up a 3 way switch is on the internet. You just need no less than 14 Gage 4 wires, with Black, Red, White and a Ground bare wire. 2 outlet boxes and 2 3 way switch.",
+        "date": "Reviewed in the United States on June 18, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Want to turn on a light as you enter a room that has 2 doors, this is the answer.",
+        "userName": "Harold Greeno",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RCNI2Y0AE8TXE",
+        "text": "As expected. Good value.",
+        "date": "Reviewed in the United States on April 28, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great",
+        "userName": "Donna Van der vlugt",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "RYBRU2I89U0HY",
+        "text": "They are not quiet switches, I had no idea that loud clicking switches were even manufactured these days.",
+        "date": "Reviewed in the United States on April 26, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not a quiet switch",
+        "userName": "Rob Johnson",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R18F6V7LTI9QJI",
+        "text": "Had to go this route since all the hardware stores nearby were out of ten packs of three ways. Little thicker plastic around the switch which was a surprise but still managed to make them look good. They do have require a little more effort to flip then the Eaton switches I'm used to, but should loosen up as time goes I would assume. Overall good value and solid switches.",
+        "date": "Reviewed in the United States on April 4, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good value for the money.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R39BEH79P0BLI3",
+        "text": "This product met my needs!",
+        "date": "Reviewed in the United States on January 25, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great product at a great value!",
+        "userName": "Chris",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R315PM02CN2ZDP",
+        "text": "Updating wiring throughout house. Added a lot of smart switches, motion sensors...yet required some 3 way switches. They feel \"substantial\".",
+        "date": "Reviewed in the United States on July 17, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value",
+        "userName": "david starnes",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R6FQYHX7TM0OV",
+        "text": "apparently everyone use to like beige, because its everywhere in older homes. all of our outlets and switches got replaced in our remodel. super easy to change out, just follow wiring already there, turn off power unless you like getting shocked or tripping breakers you will need plates for these, depending on the gang size you have",
+        "date": "Reviewed in the United States on June 29, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "simple cost efficient home updates",
+        "userName": "David Pennington",
+        "numberOfHelpful": 2,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2VK4FH2EMTGQN",
+        "text": "Easy to Install REmolding a House",
+        "date": "Reviewed in the United States on June 10, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Buy for the money",
+        "userName": "Digger",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R1M6GTG49SJNXT",
+        "text": "Appears to be well made, haven’t installed them yet waiting on materials, made and look like Leviton",
+        "date": "Reviewed in the United States on June 2, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "3-way switch",
+        "userName": "Done right",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "ROVUD3AKHQNH0",
+        "text": "Was as described",
+        "date": "Reviewed in the United States on March 14, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Was what I was expected",
+        "userName": "Chris cordeiro",
+        "numberOfHelpful": 2,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2LIVVXH7AWZZS",
+        "text": "Great product!",
+        "date": "Reviewed in the United States on February 3, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fantastic!",
+        "userName": "Madison Roberds",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B07ZJ7CPJC",
+        "productTitle": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 42,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 757,
+        "productRating": "4.7 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 81
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 3
+          },
+          "twoStar": {
+            "percentage": 1
+          },
+          "oneStar": {
+            "percentage": 1
+          }
+        },
+        "reviewId": "R2KTSRTVZUVONU",
+        "text": "The switches seem to work fine. But they make a loud click when switching them on/off.",
+        "date": "Reviewed in Canada on April 20, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Noisy Switches",
+        "userName": "Hiram",
+        "numberOfHelpful": 0,
+        "variationId": "B07ZJ7CPJC",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: Without Wall Plate",
+          "Color: White",
+          "Number of Items: 10"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 42,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

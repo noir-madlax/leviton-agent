@@ -1,0 +1,525 @@
+{
+  "product_title": "Lutron Caseta Original Smart Dimmer Switch Starter Kit, with Pico Remote, Wall Plate, and Smart Hub, Works with Alexa, Apple Home, and Google Home, 3 Way, 150W, No Neutral Req, P-BDG-PKG1W",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "buttons": {
+        "A@flimsy, wobbly, squishy button gear": {
+          "-": [
+            20
+          ]
+        },
+        "B@4 buttons with only brightest or lowest settings option": {
+          "-": [
+            26
+          ]
+        },
+        "C@separate on and off button": {
+          "-": [
+            26
+          ]
+        }
+      },
+      "case": {
+        "D@switch case barely leaves room inside standard 2-gang box for wiring": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "instructions": {
+        "E@very easily understandable instructions": {
+          "+": [
+            4
+          ]
+        },
+        "F@clear and straightforward instructions": {
+          "+": [
+            9
+          ]
+        }
+      },
+      "material": {
+        "G@good material good quality": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "physical_condition": {
+        "H@dimmer and plate were scratched and sticky": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "packaging": {
+        "I@item came in envelope without sufficient packaging": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "hub_design": {
+        "J@hub is sleek and looks nice": {
+          "+": [
+            48
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "E": [
+              4
+            ],
+            "F": [
+              9
+            ],
+            "?": [
+              1,
+              2,
+              6,
+              8,
+              11,
+              12,
+              14,
+              16,
+              21,
+              24,
+              28,
+              36,
+              39,
+              40,
+              43,
+              45
+            ]
+          }
+        },
+        "b@installation was a breeze": {
+          "+": {
+            "F": [
+              9
+            ],
+            "?": [
+              14,
+              48
+            ]
+          }
+        },
+        "c@very easy installation": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@extremely easy to install": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "e@compatible with various light bulbs including dimmable LEDs, incandescent, and halogen bulbs": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "f@adapts effortlessly to different lighting fixtures": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "g@may not be perfectly compatible with all dimmable lights": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "h@works great with LED bulbs": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "i@smooth dimming performance without flickering or buzzing": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "j@dimming feature works great": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "k@when you turn off a light it fades down": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "l@one light blinks before turning on": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "connectivity": {
+        "m@wireless control capability": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "n@wifi integration is flawless": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "o@very responsive with Smartthings & Alexa": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "p@app responds quickly": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "q@clean and responsive": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "r@it is hard to get it to connect": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "s@even harder when you change the network": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "t@reliable and convenient": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "u@reliable switch": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "v@works correctly all the time": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "w@rock solid with no major issues": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "x@zero lost connectivity issues": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "y@switches not responding": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        },
+        "z@switches fail": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "memory_function": {
+        "aa@won't remember last dimmer setting, only switches back to full setting": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "remote_functionality": {
+        "ab@pico remote working only 35-40% of the time": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "ac@remote is useless": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      },
+      "power_recovery": {
+        "ad@normally OFF if main power switch is turned OFF and ON again": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ae@hub takes upwards of 5 minutes to come back online after power loss": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "range": {
+        "af@repeaters have limited range": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "ag@very surprising range in 2,200 sq ft home": {
+          "+": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "network_requirements": {
+        "ah@need to be hardwired straight to the router": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "ai@bridge will work with a network switch": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "software_experience": {
+        "aj@terrible software and install experience": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "ak@worst install experience for any smart home device": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "al@showing countless errors with zero real guidance": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "smart_home_integration": {
+        "+": {
+          "e,f,m": [
+            9
+          ],
+          "n,o": [
+            16
+          ],
+          "?": [
+            2,
+            12,
+            28,
+            32,
+            33,
+            36,
+            40,
+            41,
+            44,
+            48
+          ]
+        },
+        "-": {
+          "aj,ak,al": [
+            30
+          ]
+        }
+      },
+      "voice_control": {
+        "+": {
+          "?": [
+            9,
+            27,
+            28,
+            31,
+            32,
+            36,
+            40,
+            41,
+            44,
+            48
+          ]
+        }
+      },
+      "remote_lighting_control": {
+        "+": {
+          "m,p": [
+            9,
+            31
+          ],
+          "?": [
+            10,
+            23
+          ]
+        },
+        "-": {
+          "ab,ac": [
+            18
+          ]
+        }
+      },
+      "lighting_scenes_and_schedules": {
+        "+": {
+          "?": [
+            6,
+            9,
+            23,
+            38
+          ]
+        }
+      },
+      "security_features": {
+        "+": {
+          "?": [
+            9,
+            10
+          ]
+        }
+      },
+      "old_house_wiring": {
+        "+": {
+          "u": [
+            22
+          ],
+          "?": [
+            14,
+            26,
+            28,
+            32,
+            43,
+            45,
+            48
+          ]
+        }
+      },
+      "church_automation": {
+        "+": {
+          "?": [
+            10
+          ]
+        }
+      },
+      "ring_doorbell_integration": {
+        "+": {
+          "?": [
+            11,
+            23
+          ]
+        }
+      },
+      "ceiling_fan_control": {
+        "+": {
+          "?": [
+            31
+          ]
+        }
+      },
+      "apartment_use": {
+        "+": {
+          "?": [
+            38
+          ]
+        }
+      },
+      "multi-room_lighting": {
+        "+": {
+          "a,b": [
+            2
+          ],
+          "?": [
+            23,
+            48
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:53.950979"
+}

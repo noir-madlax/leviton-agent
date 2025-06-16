@@ -1,0 +1,110 @@
+{
+  "product_title": "ThunderWay Quiet Toggle Light Switch - 15A, 120V, AC, Residential & Commercial Grade, UL Listed (10 Pack, White)",
+  "product_category": "Single Pole Toggle Switches",
+  "total_reviews": 4,
+  "review_analysis": {
+    "phy": {
+      "color": {
+        "A@white color": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "fit": {
+        "B@fits perfectly": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "construction": {
+        "C@well made": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "wire connection": {
+        "D@supports traditional wire wrapped around screw": {
+          "+": [
+            1
+          ]
+        },
+        "E@supports straight wire insertion": {
+          "+": [
+            1
+          ]
+        },
+        "F@easy wire insertion": {
+          "+": [
+            1
+          ]
+        },
+        "G@wide enough diameter hole for normal gauge wires": {
+          "+": [
+            1
+          ]
+        }
+      }
+    },
+    "perf": {
+      "operation": {
+        "a@operates smoothly": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@works as expected": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "c@turns kitchen lights on and off": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "kitchen lighting": {
+        "+": {
+          "?": [
+            0
+          ]
+        }
+      },
+      "large project installation": {
+        "+": {
+          "C": [
+            1
+          ]
+        }
+      },
+      "single pole light switch installation": {
+        "+": {
+          "a,F,G": [
+            1
+          ]
+        }
+      },
+      "single pole light switch replacement": {
+        "+": {
+          "a,F,G": [
+            1
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:13:14.672239"
+}

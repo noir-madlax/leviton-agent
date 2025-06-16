@@ -1,0 +1,313 @@
+{
+  "product_title": "ENERLITES Elite Series Decorator Rocker Light Switch, 15A 120V/277V, Gloss Finish, Single Pole, 3 Wire, Grounding Screw, Residential Grade, UL Listed, 91150-GD, Gold Color",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 37,
+  "review_analysis": {
+    "phy": {
+      "Color": {
+        "A@Gold color appearance": {
+          "+": [
+            1,
+            5,
+            17,
+            24,
+            32,
+            33
+          ]
+        },
+        "B@Yellow appearance instead of gold": {
+          "-": [
+            2,
+            10,
+            16,
+            27,
+            36
+          ]
+        },
+        "C@Brushed gold finish": {
+          "+": [
+            14,
+            24,
+            29
+          ]
+        },
+        "D@Light almond/tan color": {
+          "-": [
+            27
+          ]
+        },
+        "E@Brown color instead of gold": {
+          "-": [
+            36
+          ]
+        },
+        "F@Subtle gold that looks metal": {
+          "+": [
+            33
+          ]
+        }
+      },
+      "Material": {
+        "G@Plastic construction": {
+          "-": [
+            31,
+            36
+          ]
+        },
+        "H@Solid construction, not flimsy": {
+          "+": [
+            6
+          ]
+        },
+        "I@Cheaply made": {
+          "-": [
+            14
+          ]
+        },
+        "J@Feels kind of cheap": {
+          "-": [
+            30
+          ]
+        },
+        "K@Good quality construction": {
+          "+": [
+            5,
+            9,
+            19,
+            33
+          ]
+        }
+      },
+      "Appearance": {
+        "L@Nice looking/beautiful appearance": {
+          "+": [
+            0,
+            1,
+            4,
+            5,
+            15,
+            17,
+            21,
+            28,
+            32
+          ]
+        },
+        "M@Sleek look": {
+          "+": [
+            5
+          ]
+        },
+        "N@Contemporary look": {
+          "+": [
+            24
+          ]
+        },
+        "O@Elegant appearance": {
+          "+": [
+            32
+          ]
+        },
+        "P@Lacks metallic quality": {
+          "-": [
+            27,
+            31
+          ]
+        }
+      },
+      "Internal Components": {
+        "Q@Plug cover on the inside": {
+          "+": [
+            5
+          ]
+        },
+        "R@Internal control piece that can fall out": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "Switch Sound": {
+        "S@Clear and loud switching sound": {
+          "+": [
+            6
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Durability": {
+        "a@Short lifespan (4 months)": {
+          "-": {
+            "I": [
+              14
+            ]
+          }
+        },
+        "b@Resistant to scratching": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "c@Switch falling off during use": {
+          "-": {
+            "I,R": [
+              14
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "d@Works well/functions great": {
+          "+": {
+            "H": [
+              6
+            ],
+            "?": [
+              11,
+              13,
+              26,
+              34,
+              35
+            ]
+          }
+        },
+        "e@Doesn't light up in dark as supposed to": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "f@One unit didn't work": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "Fingerprint Resistance": {
+        "g@Resists fingerprints and streaks": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        }
+      },
+      "Moisture Protection": {
+        "h@Protects against moisture": {
+          "+": {
+            "Q": [
+              5
+            ]
+          }
+        }
+      },
+      "Color Matching": {
+        "i@Matches outlet covers well": {
+          "+": {
+            "A": [
+              6,
+              11,
+              12
+            ]
+          }
+        },
+        "j@Doesn't match brass cover plates": {
+          "-": {
+            "B": [
+              16
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Bathroom Installation": {
+        "+": {
+          "Q,h": [
+            5
+          ],
+          "A": [
+            24
+          ],
+          "?": [
+            14,
+            15,
+            30
+          ]
+        }
+      },
+      "Home Renovation/Remodel": {
+        "+": {
+          "L": [
+            0,
+            4,
+            15
+          ],
+          "A": [
+            32
+          ],
+          "?": [
+            25,
+            28
+          ]
+        }
+      },
+      "Easy Installation": {
+        "+": {
+          "?": [
+            1,
+            5,
+            9,
+            19,
+            20,
+            21,
+            22,
+            24,
+            25,
+            29,
+            30,
+            32,
+            35
+          ]
+        }
+      },
+      "Room Decoration/Dressing Up": {
+        "+": {
+          "L,O": [
+            25,
+            32
+          ],
+          "N": [
+            24
+          ],
+          "?": [
+            28
+          ]
+        }
+      },
+      "Matching with Fixtures": {
+        "+": {
+          "A": [
+            24
+          ],
+          "i": [
+            12
+          ]
+        }
+      },
+      "Wall Contrast": {
+        "+": {
+          "A": [
+            23
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:23.227939"
+}

@@ -1,0 +1,334 @@
+{
+  "product_title": "Leviton Trimatron Rotary Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, RDL06-10Z, White",
+  "product_category": "Rotary Knob Dimmer Switches",
+  "total_reviews": 38,
+  "review_analysis": {
+    "phy": {
+      "knob": {
+        "A@comes with multiple color knobs": {
+          "+": [
+            0,
+            2,
+            6,
+            11
+          ]
+        },
+        "B@knob sticks out from wall plate more than old dimmer": {
+          "-": [
+            6
+          ]
+        },
+        "C@knob does not snap on or lock in and can fall off easily": {
+          "-": [
+            9
+          ]
+        },
+        "D@knob post is D shaped instead of circular": {
+          "-": [
+            24
+          ]
+        }
+      },
+      "design": {
+        "E@punch on-off design rather than turn clockwise to turn on design": {
+          "+": [
+            6
+          ]
+        },
+        "F@rotary style": {
+          "+": [
+            0,
+            30
+          ]
+        },
+        "G@uses standard old-fashioned switch plate": {
+          "+": [
+            30
+          ]
+        },
+        "H@has push button on/off": {
+          "+": [
+            35
+          ]
+        }
+      },
+      "wiring": {
+        "I@can handle SPST, 3 Way and 4 way wiring": {
+          "+": [
+            6
+          ]
+        },
+        "J@has colored wires for matching": {
+          "+": [
+            15
+          ]
+        }
+      },
+      "features": {
+        "K@has locator light": {
+          "+": [
+            22
+          ]
+        }
+      }
+    },
+    "perf": {
+      "compatibility": {
+        "a@works well with LED lighting": {
+          "+": {
+            "?": [
+              0,
+              2,
+              6,
+              14,
+              16,
+              19,
+              21,
+              22,
+              23,
+              29
+            ]
+          }
+        },
+        "b@works with dimmable LED bulbs": {
+          "+": {
+            "?": [
+              14,
+              16,
+              22,
+              29
+            ]
+          }
+        },
+        "c@works with CFL and LED lights": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "d@buzzes loudly and doesn't adjust properly with LEDs": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "e@provides smooth dimming action": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "f@provides fine dimming control": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "g@takes lights down to lowest possible bit of light": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "h@no flickering with LED lights": {
+          "+": {
+            "?": [
+              2,
+              4,
+              16,
+              19
+            ]
+          }
+        },
+        "i@poor at lower levels of light and never takes intensity to zero": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "j@flickers when turned up until partially turned up": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "k@doesn't dim over full range, stops when lights still bright": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "l@hums when dimmed to 50% or less": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        }
+      },
+      "durability": {
+        "m@stopped working in a week": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "n@works after 28 years of previous dimmer use": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        }
+      },
+      "ease_of_operation": {
+        "o@quick and easy to operate": {
+          "+": {
+            "F": [
+              30
+            ]
+          }
+        },
+        "p@easiest to operate compared to other dimmers": {
+          "+": {
+            "F": [
+              30
+            ]
+          }
+        }
+      },
+      "installation": {
+        "q@easy to install": {
+          "+": {
+            "?": [
+              5,
+              7,
+              8,
+              12,
+              13,
+              15,
+              17,
+              20,
+              21,
+              27,
+              34
+            ]
+          }
+        }
+      },
+      "versatility": {
+        "r@universal application for all bulb types": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "s@works as single or three-way switch": {
+          "+": {
+            "I": [
+              30,
+              32
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED lighting control": {
+        "+": {
+          "a": [
+            0,
+            2,
+            6,
+            14,
+            16,
+            19,
+            21,
+            22,
+            23,
+            29
+          ]
+        },
+        "-": {
+          "d": [
+            36
+          ]
+        }
+      },
+      "recessed LED lights control": {
+        "+": {
+          "h": [
+            2
+          ]
+        }
+      },
+      "multiple LED lamps control": {
+        "+": {
+          "g,h": [
+            4
+          ]
+        }
+      },
+      "bathroom mirror LED control": {
+        "-": {
+          "k": [
+            33
+          ]
+        }
+      },
+      "BR40 65 Watt dimmable LED bulb control": {
+        "-": {
+          "i,j": [
+            31
+          ]
+        }
+      },
+      "replacement for old dimmer": {
+        "+": {
+          "?": [
+            2,
+            25,
+            27,
+            34
+          ]
+        }
+      },
+      "3-way installation": {
+        "+": {
+          "s": [
+            15,
+            32,
+            34
+          ]
+        }
+      },
+      "updating older incandescent-era dimmers": {
+        "+": {
+          "b": [
+            22
+          ]
+        }
+      },
+      "70's home with old wiring": {
+        "+": {
+          "q": [
+            21
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:46.349502"
+}

@@ -1,0 +1,372 @@
+{
+  "product_title": "Lutron Ariadni/Toggler LED+ Dimmer Light Switch for Dimmable LED, Halogen and Incandescent Dimmer Switch, 150W, Single-Pole/3-Way, AYCL-153P-WH, White",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "switch_design": {
+        "A@small sliding switch size": {
+          "+": [
+            25
+          ],
+          "-": [
+            25
+          ]
+        },
+        "B@fits with standard switch cover": {
+          "+": [
+            2,
+            35
+          ]
+        },
+        "C@compact size fits in existing switch box": {
+          "+": [
+            7,
+            35
+          ],
+          "-": [
+            7
+          ]
+        },
+        "D@upside down orientation marking": {
+          "-": [
+            27,
+            36
+          ]
+        },
+        "E@toggle switch appearance": {
+          "+": [
+            18
+          ]
+        },
+        "F@build quality and feel": {
+          "+": [
+            35
+          ]
+        }
+      },
+      "wiring_design": {
+        "G@works without neutral wire": {
+          "+": [
+            7,
+            18
+          ]
+        },
+        "H@wire connection terminals": {
+          "+": [
+            7
+          ],
+          "-": [
+            5,
+            33
+          ]
+        },
+        "I@three-way switch capability": {
+          "+": [
+            38,
+            46
+          ],
+          "-": [
+            11
+          ]
+        }
+      },
+      "adjustment_features": {
+        "J@blue adjustment range toggle": {
+          "+": [
+            16,
+            19,
+            32,
+            43
+          ]
+        },
+        "K@QR code for installation video": {
+          "+": [
+            16,
+            37
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_performance": {
+        "a@smooth dimming without flickering": {
+          "+": {
+            "?": [
+              6,
+              11,
+              21,
+              28,
+              32
+            ]
+          },
+          "-": {
+            "?": [
+              15,
+              17,
+              29,
+              47
+            ]
+          }
+        },
+        "b@wide dimming range": {
+          "+": {
+            "J": [
+              19,
+              25,
+              32
+            ]
+          }
+        },
+        "c@linear dimming from zero to max": {
+          "+": {
+            "?": [
+              21,
+              35
+            ]
+          }
+        },
+        "d@no buzzing noise during dimming": {
+          "+": {
+            "?": [
+              25,
+              46
+            ]
+          }
+        },
+        "e@precise adjustment of lower dimming range": {
+          "+": {
+            "J": [
+              25,
+              32
+            ]
+          }
+        },
+        "f@fast dimming speed": {
+          "+": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "g@no delay during adjustments": {
+          "+": {
+            "?": [
+              18,
+              46
+            ]
+          }
+        }
+      },
+      "led_compatibility": {
+        "h@works with LED bulbs": {
+          "+": {
+            "?": [
+              0,
+              4,
+              5,
+              9,
+              11,
+              13,
+              16,
+              18,
+              19,
+              21,
+              28,
+              34
+            ]
+          },
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "i@handles LED application without flicker": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "j@turn-on delay with LED lamps": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "k@power drop sensitivity": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "l@durability and lifespan": {
+          "+": {
+            "?": [
+              3,
+              18
+            ]
+          },
+          "-": {
+            "?": [
+              5,
+              31
+            ]
+          }
+        },
+        "m@consistent dimming levels": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "n@loss of continuity between terminals": {
+          "-": {
+            "H": [
+              5
+            ]
+          }
+        }
+      },
+      "installation": {
+        "o@easy installation": {
+          "+": {
+            "G": [
+              7
+            ]
+          }
+        },
+        "p@clear installation instructions": {
+          "+": {
+            "K": [
+              2,
+              3
+            ]
+          },
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "switch_operation": {
+        "q@reduced light when shutting off": {
+          "-": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "r@upside down operation": {
+          "-": {
+            "D": [
+              27,
+              36
+            ]
+          }
+        },
+        "s@intermittent functionality": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "kitchen_lighting": {
+        "+": {
+          "h": [
+            9,
+            11,
+            16
+          ]
+        }
+      },
+      "bedroom_headboard_lighting": {
+        "+": {
+          "h": [
+            13
+          ]
+        }
+      },
+      "bathroom_fixture_dimming": {
+        "+": {
+          "h": [
+            16
+          ]
+        }
+      },
+      "ceiling_LED_fixtures": {
+        "+": {
+          "h,j": [
+            6
+          ]
+        }
+      },
+      "dining_room_lighting": {
+        "+": {
+          "h": [
+            28
+          ]
+        }
+      },
+      "night_light_application": {
+        "+": {
+          "h": [
+            28
+          ]
+        }
+      },
+      "office_lighting": {
+        "+": {
+          "h": [
+            34
+          ]
+        }
+      },
+      "family_room_lighting": {
+        "+": {
+          "?": [
+            40
+          ]
+        }
+      },
+      "fluorescent_lights": {
+        "-": {
+          "h": [
+            44
+          ]
+        }
+      },
+      "integrated_LED_lights": {
+        "-": {
+          "?": [
+            43
+          ]
+        }
+      },
+      "three_way_switching_circuit": {
+        "+": {
+          "I,o": [
+            14
+          ]
+        },
+        "-": {
+          "I": [
+            11
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:30.147049"
+}

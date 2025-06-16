@@ -1,0 +1,423 @@
+{
+  "product_title": "Zooz 800 Series Z-Wave Long Range Dimmer Switch ZEN72 800LR, White | Direct 3-Way (No Add-On Switch Needed) | Z-Wave Hub Required",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 32,
+  "review_analysis": {
+    "phy": {
+      "Wire Connection Clamps": {
+        "A@Clamps that fail to open to accept wires": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "Screws": {
+        "B@Stripped screws on neutral wire connection": {
+          "-": [
+            2
+          ]
+        }
+      },
+      "Air Gap Plug": {
+        "C@Air gap plug under paddle that spontaneously pops out and cannot be reinserted": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "Physical Size": {
+        "D@Not as bulky as some Z-Wave switches": {
+          "+": [
+            27
+          ]
+        }
+      },
+      "Protective Film": {
+        "E@Protective film on switch paddle": {
+          "+": [
+            10
+          ]
+        }
+      },
+      "Paddle Design": {
+        "F@Tap-vs-long-tap brightness adjustment paddle": {
+          "+": [
+            27
+          ]
+        }
+      },
+      "LED Indicator": {
+        "G@Customizable LED color and brightness": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "QR Code": {
+        "H@QR code for SmartThings setup that doesn't work": {
+          "-": [
+            13
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Reliability": {
+        "a@Device failure after nine months": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "b@Very durable with no failures after 2 years": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "c@Severe reliability issues with 800 series - 4 of 6 defective": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "d@Rock solid performance": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "e@Multiple switches spontaneously fail": {
+          "-": {
+            "C": [
+              20
+            ]
+          }
+        },
+        "f@Reliable operation since 2021": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        }
+      },
+      "Dimming Performance": {
+        "g@Dims from 99% down to 1% with compatible fixtures": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "h@Audible buzzing noise during dimming": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "i@Choppy dimming down with flicker-like behavior": {
+          "-": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "j@Flickering every few seconds when dimmed": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "k@Brightness at 40% barely perceptible, 50% comparable to other brands' 5%": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "l@Works with 14 LED pot lights with no hum": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        }
+      },
+      "Responsiveness": {
+        "m@Very responsive operation": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "n@Noticeably slower with delayed responsiveness": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "Setup and Pairing": {
+        "o@Easy to pair": {
+          "+": {
+            "?": [
+              3,
+              16
+            ]
+          }
+        },
+        "p@Quick installation": {
+          "+": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "q@Network add is a walk in the park": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "r@Takes no time to pair and control": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "s@Paired nicely": {
+          "+": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "t@Easy setup": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "Compatibility": {
+        "u@Works great with HomeAssistant": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "v@Works with Hubitat hub": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "w@Works with SmartThings": {
+          "+": {
+            "?": [
+              28,
+              30
+            ]
+          }
+        },
+        "x@Requires firmware flash right out of the box": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "y@Flakey when connected through zwave - improperly reports status": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "z@Firmware update takes over 7 hours": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "aa@Does not work with most dimmable LED bulbs - needs trailing edge dimmer": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "ab@Requires 4 wires at the box": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "Customization": {
+        "ac@Extremely customizable with many configuration options": {
+          "+": {
+            "?": [
+              6,
+              16
+            ]
+          }
+        },
+        "ad@Astounding number of parameters to configure": {
+          "+": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "Instructions": {
+        "ae@Really clear instructions for various setups": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "af@Great piece of documentation/instruction": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ag@Very good instructions": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "Support": {
+        "ah@Great support with timely responses": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ai@Fantastic customer service with custom wiring diagrams": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "aj@Unable to reach support, emails ignored, calls not returned": {
+          "-": {
+            "?": [
+              18
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home Automation Setup": {
+        "+": {
+          "u": [
+            1
+          ],
+          "v": [
+            3
+          ],
+          "w": [
+            28,
+            30
+          ],
+          "ac": [
+            6
+          ]
+        }
+      },
+      "3-Way and 4-Way Switch Configurations": {
+        "+": {
+          "ae": [
+            3
+          ],
+          "o": [
+            23
+          ],
+          "?": [
+            19
+          ]
+        }
+      },
+      "Smart Blinds Control": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "Overhead Recessed Lighting": {
+        "-": {
+          "n": [
+            13
+          ],
+          "k": [
+            13
+          ]
+        }
+      },
+      "LED Pot Lights": {
+        "+": {
+          "l": [
+            28
+          ]
+        }
+      },
+      "Office Lighting": {
+        "+": {
+          "?": [
+            19
+          ]
+        }
+      },
+      "Outdoor Protected Housings": {
+        "+": {
+          "?": [
+            20
+          ]
+        }
+      },
+      "Remodeling Projects": {
+        "+": {
+          "g": [
+            6
+          ]
+        }
+      },
+      "Client Projects": {
+        "+": {
+          "r": [
+            30
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:06:34.361005"
+}

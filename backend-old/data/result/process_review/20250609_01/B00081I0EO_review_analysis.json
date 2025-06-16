@@ -1,0 +1,399 @@
+{
+  "product_title": "Lutron Claro On/Off Switch, 15-Amp/3-Way, CA-3PS-WH, White",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "Material": {
+        "A@Cheap and weak materials": {
+          "-": [
+            1
+          ]
+        },
+        "B@Quality materials": {
+          "+": [
+            24
+          ]
+        },
+        "C@Fragile plastic housing that can snap or disintegrate": {
+          "-": [
+            32,
+            34,
+            38,
+            45
+          ]
+        },
+        "D@Nice plastic quality": {
+          "+": [
+            37
+          ]
+        }
+      },
+      "Appearance": {
+        "E@Modern and clean look": {
+          "+": [
+            3,
+            8,
+            16,
+            36
+          ]
+        },
+        "F@Beautiful design": {
+          "+": [
+            10,
+            17
+          ]
+        },
+        "G@Nice clean look with Lutron cover": {
+          "+": [
+            8
+          ]
+        },
+        "H@Higher end look when used with diva dimmers": {
+          "+": [
+            9
+          ]
+        },
+        "I@Lutron branding visible on switch": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "Physical Construction": {
+        "J@Solid feel and construction": {
+          "+": [
+            24,
+            40
+          ]
+        },
+        "K@Well built feel": {
+          "+": [
+            3
+          ]
+        },
+        "L@Fits snug compared to other switches": {
+          "+": [
+            3
+          ]
+        },
+        "M@Definitive click sound": {
+          "+": [
+            4,
+            19,
+            25,
+            30,
+            37
+          ]
+        },
+        "N@Loud clicking sound": {
+          "-": [
+            18,
+            22
+          ]
+        }
+      },
+      "Wiring Terminals": {
+        "O@Wire plug-in terminal won't accept regular sized wire": {
+          "-": [
+            14
+          ]
+        },
+        "P@Common terminal not in standard location": {
+          "-": [
+            42
+          ]
+        },
+        "Q@All screws same brass color instead of different colored common screw": {
+          "-": [
+            42
+          ]
+        },
+        "R@Common terminal not marked on switch body": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "Packaging": {
+        "S@Damaged packaging with parts outside": {
+          "-": [
+            13
+          ]
+        },
+        "T@Missing screws in package": {
+          "-": [
+            47
+          ]
+        },
+        "U@Doesn't include face plate": {
+          "-": [
+            15
+          ]
+        },
+        "V@Comes with typical everyday caps": {
+          "+": [
+            3
+          ]
+        }
+      },
+      "Dimensions": {
+        "W@Small light bar on side": {
+          "+": [
+            3
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Reliability": {
+        "a@Prevents light flickering": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Breaks easily during installation": {
+          "-": {
+            "A": [
+              1
+            ]
+          }
+        },
+        "c@Shorts out when defective": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "d@Stops working after 2 months": {
+          "-": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "e@Cracks within a year": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "f@Lasts longer than other brands": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "g@One position remains open and non-functional": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "h@Body falls apart during rewiring": {
+          "-": {
+            "C": [
+              34
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "i@Easy to install": {
+          "+": {
+            "?": [
+              3,
+              10,
+              11,
+              16,
+              17,
+              25,
+              31,
+              33,
+              39
+            ]
+          }
+        },
+        "j@Installs like any other switch": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "k@Difficult to fit in small switch boxes": {
+          "-": {
+            "L": [
+              25
+            ]
+          }
+        },
+        "l@Snaps in half while tightening screws": {
+          "-": {
+            "C": [
+              32
+            ]
+          }
+        },
+        "m@Disintegrates during installation": {
+          "-": {
+            "C": [
+              45
+            ]
+          }
+        }
+      },
+      "Operation": {
+        "n@Works as expected": {
+          "+": {
+            "?": [
+              5,
+              15,
+              41
+            ]
+          }
+        },
+        "o@Zero noise when turning on": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "p@Satisfying click operation": {
+          "+": {
+            "M": [
+              37
+            ]
+          }
+        },
+        "q@Switch direction feels weird": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "r@Positive click on and off": {
+          "+": {
+            "M": [
+              30
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "s@More durable than competing brands": {
+          "+": {
+            "B": [
+              28
+            ]
+          }
+        },
+        "t@Durable construction": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "Dimming": {
+        "u@Dims well": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "v@Great dimming performance": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Home Construction": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "Home Lighting Control": {
+        "+": {
+          "n": [
+            5
+          ]
+        }
+      },
+      "Interior Facelift Projects": {
+        "+": {
+          "i": [
+            11
+          ]
+        }
+      },
+      "Home Preparation for Sale": {
+        "+": {
+          "i": [
+            25
+          ]
+        }
+      },
+      "Kitchen and Hallway Installation": {
+        "+": {
+          "i": [
+            33
+          ]
+        }
+      },
+      "Matching with Smart Switches": {
+        "+": {
+          "?": [
+            38
+          ]
+        }
+      },
+      "3-Way Circuit Applications": {
+        "+": {
+          "n": [
+            42
+          ]
+        }
+      },
+      "Garage Light Control": {
+        "+": {
+          "r": [
+            19
+          ]
+        }
+      },
+      "Mudroom Applications": {
+        "+": {
+          "n": [
+            5
+          ]
+        }
+      },
+      "Whole Home Switch Replacement": {
+        "+": {
+          "f": [
+            26,
+            35
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:16:37.932980"
+}

@@ -1,0 +1,2538 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:19:06.166477",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08T1JBD9P",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08T1JBD9P",
+    "title": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+    "brand": "EVA LOGIK",
+    "model_number": NaN,
+    "price_usd": 27.99,
+    "rating": 3.9,
+    "reviews_count": 680.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Smart Wi-Fi Enabled Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B08T1JBD9P"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R2G3O15V3UB1EC",
+        "text": "I love the design in every way. 5 stars for that. Problem is, these tend to stop responding to WiFi after a few months. No idea why. Still works as a regular switch",
+        "date": "Reviewed in the United States on May 1, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "works well until wifi fails",
+        "userName": "velgerbgarb",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R284QDF0ZKCH9Z",
+        "text": "So far 5 stars. I bought this one and another brand for a bathroom remodel. Both are going to control lights that can be dimmed. This brand worked well right out of the box. There's a main power on off switch at the bottom. Once it's on, you can leave it on and turn the lights on and off with the toggle. If you want to dim, turn the lights on, then hold the toggle down until the light starts to dim. Opposite, hold the toggle up until it's at the desired brightness. Easy enough! Plus there's a small dim warm-white light within the toggle so you can find the switch in the dark. The other brand I bought, the internal light was blue, and would constantly flash (I'm assuming because it wasn't connected to the internet yet). The controls worked pretty much the same, but more buggy, more delayed, and sometimes backwards. So I'm going to return it. I saw some reviews stating that the switches don't fit in a multi switch panel. To that, I'll say that my house was built in 1998, and these switches fit right in with no issues. They do provide a slight amount of wiggle room where you screw them into the wall, so make sure it all fits before you tighten everything down.",
+        "date": "Reviewed in the United States on April 29, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Well built. On/Off & Dimming controls very well done.",
+        "userName": "Michael K",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R2GDM3JA7YJ955",
+        "text": "I bought this switch in late 2021 and installed it in early 2022. It worked as expected for about 3 years and 3 months until it failed in late March 2025. I'm not sure why it suddenly stopped working, but I'll be taking it apart after I replace it. But beyond that, this entire family of switches have this extremely annoying behavior where when the WiFi goes out it just switches on and off repeatedly until the connection is restored. I would prefer it so that it just stays in whatever state it was last in until the internet connection is recovered. It was extremely annoying when we had WiFi issues.",
+        "date": "Reviewed in the United States on April 20, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Suddenly failed after 3 years + other bugs",
+        "userName": "Angel",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3EZ5SDCKWYOWC",
+        "text": "Installed this dimmer light switch and link to Alexa. It works well. Install note you must have a neutral on your 120 circuit for this switch to work. I liked the price and the functionality of being able to dim the lights with Alexa. You can control the brightness without Alexa by selecting the switch to the down position when the light is on. A little tricky at first to do this.",
+        "date": "Reviewed in the United States on February 25, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Dimmer WiFi switch",
+        "userName": "HD Richard",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3FD8FG501A6NT",
+        "text": "It worked great for 2 weeks. I was impressed how easy it was to program, but then after 2 weeks sometimes it wouldn't turn on as scheduled, other times it wouldn't turn off as scheduled. I'd manually turn it on or off, then it might work correctly for a day or two before it didn't again. I didn't pay $27 for something that doesn't work all the time.",
+        "date": "Reviewed in the United States on December 18, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked for 2 weeks then only worked intermittantly.",
+        "userName": "Spiruss",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3387MLU8RYR2H",
+        "text": "Stopped working after the return window closed….",
+        "date": "Reviewed in the United States on December 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk. Don’t bother and spend a bit extra",
+        "userName": "NM",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R1TJL8XS8ERA7S",
+        "text": "While it is nice to have a switch that is like a standar paddle switch, and that is the primary reason I purchased these, it isn't worth it if they don't work. I installed these shortly after receiving them and they worked great. For about 10 months. Then we had some storms and and a lot of power outages. While I have most things on battery backup, light switches are one of those things you can't protect. During those storms they lost the wifi connectivity. I can accept that really and had experienced that before, the main problem with them is that they stopped accepting the command to reset, so ultimately I could never reconnect them to the wifi network. And this wasn't just one of them, it was all of them. They have been blinking at me for the last 4 months while I decided on which switch to replace them with. Now that i have decided these are going to the landfill. It is a huge waste.",
+        "date": "Reviewed in the United States on July 29, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Save your money",
+        "userName": "Sean Boate",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R4D3WR1Q76FH0",
+        "text": "I have more than ten of these all over the house. I control them using Alexa voice control. The only thing I couldn't use with these were my bathroom exhaust fans, but that's just fine. They connect well to Wifi and are compatible with Tuya-compatible smartphone apps. The definitely need access to the neutral line, though. If you don't have a bundled-up neutral line in your switch box, you will likely be out of luck. Thank you for reading.",
+        "date": "Reviewed in the United States on July 16, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Inexpensive, Works Perfectly",
+        "userName": "S. Ayengar",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R1G3QYDUHN6Z75",
+        "text": "Toggle gets confused sometime and needs to be pressed again.",
+        "date": "Reviewed in the United States on July 6, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Flaky",
+        "userName": "scott williams",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R188Y7TXEUN2J1",
+        "text": "Must be installed on the line-side 3-way switch, but no wiring modifications are needed on the load-side switch for this to work. I have a 2.4G / 5.0G wi-fi and it paired right away. Connected with Alexa easily. Switches on/off and dims with NO flutter / flicker in my LED lights.",
+        "date": "Reviewed in the United States on June 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install as a 3-way dimmer. Works flawlessly with Alexa.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3GWKPK6PMCVYN",
+        "text": "Started out liking them but they both does within a week of each other. Waste of money!",
+        "date": "Reviewed in the United States on April 12, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lasted less than 2 years",
+        "userName": "Charles E Marker",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R8UE1884UESYB",
+        "text": "This worked fine for a month or so. We have very strong wifi - and using Alexa worked fine. However in the last few days it has become more problematic with mostly non-responsive commands. Alexa tries - but the lights (through this switch) do not turn on or off. Would not buy again or recommend.",
+        "date": "Reviewed in the United States on April 9, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flakey Alexa connection",
+        "userName": "cforurself",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "RGQ01R7RYEUZP",
+        "text": "I bought this mainly for 2 reasons. First, it fits in my existing 4 switch box and looks (somewhat) like a normal switch. Also, it uses the Smart Life app which I currently have several other devices under. The install was pretty straight forward if you understand wiring for switches. I was using this on a single pole light switch so it was fairly straight forward. I figured out which was load and line then dug out the neutral wire and added that. It all went in like it should and the switch notified me that it was available to add in the app before I could even get there. It connected and worked like it should right away. It's nice having a real switch to use for the lights but also the convenience of a smart switch to turn it on and off as needed. It dims the 4 kitchen lights I have pretty well and is ready for use in Alexa and Google Home. The instructions it came with are clear and easy to follow. The company emailed me before I received it and let me know of a change in the instructions, though it didn't affect my installation on a single pole. If you already have some Smart Life apps and want a standard (not decorator style) switch, this is the one to get. We'll see about longevity, but so far I'm happy with it.",
+        "date": "Reviewed in the United States on March 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "A nice replacement for an old style switch",
+        "userName": "Steve Birchfield",
+        "numberOfHelpful": 5,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61fMoSmh7HL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3CIH39P6IACKL",
+        "text": "I found this product when carrying out a search for a 3 pole smart search that doesn't require neutral. When the product came the drawings show it does require a neutral.",
+        "date": "Reviewed in the United States on March 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "The product requires a neutral",
+        "userName": "Paul Carr",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R187U7T98J2CPJ",
+        "text": "Product stoped working after five months. Location that it was used on was only turned on 10 times in those 5 months. Also just realized warranty is only 30 days. Buy a name brand product you will save in a long run. Name brand at least has 90 days return and 1 year warranty.",
+        "date": "Reviewed in the United States on March 8, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worked for 5 months",
+        "userName": "Adnan Buljubasic",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "RK1QJ1OI4EZ5K",
+        "text": "These are AWESOME - easy to install and very friendly user interface. I only needed one of the two I bought as only one is needed for a 3 way switch setup and I was planning to return one but decided to keep both and use the other in another room with dimmable LEDs",
+        "date": "Reviewed in the United States on January 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "GREAT PRODUCT",
+        "userName": "TheShadow",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R1234SGET8PSCS",
+        "text": "Update 6-18-24 Just updated my internet connection with a new router. At first, these switches weren't working. I figured out it... just go into the Smart Life app, remove the switch, and then re-add. Just like that, all is working again 😀 Wiring wasn't so bad, but getting the app to work and then sync to Alexa took a bit of extra effort. It works great, but just zapped a lot of brain cells in the setup process.",
+        "date": "Reviewed in the United States on January 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works great, but difficult setup.",
+        "userName": "Brandon",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R254WSWV9LABAQ",
+        "text": "Have many of these switches in my house. Real easy to connect. Works great with Alexa.",
+        "date": "Reviewed in the United States on January 6, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Real easy to connect.",
+        "userName": "KEN",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R23I8ZBHU4J0ZL",
+        "text": "These switches do not last. Do not buy them. As an electrical contractor I have purchased 10 of these in the last 6 months. Only to have everyone fail within 6 months. I will not buy them again.",
+        "date": "Reviewed in the United States on December 2, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "POS",
+        "userName": "Tracy Martin",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "RO1OSFIYC1F5P",
+        "text": "Because the Amazon \"questions\" section is such a disaster these days and I couldn't get a proper answer to my question before buying this light, I'll start with what my needs were. My kids now go to bed after me, and they have a habit of leaving lights on everywhere, including the hall outside our bedroom, which casts light under our door and drives me nuts. So, I unscrewed the hallway lights, problem solved, until my wife nearly fell down the stairs in the dark because she gets up early. Sooo, I needed some way to have the light behave normally during waking hours, but during sleeping hours I wanted it on a countdown timer so it would shut off automatically when kids left the lights on while I was trying to sleep. This switch, with the Smart Life app, does that and more. The app was not great for setup - it couldn't find the switch for a while, and, of course, the directions were poorly organized. After about 15 minutes of factory resets and blinking leds and phone clocking, it did eventually work out. I was worried before I could get into the details of the app that I would only be able to put the switch on a schedule, like you would for landscape lights. You can do that, but you can also use the app's \"automation\" functionality to make the lights truly smart. The automation functionality is a well designed interface for creating an \"if/then\" statement for a device. Like, IF it is between 10 pm and 6 am and IF the light is ON, THEN start a countdown timer for the switch lasting X seconds. Boom. Switch is also easily integrated into Google home through the Smart Life app (using Google Home functionality). Assuming it is stable and doesn't break and isn't spying on me, pretty good product. UPDATE: got 2 of these, one stopped working after 3 months - just went offline and never came back. Maybe I was unlucky, maybe I was had, but just putting a data point out there.",
+        "date": "Reviewed in the United States on November 19, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Flexible functionality",
+        "userName": "Jimmie Pumpkin",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3861CU5DVN13D",
+        "text": "Great product, installed, programed, works like a charm.",
+        "date": "Reviewed in the United States on November 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wifi dimmer",
+        "userName": "Steve Klima",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3B8N3JHUBXARJ",
+        "text": "Hire an electrician or find someone that is knowledgeable to help if you don't understand basic wiring. I looked at the wiring diagram on the box and was not feeling informed. Then I found the paper inside with a picture of this switch connected in a 3 way configuration under the SMART configuration. Here is the trick. Of the two 3-way switches you have one of them must supply power to the currently used 3-way switch along with a neutral wire for the new switch. This will only be at one of the switches so you have to figure that out. This unit works as advertise with no delays or any control issues whatsoever like some folks posted. The key is that the power must be supplied to one of the 3 way switched before starting the project.",
+        "date": "Reviewed in the United States on October 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "This product will work with your other 3 way switch - ignore wiring instructions on the box",
+        "userName": "PEATRO",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R1KNLWNK6VJRXR",
+        "text": "I bought three switches that I planned on installing myself. I've installed many dimmer switches in my life. The instructions were very complicated because the translation from Chinese to English wasn't consistent with industry terms. I couldn't get the first one to work. Eventually, I thought maybe I had a defective switch so I tried another one. Same result...nothing. Finally, I had an electrician out to the house yesterday, 9 months after purchase. He is a reputable electrician and he couldn't get them to work either. I think all three of them are defective and I'd like an exchange or refund of my money. Thank you. - Mike",
+        "date": "Reviewed in the United States on October 13, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "These don't work",
+        "userName": "Mikel Hill",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R22I13QRWGSIA5",
+        "text": "Bought these in December 22, one failed in Aug 23 (lights flickering) and the second failed in May 23(complete failure, no lights, nothing)",
+        "date": "Reviewed in the United States on October 13, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Didn’t last a year",
+        "userName": "CKGurr",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R2HC6SHGO0M99H",
+        "text": "This switch went in well. Seemed to work well over the internet and with Alexa. However, it only lasted for about 6 months and now it is junk, I would not recommend this switch. If you want something to last more than 8 months., I bought two of them. I'm hoping the other one will last a little longer.",
+        "date": "Reviewed in the United States on July 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Nice switch while it lasts",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61BC4TmHZlL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R21Q5CZH9SMF72",
+        "text": "Won't connect to wifi",
+        "date": "Reviewed in the United States on July 20, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Doesn't connect",
+        "userName": "Josh Friend",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R2FFPX5RC74XK2",
+        "text": "I just installed this so I can't speak about longevity. So far so good. Installed in old metal box with no space issues which is rare for smart switches. I like toggle switches because they're easy to use from any angle. I don't know why anybody would prefer paddles. The body feels solid and the screw system is reassuring. Install was automatic. Tuya detected it when I opened their app and Alexa detected it when I opened that app. Easiest install in a long time.",
+        "date": "Reviewed in the United States on July 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install toggle",
+        "userName": "Roger Wise",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3C4S6QBJ52MVS",
+        "text": "Tried all the wiring options. Never worked.",
+        "date": "Reviewed in the United States on April 16, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Never worked.",
+        "userName": "G. Morency",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "RM3UQ8025UVJH",
+        "text": "Directions not clear and wont connect to the router as it only connect to a 2g router not a 5g or combination one",
+        "date": "Reviewed in the United States on March 21, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Would of been nice to know the Wi-Fi only works with a 2g router",
+        "userName": "gaylord hildreth",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3EDVIR7ZQI0W4",
+        "text": "Worked great up until the other night, it just stopped working",
+        "date": "Reviewed in the United States on March 16, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Just stopped working after a few months of installing",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "RN9SXFBPVJQ1H",
+        "text": "Easy to install, good price, overall I was very happy -- except one completely died right after the return window. I switched every other part of the circuit, but it's really the switch. In the end I re-installed the old fashioned non-wifi-connected switch. Too bad.",
+        "date": "Reviewed in the United States on February 9, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Bought two, one died in 2 months",
+        "userName": "andre",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R31OJIXIE4ODCQ",
+        "text": "Every switch and plug in my home is a smart one and have been for years. Insteon was the best ubtil they went under and the hub failed, causing me to replace ALL of my wall switches at once. Given the expense of the mass replace, I tried the treatlife switches. I liked them, except for the fact they had a failure rate of about 50% after just a couple of weeks. I then went to Kasa/TP-Link - reliable, easy to install, but the dimmers only dim in about 5 increments and can be erratic. So, when I decided to replace my last non-smart wall dimmer switch (I had held off because it is a toggle switch and it shares a box and double wall plate with 2 other toggle switches, which are together, but one on top of the other, requiring a special wall plate So, not wanting to buy a hub for just one switch, I went with this one, apparently from SmartLife/Tuya. As my house is entirely \"smart\", I've gained extensive experience at the installation of all switches, plugs and devices. Plus, I have a 1.2 gig internet connection with unbelievable wifi. This new switch was to be installed within about 4 feet of my router. Of course, it required it's own SmartLife app. First problem/concern arose when I went to use the app to install it and the toggle dimmer was not listed in the app, only the paddle dimmer and they are vastly different, such as the paddle dimmer has a reset button, whiule the toggle dimmer doesn't. Anyway, got it wired easily enough, but then went to program it. First, the switch was almost impossible to get into pairing mode and would keep dropping out of pairing mode. The instructions then made some reference to using two cell phones and setting up a mobile hotspot between the two, etc. It aslo referred to having to perform a reset, using the non-existent reset button and getting the switch to flash blue, which it wouldn't- only orange. The written instructions do not match the app, the app deosn't match the switch, the whole thing is pure junk. All other swirtches have taken maybe 10 minutes to completely install, program and setup with Alexa. After 2 hours of complete failure, this piece of junk went into the trash, not even worth the time, effort or money to send it back. Have ordered a TreatLife paddle to replace it, hoping I get one of the 50% that don't fail and will be customizing my double faceplate to accommodate it. My advice, stay far away from this junk.",
+        "date": "Reviewed in the United States on January 30, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worse than junk!",
+        "userName": "Chanton",
+        "numberOfHelpful": 11,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R243FH2M434RTU",
+        "text": "I used to buy a ton of these kits for other iPhones, but tried this one for my new iPhone 14. Let me tell you, the application tool lays the screen perfectly (no more dropping it and hoping it lands right). The screen is perfectly applied to your phone using the guided frame and it's a really simply process. Will only be buying these screens from now on.",
+        "date": "Reviewed in the United States on January 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Amazing application tool",
+        "userName": "Graham F.",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3HNWUVWW37C2A",
+        "text": "Installed this switch and now Alexa turns on the office lights!",
+        "date": "Reviewed in the United States on December 21, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works as designed with Alexa",
+        "userName": "Command",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R2MLKYTEWYFG4G",
+        "text": "Bought two of these switches. One was defective because it flashed/strobed when the switch was in the off position. Seller was contacted through Amazon and the seller replaced the defective one very quickly. I will be buying more of these. I have metal cover plates on the switches in my house. I was concerned that the metal cover plates might interfere with the wireless signal. That turned out to be NO problem at all. Once setup, these work great with Alexa.",
+        "date": "Reviewed in the United States on December 4, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switches!",
+        "userName": "LG Correll",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R1TYWBFJQJSNCH",
+        "text": "If you are installing this switch in a multiple gang switch lay out, my case 4 gang switches. The little brown/ivory 6/32 screws that hold the cover on the switch does not line up with the other switches. So the cover is mounted on 3 of the switches but I cannot screw the little screws in the holes they just don’t line up. Now it does come with a single gang new cover. But really quite odd that they would create a special single gang plate to go with their switch instead of installing the treaded holes in the proper location for standard plates.",
+        "date": "Reviewed in the United States on November 23, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Be advised 6/32 holes don’t line up for multiple gang switches",
+        "userName": "meadowdr",
+        "numberOfHelpful": 2,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R17ZI0KC5FRUDE",
+        "text": "I needed a smart toggle 3-way dimmer and this is one of the few available. I was amazed with the functionality built into this switch and the Smart Life integrations! I’ve gotten it to work with my Samsung TV SmartThings, a google home speaker, and an Alexa Firestick remote. Alexa has been the most reliable & fastest integration yet! I’ve also been able to dim LED lights down to 6%! Great bulbs, but amazing the dimmer works that well also. I’ve installed 3 of these now and will probably expand.",
+        "date": "Reviewed in the United States on November 23, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Awesome Wi-Fi Dimmer!",
+        "userName": "derson",
+        "numberOfHelpful": 2,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R2XILJIL8NLDLC",
+        "text": "Works as advertised. Install was harder than it needs to be. If you insert the ground wire more than 1/4\" it blocks the upper faceplate screw. I thought it stripped out and ended up glueing a cut off faceplate screw on the plate. On the next one, the faceplate screw was also blocked. Inspection showed a copper wire protruding through the faceplate screw hole. Backing out the ground wire to make room fixed the issue, but sheesh. You'd think QA would have caught this design flaw.",
+        "date": "Reviewed in the United States on November 10, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "The ground wire can block the upper faceplate screw",
+        "userName": "David Joslin,David Joslin",
+        "numberOfHelpful": 5,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "RPA777BQIH4YU",
+        "text": "Love that this fits in a normal switch plate. The lit switch is helpful. Connected to an existing smart home app and was able to program my porch lights to come on at sunset. Will be buying more of these!",
+        "date": "Reviewed in the United States on October 21, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice switch",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R2C0GVCZN13ZGA",
+        "text": "Used as a regular dimmer switch, not a 3 way. Install and alexa connection went well. A better description of the products operation would have made me feel more secure about my purchase. Would buy again!",
+        "date": "Reviewed in the United States on September 19, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "All around good",
+        "userName": "Toy Man",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3ANB7D8PKDTP9",
+        "text": "I gave it 4 stars for the reason of not being able to setup with Smarthings App though the box claims that the product works with Smarthings but there are no instructions or any literature on how to accomplish that. Tried multiple times to add the switch but all attempts failed. I would have bought more if they would work with Smarthings. They do work with Alexa but you have to use the Smartlife App",
+        "date": "Reviewed in the United States on August 28, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy install, affordable but does not work with Smarthings",
+        "userName": "RB",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R32XMCXFFB2DRO",
+        "text": "I have installed 6 of the light switches all work but 1. It operates find with Alexa but when I turn it off the lights still have a glow to them. So that means electricity is some how going through the switch. If I turn the built in breaker off then my lights turn off completely but why have wifi if that’s the way it works. I have also emailed the company 3 times and no response back! I would give it a five star but the lack of interest of my concern from corporate is very disappointing.",
+        "date": "Reviewed in the United States on August 17, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "It doesn’t shut off",
+        "userName": "melissa edwards",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3D0QZ4K25H1Y5",
+        "text": "First item came used, not working on network. Replaced easily with customer service message. WiFi setup was a breeze with new unit. Works exactly as expected with Alexa integration etc. Would buy again! Keep in mind the module is SLIGHTLY larger than standard toggle switch - use the included switch plate cover that gives a little more room.",
+        "date": "Reviewed in the United States on August 6, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "EXCELLENT Support and Customer Service",
+        "userName": "VJ",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R1KMGRUIM5WCBD",
+        "text": "Took several tries, but works Great",
+        "date": "Reviewed in the United States on July 24, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Alexa friendly",
+        "userName": "D. Sentell",
+        "numberOfHelpful": 2,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R1QNM47F6ATMTO",
+        "text": "The light switch works pretty well. It integrates with Google home quite easily. However, The top face cover screw seems to be obstructed with something after the ground wire is installed. I installed three switches with the same result on each switch.",
+        "date": "Reviewed in the United States on July 21, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Top face cover screw is obstructed when ground wire is installed.",
+        "userName": "Baker",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3A81TEVEAITYH",
+        "text": "I didn't read the info about the switch. The switch looks great for multi-switch application. This switch will not work in single pole mode.",
+        "date": "Reviewed in the United States on June 4, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Definitely 2 switch applications. Will not work single pole application.",
+        "userName": "notebook",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "RN6PG3DH1UO7P",
+        "text": "Switch installed easily. I didn't need the 3way for this application, just the dimming ability and the fact that it wouldn't require a new faceplate. Do not use non dimmable led bulbs as it fried my first switch. Instructions clearly said not to, but I was unsure of the bulbs that were already installed. I purchased new bulbs and a new switch and works well with Alexa and my home assistant tuya integration.",
+        "date": "Reviewed in the United States on June 3, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Working well.",
+        "userName": "Ramondo",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R1CR70QJDGIBNV",
+        "text": "I have one of these installed for a couple years now and it works well for scheduling my front porch light on and off, as well with integration with Alexa. It's installed with an LED bulb in a canister light - it dims easily by holding the switch up or down. In the app or on Alexa, you can adjust it by a %. This version has a different toggle switch, softer movement than the previous one I installed but works the same. I attached it to a on a 3-panel spotlight with built-in LED panels. I had a GE dimmer switch that required an adapter for a light bulb socket - that obviously didn't work. This is able to dim the fixture without any adapters. I did find that the dimmable range is not very broad. The app lets you go from 1-100% but the fixture only dims between 20-50%, anything less than 20% and it will flicker, anything more than 50% and it's already at full brightness. Other bulbs work fine though, so I think it's just the fixture itself. The install, even with a single pole install, requires you to pull and attach a common line (WHITE), but it's nothing too hard, just harder than a plain old light switch. The connection a router is pretty easy using the Smart Life app, I prefer smart devices that use the Smart Life app over Amazon only devices - I find the integration BETTER with NON-Amazon devices for whatever reason. Now I can say \"Alexa, let there be light!\"",
+        "date": "Reviewed in the United States on May 31, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Now I can say \"Alexa, let there be light!\"",
+        "userName": "CLTGUY",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "R3S33WHUF540NQ",
+        "text": "Weird flickering especially at low dimmer settings and when changing dimmer percentage. Also dimmer barely made any difference in brightness. Tried all settings in setup, nothing helped.",
+        "date": "Reviewed in the United States on May 8, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Did not work well with my LED recessed lights",
+        "userName": "Shazamazon",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/9dc44dc9-fab4-4b48-84cc-e8a7c796cbe4/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08T1JBD9P",
+        "productTitle": "Eva Logik Smart Toggle Light Switch, Single Pole & 3 Way, Dimmer, Aluminium Plate, 2.4G WiFi Dimmer Light Switch, Needs Neutral Wire, Works with Alexa/Google Home, No Hub Required, ETL and FCC Listed",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 56,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 681,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 55
+          },
+          "fourStar": {
+            "percentage": 17
+          },
+          "threeStar": {
+            "percentage": 8
+          },
+          "twoStar": {
+            "percentage": 4
+          },
+          "oneStar": {
+            "percentage": 16
+          }
+        },
+        "reviewId": "RQFHFXHKETYKP",
+        "text": "My struggles were not so much caused by the switch as much as my non standard wiring. The switch works fine and is much cheaper than a 3 way system requiring an additional add on switch",
+        "date": "Reviewed in the United States on March 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Customer support is good",
+        "userName": "Auslander",
+        "numberOfHelpful": 0,
+        "variationId": "B08T1JBD9P",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Dimmer Switch"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

@@ -1,0 +1,253 @@
+{
+  "product_title": "ELEGRP 3 Way Toggle Light Switch, 15 Amp, 120 V, Toggle Framed AC Quiet Switch, in Wall On/Off Switch Replacement, Self-Grounding, Residential and Commercial Grade, UL Listed (10 Pack, Glossy White)",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 41,
+  "review_analysis": {
+    "phy": {
+      "construction": {
+        "A@heavy duty construction": {
+          "+": [
+            4
+          ]
+        },
+        "B@well made construction": {
+          "+": [
+            6,
+            9,
+            37
+          ]
+        },
+        "C@substantial feel": {
+          "+": [
+            34
+          ]
+        },
+        "D@thicker plastic around switch": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "toggle_mechanism": {
+        "E@very stiff toggle": {
+          "-": [
+            1,
+            23
+          ]
+        },
+        "F@excessive pressure required to flip": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "wire_connections": {
+        "G@wire insert ports too small": {
+          "-": [
+            9
+          ]
+        },
+        "H@copper plate on screw mounting tab": {
+          "+": [
+            28
+          ]
+        }
+      },
+      "markings": {
+        "I@ON/OFF inscription not easily visible": {
+          "-": [
+            28
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0,
+              10,
+              20,
+              26
+            ]
+          }
+        }
+      },
+      "operation": {
+        "b@works perfectly": {
+          "+": {
+            "?": [
+              14,
+              17,
+              23
+            ]
+          }
+        },
+        "c@no doubt when switch is flipped": {
+          "+": {
+            "E": [
+              1
+            ]
+          }
+        },
+        "d@breaker keeps tripping": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "sound": {
+        "e@loud clicking action": {
+          "-": {
+            "?": [
+              22,
+              31,
+              40
+            ]
+          }
+        }
+      },
+      "durability": {
+        "f@made to last": {
+          "+": {
+            "A": [
+              4
+            ]
+          }
+        },
+        "g@no complaints after extended use": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        }
+      },
+      "force_required": {
+        "h@requires more effort to flip": {
+          "-": {
+            "E": [
+              24,
+              32
+            ]
+          }
+        },
+        "i@takes about 2 lbs pressure vs 4 oz for normal switch": {
+          "-": {
+            "F": [
+              3
+            ]
+          }
+        }
+      },
+      "contact": {
+        "j@making better contact than old switches": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "general_switching": {
+        "+": {
+          "a": [
+            0,
+            10,
+            20
+          ],
+          "b": [
+            14,
+            17
+          ],
+          "?": [
+            5,
+            7,
+            8,
+            11,
+            13,
+            16,
+            18,
+            21,
+            27,
+            30,
+            33,
+            38,
+            39
+          ]
+        },
+        "-": {
+          "d": [
+            19
+          ]
+        }
+      },
+      "house_remodeling": {
+        "+": {
+          "?": [
+            5,
+            8,
+            35,
+            36
+          ]
+        }
+      },
+      "multi-room_lighting_control": {
+        "+": {
+          "?": [
+            6,
+            29
+          ]
+        }
+      },
+      "replacing_old_switches": {
+        "+": {
+          "j": [
+            15
+          ],
+          "?": [
+            8,
+            14,
+            24,
+            35
+          ]
+        }
+      },
+      "farmhouse_installation": {
+        "+": {
+          "B": [
+            6
+          ]
+        }
+      },
+      "dual_entrance_rooms": {
+        "+": {
+          "?": [
+            29
+          ]
+        }
+      },
+      "single_pole_application": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "quiet_switch_application": {
+        "-": {
+          "e": [
+            22,
+            31
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:23.164932"
+}

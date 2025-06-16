@@ -1,0 +1,355 @@
+{
+  "product_title": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0E, Black",
+  "product_category": "LED Optimized Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "switch_mechanism": {
+        "A@breaks_with_minimal_pressure": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "switch_case": {
+        "B@susceptible_to_pressure_from_wires_or_materials": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "slider": {
+        "C@does_not_slide_all_the_way_to_end": {
+          "-": [
+            0
+          ]
+        },
+        "D@smooth_operation": {
+          "+": [
+            45,
+            48
+          ]
+        }
+      },
+      "appearance": {
+        "E@not_matte_black_as_pictured": {
+          "-": [
+            1
+          ]
+        },
+        "F@sleek_design": {
+          "+": [
+            28,
+            29
+          ]
+        },
+        "G@clean_design": {
+          "+": [
+            46
+          ]
+        }
+      },
+      "lever": {
+        "H@larger_lever_size": {
+          "+": [
+            4
+          ]
+        }
+      },
+      "switch_feel": {
+        "I@does_not_feel_expensive": {
+          "-": [
+            44
+          ]
+        },
+        "J@feels_like_quality_product": {
+          "+": [
+            28
+          ]
+        }
+      },
+      "on_off_switch": {
+        "K@quiet_operation": {
+          "+": [
+            46
+          ]
+        }
+      },
+      "depth": {
+        "L@fits_well_in_old_work_boxes": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "capacitor": {
+        "M@has_capacitor_for_current_dampening": {
+          "+": [
+            44
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_functionality": {
+        "a@dims_led_without_flickering_to_lowest_levels": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "b@enables_full_dimming_of_led_bulbs": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@no_flicker_with_led_bulbs": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "d@flickers_with_led_lights": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "e@smooth_even_dimming_with_no_flickering": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "f@flickers_at_middle_dimness": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "g@does_not_dim_all_the_way_down": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "h@does_not_have_good_range_of_dimming": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "i@fine_tuning_adjustments_down_to_very_dim": {
+          "+": {
+            "M": [
+              44
+            ]
+          }
+        },
+        "j@dim_is_night_light_dim_to_full_power": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "k@stops_sliding_and_breaks_under_pressure": {
+          "-": {
+            "A,B": [
+              0
+            ]
+          }
+        },
+        "l@did_not_work": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "m@has_mind_of_its_own_brightness_changes": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "n@becomes_faulty_after_3_months": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "o@works_perfectly": {
+          "+": {
+            "?": [
+              17,
+              28
+            ]
+          }
+        }
+      },
+      "installation": {
+        "p@easy_to_install": {
+          "+": {
+            "?": [
+              7,
+              12,
+              18,
+              19,
+              22,
+              23,
+              26
+            ]
+          }
+        }
+      },
+      "operation": {
+        "q@allows_predetermined_brightness_setting": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "r@smooth_slide_control": {
+          "+": {
+            "D": [
+              45
+            ]
+          }
+        },
+        "s@unique_but_intuitive_operation": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "t@soft_ramp_up_time_eliminates_flickering": {
+          "+": {
+            "M": [
+              44
+            ]
+          }
+        },
+        "u@very_smooth_operation": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "v@works_with_3_way_setup": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "w@works_with_led_setting": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "x@works_with_dimmable_led_bulbs": {
+          "+": {
+            "?": [
+              21,
+              33
+            ]
+          }
+        },
+        "y@no_buzzing_with_led_bulbs": {
+          "+": {
+            "?": [
+              46
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "tight_installation_areas": {
+        "-": {
+          "k": [
+            0
+          ]
+        }
+      },
+      "movie_room_lighting": {
+        "+": {
+          "p": [
+            12
+          ]
+        }
+      },
+      "old_work_boxes": {
+        "+": {
+          "L": [
+            18
+          ]
+        }
+      },
+      "led_outside_light_control": {
+        "+": {
+          "?": [
+            25
+          ]
+        }
+      },
+      "vanity_mirror_lighting": {
+        "+": {
+          "x": [
+            33
+          ]
+        }
+      },
+      "bathroom_two_switch_setup": {
+        "+": {
+          "u,j,y": [
+            46
+          ]
+        }
+      },
+      "general_home_lighting": {
+        "+": {
+          "o,p": [
+            17
+          ]
+        }
+      },
+      "ambiance_adjustment": {
+        "+": {
+          "?": [
+            4
+          ]
+        }
+      },
+      "dinner_lighting": {
+        "-": {
+          "g": [
+            30
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:48.206622"
+}

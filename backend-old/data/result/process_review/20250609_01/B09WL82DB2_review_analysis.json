@@ -1,0 +1,448 @@
+{
+  "product_title": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+  "product_category": "Rotary Knob Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@compact and small": {
+          "+": [
+            24,
+            31
+          ]
+        }
+      },
+      "knob": {
+        "B@large rotary knob": {
+          "+": [
+            1
+          ]
+        },
+        "C@simple dial design": {
+          "+": [
+            7
+          ]
+        },
+        "D@indicator groove on knob is shallow and not visible": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "plug_orientation": {
+        "E@plug orientation reversed by manufacturer": {
+          "-": [
+            1,
+            33,
+            35
+          ]
+        }
+      },
+      "electrical_connection": {
+        "F@no ground connection, only 2 prong": {
+          "-": [
+            11,
+            36
+          ]
+        }
+      },
+      "dial_markings": {
+        "G@dial marked with two arrows instead of gradual crescent": {
+          "-": [
+            31
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "H@definite click sound for OFF setting": {
+          "+": [
+            31
+          ]
+        }
+      }
+    },
+    "perf": {
+      "dimming_functionality": {
+        "a@works great for dimming": {
+          "+": {
+            "?": [
+              0,
+              2,
+              3,
+              5,
+              8,
+              13,
+              16,
+              21,
+              24,
+              28,
+              32,
+              38,
+              41
+            ]
+          }
+        },
+        "b@dims linearly over entire range": {
+          "+": {
+            "B": [
+              1
+            ],
+            "?": [
+              21
+            ]
+          }
+        },
+        "c@only dims 25% not to zero": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "d@dims to about 20% then goes dark": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "e@only dims about 50% before clicking off": {
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        },
+        "f@dims between 10% to 100% brightness": {
+          "+": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "g@works in steps like 25% 50% 75% not smooth": {
+          "-": {
+            "?": [
+              29
+            ]
+          }
+        }
+      },
+      "operation": {
+        "h@smooth operation": {
+          "+": {
+            "C": [
+              7
+            ],
+            "?": [
+              1
+            ]
+          }
+        },
+        "i@easy to use": {
+          "+": {
+            "A": [
+              24
+            ],
+            "?": [
+              32
+            ]
+          }
+        },
+        "j@simple and straightforward": {
+          "+": {
+            "?": [
+              15,
+              31
+            ]
+          }
+        }
+      },
+      "durability": {
+        "k@stopped working after 32 days": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "l@stopped working after a year": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "m@stopped working after few days": {
+          "-": {
+            "?": [
+              14
+            ]
+          }
+        },
+        "n@lasted few weeks then died": {
+          "-": {
+            "?": [
+              42
+            ]
+          }
+        },
+        "o@stopped working after 1 month": {
+          "-": {
+            "?": [
+              43
+            ]
+          }
+        },
+        "p@broke after couple days": {
+          "-": {
+            "?": [
+              49
+            ]
+          }
+        },
+        "q@became faulty after few months": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "r@working fine after 4 months": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "electrical_issues": {
+        "s@flickers at full power": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "t@lights occasionally blink off-on": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "u@maximum output 10 volts lower than input": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "v@makes scary noises": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "w@causes buzzing noise in fan motor": {
+          "-": {
+            "?": [
+              44,
+              45
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "x@doesn't work with energy saving LED bulbs": {
+          "-": {
+            "?": [
+              29,
+              46
+            ]
+          }
+        },
+        "y@works with some LEDs": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "z@works with incandescent bulbs": {
+          "+": {
+            "?": [
+              30,
+              34
+            ]
+          }
+        },
+        "aa@requires dimmable compatible bulbs": {
+          "-": {
+            "?": [
+              29,
+              48
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "fan_speed_control": {
+        "+": {
+          "a": [
+            0,
+            12,
+            17,
+            18,
+            19,
+            22
+          ]
+        }
+      },
+      "under_cabinet_LED_lighting": {
+        "+": {
+          "a,b": [
+            1
+          ]
+        }
+      },
+      "curio_cabinet_lighting": {
+        "+": {
+          "a": [
+            2
+          ]
+        }
+      },
+      "portrait_light_dimming": {
+        "+": {
+          "a": [
+            3
+          ]
+        }
+      },
+      "bathroom_nightlight": {
+        "+": {
+          "a": [
+            5
+          ]
+        }
+      },
+      "floor_lamp_brightness_control": {
+        "+": {
+          "a": [
+            8
+          ]
+        }
+      },
+      "older_non_3way_lamps": {
+        "+": {
+          "a": [
+            9
+          ],
+          "s": [
+            9
+          ]
+        }
+      },
+      "stove_fan_control": {
+        "-": {
+          "?": [
+            11
+          ]
+        }
+      },
+      "Christmas_tree_lights": {
+        "+": {
+          "a": [
+            13
+          ],
+          "p": [
+            49
+          ]
+        }
+      },
+      "video_studio_sconce_lighting": {
+        "+": {
+          "a,j": [
+            16
+          ]
+        }
+      },
+      "dining_table_light_rental_solution": {
+        "+": {
+          "a,b": [
+            21
+          ]
+        }
+      },
+      "general_light_dimming": {
+        "+": {
+          "a": [
+            24,
+            26
+          ]
+        }
+      },
+      "halogen_puck_light": {
+        "-": {
+          "u": [
+            25
+          ]
+        }
+      },
+      "hot_pot_heat_control": {
+        "+": {
+          "a": [
+            31
+          ]
+        }
+      },
+      "light_strip_control": {
+        "+": {
+          "a,i": [
+            32
+          ]
+        }
+      },
+      "low_wattage_incandescent_lamps": {
+        "+": {
+          "d": [
+            34
+          ]
+        }
+      },
+      "LED_rope_light": {
+        "+": {
+          "d": [
+            34
+          ]
+        }
+      },
+      "lava_lamp": {
+        "-": {
+          "n": [
+            42
+          ]
+        }
+      },
+      "lamp_control": {
+        "+": {
+          "a": [
+            44
+          ]
+        }
+      },
+      "fan_control": {
+        "-": {
+          "w": [
+            44,
+            45
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:12:29.058052"
+}

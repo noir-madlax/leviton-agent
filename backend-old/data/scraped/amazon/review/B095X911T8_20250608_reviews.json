@@ -1,0 +1,2541 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:04:06.729587",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B095X911T8",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B095X911T8",
+    "title": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+    "brand": "Amazon",
+    "model_number": NaN,
+    "price_usd": 15.09,
+    "rating": 4.3,
+    "reviews_count": 5959.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B095X911T8"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R16JMQDQSM127Q",
+        "text": "Easy install and setup with Alexa.",
+        "date": "Reviewed in the United States on June 6, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "Robert Shankel",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2IMRFLVTHGE0C",
+        "text": "This wish did not work. Perhaps I got a lemon. I’m returning it.",
+        "date": "Reviewed in the United States on May 31, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Perhaps quality control did not catch this switch before packing by manufacturer",
+        "userName": "Texel",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R29QHA128FYSNC",
+        "text": "They do the job at a value price. Quality control could use some help. The 2 smart switches in the photo are this product. We worked hard to make them look the same, to no avail. It’s not a switch I have to look at regularly so we will keep them.",
+        "date": "Reviewed in the United States on May 30, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Do the job @ value price / quality control is meh",
+        "userName": "VMar",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61vE7fkwPrL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2LENKGFP41CNH",
+        "text": "Junk! Dead on arrival! Wired correctly and still dead.",
+        "date": "Reviewed in the United States on May 29, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dead On Arrival",
+        "userName": "M. L. Bush",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1UJ1HN6CYJAZ7",
+        "text": "I use this outlet to power my landscape light transformer. You can set the lights to go on and off at dusk and dawn or whenever you please with the Alexa app. Perfection!",
+        "date": "Reviewed in the United States on May 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great for my landscape lights.",
+        "userName": "Michael F",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R274XTXKM3X11O",
+        "text": "Easy installation and fast setup with Alexa. Works great. I am happy I bought it.",
+        "date": "Reviewed in the United States on May 22, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install and fast setup",
+        "userName": "Alamgir Hossain",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3QQLN1UPYTYS3",
+        "text": "I read some negative reviews on this item, and I was a bit surprised at some of the comments. This switch was super easy to install, and as soon as I powered it up, Alexa discovered and configured it. On the electrical side of the install you need to be able to turn off the breaker in the panel, remove the old switch, connect the wires, and screw the switch into the wall box - this is a process that you’ll need to do with any switch. It’s a great product, and it reasonably priced. 5 STARS!",
+        "date": "Reviewed in the United States on May 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product",
+        "userName": "Doug",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R36UYFI6XCTDY0",
+        "text": "Instability like no other! Constantly disconnects then reconnects to the WiFi when it decides to. This is unreliable so it leads me to being unable to reliably use my automation. My router is properly set up and is <1 year old so I know it's not my router having these issues.",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Unstable Connection to WiFi",
+        "userName": "Zach",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RYQFT89KGXHU0",
+        "text": "It worked fine while it worked. Like a lot of Amazon branded products it doesn't last long.",
+        "date": "Reviewed in the United States on May 12, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "It works but be prepared to replace it every 10 months.",
+        "userName": "CJK",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2G0VCXLRJNNF9",
+        "text": "Sent it back was not easy to use",
+        "date": "Reviewed in the United States on April 23, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Did not work as it was suppose to",
+        "userName": "Mike Kessler",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1FDF68GFFVVOO",
+        "text": "It's very convenient to have it. Easy to install",
+        "date": "Reviewed in the United States on April 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Faye",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1J6S3EQB832R5",
+        "text": "Easy to install and connect .",
+        "date": "Reviewed in the United States on April 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to get and install",
+        "userName": "richard o'shields",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2IMCZOX61UZ6H",
+        "text": "This is cheap and easy to install, but garbage. With standard LED light bulbs, it will slightly dim then brighten them about every 10-15 seconds. When I tell Alexa to wake me up at a certain time, it will often turn these lights on by itself. It also randomly turns the lights off. Absolute waste of money and will be replaced asap.",
+        "date": "Reviewed in the United States on April 19, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Junk. Has a mind of its own.",
+        "userName": "Ian H",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1EUNVDZC10XBD",
+        "text": "Switch died after 1 month and 2 days (stuck in the \"on\" position and won't turn off), and it was a real battle to get a refund. I still have to hire an electrician to come take out the broken switch. Update: about a month later, while I was on vacation, my AT&T internet went out for about 3 days. When I got home, 5 of the 7 switches I had were also \"dead\" (I couldn't turn them off or on at the switch). Thankfully I was able to reset them by resetting the main breaker to the circuits these switches were on, but that is totally unacceptable to have to turn off the power to be able to use these as \"dumb\" switches. If this keeps happening, I'm going to need to hire an electrician again to come take all these pieces of junk out, and replace with some better smart switches. I'm really disappointed because I always thought the Amazon Basic brand was pretty good. I can't really recommend these switches to anyone. Would give 0 stars if I could.",
+        "date": "Reviewed in the United States on April 15, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broke after 1 month.",
+        "userName": "Texan",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RHNNHSYZQ1RXL",
+        "text": "Switch was broken and doesn’t work.",
+        "date": "Reviewed in the United States on April 9, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Arrived broken",
+        "userName": "PLO",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2HHHG9KCUF2DF",
+        "text": "Buggy. Compared to the other brands, this has reception issues. Disconnects periodically.",
+        "date": "Reviewed in the United States on April 1, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Buggy",
+        "userName": "Patrick L.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2TDYX9JJZEDSG",
+        "text": "It requires four wires in your light switch box your gang box I run the power to my light, then drop one wire down to the switch. This does not work for me.",
+        "date": "Reviewed in the United States on March 28, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Must have four wires in your gang box for your light switch",
+        "userName": "larry lambert",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3TDXMYZ9OPAH7",
+        "text": "Ordered four seemed ok, easy install, worked fine. Now, after 5 months one failed. 1 year warranty but amazon has an issue replacing. Took a while with manager but eventually gave me a refund. I will see how long the others will last.",
+        "date": "Reviewed in the United States on March 27, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "25% fail rate so far",
+        "userName": "Avspin",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R13UIJ4B0KTXG8",
+        "text": "East to install and work great. Note: You MUST have the 3rd neutral wire.",
+        "date": "Reviewed in the United States on March 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best value in smart wall swtches.",
+        "userName": "Pat Martin",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R14GDK1148BR2Y",
+        "text": "I made it work on a 3 wires set up Green and white wires( smart switch) to the copper wire(house) black wire( smart switch) to Black wire (hot wire) from house Red wire ( smart switch) to white wire ( load wire from the house)",
+        "date": "Reviewed in the United States on March 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works on 3 wires set up",
+        "userName": "dops",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/eb0e2def-a677-4484-b53b-15be659cb576/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2S52IUD39OGGL",
+        "text": "From a guy that doesn’t do electrical work, this was pretty easy to install. Now when my wife reminds me I forgot to shut off the light I can just tell Alexa to do it.",
+        "date": "Reviewed in the United States on March 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy installation",
+        "userName": "Kurt R",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2FYHKP9MT74R7",
+        "text": "For some reason this switch gets a bad reputation and I have no idea why. This was my 4th smart switch and the only one that’s never given me an issue. I run a high network Asus Mesh network and when I replaced it I was worried even with the tri-channel I’d have issues connecting to the 2.4ghz network. Connected flawlessly and I’ve never had a single issue with it. Even after nearly 2 years. It’s been connected and running its routine with no issues. I honestly think the people that have issues either has a 5ghz network only, a cheap “smart” network that isn’t picking up 2.4ghz or didn’t install it correctly. It’s been the only smart switch that I’m willing to order.",
+        "date": "Reviewed in the United States on March 11, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "When installed correctly with proper network settings. WORKS GREAT!",
+        "userName": "Carl",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2DPWJBL8J7DYO",
+        "text": "The information about this product doesn't make clear that you have to have Alexa and an iPhone to install this timer. If you have an Android phone, you are out of luck.",
+        "date": "Reviewed in the United States on March 4, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "You need an iPhone to install.",
+        "userName": "So. Cal. Bill",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RRCOONNPJ95US",
+        "text": "Dead simple setup, works as described, Alexa compliant!",
+        "date": "Reviewed in the United States on February 20, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple !",
+        "userName": "JD Smith",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3KJU8NQ3AH9ZU",
+        "text": "Constantly lost WiFi signal and have to reconnect it to WiFi Dimmer switches cannot handle 12 led ceiling lights. Will work well for the first month and then a constant nightmare.",
+        "date": "Reviewed in the United States on February 19, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Not dependable switches",
+        "userName": "Denny",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1U3T6P1GLWY62",
+        "text": "Use this to control outside lighting. Lets me turn the lights on/off in multiple locations using Alexa.",
+        "date": "Reviewed in the United States on February 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "TimPwk",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3CVVFBG068TXF",
+        "text": "I love these switches! Have about 10 in the house. They connect automatically to alexa and can be controlled from anywhere. You can also create routines for the lights to go on on and off on a schedule. Easy to wire ( black is power and red goes to the fixture) a little bit more space is needed in the box for the extra wire- in an exostong box, you need to work carefully amd smartly. In a new box, easier just to get a bigger box from the beginning. A plus in my book",
+        "date": "Reviewed in the United States on February 16, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love these things",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2LNT7E0E9G6HZ",
+        "text": "I installed one of these in a four gang configuration. Unfortunately, the Amazon basics product is only made to be used with the one gang configuration. I had to shove my four gang switch cover onto the four gang switch cover holder because the Amazon basics switch is much thicker than a normal switch. Notice the gap in the picture where the Amazon basic switch is located. The gap is because of the thickness of the Amazon Basics product. If you plan on installing this in a two or more gang switch cover configuration, you may want to go with a different product. The product receives five stars as a singular installation.",
+        "date": "Reviewed in the United States on February 15, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Only made to work with 1 gang Amazon switch cover",
+        "userName": "Semaj",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/6106UQszaoL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/614fLa6xYKL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61MJOZgjkiL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61cgPOxtWWL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3VMOWN0TTF587",
+        "text": "Works great with my alexa as described.",
+        "date": "Reviewed in the United States on February 9, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Going to by more in the future.",
+        "userName": "BobbyD",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R4KZCXVVB4L3Y",
+        "text": "These things now have THICK plastic tabs to attach to the box. Normal decora cover plates no longer work on them. This is a horrible design.",
+        "date": "Reviewed in the United States on February 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Where did the thin metal tabs go?",
+        "userName": "ashoplab",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3PVFM616WX4B",
+        "text": "Simple install and setup , highly recommend",
+        "date": "Reviewed in the United States on February 2, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple and effective",
+        "userName": "Jon",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1JAONI2U0JU82",
+        "text": "Quite easy to install and functions as promised with Alexa. No regrets with the 5 switches in use and still functioning at 4 months in .",
+        "date": "Reviewed in the United States on January 28, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Not Z wave",
+        "userName": "loveXhate",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R253BHCMIN604W",
+        "text": "It seems to work great as a standalone unit or for a single owner. But if you have an Amazon household setup and you need to share devices with them, this will not work. For some reason they sent this to Market without adding an ability to share the device with others in a single household. For me that is a huge problem so I will not be using this as an alternative to the Kasa switches and others which can be shared by linking with third-party skills. Come on amazon, get this working with a connected household!",
+        "date": "Reviewed in the United States on January 16, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Can not be remotely shared with other household members",
+        "userName": "Spicy Mikey",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3EN5F1EP7YAB4",
+        "text": "The product was easy to install and connected it self",
+        "date": "Reviewed in the United States on January 13, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Josh",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RJVMFKBQRM897",
+        "text": "These switches are total s*** I bought three of them and within 3 months all three of them failed they're worthless crap don't buy them under any circumstances.... and I only had some low amperage LED lights attached to them so they weren't overloaded or anything they're just total crap they all failed in the same way",
+        "date": "Reviewed in the United States on January 7, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "100% failure rate three switches all failed within 3 months",
+        "userName": "Michael Motter",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R26TTOJ46X2LD3",
+        "text": "I've seen a few reviews stating they have issue with the switch not working properly with routines and or it stating not responding. I had the same issue, but I found my router to be the issue. If you have a lot of wifi devices these switches tend to not be handled good by a cheap router. Check your router device capacity. I upgraded to a mesh and made a world of a difference. My household has about 80 devices connected to wifi at any given time. Only time these switches don't work is when my internet goes out. I have about 30 of these switches, ranging from 3 way, dimmable and single pole. All work without a flaw and respond perfectly to routines. Highly recommend.",
+        "date": "Reviewed in the United States on January 5, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Having issues with routines and or \"not responding\" on Alexa app? Read my review",
+        "userName": "Jake FSF",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2DK7UUT56TEWW",
+        "text": "The switch was easy to install, and worked immediately with the Alexa app. I really like that it works directly with Alexa app without the need for a third party app.",
+        "date": "Reviewed in the United States on January 4, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works directly with Alexa app",
+        "userName": "DudeFromTX",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1IAJXQ4QIOR6F",
+        "text": "Was easy to install and link.",
+        "date": "Reviewed in the United States on December 12, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Worked as described",
+        "userName": "CoachK",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1XY3LI2BGZJ5",
+        "text": "Works fine and easy to connect but one of the three I purchased died after a year.",
+        "date": "Reviewed in the United States on December 9, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Switch died after a year",
+        "userName": "A.",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1NOGF21YRKENK",
+        "text": "This switch is close to my router and most of the times have problems connecting to wifi.",
+        "date": "Reviewed in the United States on December 8, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Connectivity issues",
+        "userName": "R.Jag",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "RF0VEGU0NOPUN",
+        "text": "It’s was a single pole switch and was easy to hook up and connect to Alexa. I will buy more after a short trial run.",
+        "date": "Reviewed in the United States on December 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works very well.",
+        "userName": "Tonyray911",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1XKMR9HI2JAMZ",
+        "text": "I installed the switch, and it is close to both the Alexa and the Router! When you turn on the light via Alexa, it takes about 30 seconds to turn on or off, and I constantly receive a message that the device is not communicating! I do not recommend this switch!",
+        "date": "Reviewed in the United States on December 6, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Poor communication with Alexa",
+        "userName": "Rogério Vinicius Pinesso",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3L6XINER0OEHT",
+        "text": "This product was easy to install. I watched the video, followed the instructions and voila! Voice activated lights in the den. Also if you’re not on speaking terms with Alexa, the switch works manually. Good product!",
+        "date": "Reviewed in the United States on December 1, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Be sure the wiring in the switch location is adequate",
+        "userName": "Michael R",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2GWA7UJCV174T",
+        "text": "The smart switch was working fine until we had a power outage. Once the power came back on, this was the only smart switch that did not work. There was power to the switch because the indicator light was on, but it would not turn on the light it was connected to. The other switches next to this one worked fine. I tried resetting the switch, but it would not reset. I removed the Amazon Basics smart switch and installed a regular switch. The connected light turned back on with the regular switch. This was the only Amazon Basics smart switch I had installed in the house while all the other ones were the Feit smart switches. There were no problems with the Feit switches when the power came back on.",
+        "date": "Reviewed in the United States on November 23, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Okay until the first power outage",
+        "userName": "Joker592250",
+        "numberOfHelpful": 2,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1Z4B6XYDSDATJ",
+        "text": "Easy to install and setup. But after 3 weeks it began to come on at random times. It appears to be a software issue as it seems to come on when Alexa is activated announcing motion at various cameras installed inside and outside of our home or when the internet has a momentary flash off then on. Ordering another brand product.",
+        "date": "Reviewed in the United States on November 21, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Comes on at Random",
+        "userName": "J&WB",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R3JJQUIPH4MT1T",
+        "text": "Its a bit slow on the app but with alexa comands are pretty fast",
+        "date": "Reviewed in the United States on November 16, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Easy to install",
+        "userName": "Johnny",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1BDM5OA93XLU8",
+        "text": "I installed all three switches in diverse locations. Then connected them to Alexa and created a daily sunrise sunset lights on/off routine on our perimeter lights to work in conjunction with our outdoor Blink security cameras. A terrific system.",
+        "date": "Reviewed in the United States on November 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easily Automated outdoor security lights",
+        "userName": "E. Bonny",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1H9FV0ZL1QA18",
+        "text": "I bought two. They're working well. I wish there was a little more flexibility with programming to make the house look occupied when I'm away.",
+        "date": "Reviewed in the United States on November 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to program",
+        "userName": "wjm2222",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R1MOM3A6UWQDK0",
+        "text": "Don’t sell something that’s only compatible with one smart device",
+        "date": "Reviewed in the United States on November 10, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Incompatible",
+        "userName": "Billy",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B095X911T8",
+        "productTitle": "Amazon Basics Smart Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 585,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 5966,
+        "productRating": "4.3 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 68
+          },
+          "fourStar": {
+            "percentage": 14
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 8
+          }
+        },
+        "reviewId": "R2JP6GQ0C0NRWZ",
+        "text": "Read title",
+        "date": "Reviewed in the United States on November 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Could have used better instructions",
+        "userName": "Michael Cama",
+        "numberOfHelpful": 0,
+        "variationId": "B095X911T8",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Single Pole"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

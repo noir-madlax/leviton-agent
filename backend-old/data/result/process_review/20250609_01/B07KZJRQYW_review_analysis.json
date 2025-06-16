@@ -1,0 +1,488 @@
+{
+  "product_title": "Maxxima LED Slide Dimmer Rocker Switch - 3-Way/Single Pole Compatible, Decorative Electrical Light Switch, 600 Watt Max, LED Compatible for Indoor Home Use, Wall Plate Cover Included - Ivory",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 37,
+  "review_analysis": {
+    "phy": {
+      "Slider mechanism": {
+        "A@Slider sticks on the left (low) side and is difficult to move right": {
+          "-": [
+            7
+          ]
+        },
+        "B@Horizontal light intensity slide is extremely convenient": {
+          "+": [
+            32
+          ]
+        },
+        "C@Sliding dimmer switch design is liked": {
+          "+": [
+            19
+          ]
+        },
+        "D@Slider separate from other controls": {
+          "+": [
+            33
+          ]
+        }
+      },
+      "Rocker switch mechanism": {
+        "E@Small ball with spring allowing toggling of metal contactor rocker comes loose with normal use": {
+          "-": [
+            17
+          ]
+        },
+        "F@Rocker switch mechanism is poorly designed": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "Adjustment wheel": {
+        "G@Low limit adjustment wheel allows setting lowest level for custom range": {
+          "+": [
+            9
+          ]
+        },
+        "H@Second adjustment helps with dimming range": {
+          "+": [
+            24
+          ]
+        },
+        "I@Fine tuning adjustment on top of brightness adjustment": {
+          "+": [
+            35
+          ]
+        },
+        "J@Adjustable minimum brightness setting": {
+          "+": [
+            31
+          ]
+        }
+      },
+      "Color/Appearance": {
+        "K@Ivory color is actually almond and almond is really ivory": {
+          "-": [
+            5
+          ]
+        },
+        "L@Neither ivory nor almond colors match existing switches": {
+          "-": [
+            6
+          ]
+        },
+        "M@Looks good": {
+          "+": [
+            10,
+            19
+          ]
+        }
+      },
+      "Size/Fit": {
+        "N@Fits next to GFI outlet in two gang box": {
+          "+": [
+            9
+          ]
+        },
+        "O@Size with wires easily fit in connection box": {
+          "+": [
+            32
+          ]
+        }
+      },
+      "Included components": {
+        "P@Comes with dimmer plate": {
+          "+": [
+            5
+          ]
+        },
+        "Q@Did not come with plate screws": {
+          "-": [
+            5
+          ]
+        },
+        "R@Comes with all wireless connectors needed": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "Build quality": {
+        "S@Well made": {
+          "+": [
+            10
+          ]
+        },
+        "T@Good quality": {
+          "+": [
+            14,
+            22,
+            25,
+            26
+          ]
+        },
+        "U@Low quality switch": {
+          "-": [
+            7
+          ]
+        },
+        "V@Seems sturdier than previous switch": {
+          "+": [
+            34
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Installation ease": {
+        "a@Very easy install, less than 15 minutes total": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "b@Easy to install": {
+          "+": {
+            "?": [
+              8,
+              10,
+              14,
+              15,
+              22
+            ]
+          }
+        },
+        "c@Straight forward install": {
+          "+": {
+            "?": [
+              11
+            ]
+          }
+        },
+        "d@Works well and easy to install": {
+          "+": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "e@Works perfectly": {
+          "+": {
+            "?": [
+              0,
+              15,
+              30
+            ]
+          }
+        },
+        "f@Did not work": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "g@Works great": {
+          "+": {
+            "?": [
+              10,
+              28,
+              31
+            ]
+          }
+        },
+        "h@Works as expected": {
+          "+": {
+            "?": [
+              22,
+              26
+            ]
+          }
+        }
+      },
+      "LED compatibility": {
+        "i@Didn't work to keep LED bulbs from flickering": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "j@Not compatible with high quality wifi color LEDs": {
+          "-": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "k@Doesn't cause LED lights to flicker": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "l@No flicker in LED lights": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "m@Made LED bulbs strobe": {
+          "-": {
+            "?": [
+              21
+            ]
+          }
+        },
+        "n@Both dimmers flicker with LED bulbs": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "o@Not very LED friendly": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "p@Fixed flickering LEDs issue": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "q@Had limited range in dimming with LED lamps": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "Dimming performance": {
+        "r@Lights flicker when activated": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "s@Dims bulbs smoothly down to nothing": {
+          "+": {
+            "G": [
+              9
+            ]
+          }
+        },
+        "t@Light fixture flickers randomly throughout the day": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "u@LEDs buzz when ON and flicker when dimmed": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "v@Regular 120v AC LED bulbs flicker when dimmed and buzz when fully powered": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "w@No flickering with proper dimmable LEDs": {
+          "+": {
+            "?": [
+              18
+            ]
+          }
+        },
+        "x@No amount of adjustment eliminates flickering except full on position": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "y@LEDs only dim about 2/3 before shutting off": {
+          "-": {
+            "H": [
+              24
+            ]
+          }
+        },
+        "z@Causes LEDs to buzz in 3k to 1k hertz range when dimmed": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "aa@Dimmer cuts out on bright end": {
+          "-": {
+            "?": [
+              27
+            ]
+          }
+        },
+        "ab@Dims large range smoothly": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "ac@Light does not come on when dimmed to desired level": {
+          "-": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "ad@Did not adjust to full brightness": {
+          "-": {
+            "?": [
+              36
+            ]
+          }
+        }
+      },
+      "Electrical performance": {
+        "ae@No Radio Frequency Interference beyond 18 inches": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "af@When dimmed to 30-35% brightness, lights will not come on next time": {
+          "-": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "ag@Rocker switch mechanism failed with very little use": {
+          "-": {
+            "E": [
+              17
+            ]
+          }
+        },
+        "ah@ON/OFF function defeated with normal use": {
+          "-": {
+            "E": [
+              17
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "General lighting control": {
+        "+": {
+          "a,e": [
+            0
+          ],
+          "b,g": [
+            10
+          ],
+          "c": [
+            11
+          ],
+          "b,h": [
+            22
+          ],
+          "h": [
+            26
+          ],
+          "g": [
+            28
+          ]
+        }
+      },
+      "LED lighting applications": {
+        "-": {
+          "i,j": [
+            2
+          ],
+          "m": [
+            21
+          ],
+          "n": [
+            23
+          ],
+          "o,y,z": [
+            24
+          ],
+          "q,ad": [
+            36
+          ]
+        },
+        "+": {
+          "k,l": [
+            12
+          ],
+          "w": [
+            18
+          ],
+          "p,ab": [
+            33
+          ]
+        }
+      },
+      "Kitchen lighting": {
+        "-": {
+          "af": [
+            13
+          ]
+        }
+      },
+      "Bathroom lighting": {
+        "-": {
+          "ac": [
+            34
+          ]
+        }
+      },
+      "Can lighting": {
+        "+": {
+          "d,j": [
+            31
+          ]
+        }
+      },
+      "House renovation/updating": {
+        "+": {
+          "?": [
+            32
+          ]
+        }
+      },
+      "Night time dimming": {
+        "-": {
+          "ac": [
+            34
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:01:39.035934"
+}

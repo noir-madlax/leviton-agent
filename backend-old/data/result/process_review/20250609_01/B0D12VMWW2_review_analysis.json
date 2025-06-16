@@ -1,0 +1,424 @@
+{
+  "product_title": "AIDA Toggle Slide Dimmer Switch for Dimmable LED Light/CFL/Incandescent 600 Watt max, Single-Pole or 3-Way, Rocker On/Off Wall Switch with Dimmer Slider, Wall Plate NOT Included, UL Listed, 1 Pack",
+  "product_category": "Toggle Style Dimmer Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "plastic flip switch": {
+        "A@plastic flip switch falls out": {
+          "-": [
+            1
+          ]
+        }
+      },
+      "dimensions": {
+        "B@narrower than most other switches": {
+          "+": [
+            9
+          ]
+        },
+        "C@smaller than other brands": {
+          "+": [
+            11
+          ]
+        },
+        "D@shallow and doesn't take up much room": {
+          "+": [
+            29
+          ]
+        },
+        "E@takes up less space in small switch box": {
+          "+": [
+            38
+          ]
+        },
+        "F@unit dimensions were given": {
+          "+": [
+            17
+          ]
+        }
+      },
+      "appearance": {
+        "G@looks like simple on/off light switch": {
+          "+": [
+            28
+          ]
+        },
+        "H@toggle style": {
+          "+": [
+            29
+          ]
+        },
+        "I@dimmer switch is barely visible": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "construction": {
+        "J@sturdy metal construction": {
+          "+": [
+            44
+          ]
+        },
+        "K@nice quality feel": {
+          "+": [
+            47
+          ]
+        },
+        "L@decent construction": {
+          "+": [
+            46
+          ]
+        },
+        "M@very sturdy front plate": {
+          "+": [
+            39
+          ]
+        }
+      },
+      "wire connectors": {
+        "N@wires not secure in plug-in connectors": {
+          "-": [
+            9
+          ]
+        },
+        "O@easy push in design to eliminate wire nuts": {
+          "+": [
+            46
+          ]
+        },
+        "P@premium wire screw downs": {
+          "+": [
+            47
+          ]
+        },
+        "Q@wire clamps already open and ready": {
+          "+": [
+            48
+          ]
+        }
+      },
+      "screws": {
+        "R@unable to loosen screws that secure wires": {
+          "-": [
+            7
+          ]
+        },
+        "S@wires can be removed by loosening side screw": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "dimmer slider": {
+        "T@dimmer slider is wider than typical": {
+          "+": [
+            47
+          ]
+        },
+        "U@slider adjustment independent of toggle": {
+          "+": [
+            29
+          ]
+        }
+      },
+      "mechanism": {
+        "V@smooth mechanism": {
+          "+": [
+            39
+          ]
+        },
+        "W@makes slight audible click when switched": {
+          "+": [
+            34
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@lasted about 3 months": {
+          "-": {
+            "A": [
+              1
+            ]
+          }
+        },
+        "b@worked about two weeks and quit": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "c@stopped working one week after return date": {
+          "-": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "d@one was defective": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        }
+      },
+      "flickering": {
+        "e@flickers once every 4 or 5 minutes": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "f@some lights flicker, some don't": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "g@no flickering": {
+          "+": {
+            "?": [
+              9,
+              15,
+              33,
+              44
+            ]
+          }
+        },
+        "h@loads of flickering with remote sockets": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "dimming performance": {
+        "i@dims lights from bright to completely off": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "j@brings lights from bright down to whisper": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "k@transitions smoothly to different brightnesses": {
+          "+": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "l@dims lights smoothly": {
+          "+": {
+            "?": [
+              44
+            ]
+          }
+        },
+        "m@trouble keeping same low level setting": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "n@light levels not stable with fine oscillation": {
+          "-": {
+            "?": [
+              38
+            ]
+          }
+        }
+      },
+      "switching performance": {
+        "o@switches on and off smoothly": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "p@noticeable delay between flipping switch and lights coming on": {
+          "-": {
+            "?": [
+              48
+            ]
+          }
+        }
+      },
+      "heat generation": {
+        "q@doesn't produce heat": {
+          "+": {
+            "J": [
+              44
+            ]
+          }
+        }
+      },
+      "fitting": {
+        "r@fits easily into multiple wall switch box": {
+          "+": {
+            "B": [
+              9
+            ]
+          }
+        },
+        "s@fit in box nicely": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "t@fits better": {
+          "+": {
+            "C": [
+              11
+            ]
+          }
+        },
+        "u@works great in 3-gang switch box": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        }
+      },
+      "minimum brightness control": {
+        "v@dimming limiting feature doesn't work": {
+          "-": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "w@low level adjuster for LED lights": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "compatibility": {
+        "x@works great with LED lights": {
+          "+": {
+            "?": [
+              15,
+              21
+            ]
+          }
+        },
+        "y@LED-compatible dimmer": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "mood lighting": {
+        "+": {
+          "?": [
+            2
+          ]
+        }
+      },
+      "dining room chandelier": {
+        "+": {
+          "k": [
+            16
+          ]
+        }
+      },
+      "kitchen sink LED track lighting": {
+        "+": {
+          "?": [
+            17
+          ]
+        }
+      },
+      "great room single pole application": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "bathroom LED lights control": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "LED recessed lights in living room": {
+        "+": {
+          "g,l": [
+            44
+          ]
+        }
+      },
+      "faux sky lights": {
+        "+": {
+          "?": [
+            32
+          ]
+        }
+      },
+      "room with 4 recessed LED spotlights": {
+        "+": {
+          "g": [
+            33
+          ]
+        }
+      },
+      "2 LED lights in bathroom": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      },
+      "loft living room with four recessed LEDs": {
+        "+": {
+          "?": [
+            42
+          ]
+        }
+      },
+      "hallway with two controlling switches": {
+        "+": {
+          "?": [
+            46
+          ]
+        }
+      },
+      "thick ceramic wall plates": {
+        "+": {
+          "H": [
+            48
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:03:32.859508"
+}

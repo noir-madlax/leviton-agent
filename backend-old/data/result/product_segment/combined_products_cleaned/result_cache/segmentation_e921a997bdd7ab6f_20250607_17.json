@@ -1,0 +1,28 @@
+{
+  "timestamp": "2025-06-07T17:34:19.289211",
+  "result_type": "segmentation",
+  "cache_key": "e921a997bdd7ab6f",
+  "input_file_path": "/Users/maoc/MIT Dropbox/Chengfeng Mao/JMP/Leviton_Demo/data/processed/combined_products_cleaned.csv",
+  "processing_params": {
+    "input_col": "cleaned_title",
+    "output_col": "product_segment",
+    "product_category": null,
+    "total_products": 512,
+    "model_name": "claude-sonnet-4-20250514",
+    "temperature": 0.15,
+    "batch_size": 40,
+    "seed": 42,
+    "max_retries": 3
+  },
+  "model_config": {
+    "model_name": "claude-sonnet-4-20250514",
+    "temperature": 0.15,
+    "batch_size": 40,
+    "seed": 42
+  },
+  "result_stats": {
+    "total_products": 512,
+    "categories_found": 2,
+    "products_with_segments": 512
+  }
+}

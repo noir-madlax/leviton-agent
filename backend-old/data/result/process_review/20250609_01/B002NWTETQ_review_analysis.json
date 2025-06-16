@@ -1,0 +1,349 @@
+{
+  "product_title": "Leviton 6526-W 15-Amp 120V AC Combination Decora Switch with LED Guide Light, White",
+  "product_category": "Multi-Feature Combination Control Switches",
+  "total_reviews": 49,
+  "review_analysis": {
+    "phy": {
+      "LED lights": {
+        "A@Two LED lights provide illumination": {
+          "+": [
+            1,
+            12,
+            22,
+            48
+          ]
+        },
+        "B@LED lights are visible through the cover": {
+          "-": [
+            22,
+            48
+          ]
+        },
+        "C@LED lights are bright when looked at directly": {
+          "-": [
+            48
+          ]
+        }
+      },
+      "Light sensor": {
+        "D@Has light sensor that turns off nightlight during day": {
+          "+": [
+            11,
+            17
+          ]
+        },
+        "E@Sensor requires a lot of light to keep nightlight off": {
+          "-": [
+            35
+          ]
+        },
+        "F@Sensor sensitivity cannot be adjusted": {
+          "-": [
+            40
+          ]
+        }
+      },
+      "Wiring requirements": {
+        "G@Requires neutral wire connection for nightlight to work": {
+          "+": [
+            6,
+            9,
+            15,
+            19,
+            22,
+            26,
+            29
+          ]
+        },
+        "H@Has colored screws for different wire connections": {
+          "+": [
+            12
+          ]
+        },
+        "I@Does not have push-in wire holes, requires wrapping wires around screws": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "Switch design": {
+        "J@Rocker switch design prevents static shock on metal faceplate": {
+          "+": [
+            34
+          ]
+        },
+        "K@Clean modern appearance": {
+          "+": [
+            27
+          ]
+        },
+        "L@Better appearance than older orange style switches": {
+          "+": [
+            27
+          ]
+        }
+      },
+      "Light cover": {
+        "M@Light cover does not diffuse light well enough": {
+          "-": [
+            48
+          ]
+        },
+        "N@Whitish plate at top of switch houses LEDs": {
+          "+": [
+            12
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Brightness": {
+        "a@Provides perfect amount of light": {
+          "+": {
+            "A": [
+              0,
+              3,
+              14,
+              21,
+              27,
+              37,
+              42
+            ]
+          }
+        },
+        "b@Provides adequate light for navigation": {
+          "+": {
+            "A": [
+              1,
+              6,
+              17,
+              38
+            ]
+          }
+        },
+        "c@Not as bright as expected": {
+          "-": {
+            "A": [
+              5,
+              7
+            ]
+          }
+        },
+        "d@Too bright for bedrooms": {
+          "-": {
+            "A": [
+              43
+            ]
+          }
+        },
+        "e@Very bright illumination": {
+          "+": {
+            "A": [
+              18,
+              31,
+              48
+            ]
+          }
+        },
+        "f@Lower brightness compared to other models": {
+          "+": {
+            "A": [
+              11
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "g@Switch function works properly": {
+          "+": {
+            "?": [
+              16,
+              28,
+              41
+            ]
+          }
+        },
+        "h@Nightlight function does not work": {
+          "-": {
+            "G": [
+              9,
+              16,
+              28,
+              44
+            ]
+          }
+        },
+        "i@LED light turns on/off randomly": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "j@Light sensor activates properly in dark conditions": {
+          "+": {
+            "D": [
+              11,
+              17
+            ]
+          }
+        },
+        "k@Sensor activates with slight shading": {
+          "-": {
+            "E": [
+              35
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "l@No degradation of bulb brightness over time": {
+          "+": {
+            "A": [
+              6
+            ]
+          }
+        },
+        "m@Reliable long-term performance": {
+          "+": {
+            "?": [
+              6,
+              24
+            ]
+          }
+        }
+      },
+      "Installation": {
+        "n@Easy to install": {
+          "+": {
+            "?": [
+              0,
+              1,
+              12,
+              22,
+              26,
+              32
+            ]
+          }
+        },
+        "o@More difficult installation than anticipated": {
+          "-": {
+            "G": [
+              26
+            ]
+          }
+        },
+        "p@Installation requires additional wiring modifications": {
+          "-": {
+            "G": [
+              4,
+              18
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Bathroom nightlight": {
+        "+": {
+          "a": [
+            0,
+            3,
+            8,
+            10,
+            14,
+            21,
+            37,
+            42,
+            47
+          ],
+          "b": [
+            17
+          ]
+        }
+      },
+      "Water closet/toilet area illumination": {
+        "+": {
+          "a": [
+            13,
+            42,
+            46
+          ]
+        }
+      },
+      "Garage lighting": {
+        "+": {
+          "b": [
+            12,
+            20
+          ]
+        }
+      },
+      "Basement stairs safety": {
+        "+": {
+          "a": [
+            29
+          ]
+        }
+      },
+      "Hallway navigation": {
+        "+": {
+          "b": [
+            38
+          ]
+        }
+      },
+      "Dark room switch location": {
+        "+": {
+          "e": [
+            32
+          ]
+        }
+      },
+      "Attic application": {
+        "+": {
+          "f": [
+            11
+          ]
+        }
+      },
+      "Laundry room navigation": {
+        "+": {
+          "?": [
+            34
+          ]
+        }
+      },
+      "Fan switch replacement in bathrooms": {
+        "+": {
+          "e": [
+            47,
+            48
+          ]
+        }
+      },
+      "Dining room night lighting": {
+        "+": {
+          "b": [
+            1
+          ]
+        }
+      },
+      "Bedroom nightlight": {
+        "-": {
+          "d": [
+            43
+          ]
+        }
+      },
+      "Shower/toilet closet with high ambient light": {
+        "-": {
+          "k": [
+            35
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:07.026850"
+}

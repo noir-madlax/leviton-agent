@@ -1,0 +1,277 @@
+{
+  "responseStatus": "PRODUCT_FOUND_RESPONSE",
+  "responseMessage": "Product successfully found!",
+  "countProducts": 30,
+  "products": [
+    {
+      "position": "#1",
+      "salesMovement": null,
+      "productRating": "4.5 out of 5 stars",
+      "countReview": 34098,
+      "url": "/Kasa-Smart-HS220-Certified-Required/dp/B079775ZZQ/ref=zg_bs_g_507840_d_sccl_1/136-0441496-7433865?psc=1",
+      "productTitle": "Kasa Smart Dimmer Switch HS220, Single Pole, Needs Neutral Wire, 2.4GHz Wi-Fi Light Switch Works with Alexa and Google Home, UL Certified, No Hub Required, 1 Pack",
+      "price": 19.98
+    },
+    {
+      "position": "#2",
+      "salesMovement": null,
+      "productRating": "4.5 out of 5 stars",
+      "countReview": 6134,
+      "url": "/Leviton-6674-P0W-SureSlide-Universal-Incandescent/dp/B0076HPM8A/ref=zg_bs_g_507840_d_sccl_2/136-0441496-7433865?psc=1",
+      "productTitle": "Leviton SureSlide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 6674-P0W, White",
+      "price": 14.07
+    },
+    {
+      "position": "#3",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 6806,
+      "url": "/Lutron-dimmable-Incandescent-Single-Pole-AYCL-153P-WH/dp/B006UTQCA2/ref=zg_bs_g_507840_d_sccl_3/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Ariadni/Toggler LED+ Dimmer Light Switch for Dimmable LED, Halogen and Incandescent Dimmer Switch, 150W, Single-Pole/3-Way, AYCL-153P-WH, White",
+      "price": 19.47
+    },
+    {
+      "position": "#4",
+      "salesMovement": null,
+      "productRating": "4.2 out of 5 stars",
+      "countReview": 6009,
+      "url": "/BESTTEN-Universal-Compatible-Incandescent-Decorative/dp/B07S29S7QD/ref=zg_bs_g_507840_d_sccl_4/136-0441496-7433865?psc=1",
+      "productTitle": "BESTTEN 2 Pack Dimmer Light Switch, Universal Lighting Control, Single Pole or 3 Way, Compatible with LED Dimmable Lamp, CFL, Incandescent, Halogen Bulb, Decorator Wallplate Included, UL Listed, White",
+      "price": 16.99
+    },
+    {
+      "position": "#5",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 11432,
+      "url": "/Lutron-dimmable-Incandescent-Single-Pole-DVCL-153P-WH/dp/B004DZOMKC/ref=zg_bs_g_507840_d_sccl_5/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Diva LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, DVCL-153P-WH, White",
+      "price": 30.75
+    },
+    {
+      "position": "#6",
+      "salesMovement": null,
+      "productRating": "4.4 out of 5 stars",
+      "countReview": 6173,
+      "url": "/Kasa-Smart-KIT-SmartThings-KS230/dp/B0BC2MWTR9/ref=zg_bs_g_507840_d_sccl_6/136-0441496-7433865?psc=1",
+      "productTitle": "Kasa Smart 3 Way Dimmer Switch KIT, Dimmable Light Switch Compatible with Alexa, Google Assistant and SmartThings, Neutral Wire Needed, 2.4GHz, ETL Certified, No Hub Required, White (KS230 KIT v2)",
+      "price": 42.99
+    },
+    {
+      "position": "#7",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 2813,
+      "url": "/ELEGRP-Digital-Dimmable-Incandescent-Included/dp/B099RJ2HRN/ref=zg_bs_g_507840_d_sccl_7/136-0441496-7433865?psc=1",
+      "productTitle": "ELEGRP Digital Dimmer Light Switch for 300W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Single Pole/3-Way LED Slide Dimmer, Wall Plate Included, UL Listed, 6 Pack, Matte White",
+      "price": 59.99
+    },
+    {
+      "position": "#8",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 7912,
+      "url": "/Lutron-Wireless-Lighting-PD-6WCL-WH-Assistant/dp/B00KLAXFQA/ref=zg_bs_g_507840_d_sccl_8/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Caseta Original Smart Dimmer Switch (Lutron Smart Hub Required), for LED Lights, 150 Watt, Single-Pole/3-Way, No Neutral Required, PD-6WCL-WH, White",
+      "price": 59.95
+    },
+    {
+      "position": "#9",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 1708,
+      "url": "/ELEGRP-Digital-Dimmable-Incandescent-Included/dp/B094XXG14N/ref=zg_bs_g_507840_d_sccl_9/136-0441496-7433865?psc=1",
+      "productTitle": "ELEGRP Digital Dimmer Light Switch for 300W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Single Pole/3-Way LED Slide Dimmer Light Switch, Wall Plate Included, UL Listed, 10 Pack, Matte White",
+      "price": 89.99
+    },
+    {
+      "position": "#10",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 1783,
+      "url": "/Leviton-DSL06-1LZ-Universal-300-Watt-Incandescent/dp/B00NG0ELL0/ref=zg_bs_g_507840_d_sccl_10/136-0441496-7433865?psc=1",
+      "productTitle": "Leviton Decora Slide Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, DSL06-1LZ, White with Ivory and Light Almond Faceplates",
+      "price": 24.95
+    },
+    {
+      "position": "#11",
+      "salesMovement": null,
+      "productRating": "4.4 out of 5 stars",
+      "countReview": 758,
+      "url": "/Leviton-D26HD-1RW-Required-Assistant-Wire-Free/dp/B0BVKYKKRK/ref=zg_bs_g_507840_d_sccl_11/136-0441496-7433865?psc=1",
+      "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-1RW, White",
+      "price": 35.0
+    },
+    {
+      "position": "#12",
+      "salesMovement": null,
+      "productRating": "4.7 out of 5 stars",
+      "countReview": 506,
+      "url": "/Lutron-Wallplate-Lighting-Required-DVRFW-6L-WH/dp/B0BSHKS26L/ref=zg_bs_g_507840_d_sccl_12/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Diva Smart Dimmer Switch for Caseta Smart Lighting (Lutron Smart Hub Required) w/ Wall Plate, for LED Lights, 150 Watt, Single-Pole/3Way, No Neutral Required, DVRFW-6L-WH-A, White",
+      "price": 73.9
+    },
+    {
+      "position": "#13",
+      "salesMovement": null,
+      "productRating": "4.4 out of 5 stars",
+      "countReview": 433,
+      "url": "/ELEGRP-Digital-Dimmable-Incandescent-Included/dp/B0CTZR6D7J/ref=zg_bs_g_507840_d_sccl_13/136-0441496-7433865?psc=1",
+      "productTitle": "ELEGRP Digital Toggle Dimmer Switch for Dimmable LED, CFL and Incandescent Light Bulbs, Single Pole or 3-Way Toggle LED Dimmer Light Switch, Wall Plate Included, UL Listed, 1 Pack, White",
+      "price": 15.29
+    },
+    {
+      "position": "#14",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 5245,
+      "url": "/Lutron-Incandescent-Single-Pole-Multi-Location-MACL-153M-WH/dp/B008X3CHM0/ref=zg_bs_g_507840_d_sccl_14/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Maestro LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150W/Single-Pole or Multi-Location, MACL-153M-WH, White",
+      "price": 33.75
+    },
+    {
+      "position": "#15",
+      "salesMovement": null,
+      "productRating": "4.8 out of 5 stars",
+      "countReview": 3023,
+      "url": "/Lutron-Wireless-Lighting-P-PKG1P-WH-Assistant/dp/B00JJY1QG0/ref=zg_bs_g_507840_d_sccl_15/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Caseta Smart Lamp Dimmer 3-Way Kit and Pico Remote, for Floor and Table Lamps, for Dimmable LED Lights, 100 Watt, Single-Pole/3-Way, P-PKG1P-WH",
+      "price": 52.99
+    },
+    {
+      "position": "#16",
+      "salesMovement": null,
+      "productRating": "4.4 out of 5 stars",
+      "countReview": 435,
+      "url": "/TREATLIFE-Wireless-Control-Weather-Resistance/dp/B0CHMQW45X/ref=zg_bs_g_507840_d_sccl_16/136-0441496-7433865?psc=1",
+      "productTitle": "TREATLIFE Dimmer Plug with 100FT Wireless Remote Control, IP44 Weather Resistance, Outdoor Dimmer for String Lights, Lamps, Patio Lights, Max Power 400W",
+      "price": 23.99
+    },
+    {
+      "position": "#17",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 5959,
+      "url": "/Amazon-Basics-Single-Neutral-Required/dp/B095X5H16X/ref=zg_bs_g_507840_d_sccl_17/136-0441496-7433865?psc=1",
+      "productTitle": "Amazon Basics Smart Dimmer Switch, Single Pole, Works with Alexa Only, 2.4 GHz Wi-Fi, No Hub Required, White",
+      "price": 19.99
+    },
+    {
+      "position": "#18",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 821,
+      "url": "/TP-Link-Matter-Smart-Dimmer-Switch/dp/B0CBNXTBSY/ref=zg_bs_g_507840_d_sccl_18/136-0441496-7433865?psc=1",
+      "productTitle": "TP-Link Tapo Matter Smart Dimmer Switch: Voice Control w/Siri, Alexa & Google Assistant, UL Certified, Timer & Schedule, Easy Guided Install, Neutral Wire Required, Single Pole, Tapo S505D(2-Pack)",
+      "price": 31.99
+    },
+    {
+      "position": "#19",
+      "salesMovement": null,
+      "productRating": "4.8 out of 5 stars",
+      "countReview": 2510,
+      "url": "/Lutron-3-Button-Wireless-Lighting-PJ2-3BRL-WH-L01R/dp/B00KLAXFQ0/ref=zg_bs_g_507840_d_sccl_19/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Pico Remote for Caseta Smart Dimmer Switch, 3-Button Control with Raise/Lower and Preset Lighting Level, For Table Top or Wallmount Use, PJ2-3BRL-WH-L01R, White",
+      "price": 19.95
+    },
+    {
+      "position": "#20",
+      "salesMovement": null,
+      "productRating": "4.4 out of 5 stars",
+      "countReview": 879,
+      "url": "/Kasa-Smart-KS220P3-Required-Certified/dp/B0BTMWZH3K/ref=zg_bs_g_507840_d_sccl_20/136-0441496-7433865?psc=1",
+      "productTitle": "Kasa Apple HomeKit Smart Dimmer Switch KS220P3, Single Pole, Neutral Wire Required,2.4GHz Wi-Fi Light Works with Siri, Alexa and Google Home,UL Certified, No Hub Required,White, 3 Count (Pack of 1)",
+      "price": 62.99
+    },
+    {
+      "position": "#21",
+      "salesMovement": null,
+      "productRating": "4.2 out of 5 stars",
+      "countReview": 152,
+      "url": "/Amico-Single-Pole-Compatible-Suitable-Incandescent/dp/B0D3TBK88B/ref=zg_bs_g_507840_d_sccl_21/136-0441496-7433865?psc=1",
+      "productTitle": "Amico 6 Pack Dimmer Light Switch, Single-Pole or 3-Way Slide Dimmer Switches for Led Lights, Suitable for 150W Dimmable LED/CFL Lights and 600W Incandescent/Halogen, Wall Plate Included, White",
+      "price": 44.99
+    },
+    {
+      "position": "#22",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 3459,
+      "url": "/Lutron-Dimmable-Incandescent-Single-Pole-SCL-153P-WH/dp/B00A92MQ38/ref=zg_bs_g_507840_d_sccl_22/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Skylark LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs | 150W/Single-Pole or 3-Way | SCL-153P-WH | White",
+      "price": 23.28
+    },
+    {
+      "position": "#23",
+      "salesMovement": null,
+      "productRating": "4.4 out of 5 stars",
+      "countReview": 9109,
+      "url": "/Cloudy-Bay-Incandescent-Dimmable-Included/dp/B0771BC2YH/ref=zg_bs_g_507840_d_sccl_23/136-0441496-7433865?psc=1",
+      "productTitle": "Cloudy Bay in Wall Dimmer Switch for LED Light/CFL/Incandescent,3-Way Single Pole Dimmable Slide,600 Watt max,Cover Plate Included",
+      "price": 12.99
+    },
+    {
+      "position": "#24",
+      "salesMovement": null,
+      "productRating": "4.5 out of 5 stars",
+      "countReview": 112,
+      "url": "/MOES-Dimmable-Incandescent-Halogen-Required/dp/B0D7GR3CKW/ref=zg_bs_g_507840_d_sccl_24/136-0441496-7433865?psc=1",
+      "productTitle": "MOES Dimmer Light Switch, 3 Way & Single Pole Dimmable for LED, CFL, Incandescent, Halogen, 600Watt Max, ON/Off with Dimming Slide for Bedroom Hallway, No Neutral Wire Required",
+      "price": 11.99
+    },
+    {
+      "position": "#25",
+      "salesMovement": null,
+      "productRating": "4.5 out of 5 stars",
+      "countReview": 1429,
+      "url": "/Leviton-D26HD-2RW-Anywhere-Companions-Required/dp/B08RRM8VH5/ref=zg_bs_g_507840_d_sccl_25/136-0441496-7433865?psc=1",
+      "productTitle": "Leviton Decora Smart Dimmer Switch, Wi-Fi 2nd Gen, Neutral Wire Required, Works with Matter, My Leviton, Alexa, Google Assistant, Apple Home/Siri & Wired or Wire-Free 3-Way, D26HD-2RW, White",
+      "price": 38.96
+    },
+    {
+      "position": "#26",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 2900,
+      "url": "/Lutron-Aurora-Dimmer-Philips-Z3-1BRL-WH-L0/dp/B07RJ14FBS/ref=zg_bs_g_507840_d_sccl_26/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Aurora Smart Bulb Dimmer Switch | for Philips Hue Smart Bulbs | Z3-1BRL-WH-L0 | White",
+      "price": 39.95
+    },
+    {
+      "position": "#27",
+      "salesMovement": null,
+      "productRating": "4.6 out of 5 stars",
+      "countReview": 411,
+      "url": "/Lutron-Wallplate-Technology-Incandescent-STCL-153MW-WH/dp/B0BX4KH8HV/ref=zg_bs_g_507840_d_sccl_27/136-0441496-7433865?psc=1",
+      "productTitle": "Lutron Sunnata Touch Dimmer Switch with Wallplate with LED+ Advanced Technology, for LED and Incandescent, 3 Way/Multi Location, STCL-153MW-WH, White",
+      "price": 46.2
+    },
+    {
+      "position": "#28",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 143,
+      "url": "/CAMGJORT-RRKWV-Rotary-Replacement-Dimmer/dp/B0CTQJNN2Y/ref=zg_bs_g_507840_d_sccl_28/136-0441496-7433865?psc=1",
+      "productTitle": "CAMGJORT RRKWV Rotary Replacement Dimmer Knobs, White (2)",
+      "price": 5.98
+    },
+    {
+      "position": "#29",
+      "salesMovement": null,
+      "productRating": "4.3 out of 5 stars",
+      "countReview": 251,
+      "url": "/ELEGRP-Dimmer-Digital-Neutral-Included/dp/B0D3KZVYTR/ref=zg_bs_g_507840_d_sccl_29/136-0441496-7433865?psc=1",
+      "productTitle": "ELEGRP Dimmer Switch, Digital Dimmer Light Switch for LED Lights 150W, INC/HAL 450W, Single Pole LED Dimmer Switch, Needs Neutral Wire, Wall Plate Included, UL Listed, 1 Pack, Matte White",
+      "price": 17.99
+    },
+    {
+      "position": "#30",
+      "salesMovement": null,
+      "productRating": "3.8 out of 5 stars",
+      "countReview": 3541,
+      "url": "/DEWENWILS-Control-Dimmable-Incandescent-Extension/dp/B087R8TLS7/ref=zg_bs_g_507840_d_sccl_30/136-0441496-7433865?psc=1",
+      "productTitle": "DEWENWILS 2 Pack Touch Dimmer Switch, Touch Pad Control with 3 Levels of Dimming, Dimmable LED/CFL Lights, and Incandescent Bulbs, Extension Cord, ETL Listed, Black",
+      "price": 18.99
+    }
+  ]
+}

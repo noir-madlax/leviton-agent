@@ -1,0 +1,357 @@
+{
+  "product_title": "Suraielec Wireless Remote Light Switch, No Wiring, No WiFi, 100ft RF Range, Pre-Programmed, Expandable Wireless Wall Switch and Receiver Kit, Remote Control Light Fixture for Lamp, Ceiling Light, Fan",
+  "product_category": "RF Wireless Remote Control Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "size": {
+        "A@small control box fits in tight spaces": {
+          "+": [
+            31
+          ]
+        },
+        "B@not small size requires accommodation": {
+          "-": [
+            3
+          ]
+        },
+        "C@low profile protrudes about 1/2 inch": {
+          "+": [
+            27
+          ]
+        },
+        "D@rectangular box perfect size for concealing": {
+          "+": [
+            29
+          ]
+        },
+        "E@housing is cumbersome and takes too much space": {
+          "-": [
+            42
+          ]
+        }
+      },
+      "wiring": {
+        "F@cable too short within an inch": {
+          "-": [
+            44
+          ]
+        },
+        "G@red wire goes to load, blue to neutral": {
+          "+": [
+            36
+          ]
+        }
+      },
+      "switch_mechanism": {
+        "H@switch doesn't click smoothly": {
+          "-": [
+            14
+          ]
+        },
+        "I@not a really positive click off and on": {
+          "-": [
+            20
+          ]
+        }
+      },
+      "packaging": {
+        "J@switch covered in box to prevent scratches": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "material": {
+        "K@very good material": {
+          "+": [
+            32
+          ]
+        },
+        "L@sturdy electrical device": {
+          "+": [
+            21
+          ]
+        }
+      },
+      "led_indicator": {
+        "M@red light in center works every time when button pushed": {
+          "+": [
+            33
+          ]
+        },
+        "N@LED indicator light should flash when resetting but doesn't": {
+          "-": [
+            47
+          ]
+        }
+      }
+    },
+    "perf": {
+      "reliability": {
+        "a@works intermittently sometimes": {
+          "-": {
+            "?": [
+              1,
+              13,
+              16,
+              26,
+              30,
+              35,
+              41,
+              46
+            ]
+          }
+        },
+        "b@works perfectly and flawlessly": {
+          "+": {
+            "?": [
+              8,
+              12,
+              37
+            ]
+          }
+        },
+        "c@switch keeps freezing and stops working": {
+          "-": {
+            "?": [
+              45
+            ]
+          }
+        },
+        "d@dead on arrival units": {
+          "-": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "e@did not work at all": {
+          "-": {
+            "N": [
+              47
+            ]
+          }
+        }
+      },
+      "turn_off_performance": {
+        "f@glitchy when turning off": {
+          "-": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "g@requires multiple attempts to turn off": {
+          "-": {
+            "H": [
+              14
+            ],
+            "I": [
+              20
+            ],
+            "?": [
+              24,
+              28
+            ]
+          }
+        },
+        "h@doesn't turn off right away most of the time": {
+          "-": {
+            "?": [
+              24
+            ]
+          }
+        },
+        "i@poor performance turning off lights": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "j@not always turn on or off": {
+          "-": {
+            "?": [
+              41
+            ]
+          }
+        }
+      },
+      "turn_on_performance": {
+        "k@on button works fine": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "l@great range when turning on": {
+          "+": {
+            "?": [
+              15
+            ]
+          }
+        }
+      },
+      "range": {
+        "m@poor range performance at 4-12 feet": {
+          "-": {
+            "?": [
+              16,
+              33,
+              39
+            ]
+          }
+        },
+        "n@distance between switch and receivers must be minimized": {
+          "-": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "o@remote can't always reach the board": {
+          "-": {
+            "E": [
+              42
+            ]
+          }
+        },
+        "p@connection issues when mounted to wall": {
+          "-": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "installation": {
+        "q@easy to install": {
+          "+": {
+            "?": [
+              2,
+              6,
+              8,
+              11,
+              12,
+              19,
+              23,
+              27,
+              29,
+              32
+            ]
+          }
+        },
+        "r@extremely easy to wire up": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        }
+      },
+      "led_compatibility": {
+        "s@doesn't work well with LED bulbs": {
+          "-": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "t@LED lights produce interference blocking RF signal": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "garage_lighting": {
+        "+": {
+          "?": [
+            4
+          ]
+        },
+        "-": {
+          "m": [
+            16
+          ]
+        }
+      },
+      "room_corner_switch_relocation": {
+        "+": {
+          "b": [
+            5
+          ]
+        }
+      },
+      "cabinet_lighting": {
+        "+": {
+          "b": [
+            8
+          ]
+        }
+      },
+      "covered_switch_access": {
+        "+": {
+          "b,C": [
+            27
+          ]
+        }
+      },
+      "outdoor_floodlight_control": {
+        "+": {
+          "b": [
+            31
+          ]
+        }
+      },
+      "shop_lighting_for_tall_person": {
+        "+": {
+          "b": [
+            38
+          ]
+        }
+      },
+      "multiple_kitchen_cabinet_lights": {
+        "+": {
+          "n": [
+            40
+          ]
+        }
+      },
+      "ceiling_light_without_wall_switch": {
+        "+": {
+          "o": [
+            42
+          ]
+        }
+      },
+      "independent_LED_fixture_control": {
+        "+": {
+          "b": [
+            43
+          ]
+        }
+      },
+      "closet_light_replacement": {
+        "-": {
+          "d": [
+            25
+          ]
+        }
+      },
+      "basement_fixture_upgrades": {
+        "+": {
+          "q": [
+            29
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:14:37.604648"
+}

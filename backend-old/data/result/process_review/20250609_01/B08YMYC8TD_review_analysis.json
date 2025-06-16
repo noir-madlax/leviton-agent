@@ -1,0 +1,313 @@
+{
+  "product_title": "Leviton L1463-2C 15 Amp, 120 Volt, Toggle LED Illuminated 3-Way Switch, Residential Grade, Grounding, Clear",
+  "product_category": "Three Way Multi-Location Control Switches",
+  "total_reviews": 36,
+  "review_analysis": {
+    "phy": {
+      "LED illumination": {
+        "A@Brightness level varies from very bright to extremely dim": {
+          "-": [
+            0,
+            29,
+            30,
+            31
+          ],
+          "+": [
+            9,
+            11,
+            16,
+            21,
+            28
+          ]
+        },
+        "B@Cool white/6000K color temperature": {
+          "+": [
+            13,
+            22,
+            24,
+            32,
+            34
+          ]
+        },
+        "C@Illumination fails after short period of use": {
+          "-": [
+            5,
+            6,
+            23,
+            29
+          ]
+        },
+        "D@Minimal flickering present": {
+          "+": [
+            32,
+            34
+          ]
+        }
+      },
+      "Switch appearance": {
+        "E@Clear switch that appears gray when on": {
+          "+": [
+            13
+          ]
+        },
+        "F@Nice looking units": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "Wire connections": {
+        "G@Back holes won't admit 12 gauge wire": {
+          "-": [
+            23
+          ]
+        }
+      },
+      "Toggle": {
+        "H@Bright toggle": {
+          "+": [
+            28
+          ]
+        }
+      },
+      "Dimmer stroke range": {
+        "I@Only works in 1/4 of the stroke": {
+          "-": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "Visibility in dark": {
+        "a@Easy to locate switch in darkness": {
+          "+": {
+            "A": [
+              1,
+              2,
+              8,
+              9,
+              14,
+              16,
+              17,
+              18,
+              20,
+              21,
+              27
+            ]
+          }
+        },
+        "b@Difficult to see in daylight": {
+          "-": {
+            "A": [
+              15
+            ]
+          }
+        },
+        "c@Provides some area illumination": {
+          "+": {
+            "A": [
+              21
+            ]
+          },
+          "-": {
+            "A": [
+              27
+            ]
+          }
+        }
+      },
+      "Functionality": {
+        "d@Works as advertised for 3-way switching": {
+          "+": {
+            "?": [
+              3,
+              7,
+              11,
+              26,
+              32
+            ]
+          }
+        },
+        "e@Easy installation": {
+          "+": {
+            "?": [
+              4,
+              14,
+              17,
+              28
+            ]
+          }
+        },
+        "f@Switch mechanism fails": {
+          "-": {
+            "?": [
+              33
+            ]
+          }
+        },
+        "g@Compatible with LED lights": {
+          "+": {
+            "?": [
+              34
+            ]
+          },
+          "-": {
+            "?": [
+              35
+            ]
+          }
+        }
+      },
+      "Status indication": {
+        "h@Difficult to determine light on/off status": {
+          "-": {
+            "A": [
+              0,
+              25
+            ]
+          }
+        },
+        "i@Lights when switch is off, dims when on": {
+          "+": {
+            "A": [
+              5,
+              7,
+              11,
+              13,
+              20,
+              25
+            ]
+          }
+        }
+      },
+      "Durability": {
+        "j@LED illumination fails within months": {
+          "-": {
+            "C": [
+              5,
+              6,
+              23
+            ]
+          }
+        },
+        "k@Switch mechanism fails quickly": {
+          "-": {
+            "?": [
+              29,
+              33
+            ]
+          }
+        }
+      },
+      "Dimming control": {
+        "l@Dimming range too sensitive": {
+          "-": {
+            "I": [
+              10
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "Dark room/hallway navigation": {
+        "+": {
+          "a": [
+            1,
+            2,
+            8,
+            9,
+            14,
+            16,
+            17,
+            18,
+            19,
+            21
+          ]
+        },
+        "-": {
+          "b": [
+            15
+          ]
+        }
+      },
+      "Garage lighting control": {
+        "+": {
+          "a": [
+            4,
+            7,
+            11,
+            20,
+            31
+          ]
+        }
+      },
+      "Stairway lighting": {
+        "+": {
+          "d,g": [
+            16,
+            34
+          ]
+        }
+      },
+      "Laundry room access from garage": {
+        "+": {
+          "d,a": [
+            7
+          ]
+        }
+      },
+      "Basement lighting": {
+        "+": {
+          "a": [
+            19
+          ]
+        }
+      },
+      "Nighttime navigation without main lights": {
+        "+": {
+          "a,c": [
+            19,
+            21
+          ]
+        }
+      },
+      "Hotel/bathroom applications": {
+        "+": {
+          "a": [
+            19
+          ]
+        }
+      },
+      "Replacement for regular switches in dark areas": {
+        "+": {
+          "a": [
+            16,
+            21
+          ]
+        }
+      },
+      "4-way switching circuits": {
+        "+": {
+          "d": [
+            7
+          ]
+        }
+      },
+      "LED light control": {
+        "+": {
+          "g": [
+            34
+          ]
+        },
+        "-": {
+          "g": [
+            35
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:24.826929"
+}

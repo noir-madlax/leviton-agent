@@ -1,0 +1,227 @@
+{
+  "product_title": "Single Pole Double Rocker Light Switches,Greencycle 2 Pack Paddle Light Switches 15 Amp,Sp Decora Switch White,120V-277V AC,On/Off Wall Switch, Residential/Commercial Grade,Home & Office,UL/CUL",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 17,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@attractive and modern looking": {
+          "+": [
+            0,
+            5,
+            7,
+            15
+          ]
+        },
+        "B@sleek design": {
+          "+": [
+            7
+          ]
+        },
+        "C@elegant rocker style": {
+          "+": [
+            3,
+            7
+          ]
+        },
+        "D@something different from standard switches": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "material": {
+        "E@plastic feels good but lighter than expected on paddles": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "build_quality": {
+        "F@well-built construction": {
+          "+": [
+            7,
+            11
+          ]
+        },
+        "G@good build quality overall": {
+          "+": [
+            0,
+            6,
+            9,
+            12
+          ]
+        },
+        "H@sketchy feel and quality": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "switching_mechanism": {
+        "I@good quality switching mechanisms": {
+          "+": [
+            0
+          ]
+        },
+        "J@paddle would not stay in off position": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "sound": {
+        "K@sharp hollow sounding click": {
+          "-": [
+            0
+          ]
+        },
+        "L@loud click in on/off positions": {
+          "-": [
+            4
+          ]
+        },
+        "M@very secure click": {
+          "+": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "functionality": {
+        "a@works well for switching": {
+          "+": {
+            "?": [
+              0,
+              1,
+              3,
+              8,
+              10,
+              11,
+              15
+            ]
+          }
+        },
+        "b@works smoothly": {
+          "+": {
+            "F": [
+              7
+            ]
+          }
+        },
+        "c@one switch failed to function": {
+          "-": {
+            "J": [
+              14
+            ]
+          }
+        }
+      },
+      "durability": {
+        "d@uncertain long-term reliability": {
+          "-": {
+            "H": [
+              14
+            ]
+          }
+        }
+      },
+      "installation": {
+        "e@easy to install": {
+          "+": {
+            "?": [
+              1,
+              5,
+              7,
+              8,
+              9,
+              11
+            ]
+          }
+        },
+        "f@straightforward for novices": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "g@fits perfectly": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "h@installed as expected": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "replacing old double light switches": {
+        "+": {
+          "a": [
+            0
+          ]
+        }
+      },
+      "controlling two lights from one spot": {
+        "+": {
+          "b": [
+            7
+          ]
+        }
+      },
+      "home upgrades": {
+        "+": {
+          "e": [
+            1,
+            7
+          ]
+        }
+      },
+      "office upgrades": {
+        "+": {
+          "b": [
+            7
+          ]
+        }
+      },
+      "pairing with smart switches": {
+        "+": {
+          "a,e": [
+            15
+          ]
+        }
+      },
+      "3-way circuits without neutral wire": {
+        "+": {
+          "a": [
+            15
+          ]
+        }
+      },
+      "locations with infrequent use": {
+        "-": {
+          "c,d": [
+            14
+          ]
+        }
+      },
+      "applications requiring quiet operation": {
+        "-": {
+          "L": [
+            4
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:10:17.757716"
+}

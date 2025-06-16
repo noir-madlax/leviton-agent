@@ -1,0 +1,450 @@
+{
+  "product_title": "UltraPro Z-Wave Smart Rocker Light Dimmer with QuickFit and SimpleWire, 3-Way Ready, Compatible with Alexa, Google Assistant, ZWave Hub Required, Repeater/Range Extender, White Paddle Only, 39351",
+  "product_category": "Smart Hub-Dependent Dimmer Switches",
+  "total_reviews": 50,
+  "review_analysis": {
+    "phy": {
+      "physical buttons": {
+        "A@buttons failed after 3 years": {
+          "-": [
+            0
+          ]
+        }
+      },
+      "LED indicator": {
+        "B@LED indicator color changing not supported": {
+          "-": [
+            0
+          ]
+        },
+        "C@blue light too bright": {
+          "-": [
+            4
+          ]
+        }
+      },
+      "appearance": {
+        "D@scratched surface": {
+          "-": [
+            12
+          ]
+        },
+        "E@brighter white color than other switches": {
+          "-": [
+            18
+          ]
+        },
+        "F@clean look of cover plate": {
+          "+": [
+            32
+          ]
+        },
+        "G@slim profile useful in multi-gang boxes": {
+          "+": [
+            47
+          ]
+        }
+      },
+      "packaging": {
+        "H@plain brown box instead of original packaging": {
+          "-": [
+            41
+          ]
+        },
+        "I@missing badge cover": {
+          "-": [
+            41
+          ]
+        },
+        "J@no screws included": {
+          "-": [
+            12
+          ]
+        },
+        "K@no directions included": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "build quality": {
+        "L@well made with precise mechanism": {
+          "+": [
+            48
+          ]
+        },
+        "M@cross threaded neutral terminal nut plate": {
+          "-": [
+            22
+          ]
+        }
+      },
+      "space requirements": {
+        "N@doesn't take a lot of space in box": {
+          "+": [
+            18
+          ]
+        }
+      },
+      "cooling design": {
+        "O@better cooling profile than metal fin switches": {
+          "+": [
+            47
+          ]
+        }
+      }
+    },
+    "perf": {
+      "durability": {
+        "a@failed after 3 years": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "b@failed after 2 months": {
+          "-": {
+            "?": [
+              7,
+              34
+            ]
+          }
+        },
+        "c@stopped working after 1 year": {
+          "-": {
+            "?": [
+              8,
+              11,
+              19
+            ]
+          }
+        },
+        "d@failed after 10 weeks": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "e@failed after 2 weeks": {
+          "-": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "f@quit working after 4 months": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "LED compatibility": {
+        "g@causes LED lights to flicker": {
+          "-": {
+            "?": [
+              1,
+              2,
+              3,
+              9,
+              18,
+              29,
+              39,
+              45
+            ]
+          }
+        },
+        "h@works well with LED bulbs without buzzing": {
+          "+": {
+            "?": [
+              42,
+              46
+            ]
+          }
+        },
+        "i@dimming range goes from full bright to barely visible glow": {
+          "+": {
+            "?": [
+              42
+            ]
+          }
+        }
+      },
+      "response time": {
+        "j@slow response time": {
+          "-": {
+            "?": [
+              30
+            ]
+          }
+        },
+        "k@very slow reaction with second and half delay": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "l@responsive switch operation": {
+          "+": {
+            "?": [
+              47
+            ]
+          }
+        }
+      },
+      "dimming speed": {
+        "m@slow dimming with no instant on/off": {
+          "-": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "n@fades slowly to off with no option to change": {
+          "-": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "o@default dimming speed very slow and unchangeable": {
+          "-": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "hub connectivity": {
+        "p@works great with SmartThings hub": {
+          "+": {
+            "?": [
+              6,
+              13,
+              14,
+              24,
+              27,
+              37,
+              46,
+              47
+            ]
+          }
+        },
+        "q@will not connect to SmartThings hub": {
+          "-": {
+            "?": [
+              35,
+              38
+            ]
+          }
+        },
+        "r@stopped talking to Z-wave hub": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "s@works well with Hubitat": {
+          "+": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "t@connects to WINK as z-wave device": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "u@works well with ADT Z-Wave Hub": {
+          "+": {
+            "?": [
+              40
+            ]
+          }
+        },
+        "v@requires factory reset before pairing": {
+          "-": {
+            "?": [
+              18,
+              27
+            ]
+          }
+        }
+      },
+      "RF performance": {
+        "w@very good RF performance": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "dimming accuracy": {
+        "x@percentages not accurate with incorrect light output": {
+          "-": {
+            "?": [
+              44
+            ]
+          }
+        }
+      },
+      "tactile feel": {
+        "y@crisp and satisfying tactile feel": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      },
+      "buzzing": {
+        "z@slight hum to bulbs when on": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        }
+      },
+      "configuration options": {
+        "aa@limited configuration options": {
+          "-": {
+            "?": [
+              31
+            ]
+          }
+        },
+        "ab@good configuration options for blue light": {
+          "+": {
+            "C": [
+              4
+            ]
+          }
+        },
+        "ac@supports pre-staging on-level programming": {
+          "+": {
+            "?": [
+              39
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "home automation with SmartThings": {
+        "+": {
+          "p": [
+            6,
+            13,
+            14,
+            24,
+            37,
+            46,
+            47
+          ]
+        },
+        "-": {
+          "q": [
+            35,
+            38
+          ]
+        }
+      },
+      "home automation with Hubitat": {
+        "+": {
+          "s": [
+            28
+          ]
+        }
+      },
+      "home automation with WINK hub": {
+        "+": {
+          "t": [
+            25
+          ]
+        }
+      },
+      "home automation with ADT Z-Wave Hub": {
+        "+": {
+          "u": [
+            40
+          ]
+        }
+      },
+      "controlling LED lights": {
+        "+": {
+          "h,i": [
+            42,
+            46
+          ]
+        },
+        "-": {
+          "g": [
+            1,
+            2,
+            3,
+            9,
+            18,
+            29,
+            39,
+            45
+          ]
+        }
+      },
+      "under cabinet lighting": {
+        "+": {
+          "h": [
+            46
+          ]
+        }
+      },
+      "3-way installation": {
+        "-": {
+          "?": [
+            17,
+            49
+          ]
+        }
+      },
+      "single switch installation": {
+        "+": {
+          "?": [
+            48
+          ]
+        }
+      },
+      "multi-gang box installation": {
+        "+": {
+          "G,N": [
+            47,
+            18
+          ]
+        }
+      },
+      "standard lighting control": {
+        "+": {
+          "l": [
+            48
+          ]
+        }
+      },
+      "dimming to low levels": {
+        "-": {
+          "g": [
+            29
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:08:37.466717"
+}

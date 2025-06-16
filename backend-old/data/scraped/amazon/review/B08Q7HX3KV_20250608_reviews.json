@@ -1,0 +1,1598 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:01:30.116683",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08Q7HX3KV",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 4,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B08Q7HX3KV",
+    "title": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+    "brand": "HAMRVL",
+    "model_number": NaN,
+    "price_usd": 8.99,
+    "rating": 3.9,
+    "reviews_count": 207.0,
+    "category": "Dimmer Switches",
+    "product_segment": "USB Powered Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B08Q7HX3KV"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3SO7C5BORLL9V",
+        "text": "doe's the job beautifully",
+        "date": "Reviewed in the United States on June 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "good things come in small packages",
+        "userName": "E.Kay Thomas",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R19GIE5IJOY7BH",
+        "text": "Works very well, though it took some time to get used to the sensitivity/operation.",
+        "date": "Reviewed in the United States on April 12, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "A bit of training required, but works well.",
+        "userName": "Kingkongmegatron",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RTYX2LZ3Q4VXY",
+        "text": "I have purchased many of these for the lamps that I build. The last two i purchased, last March 2024, don't work! I wired them up properly and the led lights fade up and down, with no on-off control. I have tried to contact the supplier, but have been unsuccessfull. I am going to try one more switch because I already have drilled the hole in my lamp.",
+        "date": "Reviewed in the United States on March 17, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "They may not work!",
+        "userName": "Steve L.",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2MIEB7QY34IDL",
+        "text": "The light worked, but the dimmer did not",
+        "date": "Reviewed in the United States on March 13, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dead and arrival",
+        "userName": "David R. Terborg",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3COJJPIOG4M6P",
+        "text": "Didn't work",
+        "date": "Reviewed in the United States on September 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Nope",
+        "userName": "Someone somewhere",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3GR7MFJY8JSRN",
+        "text": "dimmer Switch is perfect for the LeDS I added in my cabinets.",
+        "date": "Reviewed in the United States on August 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "dimmer switch",
+        "userName": "Lilly June",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3197EG5J6KJW4",
+        "text": "This little dimmer button is fun. It's biggest problem is making itself know to those who aren't looking for it. It is simply a touch dimmer for 12v, max 36 watt, LED lights. Touch it and it comes on. Hold your touch and it dims up or down, depending on it dimmoing state. If you stop dimming at a point of brightness that you like and turn the light off by touching the button, it will return to that level when you touch the button and turn it back on. It is very small and compact and doesn't cause flicker (when used with the right power supply and lights) and is silent. If you are looking for an unobtrusive small dimmer, this could be your best bet. The photo above shows the switch mounted in a corner oak piece I made to dim under the under-counter lights.",
+        "date": "Reviewed in the United States on August 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Its small and it dims",
+        "userName": "Chris West",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/812XyClDdhL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2EZCQQULG0GBK",
+        "text": "Works great. I love the touch button. Great color, not to bright just right for me. Easy to use once you understand it. Installation instructions were very precise. Dimming it very steady. Slowly adjusts brightness to the next setting.",
+        "date": "Reviewed in the United States on August 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love the color of the light in this switch.",
+        "userName": "Zachary McCauley",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RBL7PMPPL833L",
+        "text": "I wish the company would have stated that this switch is only for 2-wire (Not multi-colored) LED strips.",
+        "date": "Reviewed in the United States on April 19, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "This DOES NOT WORK WITH MULTI-COLORED LEDs",
+        "userName": "MP",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1845TZY7NG1ZU",
+        "text": "I bought a couple of these and I was very impressed with both. One touch on and off. Dim by holding your finger on it. Definitely worth the money.",
+        "date": "Reviewed in the United States on March 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Stylish and works great.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R33AOTOG81PPEE",
+        "text": "Worked for 3 hours ! Glad I didn't cut a hole in my light yet. Can't get a replacement have to return it first, and for a refund. It cost 10 bucks not worth the gas to take it to the ups store. I'm just going to throw it away.",
+        "date": "Reviewed in the United States on March 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk!",
+        "userName": "mikevancooney",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3MEGS05ZGP3GW",
+        "text": "I still like these the best. I have used these for illuminating my custom built power supplies to controlling 12v 1.5 amp fans and more. For two of my projects I had to cut off the heat shrink wrapper (its bulky and fairly useless and replace the wires with highly flexible wires (20 and 22 ga). the one I had to do this because the +out wire was actually disconnected upon arrival which I guess most people would return as a \"reject\" but I had to re wire it anyway because the wires they provide are very very stiff and hard to route so, big deal I just replaced them. But the electronics in this \"micro\" switch is fantastic and user friendly. I plan on using them in other designs too. I highly recommend these. Please see my video before trying to mount. UPDATE: NOW I jinxed myself singing praise for these but the very next one I used wouldnt shut off. It was on all the time. I could adjust the PWM but it wouldnt shut off. As soon as I powered up it was on and stayed on until I cut power. Thats a bummer. The led worked, everything worked I just didnt have the capability ot turn it on/off with the button. O well I have more but its frustrating to finalize ur project and find such a fundamental flaw. O well. Rip it apart again. REVISED: 5 TO 2 STAR RATING: I ordered a three pack and all therr blew out (not literally) they just stopped working properly. I know for a fact that these can't handle 2 amps let alone 3. I sent them back. I guess if ur using 350mA LEDs these work .. that's what I initially was using them for but as soon as I tried pushin 650mA (and 2 strings of 650mA LEDs) they just dont work .u can easily tell they r shot because the only thing they do I lit up. NO PWM , NO ON/OFF NOTHING. VERY VERY DISAPPOINTED 😞",
+        "date": "Reviewed in the United States on March 9, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Revised 5 to a 2 star rating becayse: Even after getting a disconnected wire on 2nd order,",
+        "userName": "DeputyDaves",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/6124SllmclL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/6481ce68-ccdd-4269-a0ff-3024a8047e26/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RY3SZZ5INCSXG",
+        "text": "I have used numerous of these switches in various projects, both my own and for clients. Was hestitant at first despite from of the reviews. Long short, they work great if you know what you are doing (basic electrical skills and such). I have purchased and installed many of these touch activated switches, from latching (no LED) to latching with LED always on, to stepless dimming (LED on when light on). All have worked from the start and continue to work perfectly. Really great switches. Note that these switches do not interrupt the red (positive) wires as in most mechanical toggle switches, but instead interrupt the black to green connection (negative); in other words, the black and green wire CANNOT share a common ground but must instead remain on separate, isolated circuits (green to battery negative, black to light negative). This is exactly as shown in their installation instructions. However, I tried to take a shortcut with this light as I was swapping out an older, mechanical toggle switch and had wired the light so that its black/negative ground wire was connected to chassis ground, which is also ultimately connected back to my \"house\" battery ground in my vehicle. The touch switch didn't operate under these conditions (unlike most 12V DC mechanical toggle switches). I have since disconnected the light's ground wire from its connection with chassis ground and connected it directly to the black wire of the touch switch, and viola! All the switches I have utilized work perfectly! I've included the wiring schematic I received.",
+        "date": "Reviewed in the United States on February 25, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Work great. Ignore the silly reviews.",
+        "userName": "Chris B",
+        "numberOfHelpful": 8,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51xcDrOkVBL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61XRsGv77LL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61jZxmouDOL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71wuIAw1lEL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RG6NSG9HOW942",
+        "text": "After trying to beat this switch to death, I figured it out. Instructions not specific. There are 4 wires coming off the switch. #1-Black wire- goes to battery ground, #2 red wire goes to ignition wire, not battery. #3 red wire goes to lights, #4 yellow wire goes to lights ground wire or wires. It is not an on-off switch. it is only a dimmer switch. On - off requires key on to turn on, and key off to turn off. Hope this helps everyone.",
+        "date": "Reviewed in the United States on February 4, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good switch, just worded wrong.",
+        "userName": "Danny Frisch",
+        "numberOfHelpful": 5,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RN6V4NZ5YYPD",
+        "text": "Install correctly works perfectly, I’ll second to not pay any attention to badly reflecting reviews, pay attention to installation instructions and you might buy even more like myself!",
+        "date": "Reviewed in the United States on December 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "I recommend it",
+        "userName": "jeremy park",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3U926O0H226AY",
+        "text": "I use these to control interior lighting of display cabinets I build. They work like a charm. The control is intuitive, silent and unobtrusive. Wiring is simple, 4 wires. Two wires for DC voltage-in, the other two connect to your LED light strips.",
+        "date": "Reviewed in the United States on November 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple to connect, install and use.",
+        "userName": "Bill Erskine",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3I3XAHL7WHJ3V",
+        "text": "Should have looked at reviews first. Got this to dim the light for fuel level on an auxiliary fuel gauge. The only thing to work was the blue circle light. It did not dim or turn off Instructions are useless. I agree with another post, Amazon needs to do something about these companies in China dumping JUNK products on us.I am getting more items that do not work or are misrepresented.",
+        "date": "Reviewed in the United States on August 6, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed to work!",
+        "userName": "Doc",
+        "numberOfHelpful": 2,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2HH9X1AAVTQY",
+        "text": "I bought two to wire with my led puck lights in my camper van. I love the dimming ability and that they remain blue so you can find them in the dark. :)",
+        "date": "Reviewed in the United States on July 6, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love these!",
+        "userName": "Grace J",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2JQMYF1DZWXNR",
+        "text": "I used these for under cabinet led strip lighting. Works great! Will turns the lights on/off with just a touch. Dimming also works great and remember your last setting.",
+        "date": "Reviewed in the United States on May 22, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great for led strip lights",
+        "userName": "Jim Kehoe",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2IO9U0D973FC6",
+        "text": "I bought four. None of them worked. Put voltmeter across output, and 8vdc in a travel trailer across input, the did not ever pass current. The output remained at 8vdc. They just dont work.",
+        "date": "Reviewed in the United States on February 20, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "I bought four. None of them worked. voltmeter across output, and",
+        "userName": "MyNameIsJoe",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3CH52UX0FY7NE",
+        "text": "Works at the first time and dimer won't work after that touch never respond",
+        "date": "Reviewed in the United States on October 2, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Works but",
+        "userName": "Julio Efrain Minarcaja",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3MEF7RC9AHO1K",
+        "text": "They are packaged properly.They appear nicely made with instructions you can see and read.All three when powered on 24v dc lite up .But you had no control over the lights it stayed where it was on at. One the blue ring light did not work. I attempted the installation on one 12v strip , one 24 v strip and one 24 volt 6 led spot light.The results were the same.No control. No on or off. No dimming. They look pretty.",
+        "date": "Reviewed in the United States on April 10, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Three switches DOA",
+        "userName": "Robert",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RXU66LAPWMNZI",
+        "text": "Doesn’t work. I wired it up according to the instructions. But all it does it light up blue. No functionality whatsoever.",
+        "date": "Reviewed in the United States on January 25, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Came defective",
+        "userName": "Thomas",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RDSO3HHV10HQA",
+        "text": "It worked for a few minutes but stoped working and wouldn't turn on again. I tested the power going in and the power going out was not at 5v. wouldn't turn the led lights on.",
+        "date": "Reviewed in the United States on December 18, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "It looks nice but stops working",
+        "userName": "Arthur",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2K6RI9YJSMF4C",
+        "text": "I have had multiple die on me. And they seem to almost overheat.. Very hot to the touch.",
+        "date": "Reviewed in the United States on December 17, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Died",
+        "userName": "Kate McFerren",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R4IU3KCLCINFT",
+        "text": "Ordered this then kept it in the box for two months while the project was on hold. Finally was able to Install it and it worked great for all of one day…. And now the return window has closed so EVEN THOUGH IT DIED WITH LESS THAN 24 HOURS OF USE. I CANT RETURN IT!!! What a rip off…",
+        "date": "Reviewed in the United States on November 19, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Died within one day",
+        "userName": "David the Tester",
+        "numberOfHelpful": 2,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RWAVGZIQLZ9VY",
+        "text": "Well, it worked fine at the beginning, but after about 3 weeks the blue light on the switch went out. Hopefully it will continue to control the leds.",
+        "date": "Reviewed in the United States on October 31, 2021",
+        "rating": "3.0 out of 5 stars",
+        "title": "It’s ok.",
+        "userName": "Sara W.",
+        "numberOfHelpful": 2,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3E2QSLE7YCJ1W",
+        "text": "Used it for my auto stereo/cd unit. Works very well so far.",
+        "date": "Reviewed in the United States on August 29, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "nice touch feature",
+        "userName": "skooby",
+        "numberOfHelpful": 0,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R22BD79PQ3OLD5",
+        "text": "I used this as a dimmer for an LED light strip. The always-on blue backlit button is nice. Voltage range in my installation ranges from 6.9-11.75 VDC. Follow the wiring instruction and do not tie any of the dimmer's wires together (like others have)!",
+        "date": "Reviewed in the United States on April 14, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great!",
+        "userName": "Barticus",
+        "numberOfHelpful": 2,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2KA4LJ0XKFUI1",
+        "text": "After I drilled a hole in my light fitting 3x 8watts = 24 watt total the silly thing stopped working after the 4th try..total junk",
+        "date": "Reviewed in the United States on February 19, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Worked for 3 mins now always on",
+        "userName": "Fairfield Hill",
+        "numberOfHelpful": 4,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/a5591f17-ebfc-45ff-ab20-af56552092ad/default.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08Q7HX3KV",
+        "productTitle": "HAMRVL Led Dimmer Switch DC 12V Touch Switch On/Off Dimmer Stepless Dimming Switches as 5-24V LED Lights Strip Brightness Controller Suitable for 17mm/0.67in Mounting Hole(Touch dimmer A)",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 31,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 207,
+        "productRating": "3.9 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 59
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 9
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1XOFMKQPYVSP7",
+        "text": "My wife's lighted makeup mirror came with a similar lit button, but the dimmer circuitry was was on a separate board and the mirror was stuck on the dimmest setting. So something had failed either in the button or dimmer. It was only two years old, but I was not getting much traction from the vendor. And I can understand that, given the warranty is probably over. But still, it was one of the higher priced mirrors in this category and I would have expected more than two years before seeing a failure. Anyway, the layout was a power cord to an internal 12v power supply wired to a dimmer board that had wires to the button and to the LEDs surrounding the light. I ripped out the button and dimmer board and replaced them both with this single button that had the dimmer circuitry built in. From the button I connected two wires to the power supply and the other two wires to the LEDs. It worked perfectly. It performed exactly the same functions as the original mirror and the button was the exact same diameter with the exact same outer spring clips and the exact same blue light within the button. This saved a bundle of money over replacing the mirror. However, it did not contain wire diagram for the button. I had to go back to the button listing on Amazon and print out the wire color code diagram from there. Not a big deal, but for anyone ordering this, you might as well print that out at the same time you order it. And you will probably want a soldering iron to make the connections secure. I also dabbed a little hot-melt glue on the back side of the button to give it a really solid feel. The old button had the same treatment from the vendor. So I was just following their protocol. In the attached pictures, the first shows the old components as they were originally in the mirror base. The second shows my initial test of connecting the new button. This is just before pulling the old button out of the fixture and inserting the new one in its place. So far no failure, no fire, no fuss. My wife is super happy to have the bright setting back.",
+        "date": "Reviewed in the United States on January 22, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked great!",
+        "userName": "Joe H.",
+        "numberOfHelpful": 4,
+        "variationId": "B08Q7HX3KV",
+        "imageUrlList": [
+          "https://images-na.ssl-images-amazon.com/images/I/81H0cSjKlnL._SY88.jpg",
+          "https://images-na.ssl-images-amazon.com/images/I/91CJyT3qmmL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: Touch dimmer A"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 31,
+    "pages_scraped": 4,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

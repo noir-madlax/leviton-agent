@@ -1,0 +1,329 @@
+{
+  "product_title": "TREATLIFE Dimmer Switch with Magnetic Remote, Wireless Light Switch, Single Pole Dimmer Light Switch, Neutral Wire Required, Works with Dimmable LED/CFL/INC, 400W Max",
+  "product_category": "Handheld Remote Control Dimmer Switches",
+  "total_reviews": 18,
+  "review_analysis": {
+    "phy": {
+      "design": {
+        "A@appealing and aesthetically pleasing appearance": {
+          "+": [
+            1
+          ]
+        },
+        "B@modern and updated look with wall plate": {
+          "+": [
+            12
+          ]
+        },
+        "C@well-made construction with great fit and finish": {
+          "+": [
+            7,
+            16
+          ]
+        }
+      },
+      "size": {
+        "D@larger-than-standard control unit": {
+          "-": [
+            7,
+            13
+          ]
+        },
+        "E@fits standard switch box": {
+          "+": [
+            7
+          ]
+        },
+        "F@does not fit smaller-than-standard boxes": {
+          "-": [
+            7
+          ]
+        }
+      },
+      "controls": {
+        "G@intuitive and user-friendly controls": {
+          "+": [
+            1
+          ]
+        },
+        "H@functional buttons unlike small impractical ones": {
+          "+": [
+            1
+          ]
+        }
+      },
+      "wiring": {
+        "I@well-marked wires": {
+          "+": [
+            1
+          ]
+        },
+        "J@requires neutral wire": {
+          "+": [
+            9,
+            16
+          ]
+        }
+      },
+      "remote_control": {
+        "K@magnetic attachment capability": {
+          "+": [
+            1,
+            2
+          ]
+        },
+        "L@physical remote without wifi": {
+          "+": [
+            8
+          ]
+        },
+        "M@no batteries required": {
+          "+": [
+            16
+          ]
+        }
+      },
+      "instructions": {
+        "N@clear installation diagrams": {
+          "+": [
+            1
+          ]
+        },
+        "O@good directions with cautions": {
+          "+": [
+            10
+          ]
+        }
+      }
+    },
+    "perf": {
+      "connectivity": {
+        "a@excellent connectivity and range without direct pointing": {
+          "+": {
+            "K": [
+              1
+            ]
+          }
+        },
+        "b@works well from 12 feet distance": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@good range for reasonable distance control": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "d@great connectivity between remote and switch": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        }
+      },
+      "dimming": {
+        "e@smooth and precise dimming functionality": {
+          "+": {
+            "?": [
+              2
+            ]
+          }
+        },
+        "f@great dimming ability from bright to very low": {
+          "+": {
+            "?": [
+              3,
+              9
+            ]
+          }
+        },
+        "g@smooth light transitions with gradual on/off": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "h@acceptable dimming steps": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        }
+      },
+      "installation": {
+        "i@surprisingly simple installation process": {
+          "+": {
+            "I,N": [
+              1
+            ]
+          }
+        },
+        "j@straightforward installation for experienced users": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "k@easy to install": {
+          "+": {
+            "?": [
+              9,
+              14,
+              15,
+              16,
+              17
+            ]
+          }
+        },
+        "l@may require additional work for tight spaces": {
+          "-": {
+            "D": [
+              13
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "m@works seamlessly with main dimmer switch": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        },
+        "n@functions exactly as expected": {
+          "+": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "o@works perfectly and easily": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        },
+        "p@very functional": {
+          "+": {
+            "G,H": [
+              1
+            ]
+          }
+        },
+        "q@turns off automatically when bulb burns out": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      },
+      "reliability": {
+        "r@simple and reliable control without wifi setup": {
+          "+": {
+            "L": [
+              2
+            ]
+          }
+        },
+        "s@works fine after bulb replacement": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "bedroom_lighting": {
+        "+": {
+          "e,k": [
+            12,
+            15
+          ]
+        },
+        "-": {
+          "?": [
+            13
+          ]
+        }
+      },
+      "home_office_lighting": {
+        "+": {
+          "a,e": [
+            2
+          ]
+        }
+      },
+      "ceiling_fan_control": {
+        "+": {
+          "b,f": [
+            3
+          ]
+        }
+      },
+      "multiple_location_control": {
+        "+": {
+          "c": [
+            11
+          ]
+        }
+      },
+      "bedtime_control": {
+        "+": {
+          "d": [
+            12
+          ]
+        }
+      },
+      "work_and_relaxation_ambiance": {
+        "+": {
+          "e": [
+            2
+          ]
+        }
+      },
+      "CCT_light_control": {
+        "+": {
+          "?": [
+            6
+          ]
+        }
+      },
+      "lamp_dimming": {
+        "+": {
+          "k": [
+            14
+          ]
+        }
+      },
+      "pole_barn_lighting": {
+        "+": {
+          "?": [
+            11
+          ]
+        }
+      },
+      "daughter_room_lighting": {
+        "+": {
+          "o": [
+            7
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:15:05.587945"
+}

@@ -1,0 +1,1312 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T21:55:21.528780",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B09FL9WPGL",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 3,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B09FL9WPGL",
+    "title": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+    "brand": "LANBON",
+    "model_number": NaN,
+    "price_usd": 43.99,
+    "rating": 4.0,
+    "reviews_count": 412.0,
+    "category": "Light Switches",
+    "product_segment": "WiFi Connected Smart Switches",
+    "product_url": "https://www.amazon.com/dp/B09FL9WPGL"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1A6PYY3A3QK4W",
+        "text": "Switch is nice and I like thr lights and glow. Switch has a lot of feature we're it can be customized. Now like others have said, problem is with WI-FI. It does not stay connected to WI-FI nor to Alexa because it keeps losing internet connection by it on. Cannot hold the internet connection for extended time.",
+        "date": "Reviewed in the United States on April 15, 2025",
+        "rating": "3.0 out of 5 stars",
+        "title": "Nice switch buuut..",
+        "userName": "a real honest person",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RQC7TXVGZO5WB",
+        "text": "I used this to replace a 1 gang Light/Vent/Heat switch. It allows me to set an auto timer so people don’t leave the vent fan running for hours!",
+        "date": "Reviewed in the United States on March 19, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy install",
+        "userName": "cj",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3A8JYUH7I62C3",
+        "text": "Muy fácil de instalar y de programar",
+        "date": "Reviewed in the United States on January 23, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excelente producto",
+        "userName": "Mario fernandez",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3GP9I7JDLGT1L",
+        "text": "I spent a lot of time researching LCD touchscreen styled switches and eventually took a chance on this one based on the appearance and a video review from someone in the UK. I have to say that I really like the overall functionality of these switches. It has great touch response and so far after nearly a year of being installed, has had no issues with that aspect of it. It's easy to wire and install and initial setup to get this thing running is fast as well. I really like the interface lighting and customization. I did try 2 other touch-screen style switches to compare later, and they've been disappointing compared to this one. My ONLY grip with this switch is the WiFi part. It seems to lose it's functionality with WiFi and re-connecting sometimes requires a reboot of the switch. The initial WiFi connection process is fast and easy, but once it drops, it's more of a challenge to reconnect. And while being able to control my lights via an app can be appealing and appeases my sometimes laziness not to want to get off the couch, it was not my primary reason for the purchase. Personally, the WiFi feature is more of an added bonus for me, so not functioning properly only dropped my review down 1 star. I can't speak to the customer service either since I rarely engage those anymore with anything... I think we've normalized poor customer service with just about everything these days, so can't base my rating on that either. Overall it's a great upgrade from standard toggle switches and can give your house a more modern look in my opinion.",
+        "date": "Reviewed in the United States on January 1, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Great look, feel, and function but WiFi connectivity needs fixing",
+        "userName": "Craig",
+        "numberOfHelpful": 4,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R30DT2ZZVVFEVD",
+        "text": "I will never again buy these. I bought two of them and can’t get them to connect to WiFi. No matter what I do. It shows the date and time right on one but not the other. But they both will not work with Alexa as well. I had other smart switches prior to this and thought the idea of having a touch screen was better but now I regret buying them.",
+        "date": "Reviewed in the United States on December 29, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Horrible don’t waste your money",
+        "userName": "ANTONIO",
+        "numberOfHelpful": 4,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3LK6427UK9R2N",
+        "text": "Stopped connecting to wifi in less than a year",
+        "date": "Reviewed in the United States on December 28, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped Connecting",
+        "userName": "JT",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2AYS6KFBP3DH",
+        "text": "EXCELENTE",
+        "date": "Reviewed in the United States on December 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "EXCELENTE",
+        "userName": "Sergio Suarez Salamanca",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RAGLYA9SBE16I",
+        "text": "Don’t work amd another language",
+        "date": "Reviewed in the United States on December 10, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Horrible",
+        "userName": "dayami venereo",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2K8SAR5MY6YOE",
+        "text": "1 not compatible with Smart Life, uses proprietary app. 2 lousy interface not user friendly at all 3 does not dim a damn thing as claimed",
+        "date": "Reviewed in the United States on December 4, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Do not bother buying",
+        "userName": "George Melendez",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1X6RELTIHDVZW",
+        "text": "I was remodeling one wall with shiplap that had one 3gang and one 2gang switched. Wanted to update and clean up the appearance of out 35 year old wiring. Install was simple. After the wife saw it installed, all the the switch sets in the hall, split entry and basement entrances were next on the agenda. The 7 switch sets had had 8 2-way or 3-way switched. With the ability to link mutual switches to a circuit really was slick. All in stalled in one day. The only issue was finding updated switch plates to place over the 2-gang and 3-gang boxes to mount the one l8 controllers. I'm pretty handy. altered box planks or the old wood plate covers. Looks good to me. (The wife too!. Very important! ) Bathroom and walk-in closet will be next. Really had no issues yet...",
+        "date": "Reviewed in the United States on November 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Impressive - Easy Update to Automation.",
+        "userName": "JMcGurty",
+        "numberOfHelpful": 3,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/617c1-OnSVL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/716sd-JDscL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71bqdbBRECL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3G73ZNW9FB5EL",
+        "text": "Looks good and was easy to install",
+        "date": "Reviewed in the United States on July 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Looks nice",
+        "userName": "BRIAN L.",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RUGO243S2M1PE",
+        "text": "Es muy fácil de instalar y de programar y practico para manipular",
+        "date": "Reviewed in the United States on April 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Novedoso",
+        "userName": "El producto es muy bueno 100% lo recomiendo",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/516v1xFAGdL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1JU3FSP1KSTEU",
+        "text": "Is amaizing.",
+        "date": "Reviewed in the United States on February 26, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smart switch",
+        "userName": "wilson",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R39ODYYRTKPKID",
+        "text": "4 inches... This thing is no where near the size the pictures indicate. I should have known better to not pay closer attention to the dimensions. The pictures make you assume this is much larger than it is. It is the standard single switch size. We all shop on-line, and need things to come as they appear like they would if we were in a store. Not sure why companies go through all the trouble to make things appear bigger online than they are. You lose money with us returning the products...",
+        "date": "Reviewed in the United States on January 22, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Read the size",
+        "userName": "Sadie",
+        "numberOfHelpful": 6,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R34S4FK4M56J8O",
+        "text": "Muy buen servicio",
+        "date": "Reviewed in the United States on January 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Muy bueno",
+        "userName": "Jaime alfonso bernal aponte",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3DM3HH1XLZIBS",
+        "text": "The idea is good and the finishing of the hardware is good. However, software is a bit poor. Functionality also it quite not there. The idea was good but I think it needs a bit more of software improvements. The courtesy light for instance needs improvements",
+        "date": "Reviewed in the United States on October 22, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Good idea but it’s not there yet",
+        "userName": "Saint Jacques",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3L9RFOMFIBOQS",
+        "text": "First off I have tried a few different types of smart switches and this one is great. Nice touch screen functionality and customization is easy. NOTE: this switch does require a neutral wire, but does not require a hub and also is a mesh WiFi booster and integrated well with my eero WiFi mesh system. Controllability is great you can control with the app or via Amazon Alexa/ google voice assistant. Installing it was easy and setup was not hard. The overall look is really nice and creates a modern look for o your home with a sleek profile. Currently have these setup in my garage and will be adding a neutral wire to my house switch boxes and converting my whole house to these switches they are one of the best I have found and very dependable. You can control them manually so no need to worry about problems with internet connection, if your internet drops due to unexpected problems with your provider you can still control these manually like a normal switch. In conclusion I highly recommend these 1 great look 2 easy install 3 seamless smart home integration 4 great price 5 WiFi mesh capable.",
+        "date": "Reviewed in the United States on October 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "One of the best smart switches I have tried!!",
+        "userName": "Steve Patterson",
+        "numberOfHelpful": 10,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R354LK488AKHLG",
+        "text": "Update: bought a second one(should have bought the Touya version, the smart living really sucks), for I actually found it works and looks the way I wanted, and fun to change the buttons. Using a blank box cover may feel like it is “attach”ing to the wall plate, but in the meantime before I figure out a better solution, it does the job cover the wires in the wall behind. See attached picture. It’s easy to install and saves the clutter in the box by using I switch controlling up to 3, but that’ where the little issue comes from, I am using it to replace a two gang switch, but the whole thing is only little wider than a single smart switch, so there would be a big ugly hole with tangled wires inside next to the led screen, I had to buy a two gang switch cover blank, cut a hole in the middle to let the back of this switch goes thru. It does work, just bit awkward. I would suggest they make a custom cover for 2 & 3 gang, also slime down the switch dimension so it would fit the standard single switch box. Some of the other room for improvement is there app, need to fix the errors that popping up here and there. Like error linking to Amazon. Otherwise, it would’ve been a five star product.",
+        "date": "Reviewed in the United States on October 1, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "I want to give it a 5 star",
+        "userName": "Sqoopi",
+        "numberOfHelpful": 10,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71vFJ5QFFYL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1O55VQO0CQEZU",
+        "text": "Installed in a sheltered area outside to control six separate lights from a single wall plate. The moodlight ring (which I programmed to come on at sunset and turn off at sunrise) makes it easy to spot the switch plate at night if there are lights on.",
+        "date": "Reviewed in the United States on September 9, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works like a charm with openHASP and HomeAssistant",
+        "userName": "PDXguy",
+        "numberOfHelpful": 4,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81E3Ow+mCzL._SY88.jpg"
+        ],
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RLPBOHQ9E8RDV",
+        "text": "There's no word upgradation you need to update your graphic to spell the word GANG correctly. These things indicate, to me, a lack of attention to detail which might also be found in your software and hardware",
+        "date": "Reviewed in the United States on August 26, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Editing your content.",
+        "userName": "Terry Foster",
+        "numberOfHelpful": 4,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2IQ49S9MSEJYK",
+        "text": "To get stable connection make sure is on 2.4 Gz or otherwise is not going to work Needs the router to be on 2.4 gz",
+        "date": "Reviewed in the United States on August 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "WiFi connection",
+        "userName": "Relas",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R151QZTT3OE6TO",
+        "text": "Horrible they won’t stay connected to Wi-Fi the face place keeps falling off the soft ware is horrible could be so much better and every time I set it up it restarts and goes back to factory settings i will never buy again and now I have 8 of these things",
+        "date": "Reviewed in the United States on March 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Horrible",
+        "userName": "Frank's designs",
+        "numberOfHelpful": 9,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2RUDRZJXDMDL3",
+        "text": "Looks SO MUCH BETTER than a row of three switches. You can label what each virtual button is called, and pick an image of different kinds of lights, or fans to go with it. Only drawback is that it only lasted 18 months.",
+        "date": "Reviewed in the United States on September 23, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Very easy to install and set. Died after 18 months.",
+        "userName": "K",
+        "numberOfHelpful": 2,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R10K3YTWH46XGB",
+        "text": "Que lo retienen en la aduana mucho tiempo",
+        "date": "Reviewed in Mexico on January 3, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "El equipo excelente",
+        "userName": "adolfo",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "MX",
+          "marketplaceId": "A1AM78C64UM0Y8"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09FL9WPGL",
+        "productTitle": "LANBON LCD 1/2/3 Gang Smart Light Switch,2.4G Wi-Fi Touch Smart Switch Works with Alexa/Google Home,Wireless 3 Way,WiFi Mesh 5-in-1 Wall Magic Panel No Offline,Neutral Wire Required,NO Dim,L8-HS-White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 25,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 413,
+        "productRating": "4 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 62
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 7
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3QLLOOUI6GQQH",
+        "text": "Excelente producto, me gusto mucho y es muy facil de instalarlo",
+        "date": "Reviewed in Mexico on November 7, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Apagador Inteligente",
+        "userName": "Francisco",
+        "numberOfHelpful": 0,
+        "variationId": "B09FL9WPGL",
+        "imageUrlList": null,
+        "variationList": [
+          "Style: L8-HS 1/2/3 Gang Light Switch White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "MX",
+          "marketplaceId": "A1AM78C64UM0Y8"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 25,
+    "pages_scraped": 3,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

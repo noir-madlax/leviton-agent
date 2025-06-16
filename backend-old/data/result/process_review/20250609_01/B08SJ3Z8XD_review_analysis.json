@@ -1,0 +1,323 @@
+{
+  "product_title": "Leviton 15 Amp Decora Antimicrobical Wall Switch Single-Pole, White, 5601-2AW",
+  "product_category": "Single Pole Rocker Switches",
+  "total_reviews": 48,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks nice and modern": {
+          "+": [
+            3,
+            4,
+            5,
+            11,
+            28,
+            32
+          ]
+        },
+        "B@sleek design": {
+          "+": [
+            28
+          ]
+        },
+        "C@attractive finish": {
+          "+": [
+            12
+          ]
+        },
+        "D@compact size": {
+          "+": [
+            38
+          ]
+        },
+        "E@different style from previous": {
+          "+": [
+            21,
+            47
+          ]
+        }
+      },
+      "build_quality": {
+        "F@well put together": {
+          "+": [
+            6
+          ]
+        },
+        "G@feels like good quality": {
+          "+": [
+            0,
+            6,
+            7,
+            22,
+            28
+          ]
+        },
+        "H@hefty and durable feeling": {
+          "+": [
+            23
+          ]
+        },
+        "I@rugged design": {
+          "+": [
+            12
+          ]
+        },
+        "J@flimsy and breaks easily": {
+          "-": [
+            41
+          ]
+        },
+        "K@manufactured incorrectly with broken bottom piece": {
+          "-": [
+            35
+          ]
+        }
+      },
+      "wiring_mechanism": {
+        "L@quickwire push-in connection": {
+          "+": [
+            30,
+            40
+          ]
+        },
+        "M@push-in wire connection instead of screw terminals": {
+          "-": [
+            15
+          ]
+        }
+      },
+      "ground_placement": {
+        "N@ground connection on top back instead of bottom": {
+          "-": [
+            38
+          ]
+        }
+      },
+      "manufacturing": {
+        "O@made in USA": {
+          "+": [
+            24
+          ]
+        }
+      },
+      "components": {
+        "P@missing screw": {
+          "-": [
+            31
+          ]
+        },
+        "Q@non-symmetrical screws": {
+          "-": [
+            35
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@easy to install": {
+          "+": {
+            "D": [
+              38
+            ],
+            "L": [
+              30
+            ],
+            "?": [
+              0,
+              2,
+              6,
+              11,
+              12,
+              16,
+              17,
+              20,
+              28,
+              29,
+              34,
+              39,
+              42,
+              43
+            ]
+          }
+        },
+        "b@fits well in small junction box": {
+          "+": {
+            "D": [
+              38
+            ]
+          }
+        },
+        "c@tight fit when wires come from top": {
+          "-": {
+            "N": [
+              38
+            ]
+          }
+        },
+        "d@wire connection issues": {
+          "-": {
+            "K": [
+              35
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "e@works as expected": {
+          "+": {
+            "?": [
+              0,
+              2,
+              10,
+              13,
+              14,
+              17,
+              21,
+              44,
+              45,
+              46
+            ]
+          }
+        },
+        "f@reliable functionality": {
+          "+": {
+            "I": [
+              12
+            ]
+          }
+        },
+        "g@doesn't work as expected": {
+          "-": {
+            "?": [
+              19
+            ]
+          }
+        },
+        "h@switch internals stopped working": {
+          "-": {
+            "J": [
+              41
+            ]
+          }
+        },
+        "i@no click and loose rocker": {
+          "-": {
+            "J": [
+              41
+            ]
+          }
+        }
+      },
+      "durability": {
+        "j@very durable": {
+          "+": {
+            "?": [
+              36
+            ]
+          }
+        },
+        "k@lasts for years": {
+          "+": {
+            "?": [
+              24,
+              36
+            ]
+          }
+        },
+        "l@breaks immediately upon installation": {
+          "-": {
+            "J": [
+              41
+            ]
+          }
+        }
+      },
+      "antimicrobial_feature": {
+        "m@antimicrobial properties": {
+          "+": {
+            "?": [
+              1,
+              39
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "garbage_disposal_replacement": {
+        "+": {
+          "m": [
+            1
+          ]
+        }
+      },
+      "fan_switch_replacement": {
+        "+": {
+          "e": [
+            2
+          ]
+        }
+      },
+      "home_modernization": {
+        "+": {
+          "A": [
+            4,
+            11
+          ]
+        }
+      },
+      "kitchen_lighting": {
+        "+": {
+          "A": [
+            5
+          ]
+        }
+      },
+      "bathroom_switch_replacement": {
+        "+": {
+          "e": [
+            25,
+            40
+          ]
+        }
+      },
+      "garage_lighting": {
+        "+": {
+          "e": [
+            20
+          ]
+        }
+      },
+      "home_renovation": {
+        "+": {
+          "A": [
+            30
+          ]
+        }
+      },
+      "old_house_installation": {
+        "+": {
+          "a": [
+            34
+          ]
+        }
+      },
+      "office_makeover": {
+        "+": {
+          "a": [
+            39
+          ]
+        }
+      },
+      "back_light_control": {
+        "+": {
+          "e": [
+            46
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:11:52.143061"
+}

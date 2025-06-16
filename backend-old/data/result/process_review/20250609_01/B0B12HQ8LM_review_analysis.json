@@ -1,0 +1,238 @@
+{
+  "product_title": "TOPGREENER Digital Dimmer Light Switch for 200W Dimmable LED/CFL Lights, Single Pole Led Slide Dimmer Switch, Neutral Wire Not Required, Wall Plate Included, UL Listed, TGDS1-W-6PCS, White,6 Pack",
+  "product_category": "Slide Control Dimmer Switches",
+  "total_reviews": 18,
+  "review_analysis": {
+    "phy": {
+      "wheel": {
+        "A@adjustment wheel component": {
+          "+": [
+            9,
+            11
+          ],
+          "-": [
+            0,
+            11
+          ]
+        }
+      },
+      "switch_body": {
+        "B@back side dimensions too large for standard electrical box": {
+          "-": [
+            17
+          ]
+        }
+      },
+      "build_quality": {
+        "C@cheaply made construction": {
+          "-": [
+            11
+          ]
+        }
+      },
+      "appearance": {
+        "D@nice and sleek visual design": {
+          "+": [
+            13
+          ]
+        }
+      },
+      "slide_mechanism": {
+        "E@dimmable slide component": {
+          "+": [
+            9
+          ]
+        }
+      }
+    },
+    "perf": {
+      "position_stability": {
+        "a@does not maintain set position": {
+          "-": {
+            "A": [
+              0
+            ]
+          }
+        }
+      },
+      "light_flickering": {
+        "b@causes periodic light flickering": {
+          "-": {
+            "?": [
+              0,
+              16
+            ]
+          }
+        },
+        "c@no flickering issues": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "humming": {
+        "d@no humming noise": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        }
+      },
+      "installation": {
+        "e@easy to install": {
+          "+": {
+            "?": [
+              2,
+              4,
+              7,
+              12,
+              13
+            ]
+          }
+        },
+        "f@installation compatibility with LED lights": {
+          "+": {
+            "?": [
+              7
+            ]
+          }
+        }
+      },
+      "dimming_function": {
+        "g@does not dim properly": {
+          "-": {
+            "?": [
+              5,
+              8
+            ]
+          }
+        },
+        "h@unreliable dimming output": {
+          "-": {
+            "A": [
+              11
+            ]
+          }
+        },
+        "i@proper dimming functionality": {
+          "+": {
+            "?": [
+              9,
+              14
+            ]
+          }
+        }
+      },
+      "power_control": {
+        "j@sometimes does not turn on lights": {
+          "-": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "k@stopped working completely": {
+          "-": {
+            "?": [
+              16
+            ]
+          }
+        },
+        "l@works as expected": {
+          "+": {
+            "?": [
+              1,
+              13
+            ]
+          }
+        }
+      },
+      "durability": {
+        "m@burns out after short period": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "n@stops working after few months": {
+          "-": {
+            "?": [
+              10,
+              15,
+              16
+            ]
+          }
+        },
+        "o@some units defective out of box": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        }
+      },
+      "adjustment_responsiveness": {
+        "p@wheel adjustments have little impact on performance": {
+          "-": {
+            "A": [
+              11
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "LED_lighting": {
+        "+": {
+          "f": [
+            7
+          ]
+        },
+        "-": {
+          "g": [
+            5
+          ]
+        }
+      },
+      "bedroom_lighting": {
+        "-": {
+          "b": [
+            16
+          ]
+        }
+      },
+      "general_room_lighting": {
+        "+": {
+          "i": [
+            9,
+            14
+          ]
+        },
+        "-": {
+          "k": [
+            16
+          ]
+        }
+      },
+      "home_renovation": {
+        "-": {
+          "n": [
+            10
+          ]
+        }
+      },
+      "new_lighting_installation": {
+        "-": {
+          "h": [
+            11
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:05:18.681524"
+}

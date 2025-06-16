@@ -1,0 +1,512 @@
+{
+  "product_title": "Eaton Controls DF10P-C1 Decorator 0-10V Dimmer 120/277V with Color Change Kit, Almond, White, Ivory",
+  "product_category": "Commercial 0-10V Dimmer Switches",
+  "total_reviews": 39,
+  "review_analysis": {
+    "phy": {
+      "connection": {
+        "A@connection quality requires proper installation": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "screw": {
+        "B@set screw was fused and would not tighten": {
+          "-": [
+            5
+          ]
+        },
+        "C@stripped screw complicates installation": {
+          "-": [
+            12
+          ]
+        },
+        "D@brass screw on Y terminal was stripped": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "appearance": {
+        "E@comes with different colors to choose from": {
+          "+": [
+            6
+          ]
+        },
+        "F@includes all three color faceplates (white, almond, ivory)": {
+          "+": [
+            19
+          ]
+        },
+        "G@looks great up on the wall and doesn't look cheaply made": {
+          "+": [
+            13
+          ]
+        },
+        "H@liked the different colors you could use depending on your needs": {
+          "+": [
+            24
+          ]
+        }
+      },
+      "wiring": {
+        "I@gray black and purple wiring harness pigtail": {
+          "+": [
+            7
+          ]
+        },
+        "J@violet and purple (0-10 vdc) wires": {
+          "+": [
+            19
+          ]
+        },
+        "K@has two sets of wires - one for 0-10V and one for regular switch": {
+          "+": [
+            18
+          ]
+        },
+        "L@quality wiring": {
+          "+": [
+            30
+          ]
+        }
+      },
+      "size": {
+        "M@dimmer units are a little deeper than a conventional switch": {
+          "+": [
+            19
+          ]
+        }
+      },
+      "construction": {
+        "N@seem cheaply made": {
+          "-": [
+            11
+          ]
+        },
+        "O@very well made": {
+          "+": [
+            30
+          ]
+        },
+        "P@very solid dimmer switch": {
+          "+": [
+            13
+          ]
+        },
+        "Q@switch had four small screws that allowed access to internal parts": {
+          "+": [
+            12
+          ]
+        }
+      },
+      "manufacturing": {
+        "R@Chinese garbage, not made in North America": {
+          "-": [
+            14
+          ]
+        }
+      },
+      "dial": {
+        "S@dial to determine level of brightness is nice": {
+          "+": [
+            24
+          ]
+        },
+        "T@don't like having to remove cover to dial up or down": {
+          "-": [
+            24
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation": {
+        "a@very easy to install": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "b@easy to wire up": {
+          "+": {
+            "I": [
+              7
+            ],
+            "J": [
+              19
+            ],
+            "?": [
+              12
+            ]
+          }
+        },
+        "c@easy install": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "d@easy installations": {
+          "+": {
+            "?": [
+              32
+            ]
+          }
+        },
+        "e@easy to hookup": {
+          "+": {
+            "?": [
+              37
+            ]
+          }
+        },
+        "f@install complicated by stripped screw": {
+          "-": {
+            "C,D": [
+              12
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "g@works well": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "h@works good": {
+          "+": {
+            "?": [
+              4
+            ]
+          }
+        },
+        "i@working great for months": {
+          "+": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "j@dims LED perfectly": {
+          "+": {
+            "I": [
+              7
+            ]
+          }
+        },
+        "k@1 out of 4 not working properly": {
+          "-": {
+            "?": [
+              8
+            ]
+          }
+        },
+        "l@switch is working perfectly": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "m@two didn't work right - lights dimmer than others": {
+          "-": {
+            "N": [
+              11
+            ]
+          }
+        },
+        "n@doesn't make the lights flicker": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        },
+        "o@works as advertised": {
+          "+": {
+            "?": [
+              16,
+              21,
+              36
+            ]
+          }
+        },
+        "p@works great with 4 lights strung in series": {
+          "+": {
+            "?": [
+              17
+            ]
+          }
+        },
+        "q@works very well with 8 flat panel LED fixtures": {
+          "+": {
+            "?": [
+              23
+            ]
+          }
+        },
+        "r@worked great to dim 2x4 LED panels": {
+          "+": {
+            "?": [
+              25
+            ]
+          }
+        },
+        "s@makes light bright and dim but will not turn off": {
+          "-": {
+            "?": [
+              28
+            ]
+          }
+        },
+        "t@works like a charm": {
+          "+": {
+            "?": [
+              29
+            ]
+          }
+        },
+        "u@worked fine controlling four 52w LED troffers": {
+          "+": {
+            "?": [
+              34
+            ]
+          }
+        },
+        "v@works perfect": {
+          "+": {
+            "?": [
+              33
+            ]
+          }
+        }
+      },
+      "dimming_performance": {
+        "w@dimming is very limited": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "x@full brightness setting provided much less than full light output": {
+          "-": {
+            "?": [
+              15
+            ]
+          }
+        },
+        "y@didn't get much dimming range": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        },
+        "z@didn't get very good low end dimmed range": {
+          "-": {
+            "?": [
+              20
+            ]
+          }
+        }
+      },
+      "testing": {
+        "aa@only seemed to work when connected to LED Controller, not testable with VOM": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        }
+      },
+      "durability": {
+        "ab@absolute crap quality": {
+          "-": {
+            "B": [
+              5
+            ]
+          }
+        },
+        "ac@good quality": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ad@great quality product": {
+          "+": {
+            "?": [
+              22
+            ]
+          }
+        },
+        "ae@sturdy": {
+          "+": {
+            "L": [
+              30
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "dimmer for UFO lights": {
+        "+": {
+          "a": [
+            1
+          ]
+        }
+      },
+      "LED spotlight with low voltage dimming": {
+        "+": {
+          "h": [
+            4
+          ]
+        }
+      },
+      "LED with separate brightness controls": {
+        "+": {
+          "j": [
+            7
+          ]
+        }
+      },
+      "Lowes Dimmable LED": {
+        "+": {
+          "j": [
+            7
+          ]
+        }
+      },
+      "0-10V dimmer controller": {
+        "+": {
+          "l": [
+            12
+          ]
+        }
+      },
+      "shop light with dimmer cable": {
+        "+": {
+          "l": [
+            12
+          ]
+        }
+      },
+      "single pole install": {
+        "+": {
+          "l": [
+            12
+          ]
+        }
+      },
+      "Ivory 0-10v dimming switch": {
+        "+": {
+          "n,G": [
+            13
+          ]
+        }
+      },
+      "Mean Well PWM-120-24 LED power supply and LED strip": {
+        "-": {
+          "x": [
+            15
+          ]
+        }
+      },
+      "LED Panel Light": {
+        "-": {
+          "x": [
+            15
+          ]
+        }
+      },
+      "UFO style warehouse LEDs": {
+        "+": {
+          "p": [
+            17
+          ]
+        }
+      },
+      "0-10V dimming systems": {
+        "+": {
+          "?": [
+            18
+          ]
+        }
+      },
+      "dimmable LED fixtures": {
+        "+": {
+          "b": [
+            19
+          ]
+        }
+      },
+      "outdoor LED flood light": {
+        "-": {
+          "y,z": [
+            20
+          ]
+        }
+      },
+      "0-12v dimming systems": {
+        "+": {
+          "q": [
+            23
+          ]
+        }
+      },
+      "flat panel 2x4 LED fixtures": {
+        "+": {
+          "q": [
+            23
+          ]
+        }
+      },
+      "2x4 LED panels in suspended ceiling": {
+        "+": {
+          "r": [
+            25
+          ]
+        }
+      },
+      "0-10v lights": {
+        "+": {
+          "?": [
+            27
+          ]
+        }
+      },
+      "dimmable LED flat panel lighting": {
+        "+": {
+          "t": [
+            29
+          ]
+        }
+      },
+      "52w Hypericon LED troffers": {
+        "+": {
+          "u": [
+            34
+          ]
+        }
+      },
+      "0-10VDC control of LED lights": {
+        "+": {
+          "?": [
+            35
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:02:38.324919"
+}

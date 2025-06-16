@@ -1,0 +1,2587 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:25:58.076554",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B0055VD9HK",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B0055VD9HK",
+    "title": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+    "brand": "Lutron",
+    "model_number": NaN,
+    "price_usd": 22.97,
+    "rating": 4.6,
+    "reviews_count": 2461.0,
+    "category": "Dimmer Switches",
+    "product_segment": "LED Optimized Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B0055VD9HK"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2HRM694O70QWQ",
+        "text": "I have a few of these so I feel like a bit of an expert. They do work well but the one seems a bit finicky. What I mean is the light doesn’t stay the same dimness. 99.9% of the time has been good. I love having dimmers all over the house. Being able to adjust the brightness is awesome.",
+        "date": "Reviewed in the United States on May 8, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Pretty good dimmer",
+        "userName": "Tim A",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": [
+          "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/b886d439-df30-451c-80a4-d7964ec5c3a0/default.vertical.jobtemplate.mp4.480.mp4"
+        ]
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RPNRR2VERW9S5",
+        "text": "Didn’t work! Kept my lights blinking. Would not recommend any one to purchase it.",
+        "date": "Reviewed in the United States on January 22, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Dimmer switch.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RL8VLMTRCUJQZ",
+        "text": "Work great, easy to install",
+        "date": "Reviewed in the United States on December 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Saved me when I switched to LED",
+        "userName": "Regular Joe",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2H9TRXOWI2X9E",
+        "text": "I installed 4 of these a few years ago, and now only one works. I liked them while they lasted, easy to use, for with the look of the house. Unfortunately three of them don’t work well. They flicker, they go only part of the way up or part of the way down in brightness when you move the slider. Sometimes they start low and slowly get brighter despite not touching the switch at all. Very disappointing.",
+        "date": "Reviewed in the United States on October 30, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "3 of 4 don’t work.",
+        "userName": "Kris",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2H6NACD9XPCKE",
+        "text": "Color spot on as well",
+        "date": "Reviewed in the United States on August 31, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Fits existing fixtures",
+        "userName": "Ulla-Maija Weissert",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RXBPX1JQ5J5S7",
+        "text": "I really like these slide lever switches and have them installed all around my house. I noticed the most recent ones I bought don't seem to provide the same range on the dimmable LEDs though. Could be a difference in the bulbs though.",
+        "date": "Reviewed in the United States on June 17, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Range doesn't seem to be as good as older switches",
+        "userName": "K. Keller",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1KOJC31FW2SDX",
+        "text": "Works a advertised.",
+        "date": "Reviewed in the United States on February 14, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "I does what is designed to do.",
+        "userName": "RF",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1JHLZ3YNZ62TL",
+        "text": "Thanks",
+        "date": "Reviewed in the United States on June 30, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Thanks",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1ADQ347Q69PRO",
+        "text": "Needed to tone down new LED under-cabinet lights. They had a good price, arrived on time, installed without a hitch and work as advertised. Boom!",
+        "date": "Reviewed in the United States on June 14, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good dimmers",
+        "userName": "BobW",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R29ZTW7HAFX33Z",
+        "text": "Didn’t last six weeks before the dimmer function died. No longer functions as a three-way.",
+        "date": "Reviewed in the United States on May 10, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk",
+        "userName": "JR Mills",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RTFYDCGCPPCH2",
+        "text": "The, \"Lutron Toggler LED+ Dimmer Switch, 3-way\" works great for the 2 of 3 installed. 1 unit did not function as a 3-way, as if there was a missing part internally. I did not request a replacement, since I repurposed it as a typical single switch install.",
+        "date": "Reviewed in the United States on April 3, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "1 of 3 units did not work properly",
+        "userName": "Joe",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3D95OTV4XMSZS",
+        "text": "It worked once then quit so i returned it",
+        "date": "Reviewed in the United States on February 28, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "worked once then quit",
+        "userName": "Dean R. Spindler",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R159UCTVNKSJMJ",
+        "text": "I bought this specifically, so my set of ceiling can LED lights would not “buzz“ while on. However, the lights still buzz, quite annoyingly, regardless of whether I adjust it to a dimmed setting or have it on full brightness. (By the way, my LED lights are designed to be “dimmable.”) Disappointing.",
+        "date": "Reviewed in the United States on January 10, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "LED lights STILL BUZZ despite this switch :-(",
+        "userName": "mark w",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2202D7G5ET3L1",
+        "text": "Very easy to install. Dimmer work good. Just make sure your light is compatible.",
+        "date": "Reviewed in the United States on December 31, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good dimmer",
+        "userName": "Tyler G",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1UIJJ950JELDS",
+        "text": "The dimmer works great, and it was easy to install. The color selections were: Ivory, Almond, and light Almond. I expected Ivory to be close to white. As can be seen in my attached photo, it is definitely not white. There switch plate is white.",
+        "date": "Reviewed in the United States on November 4, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Ivory is definitely not White",
+        "userName": "Robert Little",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/619BpfD6PJL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/71Kk2Rw0yDL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3967WSBFGY62X",
+        "text": "Nice to have a switch that looks like a typical switch but that also dims. Will put more of these around the house including the bathroom.",
+        "date": "Reviewed in the United States on September 23, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Dimmer Switches",
+        "userName": "John H.",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R14F3U2PNDM6UM",
+        "text": "Bought for LED lighting due to flicker when dimmed. No more flicker. Purchased these due to a good positive review. More expensive than HD or Lowes but are supposed to be much better quality. Made in Mexico (not China).",
+        "date": "Reviewed in the United States on August 13, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "No flicker.",
+        "userName": "carol l",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RV9M0SI73Z3S8",
+        "text": "excellent product for LED dimmable lamps",
+        "date": "Reviewed in the United States on April 7, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "These are great",
+        "userName": "Don H",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2UFGPDCEXO9QX",
+        "text": "Just make sure of the color that you want. Almond, light almond and ivory are all close in color. Works great with LED dimmer options.",
+        "date": "Reviewed in the United States on April 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switch, dimmer works with LED bulbs great",
+        "userName": "PM Ktown",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R36JMBBI8Y2776",
+        "text": "I ordered the 3 pack. Only 2 worked. We tried troubleshooting the one by trying it on different lights (I need 3 replaced) regular lights and LED lights and NOPE nothing... The other two worked. No way to return because it was a 3 pack and the other 2 are already installed.",
+        "date": "Reviewed in the United States on February 8, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Only 2 of the 3 pack worked.... No way to return or replace that I can see...",
+        "userName": "Analuisa Orozco",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RBYLC8TV0YM48",
+        "text": "Easy to understand written instructions, but also has a video online if still not certain.",
+        "date": "Reviewed in the United States on January 19, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good value.",
+        "userName": "William Sherron",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3PYGG8KKRV03L",
+        "text": "I've installed many dimmer switches previously and never had any issues (different brands). These were VERY frustrating to install. I normally use the screw connections (more secure). However, these are impossible to do well and very frustrating. The terminals are inset into the body with too much gap between the wire and the screw. You tighten the screw, and the wire just pops out from under the screw. There shouldn't be enough clearance to do that. If you try to make a loop in the wire to keep it in, there isn't enough room to have much of a loop. Next, I tried using the push-in connection. But the hole for that connection was too small for my 12-gauge wire. What should have been a 10-minute install took an hour of frustrating time... times 3 (I bought 3 switches). All 3 switches were the same. They worked fine once installed. But what a pain to get the wires connected!",
+        "date": "Reviewed in the United States on January 6, 2022",
+        "rating": "2.0 out of 5 stars",
+        "title": "Very hard to install",
+        "userName": "Cool Guy",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R23AF4WUCBPAWF",
+        "text": "Bought for LED bulbs in bathrooms and for other LED bulbs in hallway, dining room and ceiling fans. No flickering, etc like cheap dimmers might cause. Very pleased.",
+        "date": "Reviewed in the United States on January 2, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent quality.",
+        "userName": "jimmmy61",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3AG5J2XC58MS0",
+        "text": "They would not dim enough for my customer and they flicker when you dim them. I bought thirty of them for a customer and she said take them out. I have them installed for Nicor dimmable recess led bulbs. I bought thirty of some other brand prior, but they did not dim as good as the Lutron. So I got sixty dimmers that I can't use. I think this dimmer would be good on another brand bulb. I can not find a toggle dimmer that works with these bulbs. I'm out over $1,300.00.",
+        "date": "Reviewed in the United States on October 21, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "They would not dim low enough",
+        "userName": "Steve Hodge",
+        "numberOfHelpful": 2,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2SCX6HOME5FTU",
+        "text": "Like the dimmer separate from switch",
+        "date": "Reviewed in the United States on June 8, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Love this style and am a repeat customer",
+        "userName": "alaska",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1SFJ1DCN10GNR",
+        "text": "Absolute junk, don’t buy, cheap plastic, can’t get the wires on the screw, the toggle itself feels like it’s going to fall off",
+        "date": "Reviewed in the United States on May 26, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Junk! Save your money",
+        "userName": "Mike",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R86WUIKBB7O6B",
+        "text": "Replaced an old rotary dimmer with it. It works very well!",
+        "date": "Reviewed in the United States on May 16, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great 3-way dimmer!",
+        "userName": "Lonna Palmer",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R19HQIXKF84PS",
+        "text": "3 ways are never any fun but these were not bad once I figured the wiring that was in this house.",
+        "date": "Reviewed in the United States on February 27, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great switches",
+        "userName": "L. M.",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1AD0SPI2PRSGU",
+        "text": "I installed it in my bathroom for the lights above the sink. I dim it at night when I go to bed. If I use the bathroom in the night, I'm not blinded awake by bright lights.",
+        "date": "Reviewed in the United States on February 26, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Noah",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R26EIC27J7RFV3",
+        "text": "Tried another style and was not happy as it changed brightness and went off with vibration. This one has worked well. Brightness can be set and switch used without changing it.",
+        "date": "Reviewed in the United States on February 25, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works for LED and fits in old style decorative switch plate.",
+        "userName": "Cindy",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R13DAHL7CEEPLD",
+        "text": "I bought LED lights that were dimmable but had no idea that my older Lutron dimmer was not up to the task. Installed years ago before LEDs were popular they worked fine with incandescent but not my LEDs. This new Lutron cured the problem. Adjusts perfectly within a wide range.",
+        "date": "Reviewed in the United States on January 24, 2021",
+        "rating": "5.0 out of 5 stars",
+        "title": "Cured flickering LED lights",
+        "userName": "Mr. Rev",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1RI5NYF02KU8J",
+        "text": "Perfect dimming of six recessed can LED fixtures. No flicker, no hesitation.",
+        "date": "Reviewed in the United States on November 24, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Replaced older Lutron dimmer - no more flicker on my LEDs!",
+        "userName": "Bryan",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R56HS4ADNEQ5O",
+        "text": "Old dimmer switch caused the LED's in my ceiling fan to go bad! New switch cured that problem! ; )",
+        "date": "Reviewed in the United States on November 18, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Best for use with LEDS",
+        "userName": "Richard B. Old",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RP7727NRQ1H3H",
+        "text": "Highly recommend that you install these in your 3-way circuits. Watch you amperage load if you are not converting to LEDs.",
+        "date": "Reviewed in the United States on July 26, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great Product. Works Extremely Well, Especially with LED Candelabra Lamps",
+        "userName": "Amazon Last Resort",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1VTE85CZDS8KX",
+        "text": "Pros: The 'slider' does not move to full on like some others when the light is turned off. Works with 3 way switches. CONS: Finding -if- your LED bulbs are \"compatible\" with this is a chore. Even if it \"works\" it is far from perfect. Example: I tried it with equivalent 40 watt bulbs. The 'dimming' is very limited before they start flickering off, so they go from 480 lumen to 380? lumen. Not a lot of sense in using it if it has such a limited range. Something else I noticed, it doesn't 'appear' that the LED lights are quite as bright (when at full brightness) as when the standard ON/OFF switch was used, although I have no way of verifying such. My opinion - buy at you own risk if you intend to use this with LED lighting.",
+        "date": "Reviewed in the United States on July 7, 2020",
+        "rating": "2.0 out of 5 stars",
+        "title": "LED light dimmer -Iffy at best",
+        "userName": "AEinstein",
+        "numberOfHelpful": 2,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R3BGSHSTV5L7LG",
+        "text": "Solid and easy to install. No buzz. Running high-end dimmable LED wall lamps and ceiling lights with highly controllable brightness. The adjustable setting on the internal face allows fine-tuning.",
+        "date": "Reviewed in the United States on May 7, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "silent, solid and adjustable",
+        "userName": "Rolfe J. Taylor",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R28NHHTF7HMGLQ",
+        "text": "This is your standard switch, works great and looks nice. Easy install",
+        "date": "Reviewed in the United States on May 5, 2020",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice dimming switch",
+        "userName": "mikeyp18",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R32BGQFDANLFK",
+        "text": "These are bulky, so you might have trouble fitting these in a two gang, and probably not be able to fit in a three gang. Otherwise these were great. I’m leaving a review today because I installed 9 of these about three years ago. One failed today - turned on the switch, heard a sizzling sound and it no longer worked. Shorted out. This switch controlled an all LED light circuit in 10 canisters (led retrofit kits). Too bad the warranty is only one year. these are some expensive light switches!",
+        "date": "Reviewed in the United States on February 23, 2020",
+        "rating": "4.0 out of 5 stars",
+        "title": "1/9 switches failed after 3 years of use",
+        "userName": "Howard",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R337D0R7CSHEQF",
+        "text": "Excellent switch, fits in standard switch plate, simple install.",
+        "date": "Reviewed in the United States on December 7, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "LED, CFL, Incandescent Dimmer - 1pole or 3way",
+        "userName": "Gene",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R35X38YNK87QOO",
+        "text": "Nice to have adjustment for lowest light level.",
+        "date": "Reviewed in the United States on September 28, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "High quality fine tunable",
+        "userName": "Mark H",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RZBWR17KIF9F",
+        "text": "Works as advertised. I hear a buzzing/humming noise from the lights, however my parents do not. It works tho. The lights are LED dimmable and it fits perfectly under a normal switch cover. I have two switches for the one light and as long as you Kill the power to the breaker and ReWire it exactly as it came out, you should have no problem installing it. Or call an electrician.",
+        "date": "Reviewed in the United States on August 7, 2019",
+        "rating": "4.0 out of 5 stars",
+        "title": "First one died immediately. Second one has been no problem.",
+        "userName": "AndroidGeek",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RN14PNOHOIUV5",
+        "text": "Works well and was easy to install.",
+        "date": "Reviewed in the United States on May 16, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "works well and easy to install",
+        "userName": "Rodney Irey",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1D59NUS135RG5",
+        "text": "Hard to find the right dimmer switch but this one fit the bill perfectly.",
+        "date": "Reviewed in the United States on April 1, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer Switch",
+        "userName": "Carolyn Thiery",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R6DN57W043LV6",
+        "text": "In switching to all LED bulbs, new dimmers were required. Many are Decora, but in keeping with the age and character of the house, I wanted a toggle. This is perfect, and it came in ivory like the switches next to it. I was also able to set the minimum brightness and that's a plus.",
+        "date": "Reviewed in the United States on March 17, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good and versatile",
+        "userName": "IMDIDOC",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1IU7K4I85SI1A",
+        "text": "Item came very quick and worked perfectly. Nice because big box doesn't carry very many Ivory color items and am in a rental that needs this color.",
+        "date": "Reviewed in the United States on March 8, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "honest review",
+        "userName": "edmocon",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2RLSSIJFHAU1Z",
+        "text": "This dimmer works much better than the one it replaced. I gave this 4 stars because it does not turn on the 8 -100W equivalent Feit LED lights when the dimmer is set at about 80% or lower. The lights are within the load capacity. This dimmer was rated \"The best of the best\" in a review, but if holding the dimming setting and switching on from that setting is important to you, this one may not be the best choice. So long as you are ok with turning it almost all the way up to full bright to turn it on, then dimming to the desired setting, this dimmer will work well.",
+        "date": "Reviewed in the United States on February 23, 2019",
+        "rating": "4.0 out of 5 stars",
+        "title": "Better dimming range than others, no flicker or buzz; does not come on set below ~80%",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1J8BT6J16ACEZ",
+        "text": "I am using one dimmer in a 3-way dining room light and either switch will turn on the light to the preset dimness. Wasn't sure if I needed 2 dimmers but one works very well.",
+        "date": "Reviewed in the United States on January 7, 2019",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great dimmer",
+        "userName": "Bill58",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R2T4GME2P14EE2",
+        "text": "Great",
+        "date": "Reviewed in the United States on September 18, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works well",
+        "userName": "Cody",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "RA84K7ROTBAFE",
+        "text": "Seems to work well - I installed it feeding an LED fixture with 8 bulbs. Easy to install",
+        "date": "Reviewed in the United States on August 31, 2018",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy to install, works well with my LED fixture",
+        "userName": "berkeley bell",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B0055VD9HK",
+        "productTitle": "Lutron Toggler LED+ Dimmer Switch for Dimmable LED, Halogen and Incandescent Bulbs, 150 Watt, Single-Pole or 3-Way, TGCL-153PH-IV, Ivory",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 114,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 2461,
+        "productRating": "4.6 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 79
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 4
+          },
+          "twoStar": {
+            "percentage": 2
+          },
+          "oneStar": {
+            "percentage": 3
+          }
+        },
+        "reviewId": "R1S7LK1LCS5PJB",
+        "text": "Received as ordered, pleased with product.",
+        "date": "Reviewed in the United States on July 25, 2018",
+        "rating": "4.0 out of 5 stars",
+        "title": "pleased with product",
+        "userName": "Clayton Eller",
+        "numberOfHelpful": 0,
+        "variationId": "B0055VD9HK",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: 1 Pack",
+          "Color: Ivory"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

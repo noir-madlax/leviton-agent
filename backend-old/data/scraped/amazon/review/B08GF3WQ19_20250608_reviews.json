@@ -1,0 +1,2584 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T23:23:15.783315",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B08GF3WQ19",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1PG3M65LSSYTN",
+        "text": "EVERY LAST ONE OF THESE HAS FAILED IN LESS THAN A YEAR SOME IN JUST TWO WEEKS. THE LIGHTS WILL STILL TURN ON AND OFF BUT THE DIMMER - THE MOST IMPORTANT PART OF A DIMMER SWITCH - FAILS.... CHEAP PARTS AND THEY SHOULD KNOW IT MAKING THIS PRODUCT A REAL SCAM IN MY OPINION - DO NOT BUY THIS",
+        "date": "Reviewed in the United States on May 21, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "CHEAP INTERNAL PARTS FAIL QUICKLY !!!",
+        "userName": "Jehova",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1Q8XETQP94FY7",
+        "text": "I had one just fall apart as I installed it. A little tab broke and I couldn't make it stay together under actual use. And another does not properly dim the light as it is supposed to do. The rest, just fine. You can't really argue about the price, but you know the old adage about getting what you pay for. I think I would buy them again if I needed that many.",
+        "date": "Reviewed in the United States on March 21, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Mixed results using a 10 pack of these",
+        "userName": "Foghorn Leghorn",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2K5QGCPO86F39",
+        "text": "All 5 of these failed within 3 years. The switch breaks at its pivot point and then fails to work. AlL FIVE OF THEM 🤬 Negative stars",
+        "date": "Reviewed in the United States on March 15, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "All broke",
+        "userName": "highsmith",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RZPL5AZMAMF9E",
+        "text": "I bought the 6 pack of these lights 4 years ago. Now 3 of them are all broken. They wouldn't turn on or off because the switch itself, physically wouldn't work. Even when they were installed, they never actually worked great, and the switch felt cheap. Going to swap out all of em. Really poor product.",
+        "date": "Reviewed in the United States on December 22, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Did NOT LAST",
+        "userName": "Justin",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": false,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RAOHB56KBXW07",
+        "text": "Al mudarme de casa, tuvimos que cambiar todos los switches y los tomacorrientes. Estos fueron una buena opcion. Funcionan bien y no son tan costosos.",
+        "date": "Reviewed in the United States on August 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "BESTTEN paquete de 5 interruptores de luz",
+        "userName": "Maur Az",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": {
+          "language": "es",
+          "country": "US",
+          "marketplaceId": "ATVPDKIKX0DER"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2GNAGE046OYT6",
+        "text": "Box of 5 items 3 used and 2 like new Change requested so let see",
+        "date": "Reviewed in the United States on July 26, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Used items",
+        "userName": "Box of 5 items, 3 used and 2 like new. Change requested let see.",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/71G6vFN1mgL._SY88.jpg"
+        ],
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R29M68EFYBUUCI",
+        "text": "That’s not a good product. The dimmer doesn’t work smoothly, after it’s installed. Before installation the dimmer goes great - back and forth. Every single one after installed got very hard to be used. So bad that I’ve even hurt my finger.",
+        "date": "Reviewed in the United States on June 22, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "It doesn’t work like it was supposed to",
+        "userName": "William",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1APW49R0O3XNH",
+        "text": "The dimming feature works well. They are easy to install if you have basic handy man skills. The look great. They are compatible with most wiring layouts with a few exceptions. Be aware that you may get some flickering with certain led lights when you dim them. I only had this issue on one light and it's notna big deal.",
+        "date": "Reviewed in the United States on June 5, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "May flicker with led",
+        "userName": "Chad",
+        "numberOfHelpful": 3,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1RH4GMYYMNMAI",
+        "text": "I bought and installed these about 2 years ago. One day my daughter try to switch the light on, it arced, which scared her. She called me to check it out. I tried and it arced again. We could have been shocked but were lucky. Needless to say, i replaced it with a different brand from HD. 2 stars because i got two years of use out of it.",
+        "date": "Reviewed in the United States on June 2, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Broken after 2 years - arcing and dangerous",
+        "userName": "tv",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/6115TbRG-2L._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61LXj8PIPbL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61XgLNJFWxL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61kLZg+mdfL._SY88.jpg"
+        ],
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2K190JF6K4B02",
+        "text": "One can tell if a switch is a quality product if the rocker is firm and tight when switched between on and off --- this one is very lose and finicky. So much so that it takes so little effort to mistakenly switched if off when you are trying to switch it on. Plus the product is so light that it gives you the impression of a cheap material. I wanted to return it but it was past the date of return. The only advantag eof this switch is that it handles a 3 way switch with no issue but i wish it could have been built more solidly.",
+        "date": "Reviewed in the United States on June 1, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Cheap Material",
+        "userName": "Konea",
+        "numberOfHelpful": 2,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RLDU6YTJAQCF",
+        "text": "The dimmers I received are the slim type, no mention of that in desperation. Mounting screws were shown in image, none provided. After reading some less than positive reviews I’m concerned w/the longevity of the switches. I have purchased other Bestten dimmers and paid more for the deeper design that came with mounting screws and faceplate. I haven’t had any issues with any of those. Update: found mounting screws in packet of wire nuts. These also seem to be Quite style switches, also no mentioned in description.",
+        "date": "Reviewed in the United States on May 25, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Item does not match image or description",
+        "userName": "Harry T",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1L2ROCSJEG76H",
+        "text": "Very good product that is easy to install, simple clean packaging and solid value for money.",
+        "date": "Reviewed in the United States on May 23, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Excellent product",
+        "userName": "Chesslover",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R78VCOSC2Q416",
+        "text": "Install very standard",
+        "date": "Reviewed in the United States on May 20, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Essy",
+        "userName": "Tony",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RBVS3KI3MQSQ3",
+        "text": "My son bought these for his house and since I am an electrician by trade I was obligated to do the install. I have to say that they were much better than I had first thought. So much so that I bought some for my house. So far so good. I would not hesitate to buy more.",
+        "date": "Reviewed in the United States on April 17, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Work great",
+        "userName": "GRBNAB",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R174JHK7U204IL",
+        "text": "You get what you pay for, I guess. 2 stars because all 5 worked but feel very cheap and when they don't have that strong sounding click, you know they will build up carbon deposits on the contactors. Dimmer slide sticks also. If you're a flipper and don't care about long term then these are perfect. But if you're a homeowner, spend the money and get a better switch because every time you turn the lights on or off, you'll wish you bought a better quality switch",
+        "date": "Reviewed in the United States on April 6, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Poor quality, won't last long",
+        "userName": "BRAD FRENCH",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R236AT2AUCB4JU",
+        "text": "I bought this product because it met the Eletrcrians requirements—it is UL Listed. The photo and description clearly indicate that it is UL listed. However, the product I received is not. There is no indication on the box or product that it is UL-listed. Not sure why they would be allowed to say something that is that important and not be able to provide that certification.",
+        "date": "Reviewed in the United States on April 5, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Missleading photo.",
+        "userName": "Robert W Conquest",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1FP4GAGN3DQQS",
+        "text": "It works pretty good but will not start leds on a low setting.",
+        "date": "Reviewed in the United States on March 29, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Good but not perfect",
+        "userName": "Jason Sylvester",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3OEWKP1H0RGHR",
+        "text": "The dimmers look great, however they are not good for LED bulbs that do not have at least 100W of power draw (actual load not equivalent). The dimmer is unable to controll the led, it basicly becomes overpriced switch. Very dissapointed. If you looking for good dimmer, Lutron dimmers work great.",
+        "date": "Reviewed in the United States on March 12, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not as advertised",
+        "userName": "Rafal Turek",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R11NJOJW3NI4HF",
+        "text": "2 of these have issues with the on and off switch. You have to push hard on the top to make the light come on. And also the dimmer is different on the ones that have issues. They dim all the way down to nothing. The others in the pack dim down to about 20% brightness. All these switches are on the same brand and model ceiling can lights.",
+        "date": "Reviewed in the United States on March 2, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Some have issues",
+        "userName": "Randy Schwingle",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RR0H6EVNN8WTI",
+        "text": "One switch completely failed after installation. Others are connected to a number of LED floods, which together add up to less than 100W, and they flicker whenever there is any surge in the house circuit. I replaced with a Leviton and problem solved.",
+        "date": "Reviewed in the United States on January 26, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Garbage",
+        "userName": "Aaron Selverston",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3BI6CK8EMOXWY",
+        "text": "It was a good deal of getting 5k of these, installed easy, but... switches not working well, sometimes it's delay in turning on, sometimes it's turn on after clicking few times. I'm not satisfied with this purchase.",
+        "date": "Reviewed in the United States on January 20, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not as good as it seems.",
+        "userName": "Vadim S.",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RZ5N6CTSDLUAF",
+        "text": "These are temporary dimmer switches. You will need to replace them. Out of a pack of 4, one of them worked for a week and needed to be replaced, another made it about 6 months, and two of them made it just over a year. Not worth the handyman fees, would not buy these again",
+        "date": "Reviewed in the United States on January 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working at 1 week, 6 month, longest one lasted 18 months",
+        "userName": "Jana",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3SUI8SJ1O318C",
+        "text": "Doesn’t even deserve one star. Bought five pack only needing one. It worked for about two weeks, would turn off fine but had to turn “on/off” multiple times before it would actually turn on. Replaced with another from the pack, after about the same time, the front “switch “ mechanism cracked and wouldn’t move.",
+        "date": "Reviewed in the United States on January 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Extremely poor quality",
+        "userName": "Michael Zarella",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61TsHMiIOiL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61t1d+0DeUL._SY88.jpg"
+        ],
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R25MCT7O31PAZ3",
+        "text": "Misinformation in the product description and product pictures: NO wall plates are included. I bought these because I saw \"screwless wall plates included\" in the seller pictures, but mine came with no wall plates whatsoever. Aside from that disappointment, switch is easy to install and works well for me.",
+        "date": "Reviewed in the United States on January 16, 2024",
+        "rating": "3.0 out of 5 stars",
+        "title": "Beware: wall plates are NOT included...",
+        "userName": "abm Heijblom",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RQLJEJMKQQXBM",
+        "text": "We bought these dimmers and installed them to only remove all of them that same day. The lights always flickered and there was a buzzing sound they made. Our electrician said they were dangerous and could easily start a fire. Would not recommend and I can’t return because they are outside the windo.",
+        "date": "Reviewed in the United States on January 11, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Do not buy!!!",
+        "userName": "Val",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R36AID0S2KO8WY",
+        "text": "The switches will often fail to turn on the light when you flip it... i try to save money everytime I buy stuff online but like the old saying goes by nice or buy twice.",
+        "date": "Reviewed in the United States on December 15, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "They are no good. Have to buy a more quality product",
+        "userName": "Angel.S",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RMPCA7D2EVWX1",
+        "text": "These don't work with LED bulbs. To ensure the issue wasn't with the wiring configuration I removed and replaced the dimmer with a normal (non-dimming) switch. The regular switch worked fine. To further troubleshoot I tried another dimmer from the set of 5 purchased--same issue! These are very low quality and should be avoided. Company should be called Worsten, not Bessten.",
+        "date": "Reviewed in the United States on December 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Don't work as intended. Poor quality.",
+        "userName": "Acoustic Sounds",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2ZZQMSNIAT29F",
+        "text": "Well I had problems with two switches that didn’t work the other switches the adjustments wouldn’t set correctly light if you adjust the light to be dim and turn the light off wait a minute or less and turn it back on it wouldn’t until you slide the dimmer switch up. I tried to set the preset inside it still wasn’t working. I also found out the if another light is on the same circuit and you have one on the lights would ticker I had to change all the switches out with new ones.",
+        "date": "Reviewed in the United States on November 25, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Light switches",
+        "userName": "Angelo Pettiford",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1CO57O9SHEMLP",
+        "text": "Turning on and off is not smooth. Sometimes when it is on min, turning is on doesn't work until you move the button to high light.",
+        "date": "Reviewed in the United States on November 22, 2023",
+        "rating": "3.0 out of 5 stars",
+        "title": "Quality is not great",
+        "userName": "Hovik A.",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R256ADBHBEA49Y",
+        "text": "IF YOU HAVE SEND THEM BACK 4 OUT OF 6 FAILED AND STARTED A FIRE ANOTHER HAS SPARKED AND ARCED THEN BLEW OUT CEILING LIGHTS ON 2 SEPARATE CIRCUITS AMAZON STOP SELLING",
+        "date": "Reviewed in the United States on October 30, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "CAUTION FIRE HAZARD DON'T BUY",
+        "userName": "ResearchBuyRepeat",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1YWKKJ12JBC3J",
+        "text": "Did a great job on being able to tone down some of the lights in our house. Only issue is their color of white. They are slightly off white as compared to the snow white of typical wall plates. Most might not notice but I can see the difference. One note to keep in mind. It may not work well with a fixture that has many bulbs. We have a \"Sputnik\" fixture over our dining room table with 15 bulbs. Goes from full bright to full dim with just a slight move of the slider. Tried another brand dimmer and did the same.",
+        "date": "Reviewed in the United States on July 7, 2023",
+        "rating": "4.0 out of 5 stars",
+        "title": "Work well",
+        "userName": "KenO",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R28DXVP9VYPXEF",
+        "text": "When the dimmer is on the lowest setting the lights don’t turn on. You need to increase the dimmer for lights to go on. Also when on a lower setting the lights sometimes just randomly go out. They work but you need to mess with them every time you want your lights to turn on. Really annoying bc I used these things all over my house! I don’t understand why the reviews were so high on this product. I bought 15 of these things and they all have the same exact issue.",
+        "date": "Reviewed in the United States on July 7, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "DO NOT PURCHASE",
+        "userName": "Lianna",
+        "numberOfHelpful": 2,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R25IHJRBHHZBZY",
+        "text": "Simple installation instructions, these work in 3way or 4way circuits. These do NOT require a re-wire like some smart dimmers. The switch dims from a single location, all other locations on a 3way or 4way are simple on/off switches. There is a separate rotary adjustment on the switch behind the wall plate for minimum level on the user control slide switch. This setting sets the LED lights to consistently come on and not flicker at a low level. If you are looking for a simple, no fuss dimmer option for your dimmable LED lights without \"smart\" controls, this will work.",
+        "date": "Reviewed in the United States on June 11, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "No fuss 3-way dimmer",
+        "userName": "Ohio born",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R36TNP0K9HKWUS",
+        "text": "The color is Ivory not white so putting next to other switches and a white face plate looks off. The adjustment wheel to set the dimming level works well. Large ears that stick out on both sides of the device prevent you from installing two next to each other. One has to sit behind the other and thus when installing the cover plate the paddles are at uneven depths. Also, prefer the direct wire-to-side screws rather than the wire nut connection.",
+        "date": "Reviewed in the United States on April 17, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Color is Ivory not white",
+        "userName": "RES",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3U935CKEPZ0HZ",
+        "text": "The dimming function does not work. You get what you pay for.",
+        "date": "Reviewed in the United States on March 23, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Garbage",
+        "userName": "Dong",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3C1HO050AWN6I",
+        "text": "Does dimmer work well with four LED lights easy hook up",
+        "date": "Reviewed in the United States on February 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "ROE6K3UZDNF1V",
+        "text": "I installed these dimmers in 4 separate switches and encountered soft mushy switches after installing. Some of them wouldn't even turn on/off unless you really \"flicked\" the switch suddenly. They feel terrible and make me worry they could be a fire hazard.",
+        "date": "Reviewed in the United States on January 31, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Awful quality",
+        "userName": "no",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R328AQPLR6BK6J",
+        "text": "Work well. Dimmer is easy to use",
+        "date": "Reviewed in the United States on January 4, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice finish",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1S45QWL9QHF3C",
+        "text": "I purchased 5 pieces, 4 pieces were malfunction after installed, not worth.",
+        "date": "Reviewed in the United States on December 1, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bad quality control",
+        "userName": "Jeff L.",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RZ3NK28DBUVD5",
+        "text": "Unfortunately, despite troubleshooting and adjusting as directed I could not get these to stop flickering. I thought maybe I had a lemon in the package, but I tried a second one and also double checked my wire connections. Still flickered. I ended up reinstalling my old switches and they were fine. Not sure why these didn't work for me but do not recommend at all.",
+        "date": "Reviewed in the United States on September 3, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Flicker terribly",
+        "userName": "Lisa",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1I3RH0JYPWPD4",
+        "text": "After installing about 15 dimmers 4 of them the dimmer slider stop working so had to replace it with new ones",
+        "date": "Reviewed in the United States on August 29, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Just ok",
+        "userName": "alex",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1SFPJI09K45Y3",
+        "text": "After 8 months of use two of the switches fell apart. The first switch that fell apart was installed for a light that gets turned on maybe 3-4 times a week.",
+        "date": "Reviewed in the United States on July 26, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Two Switches Fell Apart",
+        "userName": "Megs",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1RV2I267OA2A8",
+        "text": "This device cause my fan to buzz. Very annoying",
+        "date": "Reviewed in the United States on April 13, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Cause fan motor to buzz",
+        "userName": "SHPham",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1RO62W13TVKH0",
+        "text": "Not very good performance",
+        "date": "Reviewed in the United States on February 19, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "Not what expected",
+        "userName": "Hernan Duarte",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "RB3ZJYHQ41JRM",
+        "text": "Bought 5, after few weeks, 1 of them has some issues to turn the light on, need to push the toggle hardly to turn the light on it, will replace it",
+        "date": "Reviewed in the United States on February 16, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "bought 5, 1 of them has some issue after few weeks",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R2GUESVZZJ20V0",
+        "text": "I have been using these for a few weeks and no issues so far.",
+        "date": "Reviewed in the United States on January 30, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Good dimmers",
+        "userName": "chai",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R3GMFTA8KNGHUO",
+        "text": "Replacing all the old switches in our house. Takes about 10-15 minutes per switch, I thought I’d order these to see how they’d work……just ordered more.",
+        "date": "Reviewed in the United States on January 9, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Easy peasy!",
+        "userName": "MJ Boca",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R1K23OSZ07TI3G",
+        "text": "Delivered as broken and not functional. Do not waste the time and money!",
+        "date": "Reviewed in the United States on December 25, 2021",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broken & Delicate",
+        "userName": "Pri",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R20DPICYUVCQ96",
+        "text": "I bought 30 of these for a house rebuild, after fire. About 1 in 10 of the switches was faulty, after I'd paid electricians to install. And some others don't click on and off the first and second time you try. So they are cheaply made and if I had it to do over again I'd spend a bit more for a better product.",
+        "date": "Reviewed in the United States on December 19, 2021",
+        "rating": "2.0 out of 5 stars",
+        "title": "Cheaply made. About 10% of the switches fail.",
+        "userName": "Peter",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B08GF3WQ19",
+        "productTitle": "BESTTEN 5 Pack Dimmer Light Switch, Single Pole or 3-Way, Compatible with Dimmable LED, CFL, Incandescent and Halogen Bulb, LED Slide Dimmer Switch, Neutral Wire Not Required, 120VAC, UL Listed, White",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 88,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 525,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 65
+          },
+          "fourStar": {
+            "percentage": 12
+          },
+          "threeStar": {
+            "percentage": 6
+          },
+          "twoStar": {
+            "percentage": 6
+          },
+          "oneStar": {
+            "percentage": 11
+          }
+        },
+        "reviewId": "R35KMUVCRKVS7C",
+        "text": "So far working well, however multiple gang plates don't seem to fit flush with this particular item.",
+        "date": "Reviewed in the United States on December 17, 2021",
+        "rating": "4.0 out of 5 stars",
+        "title": "So far so good",
+        "userName": "sbkindredspirit",
+        "numberOfHelpful": 0,
+        "variationId": "B08GF3WQ19",
+        "imageUrlList": null,
+        "variationList": [
+          "Item Package Quantity: 5",
+          "Color: White"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}

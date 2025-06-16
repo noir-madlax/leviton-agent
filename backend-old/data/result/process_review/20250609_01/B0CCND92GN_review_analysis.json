@@ -1,0 +1,253 @@
+{
+  "product_title": "Double Toggle Light Switch,15 Amp AC120 Volt,Residential Grade Electrical Wall Switch,Great for Home, Office & Kitchen, White,ETL Listed",
+  "product_category": "Multi-Function Combination Switches",
+  "total_reviews": 14,
+  "review_analysis": {
+    "phy": {
+      "quality": {
+        "A@cheap quality construction": {
+          "-": [
+            0
+          ]
+        },
+        "B@good quality construction": {
+          "+": [
+            11
+          ]
+        },
+        "C@lacks sturdiness in build": {
+          "-": [
+            12
+          ]
+        }
+      },
+      "housing": {
+        "D@clearance between housing and bolt heads is too narrow": {
+          "-": [
+            3
+          ]
+        },
+        "E@front case won't close unless held together": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "internal_components": {
+        "F@has a lot of pieces inside": {
+          "-": [
+            6
+          ]
+        }
+      },
+      "appearance": {
+        "G@standard bright white color": {
+          "+": [
+            13
+          ]
+        },
+        "H@looks great": {
+          "+": [
+            8
+          ]
+        }
+      },
+      "bolts": {
+        "I@bolts are too short by just a mm": {
+          "-": [
+            3
+          ]
+        }
+      },
+      "side_pieces": {
+        "J@has side pieces that need to be snipped to separate switches": {
+          "+": [
+            6
+          ]
+        }
+      },
+      "cover_screws": {
+        "K@cover screws are in the correct area": {
+          "+": [
+            13
+          ]
+        }
+      }
+    },
+    "perf": {
+      "switching_action": {
+        "a@rough switching function": {
+          "-": {
+            "?": [
+              6
+            ]
+          }
+        },
+        "b@squishy switch action with noticeable squish at each end of stroke": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "c@requires extra pressure to overcome the detent": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "d@not as smooth as old 1996 variety but gets the job done": {
+          "-": {
+            "?": [
+              3
+            ]
+          }
+        },
+        "e@positive on/off without loud click": {
+          "+": {
+            "?": [
+              5
+            ]
+          }
+        },
+        "f@toggle switches work fine": {
+          "+": {
+            "?": [
+              13
+            ]
+          }
+        }
+      },
+      "functionality": {
+        "g@simple and effective": {
+          "+": {
+            "?": [
+              1
+            ]
+          }
+        },
+        "h@functional and working the best it can": {
+          "+": {
+            "?": [
+              9
+            ]
+          }
+        },
+        "i@performed as per specifications": {
+          "+": {
+            "?": [
+              10
+            ]
+          }
+        },
+        "j@works fine": {
+          "+": {
+            "?": [
+              12
+            ]
+          }
+        },
+        "k@works great": {
+          "+": {
+            "?": [
+              8
+            ]
+          }
+        }
+      },
+      "durability": {
+        "l@adequate for the price": {
+          "+": {
+            "A": [
+              0
+            ]
+          }
+        },
+        "m@doesn't scream sturdy product": {
+          "-": {
+            "C": [
+              12
+            ]
+          }
+        }
+      },
+      "electrical_capacity": {
+        "n@suitable only for LEDs, not heavy load": {
+          "-": {
+            "C": [
+              12
+            ]
+          }
+        }
+      }
+    },
+    "use": {
+      "installation": {
+        "+": {
+          "g": [
+            1
+          ],
+          "?": [
+            4,
+            9
+          ]
+        },
+        "-": {
+          "D,I": [
+            3
+          ],
+          "F,E": [
+            6
+          ]
+        }
+      },
+      "budget_applications": {
+        "+": {
+          "g": [
+            1
+          ],
+          "l": [
+            0
+          ]
+        }
+      },
+      "niche_function": {
+        "+": {
+          "g": [
+            1
+          ]
+        }
+      },
+      "LED_lighting": {
+        "+": {
+          "j": [
+            12
+          ]
+        }
+      },
+      "heavy_load_devices": {
+        "-": {
+          "n": [
+            12
+          ]
+        }
+      },
+      "cover_installation": {
+        "+": {
+          "K": [
+            13
+          ]
+        }
+      },
+      "money_saving_repairs": {
+        "+": {
+          "?": [
+            7
+          ]
+        }
+      }
+    }
+  },
+  "processed_date": "2025-06-09T01:07:58.265256"
+}

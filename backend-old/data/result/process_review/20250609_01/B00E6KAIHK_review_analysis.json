@@ -1,0 +1,36 @@
+{
+  "product_title": "Lutron Claro 15 Amp On/Off 4-Way Switch, CA-4PS-LA, Light Almond",
+  "product_category": "Four Way Multi-Location Control Switches",
+  "total_reviews": 1,
+  "review_analysis": {
+    "phy": {
+      "appearance": {
+        "A@looks good": {
+          "+": [
+            0
+          ]
+        }
+      },
+      "build quality": {
+        "B@typical Lutron quality": {
+          "+": [
+            0
+          ]
+        }
+      }
+    },
+    "perf": {
+      "installation ease": {
+        "a@easy to install": {
+          "+": {
+            "?": [
+              0
+            ]
+          }
+        }
+      }
+    },
+    "use": {}
+  },
+  "processed_date": "2025-06-09T01:11:09.764783"
+}

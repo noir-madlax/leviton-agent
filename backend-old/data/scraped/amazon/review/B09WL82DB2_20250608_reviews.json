@@ -1,0 +1,2554 @@
+{
+  "scrape_metadata": {
+    "scrape_date": "2025-06-08T22:42:16.063605",
+    "source": "amazon_axesso_apify_api",
+    "asin": "B09WL82DB2",
+    "scraper_version": "3.0",
+    "earliest_reviews_fetched": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  },
+  "product_context": {
+    "asin": "B09WL82DB2",
+    "title": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+    "brand": "Aiwode",
+    "model_number": NaN,
+    "price_usd": 18.99,
+    "rating": 4.1,
+    "reviews_count": 276.0,
+    "category": "Dimmer Switches",
+    "product_segment": "Rotary Knob Dimmer Switches",
+    "product_url": "https://www.amazon.com/dp/B09WL82DB2"
+  },
+  "reviews_data": {
+    "reviews": [
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3RP9I2QCA5FZ0",
+        "text": "Works great! as expected... I use it for a large fan for finer speed control...",
+        "date": "Reviewed in the United States on April 14, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Unique product. Cool!",
+        "userName": "Steve C.",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "REJ2CQG22DPS",
+        "text": "Update: I use this with a strip of low voltage, dimmer-compatible, under-cabinet LED lights. The lights will occasionally, not frequently, blink (off-on) when controlled by this switch. This isn’t related to any other load kicking in or anything like that. I’ve only used this switch in the lower half of its range so don’t know if the problem would occur throughout the dimmer range. I missed the return/exchange cutoff date, so I am living with it, which isn’t hard as it doesn’t hamper the work that’s being illuminated. Could be a flaw in just this particular unit, and I still like the switch. Originally: This is a nice, smoothly operating dimmer switch. I like the large rotary knob. I am using it with under cabinet LED light bars, and the switch seems to vary the light intensity over the entire range, 10-100% according to the light's manual, in a linear fashion. Funny thing, though—when I chose this unit I was happy to see from product photos that the neutral (wide) blade of the switch was on the right. This mean that for most electrical outlets, at least in the U.S., the switch would have to be plugged in upside down, with the receptacle for the device the switch was controlling pointing up. Some reviewers remarked that this was unfortunate, but for my application it was perfect. Now that I have the switch, I see that the manufacturer has reversed the plug orientation, probably in response to criticism, which probably will make 90 percent of customers happy. I opened the unit to see if the plug orientation could be easily reversed, but that does not seem to be the case. (I think that would be a cool feature to have. I now see that a diagram and a customer photo on the product page does show this wide-blade-on-the-left orientation, but as of this date the seller's product photos and videos still show the opposite.) So, I will be turning the receptacle in my outlet box over (for those who don't know, the electrical code does not specify that for households the orientation of receptacles has to be any specific way) so I can use this nice dimmer switch upside down, the way that will work better for me.",
+        "date": "Reviewed in the United States on March 26, 2025",
+        "rating": "4.0 out of 5 stars",
+        "title": "Nice dimmer switch. Mfr has reversed plug orientation.",
+        "userName": "JPC",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51B0ndj822L._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3UR1V2J5S4JG5",
+        "text": "Just as described and works great dimming the light in my curio. No more having to open the door of the cabinet, rattling my precious contents, to find and turn the light on.",
+        "date": "Reviewed in the United States on January 31, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Nice dimmer. Would buy again.",
+        "userName": "UC2000",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/81PB8j3QnEL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R24QCMAJNNSWFV",
+        "text": "Works perfectly. I am using it to dim a portrait light.",
+        "date": "Reviewed in the United States on December 30, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly",
+        "userName": "VikingSquirrel",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2ZIAVON60RU6N",
+        "text": "Worked for just over a month, just enough time to not be able to be returned. 👎",
+        "date": "Reviewed in the United States on September 5, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Lasted 32 days",
+        "userName": "Damaged and expired! 👍",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RCLHUKD9U99Q7",
+        "text": "Wanted to dim the edison bulb lamp in our bathroom to use as a nightlight. This works perfectly, and it's awesome to have the option to make it brighter when needed.",
+        "date": "Reviewed in the United States on September 3, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "exactly what we needed, works perfectly",
+        "userName": "RM1234",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RZGNJM0HPBACB",
+        "text": "It stopped working after a year",
+        "date": "Reviewed in the United States on July 29, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Disappointing",
+        "userName": "Ariel Schulman",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1VEZLAW1GQN1T",
+        "text": "This is perfect for us as it has a simple dial that can click to off or else adjust smoothly toward brightness without extraneous wire or attachments.",
+        "date": "Reviewed in the United States on July 22, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Smooth operation, clean design",
+        "userName": "Paul S",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3RTEB3GYFVUMR",
+        "text": "Bought a floor lamp that I love the design of. It came with built-in LED lightbulbs that were way too bright. This dimmer plug was exactly what I needed.",
+        "date": "Reviewed in the United States on June 4, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works perfectly!",
+        "userName": "donna",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 1,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2A5I7UXHFUHZ6",
+        "text": "Nice product for controlling older non 3-way lamps . Have several. Down side is that’s it tends to flicker at full power, but works well at other settings.",
+        "date": "Reviewed in the United States on March 25, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Flickers at high power",
+        "userName": "joe figueira",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1LIAI8YUZ57DS",
+        "text": "Makes scary noises, doesn’t din the light",
+        "date": "Reviewed in the United States on March 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Scary Noised/Doesn’t work",
+        "userName": "Ben S",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3K02W164TNX9S",
+        "text": "Small \"squirrel cage\" fan - draws 75W/130VAR on low - and would not run at any setting on the knob. It was possible at the highest setting - if you were very careful - to get it to run - like a sweet spot on the dial. But that was intermittent and any other position would not work. It did power up a small table fan and worked fine for that. My other comment - has no ground - only 2 prong - so if you have a 3 prong plug you will have to get a \"cheater\" plug. My stove fan had 3 prongs - and even if it had worked I would have had some concerned about it.",
+        "date": "Reviewed in the United States on February 19, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Did not work on my stove fan",
+        "userName": "Teresa",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1B9BCNKY1RBN",
+        "text": "Did what I needed. Used to slow fan speed down.",
+        "date": "Reviewed in the United States on February 19, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works",
+        "userName": "Tom Tom",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3ECWPOFY2Y41Z",
+        "text": "Worked great dimming the lights on my Christmas Tree!! The lights were so bright you couldn't see the ornaments. Now I can adjust to a nice pleasing brightness by simply turning the knob.",
+        "date": "Reviewed in the United States on January 29, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked great dimming the lights on my Christmas Tree!!",
+        "userName": "ERIC",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3GLBE73D7TR47",
+        "text": "I bought this to control a small fan I use to blow air out of a heater vent in family room. It worked fine for a few days and now stopped working.",
+        "date": "Reviewed in the United States on January 18, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Failed",
+        "userName": "Dwayne Adamson",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RLTZ125XOJXN7",
+        "text": "Simple and does what you want it to do!",
+        "date": "Reviewed in the United States on January 13, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Let’s you dim whatever you plug into it",
+        "userName": "Pete",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3MJCQ457JXVIT",
+        "text": "I'm seriously impressed with these dimmers! I recently took on a project where I built a false stud wall with sconces for a video studio. The goal was to create some stylish back lighting without the hassle of wiring in traditional dimmer switches. That's where these dimmers came into play, and let me tell you, they were a game changer. I simply wired the lights behind the wall to a plug and connected them to this switch. The setup was a breeze – no complicated wiring, no permanent alterations, just straightforward, effective lighting control. It's the perfect blend of simplicity and functionality. For anyone looking to add a touch of adjustable lighting without the usual fuss, these dimmers are the way to go!",
+        "date": "Reviewed in the United States on January 8, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Worked perfect! Couldn't be happier!",
+        "userName": "Steve Graves",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RQPCW8HP92G06",
+        "text": "Works as it should for my small fan.",
+        "date": "Reviewed in the United States on November 15, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works good",
+        "userName": "jeff",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R9WUCHYSO9UUZ",
+        "text": "I use this inside a bathroom fan to tone it done and make it quieter. It worked very well. Such an easy fix. Thank you.",
+        "date": "Reviewed in the United States on November 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Wow! what a dimmer!",
+        "userName": "Anoosh Moadab",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 2,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R34RQQ8TJYXI3Z",
+        "text": "Perfect for reducing the speed of the fan",
+        "date": "Reviewed in the United States on October 16, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect",
+        "userName": "C. Klatt",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RA8TU53C48LZW",
+        "text": "The product did not dim the light enough. I expected it would dim it gradually to zero. Only dimmed 25%",
+        "date": "Reviewed in the United States on September 29, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Wanted greater light dimming",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2UMF7Q0RCUM0W",
+        "text": "Wanted to be able to dim the light over my dining table. I rent so did not want to get into the apartment electrics. Perfect solution, inexpensive, simple install and removable. The dimmer itself works great. Adjustment of brightness from on/min to max is very linear.",
+        "date": "Reviewed in the United States on September 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Perfect Solution",
+        "userName": "Gloucesterman",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/216YFRb00HL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/31RmHoyoyBL._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R14W6U5DU2TWFB",
+        "text": "Used this on a cheapy fan...to take it down a liitle. When you buy that $15.95 fan, and even on low it howls and vibrates, get one of these to slow it down. So far so good.....will update as time goes on.",
+        "date": "Reviewed in the United States on August 31, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works........for now.",
+        "userName": "UNACAMPER",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2L6F9YCRWPHKC",
+        "text": "I must say, I was pleasantly surprised at the quality of this dimmer. It works very well. The price is more than reasonable. So, if you are on the fence on buying it, hop over to the purchase side of the fence!",
+        "date": "Reviewed in the United States on August 29, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Very nice dimmer.",
+        "userName": "Super-Genius!",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R17KO3XS3KGJ1J",
+        "text": "The Aiwode Rotating Dimmer Switch worked well for my needs. I used it for dimming lights and it does that great. It's very small and easy to use too. Would recommend.",
+        "date": "Reviewed in the United States on June 2, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great dimmer for electric control",
+        "userName": "Princess Lucky",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "REBQSXAOQYOSW",
+        "text": "The size, shape, and orientation of the dimmer was unbelievably perfect for the intended application - a single halogen puck light fixture. Unfortunately the maximum output of the dimmer I received is a measurable 10 volts lower than the input voltage. The light output of the fixture it is associated with is just that much less because of the low voltage. I can't rate this item any higher because the only use of this item is predicated by it's electrical properties and not its shape nor form.",
+        "date": "Reviewed in the United States on May 27, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Low Voltage",
+        "userName": "Book Protector",
+        "numberOfHelpful": 2,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R39QL912VWHMO8",
+        "text": "Plug and play!!",
+        "date": "Reviewed in the United States on March 28, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It was just what I needed for a new hanging light.",
+        "userName": "Adrian Smiley",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1A6JB799U52CM",
+        "text": "Great product for the money",
+        "date": "Reviewed in the United States on March 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Great product",
+        "userName": "jaguar31",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2ALUA04CO5KRS",
+        "text": "I have tried a number of fancier and pricier versions and none of them worked. This works great - so happy to have finally hit paydirt! Thank you for making a great product!",
+        "date": "Reviewed in the United States on March 19, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works Great!",
+        "userName": "Billy A. Barnes",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 3,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2M3RKTLY56BJB",
+        "text": "This device does not work with energy saving bulbs (LED). It also doesn't work with the grow light. It only works with light bulbs that are Dimmable - Light Bulbs. Somehow it works strangely as if it reduces the voltage by 1/4 when turning. So if you expect to get smooth scrolling it won't happen. For example, if you connect a fan, you will not be able to set the speed you want, but it will go from about 25% 50% 75%. Note that you need special bulbs that are compatible and will allow you to set them to some 0% 25% 50% 75% 100% light. I am not impressed with this device.",
+        "date": "Reviewed in the United States on December 3, 2022",
+        "rating": "3.0 out of 5 stars",
+        "title": "I am not impressed with this device.",
+        "userName": "Bill N.",
+        "numberOfHelpful": 4,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2D2G9C7JHAU0T",
+        "text": "Tested with regular (non LED) light bulbs. It works fine, although it doesn't dim fully before switching off, ie. it allows you to dim between about 10% through100% brightness.",
+        "date": "Reviewed in the United States on December 1, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works pretty well",
+        "userName": "hitthetrail",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RYB874BQK9JUK",
+        "text": "DESCRIPTION This item is a general purpose dimmer for loads up to 200 Watts. ———————— ASSEMBLY Plug your appliance into the dimmer, and plug the dimmer into an outlet. ———————— PLUS Simple and easy to use. Small size. There is an OFF setting with a definite click sound so you are sure the load is off. When turned down all the way, the lamp is still on a little, so you can tell it is still on. ———————— MINUS The dimmer is upside-down (the outlet is on the top) when I plug it into my outlets. My outlets are oriented the usual way with the ground pin on the bottom. The marking around the dial is two arrows, which is not the usual convention. I expected one gradually-increasing crescent to indicate more power. The indicator on the knob is a shallow groove and not too visible. I improved upon this by using a black Sharpie pen to make a line in the groove. ———————— HOW I USED IT I wanted a device to use with my hot pot, to reduce the heat to a simmer level. My hot pot has two power levels, 200W and 700W. Both levels boil water too much for simmering. I put some soup ingredients in the hot pot, set it for low (200 Watts), and plugged it into the dimmer. I turned the dimmer up all the way for the full 200 Watts. Once the soup began to boil, I backed the dimmer down to halfway. This simmered the soup nicely, with only an occasional bubble popping to the surface. Perfect! I also tried the dimmer on several lamps and it works as advertised. ———————— MY RATING 5 stars for doing its job well.",
+        "date": "Reviewed in the United States on November 17, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Simple, small dimmer for lamps and small appliances",
+        "userName": "Rick Mills",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/51Htv9v8SdL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/51c1394Q+ML._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3E6XQCRL1R6PI",
+        "text": "Using this for a small light strip; it works great and is easy to use.",
+        "date": "Reviewed in the United States on October 18, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Brian",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1AY94V5Q3RW53",
+        "text": "The polarity on this product is reversed. Consequently, you have to plug the unit in upside down with any appliance cords coming out of the top. Very inconvenient. If the polarity was reversed, the product would be good.",
+        "date": "Reviewed in the United States on October 15, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Polarity reversed.",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R25ORQW9Z5K0D9",
+        "text": "I knew when i got this that it was designed for low current applications (no heaters or high wattage items) and it works well for what it's designed for. When used with a lamp having an incandescent bulb, it dims nicely to about 20% then goes dark. I wish it could dim lower but it's adequate. I also tried it with an LED rope light and it worked similarly; I was surprised because LEDs prefer PWM-style dimmers, not voltage dimmers, so presumably it has to do with the rope light's ability to handle it.",
+        "date": "Reviewed in the United States on October 4, 2022",
+        "rating": "4.0 out of 5 stars",
+        "title": "Works well for low-wattage incandescent lamps, some LEDs.",
+        "userName": "Larry Laffer",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1I7A0D7334W4B",
+        "text": "The prongs are backwards so in most outlets has to be plugged in upside down. The dimmer only dims about 50% before it clicks to off so no option to have a very subtle light.",
+        "date": "Reviewed in the United States on August 31, 2022",
+        "rating": "1.0 out of 5 stars",
+        "title": "Upside down, doesnt dim fully",
+        "userName": "MV",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R85CVUZSACOGX",
+        "text": "Compact, useful variable voltage unit. Minimum out put voltage 38 Vac to 50 Vac per instructions, and minimum load is 5 watts. Firm on/off switch, built into dial. No ground",
+        "date": "Reviewed in the United States on June 8, 2022",
+        "rating": "5.0 out of 5 stars",
+        "title": "Compact, useful variable voltage unit",
+        "userName": "Gary & Nancy",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": [
+          "https://m.media-amazon.com/images/I/61IC0wXA9NL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61MIYKkZrHL._SY88.jpg",
+          "https://m.media-amazon.com/images/I/61ydBGKrb-L._SY88.jpg"
+        ],
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": true,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2P0FJ9CL5TAHS",
+        "text": "Used for a few months during 2024 Christmas then. It became faulty … now I need a soldering iron (80W) power controller and it doesn’t work. Low Quality control product. Buyers be aware!",
+        "date": "Reviewed in Canada on March 21, 2025",
+        "rating": "2.0 out of 5 stars",
+        "title": "Prone to breaking.",
+        "userName": "Dyan Catamaran",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3H3XWGWAKS5MF",
+        "text": "Works great!!",
+        "date": "Reviewed in Canada on March 17, 2025",
+        "rating": "5.0 out of 5 stars",
+        "title": "Dimmer.",
+        "userName": "Judson S.",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 4,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R1UNWEPV0EH7ZD",
+        "text": "It didn’t work probably",
+        "date": "Reviewed in Canada on January 17, 2025",
+        "rating": "1.0 out of 5 stars",
+        "title": "Bad quality",
+        "userName": "Amir",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RG4SKF2RYD9US",
+        "text": "Il n'était pas fonctionnel. Probablement eu résistant.",
+        "date": "Reviewed in Canada on December 4, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "pas fonctionnel.",
+        "userName": "Diane Papillon",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RA23EUVICKEGY",
+        "text": "Does exactly what I wanted",
+        "date": "Reviewed in Canada on August 27, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Works great",
+        "userName": "Kindle Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R18CJ6W8YIL6ZW",
+        "text": "Used it on my 100w lava lamp and it lasted a few weeks",
+        "date": "Reviewed in Canada on July 19, 2024",
+        "rating": "2.0 out of 5 stars",
+        "title": "Died quickly",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2LBU67Y22N3YL",
+        "text": "Great little product, love the functionality, but it literally stopped working the day after the return window closed. I’ll have to buy a better quality replacement.",
+        "date": "Reviewed in Canada on July 13, 2024",
+        "rating": "1.0 out of 5 stars",
+        "title": "Stopped working after 1 month",
+        "userName": "Denise Audette",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R32HCSVLG4Z866",
+        "text": "Great product. Not good for fan. It works but fan motor has a buzzing noise.",
+        "date": "Reviewed in Canada on June 21, 2024",
+        "rating": "4.0 out of 5 stars",
+        "title": "Perfect for lamp",
+        "userName": "Phil",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3IXB3BQ8ITD6U",
+        "text": "Très bonne qualité de produit. Cependant et malheureusement, mon ventilateur émettait un bourdonnement lorsque le rhéostat n'était pas au maximum. J'ai dû le retourner...",
+        "date": "Reviewed in Canada on February 9, 2024",
+        "rating": "5.0 out of 5 stars",
+        "title": "Ne convient pas à certains ventilateurs",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 2,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": {
+          "language": "fr",
+          "country": "CA",
+          "marketplaceId": "A2EUQ1WTGCTBG2"
+        },
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R3OY8TIRD3REUR",
+        "text": "Not suitable for led bulb.",
+        "date": "Reviewed in Canada on November 26, 2023",
+        "rating": "2.0 out of 5 stars",
+        "title": "Not suitable for led bulb.",
+        "userName": "Christian B.",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "RCV5ELQI6IZSH",
+        "text": "After 4 months still working ok, no flicker even on min range. Advised",
+        "date": "Reviewed in Canada on November 20, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "Exactly what was I looking for",
+        "userName": "Nick",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2DIQQT1SDT6NS",
+        "text": "Gets the job done, simple to use, but as others have mentioned you have to have a set up that can handle different dimmings, if you use this with a standard lamp it will just act as an off on switch.",
+        "date": "Reviewed in Canada on November 13, 2023",
+        "rating": "5.0 out of 5 stars",
+        "title": "It works on the right bulb",
+        "userName": "Andrew",
+        "numberOfHelpful": 2,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      },
+      {
+        "statusCode": 200,
+        "statusMessage": "FOUND",
+        "asin": "B09WL82DB2",
+        "productTitle": "Aiwode Rotating Dimmer Switch,Soldering Iron Temperature Control,Electric Fan、Factory Electric Fan,Ventilation Fan,Power Controller,Desk Lamp,Dimming LED Light,UL Listed,White,Below 200W,Pack of 1.",
+        "currentPage": 5,
+        "sortStrategy": "recent",
+        "countReviews": 63,
+        "domainCode": "com",
+        "filters": {
+          "reviewerType": "verified_reviews",
+          "mediaType": "all_contents",
+          "formatType": "current_format"
+        },
+        "countRatings": 276,
+        "productRating": "4.1 out of 5",
+        "reviewSummary": {
+          "fiveStar": {
+            "percentage": 64
+          },
+          "fourStar": {
+            "percentage": 15
+          },
+          "threeStar": {
+            "percentage": 5
+          },
+          "twoStar": {
+            "percentage": 3
+          },
+          "oneStar": {
+            "percentage": 13
+          }
+        },
+        "reviewId": "R2RF46MMIXBNND",
+        "text": "Same thing as another customer. Bought the thing, used it to dim incandescent christmas tree lights. It worked great!! Only for 2 days though. It now doesn't work, spinning the dial the lights sometimes flicker. But it doesn't do anything else. Lame",
+        "date": "Reviewed in Canada on November 9, 2023",
+        "rating": "1.0 out of 5 stars",
+        "title": "Broke after a couple days",
+        "userName": "Amazon Customer",
+        "numberOfHelpful": 0,
+        "variationId": "B09WL82DB2",
+        "imageUrlList": null,
+        "variationList": [
+          "Size: White/1pcs（330A）"
+        ],
+        "locale": null,
+        "verified": true,
+        "vine": false,
+        "videoUrlList": []
+      }
+    ],
+    "total_reviews": 50,
+    "pages_scraped": 5,
+    "earliest_reviews_fetched": true,
+    "review_coverage_months": 6
+  }
+}
