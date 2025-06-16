@@ -413,6 +413,37 @@ async def get_recent_prompts(
     prompts = await service.get_recent_prompts(limit)
     return prompts
 
+# ===== 爬虫相关API接口 =====
+
+@app.post("/api/scraping/process-url")
+async def process_amazon_url(request: dict):
+    """
+    处理Amazon URL，启动爬虫任务
+    
+    Request body:
+        url (str): Amazon URL
+        max_products (int): 最大产品数量，默认100
+        max_reviews (int): 最大评论数量，默认50
+    """
+    try:
+        from services.scraping_service import scraping_service
+        
+        # 解析请求参数
+        url = request.get("url", "").strip()
+        max_products = request.get("max_products", 100)
+        max_reviews = request.get("max_reviews", 50)
+        
+        # 调用爬虫服务
+        result = await scraping_service.process_url(url, max_products, max_reviews)
+        return result
+        
+    except ValueError as e:
+        logger.error(f"参数错误: {e}")
+        return {"error": str(e)}
+    except Exception as e:
+        logger.error(f"处理爬虫请求时出错: {e}")
+        return {"error": f"处理请求失败: {str(e)}"}
+
 if __name__ == "__main__":
     import uvicorn
     

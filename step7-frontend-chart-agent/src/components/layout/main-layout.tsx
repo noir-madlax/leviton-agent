@@ -1,12 +1,17 @@
 'use client';
 
 import { useState } from 'react';
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 
 import { ChatInterface } from '@/components/chat/chat-interface';
 import { ChartRenderer } from '@/components/charts/chart-renderer';
+import { DataImportTab } from '@/components/tabs/data-import-tab';
+import { DataConfirmationTab } from '@/components/tabs/data-confirmation-tab';
+import { AnalysisTab } from '@/components/tabs/analysis-tab';
 
 export function MainLayout() {
   const [leftPanelWidth, setLeftPanelWidth] = useState(50); // 百分比
+  const [activeTab, setActiveTab] = useState('step1');
 
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -36,7 +41,56 @@ export function MainLayout() {
   };
 
   return (
-    <div className="h-screen flex overflow-hidden bg-background">
+    <div className="h-screen flex flex-col overflow-hidden bg-background">
+      {/* 顶部Tab导航 */}
+      <div className="flex-shrink-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
+        <div className="container mx-auto px-4 py-2">
+          <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
+            <TabsList className="grid w-full grid-cols-4">
+              <TabsTrigger value="step1" className="text-sm">
+                Step 1: Data Import
+              </TabsTrigger>
+              <TabsTrigger value="step2" className="text-sm">
+                Step 2: Data Confirmation
+              </TabsTrigger>
+              <TabsTrigger value="step3" className="text-sm">
+                Step 3: Analysis
+              </TabsTrigger>
+              <TabsTrigger value="step4" className="text-sm">
+                Step 4: Chat
+              </TabsTrigger>
+            </TabsList>
+          </Tabs>
+        </div>
+      </div>
+
+      {/* 主内容区域 */}
+      <div className="flex-1 overflow-hidden">
+        <Tabs value={activeTab} onValueChange={setActiveTab} className="h-full">
+          {/* Step 1: 数据导入 */}
+          <TabsContent value="step1" className="h-full m-0">
+            <div className="h-full p-4">
+              <DataImportTab />
+            </div>
+          </TabsContent>
+
+          {/* Step 2: 数据确认 */}
+          <TabsContent value="step2" className="h-full m-0">
+            <div className="h-full p-4">
+              <DataConfirmationTab />
+            </div>
+          </TabsContent>
+
+          {/* Step 3: 分析 */}
+          <TabsContent value="step3" className="h-full m-0">
+            <div className="h-full p-4">
+              <AnalysisTab />
+            </div>
+          </TabsContent>
+
+          {/* Step 4: 聊天 (原有功能) */}
+          <TabsContent value="step4" className="h-full m-0">
+            <div className="h-full flex overflow-hidden">
       {/* 左侧聊天面板 */}
       <div 
         className="flex-shrink-0 flex flex-col"
@@ -63,6 +117,10 @@ export function MainLayout() {
         <div className="h-full p-4">
           <ChartRenderer />
         </div>
+              </div>
+            </div>
+          </TabsContent>
+        </Tabs>
       </div>
     </div>
   );
