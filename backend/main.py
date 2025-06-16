@@ -1,15 +1,20 @@
-from fastapi import FastAPI, Response, Query
+from fastapi import FastAPI, Response, Query, Depends, HTTPException
 from fastapi.responses import StreamingResponse
 from fastapi.middleware.cors import CORSMiddleware
 import asyncio
 import json
 import logging
-from typing import Optional
+from typing import Optional, List
 from contextlib import asynccontextmanager
 from config import settings
 from tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
 from phoenix.otel import register
 from openinference.instrumentation.smolagents import SmolagentsInstrumentor
+
+# 导入 ORM 相关模块
+from app.dependencies import get_product_prompt_service
+from app.models.product_prompt import ProductPromptCreate, ProductPromptUpdate, ProductPromptResponse
+from app.services.product_prompt_service import ProductPromptService
 
 # 配置日志
 logging.basicConfig(level=getattr(logging, settings.LOG_LEVEL))
@@ -113,74 +118,38 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 辅助函数：从数据库获取 prompt
-def get_prompt_from_database(prompt_id: int = 1) -> str:
-    """从数据库获取 prompt 内容"""
-    if not agent:
-        logger.warning("Agent 未初始化，无法访问数据库")
-        return None
-    
+# 辅助函数：读取 prompt 文件并拼接查询
+async def prepare_query_with_prompt(query: str) -> str:
+    """准备完整的查询，包含系统提示词"""
     try:
-        logger.info(f"正在从数据库查询 prompt (ID: {prompt_id})...")
+        # 直接创建服务实例，不使用依赖注入
+        from app.database.connection import get_supabase_client
+        from app.repositories.product_prompt_repository import ProductPromptRepository
+        from app.services.product_prompt_service import ProductPromptService
         
-        # 使用 agent 执行数据库查询
-        query_sql = f"SELECT prompt FROM product_prompt WHERE id = {prompt_id} LIMIT 1;"
-        result = agent.run(f"请使用MCP工具执行以下SQL查询并直接返回prompt字段的内容：{query_sql}")
+        # 获取 Supabase 客户端
+        supabase_client = get_supabase_client()
         
-        # 解析结果
-        if result and isinstance(result, str) and len(result.strip()) > 100:
-            logger.info(f"成功从数据库获取 prompt，长度: {len(result)} 字符")
-            return result.strip()
-        else:
-            logger.warning(f"数据库查询返回的 prompt 内容无效: {result}")
-            return None
+        # 创建仓库和服务实例
+        repository = ProductPromptRepository(supabase_client)
+        service = ProductPromptService(repository)
+        
+        # 获取提示词
+        prefixPrompt = await service.get_prompt_by_id(1)
+        
+        if not prefixPrompt:
+            logger.warning("未找到 ID 为 1 的提示词，使用原始查询")
+            return query
             
-    except Exception as e:
-        logger.error(f"从数据库查询 prompt 失败: {e}")
-        return None
-
-# 辅助函数：读取 prompt（优先数据库，兜底文件）
-def prepare_query_with_prompt(query: str) -> str:
-    """优先从数据库读取 prompt，失败时从文件读取"""
-    import os
-    
-    # 1. 优先尝试从数据库获取 prompt
-    db_prompt = get_prompt_from_database(prompt_id=1)
-    if db_prompt:
-        complete_query = db_prompt + "\n\n 用户的问题如下：" + query
-        logger.info(f"使用数据库 prompt，长度: {len(db_prompt)} 字符")
+        complete_query = prefixPrompt.prompt + "\n\n 用户的问题如下：" + query
+        
+        logger.info(f"已成功拼接提示词，总 prompt 长度: {len(complete_query)} 字符")
         return complete_query
-    
-    # 2. 数据库获取失败，回退到文件读取
-    logger.warning("数据库获取 prompt 失败，回退到文件读取")
-    
-    prompt_dir = os.path.join(os.path.dirname(__file__), "prompt")
-    # 定义要加载的 prompt 文件及其顺序
-    prompt_files = [
-        "agent-prompt-by-step.md"
-    ]
-    
-    prompt_contents = []
-    
-    for file_name in prompt_files:
-        prompt_file_path = os.path.join(prompt_dir, file_name)
-        try:
-            with open(prompt_file_path, 'r', encoding='utf-8') as f:
-                prompt_contents.append(f.read())
-            logger.info(f"成功读取 prompt 文件: {file_name}")
-        except FileNotFoundError:
-            logger.warning(f"找不到 prompt 文件: {file_name}，已跳过")
-        except Exception as e:
-            logger.warning(f"读取 prompt 文件 {file_name} 失败: {e}，已跳过")
-
-    if not prompt_contents:
-        logger.warning("所有 prompt 文件都读取失败，将使用原始查询")
+        
+    except Exception as e:
+        logger.error(f"准备查询提示词时出错: {e}")
+        logger.info("使用原始查询继续执行")
         return query
-
-    complete_prompt = "\n\n".join(prompt_contents)
-    complete_query = complete_prompt + "\n\n 用户的问题如下：" + query
-    logger.info(f"使用文件 prompt，已成功拼接 {len(prompt_contents)} 个 prompt 文件，总 prompt 长度: {len(complete_prompt)} 字符")
-    return complete_query
 
 async def stream_agent_response(query: str):
     """
@@ -201,7 +170,7 @@ async def stream_agent_response(query: str):
         
         try:
             # 准备完整的查询（包含 prompt）
-            complete_query = prepare_query_with_prompt(query)
+            complete_query = await prepare_query_with_prompt(query)
             
             # 运行代理任务，设置超时
             logger.info("正在调用 agent.run...")
@@ -288,41 +257,12 @@ async def root():
 @app.get("/health")
 async def health_check():
     """健康检查端点"""
-    # 检查 prompt 数据源状态
-    prompt_source_status = {
-        "database_available": False,
-        "file_available": False,
-        "current_source": "unknown"
-    }
-    
-    # 检查数据库是否可用
-    try:
-        if agent:
-            db_prompt = get_prompt_from_database(prompt_id=1)
-            if db_prompt:
-                prompt_source_status["database_available"] = True
-                prompt_source_status["current_source"] = "database"
-    except Exception as e:
-        logger.debug(f"数据库 prompt 检查失败: {e}")
-    
-    # 检查文件是否可用
-    try:
-        import os
-        prompt_file_path = os.path.join(os.path.dirname(__file__), "prompt", "agent-prompt-by-step.md")
-        if os.path.exists(prompt_file_path):
-            prompt_source_status["file_available"] = True
-            if prompt_source_status["current_source"] == "unknown":
-                prompt_source_status["current_source"] = "file"
-    except Exception as e:
-        logger.debug(f"文件 prompt 检查失败: {e}")
-    
     return {
         "status": "healthy",
         "agent_ready": agent is not None,
         "model_id": settings.MODEL_ID,
         "init_error": init_error if init_error else None,
         "data_files_status": get_data_files_status(),
-        "prompt_source": prompt_source_status,
         "config": {
             "host": settings.HOST,
             "port": settings.PORT,
@@ -385,7 +325,7 @@ async def agent_query(request: dict):
     
     try:
         # 准备完整的查询（包含 prompt）
-        complete_query = prepare_query_with_prompt(query)
+        complete_query = await prepare_query_with_prompt(query)
         
         result = await asyncio.to_thread(agent.run, complete_query)
         return {
@@ -396,6 +336,82 @@ async def agent_query(request: dict):
     except Exception as e:
         logger.error(f"处理查询时出错: {e}")
         return {"error": str(e)}
+
+# ProductPrompt CRUD API 端点
+@app.get("/prompts", response_model=List[ProductPromptResponse], tags=["提示词管理"])
+async def get_all_prompts(
+    page: int = Query(1, ge=1, description="页码"),
+    page_size: int = Query(20, ge=1, le=100, description="每页数量"),
+    service: ProductPromptService = Depends(get_product_prompt_service)
+):
+    """获取所有提示词（分页）"""
+    prompts = await service.get_all_prompts(page=page, page_size=page_size)
+    return prompts
+
+@app.get("/prompts/{prompt_id}", response_model=ProductPromptResponse, tags=["提示词管理"])
+async def get_prompt(
+    prompt_id: int,
+    service: ProductPromptService = Depends(get_product_prompt_service)
+):
+    """根据 ID 获取提示词"""
+    prompt = await service.get_prompt_by_id(prompt_id)
+    if not prompt:
+        raise HTTPException(status_code=404, detail="提示词不存在")
+    return prompt
+
+@app.post("/prompts", response_model=ProductPromptResponse, tags=["提示词管理"])
+async def create_prompt(
+    prompt_data: ProductPromptCreate,
+    service: ProductPromptService = Depends(get_product_prompt_service)
+):
+    """创建新提示词"""
+    prompt = await service.create_prompt(prompt_data)
+    if not prompt:
+        raise HTTPException(status_code=400, detail="创建提示词失败")
+    return prompt
+
+@app.put("/prompts/{prompt_id}", response_model=ProductPromptResponse, tags=["提示词管理"])
+async def update_prompt(
+    prompt_id: int,
+    prompt_data: ProductPromptUpdate,
+    service: ProductPromptService = Depends(get_product_prompt_service)
+):
+    """更新提示词"""
+    prompt = await service.update_prompt(prompt_id, prompt_data)
+    if not prompt:
+        raise HTTPException(status_code=404, detail="提示词不存在或更新失败")
+    return prompt
+
+@app.delete("/prompts/{prompt_id}", tags=["提示词管理"])
+async def delete_prompt(
+    prompt_id: int,
+    service: ProductPromptService = Depends(get_product_prompt_service)
+):
+    """删除提示词"""
+    success = await service.delete_prompt(prompt_id)
+    if not success:
+        raise HTTPException(status_code=404, detail="提示词不存在或删除失败")
+    return {"message": "提示词删除成功"}
+
+@app.get("/prompts/search/{search_term}", response_model=List[ProductPromptResponse], tags=["提示词管理"])
+async def search_prompts(
+    search_term: str,
+    search_type: str = Query("prompt", regex="^(prompt|description)$", description="搜索类型"),
+    limit: int = Query(50, ge=1, le=100, description="返回数量限制"),
+    service: ProductPromptService = Depends(get_product_prompt_service)
+):
+    """搜索提示词"""
+    prompts = await service.search_prompts(search_term, search_type, limit)
+    return prompts
+
+@app.get("/prompts/recent", response_model=List[ProductPromptResponse], tags=["提示词管理"])
+async def get_recent_prompts(
+    limit: int = Query(10, ge=1, le=100, description="返回数量"),
+    service: ProductPromptService = Depends(get_product_prompt_service)
+):
+    """获取最近的提示词"""
+    prompts = await service.get_recent_prompts(limit)
+    return prompts
 
 if __name__ == "__main__":
     import uvicorn

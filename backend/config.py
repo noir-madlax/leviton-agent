@@ -25,6 +25,11 @@ class Settings:
     # MCP 设置
     MCP_ACCESS_TOKEN: str = os.getenv("MCP_ACCESS_TOKEN")
     
+    # Supabase 设置
+    SUPABASE_URL: str = os.getenv("SUPABASE_URL")
+    SUPABASE_KEY: str = os.getenv("SUPABASE_KEY") 
+    SUPABASE_SERVICE_KEY: str = os.getenv("SUPABASE_SERVICE_KEY")  # 用于服务端操作
+    
     # CORS 设置
     ALLOWED_ORIGINS: list = os.getenv("ALLOWED_ORIGINS", "*").split(",")
     
