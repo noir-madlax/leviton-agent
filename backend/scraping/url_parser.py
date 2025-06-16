@@ -134,6 +134,12 @@ def _analyze_url_path(path: str, query_params: Dict) -> Tuple[str, Dict]:
         brand_info = _extract_brand_info(path, query_params)
         return 'brand', brand_info
     
+    # Category pages with 'node' parameter
+    if 'node' in query_params:
+        category_id = query_params['node'][0]
+        search_term = _extract_search_term(query_params)
+        return 'category', {'category_id': category_id, 'search_term': search_term}
+    
     # Default: try to extract search term from any query parameters
     search_term = _extract_search_term(query_params)
     if search_term:
@@ -170,7 +176,7 @@ def _extract_search_term(query_params: Dict) -> str:
             return query_params[key][0]  # Take first value
     
     # Default search term for electrical switches
-    return 'light switches'
+    return None
 
 
 def _extract_category_info(path: str) -> Dict:

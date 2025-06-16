@@ -161,6 +161,27 @@ class ScrapingService:
                 "method": "Direct from Product API 'categories' field",
             }
 
+        elif url_type in ["category", "search", "bestsellers"]:
+            category_id = params.get("category_id")
+            search_term = params.get("search_term") or params.get("keywords")
+            
+            if not category_id and not search_term:
+                raise ValueError(f"Could not extract category_id or search_term for URL type '{url_type}' from parameters.")
+
+            # If we only have a search term, we still need a category_id to scrape efficiently.
+            # We can use a default or a broader category. For now, we require a category_id.
+            if not category_id:
+                raise ValueError(f"URL type '{url_type}' requires a category_id, which could not be found in the URL.")
+
+            logger.info(
+                f"Discovered category_id: {category_id} and search_term: {search_term} directly from URL"
+            )
+            return {
+                "category_id": category_id,
+                "search_term": search_term,
+                "method": "Directly from URL parameters",
+            }
+
         # TODO: Implement logic for other URL types like 'category' and 'search'
         else:
             raise NotImplementedError(
