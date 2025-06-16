@@ -1,6 +1,7 @@
 from typing import List, Optional, Dict, Any
 from supabase import Client
-from ..models.product_prompt import ProductPrompt, ProductPromptCreate, ProductPromptUpdate
+from app.models.product_prompt import ProductPrompt, ProductPromptCreate, ProductPromptUpdate
+from pydantic import ValidationError
 import logging
 
 logger = logging.getLogger(__name__)
