@@ -113,10 +113,46 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# 辅助函数：读取 prompt 文件并拼接查询
+# 辅助函数：从数据库获取 prompt
+def get_prompt_from_database(prompt_id: int = 1) -> str:
+    """从数据库获取 prompt 内容"""
+    if not agent:
+        logger.warning("Agent 未初始化，无法访问数据库")
+        return None
+    
+    try:
+        logger.info(f"正在从数据库查询 prompt (ID: {prompt_id})...")
+        
+        # 使用 agent 执行数据库查询
+        query_sql = f"SELECT prompt FROM product_prompt WHERE id = {prompt_id} LIMIT 1;"
+        result = agent.run(f"请使用MCP工具执行以下SQL查询并直接返回prompt字段的内容：{query_sql}")
+        
+        # 解析结果
+        if result and isinstance(result, str) and len(result.strip()) > 100:
+            logger.info(f"成功从数据库获取 prompt，长度: {len(result)} 字符")
+            return result.strip()
+        else:
+            logger.warning(f"数据库查询返回的 prompt 内容无效: {result}")
+            return None
+            
+    except Exception as e:
+        logger.error(f"从数据库查询 prompt 失败: {e}")
+        return None
+
+# 辅助函数：读取 prompt（优先数据库，兜底文件）
 def prepare_query_with_prompt(query: str) -> str:
-    """读取多个 prompt 文件并按顺序拼接到查询前"""
+    """优先从数据库读取 prompt，失败时从文件读取"""
     import os
+    
+    # 1. 优先尝试从数据库获取 prompt
+    db_prompt = get_prompt_from_database(prompt_id=1)
+    if db_prompt:
+        complete_query = db_prompt + "\n\n 用户的问题如下：" + query
+        logger.info(f"使用数据库 prompt，长度: {len(db_prompt)} 字符")
+        return complete_query
+    
+    # 2. 数据库获取失败，回退到文件读取
+    logger.warning("数据库获取 prompt 失败，回退到文件读取")
     
     prompt_dir = os.path.join(os.path.dirname(__file__), "prompt")
     # 定义要加载的 prompt 文件及其顺序
@@ -143,7 +179,7 @@ def prepare_query_with_prompt(query: str) -> str:
 
     complete_prompt = "\n\n".join(prompt_contents)
     complete_query = complete_prompt + "\n\n 用户的问题如下：" + query
-    logger.info(f"已成功拼接 {len(prompt_contents)} 个 prompt 文件，总 prompt 长度: {len(complete_prompt)} 字符")
+    logger.info(f"使用文件 prompt，已成功拼接 {len(prompt_contents)} 个 prompt 文件，总 prompt 长度: {len(complete_prompt)} 字符")
     return complete_query
 
 async def stream_agent_response(query: str):
@@ -252,12 +288,41 @@ async def root():
 @app.get("/health")
 async def health_check():
     """健康检查端点"""
+    # 检查 prompt 数据源状态
+    prompt_source_status = {
+        "database_available": False,
+        "file_available": False,
+        "current_source": "unknown"
+    }
+    
+    # 检查数据库是否可用
+    try:
+        if agent:
+            db_prompt = get_prompt_from_database(prompt_id=1)
+            if db_prompt:
+                prompt_source_status["database_available"] = True
+                prompt_source_status["current_source"] = "database"
+    except Exception as e:
+        logger.debug(f"数据库 prompt 检查失败: {e}")
+    
+    # 检查文件是否可用
+    try:
+        import os
+        prompt_file_path = os.path.join(os.path.dirname(__file__), "prompt", "agent-prompt-by-step.md")
+        if os.path.exists(prompt_file_path):
+            prompt_source_status["file_available"] = True
+            if prompt_source_status["current_source"] == "unknown":
+                prompt_source_status["current_source"] = "file"
+    except Exception as e:
+        logger.debug(f"文件 prompt 检查失败: {e}")
+    
     return {
         "status": "healthy",
         "agent_ready": agent is not None,
         "model_id": settings.MODEL_ID,
         "init_error": init_error if init_error else None,
         "data_files_status": get_data_files_status(),
+        "prompt_source": prompt_source_status,
         "config": {
             "host": settings.HOST,
             "port": settings.PORT,
