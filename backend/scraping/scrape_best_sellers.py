@@ -48,24 +48,11 @@ def scrape_products_from_amazon(
         all_products = []
         page = 1
         
+        # Variables to store API metadata from first page
+        first_page_metadata = {}
+        
         while len(all_products) < target_count:
             try:
-                timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
-                search_term_clean = search_term.replace(" ", "_").lower()
-                filename = f"amazon_search_{search_term_clean}_cat_{category_id}_page_{page}_sort_featured_{timestamp}.json"
-                filepath = os.path.join(save_dir, filename)
-                
-                if os.path.exists(filepath):
-                    print(f"  Skipping (file exists): {filename}")
-                    with open(filepath, 'r', encoding='utf-8') as f:
-                        existing_result = json.load(f)
-                    if 'search_results' in existing_result and existing_result['search_results']:
-                        products = existing_result['search_results']
-                        all_products.extend(products)
-                        print(f"    Found {len(products)} products (total: {len(all_products)})")
-                    page += 1
-                    continue
-                
                 print(f"  Fetching Amazon page {page} for '{search_term}'...")
                 result = amazon_search(
                     search_term=search_term,
@@ -76,15 +63,20 @@ def scrape_products_from_amazon(
                     exclude_sponsored=True
                 )
                 
-                with open(filepath, 'w', encoding='utf-8') as f:
-                    json.dump(result, f, indent=2, ensure_ascii=False)
-                
-                print(f"    Saved: {filename}")
+                # Save metadata from first page
+                if page == 1:
+                    first_page_metadata = {
+                        "request_info": result.get("request_info", {}),
+                        "request_parameters": result.get("request_parameters", {}),
+                        "request_metadata": result.get("request_metadata", {}),
+                        "search_information": result.get("search_information", {}),
+                        "pagination": result.get("pagination", {})
+                    }
                 
                 if 'search_results' in result and result['search_results']:
                     products = result['search_results']
                     all_products.extend(products)
-                    print(f"    Found {len(products)} products (total: {len(all_products)})")
+                    print(f"    Found {len(products)} products on page {page} (total: {len(all_products)})")
                     
                     if len(products) < 10:
                         print(f"    Reached end of results for {search_term}")
@@ -102,55 +94,160 @@ def scrape_products_from_amazon(
         
         print(f"  Completed Amazon '{search_term}': {len(all_products)} products scraped")
         
+        # Save only the final consolidated file with complete request information
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         search_term_clean = search_term.replace(" ", "_").lower()
         final_filename = f"amazon_search_{search_term_clean}_cat_{category_id}_all_products_{timestamp}.json"
         final_filepath = os.path.join(save_dir, final_filename)
         
+        # Create structured data with complete API response information
+        combined_data = {
+            "request_info": first_page_metadata.get("request_info", {}),
+            "request_parameters": first_page_metadata.get("request_parameters", {}),
+            "request_metadata": first_page_metadata.get("request_metadata", {}),
+            "search_information": first_page_metadata.get("search_information", {}),
+            "pagination": first_page_metadata.get("pagination", {}),
+            "scraping_summary": {
+                "type": "search",
+                "search_term": search_term,
+                "category_id": category_id,
+                "amazon_domain": "amazon.com",
+                "total_pages_scraped": page - 1,
+                "total_products": len(all_products),
+                "max_products_requested": target_count,
+                "sort_by": "featured",
+                "exclude_sponsored": True
+            },
+            "search_results": all_products
+        }
+        
         with open(final_filepath, "w") as f:
-            json.dump(all_products, f, indent=4)
+            json.dump(combined_data, f, indent=4)
 
         return len(all_products), all_products, final_filepath
 
     # --- Logic for browsing a category or bestsellers page (no search term) ---
     elif url_type in ['category', 'bestsellers']:
         print(f"Scraping Amazon {url_type} page for category ID {category_id}...")
-        try:
+        
+        # Define amazon_domain at the beginning of this branch
+        amazon_domain = "amazon.com"
+        
+        if url_type == 'category':
+            # For category scraping, implement pagination to get target_count products
+            all_products = []
+            page = 1
+            
+            # Variables to store API metadata from first page
+            first_page_metadata = {}
+            
+            while len(all_products) < target_count:
+                try:
+                    print(f"  Fetching page {page}...")
+                    
+                    # Use the original get_products_from_category_rainforest function with page parameter
+                    page_data = get_products_from_category_rainforest(
+                        category_id=category_id,
+                        page=page,
+                        amazon_domain=amazon_domain
+                    )
+                    
+                    # Save metadata from first page
+                    if page == 1:
+                        first_page_metadata = {
+                            "request_info": page_data.get("request_info", {}),
+                            "request_parameters": page_data.get("request_parameters", {}),
+                            "request_metadata": page_data.get("request_metadata", {}),
+                            "search_information": page_data.get("search_information", {}),
+                            "category_information": page_data.get("category_information", {}),
+                            "pagination": page_data.get("pagination", {})
+                        }
+                    
+                    if not page_data or 'category_results' not in page_data:
+                        print(f"  No data returned for page {page}, stopping")
+                        break
+                    
+                    page_products = page_data.get('category_results', [])
+                    if not page_products:
+                        print(f"  No products found on page {page}, stopping")
+                        break
+                    
+                    print(f"  Found {len(page_products)} products on page {page}")
+                    all_products.extend(page_products)
+                    
+                    # If we have enough products, truncate to target_count
+                    if len(all_products) >= target_count:
+                        all_products = all_products[:target_count]
+                        print(f"  Reached target of {target_count} products, stopping")
+                        break
+                    
+                    page += 1
+                    
+                    # Add a small delay between pages to be respectful
+                    time.sleep(1)
+                    
+                except Exception as e:
+                    print(f"  Error fetching page {page}: {str(e)}")
+                    break
+            
+            # Save the combined results
+            timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+            filename = f"amazon_{url_type}_cat_{category_id}_{timestamp}.json"
+            filepath = os.path.join(save_dir, filename)
+            
+            # Create combined data structure with complete API response information
+            combined_data = {
+                "request_info": first_page_metadata.get("request_info", {}),
+                "request_parameters": first_page_metadata.get("request_parameters", {}),
+                "request_metadata": first_page_metadata.get("request_metadata", {}),
+                "search_information": first_page_metadata.get("search_information", {}),
+                "category_information": first_page_metadata.get("category_information", {}),
+                "pagination": first_page_metadata.get("pagination", {}),
+                "scraping_summary": {
+                    "type": "category",
+                    "category_id": category_id,
+                    "amazon_domain": amazon_domain,
+                    "total_pages_scraped": page - 1,
+                    "total_products": len(all_products),
+                    "max_products_requested": target_count
+                },
+                "category_results": all_products
+            }
+            
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(combined_data, f, indent=2, ensure_ascii=False)
+            
+            print(f"  Saved {len(all_products)} products to: {filename}")
+            # Return 3 values as expected by scraping_service
+            return len(all_products), all_products, filepath
+            
+        else:  # bestsellers
             timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
             filename = f"amazon_{url_type}_cat_{category_id}_{timestamp}.json"
             filepath = os.path.join(save_dir, filename)
 
             if os.path.exists(filepath):
                 print(f"  Skipping (file exists): {filename}")
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    result = json.load(f)
-            else:
-                print(f"  Fetching Amazon {url_type} page using category ID: {category_id}")
-                if url_type == 'category':
-                    result = get_products_from_category_rainforest(category_id=category_id)
-                else: # 'bestsellers'
-                    # Bestsellers still requires a full URL to be constructed or passed
-                    if not original_url:
-                         raise ValueError("Bestsellers scraping requires a URL.")
-                    print(f"  Fetching Amazon {url_type} page: {original_url}")
-                    result = get_bestsellers_rainforest(url=original_url)
+                # Return 3 values as expected by scraping_service
+                return 0, [], filepath
 
-                with open(filepath, 'w', encoding='utf-8') as f:
-                    json.dump(result, f, indent=2, ensure_ascii=False)
-                print(f"    Saved: {filename}")
+            data = get_products_from_category_rainforest(
+                category_id=category_id,
+                amazon_domain=amazon_domain
+            )
 
-            products = result.get('category_results', []) if url_type == 'category' else result.get('bestsellers', [])
-            print(f"  Completed Amazon {url_type}: {len(products)} products scraped")
+            if not data:
+                print("  No data returned from API")
+                # Return 3 values as expected by scraping_service
+                return 0, [], filepath
 
-            final_filepath = os.path.join(save_dir, f"amazon_{url_type}_cat_{category_id}_all_products_{timestamp}.json")
-            with open(final_filepath, "w") as f:
-                json.dump(products, f, indent=4)
-            
-            return len(products), products, final_filepath
+            with open(filepath, 'w', encoding='utf-8') as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
 
-        except Exception as e:
-            print(f"    Error fetching {url_type} page: {str(e)}")
-            return 0, [], ""
+            products = data.get('category_results', [])
+            print(f"  Saved {len(products)} products to: {filename}")
+            # Return 3 values as expected by scraping_service
+            return len(products), products, filepath
             
     else:
         print(f"Warning: No valid scraping strategy for url_type='{url_type}' and no search_term.")

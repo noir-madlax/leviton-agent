@@ -79,9 +79,38 @@ class ScrapingService:
                         ):
                             scraped_products.insert(0, original_product_details["product"])
                             product_count += 1
-                            # Overwrite the original file with the updated list
-                            with open(filepath, "w") as f:
-                                json.dump(scraped_products, f, indent=4)
+                            
+                            # Read the existing file to preserve its structure
+                            try:
+                                with open(filepath, "r", encoding="utf-8") as f:
+                                    existing_data = json.load(f)
+                                
+                                # Check if it's a structured file with metadata or just a product array
+                                if isinstance(existing_data, dict):
+                                    # Structured file - update the products while preserving metadata
+                                    if "search_results" in existing_data:
+                                        existing_data["search_results"] = scraped_products
+                                        existing_data["scraping_summary"]["total_products"] = len(scraped_products)
+                                    elif "category_results" in existing_data:
+                                        existing_data["category_results"] = scraped_products
+                                        existing_data["scraping_summary"]["total_products"] = len(scraped_products)
+                                    else:
+                                        # Fallback - just replace with products array
+                                        existing_data = scraped_products
+                                else:
+                                    # Simple array file - replace with updated array
+                                    existing_data = scraped_products
+                                
+                                # Write back the updated data
+                                with open(filepath, "w", encoding="utf-8") as f:
+                                    json.dump(existing_data, f, indent=4, ensure_ascii=False)
+                                    
+                            except (json.JSONDecodeError, FileNotFoundError) as e:
+                                logger.warning(f"Could not read existing file structure, falling back to simple array: {e}")
+                                # Fallback to original behavior
+                                with open(filepath, "w") as f:
+                                    json.dump(scraped_products, f, indent=4)
+                            
                             logger.info(f"Added original ASIN {original_asin} to the list: {filepath}")
 
             logger.info(

@@ -416,8 +416,8 @@ def amazon_search(search_term: str, category_id: str, amazon_domain: str = "amaz
         "page": page
     }
     
-    # Add search term or URL
-    if search_term:
+    # Add search term only if it's not empty
+    if search_term and search_term.strip():
         params["search_term"] = search_term
     
     # Add optional parameters if provided
@@ -450,13 +450,14 @@ def search_for_category_rainforest(category_name: str) -> Optional[Dict[str, Any
         print(f"Error searching for category '{category_name}' from Rainforest API: {e}")
         return None
 
-def get_products_from_category_rainforest(category_id: str, amazon_domain: str = "amazon.com"):
+def get_products_from_category_rainforest(category_id: str, amazon_domain: str = "amazon.com", page: int = 1):
     """
     Get products from a category page using Rainforest API.
 
     Args:
         category_id (str): The ID of the category to fetch.
         amazon_domain (str): The Amazon domain to use.
+        page (int): The page number to fetch (default: 1).
 
     Returns:
         dict: JSON response containing category products.
@@ -468,7 +469,8 @@ def get_products_from_category_rainforest(category_id: str, amazon_domain: str =
         "api_key": RAINFOREST_API_KEY,
         "type": "category",
         "amazon_domain": amazon_domain,
-        "category_id": category_id
+        "category_id": category_id,
+        "page": page
     }
 
     try:
