@@ -30,7 +30,7 @@ class SupabaseManager:
         try:
             return create_client(
                 settings.SUPABASE_URL,
-                settings.SUPABASE_SERVICE_KEY
+                settings.SUPABASE_KEY
             )
         except Exception as e:
             logger.error(f"Supabase 服务客户端初始化失败: {e}")

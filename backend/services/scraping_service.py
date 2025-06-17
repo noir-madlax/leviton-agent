@@ -18,6 +18,7 @@ from scraping.scrape_best_sellers import (
     create_directories,
 )
 from scraping.amazon_api import get_product_details_rainforest, get_bestsellers_rainforest
+from app.services.data_import_service import DataImportService
 
 logger = logging.getLogger(__name__)
 
@@ -27,6 +28,7 @@ class ScrapingService:
     
     def __init__(self):
         self.amazon_dir, self.home_depot_dir = create_directories()
+        self.data_import_service = DataImportService()
     
     async def process_url(self, url: str, max_products: int = 100, max_reviews: int = 50) -> Dict[str, Any]:
         """
@@ -117,6 +119,18 @@ class ScrapingService:
                 f"Scraping task {task_id} completed. Products scraped: {product_count}"
             )
             
+            # 新增：导入数据到数据库
+            logger.info("开始导入数据到数据库...")
+            import_result = await self.data_import_service.import_scraping_result(
+                filepath, 
+                {
+                    "task_id": task_id,
+                    "original_url": url,
+                    "max_products": max_products,
+                    "max_reviews": max_reviews
+                }
+            )
+            
             return {
                 "task_id": task_id,
                 "status": "completed",
@@ -128,7 +142,8 @@ class ScrapingService:
                     "discovered_category_id": category_info["category_id"],
                     "used_search_term": category_info["search_term"],
                     "discovery_method": category_info["method"]
-                }
+                },
+                "database_import": import_result  # 新增：数据库导入结果
             }
             
         except Exception as e:
@@ -152,13 +167,7 @@ class ScrapingService:
                 get_product_details_rainforest, asin
             )
 
-            # Write the full JSON response to a file for debugging
-            try:
-                with open("rainforest_response.json", "w", encoding="utf-8") as f:
-                    json.dump(product_details, f, ensure_ascii=False, indent=4)
-                logger.info("Successfully wrote Rainforest API response to rainforest_response.json")
-            except Exception as e:
-                logger.error(f"Failed to write API response to file: {e}")
+            # API response received successfully
 
             if not product_details or "product" not in product_details:
                 raise ValueError(f"Failed to retrieve product details for ASIN {asin}.")
@@ -234,13 +243,7 @@ class ScrapingService:
         logger.info(f"Discovering category info for product URL: {url}")
         product_details_response = get_product_details_rainforest(url)
 
-        # Write the full JSON response to a file for debugging
-        try:
-            with open("rainforest_response.json", "w", encoding="utf-8") as f:
-                json.dump(product_details_response, f, ensure_ascii=False, indent=4)
-            logger.info("Successfully wrote Rainforest API response to rainforest_response.json")
-        except Exception as e:
-            logger.error(f"Failed to write API response to file: {e}")
+        # API response received successfully
 
         if not product_details_response or 'product' not in product_details_response:
             raise ValueError("Invalid response from product details API")
