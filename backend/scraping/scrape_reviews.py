@@ -55,6 +55,9 @@ MAX_REVIEW_YEAR = datetime.now().year  # Latest acceptable review year (current 
 async def get_existing_review_files(asin):
     """
     Get all existing review files for a given ASIN.
+    Supports both old and new naming conventions:
+    - Old: {asin}_{date}_reviews.json
+    - New: batch_{batch_id}_{asin}_{timestamp}_reviews.json
     
     Args:
         asin (str): Amazon ASIN
@@ -64,7 +67,11 @@ async def get_existing_review_files(asin):
     """
     existing_files = []
     for filename in os.listdir(AMAZON_REVIEW_DIR):
+        # Check old naming convention: {asin}_{date}_reviews.json
         if filename.startswith(f"{asin}_") and filename.endswith("_reviews.json"):
+            existing_files.append(os.path.join(AMAZON_REVIEW_DIR, filename))
+        # Check new naming convention: batch_{batch_id}_{asin}_{timestamp}_reviews.json
+        elif filename.startswith("batch_") and f"_{asin}_" in filename and filename.endswith("_reviews.json"):
             existing_files.append(os.path.join(AMAZON_REVIEW_DIR, filename))
     return existing_files
 
@@ -372,26 +379,33 @@ async def determine_skip_action(asin, review_coverage_months):
     
     return analysis
 
-async def generate_filename(asin):
+async def generate_filename(asin, batch_id=None):
     """
-    Generate filename for saving reviews.
+    Generate filename for saving reviews with batch ID support.
     
     Args:
         asin (str): Amazon ASIN
+        batch_id (int, optional): Batch ID for naming convention
     
     Returns:
         str: Filename for saving reviews
     """
-    date_str = datetime.now().strftime("%Y%m%d")
-    base_filename = f"{asin}_{date_str}_reviews.json"
-    filepath = os.path.join(AMAZON_REVIEW_DIR, base_filename)
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
     
-    # If file already exists today, add timestamp to avoid overwriting
-    if os.path.exists(filepath):
-        timestamp = datetime.now().strftime("%H%M%S")
-        filename = f"{asin}_{date_str}_{timestamp}_reviews.json"
+    if batch_id is not None:
+        # New naming convention: batch_{batch_id}_{asin}_{timestamp}_reviews.json
+        filename = f"batch_{batch_id}_{asin}_{timestamp}_reviews.json"
     else:
-        filename = base_filename
+        # Legacy naming convention for backward compatibility
+        date_str = datetime.now().strftime("%Y%m%d")
+        base_filename = f"{asin}_{date_str}_reviews.json"
+        filepath = os.path.join(AMAZON_REVIEW_DIR, base_filename)
+        
+        # If file already exists today, add timestamp to avoid overwriting
+        if os.path.exists(filepath):
+            filename = f"{asin}_{date_str}_{datetime.now().strftime('%H%M%S')}_reviews.json"
+        else:
+            filename = base_filename
     
     return filename
 
@@ -431,7 +445,7 @@ async def save_reviews_with_context(asin, reviews_data, filepath, earliest_revie
     async with aiofiles.open(filepath, 'w', encoding='utf-8') as f:
         await f.write(json.dumps(output_data, indent=2, ensure_ascii=False))
 
-async def scrape_product_reviews(asin, semaphore, review_coverage_months):
+async def scrape_product_reviews(asin, semaphore, review_coverage_months, batch_id=None):
     """
     Scrape reviews for a single product using Axesso Amazon Review Scraper via Apify API.
     
@@ -441,6 +455,7 @@ async def scrape_product_reviews(asin, semaphore, review_coverage_months):
         asin (str): Amazon product ASIN
         semaphore: Asyncio semaphore for rate limiting
         review_coverage_months (int): Required months of review coverage to skip
+        batch_id (int, optional): Batch ID for file naming
     """
     async with semaphore:
         title = f"Product {asin}"  # Simple title since we don't have product info
@@ -458,8 +473,8 @@ async def scrape_product_reviews(asin, semaphore, review_coverage_months):
                 "details": skip_analysis["details"]
             }
         
-        # Generate new filename (will include timestamp if needed)
-        filename = await generate_filename(asin)
+        # Generate new filename (will include batch_id and timestamp)
+        filename = await generate_filename(asin, batch_id)
         filepath = os.path.join(AMAZON_REVIEW_DIR, filename)
         
         try:
@@ -591,7 +606,11 @@ async def scrape_all_amazon_reviews(review_coverage_months=DEFAULT_COVERAGE_MONT
     Args:
         review_coverage_months (int): Required months of review coverage to skip (default: DEFAULT_COVERAGE_MONTHS)
     """
+    # Generate a batch ID for this independent scraping session
+    independent_batch_id = int(datetime.now().strftime("%Y%m%d%H%M"))  # e.g., 202506171800
+    
     print("🚀 Starting Amazon reviews scraping...")
+    print(f"📦 Independent batch ID: {independent_batch_id}")
     print("\n📋 Skip Logic (ANY condition will trigger skip):")
     print(f"   • No recent scrape: Must have one file scraped within {SCRAPE_RECENCY_DAYS} days")
     print(f"   • Earliest reviews already fetched in previous scrape")
@@ -652,7 +671,7 @@ async def scrape_all_amazon_reviews(review_coverage_months=DEFAULT_COVERAGE_MONT
     print(f"\n📦 Processing {len(all_asins)} ASINs with max {MAX_CONCURRENT_REQUESTS} concurrent requests")
     
     tasks = [
-        scrape_product_reviews(asin, semaphore, review_coverage_months) 
+        scrape_product_reviews(asin, semaphore, review_coverage_months, batch_id=independent_batch_id) 
         for asin in all_asins
     ]
     
@@ -676,6 +695,7 @@ async def scrape_all_amazon_reviews(review_coverage_months=DEFAULT_COVERAGE_MONT
     summary_data = {
         "scrape_session": {
             "timestamp": datetime.now().isoformat(),
+            "batch_id": independent_batch_id,
             "total_asins": len(all_asins),
             "csv_asins": len(csv_asins),
             "additional_asins": len(additional_asins),
@@ -692,10 +712,11 @@ async def scrape_all_amazon_reviews(review_coverage_months=DEFAULT_COVERAGE_MONT
                 "max_review_year": MAX_REVIEW_YEAR
             }
         },
+        "asins_list": all_asins,
         "results": [r for r in results if isinstance(r, dict)]
     }
     
-    summary_file = os.path.join(AMAZON_REVIEW_DIR, f"scrape_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
+    summary_file = os.path.join(AMAZON_REVIEW_DIR, f"batch_{independent_batch_id}_review_scrape_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json")
     async with aiofiles.open(summary_file, 'w', encoding='utf-8') as f:
         await f.write(json.dumps(summary_data, indent=2, ensure_ascii=False))
     
@@ -769,7 +790,7 @@ async def scrape_reviews_for_batch(batch_id: int, review_coverage_months: int = 
         
         # 为所有ASIN创建爬取任务
         tasks = [
-            scrape_product_reviews(asin, semaphore, review_coverage_months) 
+            scrape_product_reviews(asin, semaphore, review_coverage_months, batch_id) 
             for asin in asins
         ]
         

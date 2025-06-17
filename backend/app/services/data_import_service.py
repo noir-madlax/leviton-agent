@@ -7,6 +7,8 @@ from app.services.scraping_result_processor import ScrapingResultProcessor
 from app.database.connection import get_supabase_service_client
 # 导入评论爬取模块
 from scraping.scrape_reviews import scrape_reviews_for_batch
+# 导入评论导入服务
+from app.services.review_import_service import ReviewImportService
 
 logger = logging.getLogger(__name__)
 
@@ -21,6 +23,7 @@ class DataImportService:
         self.processor = ScrapingResultProcessor()
         self.request_repository = ScrapingRequestRepository(self.supabase_client)
         self.product_repository = AmazonProductRepository(self.supabase_client)
+        self.review_import_service = ReviewImportService()  # 新增：评论导入服务
     
     async def import_scraping_result(self, json_file_path: str, 
                                    task_info: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
@@ -104,7 +107,6 @@ class DataImportService:
                 
                 # 根据评论爬取结果更新状态
                 if review_result.get("status") in ["success", "partial_success"]:
-                    final_status = 'completed_with_reviews'
                     reviews_scraped = review_result.get('successful', 0)
                     review_metadata = {
                         "total_asins": review_result.get('total_asins', 0),
@@ -119,6 +121,63 @@ class DataImportService:
                     logger.info(f"批次 {request_id} 评论爬取成功完成")
                     
                     # 更新评论爬取状态
+                    await self.request_repository.update_review_status(
+                        request_id,
+                        'completed',
+                        reviews_scraped,
+                        review_metadata,
+                        set_completed_time=True
+                    )
+                    
+                    # 步骤6: 导入评论数据到数据库
+                    logger.info(f"开始导入批次 {request_id} 的评论数据到数据库...")
+                    
+                    try:
+                        review_import_result = await self.review_import_service.import_batch_reviews(request_id)
+                        
+                        if review_import_result.get("status") == "success":
+                            final_status = 'completed'  # 使用允许的状态值
+                            reviews_imported = review_import_result.get('records_imported', 0)
+                            
+                            # 更新评论元数据，包含导入信息
+                            review_metadata.update({
+                                "reviews_imported": reviews_imported,
+                                "import_status": "success",
+                                "import_message": review_import_result.get("message"),
+                                "files_processed": review_import_result.get("files_processed", 0)
+                            })
+                            
+                            logger.info(f"批次 {request_id} 评论数据导入成功，导入 {reviews_imported} 条记录")
+                        else:
+                            final_status = 'completed'  # 使用允许的状态值，但在元数据中记录导入失败
+                            
+                            # 更新评论元数据，包含导入错误信息
+                            review_metadata.update({
+                                "reviews_imported": 0,
+                                "import_status": "failed",
+                                "import_message": review_import_result.get("message", "评论数据导入失败"),
+                                "import_error": review_import_result
+                            })
+                            
+                            logger.warning(f"批次 {request_id} 评论数据导入失败: {review_import_result.get('message')}")
+                            
+                    except Exception as import_error:
+                        final_status = 'completed'  # 使用允许的状态值，但在元数据中记录导入异常
+                        
+                        # 更新评论元数据，包含导入异常信息
+                        review_metadata.update({
+                            "reviews_imported": 0,
+                            "import_status": "error",
+                            "import_message": f"评论数据导入异常: {str(import_error)}",
+                            "import_exception": {
+                                "exception_message": str(import_error),
+                                "exception_type": type(import_error).__name__
+                            }
+                        })
+                        
+                        logger.error(f"批次 {request_id} 评论数据导入时出现异常: {import_error}")
+                    
+                    # 最终更新评论状态，包含导入结果
                     await self.request_repository.update_review_status(
                         request_id,
                         'completed',

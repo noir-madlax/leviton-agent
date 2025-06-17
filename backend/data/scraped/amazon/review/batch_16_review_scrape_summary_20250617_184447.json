@@ -1,10 +1,10 @@
 {
   "batch_scrape_session": {
-    "timestamp": "2025-06-17T17:00:30.672321",
-    "batch_id": 11,
-    "total_asins": 5,
+    "timestamp": "2025-06-17T18:44:47.666245",
+    "batch_id": 16,
+    "total_asins": 3,
     "successful": 3,
-    "skipped": 2,
+    "skipped": 0,
     "errors": 0,
     "exceptions": 0,
     "review_coverage_months": 6,
@@ -18,69 +18,55 @@
     }
   },
   "asins_list": [
-    "B09HR9Q3HP",
-    "B0CGRRGY6S",
-    "B0CN6YKH9R",
-    "B087N9N6HH",
-    "B003HGGPLW"
+    "B003HGGPLW",
+    "B00006RVTS",
+    "B087N9N6HH"
   ],
   "results": [
     {
       "status": "success",
-      "asin": "B09HR9Q3HP",
-      "review_count": 50,
-      "pages_scraped": 5,
-      "max_pages_requested": 5,
-      "fetched_all_available_reviews": true,
-      "earliest_reviews_fetched": true,
-      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/B09HR9Q3HP_20250617_reviews.json",
-      "skip_analysis": {
-        "should_skip": false,
-        "reason": "no_existing_files",
-        "details": "No previous review files found for this ASIN"
-      }
-    },
-    {
-      "status": "success",
-      "asin": "B0CGRRGY6S",
-      "review_count": 50,
-      "pages_scraped": 5,
-      "max_pages_requested": 5,
-      "fetched_all_available_reviews": true,
-      "earliest_reviews_fetched": true,
-      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/B0CGRRGY6S_20250617_reviews.json",
-      "skip_analysis": {
-        "should_skip": false,
-        "reason": "no_existing_files",
-        "details": "No previous review files found for this ASIN"
-      }
-    },
-    {
-      "status": "success",
-      "asin": "B0CN6YKH9R",
-      "review_count": 50,
-      "pages_scraped": 5,
-      "max_pages_requested": 5,
-      "fetched_all_available_reviews": true,
-      "earliest_reviews_fetched": true,
-      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/B0CN6YKH9R_20250617_reviews.json",
-      "skip_analysis": {
-        "should_skip": false,
-        "reason": "no_existing_files",
-        "details": "No previous review files found for this ASIN"
-      }
-    },
-    {
-      "status": "skipped",
-      "asin": "B087N9N6HH",
-      "reason": "earliest_reviews_already_fetched",
-      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
-    },
-    {
-      "status": "skipped",
       "asin": "B003HGGPLW",
-      "reason": "earliest_reviews_already_fetched",
-      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/batch_16_B003HGGPLW_20250617_184351_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B00006RVTS",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/batch_16_B00006RVTS_20250617_184351_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B087N9N6HH",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/batch_16_B087N9N6HH_20250617_184351_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
     }
   ]
 }
