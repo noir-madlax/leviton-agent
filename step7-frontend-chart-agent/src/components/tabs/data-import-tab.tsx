@@ -23,8 +23,8 @@ interface ScrapingResult {
 
 export function DataImportTab() {
   const [url, setUrl] = useState('');
-  const [maxProducts, setMaxProducts] = useState(100);
-  const [maxReviews, setMaxReviews] = useState(50);
+  const [maxProducts, setMaxProducts] = useState<number | string>(50);
+  const [maxReviews, setMaxReviews] = useState<number | string>(50);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ScrapingResult | null>(null);
 
@@ -47,8 +47,8 @@ export function DataImportTab() {
         },
         body: JSON.stringify({
           url: url.trim(),
-          max_products: maxProducts,
-          max_reviews: maxReviews,
+          max_products: maxProducts === '' ? 50 : maxProducts,
+          max_reviews: maxReviews === '' ? 50 : maxReviews,
         }),
       });
 
@@ -142,11 +142,15 @@ export function DataImportTab() {
                 <Label htmlFor="maxProducts">Max Products</Label>
                 <Input
                   id="maxProducts"
-                  type="number"
-                  min="1"
-                  max="500"
+                  type="text"
+                  placeholder="50"
                   value={maxProducts}
-                  onChange={(e) => setMaxProducts(parseInt(e.target.value) || 100)}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    if (val === '' || /^\d+$/.test(val)) {
+                      setMaxProducts(val === '' ? '' : parseInt(val));
+                    }
+                  }}
                 />
                 <p className="text-sm text-muted-foreground">
                   Maximum number of products to scrape (1-500)
@@ -156,11 +160,15 @@ export function DataImportTab() {
                 <Label htmlFor="maxReviews">Max Reviews</Label>
                 <Input
                   id="maxReviews"
-                  type="number"
-                  min="0"
-                  max="200"
+                  type="text"
+                  placeholder="50"
                   value={maxReviews}
-                  onChange={(e) => setMaxReviews(parseInt(e.target.value) || 50)}
+                  onChange={(e) => {
+                    const val = e.target.value;
+                    if (val === '' || /^\d+$/.test(val)) {
+                      setMaxReviews(val === '' ? '' : parseInt(val));
+                    }
+                  }}
                 />
                 <p className="text-sm text-muted-foreground">
                   Maximum number of reviews to scrape per product (0-200)
