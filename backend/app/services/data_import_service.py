@@ -5,6 +5,8 @@ from app.repositories.scraping_request_repository import ScrapingRequestReposito
 from app.repositories.amazon_product_repository import AmazonProductRepository
 from app.services.scraping_result_processor import ScrapingResultProcessor
 from app.database.connection import get_supabase_service_client
+# 导入评论爬取模块
+from scraping.scrape_reviews import scrape_reviews_for_batch
 
 logger = logging.getLogger(__name__)
 
@@ -76,11 +78,104 @@ class DataImportService:
             # 步骤4: 更新请求状态为导入完成
             await self.request_repository.update_request_status(
                 request_id, 
-                'imported',
-                {"products_imported": len(products_data)}
+                'imported'
             )
             
             logger.info(f"成功导入爬取结果: {len(products_data)} 个产品，请求ID: {request_id}")
+            
+            # 步骤5: 开始评论爬取
+            logger.info(f"开始为批次 {request_id} 爬取评论数据...")
+            
+            # 更新状态为正在爬取评论
+            await self.request_repository.update_request_status(
+                request_id, 
+                'processing_reviews'
+            )
+            
+            # 更新评论爬取状态为开始处理
+            await self.request_repository.update_review_status(
+                request_id,
+                'processing'
+            )
+            
+            try:
+                # 调用评论爬取（使用默认的6个月覆盖期）
+                review_result = await scrape_reviews_for_batch(request_id, review_coverage_months=6)
+                
+                # 根据评论爬取结果更新状态
+                if review_result.get("status") in ["success", "partial_success"]:
+                    final_status = 'completed_with_reviews'
+                    reviews_scraped = review_result.get('successful', 0)
+                    review_metadata = {
+                        "total_asins": review_result.get('total_asins', 0),
+                        "successful": review_result.get('successful', 0),
+                        "skipped": review_result.get('skipped', 0),
+                        "errors": review_result.get('errors', 0),
+                        "exceptions": review_result.get('exceptions', 0),
+                        "summary_file": review_result.get('summary_file'),
+                        "data_directory": review_result.get('data_directory'),
+                        "full_result": review_result
+                    }
+                    logger.info(f"批次 {request_id} 评论爬取成功完成")
+                    
+                    # 更新评论爬取状态
+                    await self.request_repository.update_review_status(
+                        request_id,
+                        'completed',
+                        reviews_scraped,
+                        review_metadata,
+                        set_completed_time=True
+                    )
+                else:
+                    final_status = 'completed_review_failed'
+                    review_metadata = {
+                        "total_asins": review_result.get('total_asins', 0),
+                        "error_message": review_result.get("message"),
+                        "full_result": review_result
+                    }
+                    logger.warning(f"批次 {request_id} 评论爬取失败: {review_result.get('message')}")
+                    
+                    # 更新评论爬取状态为失败
+                    await self.request_repository.update_review_status(
+                        request_id,
+                        'failed',
+                        0,
+                        review_metadata,
+                        set_completed_time=True
+                    )
+                
+                # 更新最终状态
+                await self.request_repository.update_request_status(
+                    request_id, 
+                    final_status
+                )
+                
+            except Exception as review_error:
+                logger.error(f"批次 {request_id} 评论爬取时出现异常: {review_error}")
+                
+                # 更新评论爬取状态为异常
+                review_metadata = {
+                    "exception_message": str(review_error),
+                    "exception_type": type(review_error).__name__
+                }
+                await self.request_repository.update_review_status(
+                    request_id,
+                    'error',
+                    0,
+                    review_metadata,
+                    set_completed_time=True
+                )
+                
+                # 更新状态为评论爬取异常
+                await self.request_repository.update_request_status(
+                    request_id, 
+                    'completed_review_error'
+                )
+                
+                review_result = {
+                    "status": "error",
+                    "message": f"评论爬取异常: {str(review_error)}"
+                }
             
             return {
                 "status": "success",
@@ -90,7 +185,8 @@ class DataImportService:
                 "batch_id": request_id,  # 批次ID与请求ID相同
                 "request_type": request_data.get('request_type'),
                 "search_term": request_data.get('search_term'),
-                "category_id": request_data.get('category_id')
+                "category_id": request_data.get('category_id'),
+                "review_scraping_result": review_result  # 新增：评论爬取结果
             }
             
         except Exception as e:

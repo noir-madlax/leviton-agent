@@ -66,6 +66,51 @@ class ScrapingRequestRepository:
             logger.error(f"更新爬取请求状态时出错: {e}")
             return False
     
+    async def update_review_status(self, request_id: int, review_status: str, 
+                                  reviews_scraped: int = 0,
+                                  review_metadata: Optional[Dict[str, Any]] = None,
+                                  set_completed_time: bool = False) -> bool:
+        """
+        更新评论爬取状态
+        
+        Args:
+            request_id: 请求ID
+            review_status: 评论爬取状态 (pending, processing, completed, failed, error)
+            reviews_scraped: 成功爬取的评论数量
+            review_metadata: 评论爬取的详细元数据
+            set_completed_time: 是否设置完成时间
+            
+        Returns:
+            bool: 更新成功返回True，失败返回False
+        """
+        try:
+            update_data = {
+                "review_status": review_status,
+                "reviews_scraped": reviews_scraped,
+                "updated_at": "NOW()"
+            }
+            
+            if review_metadata:
+                update_data["review_metadata"] = review_metadata
+            
+            if review_status == "processing" and not set_completed_time:
+                update_data["review_started_at"] = "NOW()"
+            elif set_completed_time or review_status in ["completed", "failed", "error"]:
+                update_data["review_completed_at"] = "NOW()"
+            
+            result = self.client.table('scraping_requests').update(update_data).eq('id', request_id).execute()
+            
+            if result.data and len(result.data) > 0:
+                logger.info(f"成功更新评论爬取状态，ID: {request_id}, 状态: {review_status}, 评论数: {reviews_scraped}")
+                return True
+            else:
+                logger.error(f"更新评论爬取状态失败，ID: {request_id}")
+                return False
+                
+        except Exception as e:
+            logger.error(f"更新评论爬取状态时出错: {e}")
+            return False
+    
     async def get_request_by_id(self, request_id: int) -> Optional[Dict[str, Any]]:
         """
         根据ID获取爬取请求记录

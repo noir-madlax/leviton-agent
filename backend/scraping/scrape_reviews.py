@@ -5,9 +5,17 @@ import aiofiles
 import pandas as pd
 from datetime import datetime, timedelta
 from apify_client import ApifyClient
+from app.database.connection import get_supabase_service_client
+from app.repositories.amazon_product_repository import AmazonProductRepository
+import logging
+from typing import Dict, Any
 
-ROOT_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
-DATA_DIR = os.path.join(ROOT_DIR, "data")
+# 配置日志
+logger = logging.getLogger(__name__)
+
+# 获取backend目录路径
+BACKEND_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+DATA_DIR = os.path.join(BACKEND_DIR, "data")
 OUTPUT_DIR = os.path.join(DATA_DIR, "scraped")
 AMAZON_REVIEW_DIR = os.path.join(OUTPUT_DIR, "amazon", "review")
 
@@ -692,6 +700,164 @@ async def scrape_all_amazon_reviews(review_coverage_months=DEFAULT_COVERAGE_MONT
         await f.write(json.dumps(summary_data, indent=2, ensure_ascii=False))
     
     print(f"📄 Summary saved to: {summary_file}")
+
+async def scrape_reviews_for_batch(batch_id: int, review_coverage_months: int = DEFAULT_COVERAGE_MONTHS) -> Dict[str, Any]:
+    """
+    为特定批次的产品爬取评论数据
+    
+    Args:
+        batch_id: 批次ID (对应scraping_requests.id)
+        review_coverage_months: 评论覆盖月数
+        
+    Returns:
+        Dict[str, Any]: 爬取结果
+    """
+    logger.info(f"🚀 开始为批次 {batch_id} 爬取评论数据...")
+    
+    try:
+        # 获取数据库客户端
+        supabase_client = get_supabase_service_client()
+        product_repository = AmazonProductRepository(supabase_client)
+        
+        # 从数据库获取该批次的产品列表
+        logger.info(f"📊 从数据库获取批次 {batch_id} 的产品列表...")
+        products = await product_repository.get_products_by_batch(batch_id)
+        
+        if not products:
+            logger.warning(f"⚠️  批次 {batch_id} 中没有找到产品数据")
+            return {
+                "status": "warning",
+                "message": f"批次 {batch_id} 中没有产品数据",
+                "batch_id": batch_id,
+                "total_asins": 0,
+                "successful": 0,
+                "skipped": 0,
+                "errors": 0
+            }
+        
+        # 提取ASIN列表
+        asins = []
+        for product in products:
+            platform_id = product.get('platform_id')
+            if platform_id:
+                asins.append(platform_id)
+        
+        logger.info(f"📦 找到 {len(asins)} 个ASIN需要爬取评论")
+        
+        if not asins:
+            logger.warning(f"⚠️  批次 {batch_id} 中没有有效的ASIN")
+            return {
+                "status": "warning", 
+                "message": f"批次 {batch_id} 中没有有效的ASIN",
+                "batch_id": batch_id,
+                "total_asins": 0,
+                "successful": 0,
+                "skipped": 0,
+                "errors": 0
+            }
+        
+        logger.info(f"\n📋 评论爬取配置:")
+        logger.info(f"   • 批次ID: {batch_id}")
+        logger.info(f"   • ASIN数量: {len(asins)}")
+        logger.info(f"   • 评论覆盖月数: {review_coverage_months}")
+        logger.info(f"   • 最大并发请求: {MAX_CONCURRENT_REQUESTS}")
+        logger.info(f"   • 每个ASIN最大页数: {MAX_PAGES_PER_ASIN}")
+        logger.info(f"   • 数据保存目录: {AMAZON_REVIEW_DIR}")
+        
+        # 创建信号量进行并发控制
+        semaphore = asyncio.Semaphore(MAX_CONCURRENT_REQUESTS)
+        
+        # 为所有ASIN创建爬取任务
+        tasks = [
+            scrape_product_reviews(asin, semaphore, review_coverage_months) 
+            for asin in asins
+        ]
+        
+        # 执行所有任务
+        results = await asyncio.gather(*tasks, return_exceptions=True)
+        
+        # 统计结果
+        successful = sum(1 for r in results if isinstance(r, dict) and r.get("status") == "success")
+        skipped = sum(1 for r in results if isinstance(r, dict) and r.get("status") == "skipped")
+        errors = sum(1 for r in results if isinstance(r, dict) and r.get("status") == "error")
+        exceptions = sum(1 for r in results if not isinstance(r, dict))
+        
+        logger.info(f"\n📊 批次 {batch_id} 评论爬取汇总:")
+        logger.info(f"   ✅ 成功: {successful}")
+        logger.info(f"   ⏩ 跳过: {skipped}")
+        logger.info(f"   ❌ 错误: {errors}")
+        logger.info(f"   🚫 异常: {exceptions}")
+        logger.info(f"   📁 文件保存位置: {AMAZON_REVIEW_DIR}")
+        
+        # 生成批次汇总报告
+        summary_data = {
+            "batch_scrape_session": {
+                "timestamp": datetime.now().isoformat(),
+                "batch_id": batch_id,
+                "total_asins": len(asins),
+                "successful": successful,
+                "skipped": skipped,
+                "errors": errors,
+                "exceptions": exceptions,
+                "review_coverage_months": review_coverage_months,
+                "configuration": {
+                    "rate_limit_delay": RATE_LIMIT_DELAY,
+                    "max_concurrent_requests": MAX_CONCURRENT_REQUESTS,
+                    "scrape_recency_days": SCRAPE_RECENCY_DAYS,
+                    "max_pages_per_asin": MAX_PAGES_PER_ASIN,
+                    "min_review_year": MIN_REVIEW_YEAR,
+                    "max_review_year": MAX_REVIEW_YEAR
+                }
+            },
+            "asins_list": asins,
+            "results": [r for r in results if isinstance(r, dict)]
+        }
+        
+        # 保存批次汇总
+        summary_file = os.path.join(
+            AMAZON_REVIEW_DIR, 
+            f"batch_{batch_id}_review_scrape_summary_{datetime.now().strftime('%Y%m%d_%H%M%S')}.json"
+        )
+        async with aiofiles.open(summary_file, 'w', encoding='utf-8') as f:
+            await f.write(json.dumps(summary_data, indent=2, ensure_ascii=False))
+        
+        logger.info(f"📄 批次汇总保存到: {summary_file}")
+        
+        # 判断整体状态
+        if successful + skipped == len(asins):
+            status = "success"
+            message = f"批次 {batch_id} 评论爬取完成"
+        elif successful > 0:
+            status = "partial_success"
+            message = f"批次 {batch_id} 评论爬取部分成功"
+        else:
+            status = "error"
+            message = f"批次 {batch_id} 评论爬取失败"
+        
+        return {
+            "status": status,
+            "message": message,
+            "batch_id": batch_id,
+            "total_asins": len(asins),
+            "successful": successful,
+            "skipped": skipped,
+            "errors": errors,
+            "exceptions": exceptions,
+            "summary_file": summary_file,
+            "data_directory": AMAZON_REVIEW_DIR
+        }
+        
+    except Exception as e:
+        logger.error(f"批次 {batch_id} 评论爬取时出现异常: {e}", exc_info=True)
+        return {
+            "status": "error",
+            "message": f"批次 {batch_id} 评论爬取异常: {str(e)}",
+            "batch_id": batch_id,
+            "total_asins": 0,
+            "successful": 0,
+            "skipped": 0,
+            "errors": 0
+        }
 
 if __name__ == "__main__":
     # Run the async scraper

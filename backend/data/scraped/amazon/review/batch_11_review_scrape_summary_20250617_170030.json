@@ -1,0 +1,86 @@
+{
+  "batch_scrape_session": {
+    "timestamp": "2025-06-17T17:00:30.672321",
+    "batch_id": 11,
+    "total_asins": 5,
+    "successful": 3,
+    "skipped": 2,
+    "errors": 0,
+    "exceptions": 0,
+    "review_coverage_months": 6,
+    "configuration": {
+      "rate_limit_delay": 0.1,
+      "max_concurrent_requests": 32,
+      "scrape_recency_days": 30,
+      "max_pages_per_asin": 5,
+      "min_review_year": 2010,
+      "max_review_year": 2025
+    }
+  },
+  "asins_list": [
+    "B09HR9Q3HP",
+    "B0CGRRGY6S",
+    "B0CN6YKH9R",
+    "B087N9N6HH",
+    "B003HGGPLW"
+  ],
+  "results": [
+    {
+      "status": "success",
+      "asin": "B09HR9Q3HP",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/B09HR9Q3HP_20250617_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CGRRGY6S",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/B0CGRRGY6S_20250617_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "success",
+      "asin": "B0CN6YKH9R",
+      "review_count": 50,
+      "pages_scraped": 5,
+      "max_pages_requested": 5,
+      "fetched_all_available_reviews": true,
+      "earliest_reviews_fetched": true,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/data/scraped/amazon/review/B0CN6YKH9R_20250617_reviews.json",
+      "skip_analysis": {
+        "should_skip": false,
+        "reason": "no_existing_files",
+        "details": "No previous review files found for this ASIN"
+      }
+    },
+    {
+      "status": "skipped",
+      "asin": "B087N9N6HH",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    },
+    {
+      "status": "skipped",
+      "asin": "B003HGGPLW",
+      "reason": "earliest_reviews_already_fetched",
+      "details": "Earliest reviews already fetched in previous scrape, 50 total reviews available"
+    }
+  ]
+}

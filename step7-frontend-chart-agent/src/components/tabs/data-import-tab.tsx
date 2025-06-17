@@ -23,8 +23,8 @@ interface ScrapingResult {
 
 export function DataImportTab() {
   const [url, setUrl] = useState('');
-  const [maxProducts, setMaxProducts] = useState<number | string>(50);
-  const [maxReviews, setMaxReviews] = useState<number | string>(50);
+  const [maxProducts, setMaxProducts] = useState<number | string>(5);
+  const [maxReviews, setMaxReviews] = useState<number | string>(15);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ScrapingResult | null>(null);
 
@@ -47,8 +47,8 @@ export function DataImportTab() {
         },
         body: JSON.stringify({
           url: url.trim(),
-          max_products: maxProducts === '' ? 50 : maxProducts,
-          max_reviews: maxReviews === '' ? 50 : maxReviews,
+          max_products: maxProducts === '' ? 5 : maxProducts,
+          max_reviews: maxReviews === '' ? 15 : maxReviews,
         }),
       });
 
@@ -143,7 +143,7 @@ export function DataImportTab() {
                 <Input
                   id="maxProducts"
                   type="text"
-                  placeholder="50"
+                  placeholder="5"
                   value={maxProducts}
                   onChange={(e) => {
                     const val = e.target.value;
@@ -161,7 +161,7 @@ export function DataImportTab() {
                 <Input
                   id="maxReviews"
                   type="text"
-                  placeholder="50"
+                  placeholder="15"
                   value={maxReviews}
                   onChange={(e) => {
                     const val = e.target.value;
@@ -171,7 +171,7 @@ export function DataImportTab() {
                   }}
                 />
                 <p className="text-sm text-muted-foreground">
-                  Maximum number of reviews to scrape per product (0-200)
+                  Maximum number of reviews to scrape <strong>per product</strong> (0-200)
                 </p>
               </div>
             </div>

@@ -131,13 +131,34 @@ class ScrapingService:
                 }
             )
             
+            # 从数据库获取实际的评论爬取数量
+            try:
+                from app.repositories.scraping_request_repository import ScrapingRequestRepository
+                from app.database.connection import get_supabase_client
+                
+                # 获取数据库中的最新状态
+                supabase_client = get_supabase_client()
+                request_repo = ScrapingRequestRepository(supabase_client)
+                request_data = await request_repo.get_request_by_id(import_result.get("request_id"))
+                
+                reviews_scraped = 0
+                if request_data:
+                    reviews_scraped = request_data.get("reviews_scraped", 0)
+                    logger.info(f"从数据库获取评论数量: {reviews_scraped}")
+                else:
+                    logger.warning("无法从数据库获取请求数据")
+                    
+            except Exception as e:
+                logger.error(f"获取评论数量时出错: {e}")
+                reviews_scraped = 0
+            
             return {
                 "task_id": task_id,
                 "status": "completed",
                 "message": f"Product data scraping finished. Found {product_count} products.",
                 "results": {
                     "products_scraped": product_count,
-                    "reviews_scraped": 0,
+                    "reviews_scraped": reviews_scraped,  # 从数据库获取实际数量
                     "data_saved_to": self.amazon_dir,
                     "discovered_category_id": category_info["category_id"],
                     "used_search_term": category_info["search_term"],
