@@ -1,0 +1,2555 @@
+{
+  "asin": "B09PGVGCH5",
+  "scrape_context": {
+    "scraped_at": "2025-06-17T20:56:07.718326",
+    "scraper_version": "apify_axesso_v1",
+    "total_reviews_fetched": 50,
+    "earliest_reviews_fetched": true,
+    "max_pages_info": {
+      "max_pages_requested": 5,
+      "max_pages_reached": 5
+    },
+    "configuration": {
+      "max_pages_per_asin": 5,
+      "reviews_per_page_default": 10,
+      "sort_by": "recent",
+      "reviewer_type": "verified_reviews",
+      "format_type": "current_format",
+      "media_type": "all_contents"
+    }
+  },
+  "reviews": [
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RGPJDOP2P13F0",
+      "text": "Bought this for a trip on the plane! Works greats and holds interest! My only negative is the water needing to be added but it made it fun for the entertainment",
+      "date": "Reviewed in the United States on June 15, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "Fun activity",
+      "userName": "Amanda",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RG3OL0K77O70R",
+      "text": "Compré este set de juguetes para mi hijo de 2 años y ¡fue todo un acierto! Los colores son brillantes, las piezas son seguras (sin bordes filosos ni piezas pequeñas), y cada juguete está diseñado pensando en el desarrollo de los más chiquitos. Le encanta jugar con ellos todos los días, y como mamá/papá, me encanta ver cómo estimulan su coordinación, creatividad y motricidad fina. Además, son súper resistentes y fáciles de limpiar, lo cual es un gran plus. Sin duda, una compra que repetiría o regalaría sin pensarlo. Muy recomendados para cualquier niño pequeño en etapa de descubrimiento.",
+      "date": "Reviewed in the United States on June 14, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "¡Simplemente excelente! Muy por encima de mis expectativas",
+      "userName": "Daniela",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": {
+        "language": "es",
+        "country": "US",
+        "marketplaceId": "ATVPDKIKX0DER"
+      },
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R3LD2XUMYAK6QG",
+      "text": "10/10 my 2 year old got this as a gift & was OBSESSED. With no mess makes it great! Will be purchasing so many more.",
+      "date": "Reviewed in the United States on June 11, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Perfect No Mess!",
+      "userName": "Chelsea Perkins",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": false,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RPYLS1GYWMA4R",
+      "text": "My granddaughter love the book she would play with it for hours thank you",
+      "date": "Reviewed in the United States on June 8, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Children’s work and play book, Thank You",
+      "userName": "I have not received my order! Where is it? I’m still waiting!",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RX5F6FB3FRZC9",
+      "text": "As described, thank you!",
+      "date": "Reviewed in the United States on June 6, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Very satisfied!",
+      "userName": "IreneSaysHello❤",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R1PZWIF8B389ZQ",
+      "text": "As advertised and good price",
+      "date": "Reviewed in the United States on June 6, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Good buy",
+      "userName": "bethany ingalls",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R4Z8DXLL9GLN8",
+      "text": "Love these. Great for kids. Markers only color on paper nothing else. Kids love them!!! We live no mess",
+      "date": "Reviewed in the United States on June 5, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Fun coloring for kids",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RUOH9KBODEY97",
+      "text": "My 20-month-old grandchild spent about 45 minutes straight playing with this. And then played with it some more the next day. No mess \"painting\" that can be reused over and over again. It was a hit! The only thing I would change was how the back page was glued to the cover. She kept thinking there was another page to turn.",
+      "date": "Reviewed in the United States on June 4, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "Grandchild loved it",
+      "userName": "Janice",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71nMIkR4hGL._SY88.jpg"
+      ],
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R2ZHQ84T1X6PNB",
+      "text": "This is such a fun little coloring board for a little ones. It’s super easy to use. It’s just water and color it for them. It’s such a fun activity.",
+      "date": "Reviewed in the United States on June 3, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "So fun for littles",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R23V2VBYT6RTC",
+      "text": "Horrible quality. I do not recommend at all",
+      "date": "Reviewed in the United States on June 3, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Horrible quality",
+      "userName": "Nathalie Monegro",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R2MPHW0YI1DYHI",
+      "text": "Le compré este libro de colorar infinito a mi hija porque es algo verdaderamente que vale la pena porque nunca se acaba, inmediatamente se seca el papel ya tienes de nuevo tus hojas listas. Es una buena inversión para entretenerte a los pequeños de la casa",
+      "date": "Reviewed in the United States on May 31, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Ahorra dinero y entretén a tu hijo",
+      "userName": "Arianna Lene",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": {
+        "language": "es",
+        "country": "US",
+        "marketplaceId": "ATVPDKIKX0DER"
+      },
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R1TU6JSC6V86KZ",
+      "text": "Highly recommend! Used for a plane trip with my 2 year old and it was great! I will say since she is younger she pushes down harder and it removed some of the film, but still works just as good. Once it dried she was able to color again. It was only 4 pages but I think it worked out well.",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great for traveling",
+      "userName": "Tonya W.",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R2DGHKLQWLU4BK",
+      "text": "My 3yo loves this and the best is that it is reusable. You fill the pen with water and they use it to color the pages. When the pages dry they are blank again.",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Reusable",
+      "userName": "Tamara",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RAG9G9B5A36JY",
+      "text": "No mess!",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "No mess",
+      "userName": "Madison",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R25LGLXZ6V4OXI",
+      "text": "Nephew loves for car rides",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great, compactable and entertaining",
+      "userName": "Lav1011",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R3CBVO9XVFZH6K",
+      "text": "Small size. Good quality.",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "Small size",
+      "userName": "Rawmean",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RYCB73UQ7SW64",
+      "text": "Love!!!! Great price and perfect for car rides and littles. Love that it isn't messy and its reusable. No missing pieces, lots of different pictures, easy to use and thick pages.",
+      "date": "Reviewed in the United States on May 25, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Good car ride activity",
+      "userName": "Abby 🌻",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R2IGKJ2WYXR3R0",
+      "text": "We first boguht one of these for our 3 year old. Our 6 year old was watching him draw and asked if he could have one too. Now we have two boys entertained on car rides (not an easy feat). No mess. Good value.",
+      "date": "Reviewed in the United States on May 25, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Solid product",
+      "userName": "Christian",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R3PMTHBLEIHRG4",
+      "text": "Aqua art is really sweet, my 2 1/2 yr old grandson loves it!",
+      "date": "Reviewed in the United States on May 25, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "Aqua art is terrific!",
+      "userName": "Donna51",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R7CS6V5B2FMY1",
+      "text": "This is the worst of any water coloring book I've seen...one of the pages didn't work at all, and the pages began to deteriorate from the first use. The white layer is incredibly easy to scrape off even just with the brush! Go for a higher quality option!",
+      "date": "Reviewed in the United States on May 20, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Poor Quality",
+      "userName": "Laura",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R11Y56GBVFXZAG",
+      "text": "This is great for toddlers who like to paint. It comes with a water brush, fill it with water and brush away on the book supplied. No mess, just colorful pages after painting with the water brush while looking for the hidden items in the blank areas on each page. Great for those quiet playtimes! I certainly will buy more items from this seller.",
+      "date": "Reviewed in the United States on May 20, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great for toddlers, No mess, just pages of color after painting.",
+      "userName": "Marie K",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "REN282DAS2B8R",
+      "text": "My daughter loves these books. They are perfect for the car or really anywhere. You don’t have to worry about them coloring all over. The pages hold the water good and dry in a timely manner for more coloring.",
+      "date": "Reviewed in the United States on May 16, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Fun toddler activity",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R176E5ZZJ6611M",
+      "text": "Whoever came up with these is brilliant. A mess free activity for my child is 10000 stars from this mom. We love taking it to dinner if we go out. It keeps my toddler busy without using a screen. I have bought numerous of these for my son",
+      "date": "Reviewed in the United States on May 16, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Awesome",
+      "userName": "Kathleen",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R12QDLPIOXQGFU",
+      "text": "I love these mess free books and coloring pages! There aren't many pages to color or paint, but after you \"paint\" a page, the water fades and disappears after a few minutes so they can do it again. The paint brush is very easy to use. The colors are vibrant. It's a lot of fun.",
+      "date": "Reviewed in the United States on May 12, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Genius and fun.",
+      "userName": "kristen",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R30Z1TH8YQ2AN2",
+      "text": "She loved it",
+      "date": "Reviewed in the United States on May 11, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Good",
+      "userName": "Sarita",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R22P7GAGIHIMYO",
+      "text": "So cute, but don’t bother taking the packaging off! It is clearly meant to come off as there’s a picture underneath, but I wish I hadn’t. I did it so slowly and gently but still ruined it.",
+      "date": "Reviewed in the United States on May 10, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "Cute to use but it will not come out of package.",
+      "userName": "Jacquelyn M",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71XUJhn1MwL._SY88.jpg",
+        "https://m.media-amazon.com/images/I/71dM32pjksL._SY88.jpg",
+        "https://m.media-amazon.com/images/I/71mUA51HjUL._SY88.jpg"
+      ],
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R3KF62QDP75JBH",
+      "text": "Works well for kiddos to avoid the huge messes with paint! It’s perfect for them to take them anywhere with them and was easy to use!",
+      "date": "Reviewed in the United States on May 10, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Loved it!",
+      "userName": "jennifer",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R3TY1FKJ9Q0NF8",
+      "text": "Great mess free quality product. Perfect for little one to be creative and worth the value for price! Highly recommend this item!",
+      "date": "Reviewed in the United States on May 7, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Bluey lovers must have",
+      "userName": "Arod932005",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R29PFNVSTS823B",
+      "text": "The water pen leaked and ruined the book. It is still functional but the pages are permanently watermarked and stay colored even when dry.",
+      "date": "Reviewed in the United States on May 3, 2025",
+      "rating": "2.0 out of 5 stars",
+      "title": "It was fun while it lasted but the water pen leaked",
+      "userName": "Percy",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R25438YV6P7UU7",
+      "text": "Works as advertised! My son loves it and it keeps him from coloring the floor or walls with crayons. Its super reuseable which is nice. The pages are thick and there isnt any noticeable stickiness. My son has lots of fun playing with this. The pen can be refilled for endless use. Best was the price for a reusable item.",
+      "date": "Reviewed in the United States on May 2, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "A must for parents of toddlers",
+      "userName": "conrad",
+      "numberOfHelpful": 2,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71z6AHOgMjL._SY88.jpg",
+        "https://m.media-amazon.com/images/I/81BWkd-KqGL._SY88.jpg"
+      ],
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R2KPD2S26X1F30",
+      "text": "Mess free pen that has been a hit with my 4 year old it keeps him busy during road trips and appointments.",
+      "date": "Reviewed in the United States on May 1, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Fun for kids",
+      "userName": "Jason Price",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RVIGA31IFHPAG",
+      "text": "Poor quality. Didnt last an hour. Stickers pictures ripped off sticky backing, when it was supposed to be reusable. Cannot recommend it. Waste of 6 dollars.",
+      "date": "Reviewed in the United States on April 29, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Poor Quality.",
+      "userName": "Precious D",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R25H1LRFNEC4G9",
+      "text": "These are great to keep the little ones busy and its not messy so I don't ever have to worry about my kids drawing on other things. They dry pretty quickly unless the kids use a lot of water on the page then it could take a little longer.",
+      "date": "Reviewed in the United States on April 20, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "My kids love these",
+      "userName": "Vuhnessuh Reads",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RRY6IFMNGAQ58",
+      "text": "For youn toddlers, kids would enjoy. Not maybe pages though",
+      "date": "Reviewed in the United States on April 19, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "Not many pages",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R102J7O33OMPFP",
+      "text": "Very nice my kid loved it",
+      "date": "Reviewed in the United States on April 19, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great",
+      "userName": "Madona",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RS32OZWOAXKX9",
+      "text": "Bought as a birthday gift for a 5 year old. Easy set up and very sturdy.",
+      "date": "Reviewed in the United States on April 18, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great gift",
+      "userName": "Kindle Customer",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R99FGR8NKWTOJ",
+      "text": "I'm not wasting my time to return a $5 product. Haven't even given the gift yet because the display hanger piece on the back, which is supposed to easily come off, did NOT. It ripped the back of the book in 2 places. They used the wrong glue. I'll end up covering the back of the book with something. Looks like a crap now. I will come back to this review when the kid has actually used the product.",
+      "date": "Reviewed in the United States on April 17, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "It's a $5 poc so why am I disappointed?",
+      "userName": "Laurie Lieb",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RZL3CELPTSMPI",
+      "text": "Love these books for my little one. They work great to keep them busy and it's reusable so you can pull it out multiple times",
+      "date": "Reviewed in the United States on April 16, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Love",
+      "userName": "Kristin",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R188EN5NE96OUI",
+      "text": "My 2YO granddaughter loved this gift best over any others! Inexpensive yet cute and easy to use. Loved this. So glad I bought it, pleasantly surprised.",
+      "date": "Reviewed in the United States on April 16, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "2 yr. old LOVED this",
+      "userName": "Harriet Kahn",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R8A10Q3F6QKQ4",
+      "text": "Great mess-free activity for toddlers! The reusable water pages keep the child entertained without any cleanup. Perfect for travel as well. Love it!",
+      "date": "Reviewed in the United States on April 15, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Fun and Mess-Free activity for Kids!",
+      "userName": "r2322",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/81HT9s40X6L._SY88.jpg",
+        "https://m.media-amazon.com/images/I/81w3z9w-PFL._SY88.jpg"
+      ],
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R2EOAN8CY6N4VE",
+      "text": "Fun activity for 5 & 6 yr olds",
+      "date": "Reviewed in the United States on April 13, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "Fun",
+      "userName": "Rose",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R2O0F70QFC4MXT",
+      "text": "My baby neice loves these aqua art books. I hope they make more!",
+      "date": "Reviewed in the United States on April 11, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Big hit!",
+      "userName": "MaryMo",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71dqKpnf7iL._SY88.jpg"
+      ],
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R19W7MUJF3BVXL",
+      "text": "Child loves these things, however the back of it was not attached to the book when I got it. The kids didn't care so I kept it but when spending money it'd be nice if the item wasn't broke upon arrival.",
+      "date": "Reviewed in the United States on April 8, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "So much fun",
+      "userName": "Kathryn Eberhart",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R1B1C28ZYTTUXP",
+      "text": "Great, my granddaughters love it",
+      "date": "Reviewed in the United States on April 8, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great",
+      "userName": "thmneb",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R1EQO3ZR3CYUKA",
+      "text": "My toddlers obsessed with this and so am I because I love the mess free aspect",
+      "date": "Reviewed in the United States on April 5, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Must have",
+      "userName": "Amcbrien1",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R27WBKRTRETGBC",
+      "text": "I bought this item for my two and a half year old niece. She loves blue and she loves this item as well!",
+      "date": "Reviewed in the United States on April 5, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Toddler approved!",
+      "userName": "Teresa",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RN37FXEMHDTRQ",
+      "text": "Good value",
+      "date": "Reviewed in the United States on March 31, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great product",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R19MFIXI10NVXL",
+      "text": "Great for toddlers!",
+      "date": "Reviewed in the United States on March 30, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "Good quality",
+      "userName": "Stace",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "RX5JB0TUPYUF1",
+      "text": "Super cute activity book - anything is better than a tablet these days! Perfect for my niece who is obsessed with Bluey!",
+      "date": "Reviewed in the United States on March 29, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "For the bluey lover in your life!",
+      "userName": "NYC FML",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": null,
+      "verified": false,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B09PGVGCH5",
+      "productTitle": "Horizon Group USA Bluey Aqua Art - Reusable Water Reveal Activity Pages With Water Pen for No-Mess Drawing and Coloring",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 870,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9094,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 83
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 5
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 1
+        }
+      },
+      "reviewId": "R1C3R1PC86GTRD",
+      "text": "Perfecto para un niño o bebé que le gusta pintar",
+      "date": "Reviewed in the United States on March 29, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Loved",
+      "userName": "Nicole",
+      "numberOfHelpful": 0,
+      "variationId": "B09PGVGCH5",
+      "imageUrlList": null,
+      "variationList": [
+        "Style: Bluey"
+      ],
+      "locale": {
+        "language": "es",
+        "country": "US",
+        "marketplaceId": "ATVPDKIKX0DER"
+      },
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    }
+  ],
+  "api_response_metadata": {
+    "success": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  }
+}

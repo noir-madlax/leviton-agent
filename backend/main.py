@@ -7,14 +7,14 @@ import logging
 from typing import Optional, List
 from contextlib import asynccontextmanager
 from config import settings
-from tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
+from agent.tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
 from phoenix.otel import register
 from openinference.instrumentation.smolagents import SmolagentsInstrumentor
 
 # 导入 ORM 相关模块
-from app.dependencies import get_product_prompt_service
-from app.models.product_prompt import ProductPromptCreate, ProductPromptUpdate, ProductPromptResponse
-from app.services.product_prompt_service import ProductPromptService
+from agent.dependencies import get_product_prompt_service
+from core.models.product_prompt import ProductPromptCreate, ProductPromptUpdate, ProductPromptResponse
+from agent.services.product_prompt_service import ProductPromptService
 
 # 配置日志
 logging.basicConfig(level=getattr(logging, settings.LOG_LEVEL))
@@ -123,9 +123,9 @@ async def prepare_query_with_prompt(query: str) -> str:
     """准备完整的查询，包含系统提示词"""
     try:
         # 直接创建服务实例，不使用依赖注入
-        from app.database.connection import get_supabase_client
-        from app.repositories.product_prompt_repository import ProductPromptRepository
-        from app.services.product_prompt_service import ProductPromptService
+        from core.database.connection import get_supabase_client
+        from core.repositories.product_prompt_repository import ProductPromptRepository
+        from agent.services.product_prompt_service import ProductPromptService
         
         # 获取 Supabase 客户端
         supabase_client = get_supabase_client()
@@ -423,18 +423,26 @@ async def process_amazon_url(request: dict):
     Request body:
         url (str): Amazon URL
         max_products (int): 最大产品数量，默认100
-        max_reviews (int): 最大评论数量，默认50
+        scrape_reviews (bool): 是否爬取评论，默认true
+        review_coverage_months (int): 评论覆盖月数，默认6
     """
     try:
-        from services.scraping_service import scraping_service
+        from scraping import ScrapingOrchestrator
         
         # 解析请求参数
         url = request.get("url", "").strip()
         max_products = request.get("max_products", 100)
-        max_reviews = request.get("max_reviews", 50)
+        scrape_reviews = request.get("scrape_reviews", True)
+        review_coverage_months = request.get("review_coverage_months", 6)
         
-        # 调用爬虫服务
-        result = await scraping_service.process_url(url, max_products, max_reviews)
+        # 使用新的编排服务
+        orchestrator = ScrapingOrchestrator()
+        result = await orchestrator.process_url(
+            url=url, 
+            max_products=max_products,
+            scrape_reviews=scrape_reviews,
+            review_coverage_months=review_coverage_months
+        )
         return result
         
     except ValueError as e:
@@ -443,6 +451,74 @@ async def process_amazon_url(request: dict):
     except Exception as e:
         logger.error(f"处理爬虫请求时出错: {e}")
         return {"error": f"处理请求失败: {str(e)}"}
+
+@app.post("/api/scraping/products-only")
+async def scrape_products_only(request: dict):
+    """
+    仅爬取商品数据（不包括评论）
+    
+    Request body:
+        url (str): Amazon URL
+        max_products (int): 最大产品数量，默认100
+    """
+    try:
+        from scraping import ScrapingOrchestrator
+        
+        url = request.get("url", "").strip()
+        max_products = request.get("max_products", 100)
+        
+        orchestrator = ScrapingOrchestrator()
+        result = await orchestrator.scrape_products_only(url, max_products)
+        return result
+        
+    except Exception as e:
+        logger.error(f"处理商品爬取请求时出错: {e}")
+        return {"error": f"处理请求失败: {str(e)}"}
+
+@app.post("/api/scraping/reviews-only")
+async def scrape_reviews_only(request: dict):
+    """
+    仅爬取评论数据（商品数据已存在）
+    
+    Request body:
+        batch_id (int): 批次ID
+        review_coverage_months (int): 评论覆盖月数，默认6
+    """
+    try:
+        from scraping import ScrapingOrchestrator
+        
+        batch_id = request.get("batch_id")
+        review_coverage_months = request.get("review_coverage_months", 6)
+        
+        if not batch_id:
+            return {"error": "batch_id is required"}
+        
+        orchestrator = ScrapingOrchestrator()
+        result = await orchestrator.scrape_reviews_only(batch_id, review_coverage_months)
+        return result
+        
+    except Exception as e:
+        logger.error(f"处理评论爬取请求时出错: {e}")
+        return {"error": f"处理请求失败: {str(e)}"}
+
+@app.get("/api/scraping/status/{batch_id}")
+async def get_scraping_status(batch_id: int):
+    """
+    获取爬取状态
+    
+    Args:
+        batch_id (int): 批次ID
+    """
+    try:
+        from scraping import ScrapingOrchestrator
+        
+        orchestrator = ScrapingOrchestrator()
+        status = await orchestrator.get_process_status(batch_id=batch_id)
+        return status
+        
+    except Exception as e:
+        logger.error(f"获取爬取状态时出错: {e}")
+        return {"error": f"获取状态失败: {str(e)}"}
 
 if __name__ == "__main__":
     import uvicorn

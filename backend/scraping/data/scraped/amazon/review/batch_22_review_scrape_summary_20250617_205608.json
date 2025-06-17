@@ -1,0 +1,64 @@
+{
+  "batch_scrape_session": {
+    "timestamp": "2025-06-17T20:56:08.478831",
+    "batch_id": 22,
+    "total_asins": 5,
+    "successful": 5,
+    "skipped": 0,
+    "errors": 0,
+    "exceptions": 0,
+    "review_coverage_months": 6,
+    "configuration": {
+      "rate_limit_delay": 0.1,
+      "max_concurrent_requests": 32,
+      "scrape_recency_days": 30,
+      "max_pages_per_asin": 5,
+      "min_review_year": 2010,
+      "max_review_year": 2025
+    }
+  },
+  "asins_list": [
+    "B003HGGPLW",
+    "B00006RVTS",
+    "B087N9N6HH",
+    "B00JM5GW10",
+    "B09PGVGCH5"
+  ],
+  "results": [
+    {
+      "status": "success",
+      "asin": "B003HGGPLW",
+      "reviews_count": 50,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/scraping/data/scraped/amazon/review/batch_22_B003HGGPLW_20250617_205608_reviews.json",
+      "message": "ASIN B003HGGPLW 成功爬取 50 条评论"
+    },
+    {
+      "status": "success",
+      "asin": "B00006RVTS",
+      "reviews_count": 50,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/scraping/data/scraped/amazon/review/batch_22_B00006RVTS_20250617_205606_reviews.json",
+      "message": "ASIN B00006RVTS 成功爬取 50 条评论"
+    },
+    {
+      "status": "success",
+      "asin": "B087N9N6HH",
+      "reviews_count": 50,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/scraping/data/scraped/amazon/review/batch_22_B087N9N6HH_20250617_205604_reviews.json",
+      "message": "ASIN B087N9N6HH 成功爬取 50 条评论"
+    },
+    {
+      "status": "success",
+      "asin": "B00JM5GW10",
+      "reviews_count": 50,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/scraping/data/scraped/amazon/review/batch_22_B00JM5GW10_20250617_205608_reviews.json",
+      "message": "ASIN B00JM5GW10 成功爬取 50 条评论"
+    },
+    {
+      "status": "success",
+      "asin": "B09PGVGCH5",
+      "reviews_count": 50,
+      "filepath": "/Users/rigel/project/leviton/leviton-agent/backend/scraping/data/scraped/amazon/review/batch_22_B09PGVGCH5_20250617_205607_reviews.json",
+      "message": "ASIN B09PGVGCH5 成功爬取 50 条评论"
+    }
+  ]
+}
