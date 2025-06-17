@@ -33,8 +33,6 @@ interface MultiChartData {
   chartType?: string;
 }
 
-type ExtractedChartData = SingleChartData | MultiChartData | null;
-
 export function ChatInterface() {
   const { updateChart, setCompiling, setError } = useChart();
   
@@ -65,10 +63,148 @@ export function ChatInterface() {
     onFinish: (message) => {
       setCompiling(false);
       
-      // 提取和处理图表数据
-      const chartData = extractChartFromMessage(message.content);
-      if (chartData) {
-        updateChart(chartData);
+      // 从消息内容中提取图表数据
+      try {
+        const extractChartData = (content: string) => {
+          console.log('🔍 尝试提取图表数据，消息内容:', content);
+          
+          // 方法1: 查找标记包装的图表数据（情况2）
+          const chartStartRegex = /<<<CHART_START>>>/g;
+          const chartEndRegex = /<<<CHART_END>>>/g;
+          
+          const startMatch = chartStartRegex.exec(content);
+          const endMatch = chartEndRegex.exec(content);
+          
+          if (startMatch && endMatch) {
+            console.log('📦 检测到标记包装的图表数据');
+            // 提取图表数据JSON部分
+            const startPos = startMatch.index + startMatch[0].length;
+            const endPos = endMatch.index;
+            const jsonContent = content.substring(startPos, endPos);
+            
+            // 移除可能存在的类型标记行
+            const lines = jsonContent.split('\n').filter(line => 
+              !line.includes('<<<CHART_TYPE:') && line.trim() !== ''
+            );
+            const cleanJson = lines.join('\n').trim();
+            
+            if (cleanJson) {
+              try {
+                return JSON.parse(cleanJson);
+              } catch (error) {
+                console.error('❌ 解析标记包装的JSON失败:', error);
+              }
+            }
+          }
+          
+          // 方法2: 查找消息中的JSON块（情况1）
+          console.log('🔍 尝试提取嵌入的JSON数据');
+          
+          // 查找```json 代码块
+          const jsonBlockRegex = /```json\s*\n([\s\S]*?)\n```/g;
+                     const jsonBlockMatch = jsonBlockRegex.exec(content);
+          
+          if (jsonBlockMatch) {
+            console.log('📝 在代码块中找到JSON数据');
+            try {
+              const jsonData = JSON.parse(jsonBlockMatch[1].trim());
+              if (jsonData.chart1 || jsonData.chart2 || jsonData.chartData) {
+                return jsonData;
+              }
+            } catch (error) {
+              console.error('❌ 解析代码块JSON失败:', error);
+            }
+          }
+          
+          // 方法3: 查找独立的JSON对象（以{开头，chart1/chart2/chartData为键）
+          const jsonObjectRegex = /\{[\s\S]*?"chart[12]"[\s\S]*?\}(?=\s*$)/gm;
+                     const jsonObjectMatch = jsonObjectRegex.exec(content);
+          
+          if (jsonObjectMatch) {
+            console.log('🎯 找到独立的JSON对象');
+            try {
+              const jsonData = JSON.parse(jsonObjectMatch[0]);
+              if (jsonData.chart1 || jsonData.chart2 || jsonData.chartData) {
+                return jsonData;
+              }
+            } catch (error) {
+              console.error('❌ 解析独立JSON对象失败:', error);
+            }
+          }
+          
+          // 方法4: 更宽泛的JSON提取（在消息的最后部分查找）
+          const lines = content.split('\n');
+                     let jsonStartIndex = -1;
+           let jsonContent = '';
+          
+          // 从后往前查找可能的JSON开始位置
+          for (let i = lines.length - 1; i >= 0; i--) {
+            const line = lines[i].trim();
+            if (line.includes('"chart1"') || line.includes('"chart2"') || line.includes('"chartData"')) {
+              // 找到包含图表数据的行，开始收集JSON
+              jsonStartIndex = i;
+              break;
+            }
+          }
+          
+          if (jsonStartIndex >= 0) {
+            console.log('🔍 尝试从行', jsonStartIndex, '开始提取JSON');
+            
+            // 向前搜索找到JSON的开始
+            for (let i = jsonStartIndex; i >= 0; i--) {
+              const line = lines[i].trim();
+              if (line.startsWith('{')) {
+                // 从这里开始构建JSON
+                for (let j = i; j < lines.length; j++) {
+                  const currentLine = lines[j].trim();
+                  if (currentLine) {
+                    jsonContent = lines.slice(i, j + 1).join('\n').trim();
+                    try {
+                      const jsonData = JSON.parse(jsonContent);
+                      if (jsonData.chart1 || jsonData.chart2 || jsonData.chartData) {
+                        console.log('✅ 成功提取JSON数据');
+                        return jsonData;
+                      }
+                    } catch {
+                      // 继续尝试更多行
+                    }
+                  }
+                }
+                break;
+              }
+            }
+          }
+          
+          console.log('❌ 未能提取到有效的图表数据');
+          return null;
+        };
+        
+        const rawChartData = extractChartData(message.content);
+        
+        if (rawChartData) {
+          console.log('🎯 从消息中提取到图表数据:', rawChartData);
+          
+          if (rawChartData.chart1 || rawChartData.chart2 || rawChartData.chart3) {
+            const multiChartData: MultiChartData = {
+              chart1: rawChartData.chart1,
+              chart2: rawChartData.chart2,
+              chart3: rawChartData.chart3,
+              timestamp: Date.now(),
+              type: 'multiple' as const,
+            };
+            updateChart(multiChartData);
+          } else if (rawChartData.chartData) {
+            const singleChartData: SingleChartData = {
+              chartData: rawChartData.chartData,
+              timestamp: Date.now(),
+              type: 'single' as const,
+            };
+            updateChart(singleChartData);
+          }
+        }
+      } catch (error) {
+        console.error('解析图表数据失败:', error);
+        // Not a chart response, do nothing. The message will be displayed in the chat.
       }
     },
     onError: (error) => {
@@ -76,65 +212,6 @@ export function ChatInterface() {
       setError(`连接失败: ${error.message}`);
     }
   });
-
-  // 提取图表数据的函数
-  function extractChartFromMessage(content: string): ExtractedChartData {
-    try {
-      // 查找图表标记
-      const chartStartIndex = content.indexOf('<<<CHART_START>>>');
-      const chartEndIndex = content.indexOf('<<<CHART_END>>>');
-      
-      if (chartStartIndex === -1 || chartEndIndex === -1) {
-        return null;
-      }
-
-      // 提取图表类型
-      const typeMatch = content.match(/<<<CHART_TYPE:(\w+)>>>/);
-      const chartType = typeMatch ? typeMatch[1] : 'analysis';
-
-      // 提取图表JSON数据
-      const chartSection = content.substring(
-        chartStartIndex + '<<<CHART_START>>>'.length,
-        chartEndIndex
-      );
-      
-      // 移除类型标记，获取纯JSON
-      const jsonStart = chartSection.indexOf('>>>') + 3;
-      const jsonData = chartSection.substring(jsonStart).trim();
-      
-      // 解析JSON数据
-      const parsedData = JSON.parse(jsonData);
-      
-      // 添加调试日志
-      console.log('🎯 解析的图表数据:', parsedData);
-      if (parsedData.chart1?.code) {
-        console.log('📊 Chart1 代码片段:', parsedData.chart1.code.substring(0, 200) + '...');
-      }
-
-      // 判断是单图表还是多图表
-      if (parsedData.chartData) {
-        return {
-          ...parsedData,
-          timestamp: Date.now(),
-          type: 'single' as const,
-          chartType
-        };
-      } else if (parsedData.chart1 || parsedData.chart2) {
-        return {
-          ...parsedData,
-          timestamp: Date.now(),
-          type: 'multiple' as const,
-          chartType
-        };
-      }
-
-      return null;
-    } catch (error) {
-      console.error('解析图表数据失败:', error);
-      setError('图表数据解析失败');
-      return null;
-    }
-  }
 
   // 发送消息函数
   const handleFormSubmit = (e: React.FormEvent) => {
