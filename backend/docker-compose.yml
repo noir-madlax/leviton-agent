@@ -4,7 +4,6 @@ services:
   leviton-agent-backend:
     build: .
     container_name: leviton-agent-backend
-    # 移除端口映射，因为我们通过 Caddy 访问
     environment:
       - HOST=0.0.0.0
       - PORT=8000
@@ -37,8 +36,8 @@ services:
     ports:
       - "80:80"
       - "443:443"
+    command: caddy reverse-proxy --from 3po-agent.duckdns.org --to leviton-agent-backend:8000
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
     networks:
