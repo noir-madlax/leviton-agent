@@ -39,7 +39,7 @@ services:
   cloudflare-tunnel:
     image: cloudflare/cloudflared:latest
     container_name: cloudflare-tunnel
-    command: tunnel run --token eyJhIjoiY2I0NjlmNDFkZmMyMWM0Yjk2YTkzZTE1NGQ1Mzg0YzMiLCJ0IjoiYzJkOGY4N2YtZGJhZC00NzQ3LTk1OWMtZGEwNTM4YWY3ZWQzIiwicyI6Ik0yUTBaVEprTVRjdFpERmhOUzAwWlRKYkxUZzNNelF0TURCaE1HTXpZek5oT1dZNSJ9
+    command: tunnel run --token ${CLOUDFLARE_TOKEN}
     restart: unless-stopped
     networks:
       - leviton-network  # 回到容器网络
