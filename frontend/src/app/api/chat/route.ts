@@ -1,7 +1,7 @@
 import { NextRequest } from 'next/server';
 
 // 后端API配置
-const BACKEND_URL = process.env.BACKEND_URL || 'http://localhost:8000';
+const BACKEND_URL = process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
 
 // 模拟延迟函数（保留用于错误处理时的降级）
 function delay(ms: number) {
