@@ -32,6 +32,18 @@ services:
       retries: 3
       start_period: 40s
 
+# 添加 Cloudflare Tunnel 服务
+  cloudflare-tunnel:
+    image: cloudflare/cloudflared:latest
+    container_name: cloudflare-tunnel
+    command: tunnel run --token eyJhIjoiY2I0NjlmNDFkZmMyMWM0Yjk2YTkzZTE1NGQ1Mzg0YzMiLCJ0IjoiYzJkOGY4N2YtZGJhZC00NzQ3LTk1OWMtZGEwNTM4YWY3ZWQzIiwicyI6Ik0yUTBaVEprTVRjdFpERmhOUzAwWlRKbExUZzNNelF0TURCaE1HTXpZek5oT1dZNSJ9 
+    restart: unless-stopped
+    networks:
+      - leviton-network
+    depends_on:
+      - leviton-agent-backend
+
+
 volumes:
   agent-data:
     driver: local
