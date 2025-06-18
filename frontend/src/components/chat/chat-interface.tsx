@@ -56,6 +56,24 @@ export function ChatInterface() {
   } = useChat({
     api: `${backendUrl}/agent-stream`,
     streamProtocol: 'text',
+    fetch: async (url, options) => {
+      // 自定义fetch以适配后端的GET + query参数方式
+      if (!options?.body) {
+        throw new Error('No request body provided');
+      }
+      
+      const body = JSON.parse(options.body as string);
+      const query = body.messages[body.messages.length - 1].content;
+      const getUrl = `${url}?query=${encodeURIComponent(query)}`;
+      
+      return fetch(getUrl, {
+        method: 'GET',
+        headers: {
+          'Accept': 'text/event-stream',
+          'Cache-Control': 'no-cache',
+        },
+      });
+    },
     onResponse: (response) => {
       if (!response.ok) {
         setError(`服务器错误: ${response.status}`);
