@@ -1,0 +1,2435 @@
+{
+  "asin": "B07RBR9THT",
+  "scrape_context": {
+    "scraped_at": "2025-06-18T12:32:09.738294",
+    "scraper_version": "apify_axesso_v1",
+    "total_reviews_fetched": 50,
+    "earliest_reviews_fetched": true,
+    "max_pages_info": {
+      "max_pages_requested": 5,
+      "max_pages_reached": 5
+    },
+    "configuration": {
+      "max_pages_per_asin": 5,
+      "reviews_per_page_default": 10,
+      "sort_by": "recent",
+      "reviewer_type": "verified_reviews",
+      "format_type": "current_format",
+      "media_type": "all_contents"
+    }
+  },
+  "reviews": [
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R375SBSSKQ0HF3",
+      "text": "I love this product!! After coming out of the shower and drying myself I always use moisturizing lotion for the body but I don't like my body lotion with fragrance. This product is awesome you can use it everywhere it's great and absorbs wonderfully into your skin doesn't leave you oily doesn't stick to your clothes or stain anything. I would definitely recommend us to all my family and friends I just received to my order I love it I'm going to order two more one for my daughter and one for My son!!",
+      "date": "Reviewed in the United States on June 15, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Awesome 👍",
+      "userName": "Betty Hernandez",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R2ACJG1LDTETKA",
+      "text": "Put on twice a day every day, why don’t crack with this stuff wonderful product really moisturize your skin. It makes it look fresh.",
+      "date": "Reviewed in the United States on June 15, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Healthy",
+      "userName": "Michael morrell",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RPC801N9XXC04",
+      "text": "Feels wonderful on my skin!",
+      "date": "Reviewed in the United States on June 13, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Happy skin",
+      "userName": "Teri E",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RSPNT132TD9V9",
+      "text": "This product is recommended when using it as a carrier oil with other essential oils. I also use it for my skin & hair combined with castor oil.",
+      "date": "Reviewed in the United States on June 12, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "This product is recommended as a carrier oil with essential oils",
+      "userName": "Eva",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R296XDHA5Z17E",
+      "text": "The oil is fine but the pump won't open up and pump... I'm using the oil for essential oil rollers and need the pump to work.",
+      "date": "Reviewed in the United States on June 12, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "Pump won't open",
+      "userName": "Debra E Fambro",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3QBG245N5N1Q8",
+      "text": "super bueno",
+      "date": "Reviewed in the United States on June 10, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "bueno",
+      "userName": "yosselin",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71UMmegDVDL._SY88.jpg"
+      ],
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3FUGBJ3LRV4V6",
+      "text": "Amazing oil ! Leaves no greasy feel! Skin feels very nice after application!",
+      "date": "Reviewed in the United States on June 10, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great oil!",
+      "userName": "Hairdo#1",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R13CV6SHIAR078",
+      "text": "I had been using this coconut oil for months, every time I got out of the shower. I even started using it on my 2 toddlers as their moisturizer after baths. I received a new order of it today, and noticed a chemical like smell when I first opened it but didn’t think anything of it (I was in a hurry to get back to the little ones) and applied it all over my body. Within minutes my skin was burning, I had to get back in the shower to wash it off. I put my nose to the bottle and it almost smelled like nail polish remover. I am very disappointed and so glad I had not put any of this oil on my children. I will no longer trust this brand and need to find a new one I can trust.",
+      "date": "Reviewed in the United States on June 9, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Chemical smell & burn",
+      "userName": "Courtney Boyd",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RA6QKUETN7WU7",
+      "text": "Smell like nothing",
+      "date": "Reviewed in the United States on June 9, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Not happy",
+      "userName": "franky",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R19OA7IOTBPCMF",
+      "text": "I just opened the package. The plastic around the bottle is torn. The pump doesn't work. There is spilled oil on the bottle. No, I will not buy this again.",
+      "date": "Reviewed in the United States on June 9, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Bad packaging and non functional pump.",
+      "userName": "Gene Hetzel",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R2079RKW5Z5FGZ",
+      "text": "Silly me, I assumed coconut oil would smell like, well, coconut. This has no scent at all. It also just leaves a terrible greasy feeling. Definitely would not recommend.",
+      "date": "Reviewed in the United States on June 9, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Scentless and greasy.",
+      "userName": "Stevie",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R7KCB97Q7G4VA",
+      "text": "Ok, second time purchasing and didn't want to leave this review but had no way to contact company to ask for a replacement. Last purchase was in April and I had some left in previous order but purchased again because it was on sale. I recently opened bottle and the oil smells really bad. I think it was a bad batch. I would like a replacement, please.",
+      "date": "Reviewed in the United States on June 8, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Stinks to high heavens....putrid",
+      "userName": "Ronald McCoy",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3VBST6AWOIO5X",
+      "text": "Opened box too late to return. Bottle was leaking and box was not damaged. Shipped a leaking bottle",
+      "date": "Reviewed in the United States on June 8, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Box not crushed but bottle was leaking.",
+      "userName": "Linda Mooney",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R14TKA0HUGJ9AE",
+      "text": "Love it and it doesn’t clog my pores",
+      "date": "Reviewed in the United States on June 7, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Love itttt",
+      "userName": "Valentina Tagilova",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R24GXN7A8EB3ZW",
+      "text": "The only massage oil I use! It’s the BEST!",
+      "date": "Reviewed in the United States on June 6, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "My massage therapist recommends this brand. I love it!",
+      "userName": "DSD",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RNLUYA7PE1JH5",
+      "text": "The plunger that distributes the oil came broken. The oil is nice. It is a pain trying to get to it.",
+      "date": "Reviewed in the United States on June 6, 2025",
+      "rating": "2.0 out of 5 stars",
+      "title": "It came in the mail broken.",
+      "userName": "Shari",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R1KHXEEX8E9WIS",
+      "text": "My first bottle was great—it made a wonderful body oil that was hydrating and absorbed quickly. However, my second bottle had a very strong chemical smell. I suspect the warmer weather caused it to sit in a hot warehouse, and perhaps the plastic leached into it. Unfortunately, I had to throw it away and switch to another brand that uses a glass bottle instead.",
+      "date": "Reviewed in the United States on June 5, 2025",
+      "rating": "2.0 out of 5 stars",
+      "title": "Don’t buy in warmer",
+      "userName": "kirsten",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R2T7P2THZ7ARO8",
+      "text": "Item as expected",
+      "date": "Reviewed in the United States on June 5, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Good Coconut oil",
+      "userName": "Robin Bunce",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3V84VSX90UALH",
+      "text": "Arrived in well protected packaging. Oil is oderless and feels nice on skin. Great base for home-made remedies.",
+      "date": "Reviewed in the United States on June 5, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "High quality for the price",
+      "userName": "MH",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3F27ABN5AH7IZ",
+      "text": "Smells great and works",
+      "date": "Reviewed in the United States on June 5, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Makes skin soft",
+      "userName": "linda nathans",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3IYQXUR4UQAA9",
+      "text": "The pump Ineeceived with this oil does not work. Very disappointing and makes it a mess to use!",
+      "date": "Reviewed in the United States on June 5, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "Pump doesn’t work",
+      "userName": "Shoecrazed",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R2618MQ9GN3O1K",
+      "text": "Awesome product and very convenient to use. Use it as a daily face moisturizer.",
+      "date": "Reviewed in the United States on June 4, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Super convenient",
+      "userName": "JJB",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RW3PG5KS184SM",
+      "text": "Moisturizing at another level. Saves me about 4-6 pedicures a year.",
+      "date": "Reviewed in the United States on June 3, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Steve Harvey would love this",
+      "userName": "FloridaMan",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R204KU7R15DZDB",
+      "text": "Love",
+      "date": "Reviewed in the United States on June 2, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Love",
+      "userName": "MISTY",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3BLX74SSJX1MI",
+      "text": "I have thick curly hair and this helps define my curls without looking greasy",
+      "date": "Reviewed in the United States on June 2, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "I use it every day",
+      "userName": "lucy schuls",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R2KZUG1VQ29BGL",
+      "text": "The product is really good for people with Oily skin. Good value for money",
+      "date": "Reviewed in the United States on June 1, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Perfect for oily skin",
+      "userName": "Daniyal Siddiqui",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R1PCJCCIGIGSXR",
+      "text": "Very good product. Highly recommend it for anyone interested in looking good and caring for their skin and hair. No smell whatsoever.",
+      "date": "Reviewed in the United States on May 31, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great Product for your SKIN and HAIR.",
+      "userName": "AliciaTheGreat",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RXWSLWR0A7WNQ",
+      "text": "Good oil and good pump .",
+      "date": "Reviewed in the United States on May 31, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Good stuff",
+      "userName": "Margaret Smith",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R30N3IXXVC45BW",
+      "text": "I love this oil and have been using it for years, I usually mix it in with my daily lotion especially during the dry winter months in New England. Absorbs into skin and keeps skin soft.",
+      "date": "Reviewed in the United States on May 30, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "Great Lotion",
+      "userName": "PAH",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R2FIK05JPBYAH9",
+      "text": "This is all I use on my entire body. Including my face. It’s amazing. So simple, and so good for your face.",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "It’s a miracle worker!",
+      "userName": "David Nisonger",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R26TRSR6UFP0DV",
+      "text": "I’ve used this before and have loved it. I opened up a new bottle this morning and I could just smell this toxic plastic smell. I don’t know why I continued to put it on my face, but it burned a little bit, my face got red & has been tender since. Not sure what was wrong with this bottle. I see all of the other good reviews and have used it before so I’m not sure why this happened.",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Bad smelling bottle",
+      "userName": "Cheryl",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R1028FA4ZJXQAZ",
+      "text": "This in a plastic bottle it is not organic as stated. it can't be it has been contaminated by the plastic. Do not buy if you are going to be promoting organic products.",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Not ORGANIC PLASTIC BOTTLE!!!",
+      "userName": "sammie martinez",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R23A6GYG6MFLRW",
+      "text": "Something is very off with the bottle that I received. It smells like a chemical solvent or something. I’m definitely not going to be putting this stuff on my body or in my hair. It’s going straight in the garbage!",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Bad product!",
+      "userName": "Mandy",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RK5I2BI2SZJ7A",
+      "text": "Love this product, great for skin moisturizer, not too oily, great hydration, have purchased several times! Worth the money!",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great product! Continuing to purchase!",
+      "userName": "marilee horn",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R15WNE9QL1JOH2",
+      "text": "Pump did not work",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Not functional",
+      "userName": "Leitha",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R1PMY6GQJVBAP3",
+      "text": "It arrived leaking oil. The bottle had a cap but no seal and the cap allowed it to leak. Also the pump is broken. The oil may be ok, but it’s such a mess I don’t even want to ship it back for fear of it leaking out during return shipment.",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Arrived leaking oil",
+      "userName": "Julie Briest",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R30S8B3ZLBYX29",
+      "text": "I normally really like this and had bought several bottles prior to last fall when I bought 3 as gifts for for my daughter's stocking. All 3 bottles had a clear dispenser which was different then in the past and all smelled absolutely spoiled. I missed the window to send them back by the time we realized it. Really bummed about it--anyone else have any trouble with it? Should I try ordering again? Really don't want to throw it out AGAIN.",
+      "date": "Reviewed in the United States on May 23, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Wasn't the same as in the past. Had to throw away 3 bottles that smelled rancid.",
+      "userName": "L Dunaj",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R2BX0046NJHI8E",
+      "text": "MCT oil and Coconut oil in general do not do well in plastic containers. This one smelled of polastic and caused my eyes to burn. Contaminated and unsafe.",
+      "date": "Reviewed in the United States on May 22, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Unsafe in plastic container",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R1JF2V57F9B8V4",
+      "text": "\"Love this coconut oil! It's lightly scented and cold-pressed, so I know it's free from harsh chemicals - a great choice for my family's health!\"",
+      "date": "Reviewed in the United States on May 22, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "\"Pure & Gentle Coconut Oil\"",
+      "userName": "san",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71Vd2ek8SEL._SY88.jpg"
+      ],
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3W53FRWM9ZK53",
+      "text": "The oil is nice but the pump doesn't work. It has to be poured out of the bottle to use and this is inconvenient.",
+      "date": "Reviewed in the United States on May 19, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "Pump doesn't work",
+      "userName": "CD",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RRA3RSGFLM270",
+      "text": "What happened? I have purchased this oil for many many years. It's been a favorite of mine. But the last two bottles something is different. I had just opened one, used it and it had a horrible smell and thinking it was maybe just a bad batch I then ordered another one and still the same issue. The oil has a terrible smell and feels thinner. I don't know what changed but something did and I will no longer be purchasing this oil.",
+      "date": "Reviewed in the United States on May 19, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "What changed?!",
+      "userName": "Elle",
+      "numberOfHelpful": 3,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R15STE2A3SZNYT",
+      "text": "The oil I recieved has a strong unpleasant chemical smell, like a permanent marker. Feels okay, but I don't want to apply it to my skin.",
+      "date": "Reviewed in the United States on May 18, 2025",
+      "rating": "2.0 out of 5 stars",
+      "title": "Strange smell",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R3J9G2PLGHYGAT",
+      "text": "skin soft, not oily even after, skin absorbs well",
+      "date": "Reviewed in the United States on May 17, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "satisfied",
+      "userName": "Jacqueline Gelderbloem",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R25C66JRHVQHSD",
+      "text": "There was oil all over the bottle when I opened the package and the pump dispenser was broken.",
+      "date": "Reviewed in the United States on May 17, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Received a damaged product",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RP9BBX841CBON",
+      "text": "This is very nice oil. It doesn't smell and is absorbent on hands.",
+      "date": "Reviewed in the United States on May 16, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Good buy for a nice odorless oil. Paula",
+      "userName": "Pam",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R148APLLRTIBOS",
+      "text": "I used to by this all the time and was very pleased with it. However, the last time I ordered it, it had a very nasty smell, almost like gasoline. I didn't even other returning it, I just threw it away and will never order it again....",
+      "date": "Reviewed in the United States on May 15, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Horrible smell",
+      "userName": "Deborah P. Craig",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RRG67IWYDWZPV",
+      "text": "product is good but the pump wasn't working....I kept product and used another dispenser. Would've given another star but for the pump......",
+      "date": "Reviewed in the United States on May 14, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "bad pump",
+      "userName": "zacharia",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R1NL5TU7K3BK85",
+      "text": "This is my second bottle. I love the product itself but my second bottle arrived opened and leaky. It looked as of it was packed opened. Because the packaging seemed intact. Frustrated because I have to go through the trouble of sending it back.",
+      "date": "Reviewed in the United States on May 13, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "Bottle arrived opened and leaky",
+      "userName": "Michelle G",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71JctPGJ06L._SY88.jpg"
+      ],
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "RTESGM1PQS5Z4",
+      "text": "Nice on your skin",
+      "date": "Reviewed in the United States on May 12, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Smooth",
+      "userName": "Anita",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B07RBR9THT",
+      "productTitle": "PURA D'OR 16 Oz ORGANIC Fractionated Coconut Oil - MCT Oil - 100% Pure & Natural USDA Certified Cold Pressed Carrier Oil - Unscented, Hexane Free Moisturizer For Face, Skin & Hair Tonic - Men & Women",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 1238,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 9990,
+      "productRating": "4.5 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 75
+        },
+        "fourStar": {
+          "percentage": 11
+        },
+        "threeStar": {
+          "percentage": 6
+        },
+        "twoStar": {
+          "percentage": 3
+        },
+        "oneStar": {
+          "percentage": 5
+        }
+      },
+      "reviewId": "R26OGZ1J3W2TLT",
+      "text": "I have purchased this item several times and been satisfied. This last purchase of this product was not of the same quality. The oil had an odor unlike the oil purchased in the past that was odorless. Reluctant to purchase again.",
+      "date": "Reviewed in the United States on May 12, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Change of quality",
+      "userName": "Heidi",
+      "numberOfHelpful": 0,
+      "variationId": null,
+      "imageUrlList": null,
+      "variationList": [],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    }
+  ],
+  "api_response_metadata": {
+    "success": true,
+    "max_pages_requested": 5,
+    "max_pages_reached": 5,
+    "fetched_all_available_reviews": true
+  }
+}

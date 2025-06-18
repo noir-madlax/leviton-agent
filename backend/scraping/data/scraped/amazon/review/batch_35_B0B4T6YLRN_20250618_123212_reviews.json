@@ -1,7 +1,7 @@
 {
-  "asin": "B00JM5GW10",
+  "asin": "B0B4T6YLRN",
   "scrape_context": {
-    "scraped_at": "2025-06-18T12:16:48.665836",
+    "scraped_at": "2025-06-18T12:32:12.497845",
     "scraper_version": "apify_axesso_v1",
     "total_reviews_fetched": 50,
     "earliest_reviews_fetched": true,
@@ -22,22 +22,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 1,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -49,19 +49,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "REZHAY726PB1O",
-      "text": "Bought for Easter for great grandkids. They were small and fit nicely in their baskets.",
+      "reviewId": "R1LR9BMWV4OD3C",
+      "text": "This jojoba oil is perfect for a hair oil. I make my own hair oil, and this is one of the products that I add to other oils I use to make my hair oil. It is a really good oil and a good value for the money.",
       "date": "Reviewed in the United States on June 16, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Slime for kids",
-      "userName": "Steelerfan",
+      "title": "This is perfect hair oil",
+      "userName": "GG",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -70,22 +72,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 1,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -97,71 +99,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R277TYWVTXA8K3",
-      "text": "Muy seca",
+      "reviewId": "R3U3IBF0AWZ1CY",
+      "text": "Love using this oil in my skin care routine. I also use it in my homemade lip balm and whipped tallow cream. Super versatile and clean.",
       "date": "Reviewed in the United States on June 15, 2025",
-      "rating": "3.0 out of 5 stars",
-      "title": "Condición",
-      "userName": "Isabel",
+      "rating": "5.0 out of 5 stars",
+      "title": "Super versatile",
+      "userName": "Tracey M.",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
-      "locale": {
-        "language": "es",
-        "country": "US",
-        "marketplaceId": "ATVPDKIKX0DER"
-      },
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 1,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "RDPY0398FZEMC",
-      "text": "Got it as a gift, but it was not well received….. so I ended up utilizing it my self. I find it relives stress when you just want to squash things.",
-      "date": "Reviewed in the United States on June 13, 2025",
-      "rating": "4.0 out of 5 stars",
-      "title": "Work hard Play-doh harder.",
-      "userName": "Troy",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -170,22 +122,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 1,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -197,19 +149,173 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R1TF6N4RIHPUAP",
-      "text": "Good",
+      "reviewId": "R39BGZHGQLUACK",
+      "text": "Worst product ever and even more disappointing product of origin.",
+      "date": "Reviewed in the United States on June 15, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "HORRIBLE PRODUCT",
+      "userName": "Anonymous",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R8SQSSQJ832OJ",
+      "text": "fast shipping",
+      "date": "Reviewed in the United States on June 13, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "love this product",
+      "userName": "Diane E.Streib",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R99X38PIVI776",
+      "text": "I like it! This is my first purchase of this kind of oil. I love using this in my body butter. I use this, some rosebud oil and shea. So hydrating! Since I am new, I haven't been able to compare to other jojoba oils. I like it though. :-)",
       "date": "Reviewed in the United States on June 12, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "I like it",
+      "userName": "Ralentity",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71oCXbuCzeL._SY88.jpg"
+      ],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "RBS2630V2G324",
+      "text": "Good stuff, plastic bottle is a bummer but what's inside is fine",
+      "date": "Reviewed in the United States on June 11, 2025",
       "rating": "4.0 out of 5 stars",
       "title": "Good",
-      "userName": "Sandi M.",
+      "userName": "Jacob Lucas",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -218,22 +324,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 1,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -245,24 +351,22 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R1CI50D2DXXWJZ",
-      "text": "Gracias",
-      "date": "Reviewed in the United States on June 5, 2025",
+      "reviewId": "R20B6OOPUZCHM3",
+      "text": "Works well",
+      "date": "Reviewed in the United States on June 9, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Gratitud",
-      "userName": "Alvaro",
+      "title": "I use as a carrier oil for essential oils",
+      "userName": "Wendy Dow",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
-      "locale": {
-        "language": "es",
-        "country": "US",
-        "marketplaceId": "ATVPDKIKX0DER"
-      },
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
       "verified": true,
       "vine": false,
       "videoUrlList": []
@@ -270,22 +374,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 1,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -297,19 +401,276 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R5FF97N9AHS9T",
-      "text": "Cute size Color selection great",
+      "reviewId": "R2S309IYP54KAJ",
+      "text": "Came in like a plastic wrap I will say it’s a little smaller than I thought it was going to be and it lowkey stinks but worth the Price",
+      "date": "Reviewed in the United States on June 8, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "Oil",
+      "userName": "Briana",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71jg7rmOlwL._SY88.jpg",
+        "https://m.media-amazon.com/images/I/71l6lL6Jv-L._SY88.jpg"
+      ],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "RXEL8HARFDCZJ",
+      "text": "Sadly I feel i should have gotten my usual brand of this oil.. the smell is just too off. Almost, rancid? I understand that unrefined oils can have a slight scent, but this is not slight, unfortunately.. its quite unpleasant. This brand has so many wonderful reviews so I am definitely sad about it.",
+      "date": "Reviewed in the United States on June 7, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "Unpleasant smell",
+      "userName": "Anissa",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 1,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R32A4YAE78QNWR",
+      "text": "There's no better way to love yourself and care for your skin than with daily organic jojoba oil. Love this stuff! Keeps your skin hydrated, glowing, and youthful! It absorbs well and you don't need very much.",
+      "date": "Reviewed in the United States on June 6, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "The best moisturizer!",
+      "userName": "Petra P",
+      "numberOfHelpful": 2,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R2SQZMQ94QBNQ7",
+      "text": "Why would one put a premium grade carrier oil in a plastic bottle instead of glass? It is in an amber bottle which helps preserve its quality once bottled, but only glass containers can be used to not contaminate an organic oil. Plastic is obviously a much cheaper option but then this should no longer be labeled a premium oil. Because it is in a plastic bottle, I would not consider this a premium grade oil and thus I have given it 3 stars instead of 5 because of its reduced quality. I would not recommend.",
+      "date": "Reviewed in the United States on June 5, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "In plastic, not glass bottle.",
+      "userName": "Mary",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "RSEQP1YXVQN4D",
+      "text": "Worked exactly as promoted.",
+      "date": "Reviewed in the United States on June 3, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Nice product",
+      "userName": "Bernardo R. Torres",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "RQF6WXDLPE19X",
+      "text": "I love how this makes my hair feel! Super nourishing and I have very fine hair, it doesn’t weigh it down. I like to use it before I shower as a pre-wash treatment.",
       "date": "Reviewed in the United States on June 2, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Quality",
-      "userName": "Joanne Zertuche",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
+      "title": "Nourishing hair oil",
+      "userName": "Connor",
+      "numberOfHelpful": 2,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71pO45w1jKL._SY88.jpg"
+      ],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -318,214 +679,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 1,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "RYDRVXJ6K5LAV",
-      "text": "I loved for my kiddos!! I use them centers in my classroom!",
-      "date": "Reviewed in the United States on May 29, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "LOVED IT",
-      "userName": "Yuliana",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 1,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R2IBXSXKJLG0NJ",
-      "text": "So cute, perfect size and everything for a party favor other than that for like a reward system I really like these budget friendly budget friendly",
-      "date": "Reviewed in the United States on May 28, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "So cute",
-      "userName": "Lina crespo",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 1,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R3AVI6HNBMKPA3",
-      "text": "Very useful.",
-      "date": "Reviewed in the United States on May 27, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Good quality",
-      "userName": "Olga",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 1,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "RYY6Q4I93FG3J",
-      "text": "Perfect for developing motor skills",
-      "date": "Reviewed in the United States on May 26, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Perfect gift",
-      "userName": "Kindle Customer",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 2,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -537,409 +706,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R2ECPWV3PK5ZN9",
-      "text": "Todo bien",
-      "date": "Reviewed in the United States on May 26, 2025",
+      "reviewId": "R2H29JFM8S5WIE",
+      "text": "I love this oil. Thank you.",
+      "date": "Reviewed in the United States on June 2, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Paty doh",
-      "userName": "Este producto es bueno para usarlo en casa, ayuda mucho con la textura de la piel y el tono.",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": {
-        "language": "es",
-        "country": "US",
-        "marketplaceId": "ATVPDKIKX0DER"
-      },
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 2,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R3RRYU2TXGA3D7",
-      "text": "Put in goodie bags for birthday party, perfect small size",
-      "date": "Reviewed in the United States on May 26, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Perfect",
-      "userName": "Morgan",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 2,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R3699RAJ8KCWK9",
-      "text": "It is impossible for “little hands” to open these containers and difficult for adults. The product is “stuck” to inside of containers. I had to use a spoon and scoop it out.",
-      "date": "Reviewed in the United States on May 24, 2025",
-      "rating": "2.0 out of 5 stars",
-      "title": "Difficult to open",
-      "userName": "TGM",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 2,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R1A6CNQ18JVJX6",
-      "text": "My 1st graders LOVED this play-doh! The colors and textures are amazing. Play-doh is always a hit, but this pack was a good deal as well!",
-      "date": "Reviewed in the United States on May 23, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Great value!",
-      "userName": "christina hilleman",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": [
-        "https://m.media-amazon.com/images/S/vse-vms-transcoding-artifact-us-east-1-prod/884d6330-0cda-4710-aedb-4e45608d5230/default.vertical.jobtemplate.mp4.480.mp4"
-      ]
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 2,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R14WBR55BA91Y3",
-      "text": "Kids will love dem",
-      "date": "Reviewed in the United States on May 21, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "They are not poisonous",
-      "userName": "Steven palmer",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 2,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R21SAZHG56704X",
-      "text": "Small cans!",
-      "date": "Reviewed in the United States on May 18, 2025",
-      "rating": "1.0 out of 5 stars",
-      "title": "Small",
-      "userName": "Pink",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 2,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "RRPVSDBXTKVD5",
-      "text": "These are not good.. they are soft… I had to throw them away",
-      "date": "Reviewed in the United States on May 17, 2025",
-      "rating": "1.0 out of 5 stars",
-      "title": "Not made properly",
-      "userName": "Tareme Jarrett",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 2,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "RHHHIV8EWZBRG",
-      "text": "my daughter loves",
-      "date": "Reviewed in the United States on May 15, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "great product",
-      "userName": "Destiny Gunter",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 2,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R3FBNDBBH1HL10",
-      "text": "Not the standard size.",
-      "date": "Reviewed in the United States on May 14, 2025",
-      "rating": "2.0 out of 5 stars",
-      "title": "Small size",
+      "title": "Wonderful oil",
       "userName": "Amazon Customer",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -948,22 +729,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 2,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -975,409 +756,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R29FD5DZ7S3ESJ",
-      "text": "What a good deal! These are small - they’re only 2 oz. But they’re a perfect starter kit for making a colorful set of items. My 3 year old loves making fruit with them and then has to stuff the light blue one in a toy coffee mug for his blue coffee. I appreciate the softness of them. And when my kiddo leaves it out and it starts to dry up, a little water brings it almost back to brand new.",
-      "date": "Reviewed in the United States on May 14, 2025",
+      "reviewId": "R3BLOMW4US436Y",
+      "text": "makes my skin soft and does not leave oily residue. I also use in my hair. Very happy with it.",
+      "date": "Reviewed in the United States on June 1, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Great set!",
-      "userName": "shoeaddict",
+      "title": "great product",
+      "userName": "Mac",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R31VJPMDF4Z3QV",
-      "text": "My nephew recently was introduced to play doh and loves it. I bought this as a gift to him and he was more than thrilled. Good buy.",
-      "date": "Reviewed in the United States on May 13, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "For my nephew",
-      "userName": "Jay",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R1WAM3U1ULNSUE",
-      "text": "Who doesn’t love play dough. The containers are small but the overall price isn’t bad. The play dough isn’t dried out and is very workable. I love the variety of colors that it comes with. My daughter and I both use the play dough as a relaxing technique and also just to make things.",
-      "date": "Reviewed in the United States on May 13, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Great colors!",
-      "userName": "Amanda Simpson",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R30B40TQRU9CSI",
-      "text": "Like it",
-      "date": "Reviewed in the United States on May 13, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Good",
-      "userName": "Mikerlange",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R3UQMGVBIU4MO4",
-      "text": "Dries out into trash in about 2 hours",
-      "date": "Reviewed in the United States on May 10, 2025",
-      "rating": "2.0 out of 5 stars",
-      "title": "Ridiculous",
-      "userName": "sarah",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R2UKOT7ZD6H0G6",
-      "text": "Only thing I don’t like and I must of not realized the size but very tiny then if I went and got from a retail store. Good price tho, I’d buy again",
-      "date": "Reviewed in the United States on May 10, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Small but I’d buy again",
-      "userName": "Hollie H",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R1C21I5SU7KEH1",
-      "text": "Lo mejor que pude comprar para entrenar a la familia",
-      "date": "Reviewed in the United States on May 10, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Plástilina",
-      "userName": "Maria alejandra",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": {
-        "language": "es",
-        "country": "US",
-        "marketplaceId": "ATVPDKIKX0DER"
-      },
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R311A206SBXH8Z",
-      "text": "on time as described",
-      "date": "Reviewed in the United States on May 10, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "classic",
-      "userName": "Mom",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R3UH6KNM9KZ13D",
-      "text": "Inflation! Bought these while back and they were larger containers with more play doh.",
-      "date": "Reviewed in the United States on May 7, 2025",
-      "rating": "3.0 out of 5 stars",
-      "title": "Much smaller now",
-      "userName": "Rebecca",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": [
-        "https://m.media-amazon.com/images/I/71KkV2JnBuL._SY88.jpg"
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
       ],
-      "variationList": [],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -1386,22 +779,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 2,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1413,47 +806,45 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "RP46AT0T8BR1L",
-      "text": "Muy apropiado",
-      "date": "Reviewed in the United States on May 6, 2025",
+      "reviewId": "R3EI504985UZMO",
+      "text": "I received this product yesterday and the found the product just as advertised. No leaking contents, a full bottle, a complete seal was under the cap and the product had a mild pleasant smell. I’m mixing it 50/50 with castor oil and a little essential oil for my face and it went on nicely felt great. I’m totally satisfied with it.",
+      "date": "Reviewed in the United States on May 31, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Útil",
-      "userName": "Raul Matos Castillo",
+      "title": "Arrived as advertised.",
+      "userName": "Peter Parsons",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
-      "locale": {
-        "language": "es",
-        "country": "US",
-        "marketplaceId": "ATVPDKIKX0DER"
-      },
-      "verified": true,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": false,
       "vine": false,
       "videoUrlList": []
     },
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 3,
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 2,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1465,19 +856,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R1D5XSKP7G393H",
-      "text": "The children love playing with it.",
-      "date": "Reviewed in the United States on May 4, 2025",
+      "reviewId": "RAMRN8J4CTDCZ",
+      "text": "Very oily, not a good fresh aroma. The thought of putting this on my skin makes my skin crawls",
+      "date": "Reviewed in the United States on May 31, 2025",
       "rating": "4.0 out of 5 stars",
-      "title": "Children love it.",
-      "userName": "Jeffery Snider",
+      "title": "Oily",
+      "userName": "Nicole",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -1486,22 +879,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 4,
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 2,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1513,19 +906,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R2JDM29D06TH0F",
-      "text": "Got the job done",
-      "date": "Reviewed in the United States on May 4, 2025",
+      "reviewId": "R2OQXVI8FWDV01",
+      "text": "I love this brand. Beautiful fragrance and great price",
+      "date": "Reviewed in the United States on May 30, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Awesome",
-      "userName": "shanae davis",
+      "title": "Love",
+      "userName": "Leslie",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -1534,22 +929,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 4,
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 2,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1561,22 +956,124 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R25F0AIKLCUAI9",
-      "text": "Buenooo y bonitos colores",
-      "date": "Reviewed in the United States on May 4, 2025",
+      "reviewId": "R2F4HJ0HKLJ8KN",
+      "text": "A nice oil. Well packages and shipped quickly.",
+      "date": "Reviewed in the United States on May 30, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "excellent",
-      "userName": "Luisa",
+      "title": "A nice Jojoba.",
+      "userName": "Heather H.",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 2,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R2ZYUG0QXGED1T",
+      "text": "I like how it makes my skin and hair feel",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Makes you feel good",
+      "userName": "Molly Faulkner",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R1M40PYBW7ENEC",
+      "text": "Bien",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Excelente",
+      "userName": "Erika Díaz",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": {
-        "language": "es",
-        "country": "US",
+        "language": "fr",
+        "country": "FR",
         "marketplaceId": "ATVPDKIKX0DER"
       },
       "verified": true,
@@ -1586,22 +1083,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 4,
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1613,19 +1110,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "RGF5BNA3GN30X",
-      "text": "My grandchildren (5 and 9 yrs old) loved this gift! They played hours. I even joined them for a few minutes. Play doh is wonderful for imagination growth and development.",
-      "date": "Reviewed in the United States on May 3, 2025",
+      "reviewId": "R1CU61W8KZIM1O",
+      "text": "Great",
+      "date": "Reviewed in the United States on May 29, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Play doh is great!",
-      "userName": "April B.",
+      "title": "Exactly what it is",
+      "userName": "Amazon Customer",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -1634,22 +1133,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 4,
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1661,19 +1160,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R3F1BF0TBYEJ6B",
-      "text": "What’s not to love ?? Kids loved them and we loved watching the kids happy! The lids click on which is nice to prevent drying out.",
-      "date": "Reviewed in the United States on May 3, 2025",
+      "reviewId": "R7RZJKOA7SL91",
+      "text": "NA",
+      "date": "Reviewed in the United States on May 29, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Love it",
-      "userName": "Pleased",
+      "title": "Proteas as listed",
+      "userName": "shawn badger",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -1682,22 +1183,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 4,
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1709,24 +1210,22 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R2L5MTA70MINZC",
-      "text": "Súper padre me encanta mis niños se divierten mucho formando diferente figuras 10/10",
-      "date": "Reviewed in the United States on May 3, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "El mejor entretenimiento para niños",
-      "userName": "Caro",
-      "numberOfHelpful": 0,
-      "variationId": null,
+      "reviewId": "RKJO9JD189X6L",
+      "text": "it's a fabulous oil! it works wonders in my skincare and haircare routines-boasts a fresh scent,offers great value for its size. I also bought it for a DIY hair mask, and it's been incredible! my hair stays less oily for longer,feels thicker,brings out my natural curls more vividly,and has this silky smoothness i adore. planning to use it in my nose,chin and nail too! My only grip is the plastic bottle,it doesn't look upscale,though that's likely why it's so budget-frienfly,it would be great if the quality and price could be a little better.",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "4.0 out of 5 stars",
+      "title": "ok, I love it",
+      "userName": "Mathilda",
+      "numberOfHelpful": 2,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
-      "locale": {
-        "language": "es",
-        "country": "US",
-        "marketplaceId": "ATVPDKIKX0DER"
-      },
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
       "verified": true,
       "vine": false,
       "videoUrlList": []
@@ -1734,22 +1233,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 4,
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1761,19 +1260,671 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "RMR4QY7WDYMO0",
-      "text": "Great daycare products. Keeps kids busy for long period of time.",
-      "date": "Reviewed in the United States on May 3, 2025",
+      "reviewId": "R1A2Y2354TQ9HE",
+      "text": "I swear by this oil!",
+      "date": "Reviewed in the United States on May 29, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Excellent",
+      "userName": "KP",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R4LXNUYQCKQ0C",
+      "text": "Great quality",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "I love this oil",
+      "userName": "Anna",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R1EVTCAVIEDFMO",
+      "text": "Works great.",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Jojoba Oil",
+      "userName": "James Stafford",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "RB0L8NJ3TQNST",
+      "text": "Great quality oil! Perfect carrier for homemade facial and body lotions and creams.",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Excellent Oil",
+      "userName": "lizzylou60",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "RZ93NRX2BHTBN",
+      "text": "Very good",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "it's good",
+      "userName": "KL",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 3,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R2E7YVS4JI4PQX",
+      "text": "I Love this Oil it's very light and smooth not to greasy will MOST Definitely be Buying Again",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great on hair Also",
+      "userName": "Brooks-Chee",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R3H5AUXHP4WSU1",
+      "text": "Excellent oil and smell",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Quality oil",
+      "userName": "Maria Santoro",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R1MA0MYF1QKRSP",
+      "text": "I love it",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Jojoba oil",
+      "userName": "Vicky Houston",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R2TACSF5JNJNVB",
+      "text": "Love this so much. Makes my feel like butter.",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Feels nices",
+      "userName": "Kindle Customer",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R2A8VOF6K1W79O",
+      "text": "use it with rosemary oil to assist with thinning hair",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "good for your hair",
+      "userName": "Amazon Customer",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R37Z0T0PL5N7YQ",
+      "text": "Quality product, very pleased so far!",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Quality Product",
+      "userName": "Sarah K Cancel",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "RSC9Z55CR2ERS",
+      "text": "Not thick, absorbs quickly for an oil.",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "No fragrance",
+      "userName": "V. Temple",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "RJ9UNF2IMUQ6C",
+      "text": "I am pleased with this product. I use it as a carrier oil to dilute castor oil which I apply to my face for a natural post facial type of glow as well as on my body after I shower.",
+      "date": "Reviewed in the United States on May 28, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "A light & absorbent oil for face & body!",
+      "userName": "Leeat Fleischer",
+      "numberOfHelpful": 6,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 4,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R1UEUI1B0O83NZ",
+      "text": "It’s a great product!",
+      "date": "Reviewed in the United States on May 27, 2025",
       "rating": "5.0 out of 5 stars",
       "title": "Great product",
-      "userName": "Dewwhipper",
+      "userName": "Melanie Kunz",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -1782,22 +1933,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 4,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1809,19 +1960,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R24EVUB4YU4W4H",
-      "text": "My kids love it! Will definitely buy more if needed",
-      "date": "Reviewed in the United States on May 3, 2025",
+      "reviewId": "RZRMC63DUD22H",
+      "text": "I add a drop or 2 to my shampoo or shaving cream. No issues with itching, dryness, or feeling oily so it absorbs well. Took a couple times to figure out how much was too much/too little. For someone with dry sensitive skin this stuff help a lot and is great quality. I also love that the bottle doesn’t leak.",
+      "date": "Reviewed in the United States on May 27, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Perfect",
-      "userName": "Mariah G",
-      "numberOfHelpful": 0,
-      "variationId": null,
+      "title": "Great for dry skin or scalp",
+      "userName": "Star Gray",
+      "numberOfHelpful": 5,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -1830,22 +1983,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 4,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -1857,19 +2010,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R2L2LLUZ7ZCLUG",
-      "text": "My son loves it! It arrived in perfect condition. Very good product.",
-      "date": "Reviewed in the United States on May 3, 2025",
+      "reviewId": "R3LLYES934F1WB",
+      "text": "Great product",
+      "date": "Reviewed in the United States on May 27, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Very Good’s",
-      "userName": "Maria R",
+      "title": "Great value",
+      "userName": "Kathleen",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -1878,122 +2033,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 4,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R3PVGNC2OYC3PQ",
-      "text": "Worth the money",
-      "date": "Reviewed in the United States on May 3, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Good price",
-      "userName": "Keyshla",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 4,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R12CZQ5KS4HA3Z",
-      "text": "Perfecto",
-      "date": "Reviewed in the United States on May 2, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "Mejor calidad",
-      "userName": "Maria Bonilla",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
-      "locale": {
-        "language": "es",
-        "country": "US",
-        "marketplaceId": "ATVPDKIKX0DER"
-      },
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2005,19 +2060,23 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "ROQWQ76D9SDQ9",
-      "text": "Great set of play doh that your children will have and that will remind you of your own childhood. The colors are vibrant. This is a large pack making it a great value. My kiddos love the variety of colors.",
-      "date": "Reviewed in the United States on May 1, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "The quality Play Doh you expect",
+      "reviewId": "R377UU6LIOC63V",
+      "text": "So disappointed to find out this product comes from \"Israel\" .. would not recommend. Not good value for money.",
+      "date": "Reviewed in the United States on May 27, 2025",
+      "rating": "1.0 out of 5 stars",
+      "title": "So disappointed to find out this product comes from \"Israel\"",
       "userName": "Meghan",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
+      "numberOfHelpful": 3,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": [
+        "https://m.media-amazon.com/images/I/71-0pXYrpyL._SY88.jpg"
+      ],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -2026,22 +2085,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2053,19 +2112,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R2VN95VWMG7AQI",
-      "text": "This is the way to go if you don't need lots of Play Doh. Small enough jars and different colors. Good way to get samples of what you want.",
-      "date": "Reviewed in the United States on April 30, 2025",
+      "reviewId": "R3P50GD3KOPCDE",
+      "text": "Used to makes beard oil. Good stuff",
+      "date": "Reviewed in the United States on May 27, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Cute jars and different colors.",
-      "userName": "Richard L.",
+      "title": "Good value",
+      "userName": "Cassandra",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -2074,22 +2135,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2101,19 +2162,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "RC0X2UBKQ2CHC",
-      "text": "Good product",
-      "date": "Reviewed in the United States on April 29, 2025",
+      "reviewId": "R2KG8QPKLSCID1",
+      "text": "This product was just what my skin needed. My bottle arrived neatly packaged. I’ve used this brand of jojoba oil a few times and have yet to be disappointed. I consider this product a great value of my money.",
+      "date": "Reviewed in the United States on May 27, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Play time",
-      "userName": "Dawn Phillips",
-      "numberOfHelpful": 0,
-      "variationId": null,
+      "title": "Great value and product",
+      "userName": "TeeTee",
+      "numberOfHelpful": 3,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -2122,22 +2185,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2149,19 +2212,71 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R1KNPGWNV7YGZ6",
-      "text": "Well, the price is ok, quality ok, I thought it was very small but it was for what I needed.",
-      "date": "Reviewed in the United States on April 29, 2025",
+      "reviewId": "R1RK4WV2G7IF9Q",
+      "text": "Very happy with my purchase. Arrived quickly as was nicely packaged. I will purchase again.",
+      "date": "Reviewed in the United States on May 26, 2025",
+      "rating": "5.0 out of 5 stars",
+      "title": "Great product!",
+      "userName": "K Amin",
+      "numberOfHelpful": 0,
+      "variationId": "B0B4T6YLRN",
+      "imageUrlList": null,
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
+      "locale": null,
+      "verified": true,
+      "vine": false,
+      "videoUrlList": []
+    },
+    {
+      "statusCode": 200,
+      "statusMessage": "FOUND",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
+      "currentPage": 5,
+      "sortStrategy": "recent",
+      "countReviews": 856,
+      "domainCode": "com",
+      "filters": {
+        "reviewerType": "verified_reviews",
+        "mediaType": "all_contents",
+        "formatType": "current_format"
+      },
+      "countRatings": 5848,
+      "productRating": "4.7 out of 5",
+      "reviewSummary": {
+        "fiveStar": {
+          "percentage": 84
+        },
+        "fourStar": {
+          "percentage": 10
+        },
+        "threeStar": {
+          "percentage": 3
+        },
+        "twoStar": {
+          "percentage": 1
+        },
+        "oneStar": {
+          "percentage": 2
+        }
+      },
+      "reviewId": "R1LHD7S7YVF7F",
+      "text": "It worked for what I needed it for. I have no complaints and the size of the bottle makes it a good value.",
+      "date": "Reviewed in the United States on May 26, 2025",
       "rating": "4.0 out of 5 stars",
-      "title": "Good",
-      "userName": "Gislaine Cavassini",
+      "title": "Good Value for Cost",
+      "userName": "Kimmonique Adams",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -2170,22 +2285,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2197,19 +2312,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R3JRTPBWGBYYKQ",
-      "text": "I remember that my son order this",
-      "date": "Reviewed in the United States on April 28, 2025",
-      "rating": "2.0 out of 5 stars",
-      "title": "Soft and colorful",
-      "userName": "Beautiful Lash",
+      "reviewId": "R3NU4ALOEA4LPG",
+      "text": "Great product, Low stars because it arrived opened and the product had leaked into the box with my other items.",
+      "date": "Reviewed in the United States on May 26, 2025",
+      "rating": "3.0 out of 5 stars",
+      "title": "Great but…",
+      "userName": "victoria apperson",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -2218,22 +2335,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2245,19 +2362,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "RMNEXQ0ZPLENU",
-      "text": "a bunch of play-doh",
-      "date": "Reviewed in the United States on April 27, 2025",
+      "reviewId": "R1FQGUYYAB8V68",
+      "text": "It’s good .",
+      "date": "Reviewed in the United States on May 26, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "nice",
-      "userName": "Jonathan Millan",
+      "title": "The package and quality",
+      "userName": "Manal",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -2266,22 +2385,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2293,19 +2412,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "RE08DG672FU4X",
-      "text": "good for babies",
-      "date": "Reviewed in the United States on April 26, 2025",
+      "reviewId": "R1OEIBCMKOVN33",
+      "text": "Amazing oil, I use it for both my hair and body.",
+      "date": "Reviewed in the United States on May 26, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "good for childen",
-      "userName": "joshua lenhart",
+      "title": "Amazing oil",
+      "userName": "Cherri",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -2314,22 +2435,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2341,19 +2462,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R1470VJRPN55ES",
-      "text": "Little then normal size but good variety of colors and the grandkids love it",
-      "date": "Reviewed in the United States on April 26, 2025",
+      "reviewId": "R3AXHK8908V6I9",
+      "text": "Enjoying my oil! Thanks",
+      "date": "Reviewed in the United States on May 26, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "smaller containers",
-      "userName": "lynda yorks",
+      "title": "Great product",
+      "userName": "Janeene Young",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,
@@ -2362,22 +2485,22 @@
     {
       "statusCode": 200,
       "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
+      "asin": "B0B4T6YLRN",
+      "productTitle": "Handcraft Blends USDA Organic Jojoba Oil - Cold-Pressed 8 Fl Oz - 100% Pure and Natural - Premium Grade Carrier Oil for Skin and Hair - Hair and Body - Massage - Hexane-Free",
       "currentPage": 5,
       "sortStrategy": "recent",
-      "countReviews": 4711,
+      "countReviews": 856,
       "domainCode": "com",
       "filters": {
         "reviewerType": "verified_reviews",
         "mediaType": "all_contents",
         "formatType": "current_format"
       },
-      "countRatings": 64204,
+      "countRatings": 5848,
       "productRating": "4.7 out of 5",
       "reviewSummary": {
         "fiveStar": {
-          "percentage": 85
+          "percentage": 84
         },
         "fourStar": {
           "percentage": 10
@@ -2389,67 +2512,21 @@
           "percentage": 1
         },
         "oneStar": {
-          "percentage": 1
+          "percentage": 2
         }
       },
-      "reviewId": "R152SRQ82OQVWU",
-      "text": "Bought these for my niece. All kids love Play-doh.",
-      "date": "Reviewed in the United States on April 26, 2025",
+      "reviewId": "RE91U9HKYXU5Z",
+      "text": "Kind to my scalp and fantastic with my curls. I bought another to give to my daughter and she is happy with it too.",
+      "date": "Reviewed in the United States on May 25, 2025",
       "rating": "5.0 out of 5 stars",
-      "title": "Fun to play",
-      "userName": "Miss Vickie Fan",
+      "title": "Fantastically kind",
+      "userName": "Amazon Customer",
       "numberOfHelpful": 0,
-      "variationId": null,
+      "variationId": "B0B4T6YLRN",
       "imageUrlList": null,
-      "variationList": [],
-      "locale": null,
-      "verified": true,
-      "vine": false,
-      "videoUrlList": []
-    },
-    {
-      "statusCode": 200,
-      "statusMessage": "FOUND",
-      "asin": "B00JM5GW10",
-      "productTitle": "Play Doh Modeling Compound 10-Pack Case of Assorted Colors, Non-Toxic 2 oz. Cans, Halloween Toys & Party Favors, Preschool Toys for Kids, Ages 2+ (Amazon Exclusive)",
-      "currentPage": 5,
-      "sortStrategy": "recent",
-      "countReviews": 4711,
-      "domainCode": "com",
-      "filters": {
-        "reviewerType": "verified_reviews",
-        "mediaType": "all_contents",
-        "formatType": "current_format"
-      },
-      "countRatings": 64204,
-      "productRating": "4.7 out of 5",
-      "reviewSummary": {
-        "fiveStar": {
-          "percentage": 85
-        },
-        "fourStar": {
-          "percentage": 10
-        },
-        "threeStar": {
-          "percentage": 3
-        },
-        "twoStar": {
-          "percentage": 1
-        },
-        "oneStar": {
-          "percentage": 1
-        }
-      },
-      "reviewId": "R1RGMMU18KBMXL",
-      "text": "my grandson loves this stuff so when the price is low I buy it for him can't go wrong with play dough",
-      "date": "Reviewed in the United States on April 25, 2025",
-      "rating": "5.0 out of 5 stars",
-      "title": "love",
-      "userName": "the PERRY'S",
-      "numberOfHelpful": 0,
-      "variationId": null,
-      "imageUrlList": null,
-      "variationList": [],
+      "variationList": [
+        "Size: 8 Fl Oz (Pack of 1)"
+      ],
       "locale": null,
       "verified": true,
       "vine": false,

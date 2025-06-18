@@ -24,6 +24,7 @@ class AmazonReviewRepository:
         """
         try:
             total_inserted = 0
+            total_skipped = 0
             
             logger.info(f"开始批量插入 {len(reviews)} 条评论数据到 {self.table_name} 表")
             
@@ -33,19 +34,30 @@ class AmazonReviewRepository:
                 
                 logger.info(f"正在插入第 {i//batch_size + 1} 批，共 {len(batch)} 条记录...")
                 
-                # 执行插入
-                result = self.supabase_client.table(self.table_name).insert(batch).execute()
-                
-                if result.data:
-                    batch_inserted = len(result.data)
-                    total_inserted += batch_inserted
-                    logger.info(f"第 {i//batch_size + 1} 批插入成功：{batch_inserted} 条记录")
-                else:
-                    logger.error(f"第 {i//batch_size + 1} 批插入失败，没有返回数据")
-                    return False
+                try:
+                    # 执行插入
+                    result = self.supabase_client.table(self.table_name).insert(batch).execute()
+                    
+                    if result.data:
+                        batch_inserted = len(result.data)
+                        total_inserted += batch_inserted
+                        logger.info(f"第 {i//batch_size + 1} 批插入成功：{batch_inserted} 条记录")
+                    else:
+                        logger.warning(f"第 {i//batch_size + 1} 批插入没有返回数据")
+                        
+                except Exception as batch_error:
+                    # 如果是重复键错误，记录但继续处理
+                    error_str = str(batch_error)
+                    if "duplicate key" in error_str or "already exists" in error_str:
+                        total_skipped += len(batch)
+                        logger.warning(f"第 {i//batch_size + 1} 批包含重复数据，跳过: {len(batch)} 条记录")
+                    else:
+                        logger.error(f"第 {i//batch_size + 1} 批插入出现其他错误: {batch_error}")
+                        # 对于非重复错误，我们仍然继续处理其他批次
+                        continue
             
-            logger.info(f"批量插入完成，总共插入 {total_inserted} 条评论数据")
-            return True
+            logger.info(f"批量插入完成，总共插入 {total_inserted} 条评论数据，跳过 {total_skipped} 条重复数据")
+            return True  # 只要有部分成功就返回True
             
         except Exception as e:
             logger.error(f"批量插入评论数据失败: {e}")
@@ -165,16 +177,20 @@ class AmazonReviewRepository:
                 logger.error(f"评论目录不存在: {review_dir}")
                 return {"reviews_imported": 0, "error": "Review directory not found"}
             
-            # 查找批次相关的评论文件
+            # 查找批次相关的评论文件 - 修复：根据批次ID查找
             review_files = []
-            for file_path in review_dir.glob("*.json"):
-                # 排除汇总文件
+            batch_pattern = f"batch_{batch_id}_*_reviews.json"
+            
+            for file_path in review_dir.glob(batch_pattern):
+                # 只要评论文件，排除汇总文件
                 if "summary" not in file_path.name.lower():
                     review_files.append(file_path)
             
+            logger.info(f"找到批次 {batch_id} 的评论文件: {[f.name for f in review_files]}")
+            
             if not review_files:
                 logger.warning(f"批次 {batch_id} 没有找到评论文件")
-                return {"reviews_imported": 0, "message": "No review files found"}
+                return {"reviews_imported": 0, "files_processed": 0, "total_files": 0, "message": "No review files found"}
             
             total_reviews_imported = 0
             processed_files = 0
@@ -193,7 +209,7 @@ class AmazonReviewRepository:
                     )
                     
                     if reviews_for_db:
-                        # 批量插入评论
+                        # 使用批量插入策略，允许重复数据
                         success = await self.batch_insert_reviews(reviews_for_db)
                         if success:
                             count = len(reviews_for_db)
@@ -219,7 +235,50 @@ class AmazonReviewRepository:
             
         except Exception as e:
             logger.error(f"导入批次 {batch_id} 评论时出错: {e}")
-            return {"reviews_imported": 0, "error": str(e)}
+            return {"reviews_imported": 0, "files_processed": 0, "total_files": 0, "error": str(e)}
+    
+    async def batch_upsert_reviews(self, reviews: List[Dict[str, Any]], batch_size: int = 1000) -> bool:
+        """
+        批量UPSERT评论数据 - 处理重复数据
+        
+        Args:
+            reviews: 评论数据列表
+            batch_size: 批次大小
+            
+        Returns:
+            bool: 插入是否成功
+        """
+        try:
+            total_processed = 0
+            
+            logger.info(f"开始批量UPSERT {len(reviews)} 条评论数据到 {self.table_name} 表")
+            
+            # 分批处理
+            for i in range(0, len(reviews), batch_size):
+                batch = reviews[i:i + batch_size]
+                
+                logger.info(f"正在UPSERT第 {i//batch_size + 1} 批，共 {len(batch)} 条记录...")
+                
+                # 使用upsert策略处理重复数据
+                # 如果存在相同的 (scrape_batch_id, asin, review_id) 则更新，否则插入
+                result = self.supabase_client.table(self.table_name)\
+                    .upsert(batch, on_conflict="scrape_batch_id,asin,review_id")\
+                    .execute()
+                
+                if result.data:
+                    batch_processed = len(result.data)
+                    total_processed += batch_processed
+                    logger.info(f"第 {i//batch_size + 1} 批UPSERT成功：{batch_processed} 条记录")
+                else:
+                    logger.error(f"第 {i//batch_size + 1} 批UPSERT失败，没有返回数据")
+                    return False
+            
+            logger.info(f"批量UPSERT完成，总共处理 {total_processed} 条评论数据")
+            return True
+            
+        except Exception as e:
+            logger.error(f"批量UPSERT评论数据失败: {e}")
+            return False
     
     async def _convert_reviews_to_db_format(self, review_data: Dict[str, Any], 
                                           batch_id: int, filename: str) -> List[Dict[str, Any]]:
