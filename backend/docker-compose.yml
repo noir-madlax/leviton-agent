@@ -33,15 +33,15 @@ services:
       start_period: 40s
 
 # 添加 Cloudflare Tunnel 服务
+#注册了一个： api-leviton-agent.zhangzic.workers.dev
+
+   
   cloudflare-tunnel:
     image: cloudflare/cloudflared:latest
     container_name: cloudflare-tunnel
-    command: tunnel run --token eyJhIjoiY2I0NjlmNDFkZmMyMWM0Yjk2YTkzZTE1NGQ1Mzg0YzMiLCJ0IjoiYzJkOGY4N2YtZGJhZC00NzQ3LTk1OWMtZGEwNTM4YWY3ZWQzIiwicyI6Ik0yUTBaVEprTVRjdFpERmhOUzAwWlRKbExUZzNNelF0TURCaE1HTXpZek5oT1dZNSJ9 
+    command: tunnel run --token eyJhIjoiY2I0NjlmNDFkZmMyMWM0Yjk2YTkzZTE1NGQ1Mzg0YzMiLCJ0IjoiYzJkOGY4N2YtZGJhZC00NzQ3LTk1OWMtZGEwNTM4YWY3ZWQzIiwicyI6Ik0yUTBaVEprTVRjdFpERmhOUzAwWlRKYkxUZzNNelF0TURCaE1HTXpZek5oT1dZNSJ9
     restart: unless-stopped
-    networks:
-      - leviton-network
-    depends_on:
-      - leviton-agent-backend
+    network_mode: host
 
 
 volumes:
