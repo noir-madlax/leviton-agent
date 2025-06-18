@@ -1,0 +1,7 @@
+version: "2"
+authtoken: ""  # 留空使用免费版本
+tunnels:
+  web:
+    addr: leviton-agent-backend:8000
+    proto: http
+    schemes: [https, http]

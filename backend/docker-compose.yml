@@ -30,30 +30,28 @@ services:
       retries: 3
       start_period: 40s
 
-  caddy:
-    image: caddy:alpine
-    container_name: caddy-proxy
-    ports:
-      - "80:80"
-      - "443:443"
-    command: caddy reverse-proxy --from 3po-agent.duckdns.org --to leviton-agent-backend:8000
+  ngrok:
+    image: ngrok/ngrok:latest
+    container_name: ngrok-tunnel
+    restart: unless-stopped
+    command:
+      - "start"
+      - "--all"
+      - "--config"
+      - "/etc/ngrok.yml"
     volumes:
-      - caddy_data:/data
-      - caddy_config:/config
+      - ./ngrok.yml:/etc/ngrok.yml
+    ports:
+      - 4040:4040  # Ngrok Web UI
     networks:
       - leviton-network
     depends_on:
       - leviton-agent-backend
-    restart: unless-stopped
 
 volumes:
   agent-data:
     driver: local
   agent-logs:
-    driver: local
-  caddy_data:
-    driver: local
-  caddy_config:
     driver: local
 
 networks:
