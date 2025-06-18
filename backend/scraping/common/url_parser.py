@@ -153,11 +153,11 @@ def extract_category_from_general_url(url: str) -> Optional[str]:
     Returns:
         str: Category ID if found, None otherwise
     """
-    # Pattern for general category URLs
+    # 优先匹配node参数（真正的category_id）
     patterns = [
-        r'/b/ref=([^?]+)',
-        r'node=(\d+)',
-        r'/(\d+)(?:[/?]|$)'
+        r'node=(\d+)',  # 首先匹配node参数
+        r'/b/(\d+)',    # /b/数字 格式
+        r'/(\d+)(?:[/?]|$)'  # 路径中的数字
     ]
     
     for pattern in patterns:

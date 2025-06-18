@@ -167,7 +167,7 @@ class ProductScraper:
             return await self._scrape_search_products(
                 category_id, search_term, target_count, original_url
             )
-        elif url_type in ['category', 'bestsellers']:
+        elif url_type in ['category', 'bestsellers', 'product']:
             return await self._scrape_category_products(
                 category_id, target_count, url_type, original_url
             )
@@ -238,7 +238,10 @@ class ProductScraper:
     async def _scrape_category_products(self, category_id: str, target_count: int, 
                                        url_type: str, original_url: str = None) -> Tuple[int, List[Dict], str]:
         """爬取类别商品"""
-        logger.info(f"爬取类别商品: category_id={category_id}, type={url_type}")
+        if url_type == "product":
+            logger.info(f"从产品页面爬取同类别商品: category_id={category_id}, type={url_type}")
+        else:
+            logger.info(f"爬取类别商品: category_id={category_id}, type={url_type}")
         
         all_products = []
         page = 1

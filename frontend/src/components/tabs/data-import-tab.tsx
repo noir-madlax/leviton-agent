@@ -40,7 +40,8 @@ export function DataImportTab() {
     setResult(null);
 
     try {
-      const response = await fetch('http://localhost:8000/api/scraping/process-url', {
+      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const response = await fetch(`${backendUrl}/api/scraping/process-url`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

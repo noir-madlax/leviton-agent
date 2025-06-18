@@ -21,18 +21,41 @@ class ScrapingRequestRepository:
             Optional[int]: 创建成功返回请求ID，失败返回None
         """
         try:
+            logger.info(f"开始创建爬取请求记录，数据: {request_data}")
+            
+            # 验证必要字段
+            if not request_data.get('request_type'):
+                logger.error("request_data缺少必要字段 'request_type'")
+                return None
+                
+            # 记录插入前的调试信息
+            logger.debug(f"准备插入到scraping_requests表的数据: {request_data}")
+            
             result = self.client.table('scraping_requests').insert(request_data).execute()
+            
+            logger.debug(f"数据库插入原始结果: {result}")
             
             if result.data and len(result.data) > 0:
                 request_id = result.data[0]['id']
                 logger.info(f"成功创建爬取请求记录，ID: {request_id}")
                 return request_id
             else:
-                logger.error("创建爬取请求记录失败：返回数据为空")
+                logger.error(f"创建爬取请求记录失败：返回数据为空。原始响应: {result}")
                 return None
                 
         except Exception as e:
             logger.error(f"创建爬取请求记录时出错: {e}")
+            logger.error(f"错误类型: {type(e)}")
+            logger.error(f"请求数据: {request_data}")
+            
+            # 如果是Supabase相关错误，记录更多信息
+            if hasattr(e, 'details'):
+                logger.error(f"Supabase错误详情: {e.details}")
+            if hasattr(e, 'hint'):
+                logger.error(f"Supabase错误提示: {e.hint}")
+            if hasattr(e, 'code'):
+                logger.error(f"Supabase错误代码: {e.code}")
+                
             return None
     
     async def update_request_status(self, request_id: int, status: str, 

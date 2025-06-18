@@ -11,7 +11,7 @@ class SupabaseManager:
         self._client: Client = None
         
     def get_client(self) -> Client:
-        """获取 Supabase 客户端"""
+        """获取 Supabase 客户端（用户级别的操作）"""
         if self._client is None:
             try:
                 self._client = create_client(
@@ -28,10 +28,17 @@ class SupabaseManager:
     def get_service_client(self) -> Client:
         """获取具有服务密钥的 Supabase 客户端（用于服务端操作）"""
         try:
-            return create_client(
+            # 使用 service key 以获得更高权限
+            service_key = settings.SUPABASE_SERVICE_KEY if hasattr(settings, 'SUPABASE_SERVICE_KEY') and settings.SUPABASE_SERVICE_KEY else settings.SUPABASE_KEY
+            
+            client = create_client(
                 settings.SUPABASE_URL,
-                settings.SUPABASE_KEY
+                service_key
             )
+            
+            logger.info(f"Supabase 服务客户端初始化成功，使用的KEY类型: {'SERVICE_KEY' if service_key != settings.SUPABASE_KEY else 'ANON_KEY'}")
+            return client
+            
         except Exception as e:
             logger.error(f"Supabase 服务客户端初始化失败: {e}")
             raise

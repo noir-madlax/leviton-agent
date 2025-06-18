@@ -78,6 +78,8 @@ class ScrapingResultProcessor:
                 request_data['request_type'] = 'search'
             elif 'category_' in file_name or 'bestseller' in file_name:
                 request_data['request_type'] = 'category'
+            elif 'product_' in file_name:
+                request_data['request_type'] = 'product'
             
             # 从scraping_summary获取信息（如果存在）
             if 'scraping_summary' in data:
@@ -112,6 +114,14 @@ class ScrapingResultProcessor:
             
             request_data['products_scraped'] = products_count
             
+            # 确保category_id是字符串类型（如果存在）
+            if request_data.get('category_id') is not None:
+                request_data['category_id'] = str(request_data['category_id'])
+            
+            # 确保search_term不超过数据库字段长度限制
+            if request_data.get('search_term'):
+                request_data['search_term'] = str(request_data['search_term'])[:500]  # 假设数据库字段限制为500字符
+            
             # 保存原始元数据
             request_data['request_metadata'] = {
                 'request_info': data.get('request_info', {}),
@@ -125,7 +135,12 @@ class ScrapingResultProcessor:
                 'processed_at': datetime.now().isoformat()
             }
             
-            logger.info(f"提取请求数据: 类型={request_data['request_type']}, 产品数={products_count}")
+            # 验证必要字段
+            if not request_data.get('request_type') or request_data['request_type'] == 'unknown':
+                logger.warning(f"无法确定请求类型，使用默认值 'category'")
+                request_data['request_type'] = 'category'
+            
+            logger.info(f"提取请求数据: 类型={request_data['request_type']}, 产品数={products_count}, 类别ID={request_data.get('category_id')}")
             
         except Exception as e:
             logger.error(f"提取请求数据时出错: {e}")

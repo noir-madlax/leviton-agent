@@ -20,6 +20,15 @@ from agent.services.product_prompt_service import ProductPromptService
 logging.basicConfig(level=getattr(logging, settings.LOG_LEVEL))
 logger = logging.getLogger(__name__)
 
+# 导入爬虫模块
+try:
+    from scraping import ScrapingOrchestrator
+    SCRAPING_AVAILABLE = True
+    logger.info("爬虫模块导入成功")
+except ImportError as e:
+    logger.error(f"爬虫模块导入失败: {e}")
+    SCRAPING_AVAILABLE = False
+
 # Agent 和工具集上下文将由 lifespan 管理
 agent = None
 init_error = None
@@ -426,14 +435,23 @@ async def process_amazon_url(request: dict):
         scrape_reviews (bool): 是否爬取评论，默认true
         review_coverage_months (int): 评论覆盖月数，默认6
     """
+    if not SCRAPING_AVAILABLE:
+        logger.error("爬虫模块不可用")
+        return {"task_id": "error", "status": "failed", "error": "爬虫模块不可用"}
+    
     try:
-        from scraping import ScrapingOrchestrator
+        logger.info(f"收到爬虫请求: {request}")
         
         # 解析请求参数
         url = request.get("url", "").strip()
         max_products = request.get("max_products", 100)
         scrape_reviews = request.get("scrape_reviews", True)
         review_coverage_months = request.get("review_coverage_months", 6)
+        
+        if not url:
+            return {"task_id": "error", "status": "failed", "error": "URL 不能为空"}
+        
+        logger.info(f"开始处理URL: {url}, max_products: {max_products}")
         
         # 使用新的编排服务
         orchestrator = ScrapingOrchestrator()
@@ -443,14 +461,16 @@ async def process_amazon_url(request: dict):
             scrape_reviews=scrape_reviews,
             review_coverage_months=review_coverage_months
         )
+        
+        logger.info(f"爬虫任务完成: {result}")
         return result
         
     except ValueError as e:
         logger.error(f"参数错误: {e}")
-        return {"error": str(e)}
+        return {"task_id": "error", "status": "failed", "error": str(e)}
     except Exception as e:
-        logger.error(f"处理爬虫请求时出错: {e}")
-        return {"error": f"处理请求失败: {str(e)}"}
+        logger.error(f"处理爬虫请求时出错: {e}", exc_info=True)
+        return {"task_id": "error", "status": "failed", "error": f"处理请求失败: {str(e)}"}
 
 @app.post("/api/scraping/products-only")
 async def scrape_products_only(request: dict):
@@ -461,9 +481,10 @@ async def scrape_products_only(request: dict):
         url (str): Amazon URL
         max_products (int): 最大产品数量，默认100
     """
+    if not SCRAPING_AVAILABLE:
+        return {"error": "爬虫模块不可用"}
+    
     try:
-        from scraping import ScrapingOrchestrator
-        
         url = request.get("url", "").strip()
         max_products = request.get("max_products", 100)
         
@@ -472,7 +493,7 @@ async def scrape_products_only(request: dict):
         return result
         
     except Exception as e:
-        logger.error(f"处理商品爬取请求时出错: {e}")
+        logger.error(f"处理商品爬取请求时出错: {e}", exc_info=True)
         return {"error": f"处理请求失败: {str(e)}"}
 
 @app.post("/api/scraping/reviews-only")
@@ -484,9 +505,10 @@ async def scrape_reviews_only(request: dict):
         batch_id (int): 批次ID
         review_coverage_months (int): 评论覆盖月数，默认6
     """
+    if not SCRAPING_AVAILABLE:
+        return {"error": "爬虫模块不可用"}
+    
     try:
-        from scraping import ScrapingOrchestrator
-        
         batch_id = request.get("batch_id")
         review_coverage_months = request.get("review_coverage_months", 6)
         
@@ -498,7 +520,7 @@ async def scrape_reviews_only(request: dict):
         return result
         
     except Exception as e:
-        logger.error(f"处理评论爬取请求时出错: {e}")
+        logger.error(f"处理评论爬取请求时出错: {e}", exc_info=True)
         return {"error": f"处理请求失败: {str(e)}"}
 
 @app.get("/api/scraping/status/{batch_id}")
@@ -509,15 +531,16 @@ async def get_scraping_status(batch_id: int):
     Args:
         batch_id (int): 批次ID
     """
+    if not SCRAPING_AVAILABLE:
+        return {"error": "爬虫模块不可用"}
+    
     try:
-        from scraping import ScrapingOrchestrator
-        
         orchestrator = ScrapingOrchestrator()
         status = await orchestrator.get_process_status(batch_id=batch_id)
         return status
         
     except Exception as e:
-        logger.error(f"获取爬取状态时出错: {e}")
+        logger.error(f"获取爬取状态时出错: {e}", exc_info=True)
         return {"error": f"获取状态失败: {str(e)}"}
 
 if __name__ == "__main__":
