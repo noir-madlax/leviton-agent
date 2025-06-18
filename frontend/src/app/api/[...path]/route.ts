@@ -4,24 +4,29 @@ import { NextRequest, NextResponse } from 'next/server';
 const BACKEND_URL = process.env.BACKEND_URL || process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
 
 // 支持的 HTTP 方法
-export async function GET(request: NextRequest, { params }: { params: { path: string[] } }) {
-  return proxyRequest(request, params.path, 'GET');
+export async function GET(request: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
+  const resolvedParams = await params;
+  return proxyRequest(request, resolvedParams.path, 'GET');
 }
 
-export async function POST(request: NextRequest, { params }: { params: { path: string[] } }) {
-  return proxyRequest(request, params.path, 'POST');
+export async function POST(request: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
+  const resolvedParams = await params;
+  return proxyRequest(request, resolvedParams.path, 'POST');
 }
 
-export async function PUT(request: NextRequest, { params }: { params: { path: string[] } }) {
-  return proxyRequest(request, params.path, 'PUT');
+export async function PUT(request: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
+  const resolvedParams = await params;
+  return proxyRequest(request, resolvedParams.path, 'PUT');
 }
 
-export async function DELETE(request: NextRequest, { params }: { params: { path: string[] } }) {
-  return proxyRequest(request, params.path, 'DELETE');
+export async function DELETE(request: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
+  const resolvedParams = await params;
+  return proxyRequest(request, resolvedParams.path, 'DELETE');
 }
 
-export async function PATCH(request: NextRequest, { params }: { params: { path: string[] } }) {
-  return proxyRequest(request, params.path, 'PATCH');
+export async function PATCH(request: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
+  const resolvedParams = await params;
+  return proxyRequest(request, resolvedParams.path, 'PATCH');
 }
 
 async function proxyRequest(request: NextRequest, pathSegments: string[], method: string) {

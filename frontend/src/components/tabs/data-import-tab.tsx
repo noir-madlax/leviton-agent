@@ -40,8 +40,8 @@ export function DataImportTab() {
     setResult(null);
 
     try {
-      const backendUrl = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
-      const response = await fetch(`${backendUrl}/api/scraping/process-url`, {
+      // 现在直接调用 /api/scraping/process-url，会被代理到后端
+      const response = await fetch('/api/scraping/process-url', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -53,6 +53,11 @@ export function DataImportTab() {
         }),
       });
 
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error || errorData.message || `HTTP ${response.status}`);
+      }
+
       const data = await response.json();
       setResult(data);
     } catch (error) {
@@ -60,7 +65,7 @@ export function DataImportTab() {
       setResult({
         task_id: 'error',
         status: 'failed',
-        error: 'Failed to start scraping task',
+        error: error instanceof Error ? error.message : 'Failed to start scraping task',
       });
     } finally {
       setIsLoading(false);
