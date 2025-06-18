@@ -38,15 +38,13 @@ services:
       - "80:80"
       - "443:443"
     volumes:
-      - ./Caddyfile:/etc/caddy/Caddyfile
       - caddy_data:/data
       - caddy_config:/config
     networks:
       - leviton-network
     depends_on:
       - leviton-agent-backend
-    environment:
-      - ACME_AGREE=true
+    command: caddy reverse-proxy --from 3po-agent.duckdns.org --to leviton-agent-backend:8000
 
 volumes:
   agent-data:
