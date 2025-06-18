@@ -17,6 +17,8 @@ services:
       - SUPABASE_KEY=${SUPABASE_KEY}
       - PROJECT_NAME=${PROJECT_NAME}
       - PHOENIX_ENDPOINT=${PHOENIX_ENDPOINT}
+      - APIFY_API_TOKEN=${APIFY_API_TOKEN}
+      - RAINFOREST_API_KEY=${RAINFOREST_API_KEY}
     volumes:
       - agent-data:/app/data
       - agent-logs:/app/logs
