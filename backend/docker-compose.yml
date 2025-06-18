@@ -4,8 +4,7 @@ services:
   leviton-agent-backend:
     build: .
     container_name: leviton-agent-backend
-    ports:
-      - "8000:8000"
+    # 移除端口映射，因为我们通过 Caddy 访问
     environment:
       - HOST=0.0.0.0
       - PORT=8000
@@ -32,27 +31,32 @@ services:
       retries: 3
       start_period: 40s
 
-# 添加 Cloudflare Tunnel 服务
-#注册了一个： api-leviton-agent.zhangzic.workers.dev
-
-   
-  cloudflare-tunnel:
-    image: cloudflare/cloudflared:latest
-    container_name: cloudflare-tunnel
-    command: tunnel run --token ${CLOUDFLARE_TOKEN}
-    restart: unless-stopped
+  caddy:
+    image: caddy:alpine
+    container_name: caddy-proxy
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
     networks:
-      - leviton-network  # 回到容器网络
+      - leviton-network
     depends_on:
       - leviton-agent-backend
-
+    restart: unless-stopped
 
 volumes:
   agent-data:
     driver: local
   agent-logs:
     driver: local
+  caddy_data:
+    driver: local
+  caddy_config:
+    driver: local
 
 networks:
   leviton-network:
-    driver: bridge 
+    driver: bridge

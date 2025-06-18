@@ -1,0 +1,3 @@
+3po-agent.duckdns.org {
+    reverse_proxy leviton-agent-backend:8000
+}
