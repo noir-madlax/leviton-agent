@@ -30,22 +30,32 @@ services:
       retries: 3
       start_period: 40s
 
-  ngrok:
-    image: ngrok/ngrok:latest
-    container_name: ngrok-tunnel
+  caddy:
+    image: caddy:latest
+    container_name: caddy-proxy
     restart: unless-stopped
-    command: ["ngrok", "http", "leviton-agent-backend:8000", "--log=stdout"]
     ports:
-      - 4040:4040  # Ngrok Web UI
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile
+      - caddy_data:/data
+      - caddy_config:/config
     networks:
       - leviton-network
     depends_on:
       - leviton-agent-backend
+    environment:
+      - ACME_AGREE=true
 
 volumes:
   agent-data:
     driver: local
   agent-logs:
+    driver: local
+  caddy_data:
+    driver: local
+  caddy_config:
     driver: local
 
 networks:
