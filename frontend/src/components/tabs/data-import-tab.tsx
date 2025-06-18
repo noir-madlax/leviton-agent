@@ -8,6 +8,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { AlertCircle, CheckCircle, Loader2 } from 'lucide-react';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { config } from '@/lib/config';
 
 interface ScrapingResult {
   task_id: string;
@@ -27,6 +28,9 @@ export function DataImportTab() {
   const [maxReviews, setMaxReviews] = useState<number | string>(15);
   const [isLoading, setIsLoading] = useState(false);
   const [result, setResult] = useState<ScrapingResult | null>(null);
+  
+  // 使用统一配置
+  const backendUrl = config.backendUrl;
 
 
   // 启动爬虫
@@ -40,8 +44,8 @@ export function DataImportTab() {
     setResult(null);
 
     try {
-      // 现在直接调用 /api/scraping/process-url，会被代理到后端
-      const response = await fetch('/api/scraping/process-url', {
+      // 直接调用后端 REST API
+      const response = await fetch(`${backendUrl}/api/scraping/process-url`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

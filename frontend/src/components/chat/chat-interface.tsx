@@ -9,6 +9,7 @@ import { Send, MessageSquare, TestTube2, ChevronDown, ChevronUp } from 'lucide-r
 import { useChart } from '@/contexts/chart-context';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { config } from '@/lib/config';
 
 // 图表数据类型定义
 interface ChartData {
@@ -36,6 +37,9 @@ interface MultiChartData {
 export function ChatInterface() {
   const { updateChart, setCompiling, setError } = useChart();
   
+  // 使用统一配置
+  const backendUrl = config.backendUrl;
+  
   // 测试区域相关状态
   const [testDataOpen, setTestDataOpen] = useState(false);
   const [testInput, setTestInput] = useState('');
@@ -50,7 +54,7 @@ export function ChatInterface() {
     isLoading,
     error 
   } = useChat({
-    api: '/api/chat',
+    api: `${backendUrl}/agent-stream`,
     streamProtocol: 'text',
     onResponse: (response) => {
       if (!response.ok) {
