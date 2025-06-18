@@ -41,7 +41,10 @@ services:
     container_name: cloudflare-tunnel
     command: tunnel run --token eyJhIjoiY2I0NjlmNDFkZmMyMWM0Yjk2YTkzZTE1NGQ1Mzg0YzMiLCJ0IjoiYzJkOGY4N2YtZGJhZC00NzQ3LTk1OWMtZGEwNTM4YWY3ZWQzIiwicyI6Ik0yUTBaVEprTVRjdFpERmhOUzAwWlRKYkxUZzNNelF0TURCaE1HTXpZek5oT1dZNSJ9
     restart: unless-stopped
-    network_mode: host
+    networks:
+      - leviton-network  # 回到容器网络
+    depends_on:
+      - leviton-agent-backend
 
 
 volumes:
