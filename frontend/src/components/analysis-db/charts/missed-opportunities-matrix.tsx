@@ -23,9 +23,9 @@ interface UseCaseMatrixProps {
 export function MissedOpportunitiesMatrix({ data, targetProducts }: UseCaseMatrixProps) {
   const { openPanel } = useReviewPanel()
   
-  // Map product names to their ASINs for precise filtering
+  // Map product names to their ASINs for precise filtering (consistent with DatabaseService)
   const productToAsin: Record<string, string> = {
-    'Leviton D26HD': 'B0BVKYKKRK',
+    'Leviton D26HD': 'B08RRM8VH5',
     'Leviton D215S': 'B0BVKZLT3B', 
     'Lutron Caseta Diva': 'B0BSHKS26L',
     'TP Link Switch': 'B01EZV35QU',

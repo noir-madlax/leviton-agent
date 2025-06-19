@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
@@ -10,16 +10,55 @@ import { CompetitorPainPointsMatrix } from "@/components/analysis-db/charts/comp
 import { MissedOpportunitiesMatrix } from "@/components/analysis-db/charts/missed-opportunities-matrix"
 import { CustomerSentimentBar } from "@/components/analysis-db/charts/customer-sentiment-bar"
 import { useProductPanel } from "@/components/analysis-db/contexts/product-panel-context"
-import { getCompetitorAnalysisData, getUseCaseAnalysisData } from "@/components/analysis-db/data/competitor-analysis"
-import { allReviewData } from "@/components/analysis-db/data/review-data"
+interface CompetitorAnalysisProps {
+  data: {
+    competitorAnalysis: {
+      targetProducts: string[]
+      matrixData: Array<{
+        product: string
+        category: string
+        categoryType: 'Physical' | 'Performance'
+        mentions: number
+        satisfactionRate: number
+        positiveCount: number
+        negativeCount: number
+        totalReviews: number
+      }>
+      productTotalReviews: Record<string, number>
+      useCaseData: {
+        targetProducts: string[]
+        matrixData: Array<{
+          product: string
+          useCase: string
+          mentions: number
+          satisfactionRate: number
+          gapLevel: number
+        }>
+      }
+    }
+    allReviewData: Record<string, Array<{
+      id: string
+      productId: string
+      content: string
+      sentiment: 'positive' | 'negative' | 'neutral'
+      category: string
+      aspect: string
+    }>>
+  }
+}
 
-export function CompetitorAnalysis() {
-  const competitorData = getCompetitorAnalysisData()
-  const useCaseData = getUseCaseAnalysisData()
+export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
+  // Use the pre-calculated data from DatabaseService directly
+  const competitorData = {
+    targetProducts: data.competitorAnalysis.targetProducts,
+    matrixData: data.competitorAnalysis.matrixData,
+    productTotalReviews: data.competitorAnalysis.productTotalReviews
+  }
+  const useCaseData = data.competitorAnalysis.useCaseData
 
-  // Map product names to their ASINs
+  // Map product names to their ASINs (consistent with DatabaseService)
   const productToAsin: Record<string, string> = {
-    'Leviton D26HD': 'B0BVKYKKRK',
+    'Leviton D26HD': 'B08RRM8VH5',
     'Leviton D215S': 'B0BVKZLT3B', 
     'Lutron Caseta Diva': 'B0BSHKS26L',
     'TP Link Switch': 'B01EZV35QU',
@@ -27,84 +66,16 @@ export function CompetitorAnalysis() {
     'Lutron Diva': 'B085D8M2MR'
   }
 
-  // Generate matrix data based on actual review counts
-  const realMatrixData = useMemo(() => {
-    const products = competitorData.targetProducts
-    const categories = [...new Set(competitorData.matrixData.map(item => item.category))]
-    
-    const realData: any[] = []
-    
-    products.forEach(product => {
-      const productAsin = productToAsin[product]
-      if (!productAsin) return
-      
-      categories.forEach(category => {
-        const categoryReviews = allReviewData[category] || []
-        const productReviews = categoryReviews.filter(review => review.productId === productAsin)
-        
-        // Calculate satisfaction rate from actual reviews
-        const positiveReviews = productReviews.filter(review => review.sentiment === 'positive')
-        const negativeReviews = productReviews.filter(review => review.sentiment === 'negative')
-        const totalReviews = positiveReviews.length + negativeReviews.length
-        const satisfactionRate = totalReviews > 0 ? (positiveReviews.length / totalReviews) * 100 : 0
-        
-        // Get category type from original data
-        const originalData = competitorData.matrixData.find(item => 
-          item.product === product && item.category === category
-        )
-        
-        realData.push({
-          product,
-          category,
-          categoryType: originalData?.categoryType || 'Physical',
-          mentions: productReviews.length, // Use actual review count
-          satisfactionRate: Math.round(satisfactionRate * 10) / 10,
-          positiveCount: positiveReviews.length,
-          negativeCount: negativeReviews.length,
-          totalReviews: totalReviews
-        })
-      })
-    })
-    
-    return realData
-  }, [competitorData, allReviewData])
+  // Use the pre-calculated matrix data from DatabaseService
+  const realMatrixData = competitorData.matrixData
 
-  // Generate use case matrix data based on actual review counts
-  const realUseCaseData = useMemo(() => {
-    const products = useCaseData.targetProducts
-    const useCases = [...new Set(useCaseData.matrixData.map(item => item.useCase))]
-    
-    const realData: any[] = []
-    
-    products.forEach(product => {
-      const productAsin = productToAsin[product]
-      if (!productAsin) return
-      
-      useCases.forEach(useCase => {
-        const categoryReviews = allReviewData[useCase] || []
-        const productReviews = categoryReviews.filter(review => review.productId === productAsin)
-        
-        // Calculate satisfaction rate from actual reviews
-        const positiveReviews = productReviews.filter(review => review.sentiment === 'positive')
-        const negativeReviews = productReviews.filter(review => review.sentiment === 'negative')
-        const totalReviews = positiveReviews.length + negativeReviews.length
-        const satisfactionRate = totalReviews > 0 ? (positiveReviews.length / totalReviews) * 100 : 0
-        
-        realData.push({
-          product,
-          useCase,
-          mentions: productReviews.length, // Use actual review count
-          satisfactionRate: Math.round(satisfactionRate * 10) / 10,
-          positiveCount: positiveReviews.length,
-          negativeCount: negativeReviews.length,
-          totalReviews: totalReviews,
-          gapLevel: Math.round((100 - satisfactionRate) * 10) / 10
-        })
-      })
-    })
-    
-    return realData
-  }, [useCaseData, allReviewData])
+  // Use the pre-calculated use case data from DatabaseService and add missing fields
+  const realUseCaseData = useCaseData.matrixData.map(item => ({
+    ...item,
+    positiveCount: Math.floor(item.mentions * item.satisfactionRate / 100),
+    negativeCount: Math.floor(item.mentions * (100 - item.satisfactionRate) / 100),
+    totalReviews: item.mentions
+  }))
 
   // Amazon product URLs for focal products
   const productUrls: Record<string, string> = {
