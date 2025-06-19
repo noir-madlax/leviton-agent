@@ -17,6 +17,9 @@ from agent.dependencies import get_product_prompt_service
 from core.models.product_prompt import ProductPromptCreate, ProductPromptUpdate, ProductPromptResponse
 from agent.services.product_prompt_service import ProductPromptService
 
+# 导入图表验证服务
+from agent.services.chart_validation_service import validate_chart_response, chart_validation_service
+
 # 配置日志
 logging.basicConfig(level=getattr(logging, settings.LOG_LEVEL))
 logger = logging.getLogger(__name__)
@@ -92,7 +95,8 @@ async def lifespan(app: FastAPI):
             tools=all_tools, 
             model=model,
             max_steps=settings.MAX_ITERATIONS,
-            additional_authorized_imports = ['json']
+            additional_authorized_imports = ['json'],
+            final_answer_checks=[check_reasoning_and_plot]
         )
 
         logger.info(f"Agent 初始化成功，加载的工具: {agent.tools}")
@@ -148,7 +152,7 @@ async def prepare_query_with_prompt(query: str) -> str:
         service = ProductPromptService(repository)
         
         # 获取提示词
-        prefixPrompt = await service.get_prompt_by_id(1)
+        prefixPrompt = await service.get_prompt_by_id(5)
         
         if not prefixPrompt:
             logger.warning("未找到 ID 为 1 的提示词，使用原始查询")
@@ -163,6 +167,93 @@ async def prepare_query_with_prompt(query: str) -> str:
         logger.error(f"准备查询提示词时出错: {e}")
         logger.info("使用原始查询继续执行")
         return query
+
+
+def is_valid_json(text: str) -> bool:
+    try:
+        json.loads(text)
+        return True
+    except json.JSONDecodeError:
+        return False
+
+
+def check_reasoning_and_plot(final_answer, agent_memory):
+    """
+    检查推理过程和图表是否正确
+    
+    Args:
+        final_answer: LLM 生成的最终答案
+        agent_memory: Agent 的内存状态
+        
+    Returns:
+        bool: 验证是否通过
+    """
+    logger.info("开始检查推理过程和图表是否正确")
+    
+    # 检查是否为 JSON 格式
+    if not is_valid_json(final_answer):
+        logger.info("结果不是有效的 JSON 格式，将作为普通字符串处理")
+        return True
+    
+    logger.info("结果成功解析为 JSON 格式，开始进行图表验证")
+    
+    # 使用图表验证服务进行全面验证
+    try:
+        validation_result = validate_chart_response(final_answer)
+        
+        # 记录验证结果
+        if validation_result["is_valid_json"]:
+            logger.info("✅ JSON 格式验证通过")
+            
+            chart_validation = validation_result.get("chart_validation")
+            if chart_validation:
+                chart_count = chart_validation.get("chart_count", 0)
+                logger.info(f"📊 发现 {chart_count} 个图表")
+                
+                if chart_validation["valid"]:
+                    logger.info("✅ 所有图表验证通过")
+                    
+                    # 记录详细信息
+                    for chart_detail in chart_validation.get("chart_details", []):
+                        chart_key = chart_detail["key"]
+                        if chart_detail["valid"]:
+                            logger.info(f"✅ {chart_key} 验证通过")
+                            if chart_detail.get("info"):
+                                for info in chart_detail["info"]:
+                                    logger.info(f"  📈 {chart_key}: {info}")
+                        else:
+                            logger.warning(f"⚠️ {chart_key} 验证存在问题")
+                
+                else:
+                    logger.warning("⚠️ 部分图表验证失败")
+                    for error in chart_validation.get("errors", []):
+                        logger.error(f"❌ 图表验证错误: {error}")
+                
+                # 记录警告信息（不影响通过状态）
+                if chart_validation.get("warnings"):
+                    for warning in chart_validation["warnings"]:
+                        logger.warning(f"⚠️ 图表验证警告: {warning}")
+                
+                # 生成验证摘要
+                summary = chart_validation_service.get_validation_summary(validation_result)
+                logger.info(f"📋 验证摘要: {summary}")
+                
+                # 返回验证结果
+                return validation_result["overall_valid"]
+            
+            else:
+                logger.error("❌ 图表验证过程中出现异常")
+                return False
+        
+        else:
+            logger.error("❌ JSON 格式验证失败")
+            if "json_error" in validation_result:
+                logger.error(f"JSON 解析错误: {validation_result['json_error']}")
+            return False
+            
+    except Exception as e:
+        logger.error(f"❌ 图表验证过程中出现异常: {e}", exc_info=True)
+        return False
 
 async def stream_agent_response(query: str):
     """
@@ -207,22 +298,6 @@ async def stream_agent_response(query: str):
         
         # 发送进度信息
         yield f"data: {json.dumps({'status': 'processing', 'message': '正在分析结果...'}, ensure_ascii=False)}\n\n"
-        
-
-
-        def is_valid_json(text: str) -> bool:
-            try:
-                json.loads(text)
-                return True
-            except json.JSONDecodeError:
-                return False
-
-        if is_valid_json(result):
-            logger.info("结果成功解析为 JSON 格式！！！！")
-            result = json.dumps(json.loads(result), ensure_ascii=False)
-        else:
-            logger.info("结果不是有效的 JSON 格式，将作为普通字符串处理")
-
 
         # 删除结果中的换行符（临时处理）
         # logger.info(f"去除换行符前 result...{result}")
@@ -231,6 +306,7 @@ async def stream_agent_response(query: str):
 
         # 将结果分块发送
         if is_valid_json(result):
+            logger.info("结果成功解析为 JSON 格式！，直接发送结果")
             yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"
         elif isinstance(result, str):
             # 按句号分割结果，更自然的分块方式
