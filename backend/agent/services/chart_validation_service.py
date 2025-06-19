@@ -121,6 +121,49 @@ class ChartValidationService:
             if re.search(pattern, code):
                 validation_result["warnings"].append(error_msg)
         
+        # 检查严重的语法错误（应该导致验证失败）
+        critical_errors = [
+            # 检查箭头函数参数的错误语法
+            (r'\(\s*\{\s*[\'"][^}]+[\'"]\s*\}\s*\)', "箭头函数参数中不应该有引号: ({name, percent}) 而不是 ({'name, percent'})"),
+            # 检查模板字符串中的错误引号
+            (r'\$\{\s*[\'"]\([^}]+\)\s*[\'"]\s*\}', "模板字符串中不应该有多余的引号和括号"),
+            # 检查 label 属性的常见错误
+            (r'label=\s*\{\s*\(\s*\{\s*[\'"][^}]*[\'"]\s*\}\s*\)', "label 属性的解构参数语法错误"),
+            # 检查不匹配的花括号和圆括号在属性中
+            (r'=\s*\{\s*\([^)]*\{\s*[\'"][^}]*[\'"]\s*\}[^)]*\)', "属性值中的括号和引号组合错误"),
+        ]
+        
+        for pattern, error_msg in critical_errors:
+            if re.search(pattern, code):
+                validation_result["valid"] = False
+                validation_result["errors"].append(f"严重语法错误: {error_msg}")
+        
+        # 检查模板字符串的语法
+        template_string_errors = [
+            # 检查 ${} 内部的语法
+            (r'\$\{[^}]*\$\{[^}]*\}[^}]*\}', "嵌套的模板字符串语法错误"),
+            # 检查多余的引号在模板字符串中
+            (r'\$\{\s*[\'"][^}]*[\'"][^}]*\}', "模板字符串内部不应该有多余的引号"),
+        ]
+        
+        for pattern, error_msg in template_string_errors:
+            if re.search(pattern, code):
+                validation_result["valid"] = False
+                validation_result["errors"].append(f"模板字符串语法错误: {error_msg}")
+        
+        # 检查 JSX 属性的语法
+        jsx_attribute_errors = [
+            # 检查属性值的引号使用
+            (r'(\w+)=\s*\{\s*\(\s*\{\s*[\'"]([^}]+)[\'"]\s*\}', "JSX 属性中解构对象的参数不应该有引号"),
+            # 检查箭头函数的参数
+            (r'=>\s*`[^`]*\$\{[^}]*\([^)]*\)[^}]*\}[^`]*`', "箭头函数返回的模板字符串中有语法错误"),
+        ]
+        
+        for pattern, error_msg in jsx_attribute_errors:
+            if re.search(pattern, code):
+                validation_result["valid"] = False
+                validation_result["errors"].append(f"JSX 语法错误: {error_msg}")
+        
         return validation_result
 
     def validate_chart_json(self, json_data: Dict[str, Any]) -> Dict[str, Any]:

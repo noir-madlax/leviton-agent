@@ -62,6 +62,9 @@ def check_reasoning_and_plot(final_answer, agent_memory):
 - `margin` 属性必须使用双大括号格式：`margin={{ top: 20, ... }}`
 - 必须包含 `DynamicChart` 组件定义
 - 必须使用 `ResponsiveContainer`
+- 箭头函数参数不应该有引号：`({name, percent})` 而不是 `({'name, percent'})`
+- 模板字符串中不应该有多余的引号和括号：`${(percent * 100).toFixed(0)}` 而不是 `${'(percent * 100).toFixed(0)'}`
+- JSX 属性值的语法必须正确
 
 ### JSON 结构规则
 - 支持格式：`{"chartData": {...}}` 或 `{"chart1": {...}, "chart2": {...}}`
@@ -122,8 +125,63 @@ eval("console.log('danger')");
 
 // ❌ 缺少 ResponsiveContainer
 <BarChart data={data}>
+
+// ❌ 箭头函数参数有引号
+label={({'name, percent'}) => `${name} ${percent}%`}
+
+// ❌ 模板字符串中有多余的引号和括号
+label={({name, percent}) => `${name} ${'(percent * 100).toFixed(0)'}%`}
+
+// ❌ JSX 属性语法错误
+<Pie label={({'value'}) => value} />
 ```
 
 ## 集成到 main.py
 
-服务已集成到 `main.py` 的 `check_reasoning_and_plot` 函数中，会在 Agent 生成最终答案时自动进行验证。 
+服务已集成到 `main.py` 的 `check_reasoning_and_plot` 函数中，会在 Agent 生成最终答案时自动进行验证。
+
+### 验证失败处理机制
+
+当验证失败时，`check_reasoning_and_plot` 函数会**抛出异常**而不是返回 `False`。这种设计有以下优势：
+
+1. **详细错误信息**：异常消息包含具体的验证错误和改进建议
+2. **Agent 自动改进**：smolagents 框架会捕获异常并将错误信息提供给 Agent
+3. **迭代优化**：Agent 可以根据错误信息自动调整和改进代码
+
+#### 异常处理流程
+
+```python
+def check_reasoning_and_plot(final_answer, agent_memory):
+    try:
+        # 执行验证
+        validation_result = validate_chart_response(final_answer)
+        
+        # 如果验证失败，抛出详细的异常信息
+        if not validation_result["overall_valid"]:
+            errors = chart_validation.get("errors", [])
+            error_details = [f"{i+1}. {error}" for i, error in enumerate(errors)]
+            
+            error_msg = f"图表验证失败，发现 {len(errors)} 个错误:\n"
+            error_msg += "\n".join(error_details)
+            error_msg += "\n\n请检查以下问题:"
+            error_msg += "\n- JSX 语法是否正确（特别是箭头函数参数格式）"
+            error_msg += "\n- 模板字符串中的引号是否正确"
+            error_msg += "\n- Recharts 组件属性格式是否正确（如 margin={{...}}）"
+            error_msg += "\n- 数据结构是否符合组件要求"
+            
+            raise Exception(error_msg)
+            
+        return True
+    except Exception as e:
+        # 重新抛出，供 Agent 获取错误信息
+        raise
+```
+
+#### 好处说明
+
+- **精确定位问题**：Agent 能够获得具体的语法错误位置和类型
+- **自动修复**：Agent 可以根据错误信息自动修正代码
+- **学习改进**：通过反复的错误反馈，Agent 能逐步提高代码质量
+- **调试友好**：开发者也能从日志中看到详细的验证过程
+
+这种设计确保了 Agent 能够持续改进，直到生成完全正确的 Recharts 代码。 
