@@ -139,12 +139,20 @@ CREATE TABLE product_taxonomies (
     product_count   INT DEFAULT 0
 );
 
--- Final product assignments
+-- Final product assignments (first-pass)
 CREATE TABLE product_segments (
     run_id       VARCHAR(50) REFERENCES segmentation_runs(id),
     product_id   BIGINT      REFERENCES amazon_products(id),
     taxonomy_id  BIGINT      REFERENCES product_taxonomies(id),
     confidence   FLOAT,
+    PRIMARY KEY (run_id, product_id)
+);
+
+-- *Refined* product assignments (post-LLM refinement)
+CREATE TABLE refined_product_segments (
+    run_id       VARCHAR(50) REFERENCES segmentation_runs(id),
+    product_id   BIGINT      REFERENCES amazon_products(id),
+    taxonomy_id  BIGINT      REFERENCES product_taxonomies(id),
     PRIMARY KEY (run_id, product_id)
 );
 
@@ -166,7 +174,8 @@ CREATE TABLE llm_interaction_index (
 - `segmentation_runs` is the root entity
 - `run_products` defines input scope
 - `product_taxonomies` contains generated categories
-- `product_segments` maps products to taxonomies
+- `product_segments` maps products to taxonomies (initial pass)
+- `refined_product_segments` stores the post-processing reassignment output
 - `llm_interaction_index` points to file storage
 
 ## 6. Implementation Plan
@@ -192,7 +201,7 @@ CREATE TABLE llm_interaction_index (
 - [x] Add taxonomy consolidation and refinement *(LLM-driven consolidation **and** assignment refinement ported – see `utils.refinement` + updated LLM client)*
 - [x] Supersede legacy helpers (`save_llm_cache`, `load_llm_cache`, `save_result_cache`) with unified `LLMCache`/`ResultCache` + DB index
 - [x] Implement directory management utilities *(deterministic batching integrated into service)*
-- [x] Port performance‐oriented helpers (`calculate_optimal_batch_sizes`, async rate-limiter) *(completed in v4.1)*
+- [x] Port performance-oriented helpers (`calculate_optimal_batch_sizes`, async rate-limiter) *(completed in v4.1)*
 - [x] Ensure proper order of taxonomy and segment creation *(fixed in v4.1)*
 
 ### 6.4 Phase 4: API Integration **(✅ Completed)**
@@ -201,12 +210,19 @@ CREATE TABLE llm_interaction_index (
 - [x] Implement result retrieval APIs *(`/results` endpoint implemented)*
 - [x] Add error handling and recovery *(completed with database transaction support)*
 
-### 6.5 Phase 5: Test & CI Stabilization  **(🚧 In&nbsp;progress)**
-After landing the API layer we shifted our focus to *quality gates* – a stable test-suite and CI pipeline.  Key tasks:
+### 6.5 Phase 5: Test & CI Stabilization  **(✅ Completed)**
+The quality-gate phase is finished.  The entire **phase-ordered test-suite** now passes with a single command:
 
-- [ ] **Stub-LLM Fixtures** – Replace brittle free-form text stubs with deterministic JSON fixtures so that response validation never depends on real model output.
-- [ ] **In-Memory Repository Parity** – Bring the fake repositories used in unit-tests to feature-parity with their real counterparts (e.g. `create_run_products`, taxonomy inserts).
-- [ ] **Fix Failing Tests** – Green-up the suites in `tests/test_llm_client.py`, `tests/test_service.py`, and `tests/test_api.py` (tracked in issue #42).
+```bash
+python -m pytest product_segmentation/tests/ -v -k "not test_db_integration_real"
+```
+
+Key accomplishments:
+
+- [x] **Stub-LLM Fixtures** – Introduced deterministic `StubLLM` JSON fixtures removing all brittle free-form text matching.
+- [x] **In-Memory Repository Parity** – In-memory fakes now fully mirror the production repositories (run-products, refined segments, taxonomies, progress updates).
+
+CI pipelines can therefore rely on the test-suite as an authoritative regression gate.
 
 ## 7. Key Components Detail
 

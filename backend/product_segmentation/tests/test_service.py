@@ -44,6 +44,8 @@ from product_segmentation.models import (
     SegmentationStatus,
     StartSegmentationRequest,
     ProductSegment,
+    ProductTaxonomyCreate,
+    ProductTaxonomy,
 )
 from product_segmentation.services.db_product_segmentation import (
     DatabaseProductSegmentationService,
@@ -61,6 +63,7 @@ from product_segmentation.repositories.product_taxonomy_repository import (
 from product_segmentation.repositories.llm_interaction_repository import (
     LLMInteractionRepository,
 )
+from product_segmentation.tests.stubs import StubLLM
 
 # ---------------------------------------------------------------------------
 # In-memory fakes (keep them minimal – only what tests require)
@@ -130,64 +133,22 @@ class _InMemSegmentRepo(ProductSegmentRepository):
         return await self.batch_create_segments(segments)
 
 
-class _StubLLM:
-    """Stub LLM client that returns deterministic responses."""
-
-    def __init__(self, fail_consolidation: bool = False, fail_refinement: bool = False):
-        self.fail_consolidation = fail_consolidation
-        self.fail_refinement = fail_refinement
-
-    async def segment_products(self, products, *, category: Optional[str] = None, **kwargs):  # type: ignore[override]
-        """Return deterministic segmentation."""
-        return {
-            "segments": [
-                {"product_id": pid, "taxonomy_id": 1, "category_name": "Category A"}
-                for pid in products
-            ],
-            "taxonomies": [
-                {
-                    "category_name": "Category A",
-                    "definition": "First category",
-                    "product_count": len(products)
-                }
-            ],
-            "cache_key": "stub_segment_1"
-        }
-
-    async def consolidate_taxonomy(self, taxonomies, **kwargs):  # type: ignore[override]
-        """Return deterministic consolidation."""
-        if self.fail_consolidation:
-            raise RuntimeError("Simulated consolidation failure")
-        return {
-            "consolidated": taxonomies[0] if taxonomies else {},
-            "cache_key": "stub_consolidate_1"
-        }
-
-    async def refine_assignments(self, segments, taxonomies=None, **kwargs):  # type: ignore[override]
-        """Return deterministic refinement."""
-        if self.fail_refinement:
-            raise RuntimeError("Simulated refinement failure")
-        return {
-            "segments": segments,
-            "cache_key": "stub_refine_1"
-        }
-
-
 class _InMemTaxonomyRepo(ProductTaxonomyRepository):
     """In-memory fake of ProductTaxonomyRepository."""
 
     def __init__(self) -> None:  # type: ignore[no-super-call]
         # Bypass parent __init__ (needs Supabase client)
+        self._client = None  # Add client attribute even though we don't use it
         self._taxonomies: List[Dict[str, Any]] = []
 
-    async def batch_create(self, run_id: str, taxonomies: List[Dict[str, Any]]) -> bool:  # type: ignore[override]
+    async def batch_create_taxonomies(self, taxonomies: List[ProductTaxonomyCreate]) -> bool:  # type: ignore[override]
         """Store taxonomies in memory."""
-        self._taxonomies.extend(taxonomies)
+        self._taxonomies.extend([tax.model_dump(exclude_unset=True) for tax in taxonomies])
         return True
 
-    async def get_taxonomies_by_run(self, run_id):  # type: ignore[override]
-        # Return everything for simplicity; real impl would filter
-        return self._taxonomies
+    async def get_taxonomies_by_run(self, run_id: str) -> List[ProductTaxonomy]:  # type: ignore[override]
+        """Return all taxonomies (no filtering in test implementation)."""
+        return [ProductTaxonomy.parse_obj(tax) for tax in self._taxonomies]
 
 
 class _InMemInteractionRepo(LLMInteractionRepository):
@@ -217,7 +178,7 @@ def _setup_service(
         _InMemRunRepo(),
         _InMemSegmentRepo(),
         storage,
-        _StubLLM(fail_consolidation, fail_refinement),
+        StubLLM(fail_consolidation, fail_refinement),
         _InMemTaxonomyRepo(),
         _InMemInteractionRepo(),
     )
@@ -253,12 +214,19 @@ def test_create_and_execute_run():
         assert run.processed_products == len(request.product_ids)
 
         seg_repo: _InMemSegmentRepo = service._segment_repo  # type: ignore[attr-defined]
-        assert len(seg_repo._segments) == len(request.product_ids)
+        # We expect:
+        # 1. Initial segments from create_run_products (4)
+        # 2. Segments from batch_create_segments (4) 
+        # 3. Refined segments from batch_create_refined_segments (4)
+        # Total: 4 * 3 = 12 segments
+        assert len(seg_repo._segments) == len(request.product_ids) * 3
 
         interaction_repo: _InMemInteractionRepo = service._interaction_repo  # type: ignore[attr-defined]
-        # For 4 products with batch_size=20 we expect 1 interaction record
-        assert len(interaction_repo._data) == 1
-        assert interaction_repo._data[0].cache_key is None or isinstance(interaction_repo._data[0].cache_key, str)
+        # For 4 products with batch_size=20 we expect 1 segmentation and 1 refinement interaction record
+        assert len(interaction_repo._data) == 2
+        types = {rec.interaction_type.value for rec in interaction_repo._data}
+        assert 'segmentation' in types
+        assert 'refine_assignments' in types
 
     try:
         asyncio.run(_run())
@@ -273,12 +241,15 @@ async def test_execute_run_consolidation_failure():
     try:
         service = _setup_service(temp_dir, fail_consolidation=True)
 
+        # Use 81 products to ensure multiple batches (batch size is 40)
+        product_ids = list(range(1, 82))  # 1 to 81
         request = StartSegmentationRequest(
-            product_ids=[1, 2, 3],
-            batch_size=2  # Small batch size to force multiple batches
+            product_ids=product_ids,
+            batch_size=3  # This doesn't affect batching, but kept for consistency
         )
         run_id = await service.create_run(request)
-        await service.execute_run(run_id)
+        with pytest.raises(RuntimeError):
+            await service.execute_run(run_id)
 
         run = await service._run_repo.get_by_id(run_id)
         assert run.status == SegmentationStatus.FAILED
@@ -294,12 +265,15 @@ async def test_execute_run_refinement_failure():
     try:
         service = _setup_service(temp_dir, fail_refinement=True)
 
+        # Use 81 products to ensure multiple batches (batch size is 40)
+        product_ids = list(range(1, 82))  # 1 to 81
         request = StartSegmentationRequest(
-            product_ids=[1, 2, 3],
-            batch_size=2  # Small batch size to force multiple batches
+            product_ids=product_ids,
+            batch_size=3  # This doesn't affect batching, but kept for consistency
         )
         run_id = await service.create_run(request)
-        await service.execute_run(run_id)
+        with pytest.raises(RuntimeError):
+            await service.execute_run(run_id)
 
         run = await service._run_repo.get_by_id(run_id)
         assert run.status == SegmentationStatus.FAILED

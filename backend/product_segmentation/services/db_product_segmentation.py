@@ -377,6 +377,7 @@ async def _demo() -> None:  # pragma: no cover – manual invocation helper
     from types import SimpleNamespace
     import tempfile
     import shutil
+    from product_segmentation.tests.stubs import StubLLM
 
     # ---------------------------------------------------------------------
     # In-memory repo implementations
@@ -449,52 +450,6 @@ async def _demo() -> None:  # pragma: no cover – manual invocation helper
                     return interaction
             return None
 
-    class _StubLLM:
-        """Stub LLM client that returns deterministic responses."""
-
-        def __init__(self, fail_consolidation: bool = False, fail_refinement: bool = False):
-            self.fail_consolidation = fail_consolidation
-            self.fail_refinement = fail_refinement
-
-        async def segment_products(self, products, *, category: Optional[str] = None, **kwargs):  # type: ignore[override]
-            """Return deterministic segmentation."""
-            return {
-                "segments": [
-                    {"product_id": pid, "taxonomy_id": 1, "category_name": "Category A"}
-                    for pid in products
-                ],
-                "taxonomies": [
-                    {
-                        "category_name": "Category A",
-                        "definition": "First category",
-                        "product_count": len(products)
-                    }
-                ],
-                "cache_key": "stub_segment_1"
-            }
-
-        async def consolidate_taxonomy(self, taxonomies: List[Dict[str, Any]], **kwargs):  # type: ignore[override]
-            """Return deterministic consolidation."""
-            if self.fail_consolidation:
-                raise RuntimeError("Simulated consolidation failure")
-            return {
-                "consolidated": taxonomies,
-                "cache_key": "stub_consolidate_1"
-            }
-
-        async def refine_assignments(
-            self,
-            segments: List[Dict[str, Any]],
-            taxonomies: Optional[List[Dict[str, Any]]] = None,
-        ) -> Dict[str, Any]:
-            """Return deterministic refinement."""
-            if self.fail_refinement:
-                raise RuntimeError("Simulated refinement failure")
-            return {
-                "segments": segments,
-                "cache_key": "stub_refine_1"
-            }
-
     # ---------------------------------------------------------------------
     # Wire dependencies
     # ---------------------------------------------------------------------
@@ -506,7 +461,7 @@ async def _demo() -> None:  # pragma: no cover – manual invocation helper
             _InMemRunRepo(),
             _InMemSegmentRepo(),
             storage,
-            _StubLLM(),
+            StubLLM(),
             taxonomy_repo=_InMemTaxonomyRepo(),
             interaction_repo=_InMemInteractionRepo(),
         )

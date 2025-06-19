@@ -104,7 +104,31 @@ class ProductSegmentationLLMClient:
         
         full_prompt = base_prompt + "\n\n" + batch_input
 
-        # Call LLM to extract taxonomy
+        # ------------------------------------------------------------------
+        # DB / Storage cache lookup (Phase-3.1 feature)
+        # ------------------------------------------------------------------
+        cache_key: str | None = None
+        if self._cache is not None:
+            cache_ctx = {"model": llm_cfg.LLM_MODEL_NAME, "temperature": llm_cfg.LLM_TEMPERATURE}
+            cache_key = self._cache.generate_key(full_prompt, cache_ctx)
+
+        # Try interaction-index based retrieval when we have the collaborators
+        if cache_key and self._interaction_repo is not None and self._storage is not None:
+            idx_row = await self._interaction_repo.get_by_cache_key(cache_key)
+            if idx_row is not None:
+                record = await self._storage.load_interaction(idx_row.file_path)
+                if record and isinstance(record, dict):
+                    response_data = record.get("response")
+                    if isinstance(response_data, dict):
+                        # Inject cache_key if missing so callers can rely on it.
+                        response_data.setdefault("cache_key", cache_key)
+                        logger.debug("Returning cached LLM response via DB/index lookup (key=%s)", cache_key)
+                        return response_data
+
+        # ------------------------------------------------------------------
+        # Fallback – call the (stub) LLM client
+        # ------------------------------------------------------------------
+
         response = await self._safe_llm_call(full_prompt)
 
         # Parse response
@@ -131,7 +155,10 @@ class ProductSegmentationLLMClient:
                     "taxonomy_id": len(taxonomies)  # 1-based index
                 })
 
-        return {"taxonomies": taxonomies, "segments": segments}
+        service_payload = {"taxonomies": taxonomies, "segments": segments}
+        if cache_key:
+            service_payload["cache_key"] = cache_key
+        return service_payload
 
     async def consolidate_taxonomy(
         self,
@@ -281,8 +308,12 @@ class ProductSegmentationLLMClient:
                 if self._cache is not None:
                     self._cache.save_response(full_prompt, response_text, cache_ctx)
 
+                # Ensure we have proper sets for validation
+                batch_product_ids = set(id_to_product.keys())
+                valid_subcategory_ids = set(id_to_subcategory.keys())
+                
                 is_valid, result = _rf.parse_and_validate_refinement_response(
-                    response_text, set(id_to_product.keys()), set(id_to_subcategory.keys())
+                    response_text, batch_product_ids, valid_subcategory_ids
                 )
 
                 if is_valid:
@@ -515,13 +546,14 @@ class ProductSegmentationLLMClient:
         return base_prompt + retry_section
 
     async def _safe_llm_call(self, prompt: str) -> str:
-        """Delegate to the project-wide :pyfunc:`safe_llm_call`."""
-        # The *model* and *temperature* parameters are preserved for API
-        # compatibility but the actual selection happens inside the global
-        # LLM manager (configured via environment variables).  We therefore
-        # ignore them here.
-
-        return await safe_llm_call(prompt)
+        """Delegate to the configured LLM client."""
+        # Use the LLM client that was passed to the constructor
+        if hasattr(self._llm, '__call__'):
+            # If it's a callable (like StubLLM), call it directly
+            return await self._llm(prompt)
+        else:
+            # Fall back to the global safe_llm_call for real LLM clients
+            return await safe_llm_call(prompt)
 
     def _extract_json_from_response(self, response_text: str) -> str:
         """Extract JSON from LLM response text."""

@@ -12,50 +12,8 @@ from product_segmentation.llm.product_segmentation_client import (
 )
 from product_segmentation.models import InteractionType, LLMInteractionIndex
 from product_segmentation.utils.cache import create_llm_cache
+from product_segmentation.tests.stubs import StubLLM
 from utils import config as cfg
-
-
-class _StubLLM:
-    """Stub LLM client that returns deterministic responses."""
-
-    def __init__(self, fail_consolidation: bool = False, fail_refinement: bool = False):
-        self.fail_consolidation = fail_consolidation
-        self.fail_refinement = fail_refinement
-
-    async def segment_products(self, products, *, category: Optional[str] = None, model: str = None, temperature: float = None, **kwargs):  # type: ignore[override]
-        """Return deterministic segmentation."""
-        return {
-            "segments": [
-                {"product_id": pid, "taxonomy_id": 1, "category_name": "Category A"}
-                for pid in products
-            ],
-            "taxonomies": [
-                {
-                    "category_name": "Category A",
-                    "definition": "First category",
-                    "product_count": len(products)
-                }
-            ],
-            "cache_key": "stub_segment_1"
-        }
-
-    async def consolidate_taxonomy(self, taxonomies, **kwargs):  # type: ignore[override]
-        """Return deterministic consolidation."""
-        if self.fail_consolidation:
-            raise RuntimeError("Simulated consolidation failure")
-        return {
-            "consolidated": taxonomies[0] if taxonomies else {},
-            "cache_key": "stub_consolidate_1"
-        }
-
-    async def refine_assignments(self, segments, taxonomies=None, **kwargs):  # type: ignore[override]
-        """Return deterministic refinement."""
-        if self.fail_refinement:
-            raise RuntimeError("Simulated refinement failure")
-        return {
-            "segments": segments,
-            "cache_key": "stub_refine_1"
-        }
 
 
 class _StubInteractionRepo:
@@ -135,7 +93,7 @@ async def test_db_index_cache_roundtrip(tmp_path):
 
     # LLM client with *no* file-cache entry but DB+storage integration
     client = ProductSegmentationLLMClient(
-        llm_client=_StubLLM(),  # Use stub LLM to avoid real API calls
+        llm_client=StubLLM(),  # Use stub LLM to avoid real API calls
         prompts={"extract_taxonomy": prompt},
         max_retries=1,
         cache=llm_cache,  # just used for key generation
