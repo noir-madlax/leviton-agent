@@ -1,7 +1,7 @@
 import pytest
 from fastapi.testclient import TestClient
 from fastapi import FastAPI
-from backend.product_segmentation.api import router as segmentation_router
+from product_segmentation.api import router as segmentation_router
 import time
 from typing import Dict, Any, Optional, List
 

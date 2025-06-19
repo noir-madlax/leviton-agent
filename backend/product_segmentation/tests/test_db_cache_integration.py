@@ -7,12 +7,12 @@ from typing import Any, Dict, List, Optional
 import asyncio
 import pytest
 
-from backend.product_segmentation.llm.product_segmentation_client import (
+from product_segmentation.llm.product_segmentation_client import (
     ProductSegmentationLLMClient,
 )
-from backend.product_segmentation.models import InteractionType, LLMInteractionIndex
-from backend.product_segmentation.utils.cache import create_llm_cache
-from backend.utils import config as cfg
+from product_segmentation.models import InteractionType, LLMInteractionIndex
+from product_segmentation.utils.cache import create_llm_cache
+from utils import config as cfg
 
 
 class _StubLLM:

@@ -4,7 +4,7 @@ Repository for product segment data access
 from typing import Optional, List
 from supabase import Client
 import logging
-from backend.product_segmentation.models import (
+from product_segmentation.models import (
     ProductSegment,
     ProductSegmentCreate,
     RunProduct,

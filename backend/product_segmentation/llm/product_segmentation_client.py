@@ -15,15 +15,15 @@ import json
 import logging
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-from backend.product_segmentation.utils.cache import LLMCache  # file-layer cache
-from backend.product_segmentation.repositories.llm_interaction_repository import (
+from product_segmentation.utils.cache import LLMCache  # file-layer cache
+from product_segmentation.repositories.llm_interaction_repository import (
     LLMInteractionRepository,
 )
-from backend.product_segmentation.storage.llm_storage import LLMStorageService
-from backend.product_segmentation.utils import refinement as _rf
-from backend.utils.llm_utils import safe_llm_call  # shared util
-from backend.utils import config as llm_cfg
-from backend.product_segmentation import config as seg_cfg
+from product_segmentation.storage.llm_storage import LLMStorageService
+from product_segmentation.utils import refinement as _rf
+from utils.llm_utils import safe_llm_call  # shared util
+from utils import config as llm_cfg
+from product_segmentation import config as seg_cfg
 
 logger = logging.getLogger(__name__)
 
@@ -314,7 +314,7 @@ class ProductSegmentationLLMClient:
 
     def _build_batch_input(self, products: Sequence[int]) -> str:
         """Build product input section for LLM prompt."""
-        from backend.core.database.connection import get_supabase_service_client  # local import
+        from core.database.connection import get_supabase_service_client  # local import
         supa = get_supabase_service_client()
         if not products:
             return ""

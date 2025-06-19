@@ -15,7 +15,7 @@ from typing import List
 import logging
 from supabase import Client
 
-from backend.product_segmentation.models import (
+from product_segmentation.models import (
     LLMInteractionIndex,
     LLMInteractionIndexCreate,
 )

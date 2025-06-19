@@ -3,7 +3,7 @@ Tests for product segmentation models
 """
 import pytest
 from pydantic import ValidationError
-from backend.product_segmentation.models import (
+from product_segmentation.models import (
     SegmentationRunCreate, SegmentationStatus, InteractionType,
     ProductTaxonomyCreate, ProductSegmentCreate, LLMInteractionIndexCreate,
     StartSegmentationRequest

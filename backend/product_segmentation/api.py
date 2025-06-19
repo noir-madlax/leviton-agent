@@ -28,17 +28,17 @@ from typing import Dict, List, Optional
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.responses import JSONResponse
 
-from backend.product_segmentation.models import (
+from product_segmentation.models import (
     ProductSegment,
     SegmentationResultsResponse,
     SegmentationStatusResponse,
     SegmentationStatus,
     StartSegmentationRequest,
 )
-from backend.product_segmentation.services.db_product_segmentation import (
+from product_segmentation.services.db_product_segmentation import (
     DatabaseProductSegmentationService,
 )
-from backend.product_segmentation.storage.llm_storage import LLMStorageService
+from product_segmentation.storage.llm_storage import LLMStorageService
 
 # ---------------------------------------------------------------------------
 # In-memory helper implementations (keep test-friendly, no external services)

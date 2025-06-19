@@ -4,7 +4,7 @@ Repository for segmentation run data access
 from typing import Optional, List, Dict, Any
 from supabase import Client
 import logging
-from backend.product_segmentation.models import (
+from product_segmentation.models import (
     SegmentationRun,
     SegmentationRunCreate,
     SegmentationStatus,

@@ -11,21 +11,21 @@ import pytest
 # Absolute imports – project packaging rules enforce non-relative imports.
 # ---------------------------------------------------------------------------
 
-from backend.core.database.connection import get_supabase_service_client
-from backend.product_segmentation.models import (
+from core.database.connection import get_supabase_service_client
+from product_segmentation.models import (
     SegmentationStatus,
     StartSegmentationRequest,
 )
-from backend.product_segmentation.repositories.llm_interaction_repository import LLMInteractionRepository
-from backend.product_segmentation.repositories.product_segment_repository import ProductSegmentRepository
-from backend.product_segmentation.repositories.product_taxonomy_repository import ProductTaxonomyRepository
-from backend.product_segmentation.repositories.segmentation_run_repository import SegmentationRunRepository
-from backend.product_segmentation.services.db_product_segmentation import DatabaseProductSegmentationService
-from backend.product_segmentation.storage.llm_storage import LLMStorageService
+from product_segmentation.repositories.llm_interaction_repository import LLMInteractionRepository
+from product_segmentation.repositories.product_segment_repository import ProductSegmentRepository
+from product_segmentation.repositories.product_taxonomy_repository import ProductTaxonomyRepository
+from product_segmentation.repositories.segmentation_run_repository import SegmentationRunRepository
+from product_segmentation.services.db_product_segmentation import DatabaseProductSegmentationService
+from product_segmentation.storage.llm_storage import LLMStorageService
 
 # Use the production LLM client that internally relies on the shared
 # `safe_llm_call` helper (and therefore honours global rate limits).
-from backend.product_segmentation.llm.product_segmentation_client import (
+from product_segmentation.llm.product_segmentation_client import (
     ProductSegmentationLLMClient,
 )
 

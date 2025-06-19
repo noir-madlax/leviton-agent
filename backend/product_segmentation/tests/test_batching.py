@@ -5,7 +5,7 @@ from typing import List
 import pandas as pd
 import numpy as np
 
-from backend.product_segmentation.utils.batching import (
+from product_segmentation.utils.batching import (
     calculate_optimal_batch_sizes,
     make_batches,
     DEFAULT_SEED,

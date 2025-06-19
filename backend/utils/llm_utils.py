@@ -18,8 +18,8 @@ from dotenv import load_dotenv, find_dotenv
 from langchain_anthropic import ChatAnthropic
 import json  # still used elsewhere
 
-from backend.utils.rate_limiter import RateLimiter
-from backend.utils import config as cfg
+from utils.rate_limiter import RateLimiter
+from utils import config as cfg
 
 logger = logging.getLogger(__name__)
 load_dotenv(find_dotenv())

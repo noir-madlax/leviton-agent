@@ -3,8 +3,8 @@
 import pytest
 import json
 import pytest_asyncio
-from backend.product_segmentation.llm.product_segmentation_client import ProductSegmentationLLMClient
-from backend.product_segmentation.utils.cache import create_llm_cache
+from product_segmentation.llm.product_segmentation_client import ProductSegmentationLLMClient
+from product_segmentation.utils.cache import create_llm_cache
 
 
 class TestProductSegmentationLLMClient:

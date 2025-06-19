@@ -152,7 +152,7 @@ def main():
     # Phase 2: File Storage System
     print("\n💾 PHASE 2: File Storage System")
     try:
-        from backend.product_segmentation.tests.test_storage import run_storage_tests
+        from product_segmentation.tests.test_storage import run_storage_tests
         results.append(run_storage_tests())
     except Exception as e:
         print(f"❌ Storage tests failed: {e}")
@@ -163,7 +163,7 @@ def main():
     # Phase 2b: Directory/Batching Utilities
     print("\n📦 PHASE 2b: Batching Utilities")
     try:
-        from backend.product_segmentation.tests.test_batching import run_batching_tests
+        from product_segmentation.tests.test_batching import run_batching_tests
         results.append(run_batching_tests())
     except Exception as e:
         print(f"❌ Batching tests failed: {e}")
@@ -174,7 +174,7 @@ def main():
     # Phase 2c: Interaction Repository
     print("\n📑 PHASE 2c: Interaction Repository")
     try:
-        from backend.product_segmentation.tests.test_interaction_repository import TestLLMInteractionRepository  # noqa: F401
+        from product_segmentation.tests.test_interaction_repository import TestLLMInteractionRepository  # noqa: F401
         import pytest, importlib, inspect
         # Dynamically collect the tests and run via pytest.main in-process
         # We run only the tests from this module to keep the runner lightweight.
@@ -193,7 +193,7 @@ def main():
     # Phase 3: Core Segmentation Service
     print("\n⚙️  PHASE 3: Core Segmentation Service")
     try:
-        from backend.product_segmentation.tests.test_service import run_service_tests
+        from product_segmentation.tests.test_service import run_service_tests
         results.append(run_service_tests())
     except Exception as e:
         print(f"❌ Service tests failed: {e}")
@@ -204,7 +204,7 @@ def main():
     # Phase 2d: Cache Utilities
     print("\n🗄️  PHASE 2d: Cache Utilities")
     try:
-        from backend.product_segmentation.tests import test_cache as _  # noqa: F401
+        from product_segmentation.tests import test_cache as _  # noqa: F401
         import pytest
         result_code = pytest.main(["backend/product_segmentation/tests/test_cache.py", "-q"])
         results.append(result_code == 0)

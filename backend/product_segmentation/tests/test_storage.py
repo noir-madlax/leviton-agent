@@ -6,7 +6,7 @@ import tempfile
 import shutil
 import json
 from pathlib import Path
-from backend.product_segmentation.storage.llm_storage import (
+from product_segmentation.storage.llm_storage import (
     LLMStorageService,
     LocalStorageBackend,
 )

@@ -47,10 +47,10 @@ except ModuleNotFoundError:
     sys.modules["supabase"] = supabase_stub
 
 # After the stub is in place, import the repository
-from backend.product_segmentation.repositories.llm_interaction_repository import (
+from product_segmentation.repositories.llm_interaction_repository import (
     LLMInteractionRepository,
 )
-from backend.product_segmentation.models import LLMInteractionIndexCreate, InteractionType
+from product_segmentation.models import LLMInteractionIndexCreate, InteractionType
 
 
 class TestLLMInteractionRepository:  # pylint: disable=too-few-public-methods

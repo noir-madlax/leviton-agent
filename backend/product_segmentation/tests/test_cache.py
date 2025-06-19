@@ -6,7 +6,7 @@ from pathlib import Path
 
 import pytest
 
-from backend.product_segmentation.utils.cache import (
+from product_segmentation.utils.cache import (
     create_llm_cache,
     create_result_cache,
 )

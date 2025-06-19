@@ -30,7 +30,7 @@ import secrets
 
 import pandas as pd
 
-from backend.product_segmentation.models import (
+from product_segmentation.models import (
     InteractionType,
     ProductSegmentCreate,
     SegmentationRunCreate,
@@ -40,23 +40,23 @@ from backend.product_segmentation.models import (
     LLMInteractionIndexCreate,
     RefinedProductSegmentCreate,
 )
-from backend.product_segmentation.repositories.product_segment_repository import (
+from product_segmentation.repositories.product_segment_repository import (
     ProductSegmentRepository,
 )
-from backend.product_segmentation.repositories.segmentation_run_repository import (
+from product_segmentation.repositories.segmentation_run_repository import (
     SegmentationRunRepository,
 )
-from backend.product_segmentation.repositories.product_taxonomy_repository import (
+from product_segmentation.repositories.product_taxonomy_repository import (
     ProductTaxonomyRepository,
 )
-from backend.product_segmentation.repositories.llm_interaction_repository import (
+from product_segmentation.repositories.llm_interaction_repository import (
     LLMInteractionRepository,
 )
-from backend.product_segmentation.storage.llm_storage import LLMStorageService
-from backend.product_segmentation.utils.taxonomy import merge_batch_taxonomies
-from backend.product_segmentation.utils.batching import make_batches
-from backend.utils import config as llm_cfg
-from backend.product_segmentation import config as seg_cfg
+from product_segmentation.storage.llm_storage import LLMStorageService
+from product_segmentation.utils.taxonomy import merge_batch_taxonomies
+from product_segmentation.utils.batching import make_batches
+from utils import config as llm_cfg
+from product_segmentation import config as seg_cfg
 
 logger = logging.getLogger(__name__)
 
@@ -165,8 +165,8 @@ class DatabaseProductSegmentationService:
     async def execute_run(self, run_id: str) -> None:
         """Execute a segmentation run to completion."""
         try:
-        run = await self._run_repo.get_by_id(run_id)
-        if run is None:
+            run = await self._run_repo.get_by_id(run_id)
+            if run is None:
                 raise ValueError(f"Run {run_id} not found")
 
             products = await self._segment_repo.get_run_products(run_id)

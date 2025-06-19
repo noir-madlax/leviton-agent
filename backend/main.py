@@ -6,11 +6,11 @@ import json
 import logging
 from typing import Optional, List
 from contextlib import asynccontextmanager
-from backend.config import settings
+from config import settings
 from agent.tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
 from phoenix.otel import register
 from openinference.instrumentation.smolagents import SmolagentsInstrumentor
-from backend.product_segmentation.api import router as segmentation_router
+from product_segmentation.api import router as segmentation_router
 
 # 导入 ORM 相关模块
 from agent.dependencies import get_product_prompt_service
