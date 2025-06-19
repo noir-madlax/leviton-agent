@@ -20,3 +20,6 @@ env/
 # 操作系统生成的文件
 .DS_Store
 Thumbs.db 
+
+#老代码不要上传
+/archive/
