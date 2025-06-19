@@ -105,6 +105,60 @@ interface DashboardData {
       salesRevenue: number
     }>
   }
+  reviewInsights: {
+    painPoints: Array<{
+      aspect: string
+      category: string
+      severity: number
+      frequency: number
+      impactedProducts: number
+      type: 'Physical' | 'Performance' | 'Usability'
+    }>
+    customerLikes: Array<{
+      feature: string
+      category: string
+      frequency: number
+      satisfactionLevel: 'High' | 'Medium' | 'Low'
+    }>
+    underservedUseCases: Array<{
+      useCase: string
+      productAttribute: string
+      gapLevel: number
+      mentionCount: number
+    }>
+  }
+  competitorAnalysis: {
+    targetProducts: string[]
+    matrixData: Array<{
+      product: string
+      category: string
+      categoryType: 'Physical' | 'Performance'
+      mentions: number
+      satisfactionRate: number
+      positiveCount: number
+      negativeCount: number
+      totalReviews: number
+    }>
+    productTotalReviews: Record<string, number>
+    useCaseData: {
+      targetProducts: string[]
+      matrixData: Array<{
+        product: string
+        useCase: string
+        mentions: number
+        satisfactionRate: number
+        gapLevel: number
+      }>
+    }
+  }
+  allReviewData: Record<string, Array<{
+    id: string
+    productId: string
+    content: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    category: string
+    aspect: string
+  }>>
 }
 
 async function fetchDatabaseData(): Promise<DashboardData> {
@@ -114,13 +168,19 @@ async function fetchDatabaseData(): Promise<DashboardData> {
       productAnalysisData,
       pricingAnalysisData,
       marketInsightsData,
-      packagePreferenceData
+      packagePreferenceData,
+      reviewInsightsData,
+      competitorAnalysisData,
+      allReviewData
     ] = await Promise.all([
       databaseService.getBrandCategoryRevenue(),
       databaseService.getProductAnalysisData(),
       databaseService.getPricingAnalysisData(),
       databaseService.getMarketInsightsData(),
-      databaseService.getPackagePreferenceData()
+      databaseService.getPackagePreferenceData(),
+      databaseService.getReviewInsightsData(),
+      databaseService.getCompetitorAnalysisData(),
+      databaseService.getAllReviewData()
     ])
 
     return {
@@ -130,7 +190,10 @@ async function fetchDatabaseData(): Promise<DashboardData> {
       productAnalysis: productAnalysisData,
       pricingAnalysis: pricingAnalysisData,
       marketInsights: marketInsightsData,
-      packagePreference: packagePreferenceData
+      packagePreference: packagePreferenceData,
+      reviewInsights: reviewInsightsData,
+      competitorAnalysis: competitorAnalysisData,
+      allReviewData: allReviewData
     }
   } catch (error) {
     console.error('Error fetching database data:', error)
@@ -157,13 +220,28 @@ async function fetchDatabaseData(): Promise<DashboardData> {
           lightSwitches: []
         }
       },
-      packagePreference: {
-        sameProductComparison: [],
-        packageDistribution: [],
-        dimmerSwitches: [],
-        lightSwitches: []
+              packagePreference: {
+          sameProductComparison: [],
+          packageDistribution: [],
+          dimmerSwitches: [],
+          lightSwitches: []
+        },
+        reviewInsights: {
+          painPoints: [],
+          customerLikes: [],
+          underservedUseCases: []
+        },
+        competitorAnalysis: {
+          targetProducts: [],
+          matrixData: [],
+          productTotalReviews: {},
+          useCaseData: {
+            targetProducts: [],
+            matrixData: []
+          }
+        },
+        allReviewData: {}
       }
-    }
   }
 }
 
@@ -303,11 +381,11 @@ export function AnalysisDbContainer() {
                   </TabsContent>
 
                   <TabsContent value="review-insights">
-                    <ReviewInsights />
+                    <ReviewInsights data={data} />
                   </TabsContent>
 
                   <TabsContent value="competitor-analysis">
-                    <CompetitorAnalysis />
+                    <CompetitorAnalysis data={data} />
                   </TabsContent>
                 </Tabs>
               </div>

@@ -25,7 +25,7 @@ export function CompetitorMatrix({ data, targetProducts }: CompetitorMatrixProps
   
   // Map product names to their ASINs for precise filtering
   const productToAsin: Record<string, string> = {
-    'Leviton D26HD': 'B0BVKYKKRK',
+    'Leviton D26HD': 'B08RRM8VH5',
     'Leviton D215S': 'B0BVKZLT3B', 
     'Lutron Caseta Diva': 'B0BSHKS26L',
     'TP Link Switch': 'B01EZV35QU',

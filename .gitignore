@@ -23,3 +23,6 @@ Thumbs.db
 
 #老代码不要上传
 /archive/
+
+#cursor的rule不要上传
+/.cursor/
