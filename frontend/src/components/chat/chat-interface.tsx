@@ -90,6 +90,33 @@ export function ChatInterface() {
         const extractChartData = (content: string) => {
           console.log('🔍 尝试提取图表数据，消息内容:', content);
           
+          // 新增：处理 SSE 格式数据
+          try {
+            // 查找状态为 "streaming" 的 SSE 消息
+            const lines = content.split('\n');
+            for (const line of lines) {
+              if (line.startsWith('data: ')) {
+                const jsonStr = line.substring(6); // 移除 "data: " 前缀
+                try {
+                  const sseData = JSON.parse(jsonStr);
+                  if (sseData.status === 'streaming' && sseData.message) {
+                    console.log('📡 找到 SSE streaming 数据:', sseData.message);
+                    // 解析内层的图表数据 JSON
+                    const chartData = JSON.parse(sseData.message);
+                    if (chartData.chart1 || chartData.chart2 || chartData.chartData) {
+                      console.log('✅ 成功从 SSE 数据中提取图表数据:', chartData);
+                      return chartData;
+                    }
+                  }
+                } catch {
+                  // 继续尝试其他行
+                }
+              }
+            }
+          } catch (error) {
+            console.error('❌ 解析 SSE 数据失败:', error);
+          }
+          
           // 方法1: 查找标记包装的图表数据（情况2）
           const chartStartRegex = /<<<CHART_START>>>/g;
           const chartEndRegex = /<<<CHART_END>>>/g;
