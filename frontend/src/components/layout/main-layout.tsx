@@ -8,6 +8,7 @@ import { ChartRenderer } from '@/components/charts/chart-renderer';
 import { DataImportTab } from '@/components/tabs/data-import-tab';
 import { DataConfirmationTab } from '@/components/tabs/data-confirmation-tab';
 import { AnalysisTab } from '@/components/tabs/analysis-tab';
+import { AnalysisDbTab } from '@/components/tabs/analysis-db-tab';
 
 export function MainLayout() {
   const [leftPanelWidth, setLeftPanelWidth] = useState(50); // 百分比
@@ -46,15 +47,18 @@ export function MainLayout() {
       <div className="flex-shrink-0 border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
         <div className="container mx-auto px-4 py-2">
           <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-            <TabsList className="grid w-full grid-cols-4">
+            <TabsList className="grid w-full grid-cols-5">
               <TabsTrigger value="step1" className="text-sm">
                 Step 1: Data Import
               </TabsTrigger>
               <TabsTrigger value="step2" className="text-sm">
                 Step 2: Data Confirmation
               </TabsTrigger>
-              <TabsTrigger value="step3" className="text-sm">
-                Step 3: Analysis
+              <TabsTrigger value="step3" className="text-xs">
+                Step 3: Analysis<br/>by File
+              </TabsTrigger>
+              <TabsTrigger value="step3-db" className="text-xs">
+                Step 3: Analysis<br/>by DB
               </TabsTrigger>
               <TabsTrigger value="step4" className="text-sm">
                 Step 4: Chat
@@ -81,10 +85,26 @@ export function MainLayout() {
             </div>
           </TabsContent>
 
-          {/* Step 3: 分析 */}
+          {/* Step 3: 分析 (文件版本) */}
           <TabsContent value="step3" className="h-full m-0">
             <div className="h-full p-4">
+              <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-4">
+                <div className="flex">
+                  <div className="ml-3">
+                    <p className="text-sm text-green-700">
+                      <strong>文件版本:</strong> 此版本使用静态文件数据
+                    </p>
+                  </div>
+                </div>
+              </div>
               <AnalysisTab />
+            </div>
+          </TabsContent>
+
+          {/* Step 3: 分析 (数据库版本) */}
+          <TabsContent value="step3-db" className="h-full m-0">
+            <div className="h-full p-4">
+              <AnalysisDbTab />
             </div>
           </TabsContent>
 

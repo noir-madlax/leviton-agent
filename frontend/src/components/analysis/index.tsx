@@ -37,7 +37,7 @@ export function AnalysisContainer() {
   if (loading) {
     return (
       <div className="h-full flex items-center justify-center">
-        <div className="text-lg">Loading analysis data...</div>
+        <div className="text-lg">Loading analysis data... (File Version)</div>
       </div>
     )
   }
@@ -45,7 +45,7 @@ export function AnalysisContainer() {
   if (!data) {
     return (
       <div className="h-full flex items-center justify-center">
-        <div className="text-lg text-red-500">Failed to load analysis data</div>
+        <div className="text-lg text-red-500">Failed to load analysis data (File Version)</div>
       </div>
     )
   }
@@ -56,6 +56,16 @@ export function AnalysisContainer() {
         <div className="h-full overflow-auto bg-gray-50">
           <div className="container mx-auto max-w-7xl bg-white p-6 md:p-8 rounded-lg shadow-md my-6">
             <DashboardHeader />
+            
+            <div className="bg-green-50 border-l-4 border-green-400 p-4 mb-6">
+              <div className="flex">
+                <div className="ml-3">
+                  <p className="text-sm text-green-700">
+                    <strong>文件版本:</strong> 此版本使用静态文件数据作为参考基准
+                  </p>
+                </div>
+              </div>
+            </div>
             
             <Tabs defaultValue="market-analysis" className="mt-6">
               <TabsList className="grid w-full grid-cols-3">
@@ -82,7 +92,7 @@ export function AnalysisContainer() {
             </Tabs>
 
             <div className="text-center text-gray-500 italic mt-8">
-              Report Generated:{" "}
+              Report Generated (File Version):{" "}
               {new Date().toLocaleDateString("en-US", {
                 month: "long",
                 day: "numeric",
