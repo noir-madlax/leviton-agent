@@ -39,7 +39,7 @@ interface CompetitorAnalysisProps {
     allReviewData: Record<string, Array<{
       id: string
       productId: string
-      content: string
+      text: string
       sentiment: 'positive' | 'negative' | 'neutral'
       category: string
       aspect: string

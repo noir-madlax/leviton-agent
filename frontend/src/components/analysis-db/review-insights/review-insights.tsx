@@ -35,10 +35,14 @@ interface ReviewInsightsProps {
     allReviewData: Record<string, Array<{
       id: string
       productId: string
-      content: string
+      text: string
       sentiment: 'positive' | 'negative' | 'neutral'
       category: string
       aspect: string
+      rating: number
+      verified: boolean
+      date: string
+      brand: string
     }>>
   }
 }

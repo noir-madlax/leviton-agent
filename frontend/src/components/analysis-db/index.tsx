@@ -13,6 +13,7 @@ import { CompetitorAnalysis } from "@/components/analysis-db/competitor-analysis
 import { ProductPanelProvider } from "@/components/analysis-db/contexts/product-panel-context"
 import { ReviewPanelProvider } from "@/components/analysis-db/contexts/review-panel-context"
 import { ProductPanel } from "@/components/analysis-db/panels/product-panel"
+import { ReviewPanel } from "@/components/analysis-db/panels/review-panel"
 import { databaseService, type ProductAnalysisData } from "@/components/analysis-db/data/database-service"
 
 interface DashboardData {
@@ -154,10 +155,14 @@ interface DashboardData {
   allReviewData: Record<string, Array<{
     id: string
     productId: string
-    content: string
+    text: string
     sentiment: 'positive' | 'negative' | 'neutral'
     category: string
     aspect: string
+    rating: number
+    verified: boolean
+    date: string
+    brand: string
   }>>
 }
 
@@ -240,7 +245,18 @@ async function fetchDatabaseData(): Promise<DashboardData> {
             matrixData: []
           }
         },
-        allReviewData: {}
+        allReviewData: {} as Record<string, Array<{
+          id: string
+          productId: string
+          text: string
+          sentiment: 'positive' | 'negative' | 'neutral'
+          category: string
+          aspect: string
+          rating: number
+          verified: boolean
+          date: string
+          brand: string
+        }>>
       }
   }
 }
@@ -294,9 +310,36 @@ export function AnalysisDbContainer() {
 
   // 构建产品列表用于面板显示
   const productLists = {
-    byBrand: {} as Record<string, any[]>,
-    bySegment: {} as Record<string, any[]>,
-    byPackageSize: {} as Record<string, any[]>
+    byBrand: {} as Record<string, Array<{
+      id: string
+      name: string
+      brand: string
+      price: number
+      unitPrice: number
+      revenue: number
+      volume: number
+      url: string
+    }>>,
+    bySegment: {} as Record<string, Array<{
+      id: string
+      name: string
+      brand: string
+      price: number
+      unitPrice: number
+      revenue: number
+      volume: number
+      url: string
+    }>>,
+    byPackageSize: {} as Record<string, Array<{
+      id: string
+      name: string
+      brand: string
+      price: number
+      unitPrice: number
+      revenue: number
+      volume: number
+      url: string
+    }>>
   }
 
   // 从产品分析数据构建产品列表
@@ -393,6 +436,7 @@ export function AnalysisDbContainer() {
           </div>
 
           <ProductPanel />
+          <ReviewPanel />
         </div>
       </ReviewPanelProvider>
     </ProductPanelProvider>

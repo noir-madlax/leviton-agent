@@ -13,6 +13,7 @@ import { fetchDashboardData } from "@/components/analysis/data/dashboard-data"
 import { ProductPanelProvider } from "@/components/analysis/contexts/product-panel-context"
 import { ProductPanel } from "@/components/analysis/panels/product-panel"
 import { ReviewPanelProvider } from "@/components/analysis/contexts/review-panel-context"
+import { ReviewPanel } from "@/components/analysis/panels/review-panel"
 import { useEffect, useState } from 'react'
 
 export function AnalysisContainer() {
@@ -105,6 +106,7 @@ export function AnalysisContainer() {
           </div>
           
           <ProductPanel />
+          <ReviewPanel />
         </div>
       </ReviewPanelProvider>
     </ProductPanelProvider>

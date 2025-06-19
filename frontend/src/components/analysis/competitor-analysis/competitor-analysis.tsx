@@ -250,15 +250,6 @@ export function CompetitorAnalysis() {
         />
       </section>
 
-      {/* Add ReviewPanel */}
-      <ReviewPanel
-        isOpen={reviewPanel.isOpen}
-        onClose={reviewPanel.closePanel}
-        reviews={reviewPanel.reviews}
-        title={reviewPanel.title}
-        subtitle={reviewPanel.subtitle}
-        showFilters={reviewPanel.showFilters}
-      />
     </div>
   )
 } 

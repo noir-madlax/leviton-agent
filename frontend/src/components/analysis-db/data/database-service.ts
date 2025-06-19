@@ -1008,10 +1008,14 @@ export class DatabaseService {
   async getAllReviewData(): Promise<Record<string, Array<{
     id: string
     productId: string
-    content: string
+    text: string
     sentiment: 'positive' | 'negative' | 'neutral'
     category: string
     aspect: string
+    rating: number
+    verified: boolean
+    date: string
+    brand: string
   }>>> {
     const { data, error } = await supabase
       .from('product_review_analysis')
@@ -1041,10 +1045,14 @@ export class DatabaseService {
       reviewsByCategory[category].push({
         id: `${item.review_id}_${index}`,
         productId: item.product_id,
-        content: item.review_content,
+        text: item.review_content,
         sentiment: Math.random() > 0.6 ? 'positive' : Math.random() > 0.3 ? 'negative' : 'neutral', // 暂时随机分配sentiment
         category: item.aspect_category,
-        aspect: item.standardized_aspect
+        aspect: item.standardized_aspect,
+        rating: Math.floor(Math.random() * 5) + 1, // 暂时随机分配rating 1-5
+        verified: Math.random() > 0.7, // 暂时随机分配verified状态
+        date: new Date().toISOString().split('T')[0], // 暂时使用当前日期
+        brand: 'Unknown' // 暂时设为Unknown，可以后续从product表关联获取
       })
     })
 

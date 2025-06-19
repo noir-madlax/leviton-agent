@@ -2,9 +2,18 @@
 
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'
 import { PainPoint } from '@/components/analysis-db/data/review-insights'
+import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
 
 interface PainPointsScatterProps {
   data: PainPoint[]
+  allReviewData?: Record<string, Array<{
+    id: string
+    productId: string
+    text: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    category: string
+    aspect: string
+  }>>
 }
 
 const CustomTooltip = ({ active, payload }: any) => {
@@ -23,10 +32,45 @@ const CustomTooltip = ({ active, payload }: any) => {
   return null
 }
 
-export function PainPointsScatter({ data }: PainPointsScatterProps) {
+export function PainPointsScatter({ data, allReviewData }: PainPointsScatterProps) {
+  const { openPanel } = useReviewPanel()
+  
   const handleDotClick = (data: any) => {
-    if (data && data.payload) {
-      console.log('Pain point scatter clicked:', data.payload)
+    if (data && data.payload && allReviewData) {
+      const painPoint = data.payload
+      
+      // Find reviews related to this pain point aspect
+      const relatedReviews: any[] = []
+      Object.entries(allReviewData).forEach(([, reviews]) => {
+        const aspectReviews = reviews.filter(review => 
+          review.aspect.toLowerCase().includes(painPoint.aspect.toLowerCase()) ||
+          painPoint.aspect.toLowerCase().includes(review.aspect.toLowerCase())
+        )
+        relatedReviews.push(...aspectReviews)
+      })
+      
+      if (relatedReviews.length > 0) {
+        // Transform reviews to match expected format
+        const transformedReviews = relatedReviews.map(review => ({
+          id: review.id,
+          productId: review.productId,
+          text: review.content,
+          sentiment: review.sentiment,
+          category: review.category,
+          aspect: review.aspect,
+          rating: 3, // Default rating since not available in data
+          verified: false, // Default verified status
+          brand: 'Unknown', // Default brand since not available
+          date: 'Unknown date' // Default date since not available
+        }))
+        
+        openPanel(
+          transformedReviews,
+          `${painPoint.aspect} Reviews`,
+          `${relatedReviews.length} reviews found for ${painPoint.aspect} • Severity: ${painPoint.severity} • Frequency: ${painPoint.frequency}`,
+          { sentiment: true, brand: true, rating: true, verified: true }
+        )
+      }
     }
   }
   

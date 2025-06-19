@@ -10,8 +10,8 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Pagination, PaginationContent, PaginationItem, PaginationLink, PaginationNext, PaginationPrevious } from '@/components/ui/pagination'
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
-import { useReviewPanel } from '@/components/analysis/contexts/review-panel-context'
-import { Review } from '@/components/analysis/data/review-data'
+import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
+import { Review } from '@/components/analysis-db/data/review-data'
 
 interface ReviewPanelProps {
   showFilters?: {
@@ -357,31 +357,12 @@ export function ReviewPanel({
                             )}
                           </div>
                         </div>
-                        <div className="text-right text-sm text-gray-500">
-                          <div>Anonymous Reviewer</div>
-                          <div>{review.date?.replace('Reviewed in the United States on ', '') || ''}</div>
-                        </div>
                       </div>
                     </CardHeader>
                     <CardContent className="pt-0">
                       <p className="text-gray-700 leading-relaxed">
                         {review.text || 'No content available'}
                       </p>
-                      
-                      <div className="border-t pt-3 space-y-2 mt-3">
-                        <div className="flex justify-between items-center text-sm">
-                          <div>
-                            <span className="font-medium text-gray-900">{review.brand}</span>
-                            <span className="text-gray-500"> - {review.category}</span>
-                          </div>
-                          <Badge variant="outline">
-                            {review.category}
-                          </Badge>
-                        </div>
-                        <div className="text-xs text-gray-500">
-                          <strong>Product ID:</strong> {review.productId}
-                        </div>
-                      </div>
                     </CardContent>
                   </Card>
                 ))}

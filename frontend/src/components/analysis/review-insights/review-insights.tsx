@@ -5,7 +5,6 @@ import { useState, useEffect } from "react"
 import { CategoryPainPointsBar } from "@/components/analysis/charts/category-pain-points-bar"
 import { CategoryPositiveFeedbackBar } from "@/components/analysis/charts/category-positive-feedback-bar"
 import CategoryUseCaseBar from "@/components/analysis/shared/category-use-case-bar"
-import { ReviewPanel } from "@/components/analysis/panels/review-panel"
 import { useReviewPanel } from "@/components/analysis/contexts/review-panel-context"
 import { getReviewData, allReviewData } from "@/components/analysis/data/review-data"
 
@@ -102,14 +101,6 @@ export function ReviewInsights({ }: ReviewInsightsProps) {
       </section>
 
 
-      <ReviewPanel
-        isOpen={reviewPanel.isOpen}
-        onClose={reviewPanel.closePanel}
-        reviews={reviewPanel.reviews}
-        title={reviewPanel.title}
-        subtitle={reviewPanel.subtitle}
-        showFilters={reviewPanel.showFilters}
-      />
     </div>
   )
 } 
