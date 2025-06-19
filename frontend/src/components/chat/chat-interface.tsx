@@ -10,6 +10,7 @@ import { useChart } from '@/contexts/chart-context';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { config } from '@/lib/config';
+import { MessageList } from './message-list';
 
 // 图表数据类型定义
 interface ChartData {
@@ -464,46 +465,18 @@ export function ChatInterface() {
       {/* 消息列表区域 - 占据剩余空间并可滚动 */}
       <div className="flex-1 min-h-0 overflow-hidden">
         <ScrollArea className="h-full">
-          <div className="p-4 space-y-4">
-            {messages.length === 0 && (
-              <div className="text-center text-muted-foreground py-8">
-                <MessageSquare className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                <p className="text-lg font-medium mb-2">欢迎使用 AI 数据分析助手</p>
-                <p className="text-sm">
-                  询问关于数据的任何问题，我会为您生成相应的图表来可视化展示
-                </p>
-                <div className="mt-4 text-xs space-y-1">
-                  <p>• &quot;显示最近6个月的销售趋势&quot;</p>
-                  <p>• &quot;对比各产品的销量表现&quot;</p>
-                  <p>• &quot;分析用户增长情况&quot;</p>
-                  <p>• &quot;产品市场痛点分析&quot;</p>
-                </div>
-              </div>
-            )}
-            
-            {messages.map((message) => (
-              <div
-                key={message.id}
-                className={`flex gap-3 ${
-                  message.role === 'user' ? 'justify-end' : 'justify-start'
-                }`}
-              >
-                <div
-                  className={`max-w-[80%] rounded-lg px-4 py-2 ${
-                    message.role === 'user'
-                      ? 'bg-primary text-primary-foreground'
-                      : 'bg-muted'
-                  }`}
-                >
-                  <div className="whitespace-pre-wrap text-sm">
-                    {message.content}
-                  </div>
-                </div>
-              </div>
-            ))}
-            
-            {/* 添加底部间距，确保最后一条消息不会被输入框遮挡 */}
-            <div className="h-4" />
+          <div className="p-4">
+            <MessageList 
+              messages={messages
+                .filter(msg => msg.role === 'user' || msg.role === 'assistant')
+                .map(msg => ({
+                  id: msg.id,
+                  role: msg.role as 'user' | 'assistant',
+                  content: msg.content,
+                  timestamp: Date.now()
+                }))} 
+              isLoading={isLoading} 
+            />
           </div>
         </ScrollArea>
       </div>
