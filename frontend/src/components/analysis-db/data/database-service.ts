@@ -16,6 +16,73 @@ export interface ProductData {
   product_url: string | null
 }
 
+// Assignment相关接口
+export interface Assignment {
+  id: string
+  name: string
+  company_name?: string
+  user_name?: string
+  description?: string
+  selected_categories: string[]
+  selected_sources: string[]
+  selected_brands: string[]
+  top_sales_count?: number
+  total_products: number
+  total_brands: number
+  total_reviews: number
+  avg_monthly_sales: number
+  created_at: string
+  updated_at: string
+  status: string
+}
+
+// 新增数据确认页面相关接口
+export interface DataConfirmationFilters {
+  categories: string[]
+  sources: string[]
+  topSalesCount?: number
+}
+
+export interface DataConfirmationStats {
+  totalProducts: number
+  totalBrands: number
+  totalReviews: number
+  avgMonthlySales: number
+  sources: Array<{
+    name: string
+    count: number
+    percentage: number
+  }>
+  categories: Array<{
+    name: string
+    count: number
+    percentage: number
+  }>
+  brands: Array<{
+    name: string
+    count: number
+    percentage: number
+  }>
+}
+
+export interface DataConfirmationData {
+  availableCategories: string[]
+  availableSources: string[]
+  availableBrands: string[]
+  stats: DataConfirmationStats
+  topProducts: Array<{
+    platform_id: string
+    title: string
+    brand: string
+    category: string
+    source: string
+    monthly_sales_volume: number | null
+    estimated_revenue: number | null
+    reviews_count: number
+    price_usd: number
+  }>
+}
+
 export interface BrandCategoryData {
   brand: string
   dimmerRevenue: number
@@ -1057,6 +1124,213 @@ export class DatabaseService {
     })
 
     return reviewsByCategory
+  }
+
+  // 新增：获取数据确认页面数据
+  async getDataConfirmationData(filters?: DataConfirmationFilters): Promise<DataConfirmationData> {
+    try {
+      // 构建查询条件
+      let query = supabase
+        .from('product_wide_table')
+        .select(`
+          platform_id,
+          title,
+          brand,
+          category,
+          source,
+          monthly_sales_volume,
+          estimated_revenue,
+          reviews_count,
+          price_usd
+        `)
+        .not('category', 'is', null)
+        .not('brand', 'is', null)
+
+      // 应用筛选条件
+      if (filters?.categories && filters.categories.length > 0) {
+        query = query.in('category', filters.categories)
+      }
+      if (filters?.sources && filters.sources.length > 0) {
+        query = query.in('source', filters.sources)
+      }
+
+      // 先获取所有可用选项
+      const { data: allData, error: allError } = await supabase
+        .from('product_wide_table')
+        .select('category, source, brand')
+        .not('category', 'is', null)
+        .not('brand', 'is', null)
+
+      if (allError) {
+        console.error('Error fetching all data options:', allError)
+        throw allError
+      }
+
+      const availableCategories = [...new Set(allData.map(item => item.category))].sort()
+      const availableSources = [...new Set(allData.map(item => item.source))].sort()
+      const availableBrands = [...new Set(allData.map(item => item.brand))].sort()
+
+      // 获取筛选后的数据
+      const { data, error } = await query
+
+      if (error) {
+        console.error('Error fetching filtered data:', error)
+        throw error
+      }
+
+      // 按销量排序并获取前N个产品
+      const sortedProducts = data
+        .filter((item: any) => item.monthly_sales_volume !== null)
+        .sort((a: any, b: any) => (b.monthly_sales_volume || 0) - (a.monthly_sales_volume || 0))
+
+      const topProducts = filters?.topSalesCount 
+        ? sortedProducts.slice(0, filters.topSalesCount)
+        : sortedProducts
+
+      // 计算统计信息
+      const totalProducts = data.length
+      const totalBrands = new Set(data.map((item: any) => item.brand)).size
+      const totalReviews = data.reduce((sum: number, item: any) => sum + (item.reviews_count || 0), 0)
+      const avgMonthlySales = data
+        .filter((item: any) => item.monthly_sales_volume !== null)
+        .reduce((sum: number, item: any, _, arr: any[]) => sum + (item.monthly_sales_volume || 0) / arr.length, 0)
+
+              // 按来源统计
+        const sourceStats = availableSources.map(source => {
+          const count = data.filter((item: any) => item.source === source).length
+          return {
+            name: source,
+            count,
+            percentage: totalProducts > 0 ? Math.round((count / totalProducts) * 100) : 0
+          }
+        })
+
+        // 按类别统计
+        const categoryStats = availableCategories.map(category => {
+          const count = data.filter((item: any) => item.category === category).length
+          return {
+            name: category,
+            count,
+            percentage: totalProducts > 0 ? Math.round((count / totalProducts) * 100) : 0
+          }
+        })
+
+        // 按品牌统计（取前10个）
+        const brandCounts = data.reduce((acc: Record<string, number>, item: any) => {
+          acc[item.brand] = (acc[item.brand] || 0) + 1
+          return acc
+        }, {} as Record<string, number>)
+
+      const brandStats = Object.entries(brandCounts)
+        .sort(([,a], [,b]) => b - a)
+        .slice(0, 10)
+        .map(([brand, count]) => ({
+          name: brand,
+          count,
+          percentage: totalProducts > 0 ? Math.round((count / totalProducts) * 100) : 0
+        }))
+
+      const stats: DataConfirmationStats = {
+        totalProducts,
+        totalBrands,
+        totalReviews,
+        avgMonthlySales,
+        sources: sourceStats,
+        categories: categoryStats,
+        brands: brandStats
+      }
+
+      return {
+        availableCategories,
+        availableSources,
+        availableBrands,
+        stats,
+        topProducts
+      }
+    } catch (error) {
+      console.error('Error in getDataConfirmationData:', error)
+      return {
+        availableCategories: [],
+        availableSources: [],
+        availableBrands: [],
+        stats: {
+          totalProducts: 0,
+          totalBrands: 0,
+          totalReviews: 0,
+          avgMonthlySales: 0,
+          sources: [],
+          categories: [],
+          brands: []
+        },
+        topProducts: []
+      }
+    }
+  }
+
+  // Assignment相关方法
+  async saveAssignment(assignment: Omit<Assignment, 'id' | 'created_at' | 'updated_at'>): Promise<Assignment> {
+    try {
+      const { data, error } = await supabase
+        .from('assignments')
+        .insert([assignment])
+        .select()
+        .single()
+
+      if (error) throw error
+      return data
+    } catch (error) {
+      console.error('Failed to save assignment:', error)
+      throw error
+    }
+  }
+
+  async updateAssignment(id: string, updates: Partial<Assignment>): Promise<Assignment> {
+    try {
+      const { data, error } = await supabase
+        .from('assignments')
+        .update(updates)
+        .eq('id', id)
+        .select()
+        .single()
+
+      if (error) throw error
+      return data
+    } catch (error) {
+      console.error('Failed to update assignment:', error)
+      throw error
+    }
+  }
+
+  async getAssignments(): Promise<Assignment[]> {
+    try {
+      const { data, error } = await supabase
+        .from('assignments')
+        .select('*')
+        .eq('status', 'active')
+        .order('created_at', { ascending: false })
+
+      if (error) throw error
+      return data || []
+    } catch (error) {
+      console.error('Failed to get assignments:', error)
+      throw error
+    }
+  }
+
+  async getAssignment(id: string): Promise<Assignment | null> {
+    try {
+      const { data, error } = await supabase
+        .from('assignments')
+        .select('*')
+        .eq('id', id)
+        .single()
+
+      if (error) throw error
+      return data
+    } catch (error) {
+      console.error('Failed to get assignment:', error)
+      return null
+    }
   }
 }
 

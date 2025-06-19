@@ -13,6 +13,12 @@ import { AnalysisDbTab } from '@/components/tabs/analysis-db-tab';
 export function MainLayout() {
   const [leftPanelWidth, setLeftPanelWidth] = useState(50); // 百分比
   const [activeTab, setActiveTab] = useState('step1');
+  const [assignmentName, setAssignmentName] = useState('');
+
+  const handleNavigateToAnalysis = (name: string) => {
+    setAssignmentName(name);
+    setActiveTab('step3-db');
+  };
 
   const handleMouseDown = (e: React.MouseEvent) => {
     e.preventDefault();
@@ -54,14 +60,18 @@ export function MainLayout() {
               <TabsTrigger value="step2" className="text-sm">
                 Step 2: Data Confirmation
               </TabsTrigger>
-              <TabsTrigger value="step3" className="text-xs">
-                Step 3: Analysis<br/>by File
-              </TabsTrigger>
               <TabsTrigger value="step3-db" className="text-xs">
-                Step 3: Analysis<br/>by DB
+                {assignmentName ? (
+                  <>Step 3: Analysis<br/>{assignmentName}</>
+                ) : (
+                  <>Step 3: Analysis<br/>by DB</>
+                )}
               </TabsTrigger>
               <TabsTrigger value="step4" className="text-sm">
                 Step 4: Chat
+              </TabsTrigger>
+              <TabsTrigger value="step3" className="text-xs">
+                Old Analysis<br/>by File
               </TabsTrigger>
             </TabsList>
           </Tabs>
@@ -81,7 +91,7 @@ export function MainLayout() {
           {/* Step 2: 数据确认 */}
           <TabsContent value="step2" className="h-full m-0">
             <div className="h-full p-4">
-              <DataConfirmationTab />
+              <DataConfirmationTab onNavigateToAnalysis={handleNavigateToAnalysis} />
             </div>
           </TabsContent>
 
