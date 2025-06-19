@@ -6,10 +6,11 @@ import json
 import logging
 from typing import Optional, List
 from contextlib import asynccontextmanager
-from config import settings
+from backend.config import settings
 from agent.tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
 from phoenix.otel import register
 from openinference.instrumentation.smolagents import SmolagentsInstrumentor
+from backend.product_segmentation.api import router as segmentation_router
 
 # 导入 ORM 相关模块
 from agent.dependencies import get_product_prompt_service
@@ -126,6 +127,9 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# Register Product Segmentation endpoints
+app.include_router(segmentation_router, prefix="/api/segmentation", tags=["Product Segmentation"])
 
 # 辅助函数：读取 prompt 文件并拼接查询
 async def prepare_query_with_prompt(query: str) -> str:

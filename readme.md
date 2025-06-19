@@ -15,6 +15,87 @@
 6. **图表实现** - Agent生成React图表代码
 7. **动态渲染** - 在Chat界面实时展示分析图表 -
 
+## Source File Structure & Step Mapping
+
+### Core Architecture
+
+```
+leviton-agent/
+├── backend/                    # Python FastAPI backend
+│   ├── scraping/              # Step 1: Data Collection
+│   ├── core/                  # Steps 2-3: Business Modeling & Data Storage
+│   ├── product_segmentation/  # Product Market Segmentation Engine
+│   ├── agent/                 # Steps 4-6: Agent Analysis & Chart Generation
+│   └── main.py               # API entry point
+├── frontend/                  # React Next.js frontend
+│   ├── src/components/chat/   # Step 7: Dynamic Rendering
+│   ├── src/components/charts/ # Chart components
+│   └── src/app/api/          # API routes
+└── archive/                   # Legacy backend code
+```
+
+### Step-to-File Mapping
+
+#### Step 1: Data Collection (数据获取)
+**Primary Directory:** `backend/scraping/`
+- `backend/scraping/orchestrator.py` - Main scraping coordinator
+- `backend/scraping/products/scraper.py` - Amazon product scraping
+- `backend/scraping/reviews/scraper.py` - Amazon review scraping
+- `backend/scraping/common/amazon_api.py` - Amazon API integration
+- `backend/scraping/common/result_processor.py` - Raw data processing
+
+#### Step 2: Business Modeling (业务建模)
+**Primary Directory:** `backend/core/services/` & `backend/product_segmentation/`
+- `backend/core/services/data_import_service.py` - Data transformation service
+- `backend/core/models/product_prompt.py` - Business data models
+- `backend/product_segmentation/services/db_product_segmentation.py` - Market segmentation service
+- `backend/product_segmentation/llm/product_segmentation_client.py` - LLM-driven segmentation
+
+#### Step 3: Data Storage (数据存储)
+**Primary Directory:** `backend/core/` & `backend/product_segmentation/`
+- `backend/core/database/connection.py` - Database connection management
+- `backend/core/repositories/amazon_product_repository.py` - Product data access
+- `backend/core/repositories/amazon_review_repository.py` - Review data access
+- `backend/product_segmentation/repositories/` - Segmentation data access
+- `backend/product_segmentation/storage/` - LLM interaction storage
+
+#### Step 4: Requirements Definition (需求定义)
+**Primary Directory:** `backend/agent/services/`
+- `backend/agent/services/product_prompt_service.py` - Analysis requirements service
+- `backend/agent/prompts/agent-prompt-by-step.md` - Agent prompts
+- `backend/agent/document/ai-gen-REQ/` - Analysis requirement templates
+
+#### Step 5: Data Validation (数据验证)
+**Primary Directory:** `backend/agent/tools/`
+- `backend/agent/tools/product_review_tools.py` - Data validation tools
+- `backend/agent/dependencies.py` - Agent dependencies and validation logic
+
+#### Step 6: Chart Implementation (图表实现)
+**Primary Directories:** `backend/agent/` & `frontend/src/components/charts/`
+- `backend/agent/document/ai-gen-chartcode/` - Chart code generation prompts
+- `frontend/src/components/charts/chart-renderer.tsx` - Chart rendering component
+- `frontend/src/lib/chart-compiler.ts` - Chart code compilation
+- `frontend/src/contexts/chart-context.tsx` - Chart state management
+
+#### Step 7: Dynamic Rendering (动态渲染)
+**Primary Directory:** `frontend/src/components/chat/`
+- `frontend/src/components/chat/chat-interface.tsx` - Main chat interface
+- `frontend/src/components/chat/message-list.tsx` - Message display
+- `frontend/src/components/chat/message-item.tsx` - Individual message rendering
+- `frontend/src/app/api/chat/route.ts` - Chat API endpoint
+
+### Supporting Components
+
+#### Frontend Tabs
+- `frontend/src/components/tabs/data-import-tab.tsx` - Steps 1-3 UI
+- `frontend/src/components/tabs/analysis-tab.tsx` - Steps 4-6 UI
+- `frontend/src/components/tabs/data-confirmation-tab.tsx` - Step 5 UI
+
+#### Configuration & Utilities
+- `backend/config.py` - Backend configuration
+- `frontend/src/lib/utils.ts` - Frontend utilities
+- `frontend/src/lib/types.ts` - TypeScript type definitions
+
 ## 前期数据准备阶段
 
 ### 第一步：数据获取
