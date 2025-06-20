@@ -92,7 +92,14 @@ class ProductSegmentRepository:
             True if created successfully
         """
         try:
-            segment_data = [segment.dict() for segment in segments]
+            # Exclude optional columns that may not exist in the DB schema
+            segment_data = []
+            for s in segments:
+                row = s.dict(exclude_none=True)
+                # `category_name` is not present in *product_segments*
+                row.pop("category_name", None)
+                segment_data.append(row)
+
             result = self.client.table(self.segments_table).insert(segment_data).execute()
             
             if result.data and len(result.data) > 0:
@@ -220,10 +227,12 @@ class ProductSegmentRepository:
             bool: True if successful, False otherwise
         """
         try:
-            # Convert to dicts for insertion
-            segment_dicts = [s.dict() for s in segments]
-            
-            # Insert all segments in one call
+            segment_dicts = []
+            for s in segments:
+                row = s.dict(exclude_none=True)
+                row.pop("category_name", None)
+                segment_dicts.append(row)
+
             result = (
                 self.client.table(self.refined_segments_table)
                 .insert(segment_dicts)
@@ -276,7 +285,7 @@ class ProductSegmentRepository:
         try:
             # Create a list of product IDs for this run
             products = [{"run_id": run_id, "product_id": pid} for pid in product_ids]
-            result = await self.client.table("run_products").insert(products).execute()
+            result = self.client.table("run_products").insert(products).execute()
             return bool(result.data)
         except Exception as e:
             logger.error("Failed to create run products: %s", e)

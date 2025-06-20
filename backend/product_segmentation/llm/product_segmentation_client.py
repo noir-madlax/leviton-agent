@@ -33,7 +33,7 @@ class ProductSegmentationLLMClient:
 
     def __init__(
         self,
-        llm_client: Any,  # OpenAI client or compatible interface
+        llm_client: Any,  # None to use safe_llm_call, or a stub in unit tests
         prompts: Dict[str, str],  # Loaded prompt templates
         cache: Optional[LLMCache] = None,
         interaction_repo: Optional[LLMInteractionRepository] = None,
@@ -45,7 +45,7 @@ class ProductSegmentationLLMClient:
         Parameters
         ----------
         llm_client
-            The low-level LLM SDK (e.g. OpenAI client) or a stub in unit tests.
+            None or a stub in unit tests.
         prompts
             Mapping of prompt-template names to template strings.
         cache
@@ -140,7 +140,6 @@ class ProductSegmentationLLMClient:
         for category_name, data in result.items():
             if category_name == "OUT_OF_SCOPE":
                 continue
-
             # Create taxonomy
             taxonomies.append({
                 "category_name": category_name,
@@ -149,7 +148,11 @@ class ProductSegmentationLLMClient:
             })
 
             # Create segments
-            for product_id in data["ids"]:
+            for id_idx in data["ids"]:
+                # Schema contract: "ids" must reference the 0-based index of the
+                # product line in the current batch. Translate it back to the
+                # real *product_id* here.
+                product_id = products[id_idx]
                 segments.append({
                     "product_id": product_id,
                     "taxonomy_id": len(taxonomies)  # 1-based index
@@ -210,6 +213,8 @@ class ProductSegmentationLLMClient:
         # Convert back to original format
         taxonomies = []
         for category_name, data in result.items():
+            if category_name == "OUT_OF_SCOPE":
+                continue
             taxonomies.append({
                 "category_name": category_name,
                 "definition": data["definition"],
@@ -547,13 +552,22 @@ class ProductSegmentationLLMClient:
 
     async def _safe_llm_call(self, prompt: str) -> str:
         """Delegate to the configured LLM client."""
+        # ---- diagnostics -------------------------------------------------
+        preview_len = 200
+        prompt_preview = (prompt[:preview_len] + "…") if len(prompt) > preview_len else prompt
+        logger.debug("LLM call prompt preview (%d chars): %s", len(prompt), prompt_preview.replace("\n", " "))
+
         # Use the LLM client that was passed to the constructor
         if hasattr(self._llm, '__call__'):
             # If it's a callable (like StubLLM), call it directly
-            return await self._llm(prompt)
+            resp = await self._llm(prompt)
+            logger.debug("LLM stub returned %d chars – preview: %s", len(resp) if isinstance(resp, str) else -1, str(resp)[:preview_len].replace("\n", " "))
+            return resp
         else:
             # Fall back to the global safe_llm_call for real LLM clients
-            return await safe_llm_call(prompt)
+            response_text = await safe_llm_call(prompt)
+            logger.debug("Real LLM returned %d chars – preview: %s", len(response_text), response_text[:preview_len].replace("\n", " "))
+            return response_text
 
     def _extract_json_from_response(self, response_text: str) -> str:
         """Extract JSON from LLM response text."""
@@ -652,7 +666,13 @@ class ProductSegmentationLLMClient:
     ) -> tuple[bool, Dict[str, Any]]:
         """Parse consolidation response and validate it."""
         try:
-            result = json.loads(response)
+            try:
+                result = json.loads(response)
+            except json.JSONDecodeError:
+                # Many models wrap JSON in ```json … ```; try to strip that
+                extracted = self._extract_json_from_response(response)
+                result = json.loads(extracted)
+
             if not isinstance(result, dict):
                 raise ValueError("Response must be a dictionary")
 

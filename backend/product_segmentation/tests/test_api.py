@@ -17,6 +17,7 @@ def test_segmentation_end_to_end(client: TestClient) -> None:  # noqa: D401 – 
     # 1) Start a new segmentation run
     payload = {
         "product_ids": [101, 102, 103],
+        "category": "Lighting",
         "batch_size": 20  # Optional but we provide it for testing
     }
     start_resp = client.post("/api/segmentation/start", json=payload)

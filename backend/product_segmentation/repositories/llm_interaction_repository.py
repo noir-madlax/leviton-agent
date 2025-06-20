@@ -45,7 +45,7 @@ class LLMInteractionRepository:  # pylint: disable=too-few-public-methods
         if not interactions:
             return True  # trivially successful
 
-        payload = [interaction.dict(exclude_unset=True) for interaction in interactions]
+        payload = [interaction.model_dump(exclude_unset=True) for interaction in interactions]
         try:
             result = self._client.table(self._table).insert(payload).execute()
             if result.data and len(result.data) > 0:

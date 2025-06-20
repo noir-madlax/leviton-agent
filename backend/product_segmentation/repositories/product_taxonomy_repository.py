@@ -35,26 +35,35 @@ class ProductTaxonomyRepository:  # pylint: disable=too-few-public-methods
     # Public API
     # ---------------------------------------------------------------------
 
-    async def batch_create_taxonomies(self, taxonomies: List[ProductTaxonomyCreate]) -> bool:
-        """Insert multiple taxonomy rows in one request.
+    async def batch_create_taxonomies(self, taxonomies: List[ProductTaxonomyCreate]) -> List[ProductTaxonomy]:
+        """Insert multiple taxonomy rows and return the created records.
 
         The caller is responsible for ensuring (run_id, category_name) pairs
         are unique to avoid database constraint violations.
+
+        Returns
+        -------
+        List[ProductTaxonomy]
+            The list of inserted taxonomy rows (may be empty on failure).
         """
         if not taxonomies:
-            return True  # nothing to do
+            return []  # nothing to do
 
-        payload = [tax.dict(exclude_unset=True) for tax in taxonomies]
+        payload = [tax.model_dump(exclude_unset=True) for tax in taxonomies]
         try:
-            result = self._client.table(self._table).insert(payload).execute()
-            if result.data and len(result.data) > 0:
+            result = (
+                self._client.table(self._table)
+                .insert(payload, returning="representation")
+                .execute()
+            )
+            if result.data:
                 logger.info("Inserted %d taxonomy rows", len(result.data))
-                return True
-            logger.error("Failed to insert taxonomies – empty response")
-            return False
+                return [ProductTaxonomy.parse_obj(row) for row in result.data]
+            logger.error("Failed to insert taxonomies – empty response. Payload=%s, Response=%s", payload, result)
+            return []
         except Exception as exc:  # pylint: disable=broad-except
             logger.error("Error inserting taxonomies: %s", exc)
-            return False
+            return []
 
     async def get_taxonomies_by_run(self, run_id: str) -> List[ProductTaxonomy]:
         """Fetch all taxonomies for a given run (ordered by *id*)."""

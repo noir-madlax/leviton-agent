@@ -1,9 +1,13 @@
 import os
 from typing import Optional
 from dotenv import load_dotenv
+from pathlib import Path
 
 # 加载 .env 文件
 load_dotenv()
+
+# Get project root directory (parent of backend directory)
+PROJECT_ROOT = Path(__file__).parent.parent
 
 class Settings:
     """应用配置设置"""
@@ -12,6 +16,9 @@ class Settings:
     HOST: str = os.getenv("HOST", "0.0.0.0")
     PORT: int = int(os.getenv("PORT", "8000"))
     DEBUG: bool = os.getenv("DEBUG", "False").lower() == "true"
+    
+    # Storage settings
+    STORAGE_ROOT: Path = Path(os.getenv("STORAGE_ROOT", str(PROJECT_ROOT / "data" / "llm_logs")))
     
     # 模型设置
     #测试过程中，便宜考虑用这个flash

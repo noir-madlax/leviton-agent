@@ -24,6 +24,7 @@ class InteractionType(str, Enum):
 # Base models for database entities
 class SegmentationRunBase(BaseModel):
     """Base model for segmentation runs"""
+    category: Optional[str] = None
     llm_config: Optional[Dict[str, Any]] = None
     processing_params: Optional[Dict[str, Any]] = None
     total_products: Optional[int] = None
@@ -50,14 +51,19 @@ class SegmentationRunCreate(SegmentationRunBase):
             raise ValueError("Run ID must be at most 50 characters")
         return v
 
+    @field_validator('category')
+    def validate_category_run(cls, v):
+        if v is None or not v.strip():
+            raise ValueError("Category must be non-empty")
+        return v
+
 
 class SegmentationRun(SegmentationRunCreate):
     """Full segmentation run model"""
     created_at: datetime = Field(default_factory=datetime.utcnow, description="Creation timestamp")
     updated_at: datetime = Field(default_factory=datetime.utcnow, description="Last update timestamp")
     
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class RunProductCreate(BaseModel):
@@ -70,8 +76,7 @@ class RunProduct(RunProductCreate):
     """Full run product model"""
     created_at: datetime
     
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class ProductTaxonomyBase(BaseModel):
@@ -94,8 +99,7 @@ class ProductTaxonomy(ProductTaxonomyCreate):
     id: int = Field(..., description="Taxonomy identifier")
     created_at: datetime = Field(default_factory=datetime.utcnow, description="Creation timestamp")
     
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class ProductSegmentBase(BaseModel):
@@ -108,14 +112,6 @@ class ProductSegmentBase(BaseModel):
 class ProductSegmentCreate(ProductSegmentBase):
     """Model for creating product segments"""
     category_name: Optional[str] = Field(default=None, description="Category name")
-    confidence: Optional[float] = Field(default=None, description="Confidence score", ge=0.0, le=1.0)
-
-    @model_validator(mode='after')
-    def validate_confidence(self):
-        """Validate confidence score"""
-        if self.confidence is not None and (self.confidence < 0.0 or self.confidence > 1.0):
-            raise ValueError("Confidence score must be between 0 and 1")
-        return self
 
 
 class ProductSegment(ProductSegmentCreate):
@@ -123,8 +119,7 @@ class ProductSegment(ProductSegmentCreate):
     id: int = Field(..., description="Segment identifier")
     created_at: datetime = Field(default_factory=datetime.utcnow, description="Creation timestamp")
     
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class RefinedProductSegmentCreate(ProductSegmentBase):
@@ -137,8 +132,7 @@ class RefinedProductSegment(RefinedProductSegmentCreate):
     id: int = Field(..., description="Segment identifier")
     created_at: datetime = Field(default_factory=datetime.utcnow, description="Creation timestamp")
     
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 class LLMInteractionIndexBase(BaseModel):
@@ -162,8 +156,7 @@ class LLMInteractionIndex(LLMInteractionIndexBase):
     run_id: str
     created_at: datetime = Field(default_factory=datetime.utcnow, description="Creation timestamp")
     
-    class Config:
-        from_attributes = True
+    model_config = ConfigDict(from_attributes=True)
 
 
 # Request/Response models for API
@@ -171,7 +164,7 @@ class StartSegmentationRequest(BaseModel):
     """Request to start a new segmentation run."""
 
     product_ids: List[int]
-    category: Optional[str] = None
+    category: str  # required – aligns with prompt template requirement
     batch_size: Optional[int] = None
 
     @field_validator("product_ids")
@@ -179,6 +172,12 @@ class StartSegmentationRequest(BaseModel):
         """Validate product IDs."""
         if not v:
             raise ValueError("At least one product ID required")
+        return v
+
+    @field_validator("category")
+    def validate_category(cls, v: str) -> str:  # noqa: D401 – pydantic signature
+        if not v or not v.strip():
+            raise ValueError("Category must be non-empty")
         return v
 
     @field_validator("batch_size")

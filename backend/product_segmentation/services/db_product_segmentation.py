@@ -11,7 +11,7 @@ The service currently supports three operations:
 1. ``create_run`` – Creates a new ``segmentation_runs`` record and associates
    the explicit list of product IDs with the run.
 2. ``execute_run`` – Batches the previously provided products, calls the
-   injected ``llm_client`` for each batch, persists the resulting segments and
+   injected ``segment_llm_client`` for each batch, persists the resulting segments and
    interaction logs, and finally marks the run as *completed*.
 3. ``main()`` – A tiny CLI shim so the module can be executed in isolation
    using ``python -m backend.product_segmentation.services.db_product_segmentation``.
@@ -24,7 +24,9 @@ simplicity.
 import asyncio
 import logging
 import uuid
+from abc import ABC, abstractmethod
 from datetime import datetime
+from enum import Enum
 from typing import Any, Dict, List, Optional, Protocol, Sequence
 import secrets
 
@@ -58,6 +60,17 @@ from product_segmentation.utils.batching import make_batches
 from utils import config as llm_cfg
 from product_segmentation import config as seg_cfg
 
+try:
+    from backend.config import settings  # type: ignore
+except ModuleNotFoundError:  # pragma: no cover – fallback for direct module execution
+    import sys as _sys
+    from importlib import import_module as _import_module
+    from pathlib import Path as _Path
+
+    _project_root = _Path(__file__).resolve().parents[2]
+    _sys.path.append(str(_project_root))
+    settings = _import_module("config").settings
+
 logger = logging.getLogger(__name__)
 
 # ---------------------------------------------------------------------------
@@ -80,8 +93,7 @@ class SegmentationLLMClient(Protocol):
 
         The concrete implementation decides the exact response schema, but it
         MUST return a mapping that contains at least a ``segments`` list where
-        every element is a mapping with **product_id**, **taxonomy_id**, and
-        optionally **confidence**.
+        every element is a mapping with **product_id**, **taxonomy_id**
         """
 
     async def consolidate_taxonomy(
@@ -126,7 +138,7 @@ class DatabaseProductSegmentationService:
         run_repo: SegmentationRunRepository,
         segment_repo: ProductSegmentRepository,
         storage: LLMStorageService,
-        llm_client: SegmentationLLMClient,
+        segment_llm_client: SegmentationLLMClient,
         taxonomy_repo: Optional[ProductTaxonomyRepository] = None,
         interaction_repo: Optional[LLMInteractionRepository] = None,
     ) -> None:
@@ -134,7 +146,7 @@ class DatabaseProductSegmentationService:
         self._segment_repo = segment_repo
         self._taxonomy_repo = taxonomy_repo  # may be ``None`` in unit tests
         self._storage = storage
-        self._llm_client = llm_client
+        self._segment_llm_client = segment_llm_client
         self._interaction_repo = interaction_repo
 
     # ---------------------------------------------------------------------
@@ -148,8 +160,8 @@ class DatabaseProductSegmentationService:
         # Create run record
         run = SegmentationRunCreate(
             id=run_id,
-            status=SegmentationStatus.RUNNING,
             total_products=len(request.product_ids),
+            category=request.category,
             llm_config={},  # Use default config from environment
             processing_params={
                 "batch_size": request.batch_size or seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT
@@ -183,10 +195,12 @@ class DatabaseProductSegmentationService:
             for batch_idx, batch in enumerate(batches):
                 logger.info("Processing batch %d/%d (%d products)", batch_idx + 1, len(batches), len(batch))
                 
-                result = await self._llm_client.segment_products(
+                result = await self._segment_llm_client.segment_products(
                     batch,
-                    category=None,  # TODO: Add category support
+                    category=run.category,
                 )
+                
+                logger.debug("Batch %d raw LLM result: %s", batch_idx + 1, str(result)[:300].replace("\n", " "))
                 
                 # Store interaction log
                 await self._storage.store_interaction(
@@ -210,12 +224,50 @@ class DatabaseProductSegmentationService:
                     )
                     await self._interaction_repo.batch_create_interactions([idx])
                 
-                # Store taxonomies for consolidation
-                if "taxonomies" in result:
-                    batch_taxonomies.extend(result["taxonomies"])
+                # ------------------------------------------------------------------
+                # ❶ Persist batch-level taxonomies first so we get **real** IDs.
+                # ------------------------------------------------------------------
+                taxonomy_name_to_id: Dict[str, int] = {}
+                batch_tax_list = result.get("taxonomies", [])
+                if batch_tax_list and self._taxonomy_repo is not None:
+                    tax_creates = [
+                        ProductTaxonomyCreate(
+                            run_id=run_id,
+                            category_name=t["category_name"],
+                            definition=t.get("definition", ""),
+                            product_count=t.get("product_count", 0),
+                        )
+                        for t in batch_tax_list
+                    ]
+                    inserted = await self._taxonomy_repo.batch_create_taxonomies(tax_creates)
+                    # Build mapping from name → actual PK id (fallback to 1-based order).
+                    if inserted:
+                        for row in inserted:
+                            name = row.category_name if hasattr(row, "category_name") else row.get("category_name")
+                            taxonomy_name_to_id[name] = row.id if hasattr(row, "id") else row.get("id")
+                else:
+                    # In-memory mode → derive IDs deterministically (1-based order)
+                    for idx, t in enumerate(batch_tax_list, 1):
+                        taxonomy_name_to_id[t["category_name"]] = idx
 
-                # Store segments
-                if "segments" in result:
+                # Keep taxonomies for later consolidation
+                batch_taxonomies.extend(batch_tax_list)
+
+                # ------------------------------------------------------------------
+                # ❷ Persist *segments* referencing the freshly inserted taxonomy IDs.
+                # ------------------------------------------------------------------
+                for seg in result.get("segments", []):
+                    # Prefer the explicit category_name in segment if present.
+                    cat_name = seg.get("category_name")
+                    if not cat_name:
+                        idx = seg["taxonomy_id"] - 1
+                        if 0 <= idx < len(batch_tax_list):
+                            cat_name = batch_tax_list[idx]["category_name"]
+                    if cat_name:
+                        seg["category_name"] = cat_name
+                        # Replace taxonomy_id with actual DB id when available.
+                        seg["taxonomy_id"] = taxonomy_name_to_id.get(cat_name, seg["taxonomy_id"])
+                if result.get("segments"):
                     segments = [
                         ProductSegmentCreate(
                             run_id=run_id,
@@ -227,9 +279,13 @@ class DatabaseProductSegmentationService:
                     await self._segment_repo.batch_create_segments(segments)
                     all_segments.extend(result["segments"])
 
+                    logger.debug("Batch %d: inserted %d segments", batch_idx + 1, len(segments))
+
                 # Update progress - use actual number of processed products
                 processed = sum(len(b) for b in batches[:batch_idx + 1])
                 await self._run_repo.update_progress(run_id, processed, len(products))
+
+                logger.debug("Batch %d: inserted %d tax rows, mapping=%s", batch_idx + 1, len(taxonomy_name_to_id), taxonomy_name_to_id)
 
             # Consolidate taxonomies
             consolidated_taxonomies = await self._consolidate_taxonomies(
@@ -304,7 +360,7 @@ class DatabaseProductSegmentationService:
             return batch_taxonomies
 
         # Process batches in pairs
-        result = await self._llm_client.consolidate_taxonomy(batch_taxonomies)
+        result = await self._segment_llm_client.consolidate_taxonomy(batch_taxonomies)
 
         # Store interaction
         await self._storage.store_interaction(
@@ -333,7 +389,7 @@ class DatabaseProductSegmentationService:
         # Process each refinement batch
         refined = []
         for batch_idx, batch in enumerate(segment_batches):
-            result = await self._llm_client.refine_assignments(
+            result = await self._segment_llm_client.refine_assignments(
                 batch,
                 taxonomies=taxonomies,
             )
@@ -413,13 +469,24 @@ async def _demo() -> None:  # pragma: no cover – manual invocation helper
             self._segments: List[Any] = []
             self._refined_segments: List[Any] = []
 
-        async def add_products_to_run(self, run_id, product_ids):  # type: ignore[override]
+        # ------------------------------------------------------------------
+        # Run-product helpers
+        # ------------------------------------------------------------------
+        async def create_run_products(self, run_id: str, product_ids: List[int]) -> bool:  # type: ignore[override]
+            """Mimic persistent repo by storing the product list in-memory."""
             self._run_products[run_id] = list(product_ids)
             return True
+
+        # Backwards-compat helper (legacy name used elsewhere)
+        async def add_products_to_run(self, run_id: str, product_ids: List[int]) -> bool:  # type: ignore[override]
+            return await self.create_run_products(run_id, product_ids)
 
         async def get_run_products(self, run_id):  # type: ignore[override]
             return self._run_products.get(run_id, [])
 
+        # ------------------------------------------------------------------
+        # Segment helpers
+        # ------------------------------------------------------------------
         async def batch_create_segments(self, segments):  # type: ignore[override]
             self._segments.extend(segments)
             return True
@@ -432,9 +499,16 @@ async def _demo() -> None:  # pragma: no cover – manual invocation helper
         def __init__(self) -> None:  # type: ignore[no-super-call]
             self._taxonomies: List[Any] = []
 
-        async def batch_create_taxonomies(self, taxonomies: List[ProductTaxonomyCreate]) -> bool:  # type: ignore[override]
+        async def batch_create_taxonomies(self, taxonomies: List[ProductTaxonomyCreate]):  # type: ignore[override]
             self._taxonomies.extend(taxonomies)
-            return True
+            # Assign incremental IDs for each new taxonomy
+            created: List[Any] = []
+            start_id = len(self._taxonomies) - len(taxonomies) + 1
+            for idx, t in enumerate(taxonomies):
+                rec = t.model_dump()
+                rec["id"] = start_id + idx
+                created.append(rec)
+            return created
 
     class _InMemInteractionRepo(LLMInteractionRepository):
         def __init__(self) -> None:  # type: ignore[no-super-call]
@@ -454,24 +528,23 @@ async def _demo() -> None:  # pragma: no cover – manual invocation helper
     # Wire dependencies
     # ---------------------------------------------------------------------
 
-    temp_dir = tempfile.mkdtemp(prefix="llm_logs_")
-    try:
-        storage = LLMStorageService.create_local(temp_dir)
-        service = DatabaseProductSegmentationService(
-            _InMemRunRepo(),
-            _InMemSegmentRepo(),
-            storage,
-            StubLLM(),
-            taxonomy_repo=_InMemTaxonomyRepo(),
-            interaction_repo=_InMemInteractionRepo(),
-        )
+    storage_root = settings.STORAGE_ROOT
+    storage_root.mkdir(parents=True, exist_ok=True)
+    storage = LLMStorageService.create_local(str(storage_root))
 
-        request = StartSegmentationRequest(product_ids=[1, 2, 3], category="Demo")
-        run_id = await service.create_run(request)
-        await service.execute_run(run_id)
-        print("Demo run", run_id, "completed – logs in", temp_dir)
-    finally:
-        shutil.rmtree(temp_dir, ignore_errors=True)
+    service = DatabaseProductSegmentationService(
+        _InMemRunRepo(),
+        _InMemSegmentRepo(),
+        storage,
+        StubLLM(),
+        taxonomy_repo=_InMemTaxonomyRepo(),
+        interaction_repo=_InMemInteractionRepo(),
+    )
+
+    request = StartSegmentationRequest(product_ids=[1, 2, 3], category="Demo")
+    run_id = await service.create_run(request)
+    await service.execute_run(run_id)
+    print("Demo run", run_id, "completed – logs in", storage_root)
 
 
 def main() -> None:  # pragma: no cover

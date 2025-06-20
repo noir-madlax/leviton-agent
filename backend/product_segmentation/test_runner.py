@@ -63,25 +63,10 @@ def run_model_tests():
             run_id="RUN_TEST_123",
             product_id=456,
             taxonomy_id=789,
-            confidence=0.95
         )
-        assert segment.confidence == 0.95
         print("  ✅ PASS: Valid segment creation")
         
-        # Test 5: Invalid confidence validation
-        print("✓ Testing invalid confidence validation...")
-        try:
-            ProductSegmentCreate(
-                run_id="RUN_TEST_123",
-                product_id=456,
-                taxonomy_id=789,
-                confidence=1.5  # > 1.0 should fail
-            )
-            assert False, "Should have raised ValidationError"
-        except Exception:
-            print("  ✅ PASS: Invalid confidence validation")
-        
-        # Test 6: Valid API request
+        # Test 5: Valid API request
         print("✓ Testing valid API request...")
         request = StartSegmentationRequest(
             product_ids=[1, 2, 3, 4, 5],
@@ -93,7 +78,7 @@ def run_model_tests():
         assert len(request.product_ids) == 5
         print("  ✅ PASS: Valid API request")
         
-        # Test 7: Invalid product IDs validation
+        # Test 6: Invalid product IDs validation
         print("✓ Testing invalid product IDs validation...")
         try:
             StartSegmentationRequest(product_ids=[], category="Electronics")

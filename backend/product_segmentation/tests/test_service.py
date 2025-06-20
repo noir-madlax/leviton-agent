@@ -141,10 +141,16 @@ class _InMemTaxonomyRepo(ProductTaxonomyRepository):
         self._client = None  # Add client attribute even though we don't use it
         self._taxonomies: List[Dict[str, Any]] = []
 
-    async def batch_create_taxonomies(self, taxonomies: List[ProductTaxonomyCreate]) -> bool:  # type: ignore[override]
-        """Store taxonomies in memory."""
-        self._taxonomies.extend([tax.model_dump(exclude_unset=True) for tax in taxonomies])
-        return True
+    async def batch_create_taxonomies(self, taxonomies: List[ProductTaxonomyCreate]):  # type: ignore[override]
+        """Store taxonomies in memory and return them with dummy IDs."""
+        start_id = len(self._taxonomies) + 1
+        created: List[Dict[str, Any]] = []
+        for idx, tax in enumerate(taxonomies):
+            rec = tax.model_dump(exclude_unset=True)
+            rec["id"] = start_id + idx
+            self._taxonomies.append(rec)
+            created.append(rec)
+        return created
 
     async def get_taxonomies_by_run(self, run_id: str) -> List[ProductTaxonomy]:  # type: ignore[override]
         """Return all taxonomies (no filtering in test implementation)."""
@@ -245,6 +251,7 @@ async def test_execute_run_consolidation_failure():
         product_ids = list(range(1, 82))  # 1 to 81
         request = StartSegmentationRequest(
             product_ids=product_ids,
+            category="Lighting",
             batch_size=3  # This doesn't affect batching, but kept for consistency
         )
         run_id = await service.create_run(request)
@@ -269,6 +276,7 @@ async def test_execute_run_refinement_failure():
         product_ids = list(range(1, 82))  # 1 to 81
         request = StartSegmentationRequest(
             product_ids=product_ids,
+            category="Lighting",
             batch_size=3  # This doesn't affect batching, but kept for consistency
         )
         run_id = await service.create_run(request)

@@ -20,13 +20,21 @@ All imports follow the packaging rules defined by the project – full, absolute
 import paths and zero reliance on ``sys.path`` manipulation or CWD hacks.
 """
 
-import asyncio
-import tempfile
-from pathlib import Path
 from typing import Dict, List, Optional, Any
 
 from fastapi import APIRouter, Depends, HTTPException, Request, status
 from fastapi.responses import JSONResponse
+
+try:
+    from backend.config import settings  # type: ignore
+except ModuleNotFoundError:  # pragma: no cover – when running inside backend folder
+    import sys as _sys
+    from importlib import import_module as _import_module
+    from pathlib import Path as _Path
+
+    _project_root = _Path(__file__).resolve().parents[2]
+    _sys.path.append(str(_project_root))
+    settings = _import_module("config").settings
 
 from product_segmentation.models import (
     ProductSegment,
@@ -56,7 +64,7 @@ class _InMemorySegmentationRunRepository:  # noqa: D401 – simple in-memory rep
         self._data: Dict[str, _InMemorySegmentationRunRepository._RunRecord] = {}
 
     async def create(self, run_data):  # type: ignore[override]
-        self._data[run_data.id] = _InMemorySegmentationRunRepository._RunRecord(run_data.dict())
+        self._data[run_data.id] = _InMemorySegmentationRunRepository._RunRecord(run_data.model_dump())
         return self._data[run_data.id]
 
     async def get_by_id(self, run_id: str):  # type: ignore[override]
@@ -134,7 +142,20 @@ class _InMemoryProductTaxonomyRepository:  # noqa: D401 – lightweight in-mem s
 
     async def batch_create_taxonomies(self, taxonomies):  # type: ignore[override]
         self._taxonomies.extend(taxonomies or [])
-        return True
+        # Emulate DB by assigning incremental IDs
+        created: List[Any] = []
+        next_id = len(self._taxonomies) - len(taxonomies) + 1
+        for idx, t in enumerate(taxonomies or []):
+            if isinstance(t, dict):
+                rec = dict(t)
+                rec.setdefault("id", next_id + idx)
+                created.append(rec)
+            else:
+                # Pydantic model – add id attribute dynamically
+                t_dict = t.model_dump()
+                t_dict["id"] = next_id + idx
+                created.append(t_dict)
+        return created
 
     async def get_taxonomies_by_run(self, run_id: str):  # type: ignore[override]
         return [
@@ -199,8 +220,9 @@ def _build_default_service() -> DatabaseProductSegmentationService:
     seg_repo = _InMemoryProductSegmentRepository()
     tax_repo = _InMemoryProductTaxonomyRepository()
 
-    temp_dir = tempfile.mkdtemp(prefix="llm_logs_")
-    storage = LLMStorageService.create_local(temp_dir)
+    storage_root = settings.STORAGE_ROOT
+    storage_root.mkdir(parents=True, exist_ok=True)
+    storage = LLMStorageService.create_local(str(storage_root))
 
     return DatabaseProductSegmentationService(
         run_repo,
@@ -321,7 +343,6 @@ async def get_run_results(
             {
                 "product_id": s.product_id if hasattr(s, "product_id") else s.get("product_id"),
                 "taxonomy_id": s.taxonomy_id if hasattr(s, "taxonomy_id") else s.get("taxonomy_id"),
-                "confidence": getattr(s, "confidence", None) if not isinstance(s, dict) else s.get("confidence"),
             }
             for s in segments
         ],

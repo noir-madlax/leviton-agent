@@ -7,6 +7,7 @@ CREATE TABLE IF NOT EXISTS segmentation_runs (
     id              VARCHAR(50)  PRIMARY KEY,
     created_at      TIMESTAMPTZ  DEFAULT NOW(),
     status          VARCHAR(20)  DEFAULT 'running' CHECK (status IN ('running', 'completed', 'failed')),
+    category        VARCHAR(255) NOT NULL,
     llm_config      JSONB,
     processing_params JSONB,
     total_products  INT,
@@ -66,6 +67,7 @@ CREATE TABLE IF NOT EXISTS llm_interaction_index (
 -- Create indexes for performance
 CREATE INDEX IF NOT EXISTS idx_segmentation_runs_status ON segmentation_runs(status);
 CREATE INDEX IF NOT EXISTS idx_segmentation_runs_created_at ON segmentation_runs(created_at);
+CREATE INDEX IF NOT EXISTS idx_segmentation_runs_category ON segmentation_runs(category);
 CREATE INDEX IF NOT EXISTS idx_run_products_product_id ON run_products(product_id);
 CREATE INDEX IF NOT EXISTS idx_product_taxonomies_run_id ON product_taxonomies(run_id);
 CREATE INDEX IF NOT EXISTS idx_product_segments_product_id ON product_segments(product_id);

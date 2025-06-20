@@ -116,7 +116,8 @@ CREATE TABLE segmentation_runs (
     id              VARCHAR(50)  PRIMARY KEY,
     created_at      TIMESTAMPTZ  DEFAULT NOW(),
     status          VARCHAR(20)  DEFAULT 'running',  -- 'running'|'completed'|'failed'
-    model_config    JSONB,
+    category        VARCHAR(255) NOT NULL,          -- NEW in v5.0 – mandatory request field
+    llm_config      JSONB,
     processing_params JSONB,
     total_products  INT,
     processed_products INT DEFAULT 0,
@@ -144,7 +145,6 @@ CREATE TABLE product_segments (
     run_id       VARCHAR(50) REFERENCES segmentation_runs(id),
     product_id   BIGINT      REFERENCES amazon_products(id),
     taxonomy_id  BIGINT      REFERENCES product_taxonomies(id),
-    confidence   FLOAT,
     PRIMARY KEY (run_id, product_id)
 );
 
@@ -379,7 +379,6 @@ Response:
     {
       "product_id": 123,
       "taxonomy_id": 1,
-      "confidence": 0.95
     }
   ]
 }

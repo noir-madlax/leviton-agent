@@ -36,6 +36,7 @@ class SegmentationRunRepository:
                     "status": "text not null",
                     "total_products": "integer",
                     "processed_products": "integer",
+                    "category": "text not null",
                     "llm_config": "jsonb",
                     "processing_params": "jsonb",
                     "result_summary": "jsonb",
@@ -179,7 +180,7 @@ class SegmentationRunRepository:
             if total_products is not None:
                 update_data["total_products"] = total_products
 
-            result = await self.client.table(self.table_name).update(update_data).eq("id", run_id).execute()
+            result = self.client.table(self.table_name).update(update_data).eq("id", run_id).execute()
             return bool(result.data)
         except Exception as e:
             logger.error("Failed to update run progress: %s", e)

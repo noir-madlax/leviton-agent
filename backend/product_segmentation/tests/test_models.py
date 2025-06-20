@@ -73,24 +73,6 @@ class TestSegmentationModels:
         assert segment.product_id == 456
         assert segment.taxonomy_id == 789
     
-    def test_product_segment_invalid_confidence(self):
-        """Test invalid confidence score validation"""
-        with pytest.raises(ValidationError):
-            ProductSegmentCreate(
-                run_id="RUN_TEST_123",
-                product_id=456,
-                taxonomy_id=789,
-                confidence=1.5  # > 1.0 should fail
-            )
-        
-        with pytest.raises(ValidationError):
-            ProductSegmentCreate(
-                run_id="RUN_TEST_123",
-                product_id=456,
-                taxonomy_id=789,
-                confidence=-0.1  # < 0.0 should fail
-            )
-    
     def test_llm_interaction_index_create_valid(self):
         """Test valid LLM interaction index creation"""
         interaction = LLMInteractionIndexCreate(
@@ -124,9 +106,9 @@ class TestSegmentationModels:
     def test_start_segmentation_request_invalid_product_ids(self):
         """Test product IDs validation"""
         with pytest.raises(ValidationError):
-            StartSegmentationRequest(product_ids=[])
+            StartSegmentationRequest(product_ids=[], category="Lighting")
     
     def test_start_segmentation_request_invalid_batch_size(self):
         """Test batch size validation"""
         with pytest.raises(ValidationError):
-            StartSegmentationRequest(product_ids=[1, 2, 3], batch_size=-1) 
+            StartSegmentationRequest(product_ids=[1, 2, 3], category="Lighting", batch_size=-1) 

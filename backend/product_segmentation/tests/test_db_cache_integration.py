@@ -52,7 +52,7 @@ async def test_db_index_cache_roundtrip(tmp_path):
 
     # The *response* we expect back from the client (service format)
     expected_response = {
-        "segments": [{"product_id": 1, "taxonomy_id": 1, "confidence": 0.9}],
+        "segments": [{"product_id": 1, "taxonomy_id": 1}],
         "taxonomies": [
             {
                 "category_name": "Category A",
