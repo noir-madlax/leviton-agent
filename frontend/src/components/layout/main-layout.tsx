@@ -13,10 +13,10 @@ import { AnalysisDbTab } from '@/components/tabs/analysis-db-tab';
 export function MainLayout() {
   const [leftPanelWidth, setLeftPanelWidth] = useState(50); // 百分比
   const [activeTab, setActiveTab] = useState('step1');
-  const [assignmentName, setAssignmentName] = useState('');
+  const [projectName, setProjectName] = useState('');
 
   const handleNavigateToAnalysis = (name: string) => {
-    setAssignmentName(name);
+    setProjectName(name);
     setActiveTab('step3-db');
   };
 
@@ -58,14 +58,10 @@ export function MainLayout() {
                 Step 1: Data Import
               </TabsTrigger>
               <TabsTrigger value="step2" className="text-sm">
-                Step 2: Data Confirmation
+                Step 2: Data Scope Selection
               </TabsTrigger>
-              <TabsTrigger value="step3-db" className="text-xs">
-                {assignmentName ? (
-                  <>Step 3: Analysis<br/>{assignmentName}</>
-                ) : (
-                  <>Step 3: Analysis<br/>by DB</>
-                )}
+              <TabsTrigger value="step3-db" className="text-sm">
+                Step 3: Analysis
               </TabsTrigger>
               <TabsTrigger value="step4" className="text-sm">
                 Step 4: Chat

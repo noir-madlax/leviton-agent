@@ -16,10 +16,10 @@ export interface ProductData {
   product_url: string | null
 }
 
-// Assignment相关接口
-export interface Assignment {
+// Project相关接口
+export interface Project {
   id: string
-  name: string
+  project_name: string
   company_name?: string
   user_name?: string
   description?: string
@@ -40,6 +40,7 @@ export interface Assignment {
 export interface DataConfirmationFilters {
   categories: string[]
   sources: string[]
+  brands: string[]
   topSalesCount?: number
 }
 
@@ -1153,6 +1154,9 @@ export class DatabaseService {
       if (filters?.sources && filters.sources.length > 0) {
         query = query.in('source', filters.sources)
       }
+      if (filters?.brands && filters.brands.length > 0) {
+        query = query.in('brand', filters.brands)
+      }
 
       // 先获取所有可用选项
       const { data: allData, error: allError } = await supabase
@@ -1178,48 +1182,49 @@ export class DatabaseService {
         throw error
       }
 
-      // 按销量排序并获取前N个产品
+      // 按销量排序
       const sortedProducts = data
         .filter((item: any) => item.monthly_sales_volume !== null)
         .sort((a: any, b: any) => (b.monthly_sales_volume || 0) - (a.monthly_sales_volume || 0))
 
-      const topProducts = filters?.topSalesCount 
+      // 应用topSalesCount筛选到实际统计数据中
+      const finalProducts = filters?.topSalesCount && filters.topSalesCount < data.length
         ? sortedProducts.slice(0, filters.topSalesCount)
-        : sortedProducts
+        : data
 
-      // 计算统计信息
-      const totalProducts = data.length
-      const totalBrands = new Set(data.map((item: any) => item.brand)).size
-      const totalReviews = data.reduce((sum: number, item: any) => sum + (item.reviews_count || 0), 0)
-      const avgMonthlySales = data
+      // 计算统计信息 - 基于最终筛选后的产品
+      const totalProducts = finalProducts.length
+      const totalBrands = new Set(finalProducts.map((item: any) => item.brand)).size
+      const totalReviews = finalProducts.reduce((sum: number, item: any) => sum + (item.reviews_count || 0), 0)
+      const avgMonthlySales = finalProducts
         .filter((item: any) => item.monthly_sales_volume !== null)
         .reduce((sum: number, item: any, _, arr: any[]) => sum + (item.monthly_sales_volume || 0) / arr.length, 0)
 
-              // 按来源统计
-        const sourceStats = availableSources.map(source => {
-          const count = data.filter((item: any) => item.source === source).length
-          return {
-            name: source,
-            count,
-            percentage: totalProducts > 0 ? Math.round((count / totalProducts) * 100) : 0
-          }
-        })
+      // 按来源统计 - 基于最终筛选结果
+      const sourceStats = availableSources.map(source => {
+        const count = finalProducts.filter((item: any) => item.source === source).length
+        return {
+          name: source,
+          count,
+          percentage: totalProducts > 0 ? Math.round((count / totalProducts) * 100) : 0
+        }
+      }).filter(stat => stat.count > 0)
 
-        // 按类别统计
-        const categoryStats = availableCategories.map(category => {
-          const count = data.filter((item: any) => item.category === category).length
-          return {
-            name: category,
-            count,
-            percentage: totalProducts > 0 ? Math.round((count / totalProducts) * 100) : 0
-          }
-        })
+      // 按类别统计 - 基于最终筛选结果
+      const categoryStats = availableCategories.map(category => {
+        const count = finalProducts.filter((item: any) => item.category === category).length
+        return {
+          name: category,
+          count,
+          percentage: totalProducts > 0 ? Math.round((count / totalProducts) * 100) : 0
+        }
+      }).filter(stat => stat.count > 0)
 
-        // 按品牌统计（取前10个）
-        const brandCounts = data.reduce((acc: Record<string, number>, item: any) => {
-          acc[item.brand] = (acc[item.brand] || 0) + 1
-          return acc
-        }, {} as Record<string, number>)
+      // 按品牌统计（取前10个）- 基于最终筛选结果
+      const brandCounts = finalProducts.reduce((acc: Record<string, number>, item: any) => {
+        acc[item.brand] = (acc[item.brand] || 0) + 1
+        return acc
+      }, {} as Record<string, number>)
 
       const brandStats = Object.entries(brandCounts)
         .sort(([,a], [,b]) => b - a)
@@ -1239,6 +1244,9 @@ export class DatabaseService {
         categories: categoryStats,
         brands: brandStats
       }
+
+      // topProducts用于预览，取前几个
+      const topProducts = sortedProducts.slice(0, Math.min(50, finalProducts.length))
 
       return {
         availableCategories,
@@ -1267,27 +1275,27 @@ export class DatabaseService {
     }
   }
 
-  // Assignment相关方法
-  async saveAssignment(assignment: Omit<Assignment, 'id' | 'created_at' | 'updated_at'>): Promise<Assignment> {
+  // Project相关方法
+  async saveProject(project: Omit<Project, 'id' | 'created_at' | 'updated_at'>): Promise<Project> {
     try {
       const { data, error } = await supabase
-        .from('assignments')
-        .insert([assignment])
+        .from('projects')
+        .insert([project])
         .select()
         .single()
 
       if (error) throw error
       return data
     } catch (error) {
-      console.error('Failed to save assignment:', error)
+      console.error('Failed to save project:', error)
       throw error
     }
   }
 
-  async updateAssignment(id: string, updates: Partial<Assignment>): Promise<Assignment> {
+  async updateProject(id: string, updates: Partial<Project>): Promise<Project> {
     try {
       const { data, error } = await supabase
-        .from('assignments')
+        .from('projects')
         .update(updates)
         .eq('id', id)
         .select()
@@ -1296,15 +1304,15 @@ export class DatabaseService {
       if (error) throw error
       return data
     } catch (error) {
-      console.error('Failed to update assignment:', error)
+      console.error('Failed to update project:', error)
       throw error
     }
   }
 
-  async getAssignments(): Promise<Assignment[]> {
+  async getProjects(): Promise<Project[]> {
     try {
       const { data, error } = await supabase
-        .from('assignments')
+        .from('projects')
         .select('*')
         .eq('status', 'active')
         .order('created_at', { ascending: false })
@@ -1312,15 +1320,15 @@ export class DatabaseService {
       if (error) throw error
       return data || []
     } catch (error) {
-      console.error('Failed to get assignments:', error)
+      console.error('Failed to get projects:', error)
       throw error
     }
   }
 
-  async getAssignment(id: string): Promise<Assignment | null> {
+  async getProject(id: string): Promise<Project | null> {
     try {
       const { data, error } = await supabase
-        .from('assignments')
+        .from('projects')
         .select('*')
         .eq('id', id)
         .single()
@@ -1328,7 +1336,7 @@ export class DatabaseService {
       if (error) throw error
       return data
     } catch (error) {
-      console.error('Failed to get assignment:', error)
+      console.error('Failed to get project:', error)
       return null
     }
   }
