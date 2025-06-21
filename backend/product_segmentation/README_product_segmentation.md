@@ -162,12 +162,11 @@ This design keeps referential integrity while allowing "not yet assigned" rows w
 POST /product-segmentation
 {
   "product_ids": [123,456,789],
-  "segment_name": "Dimmer Switches",
-  "batch_size": 40         # optional
+  "product_category": "Dimmer Switches"
 }
 
 HTTP/1.1 202 Accepted
-Location: /product-segmentation/RUN_20250618T120301Z_8d24
+Location: /product-segmentation/RUN_20250618T120301Z_8d24/stream
 ```
 
 ### 5.2 Progress delivery
@@ -185,7 +184,29 @@ progress: {"run_id":"RUN_…","percent":37.5}
 The UI simply listens to the stream and animates **one** progress bar using the
 `percent` field.
 
-### 5.3 How `percent` is calculated
+#### 5.3 Retrieve final segments
+
+```http
+GET /product-segmentation/{run_id}/segments
+```
+
+Response schema
+
+```
+{
+  "run_id": "RUN_…",
+  "taxonomies": [
+    {"id": 1, "segment_name": "Premium Switches", "definition": "High-end smart dimmers", "product_count": 42},
+    …
+  ],
+  "segments": [
+    {"product_id": 123, "taxonomy_id": 1},
+    …
+  ]
+}
+```
+
+### 5.4 How `percent` is calculated
 Progress is proportional to the **number of LLM calls** still outstanding.
 For each stage we pre-compute:
 
@@ -214,4 +235,5 @@ The result is a smooth, monotonic single bar with no sudden jumps between
 stages, while still reflecting true LLM throughput.
 
 ## 6. Configuration (env / cfg)
+```
 ```
