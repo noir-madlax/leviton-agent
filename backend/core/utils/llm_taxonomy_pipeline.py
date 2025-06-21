@@ -39,8 +39,8 @@ import time
 from dataclasses import dataclass, field
 from typing import Any, Protocol, Sequence, Tuple, TypeVar
 
-from utils import config as cfg
-from utils.llm_utils import safe_llm_call  # Central semaphore + retry logic
+from core.utils import config as cfg
+from core.utils.llm_utils import safe_llm_call  # Central semaphore + retry logic
 
 logger = logging.getLogger(__name__)
 

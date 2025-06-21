@@ -5,7 +5,7 @@ This module implements the **final** public surface specified in
 
 Endpoints
 ---------
-1. ``POST /product-segmentation``
+``POST /product-segmentation``
    Start a new segmentation run for an explicit list of Amazon ``product_ids``.
 
    Request body::
@@ -19,28 +19,6 @@ Endpoints
 
        HTTP/1.1 202 Accepted
        Location: /product-segmentation/RUN_<ISO>_<hash>/stream
-
-2. ``GET /product-segmentation/{run_id}/stream``
-   Server-Sent Events (``text/event-stream``) that emits *progress* events::
-
-       progress: {"run_id":"RUN_…","percent":37.5}
-
-   The stream closes automatically once the run reaches *completed* or *failed*.
-
-3. ``GET /product-segmentation/{run_id}/segments``
-   Return the **final taxonomy assignment** *and* the complete taxonomy list::
-
-       {
-         "run_id": "RUN_…",
-         "taxonomies": [
-           {"id": 1, "segment_name": "Premium Switches", "definition": "High-end smart dimmers", "product_count": 42},
-           …
-         ],
-         "segments": [
-           {"product_id": 123, "taxonomy_id": 1},
-           …
-         ]
-       }
 
 Backward-compatibility notes
 ---------------------------
@@ -173,103 +151,3 @@ async def create_and_start_run(
     # Location → progress stream -------------------------------------------
     headers = {"Location": f"/product-segmentation/{run_id}/stream"}
     return Response(status_code=status.HTTP_202_ACCEPTED, headers=headers)
-
-
-@router.get("/{run_id}/stream")
-async def stream_progress(
-    run_id: str,
-    request: Request,
-    service: DatabaseProductSegmentationService = Depends(_get_service),
-):
-    """Server-Sent Events stream that pushes progress updates (v6.2)."""
-
-    async def _event_generator():  # noqa: D401 – nested helper
-        last_percent: float = -1.0
-
-        while True:
-            # Detect client disconnect early.
-            if await request.is_disconnected():
-                break
-
-            run = await service._run_repo.get_by_id(run_id)  # type: ignore[attr-defined,protected-access]
-            if run is None:
-                # We cannot raise inside generator → yield *once* then stop.
-                payload = {
-                    "run_id": run_id,
-                    "error": "Segmentation run not found",
-                }
-                yield f"event: error\ndata: {json.dumps(payload)}\n\n"
-                break
-
-            percent = _progress_percent(run)
-            if percent != last_percent:
-                payload = {
-                    "run_id": run_id,
-                    "percent": percent,
-                    "stage": getattr(run, "stage", SegmentationStage.INIT),
-                }
-                yield f"event: progress\ndata: {json.dumps(payload)}\n\n"
-                last_percent = percent
-
-            if getattr(run, "stage", None) in (SegmentationStage.COMPLETED, SegmentationStage.FAILED):
-                break
-
-            await asyncio.sleep(0.5)
-
-    return StreamingResponse(_event_generator(), media_type="text/event-stream")
-
-
-# ---------------------------------------------------------------------------
-# New endpoint – final segments per product
-# ---------------------------------------------------------------------------
-
-
-@router.get("/{run_id}/segments")
-async def get_final_segments(
-    run_id: str,
-    service: DatabaseProductSegmentationService = Depends(_get_service),
-) -> JSONResponse:
-    """Return the *final* taxonomy assignment for every product in a run.
-
-    The endpoint looks for refined segments first; if none exist it falls back
-    to the initial segmentation result.
-    """
-
-    # Retrieve run – mainly to validate existence
-    run = await service._run_repo.get_by_id(run_id)  # type: ignore[attr-defined,protected-access]
-    if run is None:
-        raise HTTPException(status_code=404, detail="Segmentation run not found")
-
-    # Preferred: refined segments
-    segments = await service._segment_repo.get_refined_segments_by_run(run_id)  # type: ignore[attr-defined]
-
-    # -------------------------------
-    # Build output ------------------
-    # -------------------------------
-    segment_payload = [
-        {
-            "product_id": s.product_id if hasattr(s, "product_id") else s.get("product_id"),
-            "taxonomy_id": s.taxonomy_id if hasattr(s, "taxonomy_id") else s.get("taxonomy_id"),
-        }
-        for s in segments
-    ]
-
-    taxonomy_payload: List[Dict[str, Any]] = []
-    taxonomies = await service._taxonomy_repo.get_taxonomies_by_run(run_id)  # type: ignore[attr-defined]
-    taxonomy_payload = [
-        {
-            "id": t.id if hasattr(t, "id") else idx,
-            "segment_name": t.segment_name if hasattr(t, "segment_name") else t.get("segment_name"),
-            "definition": t.definition if hasattr(t, "definition") else t.get("definition"),
-            "product_count": t.product_count if hasattr(t, "product_count") else t.get("product_count"),
-        }
-        for idx, t in enumerate(taxonomies, start=1)
-    ]
-
-    payload = {
-        "run_id": run_id,
-        "segments": segment_payload,
-        "taxonomies": taxonomy_payload,
-    }
-
-    return JSONResponse(payload, status_code=status.HTTP_200_OK) 

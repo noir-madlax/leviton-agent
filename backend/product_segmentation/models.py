@@ -39,17 +39,6 @@ class ProductSegmentRun(BaseModel):
     created_at: datetime = Field(default_factory=datetime.utcnow)
     stage: SegmentationStage = SegmentationStage.INIT
     
-    # Progress tracking fields
-    seg_batches_done: int = 0
-    seg_batches_total: Optional[int] = None
-    con_batches_done: int = 0
-    con_batches_total: Optional[int] = None
-    ref_batches_done: int = 0
-    ref_batches_total: Optional[int] = None
-    
-    total_products: int
-    processed_products: int = 0
-    
     llm_config: Dict = Field(default_factory=dict)
     processing_params: Dict = Field(default_factory=dict)
     result_summary: Optional[Dict] = None

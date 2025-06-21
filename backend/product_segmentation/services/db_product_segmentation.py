@@ -56,8 +56,8 @@ from product_segmentation.repositories.llm_interaction_repository import (
 )
 from product_segmentation.storage.llm_storage import LLMStorageService
 from product_segmentation.utils.taxonomy import merge_batch_taxonomies
-from product_segmentation.utils.batching import make_batches
-from utils import config as llm_cfg
+from core.utils.batching import make_batches
+from core.utils import config as llm_cfg
 from product_segmentation import config as seg_cfg
 
 try:
@@ -86,8 +86,6 @@ class SegmentationLLMClient(Protocol):
         products: Sequence[int],
         *,
         category: Optional[str] = None,
-        model: str,
-        temperature: float,
     ) -> Dict[str, Any]:
         """Perform segmentation on the supplied ``products``.
 
@@ -99,9 +97,6 @@ class SegmentationLLMClient(Protocol):
     async def consolidate_taxonomy(
         self,
         taxonomies: List[Dict[str, Any]],
-        *,
-        model: str,
-        temperature: float,
     ) -> Dict[str, Any]:
         """Consolidate multiple batch-level taxonomies into one unified set."""
 

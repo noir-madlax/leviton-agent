@@ -75,19 +75,6 @@ CREATE TABLE product_segment_runs (
     created_at           TIMESTAMPTZ  DEFAULT now(),
     stage                VARCHAR(20)  DEFAULT 'init',
 
-    -- detailed progress -------------------------------------------------
-    seg_batches_done      INT DEFAULT 0,
-    seg_batches_total     INT,
-
-    con_batches_done      INT DEFAULT 0,
-    con_batches_total     INT,      -- pair-wise consolidation levels
-
-    ref_batches_done      INT DEFAULT 0,
-    ref_batches_total     INT,
-
-    total_products        INT,
-    processed_products    INT DEFAULT 0,
-
     llm_config            JSONB,
     processing_params     JSONB,
     result_summary        JSONB
@@ -117,15 +104,6 @@ CREATE TABLE product_segment_assignments (
     taxonomy_id_initial  BIGINT      REFERENCES product_segment_taxonomies(id),
     taxonomy_id_refined  BIGINT      REFERENCES product_segment_taxonomies(id),
     PRIMARY KEY (run_id, product_id)
-);
-
--- llm interactions ------------------------------------------------------
-CREATE TABLE product_segment_llm_interactions (
-    id         BIGSERIAL PRIMARY KEY,
-    run_id     VARCHAR(50) REFERENCES product_segment_runs(id),
-    file_path  TEXT UNIQUE,
-    cache_key  VARCHAR(32),
-    created_at TIMESTAMPTZ DEFAULT now()
 );
 ```
 
@@ -169,44 +147,7 @@ HTTP/1.1 202 Accepted
 Location: /product-segmentation/RUN_20250618T120301Z_8d24/stream
 ```
 
-### 5.2 Progress delivery
-*The backend now **pushes** progress events instead of relying on client polling.*
-
-```
-GET /product-segmentation/{run_id}/stream   # text/event-stream
-
-# sample server-sent events (SSE)
-progress: {"run_id":"RUN_…","percent":12.5}
-progress: {"run_id":"RUN_…","percent":37.5}
-…
-```
-
-The UI simply listens to the stream and animates **one** progress bar using the
-`percent` field.
-
-#### 5.3 Retrieve final segments
-
-```http
-GET /product-segmentation/{run_id}/segments
-```
-
-Response schema
-
-```
-{
-  "run_id": "RUN_…",
-  "taxonomies": [
-    {"id": 1, "segment_name": "Premium Switches", "definition": "High-end smart dimmers", "product_count": 42},
-    …
-  ],
-  "segments": [
-    {"product_id": 123, "taxonomy_id": 1},
-    …
-  ]
-}
-```
-
-### 5.4 How `percent` is calculated
+### 5.3 How `percent` is calculated
 Progress is proportional to the **number of LLM calls** still outstanding.
 For each stage we pre-compute:
 

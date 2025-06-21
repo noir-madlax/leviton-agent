@@ -84,29 +84,6 @@ class ProductSegmentRunRepository:
         )
         return bool(result.data)
 
-    async def update_progress(
-        self,
-        run_id: str,
-        *,
-        seg_batches_done: Optional[int] = None,
-        con_batches_done: Optional[int] = None,
-        ref_batches_done: Optional[int] = None,
-        processed_products: Optional[int] = None,
-    ) -> bool:
-        update_data: Dict[str, Any] = {}
-        if seg_batches_done is not None:
-            update_data["seg_batches_done"] = seg_batches_done
-        if con_batches_done is not None:
-            update_data["con_batches_done"] = con_batches_done
-        if ref_batches_done is not None:
-            update_data["ref_batches_done"] = ref_batches_done
-        if processed_products is not None:
-            update_data["processed_products"] = processed_products
-        if not update_data:
-            return True  # nothing to update
-        result = self._client.table(_TABLE).update(update_data).eq("id", run_id).execute()
-        return bool(result.data)
-
     async def complete_run(self, run_id: str, result_summary: Dict[str, Any]) -> bool:
         payload = {
             "stage": SegmentationStage.COMPLETED.value,

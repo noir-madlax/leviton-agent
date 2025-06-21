@@ -20,8 +20,8 @@ import json  # still used elsewhere
 import asyncio
 import time
 
-from utils.rate_limiter import RateLimiter
-from utils import config as cfg
+from core.utils.rate_limiter import RateLimiter
+from core.utils import config as cfg
 
 logger = logging.getLogger(__name__)
 load_dotenv(find_dotenv())
