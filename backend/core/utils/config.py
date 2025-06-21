@@ -29,6 +29,13 @@ MAX_INPUT_TOKENS_PER_MINUTE: int = 75_000 # Slightly below 80_000 limit
 MAX_OUTPUT_TOKENS_PER_MINUTE: int = 30_000 # Slightly below 32_000 limit
 MAX_CONCURRENT_REQUESTS: int = 20 # Concurrent request limit
 
+# Retry & concurrency --------------------------------------------------------
+MAX_ATTEMPTS_PER_CALL: int = 3  # Hard cap on per-call retries
+MAX_CONCURRENT_LLM_CALLS: int = MAX_CONCURRENT_REQUESTS  # Semaphore gate size
+
+# Pipeline call budget -------------------------------------------------------
+MAX_LLM_CALLS_PER_EXECUTE: int = 10  # Absolute ceiling for LLM calls in one BaseStage.execute()
+
 __all__ = [
     "LLM_MODEL_NAME",
     "LLM_TEMPERATURE",
@@ -37,4 +44,7 @@ __all__ = [
     "MAX_INPUT_TOKENS_PER_MINUTE",
     "MAX_OUTPUT_TOKENS_PER_MINUTE",
     "MAX_CONCURRENT_REQUESTS",
+    "MAX_ATTEMPTS_PER_CALL",
+    "MAX_CONCURRENT_LLM_CALLS",
+    "MAX_LLM_CALLS_PER_EXECUTE",
 ] 
