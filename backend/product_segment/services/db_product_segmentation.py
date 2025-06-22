@@ -14,7 +14,7 @@ The service currently supports three operations:
    injected ``segment_llm_client`` for each batch, persists the resulting segments and
    interaction logs, and finally marks the run as *completed*.
 3. ``main()`` – A tiny CLI shim so the module can be executed in isolation
-   using ``python -m backend.product_segmentation.services.db_product_segmentation``.
+   using ``python -m backend.product_segment.services.db_product_segmentation``.
 
 The public API is intentionally *async* so that the real implementation can run
 LLM calls concurrently, but the current logic runs sequentially for
@@ -24,15 +24,12 @@ simplicity.
 import asyncio
 import logging
 import uuid
-from abc import ABC, abstractmethod
 from datetime import datetime
-from enum import Enum
 from typing import Any, Dict, List, Optional, Protocol, Sequence
 import secrets
 
-import pandas as pd
 
-from product_segmentation.models import (
+from product_segment.models import (
     InteractionType,
     ProductSegmentCreate,
     SegmentationRunCreate,
@@ -42,23 +39,21 @@ from product_segmentation.models import (
     LLMInteractionIndexCreate,
     RefinedProductSegmentCreate,
 )
-from product_segmentation.repositories.product_segment_repository import (
+from product_segment.repositories.product_segment_repository import (
     ProductSegmentRepository,
 )
-from product_segmentation.repositories.segmentation_run_repository import (
+from product_segment.repositories.segmentation_run_repository import (
     SegmentationRunRepository,
 )
-from product_segmentation.repositories.product_taxonomy_repository import (
+from product_segment.repositories.product_taxonomy_repository import (
     ProductTaxonomyRepository,
 )
-from product_segmentation.repositories.llm_interaction_repository import (
+from product_segment.repositories.llm_interaction_repository import (
     LLMInteractionRepository,
 )
-from product_segmentation.storage.llm_storage import LLMStorageService
-from product_segmentation.utils.taxonomy import merge_batch_taxonomies
+from product_segment.storage.llm_storage import LLMStorageService
 from core.utils.batching import make_batches
-from core.utils import config as llm_cfg
-from product_segmentation import config as seg_cfg
+from product_segment import config as seg_cfg
 
 try:
     from backend.config import settings  # type: ignore
@@ -425,10 +420,7 @@ class DatabaseProductSegmentationService:
 async def _demo() -> None:  # pragma: no cover – manual invocation helper
     """Run the service in demo mode with in-memory dependencies."""
 
-    from types import SimpleNamespace
-    import tempfile
-    import shutil
-    from product_segmentation.tests.stubs import StubLLM
+    from product_segment.tests.stubs import StubLLM
 
     # ---------------------------------------------------------------------
     # In-memory repo implementations

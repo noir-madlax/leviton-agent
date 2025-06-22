@@ -52,7 +52,7 @@ The unit & integration tests target those layers from **pure functions** up to *
 From the`backend/`:
 
 ```bash
-python -m pytest product_segmentation/tests/ -v -k "not test_db_integration_real"
+python -m pytest product_segment/tests/ -v -k "not test_db_integration_real"
 ```
 
 The heavy *real-DB* integration test is deselected by default; run it explicitly when Supabase credentials are configured.
@@ -60,7 +60,7 @@ The heavy *real-DB* integration test is deselected by default; run it explicitly
 A one-shot helper is also available:
 
 ```bash
-python -m backend.product_segmentation.test_runner
+python -m backend.product_segment.test_runner
 ```
 
 which executes all **phase-ordered** suites and returns a non-zero exit-code on the first failure – useful for CI pipelines.

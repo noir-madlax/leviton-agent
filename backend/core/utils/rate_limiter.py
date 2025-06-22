@@ -12,13 +12,10 @@ robust, dependency-free rate-limiter that:
 3.  Is entirely **async** so it can be used from any coroutine without
     blocking the event-loop.
 
-Keeping the implementation in ``backend.product_segmentation.utils`` ensures
+Keeping the implementation in ``backend.product_segment.utils`` ensures
 that *all* LLM clients in the backend (present and future) can share the same
 logic.
 """
-
-from __future__ import annotations
-
 import asyncio
 import time
 from collections import deque
@@ -81,8 +78,15 @@ class RateLimiter:  # pylint: disable=too-few-public-methods
     def estimate_tokens(self, text: str) -> int:  # noqa: D401 – tiny shim
         return self._estimate_tokens(text)
 
-    async def acquire(self, est_input_tokens: int, est_output_tokens: Optional[int] = None) -> None:
-        """Block until both token- and request-level budgets allow a new call."""
+    async def acquire(self, prompt: str, est_output_tokens: Optional[int] = None) -> None:
+        """Block until both token- and request-level budgets allow a new call.
+
+        The helper performs *all* token estimation internally so callers only
+        need to pass the raw *prompt* text.  The *est_output_tokens* parameter
+        is optional; when omitted we pessimistically reserve half of the
+        model's context window to guarantee headroom for the reply.
+        """
+        est_input_tokens = self._estimate_tokens(prompt)
         if est_output_tokens is None:
             est_output_tokens = self._model_max_tokens // 2
 
@@ -105,16 +109,24 @@ class RateLimiter:  # pylint: disable=too-few-public-methods
             # Otherwise wait a bit and re-check ----------------------------------
             await asyncio.sleep(0.25)
 
-    def release(self, act_input_tokens: Optional[int] = None, act_output_tokens: Optional[int] = None) -> None:
-        """Release semaphore and optionally correct token counts."""
+    def release(self, prompt: Optional[str] = None, response_text: Optional[str] = None) -> None:
+        """Release semaphore and optionally correct token counts.
+
+        When the *prompt* or *response_text* are provided we recalculate the
+        accurate token counts and patch the most recent deque entries.  This
+        improves long-running accuracy without requiring callers to worry
+        about token accounting.
+        """
         self._sem.release()
+
         # Token corrections are **best-effort** – failures are non-fatal.
-        if act_input_tokens is not None and self._in_tok_times:
+        if prompt is not None and self._in_tok_times:
             ts, _ = self._in_tok_times.pop()
-            self._in_tok_times.append((ts, act_input_tokens))
-        if act_output_tokens is not None and self._out_tok_times:
+            self._in_tok_times.append((ts, self._estimate_tokens(prompt)))
+
+        if response_text is not None and self._out_tok_times:
             ts, _ = self._out_tok_times.pop()
-            self._out_tok_times.append((ts, act_output_tokens))
+            self._out_tok_times.append((ts, self._estimate_tokens(response_text)))
 
     # ---------------------------------------------------------------------
     # Internals
@@ -129,4 +141,4 @@ class RateLimiter:  # pylint: disable=too-few-public-methods
         """Drop deque entries that fall outside the 60-sec window."""
         for dq in (self._req_times, self._in_tok_times, self._out_tok_times):
             while dq and dq[0][0] < now - 60.0:
-                dq.popleft() 
+                dq.popleft()

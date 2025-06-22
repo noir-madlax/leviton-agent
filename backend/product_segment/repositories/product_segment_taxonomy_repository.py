@@ -11,7 +11,7 @@ from typing import List
 
 from supabase import Client  # type: ignore
 
-from product_segmentation.models import ProductSegmentTaxonomy
+from product_segment.models import ProductSegmentTaxonomy
 
 logger = logging.getLogger(__name__)
 

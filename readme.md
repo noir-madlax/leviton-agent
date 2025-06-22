@@ -24,7 +24,7 @@ leviton-agent/
 ├── backend/                    # Python FastAPI backend
 │   ├── scraping/              # Step 1: Data Collection
 │   ├── core/                  # Steps 2-3: Business Modeling & Data Storage
-│   ├── product_segmentation/  # Product Market Segmentation Engine
+│   ├── product_segment/  # Product Category Segmentation Engine
 │   ├── agent/                 # Steps 4-6: Agent Analysis & Chart Generation
 │   └── main.py               # API entry point
 ├── frontend/                  # React Next.js frontend
@@ -45,19 +45,19 @@ leviton-agent/
 - `backend/scraping/common/result_processor.py` - Raw data processing
 
 #### Step 2: Business Modeling (业务建模)
-**Primary Directory:** `backend/core/services/` & `backend/product_segmentation/`
+**Primary Directory:** `backend/core/services/` & `backend/product_segment/`
 - `backend/core/services/data_import_service.py` - Data transformation service
 - `backend/core/models/product_prompt.py` - Business data models
-- `backend/product_segmentation/services/db_product_segmentation.py` - Market segmentation service
-- `backend/product_segmentation/llm/product_segmentation_client.py` - LLM-driven segmentation
+- `backend/product_segment/services/db_product_segmentation.py` - Market segmentation service
+- `backend/product_segment/llm/product_segmentation_client.py` - LLM-driven segmentation
 
 #### Step 3: Data Storage (数据存储)
-**Primary Directory:** `backend/core/` & `backend/product_segmentation/`
+**Primary Directory:** `backend/core/` & `backend/product_segment/`
 - `backend/core/database/connection.py` - Database connection management
 - `backend/core/repositories/amazon_product_repository.py` - Product data access
 - `backend/core/repositories/amazon_review_repository.py` - Review data access
-- `backend/product_segmentation/repositories/` - Segmentation data access
-- `backend/product_segmentation/storage/` - LLM interaction storage
+- `backend/product_segment/repositories/` - Segmentation data access
+- `backend/product_segment/storage/` - LLM interaction storage
 
 #### Step 4: Requirements Definition (需求定义)
 **Primary Directory:** `backend/agent/services/`

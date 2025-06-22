@@ -23,7 +23,7 @@ Main building blocks
       • global call budget enforcement via ``cfg.MAX_LLM_CALLS_PER_EXECUTE``.
       • automatic prompt / response persistence through an optional
         ``CallStorage`` adapter on the context.
-      • detailed structured logging and latency measurement.
+      • detailed structured logging.
 
 Concrete stage subclasses MUST implement five small hooks (see the *abstract
 methods* further below); **no** direct LLM interaction is required in the
@@ -37,10 +37,10 @@ import asyncio
 import logging
 import time
 from dataclasses import dataclass, field
-from typing import Any, Protocol, Sequence, Tuple, TypeVar
+from typing import Any, Dict, List, Protocol, Sequence, Tuple, TypeVar
 
 from core.utils import config as cfg
-from core.utils.llm_utils import safe_llm_call  # Central semaphore + retry logic
+from core.utils.llm_utils import safe_llm_call, ValidationResult  # Central semaphore + retry logic
 
 logger = logging.getLogger(__name__)
 
@@ -49,8 +49,6 @@ __all__ = [
     "StageResultBase",
     "CallStorage",
     "BaseStage",
-    "chunked",
-    "pairwise",
     "StageProtocolError",
     "StageCallBudgetExceeded",
 ]
@@ -89,9 +87,6 @@ class StageContext:
     ----------
     input_seq
         The *sequence* of documents/items to process.
-    llm_cfg
-        Optional override for LLM configuration.  When *None* the stage will
-        rely on the defaults in :pymod:`utils.config`.
     storage
         Optional persistence adapter; when supplied each prompt/response pair
         (including retries and recursive splits) is written through
@@ -105,7 +100,6 @@ class StageContext:
     """
 
     input_seq: Sequence[Any]
-    llm_cfg: Any | None = None
     storage: CallStorage | None = None
     context_vars: dict[str, Any] = field(default_factory=dict)
 
@@ -115,15 +109,13 @@ class StageContext:
 
 
 @dataclass(slots=True)
-class StageResultBase:  # pylint: disable=too-many-instance-attributes
+class StageResultBase:  # pylint: disable=too-few-public-methods
     """Base result object – concrete stages should subclass this."""
 
     calls_made: int
-    latency_ms: int
 
     # Split-merge helpers may accumulate further metrics; subclasses should
     # override/extend as needed but must call *super().__init__*.
-
 
 # ---------------------------------------------------------------------------
 # Internal helper for _llm_roundtrip
@@ -133,7 +125,6 @@ class StageResultBase:  # pylint: disable=too-many-instance-attributes
 class _RoundtripResult:
     ok: bool
     payload: str | None
-    latency_ms: int = 0
     retry_ctx: Any | None = None
 
 
@@ -150,8 +141,8 @@ class BaseStage:
 
     async def _validate(
         self, raw_response: str, seq: Sequence[Any], ctx: StageContext
-    ) -> Tuple[bool, Any]:
-        """Return (is_valid, retry_ctx).  retry_ctx fed back into _retry_prompt."""
+    ) -> ValidationResult:
+        """Return LLM response validation result."""
 
     async def _retry_prompt(
         self, original_prompt: str, retry_ctx: Any, ctx: StageContext
@@ -163,7 +154,6 @@ class BaseStage:
         seq: Sequence[Any],
         raw_response: str,
         ctx: StageContext,
-        total_latency_ms: int,
         attempts: int,
     ) -> T:
         raise NotImplementedError
@@ -176,7 +166,6 @@ class BaseStage:
         res_right: T,
         ctx: StageContext,
         depth: int,
-        cumulative_latency_ms: int,
     ) -> T:
         raise NotImplementedError
 
@@ -207,12 +196,12 @@ class BaseStage:
 
             # ---------------- attempt-1 ------------------------------------
             prompt1 = await self._build_prompt(seq, ctx)
-            raw1, lat1 = await _call_and_persist(prompt1, ctx, attempt=1)
+            raw1 = await _call_and_persist(prompt1, ctx, attempt=1)
             calls_made += 1
 
-            ok1, retry_ctx1 = await self._validate(raw1, seq, ctx)
-            if ok1:
-                return await self._produce_result(seq, raw1, ctx, lat1, attempts=1)
+            validation_result1 = await self._validate(raw1, seq, ctx)
+            if validation_result1.ok:
+                return await self._produce_result(seq, raw1, ctx, attempts=1)
 
             # ---------------- attempt-2 (retry prompt) ---------------------
             if calls_made >= call_budget:
@@ -220,15 +209,13 @@ class BaseStage:
                     f"Exceeded maximum of {cfg.MAX_LLM_CALLS_PER_EXECUTE} LLM calls"
                 )
 
-            prompt2 = await self._retry_prompt(prompt1, retry_ctx1, ctx)
-            raw2, lat2 = await _call_and_persist(prompt2, ctx, attempt=2)
+            prompt2 = await self._retry_prompt(prompt1, validation_result1, ctx)
+            raw2 = await _call_and_persist(prompt2, ctx, attempt=2)
             calls_made += 1
 
-            ok2, retry_ctx2 = await self._validate(raw2, seq, ctx)
-            if ok2:
-                return await self._produce_result(
-                    seq, raw2, ctx, lat1 + lat2, attempts=2
-                )
+            validation_result2 = await self._validate(raw2, seq, ctx)
+            if validation_result2.ok:
+                return await self._produce_result(seq, raw2, ctx, attempts=2)
 
             # ---------------- auto-split -----------------------------------
             if len(seq) > 1:
@@ -239,7 +226,7 @@ class BaseStage:
                     _run_recursive(right, depth + 1),
                 )
                 return await self._merge_split_results(
-                    left, right, res_left, res_right, ctx, depth + 1, lat1 + lat2
+                    left, right, res_left, res_right, ctx, depth + 1
                 )
 
             # single item still invalid → give up
@@ -259,30 +246,22 @@ async def _call_and_persist(
     ctx: StageContext,
     *,
     attempt: int,
-) -> Tuple[str, int]:
-    """Invoke the LLM, persist artefact (if storage set) and return raw text + latency."""
+) -> str:
+    """Invoke the LLM, persist artefact (if storage set) and return raw text."""
 
-    start_ts = time.time()
     raw_response = await safe_llm_call(prompt, context={**ctx.context_vars, "attempt": attempt})
-    latency_ms = int((time.time() - start_ts) * 1000)
 
     if ctx.storage is not None:
         record = {
             "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
             "attempt": attempt,
-            "llm_config": ctx.llm_cfg or {
-                "model": cfg.LLM_MODEL_NAME,
-                "temperature": cfg.LLM_TEMPERATURE,
-                "max_tokens": cfg.LLM_MAX_TOKENS,
-            },
             "context_vars": ctx.context_vars,
             "prompt": prompt,
             "response": raw_response,
-            "latency_ms": latency_ms,
         }
         try:
             await ctx.storage.write_json(record)
         except Exception as exc:  # pylint: disable=broad-except
             logger.warning("CallStorage.write_json failed: %s", exc)
 
-    return raw_response, latency_ms
+    return raw_response

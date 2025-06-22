@@ -1,5 +1,5 @@
 # Product-Segmentation Engine ‑ v6.0  
-*Backend subsystem: `backend/product_segmentation`*
+*Backend subsystem: `backend/product_segment`*
 
 ---
 
@@ -28,7 +28,7 @@ Raw LLM interactions are archived as files; only lightweight indexes & final res
 ## 3. Storage Layout (local → S3-ready)
 ```
 llm_logs/
-└── product_segmentation
+└── product_segment
     ├── RUN_<ISO>_<hash>/
     │   ├── prompts/
     │   │   ├── extract_taxonomy_prompt.txt

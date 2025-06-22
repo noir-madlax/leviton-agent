@@ -15,15 +15,15 @@ import json
 import logging
 from typing import Any, Dict, List, Optional, Sequence, Tuple
 
-from product_segmentation.utils.cache import LLMCache  # file-layer cache
-from product_segmentation.repositories.llm_interaction_repository import (
+from product_segment.utils.cache import LLMCache  # file-layer cache
+from product_segment.repositories.llm_interaction_repository import (
     LLMInteractionRepository,
 )
-from product_segmentation.storage.llm_storage import LLMStorageService
-from product_segmentation.utils import refinement as _rf
+from product_segment.storage.llm_storage import LLMStorageService
+from product_segment.utils import refinement as _rf
 from utils.llm_utils import safe_llm_call  # shared util
 from utils import config as llm_cfg
-from product_segmentation import config as seg_cfg
+from product_segment import config as seg_cfg
 
 logger = logging.getLogger(__name__)
 
@@ -31,46 +31,7 @@ logger = logging.getLogger(__name__)
 class ProductSegmentationLLMClient:
     """Production LLM client implementing advanced segmentation workflows."""
 
-    def __init__(
-        self,
-        llm_client: Any,  # None to use safe_llm_call, or a stub in unit tests
-        prompts: Dict[str, str],  # Loaded prompt templates
-        cache: Optional[LLMCache] = None,
-        interaction_repo: Optional[LLMInteractionRepository] = None,
-        storage_service: Optional[LLMStorageService] = None,
-        max_retries: Optional[int] = None,
-    ) -> None:
-        """Create a new *ProductSegmentationLLMClient*.
-
-        Parameters
-        ----------
-        llm_client
-            None or a stub in unit tests.
-        prompts
-            Mapping of prompt-template names to template strings.
-        cache
-            Optional *file* cache layer (:class:`LLMCache`).
-        interaction_repo
-            Optional repository that stores an **index** of earlier LLM
-            interactions in the database.  When provided, the client can look
-            up existing responses across *runs* by their deterministic
-            ``cache_key``.
-        storage_service
-            Storage layer that can load the raw JSON files referenced by the
-            interaction index.  Must be supplied whenever *interaction_repo*
-            is passed.
-        max_retries
-            Maximum number of retries for LLM calls. If not provided, uses
-            the value from config.
-        """
-
-        self._llm = llm_client
-        self._prompts = prompts
-        self._max_retries = max_retries if max_retries is not None else seg_cfg.MAX_RETRIES
-        self._cache = cache
-        self._interaction_repo = interaction_repo
-        self._storage = storage_service
-
+    
     async def segment_products(
         self,
         products: List[int],

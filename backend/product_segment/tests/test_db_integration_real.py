@@ -13,19 +13,19 @@ from datetime import datetime
 # ---------------------------------------------------------------------------
 
 from core.database.connection import get_supabase_service_client
-from product_segmentation.models import (
+from product_segment.models import (
     SegmentationStatus,
     StartSegmentationRequest,
 )
-from product_segmentation.repositories.llm_interaction_repository import LLMInteractionRepository
-from product_segmentation.repositories.product_segment_repository import ProductSegmentRepository
-from product_segmentation.repositories.product_taxonomy_repository import ProductTaxonomyRepository
-from product_segmentation.repositories.segmentation_run_repository import SegmentationRunRepository
-from product_segmentation.storage.llm_storage import LLMStorageService
+from product_segment.repositories.llm_interaction_repository import LLMInteractionRepository
+from product_segment.repositories.product_segment_repository import ProductSegmentRepository
+from product_segment.repositories.product_taxonomy_repository import ProductTaxonomyRepository
+from product_segment.repositories.segmentation_run_repository import SegmentationRunRepository
+from product_segment.storage.llm_storage import LLMStorageService
 
 # Use the production LLM client that internally relies on the shared
 # `safe_llm_call` helper (and therefore honours global rate limits).
-from product_segmentation.llm.product_segmentation_client import (
+from product_segment.llm.product_segmentation_client import (
     ProductSegmentationLLMClient,
 )
 # Get project root directory (parent of backend directory)
@@ -47,7 +47,7 @@ def _load_prompts() -> Dict[str, str]:
         ("consolidate_taxonomy", "consolidate_taxonomy_prompt_v0.txt"),
         ("refine_assignments", "refine_assignments_prompt_v0.txt"),
     ]
-    base = Path("product_segmentation/prompts")  # Relative to backend directory
+    base = Path("product_segment/prompts")  # Relative to backend directory
     result: Dict[str, str] = {}
     for key, fname in names:
         fpath = base / fname
@@ -91,15 +91,15 @@ async def test_segmentation_service_against_real_db(monkeypatch) -> None:  # noq
     #     *before* any service/LLM client is instantiated so every import
     #     path sees the updated values.
     # ------------------------------------------------------------------
-    from product_segmentation import config as seg_cfg  # local import
+    from product_segment import config as seg_cfg  # local import
 
     monkeypatch.setattr(seg_cfg, "PRODUCTS_PER_TAXONOMY_PROMPT", PRODUCTS_PER_TAXONOMY_PROMPT, raising=False)
     monkeypatch.setattr(seg_cfg, "TAXONOMIES_PER_CONSOLIDATION", TAXONOMIES_PER_CONSOLIDATION, raising=False)
     monkeypatch.setattr(seg_cfg, "PRODUCTS_PER_REFINEMENT", PRODUCTS_PER_REFINEMENT, raising=False)
 
     
-    import product_segmentation.llm.product_segmentation_client as _ps_client
-    import product_segmentation.services.db_product_segmentation as _ps_service
+    import product_segment.llm.product_segmentation_client as _ps_client
+    import product_segment.services.db_product_segmentation as _ps_service
 
     importlib.reload(_ps_client)
     importlib.reload(_ps_service)
@@ -140,7 +140,7 @@ async def test_segmentation_service_against_real_db(monkeypatch) -> None:  # noq
     )
 
     # Re-import the (now reloaded) service class
-    from product_segmentation.services.db_product_segmentation import DatabaseProductSegmentationService
+    from product_segment.services.db_product_segmentation import DatabaseProductSegmentationService
 
     service = DatabaseProductSegmentationService(
         run_repo,

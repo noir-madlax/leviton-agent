@@ -18,7 +18,7 @@ def run_model_tests():
     print("=" * 50)
     
     try:
-        from product_segmentation.models import (
+        from product_segment.models import (
             SegmentationRunCreate, SegmentationStatus, InteractionType,
             ProductTaxonomyCreate, ProductSegmentCreate, LLMInteractionIndexCreate,
             StartSegmentationRequest
@@ -100,7 +100,7 @@ def test_enums():
     print("=" * 30)
     
     try:
-        from product_segmentation.models import SegmentationStatus, InteractionType
+        from product_segment.models import SegmentationStatus, InteractionType
         
         # Test SegmentationStatus
         assert SegmentationStatus.RUNNING == "running"
@@ -137,7 +137,7 @@ def main():
     # Phase 2: File Storage System
     print("\n💾 PHASE 2: File Storage System")
     try:
-        from product_segmentation.tests.test_storage import run_storage_tests
+        from product_segment.tests.test_storage import run_storage_tests
         results.append(run_storage_tests())
     except Exception as e:
         print(f"❌ Storage tests failed: {e}")
@@ -148,7 +148,7 @@ def main():
     # Phase 2b: Directory/Batching Utilities
     print("\n📦 PHASE 2b: Batching Utilities")
     try:
-        from product_segmentation.tests.test_batching import run_batching_tests
+        from product_segment.tests.test_batching import run_batching_tests
         results.append(run_batching_tests())
     except Exception as e:
         print(f"❌ Batching tests failed: {e}")
@@ -159,11 +159,11 @@ def main():
     # Phase 2c: Interaction Repository
     print("\n📑 PHASE 2c: Interaction Repository")
     try:
-        from product_segmentation.tests.test_interaction_repository import TestLLMInteractionRepository  # noqa: F401
+        from product_segment.tests.test_interaction_repository import TestLLMInteractionRepository  # noqa: F401
         import pytest, importlib, inspect
         # Dynamically collect the tests and run via pytest.main in-process
         # We run only the tests from this module to keep the runner lightweight.
-        repo_test_module = importlib.import_module("backend.product_segmentation.tests.test_interaction_repository")
+        repo_test_module = importlib.import_module("backend.product_segment.tests.test_interaction_repository")
         repo_test_file = inspect.getsourcefile(repo_test_module)
         # Run pytest programmatically on the specific file
         result_code = pytest.main([repo_test_file, "-q"])
@@ -178,7 +178,7 @@ def main():
     # Phase 3: Core Segmentation Service
     print("\n⚙️  PHASE 3: Core Segmentation Service")
     try:
-        from product_segmentation.tests.test_service import run_service_tests
+        from product_segment.tests.test_service import run_service_tests
         results.append(run_service_tests())
     except Exception as e:
         print(f"❌ Service tests failed: {e}")
@@ -189,9 +189,9 @@ def main():
     # Phase 2d: Cache Utilities
     print("\n🗄️  PHASE 2d: Cache Utilities")
     try:
-        from product_segmentation.tests import test_cache as _  # noqa: F401
+        from product_segment.tests import test_cache as _  # noqa: F401
         import pytest
-        result_code = pytest.main(["backend/product_segmentation/tests/test_cache.py", "-q"])
+        result_code = pytest.main(["backend/product_segment/tests/test_cache.py", "-q"])
         results.append(result_code == 0)
     except Exception as e:
         print(f"❌ Cache utilities tests failed: {e}")

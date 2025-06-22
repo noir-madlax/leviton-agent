@@ -1,7 +1,7 @@
-"""REST API router (v6.2) for the *product_segmentation* engine.
+"""REST API router (v6.2) for the *product_segment* engine.
 
 This module implements the **final** public surface specified in
-``backend/product_segmentation/README_product_segmentation.md``.
+``backend/product_segment/README_product_segmentation.md``.
 
 Endpoints
 ---------
@@ -36,11 +36,11 @@ from typing import Any, List, Dict
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request, Response, status
 from fastapi.responses import StreamingResponse, JSONResponse
 
-from product_segmentation.models import (
+from product_segment.models import (
     StartSegmentationRequest,
     SegmentationStage,
 )
-from product_segmentation.services.db_product_segmentation import DatabaseProductSegmentationService
+from product_segment.services.db_product_segmentation import DatabaseProductSegmentationService
 
 
 async def _get_service(request: Request) -> DatabaseProductSegmentationService:  # noqa: D401

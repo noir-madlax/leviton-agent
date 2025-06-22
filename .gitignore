@@ -1,4 +1,5 @@
 # IDE 文件
+.DS_Store
 .idea/
 *.iml
 *.ipr

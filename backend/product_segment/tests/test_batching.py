@@ -74,7 +74,7 @@ def test_determinism_list() -> None:
 
 
 # -----------------------------------------------------------------------------
-# Manual test runner (allows `python -m backend.product_segmentation.tests.test_batching`)
+# Manual test runner (allows `python -m backend.product_segment.tests.test_batching`)
 # -----------------------------------------------------------------------------
 
 def _run_test(fn):

@@ -12,7 +12,7 @@ from typing import Any, Dict, List, Optional
 
 from supabase import Client  # type: ignore
 
-from product_segmentation.models import (
+from product_segment.models import (
     ProductSegmentRun,
     SegmentationStage,
 )
