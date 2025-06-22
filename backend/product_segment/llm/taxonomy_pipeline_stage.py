@@ -33,14 +33,13 @@ All constants come from :pymod:`utils.config`; the helper never hardcodes
 numbers.
 """
 
-import asyncio
 import logging
-import time
 from dataclasses import dataclass, field
 from typing import Any, Dict, List, Protocol, Sequence, Tuple, TypeVar
+import asyncio
 
 from core.utils import config as cfg
-from core.utils.llm_utils import safe_llm_call, ValidationResult  # Central semaphore + retry logic
+from core.utils.llm_utils import safe_llm_call, ValidationResult, LLMCallError  # Central semaphore + retry logic
 
 logger = logging.getLogger(__name__)
 
@@ -139,14 +138,22 @@ class BaseStage:
     async def _build_prompt(self, seq: Sequence[Any], ctx: StageContext) -> str:  # noqa: D401 – abstract signature
         raise NotImplementedError
 
-    async def _validate(
+    def _validate(
         self, raw_response: str, seq: Sequence[Any], ctx: StageContext
     ) -> ValidationResult:
-        """Return LLM response validation result."""
+        """Synchronously validate the LLM response.
 
-    async def _retry_prompt(
+        Implementations should return a :class:`ValidationResult` instance.  The
+        :pyattr:`ValidationResult.ok` flag decides whether the response is
+        considered valid.  The *error_categories* payload will be forwarded to
+        :pyfunc:`_retry_prompt` as-is when the call needs to be retried.
+        """
+        raise NotImplementedError
+
+    def _retry_prompt(
         self, original_prompt: str, retry_ctx: Any, ctx: StageContext
     ) -> str:
+        """Return a new prompt based on *retry_ctx* coming from *_validate*."""
         raise NotImplementedError
 
     async def _produce_result(
@@ -169,99 +176,90 @@ class BaseStage:
     ) -> T:
         raise NotImplementedError
 
+    # Optional hooks ---------------------------------------------------------
+
+    def _split_input(
+        self, seq: Sequence[Any], depth: int
+    ) -> tuple[Sequence[Any], Sequence[Any]]:  # noqa: D401 – overridable
+        """Return a 2-way split of *seq* for recursive processing.
+
+        Subclasses may override this to implement custom strategies (e.g. pair
+        splitting for consolidation).  The default implementation halves the
+        sequence (⌊n/2⌋ | ⌈n/2⌉).  The method **must** return exactly two
+        non-empty sub-sequences; callers are responsible for guarding against
+        *len(seq) == 1* before invoking it.
+        """
+
+        mid = len(seq) // 2
+        return seq[:mid], seq[mid:]
+
     # ---------------------------------------------------------------------
     # Public entry-point
     # ---------------------------------------------------------------------
 
     async def execute(self, ctx: StageContext) -> StageResultBase:  # noqa: D401
-        """Process *ctx.input_seq* and return a :class:`StageResultBase`.
+        """Run the stage for *ctx.input_seq*.
 
-        The helper enforces:
-        • Two validation attempts per batch (original + retry).
-        • Automatic split-and-conquer when validation keeps failing.
-        • Cumulated LLM call ceiling specified by
-          ``cfg.MAX_LLM_CALLS_PER_EXECUTE``.
+        The retry logic is now fully delegated to :pyfunc:`safe_llm_call` –
+        this helper handles validation-aware retries and only returns once the
+        LLM response passes :pyfunc:`_validate` *or* raises
+        :class:`core.utils.llm_utils.LLMCallError` after exhausting the global
+        retry budget.
+
+        The recursive helper is preserved solely so subclasses can override the
+        split behaviour (e.g. consolidation stages may implement a custom
+        splitting strategy).  The default implementation, however, **does not
+        auto-split** – it processes the *seq* as a single batch.
         """
 
-        call_budget = cfg.MAX_LLM_CALLS_PER_EXECUTE
-        calls_made = 0
-
         async def _run_recursive(seq: Sequence[Any], depth: int = 0) -> StageResultBase:
-            nonlocal calls_made, call_budget  # modify outer scope
+            # NOTE: Depth is currently unused here but retained so specialised
+            #       subclasses (e.g. consolidation) may leverage it.
 
-            if calls_made >= call_budget:
-                raise StageCallBudgetExceeded(
-                    f"Exceeded maximum of {cfg.MAX_LLM_CALLS_PER_EXECUTE} LLM calls"
+            # 1) Build initial prompt -------------------------------------------------
+            prompt = await self._build_prompt(seq, ctx)
+
+            # 2) Adapter wrappers for the shared safe_llm_call -----------------------
+            def _validator(raw: str):
+                result = self._validate(raw, seq, ctx)
+                return result.ok, result  # Pass full ValidationResult as retry_ctx
+
+            def _retry_builder(original_prompt: str, retry_ctx: Any):
+                return self._retry_prompt(original_prompt, retry_ctx, ctx)
+
+            # 3) Fire the LLM – safe_llm_call handles its own retries ------------
+            try:
+                raw_response = await safe_llm_call(
+                    prompt,
+                    validate_response=_validator,
+                    retry_prompt_builder=_retry_builder,
+                    context={"stage": self.__class__.__name__, "depth": depth},
                 )
 
-            # ---------------- attempt-1 ------------------------------------
-            prompt1 = await self._build_prompt(seq, ctx)
-            raw1 = await _call_and_persist(prompt1, ctx, attempt=1)
-            calls_made += 1
+                # 4) Successful – convert payload to stage-specific result -----------
+                return await self._produce_result(seq, raw_response, ctx, attempts=1)
 
-            validation_result1 = await self._validate(raw1, seq, ctx)
-            if validation_result1.ok:
-                return await self._produce_result(seq, raw1, ctx, attempts=1)
+            except LLMCallError as exc:
+                # After safe_llm_call exhausted its retries the response still failed
+                # validation.  Apply *split-and-conquer* fallback if we have a batch
+                # larger than one element; otherwise propagate as a protocol error.
 
-            # ---------------- attempt-2 (retry prompt) ---------------------
-            if calls_made >= call_budget:
-                raise StageCallBudgetExceeded(
-                    f"Exceeded maximum of {cfg.MAX_LLM_CALLS_PER_EXECUTE} LLM calls"
-                )
+                if len(seq) > 1:
+                    left, right = self._split_input(seq, depth)
 
-            prompt2 = await self._retry_prompt(prompt1, validation_result1, ctx)
-            raw2 = await _call_and_persist(prompt2, ctx, attempt=2)
-            calls_made += 1
+                    res_left, res_right = await asyncio.gather(
+                        _run_recursive(left, depth + 1),
+                        _run_recursive(right, depth + 1),
+                    )
 
-            validation_result2 = await self._validate(raw2, seq, ctx)
-            if validation_result2.ok:
-                return await self._produce_result(seq, raw2, ctx, attempts=2)
+                    return await self._merge_split_results(
+                        left, right, res_left, res_right, ctx, depth + 1
+                    )
 
-            # ---------------- auto-split -----------------------------------
-            if len(seq) > 1:
-                mid = len(seq) // 2
-                left, right = seq[:mid], seq[mid:]
-                res_left, res_right = await asyncio.gather(
-                    _run_recursive(left, depth + 1),
-                    _run_recursive(right, depth + 1),
-                )
-                return await self._merge_split_results(
-                    left, right, res_left, res_right, ctx, depth + 1
-                )
+                # Single element still invalid → terminal failure
+                raise StageProtocolError(
+                    "Validation failed even for single-item batch after retries"
+                ) from exc
 
-            # single item still invalid → give up
-            raise StageProtocolError(
-                "Validation failed even for single-item batch after two attempts"
-            )
-
+        # Start recursion (single pass by default)
         return await _run_recursive(ctx.input_seq, depth=0)
-
-
-# ---------------------------------------------------------------------------
-# Internal helpers
-# ---------------------------------------------------------------------------
-
-async def _call_and_persist(
-    prompt: str,
-    ctx: StageContext,
-    *,
-    attempt: int,
-) -> str:
-    """Invoke the LLM, persist artefact (if storage set) and return raw text."""
-
-    raw_response = await safe_llm_call(prompt, context={**ctx.context_vars, "attempt": attempt})
-
-    if ctx.storage is not None:
-        record = {
-            "timestamp": time.strftime("%Y-%m-%dT%H:%M:%S"),
-            "attempt": attempt,
-            "context_vars": ctx.context_vars,
-            "prompt": prompt,
-            "response": raw_response,
-        }
-        try:
-            await ctx.storage.write_json(record)
-        except Exception as exc:  # pylint: disable=broad-except
-            logger.warning("CallStorage.write_json failed: %s", exc)
-
-    return raw_response

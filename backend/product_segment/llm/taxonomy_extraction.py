@@ -134,7 +134,7 @@ class ExtractionStage(BaseStage):
         input_lines = "\n".join(f"[{i}] {txt}" for i, txt in enumerate(seq))
         return f"{rendered_template}\n\n{input_lines}"
 
-    async def _validate(
+    def _validate(
         self, raw_response: str, seq: Sequence[str], ctx: StageContext
     ) -> ValidationResult:
         """Validate and (optionally) return retry-context."""
@@ -223,7 +223,7 @@ class ExtractionStage(BaseStage):
 
         return ValidationResult(ok=False, error_categories=error_categories)
 
-    async def _retry_prompt(
+    def _retry_prompt(
         self, original_prompt: str, validation_result: ValidationResult, ctx: StageContext
     ) -> str:  # noqa: D401
         # Build human-readable error details from retry_ctx.error_categories

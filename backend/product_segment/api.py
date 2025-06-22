@@ -29,16 +29,12 @@ Backward-compatibility notes
 
 from __future__ import annotations
 
-import asyncio
-import json
-from typing import Any, List, Dict
+from typing import Any
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request, Response, status
-from fastapi.responses import StreamingResponse, JSONResponse
 
 from product_segment.models import (
     StartSegmentationRequest,
-    SegmentationStage,
 )
 from product_segment.services.db_product_segmentation import DatabaseProductSegmentationService
 

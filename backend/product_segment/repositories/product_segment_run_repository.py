@@ -8,7 +8,7 @@ from __future__ import annotations
 
 import json
 import logging
-from typing import Any, Dict, List, Optional
+from typing import Any, Dict, Optional
 
 from supabase import Client  # type: ignore
 
@@ -19,23 +19,18 @@ from product_segment.models import (
 
 logger = logging.getLogger(__name__)
 
-
 _JSON_COLS = {"llm_config", "processing_params", "result_summary"}
 _TABLE = "product_segment_runs"
 
-
-class ProductSegmentRunRepository:
-    """Repository for CRUD operations on *product_segment_runs*."""
+class SegmentationRunRepository:
+    """Repository for CRUD operations on product_segment_runs."""
 
     def __init__(self, supabase_client: Client):
         self._client = supabase_client
 
-    # ------------------------------------------------------------------
-    # Helpers
-    # ------------------------------------------------------------------
     @staticmethod
     def _model_to_payload(model: ProductSegmentRun) -> Dict[str, Any]:
-        """Convert *ProductSegmentRun* → dict suitable for Supabase insert/update."""
+        """Convert ProductSegmentRun → dict suitable for Supabase insert/update."""
         data = model.model_dump()
         for col in _JSON_COLS:
             if col in data and data[col] is not None:
@@ -46,7 +41,7 @@ class ProductSegmentRunRepository:
 
     @staticmethod
     def _row_to_model(row: Dict[str, Any]) -> ProductSegmentRun:
-        """Convert DB row → *ProductSegmentRun* (JSON columns decoded)."""
+        """Convert DB row → ProductSegmentRun (JSON columns decoded)."""
         for col in _JSON_COLS:
             if col in row and isinstance(row[col], str):
                 try:
@@ -58,11 +53,8 @@ class ProductSegmentRunRepository:
             row["stage"] = SegmentationStage(row["stage"])
         return ProductSegmentRun(**row)
 
-    # ------------------------------------------------------------------
-    # CRUD operations
-    # ------------------------------------------------------------------
     async def create(self, run: ProductSegmentRun) -> ProductSegmentRun:
-        """Insert *run* and return the persisted record."""
+        """Insert run and return the persisted record."""
         payload = self._model_to_payload(run)
         logger.debug("Inserting product_segment_run: %s", payload)
         result = self._client.table(_TABLE).insert(payload).execute()
@@ -70,12 +62,14 @@ class ProductSegmentRunRepository:
         return self._row_to_model(row)
 
     async def get_by_id(self, run_id: str) -> Optional[ProductSegmentRun]:
+        """Get run by ID."""
         result = self._client.table(_TABLE).select("*").eq("id", run_id).execute()
         if result.data:
             return self._row_to_model(result.data[0])
         return None
 
     async def update_stage(self, run_id: str, stage: SegmentationStage) -> bool:
+        """Update run stage."""
         result = (
             self._client.table(_TABLE)
             .update({"stage": stage.value})
@@ -84,37 +78,22 @@ class ProductSegmentRunRepository:
         )
         return bool(result.data)
 
-    async def complete_run(self, run_id: str, result_summary: Dict[str, Any]) -> bool:
-        payload = {
-            "stage": SegmentationStage.COMPLETED.value,
-            "result_summary": json.dumps(result_summary),
-        }
-        result = self._client.table(_TABLE).update(payload).eq("id", run_id).execute()
-        return bool(result.data)
-
-    async def delete(self, run_id: str) -> bool:
-        result = self._client.table(_TABLE).delete().eq("id", run_id).execute()
-        return bool(result.data)
-
-    # ------------------------------------------------------------------
-    # Query helpers
-    # ------------------------------------------------------------------
-    async def get_recent_runs(self, limit: int = 10) -> List[ProductSegmentRun]:
+    async def update_total_calls(self, run_id: str, total_calls: int) -> bool:
+        """Update total expected LLM calls for the run."""
         result = (
             self._client.table(_TABLE)
-            .select("*")
-            .order("created_at", desc=True)
-            .limit(limit)
+            .update({"calls_total": total_calls})
+            .eq("id", run_id)
             .execute()
         )
-        return [self._row_to_model(r) for r in result.data] if result.data else []
+        return bool(result.data)
 
-    async def get_runs_by_stage(self, stage: SegmentationStage) -> List[ProductSegmentRun]:
+    async def update_calls_done(self, run_id: str, calls_done: int) -> bool:
+        """Update number of completed LLM calls."""
         result = (
             self._client.table(_TABLE)
-            .select("*")
-            .eq("stage", stage.value)
-            .order("created_at", desc=True)
+            .update({"calls_done": calls_done})
+            .eq("id", run_id)
             .execute()
         )
-        return [self._row_to_model(r) for r in result.data] if result.data else [] 
+        return bool(result.data) 
