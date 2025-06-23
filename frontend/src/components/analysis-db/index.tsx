@@ -166,40 +166,91 @@ interface DashboardData {
   }>>
 }
 
-async function fetchDatabaseData(): Promise<DashboardData> {
+// 🔑 NEW: Fetch data by module to avoid loading all data at once
+async function fetchBrandAnalysisData(projectId?: string) {
   try {
-    const [
-      brandCategoryRevenue,
-      productAnalysisData,
-      pricingAnalysisData,
-      marketInsightsData,
-      packagePreferenceData,
-      reviewInsightsData,
-      competitorAnalysisData,
-      allReviewData
-    ] = await Promise.all([
-      databaseService.getBrandCategoryRevenue(),
-      databaseService.getProductAnalysisData(),
-      databaseService.getPricingAnalysisData(),
-      databaseService.getMarketInsightsData(),
-      databaseService.getPackagePreferenceData(),
-      databaseService.getReviewInsightsData(),
-      databaseService.getCompetitorAnalysisData(),
-      databaseService.getAllReviewData()
-    ])
+    // 🔑 REQUIRE project ID for Brand Analysis - no fallback to unfiltered data
+    if (!projectId) {
+      console.log('⏳ Brand Analysis waiting for project selection...');
+      return { brandCategoryRevenue: [] };
+    }
+    
+    console.log(`📊 Fetching Brand Analysis data for project: ${projectId}`);
+    const brandCategoryRevenue = await databaseService.getBrandCategoryRevenueByProject(projectId);
+    console.log(`📈 Brand Analysis data received: ${brandCategoryRevenue.length} brands`);
+    
+    if (brandCategoryRevenue.length > 0) {
+      brandCategoryRevenue.forEach((brand, index) => {
+        console.log(`  Brand ${index + 1}: ${brand.brand} - Dimmer: $${brand.dimmerRevenue}, Switch: $${brand.switchRevenue}`);
+      });
+    } else {
+      console.log('  ⚠️ No brand data returned from API');
+    }
+    
+    return { brandCategoryRevenue };
+  } catch (error) {
+    console.error('Error fetching brand analysis data:', error);
+    return { brandCategoryRevenue: [] };
+  }
+}
+
+// 🚨 TEMPORARY: Return empty data for unimplemented modules to prevent errors
+async function fetchOtherModulesData(): Promise<Omit<DashboardData, 'brandAnalysis'>> {
+  return {
+    productAnalysis: {
+      priceVsRevenue: [
+        { category: 'Dimmer Switches', products: [] },
+        { category: 'Light Switches', products: [] }
+      ],
+      topProducts: [
+        { category: 'Dimmer Switches', products: [] },
+        { category: 'Light Switches', products: [] }
+      ]
+    },
+    pricingAnalysis: {
+      priceDistribution: [],
+      brandPriceDistribution: []
+    },
+    marketInsights: {
+      segmentRevenue: {
+        dimmerSwitches: [],
+        lightSwitches: []
+      }
+    },
+    packagePreference: {
+      sameProductComparison: [],
+      packageDistribution: [],
+      dimmerSwitches: [],
+      lightSwitches: []
+    },
+    reviewInsights: {
+      painPoints: [],
+      customerLikes: [],
+      underservedUseCases: []
+    },
+    competitorAnalysis: {
+      targetProducts: [],
+      matrixData: [],
+      productTotalReviews: {},
+      useCaseData: {
+        targetProducts: [],
+        matrixData: []
+      }
+    },
+    allReviewData: {}
+  };
+}
+
+async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
+  try {
+    // 🔑 Only load brand analysis data initially, others are empty
+    const brandAnalysisData = await fetchBrandAnalysisData(projectId);
+    const otherModulesData = await fetchOtherModulesData();
 
     return {
-      brandAnalysis: {
-        brandCategoryRevenue
-      },
-      productAnalysis: productAnalysisData,
-      pricingAnalysis: pricingAnalysisData,
-      marketInsights: marketInsightsData,
-      packagePreference: packagePreferenceData,
-      reviewInsights: reviewInsightsData,
-      competitorAnalysis: competitorAnalysisData,
-      allReviewData: allReviewData
-    }
+      brandAnalysis: brandAnalysisData,
+      ...otherModulesData
+    } as DashboardData;
   } catch (error) {
     console.error('Error fetching database data:', error)
     // 返回空数据结构
@@ -265,23 +316,38 @@ export function AnalysisDbContainer() {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null)
+
+  const loadData = async (projectId?: string) => {
+    try {
+      setLoading(true)
+      setError(null)
+      console.log(`🔄 Loading dashboard data${projectId ? ` for project ${projectId}` : ' (waiting for project selection)'}`)
+      
+      const dashboardData = await fetchDatabaseData(projectId || undefined)
+      setData(dashboardData)
+      
+      console.log(`✅ Dashboard data loaded successfully${projectId ? ` for project ${projectId}` : ' (empty data, waiting for project)'}`)
+    } catch (err) {
+      console.error('Failed to load database data:', err)
+      setError('Failed to load data from database')
+    } finally {
+      setLoading(false)
+    }
+  }
+
+  // 项目变更回调
+  const handleProjectChange = (projectId: string) => {
+    console.log(`🔄 Project changed to: ${projectId}`)
+    console.log(`📊 Starting data load for project: ${projectId}`)
+    setSelectedProjectId(projectId)
+    loadData(projectId)
+  }
 
   useEffect(() => {
-    const loadData = async () => {
-      try {
-        setLoading(true)
-        setError(null)
-        const dashboardData = await fetchDatabaseData()
-        setData(dashboardData)
-      } catch (err) {
-        console.error('Failed to load database data:', err)
-        setError('Failed to load data from database')
-      } finally {
-        setLoading(false)
-      }
-    }
-
-    loadData()
+    // 🎯 NEW APPROACH: Don't load any data initially - wait for user to select project
+    console.log('🏠 Dashboard initialized, waiting for project selection...');
+    setLoading(false); // Stop loading immediately, wait for user action
   }, [])
 
   if (loading) {
@@ -295,14 +361,47 @@ export function AnalysisDbContainer() {
     )
   }
 
-  if (error || !data) {
+  if (error) {
     return (
       <div className="p-6">
         <div className="w-full h-2 bg-red-200 rounded-full mb-4">
           <div className="h-2 bg-red-600 rounded-full" style={{ width: '100%' }}></div>
         </div>
         <div className="text-center text-red-600">
-          Error loading data (DB Version): {error || 'Unknown error'}
+          Error loading data (DB Version): {error}
+        </div>
+      </div>
+    )
+  }
+
+  // 🎯 NEW: Show project selection UI when no data is loaded yet
+  if (!data) {
+    return (
+      <div className="flex h-screen bg-gray-50">
+        <div className="flex-1 flex flex-col overflow-hidden">
+          {/* 数据库版本标识 */}
+          <div className="w-full h-1 bg-blue-600"></div>
+          
+          <div className="flex-1 overflow-auto">
+            <div className="p-6">
+              <DashboardHeader 
+                onProjectChange={handleProjectChange} 
+                selectedProjectId={selectedProjectId} 
+              />
+              
+              <div className="mt-12 text-center">
+                <div className="w-full h-2 bg-blue-200 rounded-full mb-4 mx-auto max-w-md">
+                  <div className="h-2 bg-blue-600 rounded-full" style={{ width: '0%' }}></div>
+                </div>
+                <div className="text-gray-600 text-lg">
+                  📋 Please select a project from the dropdown above to load analysis data
+                </div>
+                <div className="text-gray-400 text-sm mt-2">
+                  {selectedProjectId ? 'Loading data...' : 'Waiting for project selection...'}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     )
@@ -369,7 +468,10 @@ export function AnalysisDbContainer() {
             
             <div className="flex-1 overflow-auto">
               <div className="p-6">
-                <DashboardHeader />
+                <DashboardHeader 
+                  onProjectChange={handleProjectChange} 
+                  selectedProjectId={selectedProjectId} 
+                />
                 
                 <Tabs defaultValue="market-analysis" className="mt-6">
                   <TabsList className="grid w-full grid-cols-3">

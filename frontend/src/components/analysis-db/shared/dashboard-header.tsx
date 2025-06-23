@@ -1,19 +1,21 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { databaseService, type Project } from '@/components/analysis-db/data/database-service';
 
 interface DashboardHeaderProps {
-  projectName?: string;
   onProjectChange?: (projectId: string) => void;
+  selectedProjectId?: string | null;
 }
 
-export function DashboardHeader({ projectName = 'Default Project', onProjectChange }: DashboardHeaderProps) {
+export function DashboardHeader({ onProjectChange, selectedProjectId: parentSelectedProjectId }: DashboardHeaderProps) {
   const [projects, setProjects] = useState<Project[]>([]);
-  const [selectedProjectId, setSelectedProjectId] = useState<string>('');
+  const [localSelectedProjectId, setLocalSelectedProjectId] = useState<string>('');
   const [loading, setLoading] = useState(false);
+  
+  // Use parent's selectedProjectId if provided, otherwise use local state
+  const selectedProjectId = parentSelectedProjectId || localSelectedProjectId;
 
   // 加载项目列表
   useEffect(() => {
@@ -25,15 +27,8 @@ export function DashboardHeader({ projectName = 'Default Project', onProjectChan
       const projectList = await databaseService.getProjects();
       setProjects(projectList);
       
-      // 如果有项目且没有选中任何项目，选中第一个
-      if (projectList.length > 0 && !selectedProjectId) {
-        const firstProject = projectList[0];
-        setSelectedProjectId(firstProject.id);
-        // 如果有回调，通知父组件项目变更
-        if (onProjectChange) {
-          onProjectChange(firstProject.id);
-        }
-      }
+      // 🎯 NEW APPROACH: Don't auto-select any project - let user choose
+      console.log(`📋 Loaded ${projectList.length} projects, waiting for user selection...`);
     } catch (error) {
       console.error('Failed to load projects:', error);
     }
@@ -44,7 +39,13 @@ export function DashboardHeader({ projectName = 'Default Project', onProjectChan
     
     setLoading(true);
     try {
-      setSelectedProjectId(projectId);
+      // Update local state only if parent doesn't control the state
+      if (!parentSelectedProjectId) {
+        setLocalSelectedProjectId(projectId);
+      }
+      
+      console.log(`🎯 DashboardHeader: Project selected - ${projectId}`);
+      
       if (onProjectChange) {
         onProjectChange(projectId);
       }
@@ -55,7 +56,7 @@ export function DashboardHeader({ projectName = 'Default Project', onProjectChan
     }
   };
 
-  const selectedProject = projects.find(p => p.id === selectedProjectId);
+  // const selectedProject = projects.find(p => p.id === selectedProjectId);
 
   return (
     <div className="flex items-center justify-between mb-8">

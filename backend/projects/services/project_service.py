@@ -68,12 +68,19 @@ class ProjectService:
             raise
     
     async def _extract_asins_from_filters(self, filters) -> List[str]:
-        """Extract platform ID list based on project filters."""
+        """Extract platform ID list based on project filters.
+        
+        CRITICAL: Must match the exact logic used in get_data_confirmation_data()
+        to ensure consistency between preview and saved project.
+        """
         try:
-            # Build query
-            query = self.supabase.table('product_wide_table').select('platform_id')
+            # Build query - get all necessary fields for filtering
+            query = self.supabase.table('product_wide_table').select('platform_id, monthly_sales_volume')
             
-            # Apply filters
+            # Apply base filters (match data confirmation logic)
+            query = query.neq('category', None).neq('brand', None)
+            
+            # Apply user filters
             if filters.categories:
                 query = query.in_('category', filters.categories)
             
@@ -83,18 +90,39 @@ class ProjectService:
             if filters.sources:
                 query = query.in_('source', filters.sources)
             
-            # Apply sales ranking filter
-            if filters.top_sales_count:
-                query = query.order('monthly_sales_volume', desc=True).limit(filters.top_sales_count)
-            
-            # Execute query
+            # Execute query to get all filtered data
             result = query.execute()
             
             if not result.data:
                 return []
             
-            # Extract platform IDs (ASINs for Amazon, product IDs for other sources)
-            platform_ids = [row['platform_id'] for row in result.data if row.get('platform_id')]
+            # Apply sales ranking filter in Python (matches data confirmation logic)
+            if filters.top_sales_count:
+                # Filter out products with no sales volume (NULL or 0)
+                products_with_sales = [
+                    row for row in result.data 
+                    if row.get('monthly_sales_volume') is not None and row['monthly_sales_volume'] > 0
+                ]
+                
+                # Sort by sales volume (descending)
+                sorted_products = sorted(
+                    products_with_sales,
+                    key=lambda x: x['monthly_sales_volume'] or 0,
+                    reverse=True
+                )
+                
+                # Take top N products
+                top_products = sorted_products[:filters.top_sales_count]
+                
+                # Extract platform IDs
+                platform_ids = [row['platform_id'] for row in top_products if row.get('platform_id')]
+                
+                logger.info(f"ASIN extraction: filtered {len(result.data)} -> {len(products_with_sales)} with sales -> top {len(top_products)} selected")
+                
+            else:
+                # No top sales filter, use all filtered products
+                platform_ids = [row['platform_id'] for row in result.data if row.get('platform_id')]
+            
             return list(set(platform_ids))  # Remove duplicates
             
         except Exception as e:

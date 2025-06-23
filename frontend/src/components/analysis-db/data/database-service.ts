@@ -124,7 +124,27 @@ export interface ProductAnalysisData {
 
 export class DatabaseService {
   
-  // 获取品牌分类收入数据
+  // 🔑 NEW: Get brand category revenue data with project filtering via backend API
+  async getBrandCategoryRevenueByProject(projectId: string): Promise<BrandCategoryData[]> {
+    try {
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/brand-analysis?project_id=${projectId}`);
+      
+      if (!response.ok) {
+        throw new Error(`Backend API error: ${response.status} ${response.statusText}`);
+      }
+      
+      const result = await response.json();
+      console.log(`🔑 Brand analysis API returned ${result.total_brands} brands with ${result.filtered_asin_count} ASINs for project ${projectId}`);
+      
+      return result.data;
+    } catch (error) {
+      console.error('Error fetching brand analysis from backend:', error);
+      return [];
+    }
+  }
+  
+  // 🚨 DEPRECATED: 获取品牌分类收入数据 (直接查询，无项目过滤)
   async getBrandCategoryRevenue(): Promise<BrandCategoryData[]> {
     const { data, error } = await supabase
       .from('product_wide_table')
@@ -1312,13 +1332,19 @@ export class DatabaseService {
 
   async getProjects(): Promise<Project[]> {
     try {
-      const { data, error } = await supabase
-        .from('projects')
-        .select('*')
-        .eq('status', 'active')
-        .order('created_at', { ascending: false })
+      // 使用后端API获取项目列表
+      const response = await fetch('http://localhost:8000/api/v1/projects/', {
+        method: 'GET',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      })
 
-      if (error) throw error
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+
+      const data = await response.json()
       return data || []
     } catch (error) {
       console.error('Failed to get projects:', error)

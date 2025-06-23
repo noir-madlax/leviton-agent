@@ -74,6 +74,10 @@ app.include_router(segmentation_router, prefix="/api/segmentation", tags=["Produ
 from projects.api import router as projects_router
 app.include_router(projects_router, prefix="/api/v1/projects", tags=["Projects"])
 
+# Register Dashboard endpoints
+from dashboard.api import router as dashboard_router
+app.include_router(dashboard_router, prefix="/api/v1/dashboard", tags=["Dashboard"])
+
 
 
 @app.get("/")
