@@ -194,10 +194,30 @@ async function fetchBrandAnalysisData(projectId?: string) {
   }
 }
 
-// 🚨 TEMPORARY: Return empty data for unimplemented modules to prevent errors
-async function fetchOtherModulesData(): Promise<Omit<DashboardData, 'brandAnalysis'>> {
-  return {
-    productAnalysis: {
+async function fetchProductAnalysisData(projectId?: string) {
+  try {
+    if (!projectId) {
+      console.log('⏳ Product Analysis waiting for project selection...');
+      return {
+        priceVsRevenue: [
+          { category: 'Dimmer Switches', products: [] },
+          { category: 'Light Switches', products: [] }
+        ],
+        topProducts: [
+          { category: 'Dimmer Switches', products: [] },
+          { category: 'Light Switches', products: [] }
+        ]
+      };
+    }
+    
+    console.log(`📊 Fetching Product Analysis data for project: ${projectId}`);
+    const productAnalysisData = await databaseService.getProductAnalysisDataByProject(projectId);
+    console.log(`📈 Product Analysis data received`);
+    
+    return productAnalysisData;
+  } catch (error) {
+    console.error('Error fetching product analysis data:', error);
+    return {
       priceVsRevenue: [
         { category: 'Dimmer Switches', products: [] },
         { category: 'Light Switches', products: [] }
@@ -206,23 +226,93 @@ async function fetchOtherModulesData(): Promise<Omit<DashboardData, 'brandAnalys
         { category: 'Dimmer Switches', products: [] },
         { category: 'Light Switches', products: [] }
       ]
-    },
-    pricingAnalysis: {
+    };
+  }
+}
+
+async function fetchPricingAnalysisData(projectId?: string) {
+  try {
+    if (!projectId) {
+      console.log('⏳ Pricing Analysis waiting for project selection...');
+      return {
+        priceDistribution: [],
+        brandPriceDistribution: []
+      };
+    }
+    
+    console.log(`📊 Fetching Pricing Analysis data for project: ${projectId}`);
+    const pricingAnalysisData = await databaseService.getPricingAnalysisDataByProject(projectId);
+    console.log(`📈 Pricing Analysis data received`);
+    
+    return pricingAnalysisData;
+  } catch (error) {
+    console.error('Error fetching pricing analysis data:', error);
+    return {
       priceDistribution: [],
       brandPriceDistribution: []
-    },
-    marketInsights: {
+    };
+  }
+}
+
+async function fetchMarketInsightsData(projectId?: string) {
+  try {
+    if (!projectId) {
+      console.log('⏳ Market Insights waiting for project selection...');
+      return {
+        segmentRevenue: {
+          dimmerSwitches: [],
+          lightSwitches: []
+        }
+      };
+    }
+    
+    console.log(`📊 Fetching Market Insights data for project: ${projectId}`);
+    const marketInsightsData = await databaseService.getMarketInsightsDataByProject(projectId);
+    console.log(`📈 Market Insights data received`);
+    
+    return marketInsightsData;
+  } catch (error) {
+    console.error('Error fetching market insights data:', error);
+    return {
       segmentRevenue: {
         dimmerSwitches: [],
         lightSwitches: []
       }
-    },
-    packagePreference: {
+    };
+  }
+}
+
+async function fetchPackagePreferenceData(projectId?: string) {
+  try {
+    if (!projectId) {
+      console.log('⏳ Package Preference waiting for project selection...');
+      return {
+        sameProductComparison: [],
+        packageDistribution: [],
+        dimmerSwitches: [],
+        lightSwitches: []
+      };
+    }
+    
+    console.log(`📊 Fetching Package Preference data for project: ${projectId}`);
+    const packagePreferenceData = await databaseService.getPackagePreferenceDataByProject(projectId);
+    console.log(`📈 Package Preference data received`);
+    
+    return packagePreferenceData;
+  } catch (error) {
+    console.error('Error fetching package preference data:', error);
+    return {
       sameProductComparison: [],
       packageDistribution: [],
       dimmerSwitches: [],
       lightSwitches: []
-    },
+    };
+  }
+}
+
+// 🚨 TEMPORARY: Return empty data for unimplemented modules to prevent errors
+async function fetchOtherModulesData(): Promise<Pick<DashboardData, 'reviewInsights' | 'competitorAnalysis' | 'allReviewData'>> {
+  return {
     reviewInsights: {
       painPoints: [],
       customerLikes: [],
@@ -243,12 +333,22 @@ async function fetchOtherModulesData(): Promise<Omit<DashboardData, 'brandAnalys
 
 async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
   try {
-    // 🔑 Only load brand analysis data initially, others are empty
-    const brandAnalysisData = await fetchBrandAnalysisData(projectId);
-    const otherModulesData = await fetchOtherModulesData();
+    // 🔑 Load all market analysis modules with project filtering
+    const [brandAnalysisData, productAnalysisData, pricingAnalysisData, marketInsightsData, packagePreferenceData, otherModulesData] = await Promise.all([
+      fetchBrandAnalysisData(projectId),
+      fetchProductAnalysisData(projectId),
+      fetchPricingAnalysisData(projectId),
+      fetchMarketInsightsData(projectId),
+      fetchPackagePreferenceData(projectId),
+      fetchOtherModulesData()
+    ]);
 
     return {
       brandAnalysis: brandAnalysisData,
+      productAnalysis: productAnalysisData,
+      pricingAnalysis: pricingAnalysisData,
+      marketInsights: marketInsightsData,
+      packagePreference: packagePreferenceData,
       ...otherModulesData
     } as DashboardData;
   } catch (error) {

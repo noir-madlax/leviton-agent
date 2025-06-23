@@ -126,21 +126,21 @@ export class DatabaseService {
   
   // 🔑 NEW: Get brand category revenue data with project filtering via backend API
   async getBrandCategoryRevenueByProject(projectId: string): Promise<BrandCategoryData[]> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
     try {
-      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
-      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/brand-analysis?project_id=${projectId}`);
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/brand-analysis?project_id=${projectId}`)
       
       if (!response.ok) {
-        throw new Error(`Backend API error: ${response.status} ${response.statusText}`);
+        throw new Error(`API call failed: ${response.status}`)
       }
       
-      const result = await response.json();
-      console.log(`🔑 Brand analysis API returned ${result.total_brands} brands with ${result.filtered_asin_count} ASINs for project ${projectId}`);
-      
-      return result.data;
+      const result = await response.json()
+      return result.data || []
     } catch (error) {
-      console.error('Error fetching brand analysis from backend:', error);
-      return [];
+      console.error('Error fetching brand category revenue by project:', error)
+      // Fallback to original method
+      return this.getBrandCategoryRevenue()
     }
   }
   
@@ -1365,6 +1365,172 @@ export class DatabaseService {
     } catch (error) {
       console.error('Failed to get project:', error)
       return null
+    }
+  }
+
+  // New API methods for other market analysis functions
+  async getProductAnalysisDataByProject(projectId: string): Promise<ProductAnalysisData> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/product-analysis?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      return {
+        priceVsRevenue: result.priceVsRevenue || [],
+        topProducts: result.topProducts || []
+      }
+    } catch (error) {
+      console.error('Error fetching product analysis data by project:', error)
+      // Fallback to original method
+      return this.getProductAnalysisData()
+    }
+  }
+
+  async getPricingAnalysisDataByProject(projectId: string): Promise<{
+    priceDistribution: Array<{
+      category: string
+      skuPrices: number[]
+      unitPrices: number[]
+      stats: {
+        sku: {
+          min: number
+          q1: number
+          median: number
+          mean: number
+          q3: number
+          max: number
+        }
+        unit: {
+          min: number
+          q1: number
+          median: number
+          mean: number
+          q3: number
+          max: number
+        }
+      }
+    }>
+    brandPriceDistribution: Array<{
+      category: string
+      brands: Array<{
+        name: string
+        skuPrices: number[]
+        unitPrices: number[]
+      }>
+    }>
+  }> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/pricing-analysis?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      return {
+        priceDistribution: result.priceDistribution || [],
+        brandPriceDistribution: result.brandPriceDistribution || []
+      }
+    } catch (error) {
+      console.error('Error fetching pricing analysis data by project:', error)
+      // Fallback to original method
+      return this.getPricingAnalysisData()
+    }
+  }
+
+  async getMarketInsightsDataByProject(projectId: string): Promise<{
+    segmentRevenue: {
+      dimmerSwitches: Array<{
+        segment: string
+        revenue: number
+        volume: number
+        products: number
+      }>
+      lightSwitches: Array<{
+        segment: string
+        revenue: number
+        volume: number
+        products: number
+      }>
+    }
+  }> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/market-insights?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      return {
+        segmentRevenue: result.segmentRevenue || { dimmerSwitches: [], lightSwitches: [] }
+      }
+    } catch (error) {
+      console.error('Error fetching market insights data by project:', error)
+      // Fallback to original method
+      return this.getMarketInsightsData()
+    }
+  }
+
+  async getPackagePreferenceDataByProject(projectId: string): Promise<{
+    sameProductComparison: Array<{
+      productName: string
+      packSize: string
+      packCount: number
+      salesVolume: number
+      price: number
+      unitPrice: number
+    }>
+    packageDistribution: Array<{
+      packSize: string
+      count: number
+      percentage: number
+      salesVolume: number
+    }>
+    dimmerSwitches: Array<{
+      packSize: string
+      count: number
+      percentage: number
+      salesVolume: number
+      salesRevenue: number
+    }>
+    lightSwitches: Array<{
+      packSize: string
+      count: number
+      percentage: number
+      salesVolume: number
+      salesRevenue: number
+    }>
+  }> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/package-preference?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      return {
+        sameProductComparison: result.sameProductComparison || [],
+        packageDistribution: result.packageDistribution || [],
+        dimmerSwitches: result.dimmerSwitches || [],
+        lightSwitches: result.lightSwitches || []
+      }
+    } catch (error) {
+      console.error('Error fetching package preference data by project:', error)
+      // Fallback to original method
+      return this.getPackagePreferenceData()
     }
   }
 }

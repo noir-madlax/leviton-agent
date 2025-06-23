@@ -2,18 +2,18 @@
 
 ## 🎯 Phase 2 Migration Status
 
-### ✅ Completed
+### ✅ Completed (5/8 Market Analysis Modules)
 - **Brand Analysis API**: Fully migrated to backend with project ASIN filtering
+- **Product Analysis API**: Completed with fixed NULL handling
+- **Pricing Analysis API**: Completed with fixed NULL handling  
+- **Market Insights API**: Completed with fixed NULL handling
+- **Package Preference API**: Completed with fixed NULL handling
 - **ASIN Extraction Logic**: Fixed to ensure consistent data between preview and saved projects
 - **Project Data Isolation**: 100% enforced through `BaseDashboardService`
 
-### 🔄 Remaining Modules (7/8 need migration)
-- Product Analysis
-- Pricing Analysis  
-- Market Insights
-- Package Preference
+### 🔄 Remaining Modules (3/8 need migration)
 - Review Insights
-- Competitor Analysis
+- Competitor Analysis  
 - All Review Data
 
 ## 🔑 Core Architecture Principles
@@ -51,6 +51,42 @@ query = (
 # ❌ Wrong: Double .select() calls will fail
 # ❌ Wrong: Missing ASIN filtering = data leakage
 ```
+
+## 🚨 CRITICAL LESSON: SQL NULL Handling Error (2024-12-23)
+
+### The Problem
+```python
+# ❌ This caused 500 API errors across all 4 new services
+query = query.neq('estimated_revenue', None)
+query = query.neq('price_usd', None)
+query = query.neq('product_segment', None)
+query = query.neq('pack_count', None)
+```
+
+### Error Message
+```
+{'code': '22P02', 'message': 'invalid input syntax for type numeric: "None"'}
+```
+
+### Root Cause
+- **Supabase Python client** treats `None` as Python literal string "None"
+- **PostgreSQL** expects SQL `NULL`, not Python `None`
+- **Different behavior** from JavaScript client where `null` works correctly
+
+### The Fix
+```python
+# ✅ CORRECT: Filter in Python code, not SQL
+for item in result.data:
+    revenue = item.get('estimated_revenue')
+    if revenue is None or revenue == 0:
+        continue  # Skip items without revenue data
+```
+
+### Prevention Strategy
+1. **Never use `.neq(field, None)` in Supabase Python queries**
+2. **Always filter NULL values in Python code after query execution**
+3. **Test each service immediately after creation to catch this early**
+4. **Follow the BrandAnalysisService pattern that works correctly**
 
 ## 🚨 Critical Checks Before Migration
 
@@ -104,12 +140,16 @@ result = query.execute()
 
 ### NULL Value Handling
 ```python
-# In Python code (safer than SQL)
+# ✅ CORRECT: Filter NULL values in Python code (safer than SQL)
 revenue = item.get('estimated_revenue')
 if revenue is None:
     continue  # Skip NULL values
 
-# Avoid complex SQL NULL filtering to prevent errors
+# ❌ WRONG: Avoid SQL NULL filtering with Python None
+query = query.neq('estimated_revenue', None)  # Causes PostgreSQL error
+
+# 🚨 CRITICAL LESSON: Supabase Python client's None != SQL NULL
+# Always use Python filtering instead of SQL .neq(field, None)
 ```
 
 ## 📋 Migration Checklist Template
