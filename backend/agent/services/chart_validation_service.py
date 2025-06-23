@@ -179,6 +179,21 @@ class ChartValidationService:
                 validation_result["valid"] = False
                 validation_result["errors"].append(f"JSX 标签语法错误: {error_msg}")
         
+        # 检查 JSX 属性值的语法错误
+        jsx_attribute_value_errors = [
+            # 检查数字属性值没有用大括号包围
+            (r'\w+\s*=\s*-?\d+(?:\.\d+)?\s+(?=\w+|/>|>)', "数字属性值必须用大括号包围，如: attribute={123}"),
+            # 检查布尔值属性没有用大括号包围  
+            (r'\w+\s*=\s*(?:true|false)\s+(?=\w+|/>|>)', "布尔值属性必须用大括号包围，如: attribute={true}"),
+            # 检查数组字面量没有用大括号包围
+            (r'\w+\s*=\s*\[[^\]]*\]\s+(?=\w+|/>|>)', "数组属性值必须用大括号包围，如: attribute={[...]}"),
+        ]
+        
+        for pattern, error_msg in jsx_attribute_value_errors:
+            if re.search(pattern, code):
+                validation_result["valid"] = False
+                validation_result["errors"].append(f"JSX 属性值语法错误: {error_msg}")
+        
         return validation_result
 
     def validate_chart_json(self, json_data: Dict[str, Any]) -> Dict[str, Any]:
