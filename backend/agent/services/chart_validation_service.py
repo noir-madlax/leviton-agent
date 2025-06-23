@@ -164,6 +164,21 @@ class ChartValidationService:
                 validation_result["valid"] = False
                 validation_result["errors"].append(f"JSX 语法错误: {error_msg}")
         
+        # 检查 JSX 标签的语法错误
+        jsx_tag_errors = [
+            # 检查自闭合标签末尾的无效字符
+            (r'[}\]\w]\s*[_\-=+&%$#@!~`|\\]\s*/>', "JSX 自闭合标签末尾有无效字符"),
+            # 检查标签属性后的无效字符
+            (r'=\s*\{[^}]*\}\s*[_\-=+&%$#@!~`|\\]+\s*/>', "JSX 标签属性后有无效字符"),
+            # 检查标签名后的无效字符
+            (r'<\w+[^>]*[_\-=+&%$#@!~`|\\]+\s*/>', "JSX 标签名后有无效字符"),
+        ]
+        
+        for pattern, error_msg in jsx_tag_errors:
+            if re.search(pattern, code):
+                validation_result["valid"] = False
+                validation_result["errors"].append(f"JSX 标签语法错误: {error_msg}")
+        
         return validation_result
 
     def validate_chart_json(self, json_data: Dict[str, Any]) -> Dict[str, Any]:
