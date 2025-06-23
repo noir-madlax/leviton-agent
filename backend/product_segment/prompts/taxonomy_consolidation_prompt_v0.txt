@@ -21,7 +21,7 @@ Taxonomy B (New Batch):
 2. **Preserve specificity** - When consolidating, maintain the specific nature of each category type rather than creating broader, more generic categories
 3. **Create precise names** - Use clear, descriptive names (words separated by spaces) for consolidated categories; each category must represent a SINGULAR, SPECIFIC concept with NO OVERLAP; RENAME categories when needed to make them more distinguishing and specific than the originals
 4. **Include all category IDs** - Each consolidated category contains ALL the original category IDs that belong to the same concept
-5. **Write focused definitions** - Create a precise definition for each consolidated category that clearly describes the specific product type, ending with "e.g." and specific product subtypes (NEVER include brand names, model numbers, or proprietary product line names)
+5. **Write consolidated definitions** - Combine the original definitions from all merged categories, then refine/clean up redundancies to produce one precise definition that clearly describes the specific product type, ending with "e.g." and specific product subtypes (NEVER include brand names, model numbers, or proprietary product line names)
 6. **Ensure completeness** - Every A_* and B_* ID must appear exactly once in the result
 7. **Maintain consistent granularity** - All consolidated categories must be at the same level of specificity
 8. **Ensure mutual exclusivity** - Categories must have clear, non-overlapping boundaries
