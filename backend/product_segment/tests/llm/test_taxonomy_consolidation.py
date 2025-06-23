@@ -47,11 +47,10 @@ Configuration:
 - No external configuration required - templates loaded automatically
 """
 
-import asyncio
 import json
 import pytest
 from pathlib import Path
-from typing import Dict, List
+from typing import Dict
 from unittest.mock import AsyncMock
 
 from core.utils.llm_utils import ValidationResult
@@ -61,7 +60,7 @@ from product_segment.llm.taxonomy_consolidation import (
     ConsolidationStageContext,
     ConsolidatedTaxonomyDTO,
 )
-from product_segment.llm.taxonomy_pipeline_stage import StageContext
+from product_segment.llm.taxonomy_pipeline_stage import StageContext, TaxonomyDTO
 
 
 # Test data paths
@@ -92,42 +91,13 @@ def save_consolidation_results(
         for batch_data in batch_info.values()
     )
     
-    # Calculate consolidation metrics
-    final_consolidated_count = len(consolidation_result.taxonomies_consolidated)
-    consolidation_ratio = final_consolidated_count / total_original_categories if total_original_categories > 0 else 0
-    
-    # Group original categories by their consolidated assignment
-    consolidation_analysis = {}
-    for consolidated_tax in consolidation_result.taxonomies_consolidated:
-        consolidation_analysis[consolidated_tax.name] = {
-            "definition": consolidated_tax.definition,
-            "original_count": len(consolidated_tax.original_ids),
-            "original_ids": consolidated_tax.original_ids,
-            "consolidation_sources": []
-        }
-        
-        # Analyze which batches contributed to this consolidated category
-        batch_sources = {}
-        for original_id in consolidated_tax.original_ids:
-            if original_id.startswith("BATCH_"):
-                batch_num = original_id.split("_")[1]
-                batch_sources[f"batch_{batch_num}"] = batch_sources.get(f"batch_{batch_num}", 0) + 1
-        
-        consolidation_analysis[consolidated_tax.name]["consolidation_sources"] = batch_sources
-    
     saved_data = {
         "metadata": {
             "product_category": product_category,
             "consolidation_timestamp": datetime.now().isoformat(),
             "total_batches_processed": len(batch_info),
             "total_original_categories": total_original_categories,
-            "final_consolidated_taxonomies": final_consolidated_count,
-            "consolidation_ratio": round(consolidation_ratio, 3),
-            "efficiency_metrics": {
-                "categories_merged": total_original_categories - final_consolidated_count,
-                "merge_percentage": round((1 - consolidation_ratio) * 100, 1),
-                "avg_categories_per_consolidated": round(total_original_categories / final_consolidated_count, 2) if final_consolidated_count > 0 else 0
-            }
+            "final_consolidated_taxonomies": len(consolidation_result.taxonomies_consolidated),
         },
         "input_batches": {
             batch_id: {
@@ -137,41 +107,18 @@ def save_consolidation_results(
             for batch_id, batch_data in batch_info.items()
             if batch_id != "FINAL"
         },
-        "progressive_consolidation_process": {
-            "description": "Categories were progressively consolidated starting with Batch 0 as initial, then each subsequent batch was consolidated with the growing consolidated taxonomy",
-            "process_flow": [
-                "Batch 0 → Initial Consolidated Taxonomy",
-                "Batch 1 + Consolidated → Updated Consolidated",
-                "Batch 2 + Consolidated → Updated Consolidated",
-                "... (continue for all batches)",
-                "Final Consolidated Taxonomy"
-            ]
-        },
         "final_consolidated_taxonomies": [
             {
-                "name": tax.name,
-                "definition": tax.definition,
-                "original_categories_merged": len(tax.original_ids),
-                "original_ids": tax.original_ids,
-                "source_analysis": consolidation_analysis[tax.name]["consolidation_sources"]
+                "name": consolidated.taxonomy.name,
+                "definition": consolidated.taxonomy.definition,
+                "original_categories_merged": len(consolidated.original_taxonomies),
+                "original_taxonomies": [
+                    {"name": orig.name, "definition": orig.definition}
+                    for orig in consolidated.original_taxonomies
+                ],
             }
-            for tax in consolidation_result.taxonomies_consolidated
+            for consolidated in consolidation_result.taxonomies_consolidated
         ],
-        "consolidation_mapping": consolidation_result.consolidation_mapping,
-        "detailed_analysis": {
-            "consolidation_breakdown": consolidation_analysis,
-            "category_distribution": {
-                "most_consolidated": max(
-                    [(tax.name, len(tax.original_ids)) for tax in consolidation_result.taxonomies_consolidated],
-                    key=lambda x: x[1]
-                ) if consolidation_result.taxonomies_consolidated else ("None", 0),
-                "least_consolidated": min(
-                    [(tax.name, len(tax.original_ids)) for tax in consolidation_result.taxonomies_consolidated], 
-                    key=lambda x: x[1]
-                ) if consolidation_result.taxonomies_consolidated else ("None", 0),
-                "consolidation_sizes": [len(tax.original_ids) for tax in consolidation_result.taxonomies_consolidated]
-            }
-        }
     }
     
     # Save to JSON file
@@ -180,14 +127,11 @@ def save_consolidation_results(
     
     print(f"\n💾 Saved progressive consolidation results to: {CONSOLIDATION_RESULTS_PATH}")
     print(f"   - {len(batch_info) - 1} batches processed (excluding final)")
-    print(f"   - {total_original_categories} original categories → {final_consolidated_count} consolidated")
-    print(f"   - {consolidation_ratio:.1%} consolidation ratio")
-    print(f"   - {total_original_categories - final_consolidated_count} categories merged")
     
     # Print top consolidation insights
     if consolidation_result.taxonomies_consolidated:
-        most_merged = max(consolidation_result.taxonomies_consolidated, key=lambda x: len(x.original_ids))
-        print(f"   - Most consolidated: '{most_merged.name}' (merged {len(most_merged.original_ids)} categories)")
+        most_merged = max(consolidation_result.taxonomies_consolidated, key=lambda x: len(x.original_taxonomies))
+        print(f"   - Most consolidated: '{most_merged.taxonomy.name}' (merged {len(most_merged.original_taxonomies)} categories)")
 
 
 @pytest.fixture
@@ -201,7 +145,7 @@ def extraction_results() -> Dict:
 
 
 @pytest.fixture
-def sample_taxonomies(extraction_results: Dict) -> tuple[Dict, Dict]:
+def sample_taxonomies(extraction_results: Dict) -> tuple[list[TaxonomyDTO], list[TaxonomyDTO]]:
     """Create two sample taxonomies for consolidation testing from extraction results."""
     batch_results = extraction_results["batch_results"]
     
@@ -212,22 +156,16 @@ def sample_taxonomies(extraction_results: Dict) -> tuple[Dict, Dict]:
     batch_a = batch_results[0]
     batch_b = batch_results[1]
     
-    # Convert to the format expected by consolidation (category_id -> category_data)
-    taxonomy_a = {}
-    for i, taxonomy in enumerate(batch_a["taxonomies"]):
-        category_id = f"A_{i}"
-        taxonomy_a[category_id] = {
-            "name": taxonomy["name"],
-            "definition": taxonomy["definition"]
-        }
+    # Convert to lists of TaxonomyDTO
+    taxonomy_a = [
+        TaxonomyDTO(name=taxonomy["name"], definition=taxonomy["definition"])
+        for taxonomy in batch_a["taxonomies"]
+    ]
     
-    taxonomy_b = {}
-    for i, taxonomy in enumerate(batch_b["taxonomies"]):
-        category_id = f"B_{i}"
-        taxonomy_b[category_id] = {
-            "name": taxonomy["name"], 
-            "definition": taxonomy["definition"]
-        }
+    taxonomy_b = [
+        TaxonomyDTO(name=taxonomy["name"], definition=taxonomy["definition"])
+        for taxonomy in batch_b["taxonomies"]
+    ]
     
     return taxonomy_a, taxonomy_b
 
@@ -297,14 +235,12 @@ class TestConsolidationStage:
           with the growing consolidated taxonomy from previous iterations
         • Process: Batch 0 → Initial, then Batch 1 + Consolidated → New Consolidated, etc.
         • Expectation: returns a final consolidated taxonomy that includes all original
-          categories from all batches with complete mapping.
-        • Results are saved to test_data/taxonomy_consolidation_results.json.
-        Requires `ANTHROPIC_API_KEY` & network access – run with -m integration.
+          categories from all batches, with proper consolidation and deduplication
         """
         batch_results = extraction_results["batch_results"]
         
         if len(batch_results) < 2:
-            pytest.skip("Need at least 2 batch results for consolidation testing")
+            pytest.skip("Need at least 2 batch results for progressive consolidation testing")
         
         print(f"\n🚀 Progressive consolidation of {len(batch_results)} extraction batches...")
         
@@ -314,29 +250,14 @@ class TestConsolidationStage:
         # Initialize with first batch as the consolidated taxonomy
         print(f"\n📊 Initializing with Batch 0: {batch_results[0]['taxonomies_count']} taxonomies")
         
-        # Convert first batch to consolidated format
-        current_consolidated = {}
-        for i, taxonomy in enumerate(batch_results[0]["taxonomies"]):
-            category_id = f"INIT_{i}"
-            current_consolidated[category_id] = {
-                "name": taxonomy["name"],
-                "definition": taxonomy["definition"]
-            }
-            print(f"  INIT_{i}: {taxonomy['name']}")
+        # Convert first batch to list of TaxonomyDTO
+        current_consolidated = [
+            TaxonomyDTO(name=taxonomy["name"], definition=taxonomy["definition"])
+            for taxonomy in batch_results[0]["taxonomies"]
+        ]
         
-        # Track all original mappings for final validation
-        all_original_categories = {}
-        batch_id_mapping = {}  # Maps original batch IDs to global IDs
-        
-        # Add initial batch to tracking
-        for i, taxonomy in enumerate(batch_results[0]["taxonomies"]):
-            global_id = f"BATCH_0_{i}"
-            all_original_categories[global_id] = {
-                "name": taxonomy["name"],
-                "definition": taxonomy["definition"],
-                "batch_idx": 0
-            }
-            batch_id_mapping[f"INIT_{i}"] = global_id
+        for i, taxonomy in enumerate(current_consolidated):
+            print(f"  Consolidated_{i}: {taxonomy.name}")
         
         # Progressively consolidate each subsequent batch
         for batch_idx in range(1, len(batch_results)):
@@ -344,23 +265,13 @@ class TestConsolidationStage:
             print(f"\n📊 Consolidating Batch {batch_idx}: {batch['taxonomies_count']} taxonomies")
             
             # Format new batch taxonomies
-            new_batch_taxonomy = {}
-            for i, taxonomy in enumerate(batch["taxonomies"]):
-                category_id = f"NEW_{i}"
-                new_batch_taxonomy[category_id] = {
-                    "name": taxonomy["name"],
-                    "definition": taxonomy["definition"]
-                }
-                print(f"  NEW_{i}: {taxonomy['name']}")
-                
-                # Add to global tracking
-                global_id = f"BATCH_{batch_idx}_{i}"
-                all_original_categories[global_id] = {
-                    "name": taxonomy["name"],
-                    "definition": taxonomy["definition"],
-                    "batch_idx": batch_idx
-                }
-                batch_id_mapping[f"NEW_{i}"] = global_id
+            new_batch_taxonomy = [
+                TaxonomyDTO(name=taxonomy["name"], definition=taxonomy["definition"])
+                for taxonomy in batch["taxonomies"]
+            ]
+            
+            for i, taxonomy in enumerate(new_batch_taxonomy):
+                print(f"  New_{i}: {taxonomy.name}")
             
             # Create consolidation context
             context = ConsolidationStageContext(
@@ -378,102 +289,45 @@ class TestConsolidationStage:
                   f"{len(result.taxonomies_consolidated)} consolidated taxonomies")
             
             # Print consolidation overview for this iteration
-            for tax_idx, taxonomy in enumerate(result.taxonomies_consolidated, start=1):
-                original_count = len(taxonomy.original_ids)
-                print(f"        {tax_idx:02d}. {taxonomy.name} (merges {original_count} categories)")
-                for original_id in taxonomy.original_ids:
-                    if original_id in batch_id_mapping:
-                        global_id = batch_id_mapping[original_id]
-                        if global_id in all_original_categories:
-                            original_name = all_original_categories[global_id]["name"]
-                            print(f"            ↳ {original_id} → {original_name}")
-                        else:
-                            print(f"            ↳ {original_id}")
-                    else:
-                        print(f"            ↳ {original_id}")
+            for tax_idx, consolidated in enumerate(result.taxonomies_consolidated, start=1):
+                original_count = len(consolidated.original_taxonomies)
+                print(f"        {tax_idx:02d}. {consolidated.taxonomy.name} (merges {original_count} categories)")
+                for original_taxonomy in consolidated.original_taxonomies:
+                    print(f"            ↳ {original_taxonomy.name}")
             
             # Update current consolidated taxonomy for next iteration
-            # Convert result back to input format for next consolidation
-            current_consolidated = {}
-            for i, taxonomy in enumerate(result.taxonomies_consolidated):
-                category_id = f"CONS_{i}"
-                current_consolidated[category_id] = {
-                    "name": taxonomy.name,
-                    "definition": taxonomy.definition
-                }
-                
-                # Update batch_id_mapping for the consolidated categories
-                for original_id in taxonomy.original_ids:
-                    if original_id in batch_id_mapping:
-                        # Update mapping to point to new consolidated category
-                        global_id = batch_id_mapping[original_id]
-                        batch_id_mapping[f"CONS_{i}"] = batch_id_mapping.get(f"CONS_{i}", [])
-                        if not isinstance(batch_id_mapping[f"CONS_{i}"], list):
-                            batch_id_mapping[f"CONS_{i}"] = [batch_id_mapping[f"CONS_{i}"]]
-                        if global_id not in batch_id_mapping[f"CONS_{i}"]:
-                            batch_id_mapping[f"CONS_{i}"].append(global_id)
+            # Convert result back to list of TaxonomyDTO for next consolidation
+            current_consolidated = [
+                consolidated.taxonomy for consolidated in result.taxonomies_consolidated
+            ]
         
-        print(f"\n🎉 Progressive consolidation complete!")
-        print(f"    Final result: {len(current_consolidated)} consolidated taxonomies")
-        print(f"    Total original categories: {len(all_original_categories)}")
-        print(f"    Consolidation ratio: {len(current_consolidated)/len(all_original_categories):.2f}")
+        # The final result is just the last consolidation result
+        final_result = result
+        
+        print("\n🎉 Progressive consolidation complete!")
+        print(f"    Final result: {len(final_result.taxonomies_consolidated)} consolidated taxonomies")
         
         # Print final consolidated taxonomies
-        print(f"\n📋 Final Consolidated Taxonomies:")
-        for i, (category_id, category_data) in enumerate(current_consolidated.items(), start=1):
-            print(f"    {i:02d}. {category_data['name']}")
-            # Find all original categories that map to this consolidated category
-            if category_id in batch_id_mapping:
-                mapped_globals = batch_id_mapping[category_id]
-                if isinstance(mapped_globals, list):
-                    for global_id in mapped_globals:
-                        if global_id in all_original_categories:
-                            original_name = all_original_categories[global_id]["name"]
-                            batch_idx = all_original_categories[global_id]["batch_idx"]
-                            print(f"        ↳ Batch {batch_idx}: {original_name}")
-                else:
-                    if mapped_globals in all_original_categories:
-                        original_name = all_original_categories[mapped_globals]["name"]
-                        batch_idx = all_original_categories[mapped_globals]["batch_idx"]
-                        print(f"        ↳ Batch {batch_idx}: {original_name}")
+        print("\n📋 Final Consolidated Taxonomies:")
+        for i, consolidated in enumerate(final_result.taxonomies_consolidated, start=1):
+            print(f"    {i:02d}. {consolidated.taxonomy.name}")
+            print(f"        Definition: {consolidated.taxonomy.definition}")
+            print(f"        Merges {len(consolidated.original_taxonomies)} categories:")
+            for orig in consolidated.original_taxonomies:
+                print(f"            ↳ {orig.name}")
         
         # Validate final results
-        assert len(current_consolidated) > 0, "Should have at least one consolidated taxonomy"
-        assert len(current_consolidated) <= len(all_original_categories), "Consolidated count should not exceed original count"
+        assert len(final_result.taxonomies_consolidated) > 0, "Should have at least one consolidated taxonomy"
         
-        # Create final result structure for saving
-        final_taxonomies = []
-        final_mapping = {}
-        
-        for cons_id, category_data in current_consolidated.items():
-            # Find all original categories that map to this consolidated category
-            original_ids = []
-            if cons_id in batch_id_mapping:
-                if isinstance(batch_id_mapping[cons_id], list):
-                    original_ids = batch_id_mapping[cons_id]
-                else:
-                    original_ids = [batch_id_mapping[cons_id]]
-            
-            final_taxonomies.append(ConsolidatedTaxonomyDTO(
-                name=category_data["name"],
-                definition=category_data["definition"],
-                original_ids=original_ids
-            ))
-            
-            # Update final mapping
-            for original_id in original_ids:
-                final_mapping[original_id] = category_data["name"]
-        
-        final_result = ConsolidationStageResult(
-            taxonomies_consolidated=final_taxonomies,
-            consolidation_mapping=final_mapping
-        )
+        # Count total original categories across all batches
+        total_original_categories = sum(len(batch["taxonomies"]) for batch in batch_results)
+        assert len(final_result.taxonomies_consolidated) <= total_original_categories, "Consolidated count should not exceed original count"
         
         # For saving, create simplified input structure
         save_consolidation_results(
             final_result, 
             {f"BATCH_{i}": {"taxonomies": len(batch["taxonomies"])} for i, batch in enumerate(batch_results)},
-            {"FINAL": {"consolidated_count": len(current_consolidated)}},
+            {"FINAL": {"consolidated_count": len(final_result.taxonomies_consolidated)}},
             stage_context.product_category
         )
 
@@ -481,17 +335,19 @@ class TestConsolidationStage:
     async def test_build_prompt_with_taxonomies(
         self,
         consolidation_stage: ConsolidationStage,
-        sample_taxonomies: tuple[Dict, Dict],
+        sample_taxonomies: tuple[list[TaxonomyDTO], list[TaxonomyDTO]],
         stage_context: StageContext
     ) -> None:
         """Verify prompt template renders correctly with two taxonomies."""
         taxonomy_a, taxonomy_b = sample_taxonomies
         
-        print(f"\n🔍 Testing prompt building with sample taxonomies...")
-        print(f"\n📋 Taxonomy A (Current Consolidated):")
-        print(json.dumps(taxonomy_a, indent=2))
-        print(f"\n📋 Taxonomy B (New Batch):")
-        print(json.dumps(taxonomy_b, indent=2))
+        print("\n🔍 Testing prompt building with sample taxonomies...")
+        print("\n📋 Taxonomy A (Current Consolidated):")
+        for i, tax in enumerate(taxonomy_a):
+            print(f"  {i}: {tax.name} - {tax.definition}")
+        print("\n📋 Taxonomy B (New Batch):")
+        for i, tax in enumerate(taxonomy_b):
+            print(f"  {i}: {tax.name} - {tax.definition}")
         
         # Create consolidation context
         consolidation_context = ConsolidationStageContext(
@@ -502,7 +358,7 @@ class TestConsolidationStage:
         
         prompt = await consolidation_stage._build_prompt(consolidation_context)
         
-        print(f"\n📝 Generated Consolidation Prompt:")
+        print("\n📝 Generated Consolidation Prompt:")
         print("=" * 80)
         print(prompt)
         print("=" * 80)
@@ -516,14 +372,14 @@ class TestConsolidationStage:
         assert "CRITICAL RULES" in prompt
         assert "EXPECTED OUTPUT FORMAT" in prompt
         
-        # Verify taxonomies are included in the prompt
-        for category_id in taxonomy_a.keys():
-            assert category_id in prompt
-        for category_id in taxonomy_b.keys():
-            assert category_id in prompt
+        # Verify taxonomies are included in the prompt (A_0, A_1, B_0, B_1 format)
+        for i in range(len(taxonomy_a)):
+            assert f"A_{i}" in prompt
+        for i in range(len(taxonomy_b)):
+            assert f"B_{i}" in prompt
         
-        print(f"\n✅ Prompt validation completed successfully!")
-        print(f"   - Contains all required template sections")
+        print("\n✅ Prompt validation completed successfully!")
+        print("   - Contains all required template sections")
         print(f"   - Includes all {len(taxonomy_a)} Taxonomy A categories")
         print(f"   - Includes all {len(taxonomy_b)} Taxonomy B categories")
 
@@ -531,7 +387,7 @@ class TestConsolidationStage:
     async def test_validation_with_valid_response(
         self,
         consolidation_stage: ConsolidationStage,
-        sample_taxonomies: tuple[Dict, Dict],
+        sample_taxonomies: tuple[list[TaxonomyDTO], list[TaxonomyDTO]],
         stage_context: StageContext
     ) -> None:
         """Valid JSON response should pass validation without errors."""
@@ -571,7 +427,7 @@ class TestConsolidationStage:
     async def test_validation_with_invalid_response(
         self,
         consolidation_stage: ConsolidationStage,
-        sample_taxonomies: tuple[Dict, Dict],
+        sample_taxonomies: tuple[list[TaxonomyDTO], list[TaxonomyDTO]],
         stage_context: StageContext
     ) -> None:
         """Validation should categorise format / schema / completeness errors."""
@@ -652,7 +508,7 @@ class TestConsolidationStage:
     async def test_produce_result_conversion(
         self,
         consolidation_stage: ConsolidationStage,
-        sample_taxonomies: tuple[Dict, Dict],
+        sample_taxonomies: tuple[list[TaxonomyDTO], list[TaxonomyDTO]],
         stage_context: StageContext
     ) -> None:
         """_produce_result converts valid JSON → DTOs & original_id→category mapping."""
@@ -685,22 +541,22 @@ class TestConsolidationStage:
         
         assert isinstance(result, ConsolidationStageResult)
         assert len(result.taxonomies_consolidated) == 2
-        assert len(result.consolidation_mapping) == len(original_ids)
         
         # Verify taxonomy conversion
-        taxonomy_names = {t.name for t in result.taxonomies_consolidated}
+        taxonomy_names = {consolidated.taxonomy.name for consolidated in result.taxonomies_consolidated}
         assert taxonomy_names == {"Smart Lighting Controls", "Manual Light Switches"}
         
-        # Verify original_ids are properly stored
-        for taxonomy in result.taxonomies_consolidated:
-            assert len(taxonomy.original_ids) > 0
-            for original_id in taxonomy.original_ids:
-                assert original_id in original_ids
+        # Verify original taxonomies are properly stored
+        all_assigned_taxonomies = set()
+        for consolidated in result.taxonomies_consolidated:
+            assert len(consolidated.original_taxonomies) > 0
+            for original_taxonomy in consolidated.original_taxonomies:
+                assert original_taxonomy in taxonomy_a + taxonomy_b
+                all_assigned_taxonomies.add(original_taxonomy.name)
         
-        # Verify consolidation mapping
-        for original_id in original_ids:
-            assert original_id in result.consolidation_mapping
-            assert result.consolidation_mapping[original_id] in taxonomy_names
+        # Verify all original taxonomies are assigned
+        expected_taxonomy_names = {tax.name for tax in taxonomy_a + taxonomy_b}
+        assert all_assigned_taxonomies == expected_taxonomy_names
 
     @pytest.mark.asyncio
     async def test_merge_split_results(
@@ -709,51 +565,52 @@ class TestConsolidationStage:
         stage_context: StageContext
     ) -> None:
         """Merge logic: de-dupe taxonomies, merge consolidation mappings."""
+        # Create sample taxonomies for testing
+        tax_a0 = TaxonomyDTO(name="Original A0", definition="Definition A0")
+        tax_a1 = TaxonomyDTO(name="Original A1", definition="Definition A1")
+        tax_b0 = TaxonomyDTO(name="Original B0", definition="Definition B0")
+        tax_b1 = TaxonomyDTO(name="Original B1", definition="Definition B1") 
+        tax_c0 = TaxonomyDTO(name="Original C0", definition="Definition C0")
+        
         # Create left result
         left_result = ConsolidationStageResult(
             taxonomies_consolidated=[
                 ConsolidatedTaxonomyDTO(
-                    name="Category A", 
-                    definition="Definition A",
-                    original_ids=["A_0", "A_1"]
+                    taxonomy=TaxonomyDTO(name="Category A", definition="Definition A"),
+                    original_taxonomies=[tax_a0, tax_a1]
                 ),
                 ConsolidatedTaxonomyDTO(
-                    name="Category B", 
-                    definition="Definition B",
-                    original_ids=["B_0"]
+                    taxonomy=TaxonomyDTO(name="Category B", definition="Definition B"),
+                    original_taxonomies=[tax_b0]
                 )
             ],
-            consolidation_mapping={"A_0": "Category A", "A_1": "Category A", "B_0": "Category B"}
         )
         
         # Create right result with some overlap
         right_result = ConsolidationStageResult(
             taxonomies_consolidated=[
                 ConsolidatedTaxonomyDTO(
-                    name="Category B",  # Duplicate name 
-                    definition="Definition B Updated",
-                    original_ids=["B_1"]
+                    taxonomy=TaxonomyDTO(name="Category B", definition="Definition B Updated"),  # Duplicate name
+                    original_taxonomies=[tax_b1]
                 ),
                 ConsolidatedTaxonomyDTO(
-                    name="Category C", 
-                    definition="Definition C",
-                    original_ids=["C_0"]
+                    taxonomy=TaxonomyDTO(name="Category C", definition="Definition C"),
+                    original_taxonomies=[tax_c0]
                 )
             ],
-            consolidation_mapping={"B_1": "Category B", "C_0": "Category C"}
         )
         
         # Create consolidation contexts for left and right sides
         ctx_left = ConsolidationStageContext(
             product_category=stage_context.product_category,
-            taxonomy_a={"A_0": {"name": "Category A", "definition": "Definition A"}},
-            taxonomy_b={"B_0": {"name": "Category B", "definition": "Definition B"}}
+            taxonomy_a=[tax_a0],
+            taxonomy_b=[tax_b0]
         )
         
         ctx_right = ConsolidationStageContext(
             product_category=stage_context.product_category,
-            taxonomy_a={"A_1": {"name": "Category B", "definition": "Definition B Updated"}},
-            taxonomy_b={"B_1": {"name": "Category C", "definition": "Definition C"}}
+            taxonomy_a=[tax_b1],
+            taxonomy_b=[tax_c0]
         )
         
         merged = await consolidation_stage._merge_split_results(
@@ -764,21 +621,23 @@ class TestConsolidationStage:
             depth=0
         )
         
-        # Verify merged taxonomies (should deduplicate by name and merge original_ids)
-        taxonomy_names = {t.name for t in merged.taxonomies_consolidated}
+        # Verify merged taxonomies (should deduplicate by name and merge original taxonomies)
+        taxonomy_names = {consolidated.taxonomy.name for consolidated in merged.taxonomies_consolidated}
         assert taxonomy_names == {"Category A", "Category B", "Category C"}
         
-        # Find Category B to verify ID merging
-        category_b = next(t for t in merged.taxonomies_consolidated if t.name == "Category B")
-        assert set(category_b.original_ids) == {"B_0", "B_1"}
+        # Find Category B to verify taxonomy merging
+        category_b = next(consolidated for consolidated in merged.taxonomies_consolidated 
+                         if consolidated.taxonomy.name == "Category B")
+        original_names = {tax.name for tax in category_b.original_taxonomies}
+        assert original_names == {"Original B0", "Original B1"}
         
-        # Verify merged consolidation mapping
-        expected_mapping = {
-            "A_0": "Category A", "A_1": "Category A", 
-            "B_0": "Category B", "B_1": "Category B", 
-            "C_0": "Category C"
-        }
-        assert merged.consolidation_mapping == expected_mapping
+        # Verify all original taxonomies are preserved in the consolidated taxonomies
+        all_merged_names = set()
+        for consolidated in merged.taxonomies_consolidated:
+            for orig_tax in consolidated.original_taxonomies:
+                all_merged_names.add(orig_tax.name)
+        expected_names = {"Original A0", "Original A1", "Original B0", "Original B1", "Original C0"}
+        assert all_merged_names == expected_names
 
     @pytest.mark.asyncio
     async def test_input_validation_with_empty_taxonomies(
@@ -790,8 +649,8 @@ class TestConsolidationStage:
         # Test with empty taxonomies (this should work but generate empty A_* and B_* lists)
         empty_context = ConsolidationStageContext(
             product_category=stage_context.product_category,
-            taxonomy_a={},
-            taxonomy_b={}
+            taxonomy_a=[],
+            taxonomy_b=[]
         )
         
         # This should not raise an error, just generate a prompt with empty taxonomies
@@ -802,8 +661,8 @@ class TestConsolidationStage:
         # Test with one empty and one non-empty taxonomy
         mixed_context = ConsolidationStageContext(
             product_category=stage_context.product_category,
-            taxonomy_a={"test": {"name": "Test Category", "definition": "Test definition"}},
-            taxonomy_b={}
+            taxonomy_a=[TaxonomyDTO(name="Test Category", definition="Test definition")],
+            taxonomy_b=[]
         )
         
         prompt = await consolidation_stage._build_prompt(mixed_context)

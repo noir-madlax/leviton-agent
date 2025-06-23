@@ -46,6 +46,7 @@ from product_segment.llm.taxonomy_pipeline_stage import (
     BaseStage,
     StageContext,
     StageResultBase,
+    TaxonomyDTO,
 )
 
 __all__ = [
@@ -64,17 +65,16 @@ __all__ = [
 class ConsolidatedTaxonomyDTO:  # noqa: D401 – simple DTO
     """Lightweight consolidated taxonomy representation returned by the consolidation stage."""
 
-    name: str
-    definition: str
-    original_ids: list[str]
+    taxonomy: TaxonomyDTO
+    original_taxonomies: list[TaxonomyDTO]
 
 
 @dataclass(slots=True, frozen=True)
 class ConsolidationStageContext(StageContext):
-    """Context for taxonomy consolidation stage containing two taxonomies to consolidate."""
+    """Context for taxonomy consolidation stage containing two lists of taxonomies to consolidate."""
     
-    taxonomy_a: dict[str, dict[str, str]]  # category_id -> {name, definition}
-    taxonomy_b: dict[str, dict[str, str]]  # category_id -> {name, definition}
+    taxonomy_a: list[TaxonomyDTO]  # Current consolidated taxonomies
+    taxonomy_b: list[TaxonomyDTO]  # New batch to consolidate
 
 
 @dataclass(slots=True, frozen=True)
@@ -82,7 +82,6 @@ class ConsolidationStageResult(StageResultBase):
     """Result returned by the consolidation stage."""
     
     taxonomies_consolidated: list[ConsolidatedTaxonomyDTO]
-    consolidation_mapping: dict[str, str]  # original_id -> consolidated_category_name
 
 # ---------------------------------------------------------------------------
 # Fixed prompt templates
@@ -123,16 +122,22 @@ class ConsolidationStage(BaseStage):
     async def _build_prompt(self, ctx: ConsolidationStageContext) -> str:  # noqa: D401
         """Render the fixed prompt template with the two taxonomies."""
 
-        # Convert taxonomies to JSON strings with A_* and B_* prefixes
+        # Convert taxonomy lists to JSON strings with A_* and B_* prefixes
         taxonomy_a_formatted = {}
-        for category_id, category_data in ctx.taxonomy_a.items():
-            a_id = f"A_{len(taxonomy_a_formatted)}"
-            taxonomy_a_formatted[a_id] = category_data
+        for i, entry in enumerate(ctx.taxonomy_a):
+            a_id = f"A_{i}"
+            taxonomy_a_formatted[a_id] = {
+                "name": entry.name,
+                "definition": entry.definition
+            }
         
         taxonomy_b_formatted = {}
-        for category_id, category_data in ctx.taxonomy_b.items():
-            b_id = f"B_{len(taxonomy_b_formatted)}"
-            taxonomy_b_formatted[b_id] = category_data
+        for i, entry in enumerate(ctx.taxonomy_b):
+            b_id = f"B_{i}"
+            taxonomy_b_formatted[b_id] = {
+                "name": entry.name,
+                "definition": entry.definition
+            }
         
         # Use the fixed consolidation prompt template
         template_vars = {
@@ -274,26 +279,35 @@ class ConsolidationStage(BaseStage):
         payload = json.loads(json_text)
 
         # Extract consolidated taxonomies from the category structure
-        taxonomies = [
-            ConsolidatedTaxonomyDTO(
-                name=category_name, 
-                definition=category_data["definition"],
-                original_ids=category_data["ids"]
-            )
-            for category_name, category_data in payload.items()
-            if isinstance(category_data, dict) and "definition" in category_data and "ids" in category_data
-        ]
-        
-        # Convert ids arrays to consolidation mapping
-        consolidation_mapping = {}
+        taxonomies = []
         for category_name, category_data in payload.items():
-            if isinstance(category_data, dict) and "ids" in category_data:
+            if isinstance(category_data, dict) and "definition" in category_data and "ids" in category_data:
+                # Create the consolidated taxonomy
+                consolidated_taxonomy = TaxonomyDTO(
+                    name=category_name,
+                    definition=category_data["definition"]
+                )
+                
+                # Map original IDs back to original taxonomies
+                original_taxonomies = []
                 for original_id in category_data["ids"]:
-                    consolidation_mapping[original_id] = category_name
-
+                    # Parse A_i or B_i format to get the original taxonomy
+                    if original_id.startswith("A_"):
+                        idx = int(original_id[2:])
+                        if idx < len(ctx.taxonomy_a):
+                            original_taxonomies.append(ctx.taxonomy_a[idx])
+                    elif original_id.startswith("B_"):
+                        idx = int(original_id[2:])
+                        if idx < len(ctx.taxonomy_b):
+                            original_taxonomies.append(ctx.taxonomy_b[idx])
+                
+                taxonomies.append(ConsolidatedTaxonomyDTO(
+                    taxonomy=consolidated_taxonomy,
+                    original_taxonomies=original_taxonomies
+                ))
+        
         return ConsolidationStageResult(
             taxonomies_consolidated=taxonomies,
-            consolidation_mapping=consolidation_mapping,
         )
 
     async def _merge_split_results(
@@ -312,25 +326,27 @@ class ConsolidationStage(BaseStage):
         # Merge taxonomies – keep order but de-duplicate by *name*.
         taxonomy_by_name: Dict[str, ConsolidatedTaxonomyDTO] = {}
         for t in res_left.taxonomies_consolidated + res_right.taxonomies_consolidated:
-            if t.name in taxonomy_by_name:
-                # If duplicate names, merge the original_ids
-                existing = taxonomy_by_name[t.name]
-                merged_ids = list(set(existing.original_ids + t.original_ids))
-                taxonomy_by_name[t.name] = ConsolidatedTaxonomyDTO(
-                    name=t.name,
-                    definition=t.definition,  # Use the latest definition
-                    original_ids=merged_ids
+            if t.taxonomy.name in taxonomy_by_name:
+                # If duplicate names, merge the original taxonomies
+                existing = taxonomy_by_name[t.taxonomy.name]
+                merged_originals = existing.original_taxonomies + t.original_taxonomies
+                # Remove duplicates while preserving order
+                seen_names = set()
+                unique_originals = []
+                for orig in merged_originals:
+                    if orig.name not in seen_names:
+                        unique_originals.append(orig)
+                        seen_names.add(orig.name)
+                
+                taxonomy_by_name[t.taxonomy.name] = ConsolidatedTaxonomyDTO(
+                    taxonomy=t.taxonomy,  # Use the latest taxonomy
+                    original_taxonomies=unique_originals
                 )
             else:
-                taxonomy_by_name[t.name] = t
-
-        # Merge consolidation mappings
-        consolidation_mapping = dict(res_left.consolidation_mapping)
-        consolidation_mapping.update(res_right.consolidation_mapping)
+                taxonomy_by_name[t.taxonomy.name] = t
 
         return ConsolidationStageResult(
             taxonomies_consolidated=list(taxonomy_by_name.values()),
-            consolidation_mapping=consolidation_mapping
         )
 
     def _split_context(

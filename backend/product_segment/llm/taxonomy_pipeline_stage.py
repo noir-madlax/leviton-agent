@@ -44,6 +44,7 @@ from core.utils.llm_utils import safe_llm_call, ValidationResult, LLMCallError  
 logger = logging.getLogger(__name__)
 
 __all__ = [
+    "TaxonomyDTO",
     "StageContext",
     "StageResultBase",
     "CallStorage",
@@ -75,6 +76,14 @@ class StageCallBudgetExceeded(RuntimeError):
 # ---------------------------------------------------------------------------
 # Public dataclasses
 # ---------------------------------------------------------------------------
+
+@dataclass(slots=True, frozen=True)
+class TaxonomyDTO:  # noqa: D401 – simple DTO
+    """Lightweight taxonomy representation used across pipeline stages."""
+
+    name: str
+    definition: str
+
 
 @dataclass(slots=True, frozen=True)
 class StageResultBase:

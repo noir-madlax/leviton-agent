@@ -48,6 +48,7 @@ from product_segment.llm.taxonomy_pipeline_stage import (
     BaseStage,
     StageContext,
     StageResultBase,
+    TaxonomyDTO,
 )
 
 __all__ = [
@@ -62,12 +63,7 @@ __all__ = [
 # ---------------------------------------------------------------------------
 
 
-@dataclass(slots=True, frozen=True)
-class TaxonomyDTO:  # noqa: D401 – simple DTO
-    """Lightweight taxonomy representation returned by the extraction stage."""
 
-    name: str
-    definition: str
 
 
 @dataclass(slots=True, frozen=True)
