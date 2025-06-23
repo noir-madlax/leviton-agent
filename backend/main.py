@@ -7,18 +7,19 @@ import logging
 from typing import Optional, List
 from contextlib import asynccontextmanager
 from config import settings
-from agent.tools import ProductQueryTool, ReviewQueryTool, get_data_files_status, test_tools
-from phoenix.otel import register
-from openinference.instrumentation.smolagents import SmolagentsInstrumentor
+from agent.tools import get_data_files_status, test_tools
 from product_segment.api import router as segmentation_router
+
+# 导入重构后的 agent 模块
+from agent.core.agent_manager import get_agent_manager
+from agent.core.monitoring import initialize_monitoring
+from agent.streaming.stream_handler import stream_agent_response
+from agent.services.query_processor import get_query_processor
 
 # 导入 ORM 相关模块
 from agent.dependencies import get_product_prompt_service
 from core.models.product_prompt import ProductPromptCreate, ProductPromptUpdate, ProductPromptResponse
 from agent.services.product_prompt_service import ProductPromptService
-
-# 导入图表验证服务
-from agent.services.chart_validation_service import validate_chart_response, chart_validation_service
 
 # 配置日志
 logging.basicConfig(level=getattr(logging, settings.LOG_LEVEL))
@@ -33,87 +34,21 @@ except ImportError as e:
     logger.error(f"爬虫模块导入失败: {e}")
     SCRAPING_AVAILABLE = False
 
-# Agent 和工具集上下文将由 lifespan 管理
-agent = None
-init_error = None
-tool_collection_context = None
-
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     """在应用启动时初始化 Agent，在关闭时清理资源。"""
-    global agent, init_error, tool_collection_context
-
+    
     # 初始化监控
-    if settings.PHOENIX_ENDPOINT:
-        try:
-            tracer_provider = register(
-                project_name=settings.PROJECT_NAME,
-                endpoint=settings.PHOENIX_ENDPOINT
-            )
-            SmolagentsInstrumentor().instrument(tracer_provider=tracer_provider)
-            logger.info(f"Phoenix 监控已启动，项目: {settings.PROJECT_NAME}, 端点: {settings.PHOENIX_ENDPOINT}")
-        except Exception as e:
-            logger.error(f"Phoenix 监控初始化失败: {e}", exc_info=True)
-    else:
-        logger.warning("未配置 PHOENIX_ENDPOINT，Phoenix 监控未启动。")
+    initialize_monitoring()
     
-    logger.info("FastAPI 应用启动，开始初始化 Agent...")
-    
-    try:
-        from smolagents import ToolCollection,ToolCallingAgent, CodeAgent, OpenAIServerModel
-        from mcp import StdioServerParameters
-        
-        logger.info(f"使用模型: {settings.MODEL_ID}")
-        model = OpenAIServerModel(
-            model_id=settings.MODEL_ID,
-            api_base="https://openrouter.ai/api/v1",
-            api_key=settings.API_KEY
-        )
-        
-        logger.info("初始化工具...")
-        product_tool = ProductQueryTool()
-        review_tool = ReviewQueryTool()
-
-        server_parameters = StdioServerParameters(
-            command="npx",
-            args=["-y", 
-                  "@supabase/mcp-server-supabase@latest",
-                  "--access-token",
-                  settings.MCP_ACCESS_TOKEN]
-        )
-
-        logger.info("初始化 ToolCollection...")
-        tool_collection_context = ToolCollection.from_mcp(server_parameters, trust_remote_code=True)
-        # 手动进入上下文
-        tool_collection = tool_collection_context.__enter__()
-
-        # all_tools = [product_tool, review_tool, *tool_collection.tools]
-        all_tools = [ *tool_collection.tools]
-
-        logger.info("创建 CodeAgent...")
-        agent = CodeAgent(
-            tools=all_tools, 
-            model=model,
-            max_steps=settings.MAX_ITERATIONS,
-            additional_authorized_imports = ['json'],
-            final_answer_checks=[check_reasoning_and_plot]
-        )
-
-        logger.info(f"Agent 初始化成功，加载的工具: {agent.tools}")
-
-    except Exception as e:
-        init_error = str(e)
-        logger.error(f"Agent 初始化失败: {e}", exc_info=True)
+    # 初始化 Agent
+    agent_manager = get_agent_manager()
+    await agent_manager.initialize_agent()
 
     yield
 
-    logger.info("FastAPI 应用关闭，正在释放资源...")
-    if tool_collection_context:
-        try:
-            tool_collection_context.__exit__(None, None, None)
-            logger.info("工具集资源已释放。")
-        except Exception as e:
-            logger.error(f"释放工具集资源时出错: {e}", exc_info=True)
+    # 清理资源
+    agent_manager.cleanup()
 
 
 app = FastAPI(
@@ -135,258 +70,30 @@ app.add_middleware(
 # Register Product Segmentation endpoints
 app.include_router(segmentation_router, prefix="/api/segmentation", tags=["Product Segmentation"])
 
-# 辅助函数：读取 prompt 文件并拼接查询
-async def prepare_query_with_prompt(query: str) -> str:
-    """准备完整的查询，包含系统提示词"""
-    try:
-        # 直接创建服务实例，不使用依赖注入
-        from core.database.connection import get_supabase_client
-        from core.repositories.product_prompt_repository import ProductPromptRepository
-        from agent.services.product_prompt_service import ProductPromptService
-        
-        # 获取 Supabase 客户端
-        supabase_client = get_supabase_client()
-        
-        # 创建仓库和服务实例
-        repository = ProductPromptRepository(supabase_client)
-        service = ProductPromptService(repository)
-        
-        # 获取提示词
-        prefixPrompt = await service.get_prompt_by_id(5)
-        
-        if not prefixPrompt:
-            logger.warning("未找到 ID 为 1 的提示词，使用原始查询")
-            return query
-            
-        complete_query = prefixPrompt.prompt + "\n\n 用户的问题如下：" + query
-        
-        logger.info(f"已成功拼接提示词，总 prompt 长度: {len(complete_query)} 字符")
-        return complete_query
-        
-    except Exception as e:
-        logger.error(f"准备查询提示词时出错: {e}")
-        logger.info("使用原始查询继续执行")
-        return query
 
-
-def is_valid_json(text: str) -> bool:
-    try:
-        json.loads(text)
-        return True
-    except json.JSONDecodeError:
-        return False
-
-
-def check_reasoning_and_plot(final_answer, agent_memory):
-    """
-    检查推理过程和图表是否正确
-    
-    Args:
-        final_answer: LLM 生成的最终答案
-        agent_memory: Agent 的内存状态
-        
-    Raises:
-        Exception: 当验证失败时抛出具体错误信息，供 Agent 改进
-        
-    Returns:
-        bool: 验证通过时返回 True
-    """
-    logger.info("🔍 开始检查推理过程和图表是否正确")
-    
-    # 检查是否为 JSON 格式
-    if not is_valid_json(final_answer):
-        logger.info("📝 结果不是有效的 JSON 格式，将作为普通字符串处理")
-        return True
-    
-    logger.info("📄 结果成功解析为 JSON 格式，开始进行图表验证")
-    
-    try:
-        # 使用图表验证服务进行全面验证
-        validation_result = validate_chart_response(final_answer)
-        
-        # 首先检查 JSON 格式是否有效
-        if not validation_result["is_valid_json"]:
-            error_msg = "JSON 格式验证失败"
-            if "json_error" in validation_result:
-                error_msg += f": {validation_result['json_error']}"
-            logger.error(f"❌ {error_msg}")
-            raise Exception(error_msg)
-        
-        logger.info("✅ JSON 格式验证通过")
-        
-        # 检查图表验证结果
-        chart_validation = validation_result.get("chart_validation")
-        if not chart_validation:
-            error_msg = "图表验证过程中出现异常，无法获取验证结果"
-            logger.error(f"❌ {error_msg}")
-            raise Exception(error_msg)
-        
-        chart_count = chart_validation.get("chart_count", 0)
-        logger.info(f"📊 发现 {chart_count} 个图表")
-        
-        # 如果发现图表但验证失败，抛出详细错误信息
-        if chart_count > 0 and not chart_validation["valid"]:
-            errors = chart_validation.get("errors", [])
-            if errors:
-                # 构建详细的错误信息
-                error_details = []
-                for i, error in enumerate(errors, 1):
-                    error_details.append(f"{i}. {error}")
-                
-                error_msg = f"图表验证失败，发现 {len(errors)} 个错误:\n" + "\n".join(error_details)
-                
-                # 添加改进建议
-                error_msg += "\n\n请检查以下问题:"
-                error_msg += "\n- JSX 语法是否正确（特别是箭头函数参数格式）"
-                error_msg += "\n- 模板字符串中的引号是否正确"
-                error_msg += "\n- Recharts 组件属性格式是否正确（如 margin={{...}}）"
-                error_msg += "\n- 数据结构是否符合组件要求"
-                
-                logger.error(f"❌ {error_msg}")
-                raise Exception(error_msg)
-        
-        # 记录成功验证的详细信息
-        if chart_validation["valid"]:
-            logger.info("✅ 所有图表验证通过")
-            
-            # 记录每个图表的验证详情
-            for chart_detail in chart_validation.get("chart_details", []):
-                chart_key = chart_detail["key"]
-                if chart_detail["valid"]:
-                    logger.info(f"✅ {chart_key} 验证通过")
-                    if chart_detail.get("info"):
-                        for info in chart_detail["info"]:
-                            logger.info(f"  📈 {chart_key}: {info}")
-                else:
-                    logger.warning(f"⚠️ {chart_key} 验证存在问题，但不影响整体通过")
-        
-        # 记录警告信息（不影响通过状态）
-        warnings = chart_validation.get("warnings", [])
-        if warnings:
-            logger.warning(f"⚠️ 发现 {len(warnings)} 个警告（不影响验证通过）:")
-            for i, warning in enumerate(warnings, 1):
-                logger.warning(f"  {i}. {warning}")
-        
-        # 生成并记录验证摘要
-        summary = chart_validation_service.get_validation_summary(validation_result)
-        logger.info(f"📋 验证摘要: {summary}")
-        
-        # 最终检查整体验证结果
-        if not validation_result["overall_valid"]:
-            error_msg = "整体验证失败，虽然单个组件可能通过，但整体结构存在问题"
-            logger.error(f"❌ {error_msg}")
-            raise Exception(error_msg)
-        
-        logger.info("🎉 所有验证检查通过")
-        return True
-        
-    except Exception as e:
-        # 如果是我们主动抛出的异常，直接重新抛出
-        if "图表验证失败" in str(e) or "JSON 格式验证失败" in str(e) or "整体验证失败" in str(e):
-            raise
-        
-        # 如果是其他异常，包装后抛出
-        error_msg = f"图表验证过程中出现异常: {str(e)}"
-        logger.error(f"❌ {error_msg}", exc_info=True)
-        raise Exception(error_msg)
-
-async def stream_agent_response(query: str):
-    """
-    运行 smolagents 代理并通过 SSE 流式输出结果
-    """
-    if not agent:
-        if init_error:
-            yield f"data: {json.dumps({'error': f'Agent 初始化失败: {init_error}'}, ensure_ascii=False)}\n\n"
-        else:
-            yield f"data: {json.dumps({'error': 'Agent 未初始化'}, ensure_ascii=False)}\n\n"
-        return
-    
-    try:
-        logger.info(f"开始处理查询: {query}")
-        
-        # 发送开始信号
-        yield f"data: {json.dumps({'status': 'started', 'message': '开始处理查询...'}, ensure_ascii=False)}\n\n"
-        
-        try:
-            # 准备完整的查询（包含 prompt）
-            complete_query = await prepare_query_with_prompt(query)
-            
-            # 运行代理任务，设置超时
-            logger.info("正在调用 agent.run...")
-            result = await asyncio.wait_for(
-                asyncio.to_thread(agent.run, complete_query),
-                timeout=settings.AGENT_TIMEOUT
-            )
-            logger.info(f"agent.run 执行完成，结果类型: {type(result)}")
-            
-            # 发送调试信息
-            yield f"data: {json.dumps({'status': 'debug', 'message': f'agent.run 执行完成，结果类型: {type(result).__name__}'}, ensure_ascii=False)}\n\n"
-            
-        except asyncio.TimeoutError:
-            logger.error(f"agent.run 执行超时 ({settings.AGENT_TIMEOUT}秒)")
-            yield f"data: {json.dumps({'status': 'error', 'error': f'Agent 执行超时 ({settings.AGENT_TIMEOUT}秒)'}, ensure_ascii=False)}\n\n"
-            return
-        except Exception as agent_error:
-            logger.error(f"agent.run 执行失败: {agent_error}")
-            yield f"data: {json.dumps({'status': 'error', 'error': f'Agent 执行失败: {str(agent_error)}'}, ensure_ascii=False)}\n\n"
-            return
-        
-        # 发送进度信息
-        yield f"data: {json.dumps({'status': 'processing', 'message': '正在分析结果...'}, ensure_ascii=False)}\n\n"
-
-        # 删除结果中的换行符（临时处理）
-        # logger.info(f"去除换行符前 result...{result}")
-        # result = result.replace("\n", "")
-        # logger.info(f"去除换行符后 result...{result}")
-
-        # 将结果分块发送
-        if is_valid_json(result):
-            logger.info("结果成功解析为 JSON 格式！，直接发送结果")
-            # 直接发送 JSON 字符串，不要再次序列化
-            yield f"data: {json.dumps({'status': 'streaming', 'message': result}, ensure_ascii=False)}\n\n"
-        elif isinstance(result, str):
-            # 按句号分割结果，更自然的分块方式
-            sentences = result.split('。')
-            for i, sentence in enumerate(sentences):
-                if sentence.strip():
-                    chunk_data = {
-                        'status': 'streaming',
-                        'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
-                        'chunk_index': i
-                    }                 
-                    yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
-                    await asyncio.sleep(settings.STREAM_DELAY)  # 控制流速
-        else:
-            # 如果结果不是字符串，直接发送
-            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"
-        
-        # 发送完成信号
-        yield f"data: {json.dumps({'status': 'completed', 'message': '[DONE]'}, ensure_ascii=False)}\n\n"
-        
-    except Exception as e:
-        logger.error(f"处理查询时出错: {e}")
-        yield f"data: {json.dumps({'status': 'error', 'error': str(e)}, ensure_ascii=False)}\n\n"
 
 @app.get("/")
 async def root():
     """根路径，返回 API 信息"""
+    agent_manager = get_agent_manager()
     return {
         "message": "Leviton Agent API",
         "version": "1.0.0",
-        "status": "运行中" if agent else "Agent 未初始化",
+        "status": "运行中" if agent_manager.is_ready() else "Agent 未初始化",
         "model_id": settings.MODEL_ID,
-        "init_error": init_error if init_error else None,
-        "available_tools": agent.tools if agent else []
+        "init_error": agent_manager.get_init_error(),
+        "available_tools": agent_manager.get_agent().tools if agent_manager.is_ready() else []
     }
 
 @app.get("/health")
 async def health_check():
     """健康检查端点"""
+    agent_manager = get_agent_manager()
     return {
         "status": "healthy",
-        "agent_ready": agent is not None,
+        "agent_ready": agent_manager.is_ready(),
         "model_id": settings.MODEL_ID,
-        "init_error": init_error if init_error else None,
+        "init_error": agent_manager.get_init_error(),
         "data_files_status": get_data_files_status(),
         "config": {
             "host": settings.HOST,
@@ -400,11 +107,12 @@ async def health_check():
 @app.get("/init-agent")
 async def initialize_agent():
     """手动初始化 Agent (已弃用)"""
+    agent_manager = get_agent_manager()
     return {
         "success": False,
         "message": "Agent 初始化已与应用生命周期绑定，此端点已弃用。",
-        "agent_ready": agent is not None,
-        "init_error": init_error if init_error else None
+        "agent_ready": agent_manager.is_ready(),
+        "init_error": agent_manager.get_init_error()
     }
 
 @app.get("/test-tools")
@@ -441,8 +149,9 @@ async def agent_query(request: dict):
     """
     POST 端点，用于处理更复杂的查询请求
     """
-    if not agent:
-        return {"error": "Agent 未初始化", "init_error": init_error}
+    agent_manager = get_agent_manager()
+    if not agent_manager.is_ready():
+        return {"error": "Agent 未初始化", "init_error": agent_manager.get_init_error()}
     
     query = request.get("query", "")
     if not query.strip():
@@ -450,8 +159,10 @@ async def agent_query(request: dict):
     
     try:
         # 准备完整的查询（包含 prompt）
-        complete_query = await prepare_query_with_prompt(query)
+        query_processor = get_query_processor()
+        complete_query = await query_processor.prepare_query_with_prompt(query)
         
+        agent = agent_manager.get_agent()
         result = await asyncio.to_thread(agent.run, complete_query)
         return {
             "status": "success",
