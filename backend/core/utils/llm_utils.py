@@ -165,23 +165,23 @@ class LLMManager:  # pylint: disable=too-few-public-methods
                 # ------------------------------------------------------------------
                 if validate_response is not None:
                     try:
-                        is_valid, val_ctx = validate_response(response_text)
+                        validation_result = validate_response(response_text)
                     except Exception as exc:  # pylint: disable=broad-except
                         # Treat validator crash as invalid response
                         logger.warning("Validator raised on attempt %d: %s", attempt, exc)
-                        is_valid, val_ctx = False, {"validator_exception": str(exc)}
+                        validation_result = ValidationResult(ok=False, error_categories={"validator_exception": [str(exc)]})
 
-                    if not is_valid:
+                    if not validation_result.ok:
                         # Validation failure ------------------------------------
-                        logger.warning("LLM validation failed on attempt %d: %s", attempt, json.dumps(val_ctx, indent=2))
+                        logger.warning("LLM validation failed on attempt %d: %s", attempt, json.dumps(validation_result.error_categories, indent=2))
                         
                         # Rebuild prompt or abort --------------------------------
                         if retry_prompt_builder is None or attempt == cfg.MAX_ATTEMPTS_PER_CALL:
                             # Exhausted retries or cannot build retry prompt
-                            logger.error("LLM call failed after %d attempts with validation errors: %s", attempt, json.dumps(val_ctx, indent=2))
+                            logger.error("LLM call failed after %d attempts with validation errors: %s", attempt, json.dumps(validation_result.error_categories, indent=2))
                             raise LLMCallError("Validation failed after maximum attempts")
 
-                        current_prompt = retry_prompt_builder(original_prompt, val_ctx)
+                        current_prompt = retry_prompt_builder(original_prompt, validation_result.error_categories)
                         logger.info("Retrying with full updated prompt (attempt %d): %s", attempt + 1, current_prompt)
                         continue  # Next retry immediately
 
@@ -248,7 +248,7 @@ async def safe_llm_call(
     prompt: str,
     *,
     validate_response: Optional[Callable[[str], ValidationResult]] = None,
-    retry_prompt_builder: Optional[Callable[[str, Any], str]] = None,
+    retry_prompt_builder: Optional[Callable[[str, Dict[str, List[str]]], str]] = None,
     context: Optional[Dict[str, Any]] = None,
 ) -> str:
     """Convenient wrapper around the *global* LLM manager.

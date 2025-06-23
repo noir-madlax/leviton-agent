@@ -63,8 +63,6 @@ class CallStorage(Protocol):
         """Persist *record* and return the file-path/identifier."""
 
 
-T = TypeVar("T", bound="StageResultBase")
-
 
 class StageProtocolError(RuntimeError):
     """Raised when an LLM response keeps failing validation even after splits."""
@@ -79,6 +77,11 @@ class StageCallBudgetExceeded(RuntimeError):
 # ---------------------------------------------------------------------------
 
 @dataclass(slots=True, frozen=True)
+class StageResultBase:
+    """Base class for stage execution results."""
+    pass
+
+@dataclass(slots=True, frozen=True)
 class StageContext:
     """Immutable context object passed through stage execution.
 
@@ -86,35 +89,26 @@ class StageContext:
     ----------
     input_seq
         The *sequence* of documents/items to process.
+    product_category
+        The product category being processed (e.g., "light switch", "electronics").
+        Used for prompt template substitution and validation context.
     storage
         Optional persistence adapter; when supplied each prompt/response pair
         (including retries and recursive splits) is written through
         ``storage.write_json``.
-    context_vars
-        Arbitrary key→value mapping that concrete stages can consult in their
-        prompt rendering / validation logic.  E.g. ``{"doc_category": "Books"}``.
     extracted_taxonomies, consolidated_taxonomies
         Upstream artefacts – preserved here so downstream stages may inspect
         them.  The base utilities never read these fields.
     """
 
     input_seq: Sequence[Any]
+    product_category: str
     storage: CallStorage | None = None
-    context_vars: dict[str, Any] = field(default_factory=dict)
 
     # Upstream artefacts (optional)
     extracted_taxonomies: list[Any] | None = None
     consolidated_taxonomies: list[Any] | None = None
 
-
-@dataclass(slots=True)
-class StageResultBase:  # pylint: disable=too-few-public-methods
-    """Base result object – concrete stages should subclass this."""
-
-    calls_made: int
-
-    # Split-merge helpers may accumulate further metrics; subclasses should
-    # override/extend as needed but must call *super().__init__*.
 
 # ---------------------------------------------------------------------------
 # Internal helper for _llm_roundtrip
@@ -162,18 +156,18 @@ class BaseStage:
         raw_response: str,
         ctx: StageContext,
         attempts: int,
-    ) -> T:
+    ) -> StageResultBase:
         raise NotImplementedError
 
     async def _merge_split_results(
         self,
         seq_left: Sequence[Any],
         seq_right: Sequence[Any],
-        res_left: T,
-        res_right: T,
+        res_left: StageResultBase,
+        res_right: StageResultBase,
         ctx: StageContext,
         depth: int,
-    ) -> T:
+    ) -> StageResultBase:
         raise NotImplementedError
 
     # Optional hooks ---------------------------------------------------------
@@ -216,13 +210,19 @@ class BaseStage:
             # NOTE: Depth is currently unused here but retained so specialised
             #       subclasses (e.g. consolidation) may leverage it.
 
+            # Check recursive depth limit
+            if depth >= cfg.MAX_RECURSIVE_DEPTH:
+                raise StageProtocolError(
+                    f"Maximum recursive depth ({cfg.MAX_RECURSIVE_DEPTH}) exceeded"
+                )
+
             # 1) Build initial prompt -------------------------------------------------
             prompt = await self._build_prompt(seq, ctx)
 
             # 2) Adapter wrappers for the shared safe_llm_call -----------------------
             def _validator(raw: str):
                 result = self._validate(raw, seq, ctx)
-                return result.ok, result  # Pass full ValidationResult as retry_ctx
+                return result  # Return ValidationResult directly
 
             def _retry_builder(original_prompt: str, retry_ctx: Any):
                 return self._retry_prompt(original_prompt, retry_ctx, ctx)

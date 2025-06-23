@@ -18,25 +18,29 @@ responsibilities left here are:
 The expected LLM output **must** be a JSON object of the following shape::
 
     {
-      "taxonomies": [
-        {"name": "<taxonomy_name>", "definition": "<what qualifies>"},
-        ...
-      ],
-      "assignments": {
-        "0": "<taxonomy_name_of_text_0>",
-        "1": "<taxonomy_name_of_text_1>",
-        ...
+      "Meaningful Subcategory 1": {
+        "definition": "..., e.g. <specific product subtypes>",
+        "ids": [0, 5, 12]
+      },
+      "Meaningful Subcategory 2": {
+        "definition": "..., e.g. ...",
+        "ids": [1, 8, 15]
+      },
+      "OUT_OF_SCOPE": {
+        "definition": "Products that clearly don't belong to {product_category}, e.g. ...",
+        "ids": [3, 9]
       }
     }
 
-No other top-level keys are allowed.  Each index from ``0`` … ``len(texts)-1``
-must appear **exactly once** in *assignments* and every referenced taxonomy
-name must exist in the *taxonomies* list.
+Each top-level key represents a taxonomy category name. Each category must have
+a "definition" field and an "ids" field containing an array of product indices.
+Each index from ``0`` … ``len(texts)-1`` must appear **exactly once** across
+all "ids" arrays with no duplicates or missing indices.
 """
 
 from dataclasses import dataclass
 import json
-import textwrap
+from pathlib import Path
 from typing import Any, Dict, List, Sequence
 
 from core.utils.llm_utils import extract_json, create_retry_error_details, ValidationResult
@@ -65,44 +69,45 @@ class TaxonomyDTO:  # noqa: D401 – simple DTO
     definition: str
 
 
-@dataclass(slots=True)
-class ExtractionStageResult(StageResultBase):  # pylint: disable=too-many-instance-attributes
-    """Concrete :class:`StageResultBase` payload for the extraction stage."""
-
-    taxonomies_extracted: List[TaxonomyDTO]
-    assignments_initial: Dict[int, str]
-    batches_done: int
-
+@dataclass(slots=True, frozen=True)
+class ExtractionStageResult(StageResultBase):
+    """Result returned by the extraction stage."""
+    
+    taxonomies_extracted: list[TaxonomyDTO]
+    assignments_initial: dict[int, str]
 
 # ---------------------------------------------------------------------------
 # Prompt helpers & retry-utilities
 # ---------------------------------------------------------------------------
 
 
-# Simple retry template (the full blown template from product-segmentation
-# is reused in a reduced form to avoid external dependencies).
-_RETRY_TEMPLATE = textwrap.dedent(
-    """
 
-    -------- RETRY INSTRUCTIONS --------
-    The previous answer had the following issues:
-    {error_details}
-
-    Please return the corrected JSON following the schema verbatim. Do *not*
-    include code-blocks, markdown or commentary.
-    -----------------------------------
-    """
-)
 
 
 # ---------------------------------------------------------------------------
-# Runtime-supplied prompt template
+# Fixed prompt templates
 # ---------------------------------------------------------------------------
-# The concrete prompt text must be supplied by the orchestrator via
-# ``ctx.context_vars["prompt_template"]``.  Keeping the stage *prompt-agnostic*
-# avoids hard-coding domain specifics and lets callers reuse the stage with
-# different prompt flavours (see *extract_taxonomy_prompt_v0.txt*).
+# The stage uses fixed prompt templates from the prompts directory to ensure
+# consistency across all extraction operations.
 # ---------------------------------------------------------------------------
+
+# Path to prompt template files
+_PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
+_EXTRACT_PROMPT_PATH = _PROMPTS_DIR / "taxonomy_extraction_prompt_v0.txt"
+_RETRY_PROMPT_PATH = _PROMPTS_DIR / "shared_retry_prompt_v0.txt"
+
+# Load prompt templates at module level
+try:
+    with open(_EXTRACT_PROMPT_PATH, 'r', encoding='utf-8') as f:
+        _EXTRACT_PROMPT_TEMPLATE = f.read()
+except FileNotFoundError:
+    raise RuntimeError(f"Required prompt template not found: {_EXTRACT_PROMPT_PATH}")
+
+try:
+    with open(_RETRY_PROMPT_PATH, 'r', encoding='utf-8') as f:
+        _RETRY_PROMPT_TEMPLATE = f.read()
+except FileNotFoundError:
+    raise RuntimeError(f"Required retry template not found: {_RETRY_PROMPT_PATH}")
 
 
 # ---------------------------------------------------------------------------
@@ -116,18 +121,13 @@ class ExtractionStage(BaseStage):
     # --------------------- BaseStage abstract hooks -------------------------
 
     async def _build_prompt(self, seq: Sequence[str], ctx: StageContext) -> str:  # noqa: D401
-        """Render the caller-supplied prompt template and append the input lines."""
+        """Render the fixed prompt template and append the input lines."""
 
-        prompt_template: str | None = ctx.context_vars.get("prompt_template")
-        if prompt_template is None:
-            raise ValueError(
-                "ExtractionStage requires 'prompt_template' in ctx.context_vars"
-            )
-
-        # Allow placeholder replacement using context_vars themselves. This lets
-        # callers provide ``{"product_category": "Electronics"}``, …
+        # Use the fixed extraction prompt template
+        template_vars = {"product_category": ctx.product_category}
+        
         try:
-            rendered_template = prompt_template.format(**ctx.context_vars)
+            rendered_template = _EXTRACT_PROMPT_TEMPLATE.format(**template_vars)
         except KeyError as exc:
             raise ValueError(f"Missing template variable {exc} for prompt_template") from exc
 
@@ -159,63 +159,68 @@ class ExtractionStage(BaseStage):
             error_categories["format_errors"].append("Top-level JSON must be an object")
             return ValidationResult(ok=False, error_categories=error_categories)
 
-        if "taxonomies" not in parsed or "assignments" not in parsed:
-            missing = {k for k in ("taxonomies", "assignments") if k not in parsed}
-            error_categories["format_errors"].append(
-                f"Missing top-level keys: {', '.join(sorted(missing))}"
-            )
+        if not parsed:
+            error_categories["format_errors"].append("JSON object cannot be empty")
             return ValidationResult(ok=False, error_categories=error_categories)
 
-        taxonomies = parsed["taxonomies"]
-        assignments = parsed["assignments"]
-
-        # Validate taxonomies list
-        if not isinstance(taxonomies, list):
-            error_categories["format_errors"].append("'taxonomies' must be a list")
-        else:
-            for idx, entry in enumerate(taxonomies):
-                if not isinstance(entry, dict):
-                    error_categories["validation_errors"].append(
-                        f"taxonomies[{idx}] is not an object"
-                    )
-                    continue
-                if "name" not in entry or "definition" not in entry:
-                    error_categories["validation_errors"].append(
-                        f"taxonomies[{idx}] missing 'name' or 'definition'"
-                    )
-
-        # Validate assignments mapping
-        if not isinstance(assignments, dict):
-            error_categories["format_errors"].append("'assignments' must be an object")
-        else:
-            seen_ids = set()
-            for k, v in assignments.items():
-                if k not in expected_ids:
-                    error_categories["completeness_errors"].append(
-                        f"Unexpected id '{k}' in assignments"
-                    )
-                if k in seen_ids:
-                    error_categories["completeness_errors"].append(
-                        f"Duplicate id '{k}' in assignments"
-                    )
-                seen_ids.add(k)
-                if not isinstance(v, str):
-                    error_categories["validation_errors"].append(
-                        f"Assignment for id '{k}' is not a string"
-                    )
-            missing = expected_ids - seen_ids
-            if missing:
-                error_categories["completeness_errors"].append(
-                    f"Missing assignments for ids: {sorted(missing)}"
+        # Validate each taxonomy category
+        taxonomy_names = set()
+        all_assigned_ids = set()
+        
+        for category_name, category_data in parsed.items():
+            taxonomy_names.add(category_name)
+            
+            if not isinstance(category_data, dict):
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' must be an object"
                 )
+                continue
+                
+            # Check required fields
+            if "definition" not in category_data:
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' missing 'definition' field"
+                )
+            elif not isinstance(category_data["definition"], str):
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' definition must be a string"
+                )
+                
+            if "ids" not in category_data:
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' missing 'ids' field"
+                )
+            elif not isinstance(category_data["ids"], list):
+                error_categories["validation_errors"].append(
+                    f"Category '{category_name}' ids must be a list"
+                )
+            else:
+                # Validate ids are integers and collect them
+                category_ids = category_data["ids"]
+                for idx, id_val in enumerate(category_ids):
+                    if not isinstance(id_val, int):
+                        error_categories["validation_errors"].append(
+                            f"Category '{category_name}' ids[{idx}] must be an integer"
+                        )
+                    else:
+                        str_id = str(id_val)
+                        if str_id not in expected_ids:
+                            error_categories["completeness_errors"].append(
+                                f"Category '{category_name}' contains invalid id {id_val}"
+                            )
+                        elif str_id in all_assigned_ids:
+                            error_categories["completeness_errors"].append(
+                                f"ID {id_val} appears in multiple categories"
+                            )
+                        else:
+                            all_assigned_ids.add(str_id)
 
-            # Ensure referenced taxonomy exists
-            taxonomy_names = {t.get("name") for t in taxonomies if isinstance(t, dict)}
-            for k, v in assignments.items():
-                if isinstance(v, str) and v not in taxonomy_names:
-                    error_categories["validation_errors"].append(
-                        f"Assignment for id '{k}' references unknown taxonomy '{v}'"
-                    )
+        # Check for missing assignments
+        missing_ids = expected_ids - all_assigned_ids
+        if missing_ids:
+            error_categories["completeness_errors"].append(
+                f"Missing assignments for ids: {sorted(missing_ids)}"
+            )
 
         all_errors = sum(len(v) for v in error_categories.values())
         if all_errors == 0:
@@ -228,8 +233,13 @@ class ExtractionStage(BaseStage):
     ) -> str:  # noqa: D401
         # Build human-readable error details from retry_ctx.error_categories
         error_details = create_retry_error_details(validation_result.error_categories)
-        retry_block = _RETRY_TEMPLATE.format(error_details=error_details)
-        return f"{original_prompt}{retry_block}"
+        
+        # Use the fixed retry prompt template
+        retry_block = _RETRY_PROMPT_TEMPLATE.format(
+            error_details=error_details,
+            content_sections=""  # Not used in current template but required for format string
+        )
+        return f"{original_prompt}\n\n{retry_block}"
 
     async def _produce_result(
         self,
@@ -243,17 +253,23 @@ class ExtractionStage(BaseStage):
         json_text = extract_json(raw_response)
         payload = json.loads(json_text)
 
+        # Extract taxonomies from the category structure
         taxonomies = [
-            TaxonomyDTO(name=item["name"], definition=item["definition"])
-            for item in payload["taxonomies"]
+            TaxonomyDTO(name=category_name, definition=category_data["definition"])
+            for category_name, category_data in payload.items()
+            if isinstance(category_data, dict) and "definition" in category_data
         ]
-        assignments = {int(k): v for k, v in payload["assignments"].items()}
+        
+        # Convert ids arrays to assignments mapping
+        assignments = {}
+        for category_name, category_data in payload.items():
+            if isinstance(category_data, dict) and "ids" in category_data:
+                for product_id in category_data["ids"]:
+                    assignments[int(product_id)] = category_name
 
         return ExtractionStageResult(
-            calls_made=attempts,
             taxonomies_extracted=taxonomies,
             assignments_initial=assignments,
-            batches_done=1,
         )
 
     async def _merge_split_results(
@@ -272,12 +288,15 @@ class ExtractionStage(BaseStage):
         for t in res_left.taxonomies_extracted + res_right.taxonomies_extracted:
             taxonomy_by_name.setdefault(t.name, t)
 
-        # Merge assignments (right side wins on conflict which shouldn't happen)
-        assignments = {**res_left.assignments_initial, **res_right.assignments_initial}
+        # Merge assignments - adjust indices for right side to account for offset
+        assignments = dict(res_left.assignments_initial)
+        left_size = len(seq_left)
+        
+        # Right side assignments need to be offset by the size of left sequence
+        for idx, category_name in res_right.assignments_initial.items():
+            assignments[idx + left_size] = category_name
 
         return ExtractionStageResult(
-            calls_made=res_left.calls_made + res_right.calls_made,
             taxonomies_extracted=list(taxonomy_by_name.values()),
-            assignments_initial=assignments,
-            batches_done=res_left.batches_done + res_right.batches_done,
+            assignments_initial=assignments
         )

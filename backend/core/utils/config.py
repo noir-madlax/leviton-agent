@@ -35,6 +35,7 @@ MAX_CONCURRENT_LLM_CALLS: int = MAX_CONCURRENT_REQUESTS  # Semaphore gate size
 
 # Pipeline call budget -------------------------------------------------------
 MAX_LLM_CALLS_PER_EXECUTE: int = 10  # Absolute ceiling for LLM calls in one BaseStage.execute()
+MAX_RECURSIVE_DEPTH: int = 2  # Maximum depth for recursive split-and-conquer processing
 
 __all__ = [
     "LLM_MODEL_NAME",
@@ -47,4 +48,5 @@ __all__ = [
     "MAX_ATTEMPTS_PER_CALL",
     "MAX_CONCURRENT_LLM_CALLS",
     "MAX_LLM_CALLS_PER_EXECUTE",
+    "MAX_RECURSIVE_DEPTH",
 ] 
