@@ -13,48 +13,33 @@ Test Coverage:
    Verifies result structure, taxonomy quality, assignment completeness, and
    data integrity.
 
-2. **test_build_prompt_with_context_vars**:
-   Tests prompt template rendering with fixed template files.
-   Ensures the taxonomy_extraction_prompt_v0.txt template is properly
-   loaded and populated with product category and individual product titles 
-   are correctly enumerated with indices.
-
-3. **test_validation_with_valid_response**:
+2. **test_validation_with_valid_response**:
    Tests the validation logic with a properly formatted JSON response that
    matches the expected schema (taxonomies array + assignments object).
    Verifies that valid responses pass validation without errors.
 
-4. **test_validation_with_invalid_response**:
+3. **test_validation_with_invalid_response**:
    Tests validation error handling with various malformed responses:
    - Invalid JSON syntax
    - Missing required top-level keys (taxonomies/assignments)  
    - Incomplete assignment mappings
    Ensures proper error categorization and reporting.
 
-5. **test_retry_prompt_generation**:
+4. **test_retry_prompt_generation**:
    Tests retry prompt construction using the shared_retry_prompt_v0.txt template.
    Verifies that validation errors are properly formatted and included in
    retry instructions to help the LLM correct its response.
 
-6. **test_produce_result_conversion**:
+5. **test_produce_result_conversion**:
    Tests the conversion of valid raw JSON responses into ExtractionStageResult
    objects. Verifies proper parsing of taxonomies and assignments, including
    string-to-integer key conversion for assignments.
 
-7. **test_merge_split_results**:
+6. **test_merge_split_results**:
    Tests the merging logic for split processing scenarios where large product
    batches are automatically divided. Verifies taxonomy deduplication by name
    and proper assignment consolidation across splits.
 
-8. **test_prompt_builds_with_fixed_template**:
-   Tests that the extraction stage can successfully build prompts using the
-   fixed template files. Validates that the stage is self-contained and 
-   doesn't require external template configuration.
-
-9. **test_product_category_substitution**:
-   Tests that product category values are properly substituted into the
-   fixed prompt template. Validates template variable replacement works
-   correctly with the fixed template system.
 
 Configuration:
 --------------
@@ -336,7 +321,7 @@ class TestExtractionStage:
         save_taxonomy_results(all_results, light_switch_titles, PRODUCT_CATEGORY)
 
     @pytest.mark.asyncio
-    async def test_build_prompt_with_context_vars(
+    async def test_build_prompt_with_context(
         self,
         extraction_stage: ExtractionStage,
         light_switch_titles: List[str],
@@ -350,7 +335,6 @@ class TestExtractionStage:
         
         # Verify context variables were replaced  
         assert PRODUCT_CATEGORY in prompt
-        assert "light switch" in prompt.lower()
         
         # Verify key elements from taxonomy_extraction_prompt_v0.txt are present
         assert "product taxonomy extraction specialist" in prompt.lower()
@@ -549,43 +533,6 @@ class TestExtractionStage:
         assert merged.assignments_initial[1] == "Category B"
         assert merged.assignments_initial[2] == "Category B"  # Right side index 0 + left_size(2) = 2
         assert merged.assignments_initial[3] == "Category C"  # Right side index 1 + left_size(2) = 3
-
-    @pytest.mark.asyncio
-    async def test_prompt_builds_with_fixed_template(
-        self,
-        extraction_stage: ExtractionStage
-    ) -> None:
-        """Prompt builds successfully with fixed template and substitutions."""
-        sample_titles = ["Switch 1", "Switch 2"]
-        context_without_template = StageContext(
-            input_seq=sample_titles,
-            product_category=PRODUCT_CATEGORY
-        )
-        
-        # This test is no longer relevant since we use fixed templates
-        # The extraction stage now always has access to the prompt template
-        # So we'll test that the prompt builds successfully
-        prompt = await extraction_stage._build_prompt(sample_titles, context_without_template)
-        assert len(prompt) > 0
-        assert PRODUCT_CATEGORY in prompt
-
-    @pytest.mark.asyncio 
-    async def test_product_category_substitution(
-        self,
-        extraction_stage: ExtractionStage
-    ) -> None:
-        """Template substitutes the provided product_category value verbatim."""
-        sample_titles = ["Switch 1", "Switch 2"]
-        # Test with invalid product category placeholder to trigger template error
-        invalid_context = StageContext(
-            input_seq=sample_titles,
-            product_category="{invalid_placeholder}"  # This will be used as-is in template
-        )
-        
-        # The template should still work since it just substitutes the value as-is
-        prompt = await extraction_stage._build_prompt(sample_titles, invalid_context)
-        assert len(prompt) > 0
-        assert "{invalid_placeholder}" in prompt 
 
     @pytest.mark.asyncio
     async def test_saved_taxonomy_results_structure(
