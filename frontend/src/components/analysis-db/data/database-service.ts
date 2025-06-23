@@ -26,6 +26,7 @@ export interface Project {
   selected_categories: string[]
   selected_sources: string[]
   selected_brands: string[]
+  selected_product_asins: string[]  // 新增：ASIN列表
   top_sales_count?: number
   total_products: number
   total_brands: number

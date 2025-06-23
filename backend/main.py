@@ -70,6 +70,10 @@ app.add_middleware(
 # Register Product Segmentation endpoints
 app.include_router(segmentation_router, prefix="/api/segmentation", tags=["Product Segmentation"])
 
+# Register Projects endpoints
+from projects.api import router as projects_router
+app.include_router(projects_router, prefix="/api/v1/projects", tags=["Projects"])
+
 
 
 @app.get("/")

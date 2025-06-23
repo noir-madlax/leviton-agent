@@ -10,7 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { CheckCircle, Database, TrendingUp, Users, MessageSquare, Filter, Eye, ChevronDown, ChevronRight, Edit2, Check, X, RefreshCw } from 'lucide-react';
 import { Input } from '@/components/ui/input';
-import { DatabaseService, type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
+import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
 
 export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnalysis?: (projectName: string) => void }) {
   const [data, setData] = useState<DataConfirmationData | null>(null);
@@ -28,7 +28,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   const [tempProjectName, setTempProjectName] = useState('');
   const [isBrandsExpanded, setIsBrandsExpanded] = useState(false);
 
-  const dbService = useMemo(() => new DatabaseService(), []);
+
 
   // 生成智能project名字
   const generateSmartProjectName = () => {
@@ -73,15 +73,20 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   const loadInitialData = async () => {
     setPageLoading(true);
     try {
-      // 获取全量数据（不传筛选条件）
-      const result = await dbService.getDataConfirmationData();
+      // 使用后端API获取全量数据
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const result = await response.json();
       setData(result);
       
       // 设置默认全选状态 - 修复：统一所有筛选的逻辑
       setFilters({
         categories: result.availableCategories, // 明确选中所有类别
         sources: result.availableSources, // 明确选中所有来源
-        brands: result.stats.brands.map(brand => brand.name), // 明确选中所有品牌
+        brands: result.stats.brands.map((brand: any) => brand.name), // 明确选中所有品牌
         topSalesCount: 100
       });
     } catch (error) {
@@ -97,8 +102,29 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     
     setFilterLoading(true);
     try {
-      // 使用当前筛选条件查询后端
-      const result = await dbService.getDataConfirmationData(filters);
+      // 构建查询参数
+      const params = new URLSearchParams();
+      
+      if (filters.categories.length > 0) {
+        filters.categories.forEach(cat => params.append('categories', cat));
+      }
+      if (filters.sources.length > 0) {
+        filters.sources.forEach(src => params.append('sources', src));
+      }
+      if (filters.brands.length > 0) {
+        filters.brands.forEach(brand => params.append('brands', brand));
+      }
+      if (filters.topSalesCount) {
+        params.append('top_sales_count', filters.topSalesCount.toString());
+      }
+      
+      // 使用后端API进行筛选查询
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const response = await fetch(`${API_BASE_URL}/api/v1/projects/data-confirmation?${params.toString()}`);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      const result = await response.json();
       setData(result);
     } catch (error) {
       console.error('Failed to filter data:', error);
@@ -153,24 +179,32 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     setIsConfirmed(true);
     
     try {
-      // 保存项目到数据库
-      const projectData = {
-        project_name: projectName,
-        company_name: 'Leviton', // 可以从用户设置获取
-        user_name: 'Current User', // 可以从用户认证获取
-        description: `Analysis project for ${filters.categories.join(', ')} products from ${filters.sources.join(', ')}`,
-        selected_categories: filters.categories,
-        selected_sources: filters.sources,
-        selected_brands: filters.brands,
-        top_sales_count: filters.topSalesCount,
-        total_products: filteredStats.totalProducts,
-        total_brands: filteredStats.totalBrands,
-        total_reviews: filteredStats.totalReviews,
-        avg_monthly_sales: filteredStats.avgMonthlySales,
-        status: 'active' as const
-      };
+      // 调用后端API创建项目
+      const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+      const response = await fetch(`${API_BASE_URL}/api/v1/projects/create`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          project_name: projectName,
+          company_name: 'Leviton',
+          user_name: 'Current User',
+          description: `Analysis project for ${filters.categories.join(', ')} products from ${filters.sources.join(', ')}`,
+          filters: {
+            categories: filters.categories,
+            sources: filters.sources,
+            brands: filters.brands,
+            top_sales_count: filters.topSalesCount
+          }
+        })
+      });
       
-      const savedProject = await dbService.saveProject(projectData);
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`);
+      }
+      
+      const savedProject = await response.json();
       console.log('Project saved successfully:', savedProject);
       
       // 跳转到Analysis by DB tab，传递项目ID
@@ -191,7 +225,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     setFilters({
       categories: data.availableCategories,
       sources: data.availableSources,
-      brands: data.stats.brands.map(brand => brand.name),
+      brands: data.stats.brands.map((brand: any) => brand.name),
       topSalesCount: 100
     });
     setIsConfirmed(false);
