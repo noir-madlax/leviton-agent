@@ -64,6 +64,7 @@ from product_segment.config import PRODUCTS_PER_TAXONOMY_PROMPT
 from product_segment.llm.taxonomy_extraction import (
     ExtractionStage,
     ExtractionStageResult,
+    ExtractionStageContext,
     TaxonomyDTO,
 )
 from product_segment.llm.taxonomy_pipeline_stage import StageContext
@@ -205,9 +206,8 @@ def mock_llm_client() -> AsyncMock:
 
 @pytest.fixture
 def stage_context() -> StageContext:
-    """Create stage context for testing."""
+    """Create base stage context for testing."""
     return StageContext(
-        input_seq=[],  # Will be overridden in actual test calls
         product_category=PRODUCT_CATEGORY
     )
 
@@ -277,16 +277,16 @@ class TestExtractionStage:
             for i, title in enumerate(batch_titles):
                 print(f"  [{i}] {title}")
                 
-            context = StageContext(
-                input_seq=batch_titles,
+            context = ExtractionStageContext(
                 product_category=stage_context.product_category,
+                input_texts=batch_titles,
             )
             batch_contexts.append((batch_idx, batch_titles, context))
 
         print("\n➡️   Calling real LLM for all batches in parallel...")
         
         # Execute all batches in parallel
-        async def process_batch(batch_idx: int, batch_titles: List[str], context: StageContext) -> ExtractionStageResult:
+        async def process_batch(batch_idx: int, batch_titles: List[str], context: ExtractionStageContext) -> ExtractionStageResult:
             result = await real_extraction_stage.execute(context)
             print(f"✅  Batch {batch_idx} finished – extracted "
                   f"{len(result.taxonomies_extracted)} taxonomies and "
@@ -331,7 +331,25 @@ class TestExtractionStage:
         # Take first 10 titles for faster testing
         sample_titles = light_switch_titles[:10]
         
-        prompt = await extraction_stage._build_prompt(sample_titles, stage_context)
+        print(f"\n🔍 Testing extraction prompt building with {len(sample_titles)} sample titles...")
+        print(f"\n📋 Input Texts:")
+        for i, title in enumerate(sample_titles):
+            print(f"  [{i}] {title}")
+        
+        # Create extraction context
+        extraction_context = ExtractionStageContext(
+            product_category=stage_context.product_category,
+            input_texts=sample_titles
+        )
+        
+        prompt = await extraction_stage._build_prompt(extraction_context)
+        
+        print(f"\n📝 Generated Extraction Prompt:")
+        print("=" * 80)
+        print(prompt)
+        print("=" * 80)
+        print(f"Prompt length: {len(prompt)} characters")
+        print(f"Prompt lines: {len(prompt.split(chr(10)))} lines")
         
         # Verify context variables were replaced  
         assert PRODUCT_CATEGORY in prompt
@@ -347,6 +365,11 @@ class TestExtractionStage:
         for i, title in enumerate(sample_titles):
             expected_line = f"[{i}] {title}"
             assert expected_line in prompt
+        
+        print(f"\n✅ Extraction prompt validation completed successfully!")
+        print(f"   - Contains all required template sections")
+        print(f"   - Includes all {len(sample_titles)} input texts with proper indexing")
+        print(f"   - Product category '{PRODUCT_CATEGORY}' properly substituted")
 
     @pytest.mark.asyncio
     async def test_validation_with_valid_response(
@@ -357,6 +380,12 @@ class TestExtractionStage:
         """Valid JSON response should pass validation without errors."""
         sample_titles = ["Smart Switch", "Toggle Switch"]
         
+        # Create extraction context
+        extraction_context = ExtractionStageContext(
+            product_category=stage_context.product_category,
+            input_texts=sample_titles
+        )
+        
         valid_response = json.dumps({
             "Smart Switches": {
                 "definition": "Wi-Fi enabled switches, e.g. smart home compatible switches",
@@ -365,7 +394,7 @@ class TestExtractionStage:
         })
         
         validation_result = extraction_stage._validate(
-            valid_response, sample_titles, stage_context
+            valid_response, extraction_context
         )
         
         assert validation_result.ok is True
@@ -386,9 +415,15 @@ class TestExtractionStage:
         """
         sample_titles = ["Switch 1", "Switch 2"]
         
+        # Create extraction context
+        extraction_context = ExtractionStageContext(
+            product_category=stage_context.product_category,
+            input_texts=sample_titles
+        )
+        
         # Test invalid JSON
         invalid_json = "This is not JSON"
-        result = extraction_stage._validate(invalid_json, sample_titles, stage_context)
+        result = extraction_stage._validate(invalid_json, extraction_context)
         assert result.ok is False
         assert len(result.error_categories["format_errors"]) > 0
         
@@ -398,7 +433,7 @@ class TestExtractionStage:
                 "ids": [0, 1]  # Missing definition
             }
         })
-        result = extraction_stage._validate(missing_definition, sample_titles, stage_context) 
+        result = extraction_stage._validate(missing_definition, extraction_context) 
         assert result.ok is False
         assert len(result.error_categories["validation_errors"]) > 0
         
@@ -409,7 +444,7 @@ class TestExtractionStage:
                 "ids": [0]  # Missing assignment for index 1
             }
         })
-        result = extraction_stage._validate(incomplete_assignments, sample_titles, stage_context)
+        result = extraction_stage._validate(incomplete_assignments, extraction_context)
         assert result.ok is False
         assert len(result.error_categories["completeness_errors"]) > 0
 
@@ -436,8 +471,14 @@ class TestExtractionStage:
             }
         )
         
+        # Create extraction context
+        extraction_context = ExtractionStageContext(
+            product_category=stage_context.product_category,
+            input_texts=["Switch 1"]
+        )
+        
         retry_prompt = extraction_stage._retry_prompt(
-            original_prompt, validation_result, stage_context
+            original_prompt, validation_result, extraction_context
         )
         
         # Verify original prompt is included
@@ -472,8 +513,14 @@ class TestExtractionStage:
         
         sample_titles = ["Switch 1", "Switch 2", "Switch 3"]
         
+        # Create extraction context
+        extraction_context = ExtractionStageContext(
+            product_category=stage_context.product_category,
+            input_texts=sample_titles
+        )
+        
         result = await extraction_stage._produce_result(
-            sample_titles, raw_response, stage_context, attempts=1
+            raw_response, extraction_context, attempts=1
         )
         
         assert isinstance(result, ExtractionStageResult)
@@ -514,12 +561,22 @@ class TestExtractionStage:
             assignments_initial={0: "Category B", 1: "Category C"}  # Indices relative to right sequence
         )
         
+        # Create extraction contexts for left and right sides
+        ctx_left = ExtractionStageContext(
+            product_category=stage_context.product_category,
+            input_texts=["item1", "item2"]
+        )
+        
+        ctx_right = ExtractionStageContext(
+            product_category=stage_context.product_category,
+            input_texts=["item3", "item4"]
+        )
+        
         merged = await extraction_stage._merge_split_results(
-            seq_left=["item1", "item2"],
-            seq_right=["item3", "item4"],
             res_left=left_result,
             res_right=right_result,
-            ctx=stage_context,
+            ctx_left=ctx_left,
+            ctx_right=ctx_right,
             depth=0
         )
         

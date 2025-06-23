@@ -38,7 +38,7 @@ Each index from ``0`` … ``len(texts)-1`` must appear **exactly once** across
 all "ids" arrays with no duplicates or missing indices.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Sequence
@@ -53,6 +53,7 @@ from product_segment.llm.taxonomy_pipeline_stage import (
 __all__ = [
     "TaxonomyDTO",
     "ExtractionStageResult",
+    "ExtractionStageContext",
     "ExtractionStage",
 ]
 
@@ -67,6 +68,13 @@ class TaxonomyDTO:  # noqa: D401 – simple DTO
 
     name: str
     definition: str
+
+
+@dataclass(slots=True, frozen=True)
+class ExtractionStageContext(StageContext):
+    """Context for taxonomy extraction stage containing input texts."""
+    
+    input_texts: list[str]
 
 
 @dataclass(slots=True, frozen=True)
@@ -120,7 +128,7 @@ class ExtractionStage(BaseStage):
 
     # --------------------- BaseStage abstract hooks -------------------------
 
-    async def _build_prompt(self, seq: Sequence[str], ctx: StageContext) -> str:  # noqa: D401
+    async def _build_prompt(self, ctx: ExtractionStageContext) -> str:  # noqa: D401
         """Render the fixed prompt template and append the input lines."""
 
         # Use the fixed extraction prompt template
@@ -131,15 +139,15 @@ class ExtractionStage(BaseStage):
         except KeyError as exc:
             raise ValueError(f"Missing template variable {exc} for prompt_template") from exc
 
-        input_lines = "\n".join(f"[{i}] {txt}" for i, txt in enumerate(seq))
+        input_lines = "\n".join(f"[{i}] {txt}" for i, txt in enumerate(ctx.input_texts))
         return f"{rendered_template}\n\n{input_lines}"
 
     def _validate(
-        self, raw_response: str, seq: Sequence[str], ctx: StageContext
+        self, raw_response: str, ctx: ExtractionStageContext
     ) -> ValidationResult:
         """Validate and (optionally) return retry-context."""
 
-        expected_ids = {str(i) for i in range(len(seq))}
+        expected_ids = {str(i) for i in range(len(ctx.input_texts))}
 
         error_categories: Dict[str, List[str]] = {
             "format_errors": [],
@@ -229,7 +237,7 @@ class ExtractionStage(BaseStage):
         return ValidationResult(ok=False, error_categories=error_categories)
 
     def _retry_prompt(
-        self, original_prompt: str, validation_result: ValidationResult, ctx: StageContext
+        self, original_prompt: str, validation_result: ValidationResult, ctx: ExtractionStageContext
     ) -> str:  # noqa: D401
         # Build human-readable error details from retry_ctx.error_categories
         error_details = create_retry_error_details(validation_result.error_categories)
@@ -243,9 +251,8 @@ class ExtractionStage(BaseStage):
 
     async def _produce_result(
         self,
-        seq: Sequence[str],
         raw_response: str,
-        ctx: StageContext,
+        ctx: ExtractionStageContext,
         attempts: int,
     ) -> ExtractionStageResult:
         """Convert a valid raw response into an :class:`ExtractionStageResult`."""
@@ -274,11 +281,10 @@ class ExtractionStage(BaseStage):
 
     async def _merge_split_results(
         self,
-        seq_left: Sequence[Any],
-        seq_right: Sequence[Any],
         res_left: ExtractionStageResult,
         res_right: ExtractionStageResult,
-        ctx: StageContext,
+        ctx_left: ExtractionStageContext,
+        ctx_right: ExtractionStageContext,
         depth: int,
     ) -> ExtractionStageResult:  # noqa: D401 – signature enforced by BaseStage
         """Merge two partial results coming from auto-split recursion."""
@@ -290,7 +296,7 @@ class ExtractionStage(BaseStage):
 
         # Merge assignments - adjust indices for right side to account for offset
         assignments = dict(res_left.assignments_initial)
-        left_size = len(seq_left)
+        left_size = len(ctx_left.input_texts)
         
         # Right side assignments need to be offset by the size of left sequence
         for idx, category_name in res_right.assignments_initial.items():
@@ -300,3 +306,27 @@ class ExtractionStage(BaseStage):
             taxonomies_extracted=list(taxonomy_by_name.values()),
             assignments_initial=assignments
         )
+
+    def _split_context(
+        self, ctx: ExtractionStageContext, depth: int
+    ) -> tuple[ExtractionStageContext, ExtractionStageContext]:
+        """Split extraction context into two parts for recursive processing."""
+        
+        if len(ctx.input_texts) <= 1:
+            raise NotImplementedError("Cannot split context with single text")
+        
+        mid = len(ctx.input_texts) // 2
+        
+        ctx_left = ExtractionStageContext(
+            product_category=ctx.product_category,
+            storage=ctx.storage,
+            input_texts=ctx.input_texts[:mid]
+        )
+        
+        ctx_right = ExtractionStageContext(
+            product_category=ctx.product_category,
+            storage=ctx.storage,
+            input_texts=ctx.input_texts[mid:]
+        )
+        
+        return ctx_left, ctx_right

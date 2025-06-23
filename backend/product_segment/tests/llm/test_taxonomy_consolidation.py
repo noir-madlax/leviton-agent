@@ -58,6 +58,7 @@ from core.utils.llm_utils import ValidationResult
 from product_segment.llm.taxonomy_consolidation import (
     ConsolidationStage,
     ConsolidationStageResult,
+    ConsolidationStageContext,
     ConsolidatedTaxonomyDTO,
 )
 from product_segment.llm.taxonomy_pipeline_stage import StageContext
@@ -265,9 +266,8 @@ def mock_llm_client() -> AsyncMock:
 
 @pytest.fixture
 def stage_context() -> StageContext:
-    """Create stage context for testing."""
+    """Create base stage context for testing."""
     return StageContext(
-        input_seq=[],  # Will be overridden in actual test calls
         product_category="light switch"
     )
 
@@ -362,16 +362,11 @@ class TestConsolidationStage:
                 }
                 batch_id_mapping[f"NEW_{i}"] = global_id
             
-            # Prepare input sequence for consolidation
-            input_seq = [
-                json.dumps(current_consolidated, indent=2),
-                json.dumps(new_batch_taxonomy, indent=2)
-            ]
-            
-            # Create context
-            context = StageContext(
-                input_seq=input_seq,
+            # Create consolidation context
+            context = ConsolidationStageContext(
                 product_category=stage_context.product_category,
+                taxonomy_a=current_consolidated,
+                taxonomy_b=new_batch_taxonomy
             )
             
             print(f"    ➡️   Consolidating Batch {batch_idx} with current consolidated taxonomy...")
@@ -386,7 +381,16 @@ class TestConsolidationStage:
             for tax_idx, taxonomy in enumerate(result.taxonomies_consolidated, start=1):
                 original_count = len(taxonomy.original_ids)
                 print(f"        {tax_idx:02d}. {taxonomy.name} (merges {original_count} categories)")
-                print(f"            → {taxonomy.definition[:80]}...")
+                for original_id in taxonomy.original_ids:
+                    if original_id in batch_id_mapping:
+                        global_id = batch_id_mapping[original_id]
+                        if global_id in all_original_categories:
+                            original_name = all_original_categories[global_id]["name"]
+                            print(f"            ↳ {original_id} → {original_name}")
+                        else:
+                            print(f"            ↳ {original_id}")
+                    else:
+                        print(f"            ↳ {original_id}")
             
             # Update current consolidated taxonomy for next iteration
             # Convert result back to input format for next consolidation
@@ -418,7 +422,20 @@ class TestConsolidationStage:
         print(f"\n📋 Final Consolidated Taxonomies:")
         for i, (category_id, category_data) in enumerate(current_consolidated.items(), start=1):
             print(f"    {i:02d}. {category_data['name']}")
-            print(f"        → {category_data['definition'][:100]}...")
+            # Find all original categories that map to this consolidated category
+            if category_id in batch_id_mapping:
+                mapped_globals = batch_id_mapping[category_id]
+                if isinstance(mapped_globals, list):
+                    for global_id in mapped_globals:
+                        if global_id in all_original_categories:
+                            original_name = all_original_categories[global_id]["name"]
+                            batch_idx = all_original_categories[global_id]["batch_idx"]
+                            print(f"        ↳ Batch {batch_idx}: {original_name}")
+                else:
+                    if mapped_globals in all_original_categories:
+                        original_name = all_original_categories[mapped_globals]["name"]
+                        batch_idx = all_original_categories[mapped_globals]["batch_idx"]
+                        print(f"        ↳ Batch {batch_idx}: {original_name}")
         
         # Validate final results
         assert len(current_consolidated) > 0, "Should have at least one consolidated taxonomy"
@@ -476,12 +493,14 @@ class TestConsolidationStage:
         print(f"\n📋 Taxonomy B (New Batch):")
         print(json.dumps(taxonomy_b, indent=2))
         
-        input_seq = [
-            json.dumps(taxonomy_a, indent=2),
-            json.dumps(taxonomy_b, indent=2)
-        ]
+        # Create consolidation context
+        consolidation_context = ConsolidationStageContext(
+            product_category=stage_context.product_category,
+            taxonomy_a=taxonomy_a,
+            taxonomy_b=taxonomy_b
+        )
         
-        prompt = await consolidation_stage._build_prompt(input_seq, stage_context)
+        prompt = await consolidation_stage._build_prompt(consolidation_context)
         
         print(f"\n📝 Generated Consolidation Prompt:")
         print("=" * 80)
@@ -518,13 +537,18 @@ class TestConsolidationStage:
         """Valid JSON response should pass validation without errors."""
         taxonomy_a, taxonomy_b = sample_taxonomies
         
-        input_seq = [
-            json.dumps(taxonomy_a),
-            json.dumps(taxonomy_b)
-        ]
+        # Create consolidation context
+        consolidation_context = ConsolidationStageContext(
+            product_category=stage_context.product_category,
+            taxonomy_a=taxonomy_a,
+            taxonomy_b=taxonomy_b
+        )
         
-        # Create valid response that consolidates all original IDs
-        all_original_ids = list(taxonomy_a.keys()) + list(taxonomy_b.keys())
+        # Create valid response that consolidates all original IDs (A_* and B_* format)
+        num_a = len(taxonomy_a)
+        num_b = len(taxonomy_b)
+        all_original_ids = [f"A_{i}" for i in range(num_a)] + [f"B_{i}" for i in range(num_b)]
+        
         valid_response = json.dumps({
             "Consolidated Smart Switches": {
                 "definition": "Smart switches with modern features, e.g. Wi-Fi enabled switches, smart dimmers",
@@ -537,7 +561,7 @@ class TestConsolidationStage:
         })
         
         validation_result = consolidation_stage._validate(
-            valid_response, input_seq, stage_context
+            valid_response, consolidation_context
         )
         
         assert validation_result.ok is True
@@ -553,36 +577,40 @@ class TestConsolidationStage:
         """Validation should categorise format / schema / completeness errors."""
         taxonomy_a, taxonomy_b = sample_taxonomies
         
-        input_seq = [
-            json.dumps(taxonomy_a),
-            json.dumps(taxonomy_b)
-        ]
+        # Create consolidation context
+        consolidation_context = ConsolidationStageContext(
+            product_category=stage_context.product_category,
+            taxonomy_a=taxonomy_a,
+            taxonomy_b=taxonomy_b
+        )
         
         # Test invalid JSON
         invalid_json = "This is not JSON"
-        result = consolidation_stage._validate(invalid_json, input_seq, stage_context)
+        result = consolidation_stage._validate(invalid_json, consolidation_context)
         assert result.ok is False
         assert len(result.error_categories["format_errors"]) > 0
         
         # Test missing definition
         missing_definition = json.dumps({
             "Test Category": {
-                "ids": list(taxonomy_a.keys())  # Missing definition
+                "ids": [f"A_{i}" for i in range(len(taxonomy_a))]  # Missing definition
             }
         })
-        result = consolidation_stage._validate(missing_definition, input_seq, stage_context) 
+        result = consolidation_stage._validate(missing_definition, consolidation_context) 
         assert result.ok is False
         assert len(result.error_categories["validation_errors"]) > 0
         
         # Test missing assignment (not all original IDs included)
-        all_original_ids = list(taxonomy_a.keys()) + list(taxonomy_b.keys())
+        num_a = len(taxonomy_a)
+        num_b = len(taxonomy_b)
+        all_original_ids = [f"A_{i}" for i in range(num_a)] + [f"B_{i}" for i in range(num_b)]
         incomplete_assignments = json.dumps({
             "Test Category": {
                 "definition": "Test category, e.g. test products",
                 "ids": all_original_ids[:-1]  # Missing last ID
             }
         })
-        result = consolidation_stage._validate(incomplete_assignments, input_seq, stage_context)
+        result = consolidation_stage._validate(incomplete_assignments, consolidation_context)
         assert result.ok is False
         assert len(result.error_categories["completeness_errors"]) > 0
 
@@ -629,7 +657,9 @@ class TestConsolidationStage:
     ) -> None:
         """_produce_result converts valid JSON → DTOs & original_id→category mapping."""
         taxonomy_a, taxonomy_b = sample_taxonomies
-        original_ids = list(taxonomy_a.keys()) + list(taxonomy_b.keys())
+        num_a = len(taxonomy_a)
+        num_b = len(taxonomy_b)
+        original_ids = [f"A_{i}" for i in range(num_a)] + [f"B_{i}" for i in range(num_b)]
         
         raw_response = json.dumps({
             "Smart Lighting Controls": {
@@ -642,13 +672,15 @@ class TestConsolidationStage:
             }
         })
         
-        input_seq = [
-            json.dumps(taxonomy_a),
-            json.dumps(taxonomy_b)
-        ]
+        # Create consolidation context
+        consolidation_context = ConsolidationStageContext(
+            product_category=stage_context.product_category,
+            taxonomy_a=taxonomy_a,
+            taxonomy_b=taxonomy_b
+        )
         
         result = await consolidation_stage._produce_result(
-            input_seq, raw_response, stage_context, attempts=1
+            raw_response, consolidation_context, attempts=1
         )
         
         assert isinstance(result, ConsolidationStageResult)
@@ -711,12 +743,24 @@ class TestConsolidationStage:
             consolidation_mapping={"B_1": "Category B", "C_0": "Category C"}
         )
         
+        # Create consolidation contexts for left and right sides
+        ctx_left = ConsolidationStageContext(
+            product_category=stage_context.product_category,
+            taxonomy_a={"A_0": {"name": "Category A", "definition": "Definition A"}},
+            taxonomy_b={"B_0": {"name": "Category B", "definition": "Definition B"}}
+        )
+        
+        ctx_right = ConsolidationStageContext(
+            product_category=stage_context.product_category,
+            taxonomy_a={"A_1": {"name": "Category B", "definition": "Definition B Updated"}},
+            taxonomy_b={"B_1": {"name": "Category C", "definition": "Definition C"}}
+        )
+        
         merged = await consolidation_stage._merge_split_results(
-            seq_left=["taxonomy1", "taxonomy2"],
-            seq_right=["taxonomy3", "taxonomy4"],
             res_left=left_result,
             res_right=right_result,
-            ctx=stage_context,
+            ctx_left=ctx_left,
+            ctx_right=ctx_right,
             depth=0
         )
         
@@ -737,16 +781,31 @@ class TestConsolidationStage:
         assert merged.consolidation_mapping == expected_mapping
 
     @pytest.mark.asyncio
-    async def test_input_validation_wrong_number_of_taxonomies(
+    async def test_input_validation_with_empty_taxonomies(
         self,
         consolidation_stage: ConsolidationStage,
         stage_context: StageContext
     ) -> None:
-        """ConsolidationStage should reject input with wrong number of taxonomies."""
-        # Test with only one taxonomy
-        with pytest.raises(ValueError, match="ConsolidationStage expects exactly 2 taxonomies, got 1"):
-            await consolidation_stage._build_prompt(["single_taxonomy"], stage_context)
+        """ConsolidationStage should handle empty taxonomies gracefully."""
+        # Test with empty taxonomies (this should work but generate empty A_* and B_* lists)
+        empty_context = ConsolidationStageContext(
+            product_category=stage_context.product_category,
+            taxonomy_a={},
+            taxonomy_b={}
+        )
         
-        # Test with three taxonomies
-        with pytest.raises(ValueError, match="ConsolidationStage expects exactly 2 taxonomies, got 3"):
-            await consolidation_stage._build_prompt(["tax1", "tax2", "tax3"], stage_context) 
+        # This should not raise an error, just generate a prompt with empty taxonomies
+        prompt = await consolidation_stage._build_prompt(empty_context)
+        assert "Taxonomy A (Current Consolidated):" in prompt
+        assert "Taxonomy B (New Batch):" in prompt
+        
+        # Test with one empty and one non-empty taxonomy
+        mixed_context = ConsolidationStageContext(
+            product_category=stage_context.product_category,
+            taxonomy_a={"test": {"name": "Test Category", "definition": "Test definition"}},
+            taxonomy_b={}
+        )
+        
+        prompt = await consolidation_stage._build_prompt(mixed_context)
+        assert "A_0" in prompt
+        assert "Test Category" in prompt 

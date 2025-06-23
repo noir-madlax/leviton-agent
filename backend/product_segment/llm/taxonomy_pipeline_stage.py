@@ -83,12 +83,10 @@ class StageResultBase:
 
 @dataclass(slots=True, frozen=True)
 class StageContext:
-    """Immutable context object passed through stage execution.
+    """Base immutable context object passed through stage execution.
 
     Parameters
     ----------
-    input_seq
-        The *sequence* of documents/items to process.
     product_category
         The product category being processed (e.g., "light switch", "electronics").
         Used for prompt template substitution and validation context.
@@ -96,18 +94,9 @@ class StageContext:
         Optional persistence adapter; when supplied each prompt/response pair
         (including retries and recursive splits) is written through
         ``storage.write_json``.
-    extracted_taxonomies, consolidated_taxonomies
-        Upstream artefacts – preserved here so downstream stages may inspect
-        them.  The base utilities never read these fields.
     """
 
-    input_seq: Sequence[Any]
     product_category: str
-    storage: CallStorage | None = None
-
-    # Upstream artefacts (optional)
-    extracted_taxonomies: list[Any] | None = None
-    consolidated_taxonomies: list[Any] | None = None
 
 
 # ---------------------------------------------------------------------------
@@ -129,12 +118,10 @@ class BaseStage:
     """Abstract base-class that handles LLM calls, retries, splitting & metrics."""
 
     # ------------------------- abstract hooks ----------------------------------
-    async def _build_prompt(self, seq: Sequence[Any], ctx: StageContext) -> str:  # noqa: D401 – abstract signature
+    async def _build_prompt(self, ctx: StageContext) -> str:  # noqa: D401 – abstract signature
         raise NotImplementedError
 
-    def _validate(
-        self, raw_response: str, seq: Sequence[Any], ctx: StageContext
-    ) -> ValidationResult:
+    def _validate(self, raw_response: str, ctx: StageContext) -> ValidationResult:
         """Synchronously validate the LLM response.
 
         Implementations should return a :class:`ValidationResult` instance.  The
@@ -151,48 +138,40 @@ class BaseStage:
         raise NotImplementedError
 
     async def _produce_result(
-        self,
-        seq: Sequence[Any],
-        raw_response: str,
-        ctx: StageContext,
-        attempts: int,
+        self, raw_response: str, ctx: StageContext, attempts: int,
     ) -> StageResultBase:
         raise NotImplementedError
 
     async def _merge_split_results(
         self,
-        seq_left: Sequence[Any],
-        seq_right: Sequence[Any],
         res_left: StageResultBase,
         res_right: StageResultBase,
-        ctx: StageContext,
+        ctx_left: StageContext,
+        ctx_right: StageContext,
         depth: int,
     ) -> StageResultBase:
         raise NotImplementedError
 
     # Optional hooks ---------------------------------------------------------
 
-    def _split_input(
-        self, seq: Sequence[Any], depth: int
-    ) -> tuple[Sequence[Any], Sequence[Any]]:  # noqa: D401 – overridable
-        """Return a 2-way split of *seq* for recursive processing.
+    def _split_context(
+        self, ctx: StageContext, depth: int
+    ) -> tuple[StageContext, StageContext]:  # noqa: D401 – overridable
+        """Return a 2-way split of context for recursive processing.
 
-        Subclasses may override this to implement custom strategies (e.g. pair
-        splitting for consolidation).  The default implementation halves the
-        sequence (⌊n/2⌋ | ⌈n/2⌉).  The method **must** return exactly two
-        non-empty sub-sequences; callers are responsible for guarding against
-        *len(seq) == 1* before invoking it.
+        Subclasses must override this to implement custom strategies for their
+        specific context types (e.g. splitting extraction sequences, or 
+        consolidation pairs). The method **must** return exactly two valid
+        contexts; callers are responsible for ensuring the split is possible.
         """
-
-        mid = len(seq) // 2
-        return seq[:mid], seq[mid:]
+        raise NotImplementedError
 
     # ---------------------------------------------------------------------
     # Public entry-point
     # ---------------------------------------------------------------------
 
     async def execute(self, ctx: StageContext) -> StageResultBase:  # noqa: D401
-        """Run the stage for *ctx.input_seq*.
+        """Run the stage with the given context.
 
         The retry logic is now fully delegated to :pyfunc:`safe_llm_call` –
         this helper handles validation-aware retries and only returns once the
@@ -202,14 +181,10 @@ class BaseStage:
 
         The recursive helper is preserved solely so subclasses can override the
         split behaviour (e.g. consolidation stages may implement a custom
-        splitting strategy).  The default implementation, however, **does not
-        auto-split** – it processes the *seq* as a single batch.
+        splitting strategy).
         """
 
-        async def _run_recursive(seq: Sequence[Any], depth: int = 0) -> StageResultBase:
-            # NOTE: Depth is currently unused here but retained so specialised
-            #       subclasses (e.g. consolidation) may leverage it.
-
+        async def _run_recursive(current_ctx: StageContext, depth: int = 0) -> StageResultBase:
             # Check recursive depth limit
             if depth >= cfg.MAX_RECURSIVE_DEPTH:
                 raise StageProtocolError(
@@ -217,15 +192,15 @@ class BaseStage:
                 )
 
             # 1) Build initial prompt -------------------------------------------------
-            prompt = await self._build_prompt(seq, ctx)
+            prompt = await self._build_prompt(current_ctx)
 
             # 2) Adapter wrappers for the shared safe_llm_call -----------------------
             def _validator(raw: str):
-                result = self._validate(raw, seq, ctx)
+                result = self._validate(raw, current_ctx)
                 return result  # Return ValidationResult directly
 
             def _retry_builder(original_prompt: str, retry_ctx: Any):
-                return self._retry_prompt(original_prompt, retry_ctx, ctx)
+                return self._retry_prompt(original_prompt, retry_ctx, current_ctx)
 
             # 3) Fire the LLM – safe_llm_call handles its own retries ------------
             try:
@@ -237,29 +212,29 @@ class BaseStage:
                 )
 
                 # 4) Successful – convert payload to stage-specific result -----------
-                return await self._produce_result(seq, raw_response, ctx, attempts=1)
+                return await self._produce_result(raw_response, current_ctx, attempts=1)
 
             except LLMCallError as exc:
                 # After safe_llm_call exhausted its retries the response still failed
-                # validation.  Apply *split-and-conquer* fallback if we have a batch
-                # larger than one element; otherwise propagate as a protocol error.
+                # validation.  Apply *split-and-conquer* fallback if we can split.
 
-                if len(seq) > 1:
-                    left, right = self._split_input(seq, depth)
+                try:
+                    ctx_left, ctx_right = self._split_context(current_ctx, depth)
 
                     res_left, res_right = await asyncio.gather(
-                        _run_recursive(left, depth + 1),
-                        _run_recursive(right, depth + 1),
+                        _run_recursive(ctx_left, depth + 1),
+                        _run_recursive(ctx_right, depth + 1),
                     )
 
                     return await self._merge_split_results(
-                        left, right, res_left, res_right, ctx, depth + 1
+                        res_left, res_right, ctx_left, ctx_right, depth + 1
                     )
 
-                # Single element still invalid → terminal failure
-                raise StageProtocolError(
-                    "Validation failed even for single-item batch after retries"
-                ) from exc
+                except NotImplementedError:
+                    # Context cannot be split further → terminal failure
+                    raise StageProtocolError(
+                        "Validation failed and context cannot be split further"
+                    ) from exc
 
-        # Start recursion (single pass by default)
-        return await _run_recursive(ctx.input_seq, depth=0)
+        # Start recursion
+        return await _run_recursive(ctx, depth=0)

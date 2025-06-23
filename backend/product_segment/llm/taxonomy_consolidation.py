@@ -36,7 +36,7 @@ Each original category ID (A_*, B_*) must appear **exactly once** across
 all "ids" arrays with no duplicates or missing IDs.
 """
 
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 import json
 from pathlib import Path
 from typing import Any, Dict, List, Sequence
@@ -51,6 +51,7 @@ from product_segment.llm.taxonomy_pipeline_stage import (
 __all__ = [
     "ConsolidatedTaxonomyDTO",
     "ConsolidationStageResult",
+    "ConsolidationStageContext",
     "ConsolidationStage",
 ]
 
@@ -66,6 +67,14 @@ class ConsolidatedTaxonomyDTO:  # noqa: D401 – simple DTO
     name: str
     definition: str
     original_ids: list[str]
+
+
+@dataclass(slots=True, frozen=True)
+class ConsolidationStageContext(StageContext):
+    """Context for taxonomy consolidation stage containing two taxonomies to consolidate."""
+    
+    taxonomy_a: dict[str, dict[str, str]]  # category_id -> {name, definition}
+    taxonomy_b: dict[str, dict[str, str]]  # category_id -> {name, definition}
 
 
 @dataclass(slots=True, frozen=True)
@@ -111,19 +120,24 @@ class ConsolidationStage(BaseStage):
 
     # --------------------- BaseStage abstract hooks -------------------------
 
-    async def _build_prompt(self, seq: Sequence[str], ctx: StageContext) -> str:  # noqa: D401
+    async def _build_prompt(self, ctx: ConsolidationStageContext) -> str:  # noqa: D401
         """Render the fixed prompt template with the two taxonomies."""
 
-        # For consolidation, seq should contain exactly 2 elements: taxonomy_a and taxonomy_b
-        if len(seq) != 2:
-            raise ValueError(f"ConsolidationStage expects exactly 2 taxonomies, got {len(seq)}")
-
-        taxonomy_a, taxonomy_b = seq
+        # Convert taxonomies to JSON strings with A_* and B_* prefixes
+        taxonomy_a_formatted = {}
+        for category_id, category_data in ctx.taxonomy_a.items():
+            a_id = f"A_{len(taxonomy_a_formatted)}"
+            taxonomy_a_formatted[a_id] = category_data
+        
+        taxonomy_b_formatted = {}
+        for category_id, category_data in ctx.taxonomy_b.items():
+            b_id = f"B_{len(taxonomy_b_formatted)}"
+            taxonomy_b_formatted[b_id] = category_data
         
         # Use the fixed consolidation prompt template
         template_vars = {
-            "taxonomy_a": taxonomy_a,
-            "taxonomy_b": taxonomy_b
+            "taxonomy_a": json.dumps(taxonomy_a_formatted, indent=2),
+            "taxonomy_b": json.dumps(taxonomy_b_formatted, indent=2)
         }
         
         try:
@@ -134,31 +148,20 @@ class ConsolidationStage(BaseStage):
         return rendered_template
 
     def _validate(
-        self, raw_response: str, seq: Sequence[str], ctx: StageContext
+        self, raw_response: str, ctx: ConsolidationStageContext
     ) -> ValidationResult:
         """Validate and (optionally) return retry-context."""
 
-        # Extract expected IDs from the input taxonomies
+        # Extract expected IDs from the input taxonomies (A_* and B_* format)
         expected_ids = set()
-        try:
-            # Parse both taxonomies to extract all category IDs
-            taxonomy_a, taxonomy_b = seq
+        
+        # Add A_* IDs
+        for i in range(len(ctx.taxonomy_a)):
+            expected_ids.add(f"A_{i}")
             
-            # Parse taxonomy A
-            taxonomy_a_data = json.loads(taxonomy_a)
-            for category_id in taxonomy_a_data.keys():
-                expected_ids.add(category_id)
-            
-            # Parse taxonomy B  
-            taxonomy_b_data = json.loads(taxonomy_b)
-            for category_id in taxonomy_b_data.keys():
-                expected_ids.add(category_id)
-                
-        except Exception as exc:
-            return ValidationResult(
-                ok=False, 
-                error_categories={"format_errors": [f"Failed to parse input taxonomies: {exc}"]}
-            )
+        # Add B_* IDs
+        for i in range(len(ctx.taxonomy_b)):
+            expected_ids.add(f"B_{i}")
 
         error_categories: Dict[str, List[str]] = {
             "format_errors": [],
@@ -247,7 +250,7 @@ class ConsolidationStage(BaseStage):
         return ValidationResult(ok=False, error_categories=error_categories)
 
     def _retry_prompt(
-        self, original_prompt: str, validation_result: ValidationResult, ctx: StageContext
+        self, original_prompt: str, validation_result: ValidationResult, ctx: ConsolidationStageContext
     ) -> str:  # noqa: D401
         # Build human-readable error details from retry_ctx.error_categories
         error_details = create_retry_error_details(validation_result.error_categories)
@@ -261,9 +264,8 @@ class ConsolidationStage(BaseStage):
 
     async def _produce_result(
         self,
-        seq: Sequence[str],
         raw_response: str,
-        ctx: StageContext,
+        ctx: ConsolidationStageContext,
         attempts: int,
     ) -> ConsolidationStageResult:
         """Convert a valid raw response into a :class:`ConsolidationStageResult`."""
@@ -296,11 +298,10 @@ class ConsolidationStage(BaseStage):
 
     async def _merge_split_results(
         self,
-        seq_left: Sequence[Any],
-        seq_right: Sequence[Any],
         res_left: ConsolidationStageResult,
         res_right: ConsolidationStageResult,
-        ctx: StageContext,
+        ctx_left: ConsolidationStageContext,
+        ctx_right: ConsolidationStageContext,
         depth: int,
     ) -> ConsolidationStageResult:  # noqa: D401 – signature enforced by BaseStage
         """Merge two partial results coming from auto-split recursion."""
@@ -330,4 +331,10 @@ class ConsolidationStage(BaseStage):
         return ConsolidationStageResult(
             taxonomies_consolidated=list(taxonomy_by_name.values()),
             consolidation_mapping=consolidation_mapping
-        ) 
+        )
+
+    def _split_context(
+        self, ctx: ConsolidationStageContext, depth: int
+    ) -> tuple[ConsolidationStageContext, ConsolidationStageContext]:
+        """ConsolidationStage typically cannot be split further."""
+        raise NotImplementedError("ConsolidationStage contexts cannot be split") 
