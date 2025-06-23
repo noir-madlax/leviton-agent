@@ -14,6 +14,13 @@ from .taxonomy_consolidation import (
     ConsolidationStage,
 )
 
+from .taxonomy_dedup_uitl import (
+    deduplicate_taxonomies,
+    deduplicate_taxonomy_batches,
+    print_deduplication_summary,
+    DeduplicationResult,
+)
+
 __all__ = [
     # Extraction stage
     "TaxonomyDTO",
@@ -25,4 +32,9 @@ __all__ = [
     "ConsolidationStageResult",
     "ConsolidationStageContext",
     "ConsolidationStage",
+    # Deduplication utilities
+    "deduplicate_taxonomies",
+    "deduplicate_taxonomy_batches", 
+    "print_deduplication_summary",
+    "DeduplicationResult",
 ] 

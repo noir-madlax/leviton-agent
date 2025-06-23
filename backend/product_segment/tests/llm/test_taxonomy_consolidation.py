@@ -61,6 +61,11 @@ from product_segment.llm.taxonomy_consolidation import (
     ConsolidatedTaxonomyDTO,
 )
 from product_segment.llm.taxonomy_pipeline_stage import StageContext, TaxonomyDTO
+from product_segment.llm.taxonomy_dedup_uitl import (
+    deduplicate_taxonomies,
+    deduplicate_taxonomy_batches,
+    print_deduplication_summary
+)
 
 
 # Test data paths
@@ -244,40 +249,53 @@ class TestConsolidationStage:
         
         print(f"\n🚀 Progressive consolidation of {len(batch_results)} extraction batches...")
         
-        # Create consolidation stage (uses real LLM via safe_llm_call automatically)
+        # Step 1: Convert all batches to TaxonomyDTO lists
+        print(f"\n📊 Converting {len(batch_results)} batches to TaxonomyDTO...")
+        all_batch_taxonomies = []
+        
+        for batch_idx, batch in enumerate(batch_results):
+            batch_taxonomies = [
+                TaxonomyDTO(name=taxonomy["name"], definition=taxonomy["definition"])
+                for taxonomy in batch["taxonomies"]
+            ]
+            all_batch_taxonomies.append(batch_taxonomies)
+            print(f"  Batch {batch_idx}: {len(batch_taxonomies)} taxonomies")
+        
+        # Step 2: Apply deduplication across all batches
+        print(f"\n🔍 Applying NLP-based deduplication across all batches...")
+        deduplicated_batches = deduplicate_taxonomy_batches(all_batch_taxonomies)
+        
+        dedup_result_all = deduplicate_taxonomies([tax for batch in all_batch_taxonomies for tax in batch])
+        print_deduplication_summary(dedup_result_all)
+
+        print("✅ Deduplication complete:")
+        for batch_idx, batch in enumerate(deduplicated_batches):
+            print(f"  Batch {batch_idx}: {len(batch)} taxonomies (was {len(all_batch_taxonomies[batch_idx])})")
+        
+        # Step 3: Create consolidation stage (uses real LLM via safe_llm_call automatically)
         real_consolidation_stage = ConsolidationStage()
         
-        # Initialize with first batch as the consolidated taxonomy
-        print(f"\n📊 Initializing with Batch 0: {batch_results[0]['taxonomies_count']} taxonomies")
+        # Step 4: Initialize with first deduplicated batch as the consolidated taxonomy
+        print(f"\n📊 Initializing with deduplicated Batch 0: {len(deduplicated_batches[0])} taxonomies")
         
-        # Convert first batch to list of TaxonomyDTO
-        current_consolidated = [
-            TaxonomyDTO(name=taxonomy["name"], definition=taxonomy["definition"])
-            for taxonomy in batch_results[0]["taxonomies"]
-        ]
+        current_consolidated = deduplicated_batches[0]
         
         for i, taxonomy in enumerate(current_consolidated):
             print(f"  Consolidated_{i}: {taxonomy.name}")
         
-        # Progressively consolidate each subsequent batch
-        for batch_idx in range(1, len(batch_results)):
-            batch = batch_results[batch_idx]
-            print(f"\n📊 Consolidating Batch {batch_idx}: {batch['taxonomies_count']} taxonomies")
+        # Step 5: Progressively consolidate each subsequent deduplicated batch
+        for batch_idx in range(1, len(deduplicated_batches)):
+            batch = deduplicated_batches[batch_idx]
+            print(f"\n📊 Consolidating deduplicated Batch {batch_idx}: {len(batch)} taxonomies")
             
-            # Format new batch taxonomies
-            new_batch_taxonomy = [
-                TaxonomyDTO(name=taxonomy["name"], definition=taxonomy["definition"])
-                for taxonomy in batch["taxonomies"]
-            ]
-            
-            for i, taxonomy in enumerate(new_batch_taxonomy):
+            for i, taxonomy in enumerate(batch):
                 print(f"  New_{i}: {taxonomy.name}")
             
             # Create consolidation context
             context = ConsolidationStageContext(
                 product_category=stage_context.product_category,
                 taxonomy_a=current_consolidated,
-                taxonomy_b=new_batch_taxonomy
+                taxonomy_b=batch
             )
             
             print(f"    ➡️   Consolidating Batch {batch_idx} with current consolidated taxonomy...")
@@ -319,14 +337,14 @@ class TestConsolidationStage:
         # Validate final results
         assert len(final_result.taxonomies_consolidated) > 0, "Should have at least one consolidated taxonomy"
         
-        # Count total original categories across all batches
-        total_original_categories = sum(len(batch["taxonomies"]) for batch in batch_results)
+        # Count total original categories across all deduplicated batches
+        total_original_categories = sum(len(batch) for batch in deduplicated_batches)
         assert len(final_result.taxonomies_consolidated) <= total_original_categories, "Consolidated count should not exceed original count"
         
         # For saving, create simplified input structure
         save_consolidation_results(
             final_result, 
-            {f"BATCH_{i}": {"taxonomies": len(batch["taxonomies"])} for i, batch in enumerate(batch_results)},
+            {f"BATCH_{i}": {"taxonomies": len(batch)} for i, batch in enumerate(deduplicated_batches)},
             {"FINAL": {"consolidated_count": len(final_result.taxonomies_consolidated)}},
             stage_context.product_category
         )
@@ -667,4 +685,28 @@ class TestConsolidationStage:
         
         prompt = await consolidation_stage._build_prompt(mixed_context)
         assert "A_0" in prompt
-        assert "Test Category" in prompt 
+        assert "Test Category" in prompt
+
+    @pytest.mark.asyncio
+    async def test_taxonomy_deduplication_functionality(
+        self,
+        stage_context: StageContext
+    ) -> None:
+        """Test the NLP-based taxonomy deduplication functionality."""
+        print("\n🧪 Testing taxonomy deduplication with NLP word stemming...")
+        
+        # Simplified concise check
+        test_taxonomies = [
+            TaxonomyDTO(name="Smart Light Switches", definition=""),
+            TaxonomyDTO(name="Smart Lighting Switches", definition=""),
+            TaxonomyDTO(name="Traditional Manual Switch", definition=""),
+            TaxonomyDTO(name="Traditional Manual Switches", definition=""),
+        ]
+        result = deduplicate_taxonomies(test_taxonomies)
+        assert len(result.unique_taxonomies) == 2
+        assert len(result.duplicate_groups) == 2
+
+        # Batch deduplication concise
+        batches = [[test_taxonomies[0], test_taxonomies[2]], [test_taxonomies[1], test_taxonomies[3]]]
+        dedup_batches = deduplicate_taxonomy_batches(batches)
+        assert sum(len(b) for b in dedup_batches) == 2 
