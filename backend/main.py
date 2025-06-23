@@ -342,7 +342,8 @@ async def stream_agent_response(query: str):
         # 将结果分块发送
         if is_valid_json(result):
             logger.info("结果成功解析为 JSON 格式！，直接发送结果")
-            yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"
+            # 直接发送 JSON 字符串，不要再次序列化
+            yield f"data: {json.dumps({'status': 'streaming', 'message': result}, ensure_ascii=False)}\n\n"
         elif isinstance(result, str):
             # 按句号分割结果，更自然的分块方式
             sentences = result.split('。')
