@@ -2,6 +2,7 @@
 查询处理器 - 负责处理用户查询和准备提示词，保持原有逻辑不变
 """
 import logging
+import warnings
 from core.database.connection import get_supabase_client
 from core.repositories.product_prompt_repository import ProductPromptRepository
 from agent.services.product_prompt_service import ProductPromptService
@@ -10,7 +11,14 @@ logger = logging.getLogger(__name__)
 
 class QueryProcessor:
     """查询处理器类"""
-    
+    """这是一个已被废弃的类。"""
+    def __init__(self):
+        warnings.warn(
+            "DeprecatedClass is deprecated and will be removed in future versions. Use NewClass instead.",
+            DeprecationWarning,
+            stacklevel=2
+        )
+
     def __init__(self):
         self._service = None
     
@@ -38,10 +46,10 @@ class QueryProcessor:
             service = ProductPromptService(repository)
             
             # 获取提示词
-            prefixPrompt = await service.get_prompt_by_id(5)
+            prefixPrompt = await service.get_prompt_by_id(11)
             
             if not prefixPrompt:
-                logger.warning("未找到 ID 为 1 的提示词，使用原始查询")
+                logger.warning("未找到 ID 为 11 的提示词，使用原始查询")
                 return query
                 
             complete_query = prefixPrompt.prompt + "\n\n 用户的问题如下：" + query

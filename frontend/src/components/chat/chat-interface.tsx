@@ -58,7 +58,7 @@ export function ChatInterface() {
     api: `${backendUrl}/agent-stream`,
     streamProtocol: 'text',
     fetch: async (url, options) => {
-      // 自定义fetch以适配后端的GET + query参数方式
+      // 自定义fetch以适配后端的GET + query参数方式并处理 rechart 消息
       if (!options?.body) {
         throw new Error('No request body provided');
       }
@@ -67,12 +67,83 @@ export function ChatInterface() {
       const query = body.messages[body.messages.length - 1].content;
       const getUrl = `${url}?query=${encodeURIComponent(query)}`;
       
-      return fetch(getUrl, {
+      const response = await fetch(getUrl, {
         method: 'GET',
         headers: {
           'Accept': 'text/event-stream',
           'Cache-Control': 'no-cache',
         },
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP ${response.status}`);
+      }
+
+      // 创建自定义的 ReadableStream 来处理 SSE 消息
+      const reader = response.body?.getReader();
+      const decoder = new TextDecoder();
+
+      const stream = new ReadableStream({
+        start(controller) {
+          function pump(): Promise<void> {
+            return reader!.read().then(({ done, value }) => {
+              if (done) {
+                controller.close();
+                return;
+              }
+
+              const chunk = decoder.decode(value);
+              const lines = chunk.split('\n');
+
+              for (const line of lines) {
+                if (line.startsWith('data: ')) {
+                  const jsonStr = line.substring(6);
+                  try {
+                    const sseData = JSON.parse(jsonStr);
+                    
+                    // 处理 rechart 消息
+                    if (sseData.status === 'rechart' && sseData.message) {
+                      console.log('📊 收到 rechart 脚本:', sseData.message);
+                      
+                      // 创建图表数据格式
+                      const singleChartData: SingleChartData = {
+                        chartData: {
+                          code: sseData.message,
+                          explanation: 'AI 生成的 Recharts 图表',
+                          insights: '基于数据分析生成的可视化图表'
+                        },
+                        timestamp: Date.now(),
+                        type: 'single' as const,
+                      };
+                      
+                      // 立即更新图表
+                      updateChart(singleChartData);
+                    }
+                    
+                                         // 对于其他类型的消息，继续传递给 useChat
+                     if (sseData.status === 'streaming' || sseData.status === 'completed') {
+                       controller.enqueue(value);
+                     }
+                   } catch {
+                     // 不是 JSON 格式，继续传递
+                     controller.enqueue(value);
+                   }
+                } else {
+                  // 不是 data: 开头的行，继续传递
+                  controller.enqueue(value);
+                }
+              }
+
+              return pump();
+            });
+          }
+
+          return pump();
+        }
+      });
+
+      return new Response(stream, {
+        headers: response.headers,
       });
     },
     onResponse: (response) => {
@@ -85,177 +156,8 @@ export function ChatInterface() {
     },
     onFinish: (message) => {
       setCompiling(false);
-      
-      // 从消息内容中提取图表数据
-      try {
-        const extractChartData = (content: string) => {
-          console.log('🔍 尝试提取图表数据，消息内容:', content);
-          
-          // 新增：处理 SSE 格式数据
-          try {
-            // 查找状态为 "streaming" 的 SSE 消息
-            const lines = content.split('\n');
-            for (const line of lines) {
-              if (line.startsWith('data: ')) {
-                const jsonStr = line.substring(6); // 移除 "data: " 前缀
-                try {
-                  const sseData = JSON.parse(jsonStr);
-                  if (sseData.status === 'streaming' && sseData.message) {
-                    console.log('📡 找到 SSE streaming 数据:', sseData.message);
-                    // 解析内层的图表数据 JSON
-                    const chartData = JSON.parse(sseData.message);
-                    if (chartData.chart1 || chartData.chart2 || chartData.chartData) {
-                      console.log('✅ 成功从 SSE 数据中提取图表数据:', chartData);
-                      return chartData;
-                    }
-                  }
-                } catch {
-                  // 继续尝试其他行
-                }
-              }
-            }
-          } catch (error) {
-            console.error('❌ 解析 SSE 数据失败:', error);
-          }
-          
-          // 方法1: 查找标记包装的图表数据（情况2）
-          const chartStartRegex = /<<<CHART_START>>>/g;
-          const chartEndRegex = /<<<CHART_END>>>/g;
-          
-          const startMatch = chartStartRegex.exec(content);
-          const endMatch = chartEndRegex.exec(content);
-          
-          if (startMatch && endMatch) {
-            console.log('📦 检测到标记包装的图表数据');
-            // 提取图表数据JSON部分
-            const startPos = startMatch.index + startMatch[0].length;
-            const endPos = endMatch.index;
-            const jsonContent = content.substring(startPos, endPos);
-            
-            // 移除可能存在的类型标记行
-            const lines = jsonContent.split('\n').filter(line => 
-              !line.includes('<<<CHART_TYPE:') && line.trim() !== ''
-            );
-            const cleanJson = lines.join('\n').trim();
-            
-            if (cleanJson) {
-              try {
-                return JSON.parse(cleanJson);
-              } catch (error) {
-                console.error('❌ 解析标记包装的JSON失败:', error);
-              }
-            }
-          }
-          
-          // 方法2: 查找消息中的JSON块（情况1）
-          console.log('🔍 尝试提取嵌入的JSON数据');
-          
-          // 查找```json 代码块
-          const jsonBlockRegex = /```json\s*\n([\s\S]*?)\n```/g;
-                     const jsonBlockMatch = jsonBlockRegex.exec(content);
-          
-          if (jsonBlockMatch) {
-            console.log('📝 在代码块中找到JSON数据');
-            try {
-              const jsonData = JSON.parse(jsonBlockMatch[1].trim());
-              if (jsonData.chart1 || jsonData.chart2 || jsonData.chartData) {
-                return jsonData;
-              }
-            } catch (error) {
-              console.error('❌ 解析代码块JSON失败:', error);
-            }
-          }
-          
-          // 方法3: 查找独立的JSON对象（以{开头，chart1/chart2/chartData为键）
-          const jsonObjectRegex = /\{[\s\S]*?"chart[12]"[\s\S]*?\}(?=\s*$)/gm;
-                     const jsonObjectMatch = jsonObjectRegex.exec(content);
-          
-          if (jsonObjectMatch) {
-            console.log('🎯 找到独立的JSON对象');
-            try {
-              const jsonData = JSON.parse(jsonObjectMatch[0]);
-              if (jsonData.chart1 || jsonData.chart2 || jsonData.chartData) {
-                return jsonData;
-              }
-            } catch (error) {
-              console.error('❌ 解析独立JSON对象失败:', error);
-            }
-          }
-          
-          // 方法4: 更宽泛的JSON提取（在消息的最后部分查找）
-          const lines = content.split('\n');
-                     let jsonStartIndex = -1;
-           let jsonContent = '';
-          
-          // 从后往前查找可能的JSON开始位置
-          for (let i = lines.length - 1; i >= 0; i--) {
-            const line = lines[i].trim();
-            if (line.includes('"chart1"') || line.includes('"chart2"') || line.includes('"chartData"')) {
-              // 找到包含图表数据的行，开始收集JSON
-              jsonStartIndex = i;
-              break;
-            }
-          }
-          
-          if (jsonStartIndex >= 0) {
-            console.log('🔍 尝试从行', jsonStartIndex, '开始提取JSON');
-            
-            // 向前搜索找到JSON的开始
-            for (let i = jsonStartIndex; i >= 0; i--) {
-              const line = lines[i].trim();
-              if (line.startsWith('{')) {
-                // 从这里开始构建JSON
-                for (let j = i; j < lines.length; j++) {
-                  const currentLine = lines[j].trim();
-                  if (currentLine) {
-                    jsonContent = lines.slice(i, j + 1).join('\n').trim();
-                    try {
-                      const jsonData = JSON.parse(jsonContent);
-                      if (jsonData.chart1 || jsonData.chart2 || jsonData.chartData) {
-                        console.log('✅ 成功提取JSON数据');
-                        return jsonData;
-                      }
-                    } catch {
-                      // 继续尝试更多行
-                    }
-                  }
-                }
-                break;
-              }
-            }
-          }
-          
-          console.log('❌ 未能提取到有效的图表数据');
-          return null;
-        };
-        
-        const rawChartData = extractChartData(message.content);
-        
-        if (rawChartData) {
-          console.log('🎯 从消息中提取到图表数据:', rawChartData);
-          
-          if (rawChartData.chart1 || rawChartData.chart2 || rawChartData.chart3) {
-            const multiChartData: MultiChartData = {
-              chart1: rawChartData.chart1,
-              chart2: rawChartData.chart2,
-              chart3: rawChartData.chart3,
-              timestamp: Date.now(),
-              type: 'multiple' as const,
-            };
-            updateChart(multiChartData);
-          } else if (rawChartData.chartData) {
-            const singleChartData: SingleChartData = {
-              chartData: rawChartData.chartData,
-              timestamp: Date.now(),
-              type: 'single' as const,
-            };
-            updateChart(singleChartData);
-          }
-        }
-      } catch (error) {
-        console.error('解析图表数据失败:', error);
-        // Not a chart response, do nothing. The message will be displayed in the chat.
-      }
+      // 简化：不再处理复杂的 JSON 提取，rechart 消息已在流式处理中处理
+      console.log('💬 消息完成:', message.content);
     },
     onError: (error) => {
       setCompiling(false);

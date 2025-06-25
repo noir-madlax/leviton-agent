@@ -33,14 +33,12 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
         yield f"data: {json.dumps({'status': 'started', 'message': '开始处理查询...'}, ensure_ascii=False)}\n\n"
         
         try:
-            # 准备完整的查询（包含 prompt）
-            complete_query = await query_processor.prepare_query_with_prompt(query)
             
             # 运行代理任务，设置超时
             logger.info("正在调用 agent.run...")
             agent = agent_manager.get_agent()
             result = await asyncio.wait_for(
-                asyncio.to_thread(agent.run, complete_query),
+                asyncio.to_thread(agent.run, query),
                 timeout=settings.AGENT_TIMEOUT
             )
             logger.info(f"agent.run 执行完成，结果类型: {type(result)}")
@@ -57,31 +55,65 @@ async def stream_agent_response(query: str) -> AsyncGenerator[str, None]:
             yield f"data: {json.dumps({'status': 'error', 'error': f'Agent 执行失败: {str(agent_error)}'}, ensure_ascii=False)}\n\n"
             return
         
-        # 发送进度信息
-        yield f"data: {json.dumps({'status': 'processing', 'message': '正在分析结果...'}, ensure_ascii=False)}\n\n"
-
-        # 删除结果中的换行符（临时处理）
-        # logger.info(f"去除换行符前 result...{result}")
-        # result = result.replace("\n", "")
-        # logger.info(f"去除换行符后 result...{result}")
-
         # 将结果分块发送
         if is_valid_json(result):
             logger.info("结果成功解析为 JSON 格式！，直接发送结果")
             # 直接发送 JSON 字符串，不要再次序列化
             yield f"data: {json.dumps({'status': 'streaming', 'message': result}, ensure_ascii=False)}\n\n"
         elif isinstance(result, str):
-            # 按句号分割结果，更自然的分块方式
-            sentences = result.split('。')
-            for i, sentence in enumerate(sentences):
-                if sentence.strip():
-                    chunk_data = {
-                        'status': 'streaming',
-                        'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
-                        'chunk_index': i
-                    }                 
-                    yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
-                    await asyncio.sleep(settings.STREAM_DELAY)  # 控制流速
+            # 检查是否包含 RechartScript 脚本块
+            if '[RechartScript]' in result and '[/RechartScript]' in result:
+                # 分割文本，提取脚本块
+                parts = result.split('[RechartScript]')
+                
+                # 处理脚本块之前的文本
+                if parts[0].strip():
+                    sentences = parts[0].split('。')
+                    for i, sentence in enumerate(sentences):
+                        if sentence.strip():
+                            chunk_data = {
+                                'status': 'streaming',
+                                'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
+                                'chunk_index': i
+                            }                 
+                            yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
+                            await asyncio.sleep(settings.STREAM_DELAY)
+                
+                # 处理脚本块
+                script_part = parts[1].split('[/RechartScript]')[0]
+                if script_part.strip():
+                    script_data = {
+                        'status': 'rechart',
+                        'message': script_part.strip()
+                    }
+                    yield f"data: {json.dumps(script_data, ensure_ascii=False)}\n\n"
+                    await asyncio.sleep(settings.STREAM_DELAY)
+                
+                # 处理脚本块之后的文本
+                remaining_text = parts[1].split('[/RechartScript]')[1] if '[/RechartScript]' in parts[1] else ''
+                if remaining_text.strip():
+                    sentences = remaining_text.split('。')
+                    for i, sentence in enumerate(sentences):
+                        if sentence.strip():
+                            chunk_data = {
+                                'status': 'streaming',
+                                'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
+                                'chunk_index': i
+                            }                 
+                            yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
+                            await asyncio.sleep(settings.STREAM_DELAY)
+            else:
+                # 按句号分割结果，更自然的分块方式
+                sentences = result.split('。')
+                for i, sentence in enumerate(sentences):
+                    if sentence.strip():
+                        chunk_data = {
+                            'status': 'streaming',
+                            'message': sentence.strip() + ('。' if i < len(sentences) - 1 else ''),
+                            'chunk_index': i
+                        }                 
+                        yield f"data: {json.dumps(chunk_data, ensure_ascii=False)}\n\n"
+                        await asyncio.sleep(settings.STREAM_DELAY)  # 控制流速
         else:
             # 如果结果不是字符串，直接发送
             yield f"data: {json.dumps({'status': 'streaming', 'message': str(result)}, ensure_ascii=False)}\n\n"

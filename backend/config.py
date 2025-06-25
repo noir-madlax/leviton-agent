@@ -23,6 +23,7 @@ class Settings:
     # 模型设置
     #测试过程中，便宜考虑用这个flash
     # MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-flash-preview-05-20")
+    # MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-flash-lite-preview-06-17")
     # 生成可以用 pro
     MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-pro-preview")
     
@@ -50,7 +51,7 @@ class Settings:
     # Agent 设置
     MAX_RESPONSE_LENGTH: int = int(os.getenv("MAX_RESPONSE_LENGTH", "2000"))
     STREAM_DELAY: float = float(os.getenv("STREAM_DELAY", "0.2"))
-    AGENT_TIMEOUT: float = float(os.getenv("AGENT_TIMEOUT", "480.0"))
+    AGENT_TIMEOUT: float = float(os.getenv("AGENT_TIMEOUT", "300.0"))
     MAX_ITERATIONS: int = int(os.getenv("MAX_ITERATIONS", "10"))  # Agent最大迭代次数
 
 settings = Settings() 

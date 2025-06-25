@@ -141,7 +141,10 @@ async def agent_stream(
             status_code=400,
             media_type="application/json"
         )
-    
+    # 准备完整的查询（包含 prompt）
+    # query_processor = get_query_processor()
+    # complete_query = await query_processor.prepare_query_with_prompt(query)
+        
     return StreamingResponse(
         stream_agent_response(query),
         media_type="text/event-stream",
@@ -167,11 +170,11 @@ async def agent_query(request: dict):
     
     try:
         # 准备完整的查询（包含 prompt）
-        query_processor = get_query_processor()
-        complete_query = await query_processor.prepare_query_with_prompt(query)
+        # query_processor = get_query_processor()
+        # complete_query = await query_processor.prepare_query_with_prompt(query)
         
         agent = agent_manager.get_agent()
-        result = await asyncio.to_thread(agent.run, complete_query)
+        result = await asyncio.to_thread(agent.run, query)
         return {
             "status": "success",
             "query": query,
