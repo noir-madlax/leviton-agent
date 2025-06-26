@@ -27,7 +27,7 @@ class DatabaseAgent:
             
             # 创建模型实例
             model = OpenAIServerModel(
-                model_id="anthropic/claude-sonnet-4",
+                model_id=settings.MODEL_ID,
                 api_base="https://openrouter.ai/api/v1",
                 api_key=settings.API_KEY
             )
@@ -57,7 +57,8 @@ class DatabaseAgent:
                 model=model,
                 max_steps=5,  # 增加步数以支持复杂的数据库查询
                 name="database_agent",
-                description="专门负责数据库查询、数据检索和MCP工具调用的代理。可以查询产品信息、评论数据，执行复杂的数据库操作。"
+                description="专门负责数据库查询、数据检索和MCP工具调用的代理。可以查询产品信息、评论数据，执行复杂的数据库操作。",
+                additional_authorized_imports=['json'],
             )
             
             # 如果有 AgentManager 引用，尝试追加自定义 system_prompt

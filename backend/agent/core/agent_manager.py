@@ -61,7 +61,7 @@ class AgentManager:
                     # self.chart_generation_agent.get_agent()  # 管理图表代码生成 Agent
                 ],
                 max_steps=settings.MAX_ITERATIONS,
-                # additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
+                additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
                 # final_answer_checks=[check_reasoning_and_plot]
             )
             
