@@ -153,7 +153,7 @@ class AgentManager:
                 agent.prompt_templates["system_prompt"] = final_prompt
                 
                 logger.info(f"已成功追加 ID {prompt_id} 的 prompt 到 agent，总长度: {len(final_prompt)} 字符")
-                logger.info(f"追加后的 prompt: {final_prompt}")
+                # logger.info(f"追加后的 prompt: {final_prompt}")
                 return True
             else:
                 logger.warning(f"未找到 ID {prompt_id} 的 prompt 或内容为空")
