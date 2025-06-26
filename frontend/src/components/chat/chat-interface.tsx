@@ -95,6 +95,8 @@ export function ChatInterface() {
               const chunk = decoder.decode(value);
               const lines = chunk.split('\n');
 
+              let shouldPassthrough = true;
+
               for (const line of lines) {
                 if (line.startsWith('data: ')) {
                   const jsonStr = line.substring(6);
@@ -118,20 +120,25 @@ export function ChatInterface() {
                       
                       // 立即更新图表
                       updateChart(singleChartData);
+                      // rechart 消息不需要传递给 useChat
+                      shouldPassthrough = false;
                     }
                     
-                                         // 对于其他类型的消息，继续传递给 useChat
-                     if (sseData.status === 'streaming' || sseData.status === 'completed') {
-                       controller.enqueue(value);
-                     }
-                   } catch {
-                     // 不是 JSON 格式，继续传递
-                     controller.enqueue(value);
-                   }
-                } else {
-                  // 不是 data: 开头的行，继续传递
-                  controller.enqueue(value);
+                    // 对于其他类型的消息，继续传递给 useChat
+                    if (sseData.status === 'streaming' || sseData.status === 'completed') {
+                      // 保持原始传递逻辑
+                    } else if (sseData.status !== 'rechart') {
+                      // 未知状态也传递，但排除 rechart
+                    }
+                  } catch {
+                    // 不是 JSON 格式，继续传递
+                  }
                 }
+              }
+
+              // 只有当不是 rechart 消息时才传递
+              if (shouldPassthrough) {
+                controller.enqueue(value);
               }
 
               return pump();
@@ -375,7 +382,7 @@ export function ChatInterface() {
                   id: msg.id,
                   role: msg.role as 'user' | 'assistant',
                   content: msg.content,
-                  timestamp: Date.now()
+                  timestamp: msg.createdAt ? new Date(msg.createdAt).getTime() : Date.now()
                 }))} 
               isLoading={isLoading} 
             />
