@@ -1,6 +1,6 @@
 """Data models for Dashboard API responses."""
 
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Literal
 from pydantic import BaseModel, Field
 
 
@@ -145,5 +145,73 @@ class PackagePreferenceResponse(BaseModel):
     packageDistribution: List[PackageDistributionItem] = Field(description="Overall package distribution")
     dimmerSwitches: List[PackageDistributionItem] = Field(description="Dimmer switches package distribution")
     lightSwitches: List[PackageDistributionItem] = Field(description="Light switches package distribution")
+    project_id: str = Field(description="Project ID used for filtering")
+    filtered_asin_count: int = Field(description="Number of ASINs in project filter")
+
+
+# ==================== Review Insights Models ====================
+
+class PainPoint(BaseModel):
+    """Pain point data model."""
+    aspect: str
+    category: str
+    severity: float
+    frequency: int
+    impactedProducts: int
+    type: Literal["Physical", "Performance", "Usability"]
+
+class CustomerLike(BaseModel):
+    """Customer like data model."""
+    feature: str
+    category: str
+    frequency: int
+    satisfactionLevel: Literal["High", "Medium", "Low"]
+
+class UnderservedUseCase(BaseModel):
+    """Underserved use case data model."""
+    useCase: str
+    productAttribute: str
+    gapLevel: float
+    mentionCount: int
+
+class ReviewInsightsResponse(BaseModel):
+    """Review insights response model."""
+    painPoints: List[PainPoint]
+    customerLikes: List[CustomerLike]
+    underservedUseCases: List[UnderservedUseCase]
+
+
+# ==================== Competitor Analysis Models ====================
+
+class CompetitorMatrixData(BaseModel):
+    """Competitor matrix data model."""
+    product: str
+    category: str
+    categoryType: Literal["Physical", "Performance"]
+    mentions: int
+    satisfactionRate: float
+    positiveCount: int
+    negativeCount: int
+    totalReviews: int
+
+class UseCaseMatrixData(BaseModel):
+    """Use case matrix data model."""
+    product: str
+    useCase: str
+    mentions: int
+    satisfactionRate: float
+    gapLevel: float
+
+class UseCaseData(BaseModel):
+    """Use case data container."""
+    targetProducts: List[str]
+    matrixData: List[UseCaseMatrixData]
+
+class CompetitorAnalysisResponse(BaseModel):
+    """Response model for competitor analysis API."""
+    targetProducts: List[str]
+    matrixData: List[CompetitorMatrixData]
+    productTotalReviews: Dict[str, int]
+    useCaseData: UseCaseData
     project_id: str = Field(description="Project ID used for filtering")
     filtered_asin_count: int = Field(description="Number of ASINs in project filter") 

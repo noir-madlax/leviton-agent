@@ -9,13 +9,17 @@ from .models import (
     ProductAnalysisResponse, CategoryProducts, ProductInfo,
     PricingAnalysisResponse, PriceDistribution, BrandPriceDistribution, PriceStats, PriceStatsGroup, BrandPrices,
     MarketInsightsResponse, SegmentRevenue, SegmentData,
-    PackagePreferenceResponse, SameProductComparison, PackageDistributionItem
+    PackagePreferenceResponse, SameProductComparison, PackageDistributionItem,
+    ReviewInsightsResponse,
+    CompetitorAnalysisResponse
 )
 from .services.brand_analysis_service import BrandAnalysisService
 from .services.product_analysis_service import ProductAnalysisService
 from .services.pricing_analysis_service import PricingAnalysisService
 from .services.market_insights_service import MarketInsightsService
 from .services.package_preference_service import PackagePreferenceService
+from .services.review_insights_service import ReviewInsightsService
+from .services.competitor_analysis_service import CompetitorAnalysisService
 
 logger = logging.getLogger(__name__)
 
@@ -200,4 +204,67 @@ async def get_package_preference(
         raise HTTPException(status_code=404, detail=str(e))
     except Exception as e:
         logger.error(f"Error in package preference API for project {project_id}: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+
+@router.get("/review-insights", response_model=ReviewInsightsResponse)
+async def get_review_insights_data(
+    project_id: str = Query(..., description="Project ID for ASIN filtering")
+):
+    """Get review insights data for specific project.
+    
+    Returns customer pain points, likes, and underserved use cases
+    filtered by project ASIN list.
+    """
+    try:
+        logger.info(f"Getting review insights data for project: {project_id}")
+        
+        service = ReviewInsightsService(project_id)
+        data = service.get_data()
+        
+        return ReviewInsightsResponse(
+            painPoints=data['painPoints'],
+            customerLikes=data['customerLikes'],
+            underservedUseCases=data['underservedUseCases']
+        )
+        
+    except ValueError as e:
+        logger.error(f"ValueError in review insights endpoint: {e}")
+        raise HTTPException(status_code=400, detail=str(e))
+    except Exception as e:
+        logger.error(f"Error in review insights endpoint: {e}")
+        raise HTTPException(status_code=500, detail="Internal server error")
+
+
+@router.get("/competitor-analysis", response_model=CompetitorAnalysisResponse)
+async def get_competitor_analysis(
+    project_id: str = Query(..., description="Project ID for ASIN filtering")
+):
+    """Get competitor analysis data for a specific project.
+    
+    This endpoint replaces the frontend getCompetitorAnalysisData() method
+    with server-side implementation that applies project ASIN filtering.
+    """
+    try:
+        service = CompetitorAnalysisService(project_id)
+        raw_data = service.get_data()
+        
+        # Convert to response format
+        response = CompetitorAnalysisResponse(
+            targetProducts=raw_data['targetProducts'],
+            matrixData=raw_data['matrixData'],
+            productTotalReviews=raw_data['productTotalReviews'],
+            useCaseData=raw_data['useCaseData'],
+            project_id=project_id,
+            filtered_asin_count=len(service.project_asins)
+        )
+        
+        logger.info(f"Competitor analysis API returned {len(raw_data['matrixData'])} matrix items and {len(raw_data['useCaseData']['matrixData'])} use case items")
+        return response
+        
+    except ValueError as e:
+        logger.error(f"Invalid project {project_id}: {e}")
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        logger.error(f"Error in competitor analysis API for project {project_id}: {e}")
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}") 

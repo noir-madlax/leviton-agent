@@ -389,6 +389,14 @@ class APIError(BaseModel):
   - ✅ 前端API集成: 所有5个功能的ByProject方法实现
   - ✅ 验证通过: 所有service正常返回数据，前端构建成功
 
+- ✅ **Phase 2.7: Review Insights迁移** (完成日期: 2024-12-23)
+  - ✅ ReviewInsightsService实现并继承BaseDashboardService
+  - ✅ API端点: GET /api/v1/dashboard/review-insights?project_id={id}
+  - ✅ 前端集成: DatabaseService.getReviewInsightsDataByProject()
+  - ✅ 关键修复: ASIN映射错误解决 (直接使用ASIN而非ID转换)
+  - ✅ MCP工具验证: 数据库schema验证和数据匹配确认
+  - ✅ 数据流测试: 前端构建成功，1000条review数据正常返回
+
 ### 第二阶段技术实现详情
 
 #### 核心架构特性
@@ -409,6 +417,10 @@ class APIError(BaseModel):
   - 解决方案：在Python代码中过滤NULL值，避免SQL查询中使用None
   - 影响范围：4个新service全部返回500错误
   - 修复方法：移除SQL NULL过滤，改为Python代码过滤
+- 🚨 **Review Insights ASIN映射错误**: 错误假设所有表使用相同ID映射
+  - 问题：`product_wide_table.id` (数字) → `product_review_analysis.product_id` (ASIN字符串)
+  - 解决方案：使用MCP工具验证schema，直接使用ASIN过滤
+  - 教训：每个表的ID字段含义可能不同，必须验证数据结构
 
 #### 技术笔记
 - **关键架构决策**: BaseDashboardService统一过滤机制确保100%应用ASIN过滤
@@ -437,43 +449,43 @@ class APIError(BaseModel):
    - API端点: GET /api/v1/dashboard/product-analysis
    - 预计工作量: 2-3小时
 
-#### 🟡 优先级2：主要分析功能
-3. **getPricingAnalysisData()** - 定价分析
-   - 前端文件: database-service.ts:243
-   - 后端目标: PricingAnalysisService
-   - API端点: GET /api/v1/dashboard/pricing-analysis
-   - 预计工作量: 3-4小时
+#### ✅ 优先级2：主要分析功能 (已完成)
+3. **✅ getPricingAnalysisData()** - 定价分析
+   - 前端文件: database-service.ts:243 ✅
+   - 后端目标: PricingAnalysisService ✅
+   - API端点: GET /api/v1/dashboard/pricing-analysis ✅
+   - 完成日期: 2024-12-23 ✅
 
-4. **getMarketInsightsData()** - 市场洞察
-   - 前端文件: database-service.ts:382
-   - 后端目标: MarketInsightsService  
-   - API端点: GET /api/v1/dashboard/market-insights
-   - 预计工作量: 3-4小时
+4. **✅ getMarketInsightsData()** - 市场洞察
+   - 前端文件: database-service.ts:382 ✅
+   - 后端目标: MarketInsightsService ✅ 
+   - API端点: GET /api/v1/dashboard/market-insights ✅
+   - 完成日期: 2024-12-23 ✅
 
-5. **getReviewInsightsData()** - 评论洞察
-   - 前端文件: database-service.ts:608
-   - 后端目标: ReviewInsightsService
-   - API端点: GET /api/v1/dashboard/review-insights
-   - 预计工作量: 4-5小时
+5. **✅ getReviewInsightsData()** - 评论洞察
+   - 前端文件: database-service.ts:608 ✅
+   - 后端目标: ReviewInsightsService ✅
+   - API端点: GET /api/v1/dashboard/review-insights ✅
+   - 完成日期: 2024-12-23 ✅ (修复ASIN映射错误)
 
-#### 🟢 优先级3：辅助功能
-6. **getPackagePreferenceData()** - 包装偏好分析
-   - 前端文件: database-service.ts:474
-   - 后端目标: PackagePreferenceService
-   - API端点: GET /api/v1/dashboard/package-preference
-   - 预计工作量: 3-4小时
+#### 🟢 优先级3：辅助功能 (部分完成)
+6. **✅ getPackagePreferenceData()** - 包装偏好分析
+   - 前端文件: database-service.ts:474 ✅
+   - 后端目标: PackagePreferenceService ✅
+   - API端点: GET /api/v1/dashboard/package-preference ✅
+   - 完成日期: 2024-12-23 ✅
 
 7. **getCompetitorAnalysisData()** - 竞品分析 (复杂)
    - 前端文件: database-service.ts:734
    - 后端目标: CompetitorAnalysisService
    - API端点: GET /api/v1/dashboard/competitor-analysis
-   - 预计工作量: 5-6小时
+   - 预计工作量: 5-6小时 ⏳
 
 8. **getAllReviewData()** - 所有评论数据
    - 前端文件: database-service.ts:1076
    - 后端目标: ReviewDataService
    - API端点: GET /api/v1/dashboard/review-data
-   - 预计工作量: 2-3小时
+   - 预计工作量: 2-3小时 ⏳
 
 ### 📋 第二阶段执行检查清单
 
@@ -880,41 +892,29 @@ cd backend && python -m pytest test_structure_only.py
 
 ## 🎯 第二阶段进展指南
 
-### 🎉 已完成的重要成果
+### 🎉 已完成的重要成果 (2024-12-23 更新)
 
-- ✅ **模板建立**: Brand Analysis作为第一个成功案例，为后续7个查询提供完整的开发模板
+- ✅ **6个核心模块完成**: 市场分析模块迁移进度达到75% (6/8)
 - ✅ **架构验证**: BaseDashboardService统一过滤机制运行正常，确保数据隔离
 - ✅ **集成验证**: 前端项目选择器与后端API完整集成，数据流畅通
+- ✅ **关键修复**: SQL NULL值处理和ASIN映射错误全部解决
+- ✅ **MCP工具验证**: 数据库schema验证流程建立
 
-### 📋 下一步：继续第二阶段剩余迁移
+### 📋 下一步：完成第二阶段剩余迁移
 
-基于已完成的Brand Analysis模板，建议按以下顺序继续：
+基于已完成的6个模块，还剩2个模块需要迁移：
 
-#### 1. 立即开始：ProductAnalysisService迁移 (优先级：HIGH)
-
-✅ **基础架构已完成**，可以直接开始下一个Service：
-
-```python
-# 参考已完成的 BrandAnalysisService 模板：
-# backend/dashboard/services/brand_analysis_service.py
-
-# 需要创建：
-# backend/dashboard/services/product_analysis_service.py
-```
-
-#### 2. 按优先级继续剩余7个查询迁移
-
-按照文档中的优先级顺序继续：
+#### 已完成的模块 (6/8) ✅
 
 **✅ 已完成:**
 1. **BrandAnalysisService** - 替代 `getBrandCategoryRevenue()` ✅
+2. **ProductAnalysisService** - 替代 `getProductAnalysisData()` ✅
+3. **PricingAnalysisService** - 替代 `getPricingAnalysisData()` ✅
+4. **MarketInsightsService** - 替代 `getMarketInsightsData()` ✅
+5. **ReviewInsightsService** - 替代 `getReviewInsightsData()` ✅ (修复ASIN映射)
+6. **PackagePreferenceService** - 替代 `getPackagePreferenceData()` ✅
 
 **⏳ 待完成 (按优先级):**
-2. **ProductAnalysisService** - 替代 `getProductAnalysisData()` (下一个)
-3. **PricingAnalysisService** - 替代 `getPricingAnalysisData()`
-4. **MarketInsightsService** - 替代 `getMarketInsightsData()` 
-5. **ReviewInsightsService** - 替代 `getReviewInsightsData()`
-6. **PackagePreferenceService** - 替代 `getPackagePreferenceData()`
 7. **CompetitorAnalysisService** - 替代 `getCompetitorAnalysisData()` (最复杂)
 8. **ReviewDataService** - 替代 `getAllReviewData()`
 

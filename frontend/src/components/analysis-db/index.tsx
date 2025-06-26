@@ -310,15 +310,57 @@ async function fetchPackagePreferenceData(projectId?: string) {
   }
 }
 
-// 🚨 TEMPORARY: Return empty data for unimplemented modules to prevent errors
-async function fetchOtherModulesData(): Promise<Pick<DashboardData, 'reviewInsights' | 'competitorAnalysis' | 'allReviewData'>> {
-  return {
-    reviewInsights: {
+async function fetchReviewInsightsData(projectId?: string) {
+  try {
+    if (!projectId) {
+      console.log('⏳ Review Insights waiting for project selection...');
+      return {
+        painPoints: [],
+        customerLikes: [],
+        underservedUseCases: []
+      };
+    }
+    
+    console.log(`📊 Fetching Review Insights data for project: ${projectId}`);
+    const reviewInsightsData = await databaseService.getReviewInsightsDataByProject(projectId);
+    console.log(`📈 Review Insights data received`);
+    
+    return reviewInsightsData;
+  } catch (error) {
+    console.error('Error fetching review insights data:', error);
+    return {
       painPoints: [],
       customerLikes: [],
       underservedUseCases: []
-    },
-    competitorAnalysis: {
+    };
+  }
+}
+
+
+
+async function fetchCompetitorAnalysisData(projectId?: string) {
+  try {
+    if (!projectId) {
+      console.log('⏳ Competitor Analysis waiting for project selection...');
+      return {
+        targetProducts: [],
+        matrixData: [],
+        productTotalReviews: {},
+        useCaseData: {
+          targetProducts: [],
+          matrixData: []
+        }
+      };
+    }
+    
+    console.log(`📊 Fetching Competitor Analysis data for project: ${projectId}`);
+    const competitorAnalysisData = await databaseService.getCompetitorAnalysisDataByProject(projectId);
+    console.log(`📈 Competitor Analysis data received`);
+    
+    return competitorAnalysisData;
+  } catch (error) {
+    console.error('Error fetching competitor analysis data:', error);
+    return {
       targetProducts: [],
       matrixData: [],
       productTotalReviews: {},
@@ -326,7 +368,13 @@ async function fetchOtherModulesData(): Promise<Pick<DashboardData, 'reviewInsig
         targetProducts: [],
         matrixData: []
       }
-    },
+    };
+  }
+}
+
+// 🚨 TEMPORARY: Return empty data for unimplemented modules to prevent errors
+async function fetchAllReviewData(): Promise<Pick<DashboardData, 'allReviewData'>> {
+  return {
     allReviewData: {}
   };
 }
@@ -334,13 +382,15 @@ async function fetchOtherModulesData(): Promise<Pick<DashboardData, 'reviewInsig
 async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
   try {
     // 🔑 Load all market analysis modules with project filtering
-    const [brandAnalysisData, productAnalysisData, pricingAnalysisData, marketInsightsData, packagePreferenceData, otherModulesData] = await Promise.all([
+    const [brandAnalysisData, productAnalysisData, pricingAnalysisData, marketInsightsData, packagePreferenceData, reviewInsightsData, competitorAnalysisData, allReviewData] = await Promise.all([
       fetchBrandAnalysisData(projectId),
       fetchProductAnalysisData(projectId),
       fetchPricingAnalysisData(projectId),
       fetchMarketInsightsData(projectId),
       fetchPackagePreferenceData(projectId),
-      fetchOtherModulesData()
+      fetchReviewInsightsData(projectId),
+      fetchCompetitorAnalysisData(projectId),
+      fetchAllReviewData()
     ]);
 
     return {
@@ -349,7 +399,9 @@ async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
       pricingAnalysis: pricingAnalysisData,
       marketInsights: marketInsightsData,
       packagePreference: packagePreferenceData,
-      ...otherModulesData
+      reviewInsights: reviewInsightsData,
+      competitorAnalysis: competitorAnalysisData,
+      allReviewData: allReviewData.allReviewData
     } as DashboardData;
   } catch (error) {
     console.error('Error fetching database data:', error)
@@ -376,39 +428,28 @@ async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
           lightSwitches: []
         }
       },
-              packagePreference: {
-          sameProductComparison: [],
-          packageDistribution: [],
-          dimmerSwitches: [],
-          lightSwitches: []
-        },
-        reviewInsights: {
-          painPoints: [],
-          customerLikes: [],
-          underservedUseCases: []
-        },
-        competitorAnalysis: {
+      packagePreference: {
+        sameProductComparison: [],
+        packageDistribution: [],
+        dimmerSwitches: [],
+        lightSwitches: []
+      },
+      reviewInsights: {
+        painPoints: [],
+        customerLikes: [],
+        underservedUseCases: []
+      },
+      competitorAnalysis: {
+        targetProducts: [],
+        matrixData: [],
+        productTotalReviews: {},
+        useCaseData: {
           targetProducts: [],
-          matrixData: [],
-          productTotalReviews: {},
-          useCaseData: {
-            targetProducts: [],
-            matrixData: []
-          }
-        },
-        allReviewData: {} as Record<string, Array<{
-          id: string
-          productId: string
-          text: string
-          sentiment: 'positive' | 'negative' | 'neutral'
-          category: string
-          aspect: string
-          rating: number
-          verified: boolean
-          date: string
-          brand: string
-        }>>
-      }
+          matrixData: []
+        }
+      },
+      allReviewData: {}
+    } as DashboardData
   }
 }
 

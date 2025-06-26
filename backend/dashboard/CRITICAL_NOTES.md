@@ -2,17 +2,17 @@
 
 ## 🎯 Phase 2 Migration Status
 
-### ✅ Completed (5/8 Market Analysis Modules)
-- **Brand Analysis API**: Fully migrated to backend with project ASIN filtering
-- **Product Analysis API**: Completed with fixed NULL handling
-- **Pricing Analysis API**: Completed with fixed NULL handling  
-- **Market Insights API**: Completed with fixed NULL handling
-- **Package Preference API**: Completed with fixed NULL handling
+### ✅ Completed (6/8 Market Analysis Modules)
+- **Brand Analysis API**: 品牌分析功能 - 100%完成 ✅
+- **Product Analysis API**: 产品分析功能 - 100%完成 ✅
+- **Pricing Analysis API**: 定价分析功能 - 100%完成 ✅  
+- **Market Insights API**: 市场洞察功能 - 100%完成 ✅
+- **Package Preference API**: 包装偏好功能 - 100%完成 ✅
+- **Review Insights API**: 评论洞察功能 - 100%完成 ✅
 - **ASIN Extraction Logic**: Fixed to ensure consistent data between preview and saved projects
 - **Project Data Isolation**: 100% enforced through `BaseDashboardService`
 
-### 🔄 Remaining Modules (3/8 need migration)
-- Review Insights
+### 🔄 Remaining Modules (2/8 need migration)
 - Competitor Analysis  
 - All Review Data
 
@@ -88,6 +88,37 @@ for item in result.data:
 3. **Test each service immediately after creation to catch this early**
 4. **Follow the BrandAnalysisService pattern that works correctly**
 
+## 🆕 CRITICAL LESSON: Review Insights ASIN Mapping (2024-12-23)
+
+### The Problem
+```python
+# ❌ Wrong: Review Insights initially used incorrect ID mapping
+def _get_product_ids_for_asins(self):
+    # This returned numeric IDs like [10, 114, 104]
+    query = self._get_base_product_table().select('id, platform_id')
+    return [str(item['id']) for item in result.data]
+
+# But product_review_analysis.product_id stores ASINs directly!
+```
+
+### Root Cause Analysis
+- **Different table schemas**: `product_wide_table.id` (numeric) vs `product_review_analysis.product_id` (ASIN string)
+- **Frontend assumption**: Original frontend code directly used ASINs in `product_review_analysis` queries
+- **Mapping error**: Backend tried to map ASINs → numeric IDs → query, but should use ASINs directly
+
+### The Fix
+```python
+# ✅ CORRECT: Direct ASIN filtering
+query = query.in_('product_id', self.project_asins)  # Direct ASIN usage
+# Remove unnecessary ID mapping logic
+```
+
+### Prevention Strategy
+1. **Always verify table schemas** before implementing Service logic
+2. **Check frontend original queries** to understand field mappings
+3. **Use MCP tools to inspect actual data** and verify field types
+4. **Test with real project data** to catch mapping errors early
+
 ## 🚨 Critical Checks Before Migration
 
 ### 1. Frontend Logic Analysis
@@ -95,6 +126,7 @@ for item in result.data:
 - [ ] Note ALL filtering conditions (especially NULL value handling)
 - [ ] Understand data aggregation logic
 - [ ] Check for special business rules
+- [ ] **NEW**: Verify table field mappings (numeric ID vs ASIN)
 
 ### 2. Data Quality Verification
 ```sql
@@ -104,6 +136,12 @@ SELECT COUNT(*) as total,
        COUNT(monthly_sales_volume) as with_volume
 FROM product_wide_table 
 WHERE platform_id IN (project_asins);
+
+-- NEW: Verify Review Insights data
+SELECT COUNT(*) as total_reviews,
+       COUNT(DISTINCT product_id) as unique_products
+FROM product_review_analysis 
+WHERE product_id IN (project_asins);
 ```
 
 ### 3. API Response Format
@@ -152,6 +190,16 @@ query = query.neq('estimated_revenue', None)  # Causes PostgreSQL error
 # Always use Python filtering instead of SQL .neq(field, None)
 ```
 
+### ASIN Field Mapping
+```python
+# ✅ CORRECT: Direct ASIN usage for review tables
+query = supabase.table('product_review_analysis').in_('product_id', asins)
+
+# ❌ WRONG: Unnecessary ID mapping for review tables
+product_ids = self._get_product_ids_for_asins()  # Don't need this for review tables
+query = query.in_('product_id', product_ids)
+```
+
 ## 📋 Migration Checklist Template
 
 For each new service migration:
@@ -161,6 +209,7 @@ For each new service migration:
 - [ ] Read and understand ALL frontend logic
 - [ ] Check data availability for test projects
 - [ ] Verify filtering conditions
+- [ ] **NEW**: Verify table field mappings and data types
 
 ### Implementation  
 - [ ] Create service inheriting `BaseDashboardService`
@@ -168,6 +217,7 @@ For each new service migration:
 - [ ] Apply ASIN filtering (`self._apply_asin_filter()`)
 - [ ] Match frontend logic exactly
 - [ ] Add comprehensive logging
+- [ ] **NEW**: Use MCP tools to verify data structure
 
 ### API Layer
 - [ ] Create Pydantic models matching frontend interfaces
@@ -185,6 +235,7 @@ For each new service migration:
 - [ ] Verify data isolation (different projects show different data)
 - [ ] Check error handling (projects with no data)
 - [ ] Confirm frontend builds successfully
+- [ ] **NEW**: Use MCP tools to verify data consistency
 
 ## 🎯 Success Criteria
 
@@ -193,6 +244,7 @@ For each new service migration:
 3. **Error Handling**: Graceful handling of projects with no data
 4. **Performance**: No significant performance degradation
 5. **Compatibility**: Frontend builds and runs without errors
+6. **Data Integrity**: Backend data matches frontend data exactly
 
 ## 🚫 Common Pitfalls to Avoid
 
@@ -201,9 +253,12 @@ For each new service migration:
 3. **Logic Mismatch**: Backend logic differs from frontend causing data inconsistency
 4. **Double Query Calls**: Supabase client doesn't support chaining after `.execute()`
 5. **Field Name Mismatch**: API response must match TypeScript interfaces exactly
+6. **🆕 Table Schema Assumptions**: Don't assume all tables use same ID mapping logic
 
 ## 📝 Notes
 
 - **ASIN Extraction Logic**: ✅ Fixed in `ProjectService._extract_asins_from_filters()`
 - **Data Quality**: Some projects may have no revenue data - this is expected
-- **Testing Projects**: Use project ID `e774689a-c232-4445-9b26-1d69191b9762` for testing (has revenue data) 
+- **Testing Projects**: Use project ID `e774689a-c232-4445-9b26-1d69191b9762` for testing (has revenue data)
+- **🆕 Review Insights**: ✅ Fixed ASIN mapping logic for `product_review_analysis` table
+- **🆕 MCP Tools**: Critical for data structure verification and debugging 

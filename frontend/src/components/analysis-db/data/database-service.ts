@@ -1534,6 +1534,106 @@ export class DatabaseService {
       return this.getPackagePreferenceData()
     }
   }
+
+  async getReviewInsightsDataByProject(projectId: string): Promise<{
+    painPoints: Array<{
+      aspect: string
+      category: string
+      severity: number
+      frequency: number
+      impactedProducts: number
+      type: 'Physical' | 'Performance' | 'Usability'
+    }>
+    customerLikes: Array<{
+      feature: string
+      category: string
+      frequency: number
+      satisfactionLevel: 'High' | 'Medium' | 'Low'
+    }>
+    underservedUseCases: Array<{
+      useCase: string
+      productAttribute: string
+      gapLevel: number
+      mentionCount: number
+    }>
+  }> {
+    try {
+      const response = await fetch(`http://localhost:8000/api/v1/dashboard/review-insights?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      const data = await response.json()
+      return {
+        painPoints: data.painPoints || [],
+        customerLikes: data.customerLikes || [],
+        underservedUseCases: data.underservedUseCases || []
+      }
+    } catch (error) {
+      console.error('Error fetching review insights data by project:', error)
+      return {
+        painPoints: [],
+        customerLikes: [],
+        underservedUseCases: []
+      }
+    }
+  }
+
+  async getCompetitorAnalysisDataByProject(projectId: string): Promise<{
+    targetProducts: string[]
+    matrixData: Array<{
+      product: string
+      category: string
+      categoryType: 'Physical' | 'Performance'
+      mentions: number
+      satisfactionRate: number
+      positiveCount: number
+      negativeCount: number
+      totalReviews: number
+    }>
+    productTotalReviews: Record<string, number>
+    useCaseData: {
+      targetProducts: string[]
+      matrixData: Array<{
+        product: string
+        useCase: string
+        mentions: number
+        satisfactionRate: number
+        gapLevel: number
+      }>
+    }
+  }> {
+    try {
+      const response = await fetch(`http://localhost:8000/api/v1/dashboard/competitor-analysis?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`HTTP error! status: ${response.status}`)
+      }
+      
+      const data = await response.json()
+      return {
+        targetProducts: data.targetProducts || [],
+        matrixData: data.matrixData || [],
+        productTotalReviews: data.productTotalReviews || {},
+        useCaseData: {
+          targetProducts: data.useCaseData?.targetProducts || [],
+          matrixData: data.useCaseData?.matrixData || []
+        }
+      }
+    } catch (error) {
+      console.error('Error fetching competitor analysis data by project:', error)
+      return {
+        targetProducts: [],
+        matrixData: [],
+        productTotalReviews: {},
+        useCaseData: {
+          targetProducts: [],
+          matrixData: []
+        }
+      }
+    }
+  }
 }
 
 export const databaseService = new DatabaseService() 
