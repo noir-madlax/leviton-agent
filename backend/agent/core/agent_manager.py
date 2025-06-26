@@ -9,7 +9,15 @@ from agent.validators.chart_validator import check_reasoning_and_plot
 from agent.core.database_agent import DatabaseAgent
 from agent.core.chart_generation_agent import ChartGenerationAgent
 
+# 导入HTTP请求拦截器（导入时自动激活网络请求监控）
+from agent.monitor.http_interceptor import create_interceptor
+
 logger = logging.getLogger(__name__)
+
+# 创建HTTP拦截器实例，只监控请求（避免日志过多）
+http_interceptor = create_interceptor(log_requests=False, 
+                                      log_responses=True,
+                                      max_body_length=12000)
 
 class AgentManager:
     """多 Agent 管理器类"""
@@ -31,7 +39,8 @@ class AgentManager:
             model = OpenAIServerModel(
                 model_id=settings.MODEL_ID,
                 api_base="https://openrouter.ai/api/v1",
-                api_key=settings.API_KEY
+                api_key=settings.API_KEY,
+                stream_options={"include_usage": True}
             )
             
             # 步骤1: 初始化数据库查询 Agent
@@ -55,13 +64,14 @@ class AgentManager:
             self.manager_agent = CodeAgent(
                 tools=[],  # 管理 Agent 不直接使用工具，而是委托给下级 Agent
                 model=model,
-                stream_outputs=True,
+                # stream_outputs=True,
                 managed_agents=[
                     self.database_agent.get_agent()  # 管理数据库 Agent
                     # self.chart_generation_agent.get_agent()  # 管理图表代码生成 Agent
                 ],
                 max_steps=settings.MAX_ITERATIONS,
                 additional_authorized_imports=['json', 'time', 'numpy', 'pandas'],
+                verbosity_level= 3,
                 # final_answer_checks=[check_reasoning_and_plot]
             )
             
