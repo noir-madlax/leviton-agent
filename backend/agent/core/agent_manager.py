@@ -16,7 +16,7 @@ logger = logging.getLogger(__name__)
 
 # 创建HTTP拦截器实例，只监控请求（避免日志过多）
 http_interceptor = create_interceptor(log_requests=False, 
-                                      log_responses=True,
+                                      log_responses=False,
                                       max_body_length=12000)
 
 class AgentManager:

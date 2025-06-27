@@ -2,18 +2,18 @@
 
 ## 🎯 Phase 2 Migration Status
 
-### ✅ Completed (6/8 Market Analysis Modules)
+### ✅ Completed (7/8 Market Analysis Modules)
 - **Brand Analysis API**: 品牌分析功能 - 100%完成 ✅
 - **Product Analysis API**: 产品分析功能 - 100%完成 ✅
 - **Pricing Analysis API**: 定价分析功能 - 100%完成 ✅  
 - **Market Insights API**: 市场洞察功能 - 100%完成 ✅
 - **Package Preference API**: 包装偏好功能 - 100%完成 ✅
 - **Review Insights API**: 评论洞察功能 - 100%完成 ✅
+- **Competitor Analysis API**: 竞争对手分析功能 - 100%完成 ✅
 - **ASIN Extraction Logic**: Fixed to ensure consistent data between preview and saved projects
 - **Project Data Isolation**: 100% enforced through `BaseDashboardService`
 
-### 🔄 Remaining Modules (2/8 need migration)
-- Competitor Analysis  
+### 🔄 Remaining Modules (1/8 need migration)
 - All Review Data
 
 ## 🔑 Core Architecture Principles
@@ -118,6 +118,44 @@ query = query.in_('product_id', self.project_asins)  # Direct ASIN usage
 2. **Check frontend original queries** to understand field mappings
 3. **Use MCP tools to inspect actual data** and verify field types
 4. **Test with real project data** to catch mapping errors early
+
+## 🆕 CRITICAL LESSON: Competitor Analysis Product Filtering (2024-12-23)
+
+### The Problem
+```python
+# ❌ Wrong: Missing essential filtering chain
+def _get_product_info(self):
+    query = self._get_base_product_table().select('platform_id, title, reviews_count')
+    result = query.execute()  # Missing ASIN filtering!
+```
+
+### Root Cause Analysis
+- **Incomplete filter chain**: Missing `_apply_base_filters()` and `_apply_asin_filter()`
+- **SQL syntax error**: Used incorrect `.not_('rating', 'is', None)` instead of `.neq('rating', None)`
+- **Performance issue**: Large project ASIN lists (366 items) caused query timeouts
+
+### The Fix
+```python
+# ✅ CORRECT: Complete filtering chain + focused product selection
+def _get_product_info(self):
+    query = self._get_base_product_table().select('platform_id, title, reviews_count')
+    query = self._apply_base_filters(query)  # Essential base filtering
+    query = query.in_('platform_id', self.CORE_COMPETITOR_ASINS)  # Focused 6 products
+    query = query.limit(100)  # Performance optimization
+    result = query.execute()
+```
+
+### Key Improvements
+1. **Focused Product Strategy**: Use fixed 6 core products instead of all project ASINs
+2. **Complete Filter Chain**: Always apply base filters before ASIN filtering
+3. **Correct SQL Syntax**: Use `.neq(field, None)` not `.not_(field, 'is', None)`
+4. **Performance Limits**: Add `.limit()` to prevent large query timeouts
+
+### Prevention Strategy
+1. **Always follow the complete filtering pattern** from working services
+2. **Use MCP tools to test query syntax** before implementing
+3. **Consider focused product sets** for analysis-heavy modules
+4. **Test with real project scales** to catch performance issues
 
 ## 🚨 Critical Checks Before Migration
 

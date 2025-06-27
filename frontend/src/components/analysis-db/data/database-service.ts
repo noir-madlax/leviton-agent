@@ -1634,6 +1634,36 @@ export class DatabaseService {
       }
     }
   }
+
+  async getAllReviewDataByProject(projectId: string): Promise<Record<string, Array<{
+    id: string
+    productId: string
+    text: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    category: string
+    aspect: string
+    rating: number
+    verified: boolean
+    date: string
+    brand: string
+  }>>> {
+    const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000'
+    
+    try {
+      const response = await fetch(`${API_BASE_URL}/api/v1/dashboard/all-review-data?project_id=${projectId}`)
+      
+      if (!response.ok) {
+        throw new Error(`API call failed: ${response.status}`)
+      }
+      
+      const result = await response.json()
+      return result.data || {}
+    } catch (error) {
+      console.error('Error fetching all review data by project:', error)
+      // Fallback to original method
+      return this.getAllReviewData()
+    }
+  }
 }
 
 export const databaseService = new DatabaseService() 

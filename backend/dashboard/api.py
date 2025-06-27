@@ -11,7 +11,8 @@ from .models import (
     MarketInsightsResponse, SegmentRevenue, SegmentData,
     PackagePreferenceResponse, SameProductComparison, PackageDistributionItem,
     ReviewInsightsResponse,
-    CompetitorAnalysisResponse
+    CompetitorAnalysisResponse,
+    AllReviewDataResponse, ReviewData
 )
 from .services.brand_analysis_service import BrandAnalysisService
 from .services.product_analysis_service import ProductAnalysisService
@@ -20,6 +21,7 @@ from .services.market_insights_service import MarketInsightsService
 from .services.package_preference_service import PackagePreferenceService
 from .services.review_insights_service import ReviewInsightsService
 from .services.competitor_analysis_service import CompetitorAnalysisService
+from .services.all_review_data_service import AllReviewDataService
 
 logger = logging.getLogger(__name__)
 
@@ -267,4 +269,37 @@ async def get_competitor_analysis(
         raise HTTPException(status_code=404, detail=str(e))
     except Exception as e:
         logger.error(f"Error in competitor analysis API for project {project_id}: {e}")
+        raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
+
+
+@router.get("/all-review-data", response_model=AllReviewDataResponse)
+async def get_all_review_data(
+    project_id: str = Query(..., description="Project ID for ASIN filtering")
+):
+    """Get all review data for a specific project.
+    
+    This endpoint replaces the frontend getAllReviewData() method
+    with server-side implementation that applies project ASIN filtering.
+    """
+    try:
+        service = AllReviewDataService(project_id)
+        raw_data = service.get_data()
+        
+        # Convert to response format - data is already grouped by aspect
+        response = AllReviewDataResponse(
+            data=raw_data['data'],  # Already grouped dict of aspect -> list of reviews
+            project_id=project_id,
+            filtered_asin_count=len(service.project_asins),
+            total_aspects=raw_data['total_aspects'],
+            total_reviews=raw_data['total_reviews']
+        )
+        
+        logger.info(f"All review data API returned {raw_data['total_reviews']} reviews across {raw_data['total_aspects']} aspects")
+        return response
+        
+    except ValueError as e:
+        logger.error(f"Invalid project {project_id}: {e}")
+        raise HTTPException(status_code=404, detail=str(e))
+    except Exception as e:
+        logger.error(f"Error in all review data API for project {project_id}: {e}")
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}") 

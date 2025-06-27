@@ -214,4 +214,28 @@ class CompetitorAnalysisResponse(BaseModel):
     productTotalReviews: Dict[str, int]
     useCaseData: UseCaseData
     project_id: str = Field(description="Project ID used for filtering")
-    filtered_asin_count: int = Field(description="Number of ASINs in project filter") 
+    filtered_asin_count: int = Field(description="Number of ASINs in project filter")
+
+
+# ==================== All Review Data Models ====================
+
+class ReviewData(BaseModel):
+    """Individual review data model."""
+    id: str
+    productId: str
+    text: str
+    sentiment: Literal["positive", "negative", "neutral"]
+    category: str
+    aspect: str
+    rating: int
+    verified: bool
+    date: str
+    brand: str
+
+class AllReviewDataResponse(BaseModel):
+    """Response model for all review data API."""
+    data: Dict[str, List[ReviewData]] = Field(description="Review data grouped by aspect")
+    project_id: str = Field(description="Project ID used for filtering")
+    filtered_asin_count: int = Field(description="Number of ASINs in project filter")
+    total_aspects: int = Field(description="Total number of aspects")
+    total_reviews: int = Field(description="Total number of reviews") 

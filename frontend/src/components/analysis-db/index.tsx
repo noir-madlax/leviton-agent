@@ -372,11 +372,28 @@ async function fetchCompetitorAnalysisData(projectId?: string) {
   }
 }
 
-// 🚨 TEMPORARY: Return empty data for unimplemented modules to prevent errors
-async function fetchAllReviewData(): Promise<Pick<DashboardData, 'allReviewData'>> {
-  return {
-    allReviewData: {}
-  };
+async function fetchAllReviewData(projectId?: string): Promise<Pick<DashboardData, 'allReviewData'>> {
+  try {
+    if (!projectId) {
+      console.log('⏳ All Review Data waiting for project selection...');
+      return {
+        allReviewData: {}
+      };
+    }
+    
+    console.log(`📊 Fetching All Review Data for project: ${projectId}`);
+    const allReviewData = await databaseService.getAllReviewDataByProject(projectId);
+    console.log(`📈 All Review Data received`);
+    
+    return {
+      allReviewData
+    };
+  } catch (error) {
+    console.error('Error fetching all review data:', error);
+    return {
+      allReviewData: {}
+    };
+  }
 }
 
 async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
@@ -390,7 +407,7 @@ async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
       fetchPackagePreferenceData(projectId),
       fetchReviewInsightsData(projectId),
       fetchCompetitorAnalysisData(projectId),
-      fetchAllReviewData()
+      fetchAllReviewData(projectId)
     ]);
 
     return {
