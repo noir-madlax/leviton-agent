@@ -24,9 +24,11 @@ class ChartGenerationAgent:
             
             # 创建模型实例
             model = OpenAIServerModel(
-                model_id="anthropic/claude-sonnet-4",
+                model_id=settings.MODEL_ID,
                 api_base="https://openrouter.ai/api/v1",
-                api_key=settings.API_KEY
+                api_key=settings.API_KEY,
+                stream_options={"include_usage": True},
+                temperature=0.3
             )
             
             logger.info("初始化图表代码生成相关工具...")

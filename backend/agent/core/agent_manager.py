@@ -40,7 +40,8 @@ class AgentManager:
                 model_id=settings.MODEL_ID,
                 api_base="https://openrouter.ai/api/v1",
                 api_key=settings.API_KEY,
-                stream_options={"include_usage": True}
+                stream_options={"include_usage": True},
+                temperature=0.3
             )
             
             # 步骤1: 初始化数据库查询 Agent
