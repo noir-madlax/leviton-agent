@@ -5,7 +5,7 @@ This module implements the **final** public surface specified in
 
 Endpoints
 ---------
-``POST /product-segmentation``
+``POST /product-segment``
    Start a new segmentation run for an explicit list of Amazon ``product_ids``.
 
    Request body::
@@ -18,7 +18,7 @@ Endpoints
    Response::
 
        HTTP/1.1 202 Accepted
-       Location: /product-segmentation/RUN_<ISO>_<hash>/stream
+       Location: /product-segment/RUN_<ISO>_<hash>
 
 Backward-compatibility notes
 ---------------------------
@@ -33,8 +33,18 @@ from typing import Any
 
 from fastapi import APIRouter, BackgroundTasks, Depends, HTTPException, Request, Response, status
 
-from product_segment.models import (
-    StartSegmentationRequest,
+from product_segment.models import StartSegmentationRequest
+
+# Supabase connection & repositories
+from core.database.connection import get_supabase_service_client
+from product_segment.repositories.product_segment_assignment_repository import (
+    ProductSegmentRepository,
+)
+from product_segment.repositories.product_segment_run_repository import (
+    SegmentationRunRepository,
+)
+from product_segment.repositories.product_segment_taxonomy_repository import (
+    ProductTaxonomyRepository,
 )
 from product_segment.services.db_product_segmentation import DatabaseProductSegmentationService
 
@@ -42,14 +52,28 @@ from product_segment.services.db_product_segmentation import DatabaseProductSegm
 async def _get_service(request: Request) -> DatabaseProductSegmentationService:  # noqa: D401
     """FastAPI dependency that injects a *singleton* segmentation service."""
 
-    return request.app.state.segmentation_service  # type: ignore[attr-defined]
+    if not hasattr(request.app.state, "product_segment_service"):
+        # Lazy one-time construction when first requested
+        sb_client = get_supabase_service_client()
+
+        run_repo = SegmentationRunRepository(sb_client)
+        assignment_repo = ProductSegmentRepository(sb_client)
+        taxonomy_repo = ProductTaxonomyRepository(sb_client)
+
+        request.app.state.product_segment_service = DatabaseProductSegmentationService(
+            run_repo=run_repo,
+            segment_repo=assignment_repo,
+            taxonomy_repo=taxonomy_repo,
+        )
+
+    return request.app.state.product_segment_service  # type: ignore[attr-defined]
 
 
 # ---------------------------------------------------------------------------
 # Router & endpoint implementations
 # ---------------------------------------------------------------------------
 
-router = APIRouter(prefix="/product-segmentation", tags=["product-segmentation"])
+router = APIRouter(prefix="/product-segment", tags=["product-segment"])
 
 
 # ---------------------------------------------------------------------------
@@ -59,22 +83,12 @@ router = APIRouter(prefix="/product-segmentation", tags=["product-segmentation"]
 
 
 class CreateSegmentationRunRequest(StartSegmentationRequest):
-    """Request body for ``POST /product-segmentation`` (v6.2).
+    """Local wrapper identical to :class:`StartSegmentationRequest`.
 
-    Public field names follow README §5.1.  The *product_category* indicates
-    the high-level Amazon category of all supplied products.
+    Exists only so the public OpenAPI schema can evolve independently from
+    the service contract.  All field/alias handling is already implemented in
+    the base dataclass – no additional properties required here.
     """
-
-    product_category: str  # noqa: D401 – public field required by spec
-
-    model_config = {
-        "populate_by_name": True,
-    }
-
-    # Aliases so we can pass through to the service without changes.
-    @property
-    def category(self) -> str:  # pragma: no cover – alias expected by service
-        return self.product_category
 
 
 # ---------------------------------------------------------------------------
@@ -144,6 +158,6 @@ async def create_and_start_run(
     # --- trigger processing asynchronously ---------------------------------
     background_tasks.add_task(service.execute_run, run_id)
 
-    # Location → progress stream -------------------------------------------
-    headers = {"Location": f"/product-segmentation/{run_id}/stream"}
+    # Location header points to the run resource (no longer /stream endpoint)
+    headers = {"Location": f"/product-segment/{run_id}"}
     return Response(status_code=status.HTTP_202_ACCEPTED, headers=headers)

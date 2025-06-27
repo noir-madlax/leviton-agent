@@ -9,6 +9,7 @@ from __future__ import annotations
 import json
 import logging
 from typing import Any, Dict, Optional
+from datetime import datetime
 
 from supabase import Client  # type: ignore
 
@@ -32,6 +33,13 @@ class SegmentationRunRepository:
     def _model_to_payload(model: ProductSegmentRun) -> Dict[str, Any]:
         """Convert ProductSegmentRun → dict suitable for Supabase insert/update."""
         data = model.model_dump()
+
+        # Supabase REST API expects RFC3339/ISO formatted strings for timestamp columns.
+        # Convert any ``datetime`` objects to their ISO representation to avoid
+        # ``Object of type datetime is not JSON serializable`` errors.
+        if isinstance(data.get("created_at"), datetime):
+            data["created_at"] = data["created_at"].isoformat()
+
         for col in _JSON_COLS:
             if col in data and data[col] is not None:
                 data[col] = json.dumps(data[col])
@@ -77,23 +85,3 @@ class SegmentationRunRepository:
             .execute()
         )
         return bool(result.data)
-
-    async def update_total_calls(self, run_id: str, total_calls: int) -> bool:
-        """Update total expected LLM calls for the run."""
-        result = (
-            self._client.table(_TABLE)
-            .update({"calls_total": total_calls})
-            .eq("id", run_id)
-            .execute()
-        )
-        return bool(result.data)
-
-    async def update_calls_done(self, run_id: str, calls_done: int) -> bool:
-        """Update number of completed LLM calls."""
-        result = (
-            self._client.table(_TABLE)
-            .update({"calls_done": calls_done})
-            .eq("id", run_id)
-            .execute()
-        )
-        return bool(result.data) 

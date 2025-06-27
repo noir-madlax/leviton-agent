@@ -1,30 +1,54 @@
-"""Database-integrated Product Segmentation service (v6.0).
+"""Database-integrated Product Segmentation service (v7.0)
 
-This module provides the implementation of the end-to-end segmentation flow
-with database integration. The service orchestrates three LLM phases:
-1. Extraction - extract per-batch taxonomies
-2. Consolidation - merge batch taxonomies into a global set
-3. Refinement - re-assign products with full taxonomy context
+Re-implemented to leverage the generic three-stage taxonomy pipeline used by
+unit-tests:
+  • ExtractionStage         – per-batch taxonomy extraction
+  • ConsolidationStage      – progressive taxonomy consolidation
+  • RefinementStage         – batched assignment refinement
 
-The service currently supports two main operations:
-1. create_run - Creates a new segmentation run and associates products
-2. execute_run - Processes the run through all stages, tracking progress
+All LLM interaction happens inside these stage helpers, mirroring the exact
+control-flow exercised by
+  backend/product_segment/tests/llm/test_taxonomy_extraction.py,
+  backend/product_segment/tests/llm/test_taxonomy_consolidation.py and
+  backend/product_segment/tests/llm/test_taxonomy_refinement.py
+
+The service retains the same public interface (create_run / execute_run) and
+continues to persist intermediate artefacts through the provided Supabase
+repositories.
 """
 
-import asyncio
+from __future__ import annotations
+
 import logging
 import math
-from datetime import datetime
-from typing import Any, Dict, List, Optional, Protocol, Sequence
 import secrets
+from datetime import datetime
+from typing import Callable, Dict, List, Optional
 
+from core.utils.batching import make_batches
+from product_segment import config as seg_cfg
+from product_segment.llm.taxonomy_consolidation import (
+    ConsolidationStage,
+    ConsolidationStageContext,
+)
+from product_segment.llm.taxonomy_dedup_uitl import (
+    deduplicate_taxonomy_batches,
+)
+from product_segment.llm.taxonomy_extraction import (
+    ExtractionStage,
+    ExtractionStageContext,
+    TaxonomyDTO,
+)
+from product_segment.llm.taxonomy_refinement import (
+    RefinementStage,
+    RefinementStageContext,
+)
 from product_segment.models import (
-    InteractionType,
-    SegmentationStage,
-    StartSegmentationRequest,
+    ProductSegmentAssignment,
     ProductSegmentRun,
     ProductSegmentTaxonomy,
-    ProductSegmentAssignment,
+    SegmentationStage,
+    StartSegmentationRequest,
 )
 from product_segment.repositories.product_segment_assignment_repository import (
     ProductSegmentRepository,
@@ -35,105 +59,73 @@ from product_segment.repositories.product_segment_run_repository import (
 from product_segment.repositories.product_segment_taxonomy_repository import (
     ProductTaxonomyRepository,
 )
-from core.utils.batching import make_batches
-from product_segment import config as seg_cfg
-
-try:
-    from backend.config import settings
-except ModuleNotFoundError:  # pragma: no cover – fallback for direct module execution
-    import sys as _sys
-    from importlib import import_module as _import_module
-    from pathlib import Path as _Path
-
-    _project_root = _Path(__file__).resolve().parents[2]
-    _sys.path.append(str(_project_root))
-    settings = _import_module("config").settings
 
 logger = logging.getLogger(__name__)
 
-# ---------------------------------------------------------------------------
-# Typed protocol for the (pluggable) LLM client
-# ---------------------------------------------------------------------------
 
-class SegmentationLLMClient(Protocol):
-    """Subset of the LLM client interface that the service relies on."""
+class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is inevitably long
+    """Orchestrates Extraction → Consolidation → Refinement using LLM stages."""
 
-    async def segment_products(
-        self,
-        products: Sequence[int],
-        *,
-        category: Optional[str] = None,
-    ) -> Dict[str, Any]:
-        """Perform segmentation on the supplied products."""
-
-    async def consolidate_taxonomy(
-        self,
-        taxonomies: List[Dict[str, Any]],
-    ) -> Dict[str, Any]:
-        """Consolidate multiple batch-level taxonomies into one unified set."""
-
-    async def refine_assignments(
-        self,
-        segments: List[Dict[str, Any]],
-        taxonomies: Optional[List[Dict[str, Any]]] = None,
-    ) -> Dict[str, Any]:
-        """Refine product-to-taxonomy assignments."""
-
-class DatabaseProductSegmentationService:
-    """Core orchestration logic for Product Segmentation v6.0."""
+    # ---------------------------------------------------------------------
+    # Construction helpers
+    # ---------------------------------------------------------------------
 
     def __init__(
         self,
         run_repo: SegmentationRunRepository,
         segment_repo: ProductSegmentRepository,
-        segment_llm_client: SegmentationLLMClient,
-        taxonomy_repo: ProductTaxonomyRepository
+        taxonomy_repo: ProductTaxonomyRepository,
+        *,
+        title_fetcher: Optional[Callable[[int], str]] = None,
     ) -> None:
         self._run_repo = run_repo
         self._segment_repo = segment_repo
         self._taxonomy_repo = taxonomy_repo
-        self._segment_llm_client = segment_llm_client
+        # Fallback title-fetcher just converts the product-id to a placeholder str.
+        self._title_fetcher: Callable[[int], str] = title_fetcher or (lambda pid: f"Product {pid}")
+
+        # Stage instances are **stateless**, safe to keep around.
+        self._extraction_stage = ExtractionStage()
+        self._consolidation_stage = ConsolidationStage()
+        self._refinement_stage = RefinementStage()
+
+    # ------------------------------------------------------------------
+    # Public API
+    # ------------------------------------------------------------------
 
     async def create_run(self, request: StartSegmentationRequest) -> str:
-        """Create a new segmentation run."""
-        run_id = f"RUN_{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}_{secrets.token_hex(2)}"
+        """Insert DB rows for a new segmentation run and its placeholder data."""
+        run_id = (
+            f"RUN_{datetime.utcnow().strftime('%Y%m%dT%H%M%SZ')}_{secrets.token_hex(2)}"
+        )
 
-        # Create run record
+        # 1) Run row ----------------------------------------------------------------
         run = ProductSegmentRun(
             id=run_id,
             stage=SegmentationStage.INIT,
-            llm_config={},  # Use default config from environment
-            processing_params={
-                "batch_size": seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT
-            }
+            llm_config={},  # default global config
+            processing_params={"batch_size": seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT,
+                               "product_category": request.product_category},
         )
         await self._run_repo.create(run)
 
-        # Create initial unassigned taxonomy
-        unassigned_tax = ProductSegmentTaxonomy(
-            run_id=run_id,
-            segment_name="__UNASSIGNED__",
-            definition="Auto-generated placeholder",
-            stage="init"
+        # 2) Special taxonomies ------------------------------------------------------
+        unassigned_id = await self._taxonomy_repo.create_taxonomy(
+            ProductSegmentTaxonomy(
+                run_id=run_id,
+                segment_name="__UNASSIGNED__",
+                definition="Auto-generated placeholder",
+                stage="init",
+            )
         )
-        unassigned_id = await self._taxonomy_repo.create_taxonomy(unassigned_tax)
 
-        # Create out-of-scope taxonomy
-        out_of_scope_tax = ProductSegmentTaxonomy(
-            run_id=run_id,
-            segment_name="__OUT_OF_SCOPE__",
-            definition="Products totally irrelevant to the current category",
-            stage="system"
-        )
-        await self._taxonomy_repo.create_taxonomy(out_of_scope_tax)
-
-        # Create initial assignments
+        # 3) Assignment rows ---------------------------------------------------------
         assignments = [
             ProductSegmentAssignment(
                 run_id=run_id,
                 product_id=pid,
                 taxonomy_id_initial=unassigned_id,
-                taxonomy_id_refined=None
+                taxonomy_id_refined=unassigned_id,
             )
             for pid in request.product_ids
         ]
@@ -141,138 +133,259 @@ class DatabaseProductSegmentationService:
 
         return run_id
 
-    async def execute_run(self, run_id: str) -> None:
-        """Execute a segmentation run to completion."""
+    # ------------------------------------------------------------------
+    # Main orchestration
+    # ------------------------------------------------------------------
+
+    async def execute_run(self, run_id: str) -> None:  # noqa: C901 – complexity expected
+        """Run Extraction → Consolidation → Refinement end-to-end."""
         try:
             run = await self._run_repo.get_by_id(run_id)
             if run is None:
                 raise ValueError(f"Run {run_id} not found")
 
-            # Get products for this run
-            products = await self._segment_repo.get_run_products(run_id)
-            if not products:
+            # ------------------------------------------------------------------
+            # Gather input data
+            # ------------------------------------------------------------------
+            product_ids: List[int] = await self._segment_repo.get_run_products(run_id)
+            if not product_ids:
                 raise ValueError(f"No products found for run {run_id}")
 
-            # Calculate expected LLM calls for progress tracking
-            seg_batches = math.ceil(len(products) / seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT)
-            consolidation_levels = math.ceil(math.log2(seg_batches))
-            consolidation_calls = 2 ** consolidation_levels - 1
-            ref_batches = math.ceil(len(products) / seg_cfg.PRODUCTS_PER_REFINEMENT)
-            total_calls = seg_batches + consolidation_calls + ref_batches
+            product_titles: List[str] = [self._title_fetcher(pid) for pid in product_ids]
+
+            # ------------------------------------------------------------------
+            # Calculate rough call budget (pre-extraction)
+            # ------------------------------------------------------------------
+            seg_batches = math.ceil(
+                len(product_titles) / seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT
+            )
+            ref_batches = math.ceil(len(product_titles) / seg_cfg.PRODUCTS_PER_REFINEMENT)
+            # Consolidation calls are approximated pessimistically (n-1)
+            consolidation_calls_est = max(0, seg_batches - 1)
             calls_done = 0
 
-            # Update run with total calls
-            await self._run_repo.update_total_calls(run_id, total_calls)
 
-            # 1. Extraction Stage
+            # Mapping helpers -----------------------------------------------------
+            taxonomy_name_to_id: Dict[str, int] = {}
+            product_id_to_taxonomy: Dict[int, str] = {}
+            # Tracks every *direct* merge seen during consolidation. Key = old
+            # taxonomy name, value = the immediate merge target.  Will be
+            # collapsed to its canonical (final) representative after all
+            # consolidation passes finish.
+            raw_merge_map: Dict[str, str] = {}
+
+            # ------------------------------------------------------------------
+            # 1) Extraction Stage
+            # ------------------------------------------------------------------
             await self._run_repo.update_stage(run_id, SegmentationStage.EXTRACTION)
-            batch_taxonomies = []
-            all_segments = []
-            
-            batches = make_batches(products, seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT)
-            for batch_idx, batch in enumerate(batches):
-                result = await self._segment_llm_client.segment_products(
-                    batch,
-                    category=run.product_category,
-                )
 
-                # Store taxonomies and segments
-                taxonomies = [
-                    ProductSegmentTaxonomy(
-                        run_id=run_id,
-                        segment_name=t["category_name"],
-                        definition=t.get("definition", ""),
-                        stage="extraction"
+            # Pair (id, title) to keep them together through the shuffling in make_batches
+            product_pairs: List[tuple[int, str]] = list(zip(product_ids, product_titles))
+            extraction_batches = make_batches(
+                product_pairs, seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT
+            )
+            batch_taxonomies: List[List[TaxonomyDTO]] = []
+
+            for batch_idx, batch in enumerate(extraction_batches):
+                batch_product_ids = [pid for pid, _ in batch]
+                batch_titles = [title for _, title in batch]
+
+                ctx = ExtractionStageContext(
+                    product_category=run.processing_params.get('product_category', ''),
+                    input_texts=batch_titles,
+                )
+                result = await self._extraction_stage.execute(ctx)
+
+                # Insert new taxonomies (extraction stage)
+                new_tax_entries: List[ProductSegmentTaxonomy] = []
+                for tax in result.taxonomies_extracted:
+                    if tax.name not in taxonomy_name_to_id:
+                        new_tax_entries.append(
+                            ProductSegmentTaxonomy(
+                                run_id=run_id,
+                                segment_name=tax.name,
+                                definition=tax.definition,
+                                stage="extraction",
+                            )
+                        )
+                if new_tax_entries:
+                    new_ids = await self._taxonomy_repo.batch_create_taxonomies(
+                        new_tax_entries
                     )
-                    for t in result.get("taxonomies", [])
-                ]
-                tax_ids = await self._taxonomy_repo.batch_create_taxonomies(taxonomies)
-                
-                # Update assignments with initial taxonomy IDs
-                for segment in result.get("segments", []):
-                    tax_idx = segment["taxonomy_id"] - 1
-                    if 0 <= tax_idx < len(tax_ids):
+                    for entry, tid in zip(new_tax_entries, new_ids):
+                        taxonomy_name_to_id[entry.segment_name] = tid
+
+                # Persist initial assignments
+                for local_idx, taxonomy_name in result.assignments_initial.items():
+                    product_id = batch_product_ids[local_idx]
+                    product_id_to_taxonomy[product_id] = taxonomy_name
+                    taxonomy_id = taxonomy_name_to_id.get(taxonomy_name)
+                    if taxonomy_id:
                         await self._segment_repo.update_initial_taxonomy(
-                            run_id,
-                            segment["product_id"],
-                            tax_ids[tax_idx]
+                            run_id, product_id, taxonomy_id
+                        )
+                        # Default refined assignment to the initial taxonomy –
+                        # this ensures every product has a *refined* category
+                        # even when the refinement stage performs **no**
+                        # reassignments.
+                        await self._segment_repo.update_refined_taxonomy(
+                            run_id, product_id, taxonomy_id,
                         )
 
-                batch_taxonomies.extend(result.get("taxonomies", []))
-                all_segments.extend(result.get("segments", []))
-                
-                # Update progress
-                calls_done += 1
-                await self._run_repo.update_calls_done(run_id, calls_done)
+                batch_taxonomies.append(result.taxonomies_extracted)
 
-            # 2. Consolidation Stage
+            # ------------------------------------------------------------------
+            # 2) Consolidation Stage
+            # ------------------------------------------------------------------
             await self._run_repo.update_stage(run_id, SegmentationStage.CONSOLIDATION)
-            
-            current_level = 0
-            current_taxonomies = batch_taxonomies
 
-            while len(current_taxonomies) > 1:
-                next_level = []
-                pairs = [(current_taxonomies[i], current_taxonomies[i + 1]) 
-                        for i in range(0, len(current_taxonomies) - 1, 2)]
-                
-                if len(current_taxonomies) % 2:
-                    pairs.append((current_taxonomies[-1], []))
+            # Deduplicate inside + across batches to minimise LLM calls
+            dedup_batches = deduplicate_taxonomy_batches(batch_taxonomies)
+            if not dedup_batches:
+                raise RuntimeError("No taxonomies extracted – cannot consolidate")
 
-                for pair_idx, (left, right) in enumerate(pairs):
-                    result = await self._segment_llm_client.consolidate_taxonomy(
-                        [left, right] if right else [left]
-                    )
-
-                    next_level.extend(result.get("taxonomies", []))
-                    
-                    # Update progress
-                    calls_done += 1
-                    await self._run_repo.update_calls_done(run_id, calls_done)
-
-                current_taxonomies = next_level
-                current_level += 1
-
-            consolidated = current_taxonomies[0] if len(current_taxonomies) == 1 else current_taxonomies
-
-            # Store final taxonomies
-            final_taxonomies = [
-                ProductSegmentTaxonomy(
-                    run_id=run_id,
-                    segment_name=t["category_name"],
-                    definition=t.get("definition", ""),
-                    stage="final"
+            current_consolidated: List[TaxonomyDTO] = dedup_batches[0]
+            for batch in dedup_batches[1:]:
+                ctx = ConsolidationStageContext(
+                    product_category=run.processing_params.get('product_category', ''),
+                    taxonomy_a=current_consolidated,
+                    taxonomy_b=batch,
                 )
-                for t in consolidated
-            ]
-            await self._taxonomy_repo.batch_create_taxonomies(final_taxonomies)
+                res = await self._consolidation_stage.execute(ctx)
+                current_consolidated = [c.taxonomy for c in res.taxonomies_consolidated]
 
-            # 3. Refinement Stage
+                # ------------------------------------------------------------------
+                # Record mapping old_name → new_name for *every* merge so we can
+                # later rewrite product assignments in one shot.
+                # ------------------------------------------------------------------
+                for cons in res.taxonomies_consolidated:
+                    new_name = cons.taxonomy.name
+                    # Identity mapping for the consolidated category itself –
+                    # needed so _canonical below terminates for untouched names.
+                    raw_merge_map.setdefault(new_name, new_name)
+
+                    for orig in cons.original_taxonomies:
+                        raw_merge_map[orig.name] = new_name
+
+            final_taxonomies: List[TaxonomyDTO] = current_consolidated
+
+            # Persist final taxonomies -----------------------------------------
+            new_final_entries: List[ProductSegmentTaxonomy] = []
+            for tax in final_taxonomies:
+                if tax.name not in taxonomy_name_to_id:
+                    new_final_entries.append(
+                        ProductSegmentTaxonomy(
+                            run_id=run_id,
+                            segment_name=tax.name,
+                            definition=tax.definition,
+                            stage="final",
+                        )
+                    )
+            if new_final_entries:
+                new_ids = await self._taxonomy_repo.batch_create_taxonomies(
+                    new_final_entries
+                )
+                for entry, tid in zip(new_final_entries, new_ids):
+                    taxonomy_name_to_id[entry.segment_name] = tid
+
+            # ------------------------------------------------------------------
+            # Build *canonical* mapping (follow chains A→B→C→… ⇒ A→C, B→C, …)
+            # and update all in-memory & persisted assignments exactly once.
+            # ------------------------------------------------------------------
+
+            def _canonical(name: str) -> str:
+                """Collapse raw_merge_map chains to their final representative."""
+                seen: set[str] = set()
+                while raw_merge_map.get(name) and raw_merge_map[name] != name:
+                    if name in seen:  # should not happen, safeguard against loops
+                        break
+                    seen.add(name)
+                    name = raw_merge_map[name]
+                return name
+
+            canonical_map: Dict[str, str] = {k: _canonical(k) for k in raw_merge_map}
+
+            # Rewrite in-memory mapping and batch DB updates for changed products
+            for pid, old_name in list(product_id_to_taxonomy.items()):
+                new_name = canonical_map.get(old_name, old_name)
+
+                if new_name == old_name:
+                    continue  # unchanged
+
+                product_id_to_taxonomy[pid] = new_name
+
+                # Ensure the consolidated taxonomy exists in DB → taxonomy_name_to_id
+                if new_name not in taxonomy_name_to_id:
+                    new_tid = await self._taxonomy_repo.create_taxonomy(
+                        ProductSegmentTaxonomy(
+                            run_id=run_id,
+                            segment_name=new_name,
+                            definition="",  # definition already captured in final_taxonomies or unknown
+                            stage="final",
+                        )
+                    )
+                    taxonomy_name_to_id[new_name] = new_tid
+
+                tax_id = taxonomy_name_to_id[new_name]
+
+                # Persist both initial & refined taxonomy columns so that the
+                # database reflects the consolidated taxonomy *before* the
+                # refinement stage begins.
+                await self._segment_repo.update_initial_taxonomy(run_id, pid, tax_id)
+                await self._segment_repo.update_refined_taxonomy(run_id, pid, tax_id)
+
+            # ------------------------------------------------------------------
+            # 3) Refinement Stage
+            # ------------------------------------------------------------------
             await self._run_repo.update_stage(run_id, SegmentationStage.REFINEMENT)
-            
-            segment_batches = make_batches(all_segments, seg_cfg.PRODUCTS_PER_REFINEMENT)
-            for batch_idx, batch in enumerate(segment_batches):
-                result = await self._segment_llm_client.refine_assignments(
-                    batch,
-                    taxonomies=consolidated
-                )
 
-                # Update assignments with refined taxonomy IDs
-                for segment in result.get("segments", []):
-                    await self._segment_repo.update_refined_taxonomy(
-                        run_id,
-                        segment["product_id"],
-                        segment["taxonomy_id"]
+            batch_size = seg_cfg.PRODUCTS_PER_REFINEMENT
+            for offset in range(0, len(product_titles), batch_size):
+                batch_titles = product_titles[offset : offset + batch_size]
+                batch_assignments = {}
+                for idx, title in enumerate(batch_titles):
+                    global_product_idx = offset + idx
+                    product_id = product_ids[global_product_idx]
+                    batch_assignments[idx] = product_id_to_taxonomy.get(
+                        product_id, "__UNASSIGNED__"
                     )
 
-                # Update progress
-                calls_done += 1
-                await self._run_repo.update_calls_done(run_id, calls_done)
+                ctx = RefinementStageContext(
+                    product_category=run.processing_params.get('product_category', ''),
+                    taxonomies=final_taxonomies,
+                    current_assignments=batch_assignments,
+                    input_texts=batch_titles,
+                )
+                res = await self._refinement_stage.execute(ctx)
 
-            # Mark run as completed
+                # Persist reassignments --------------------------------------
+                for local_idx, new_tax_name in res.reassignments.items():
+                    global_idx = offset + local_idx
+                    product_id = product_ids[global_idx]
+
+                    # Ensure taxonomy exists in DB
+                    if new_tax_name not in taxonomy_name_to_id:
+                        new_id = await self._taxonomy_repo.create_taxonomy(
+                            ProductSegmentTaxonomy(
+                                run_id=run_id,
+                                segment_name=new_tax_name,
+                                definition="",  # definition unknown at this point
+                                stage="refined",
+                            )
+                        )
+                        taxonomy_name_to_id[new_tax_name] = new_id
+
+                    taxonomy_id = taxonomy_name_to_id[new_tax_name]
+                    await self._segment_repo.update_refined_taxonomy(
+                        run_id, product_id, taxonomy_id
+                    )
+
+            # ------------------------------------------------------------------
+            # Done!
+            # ------------------------------------------------------------------
             await self._run_repo.update_stage(run_id, SegmentationStage.COMPLETED)
 
-        except Exception as exc:
+        except Exception as exc:  # pylint: disable=broad-except
             logger.exception("Run %s failed: %s", run_id, exc)
             await self._run_repo.update_stage(run_id, SegmentationStage.FAILED)
             raise 

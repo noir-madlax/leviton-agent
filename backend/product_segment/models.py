@@ -20,13 +20,6 @@ class SegmentationStage(str, Enum):
     FAILED = "failed"
 
 
-class InteractionType(str, Enum):
-    """Type of LLM interaction."""
-    EXTRACTION = "extraction"
-    CONSOLIDATION = "consolidation"
-    REFINEMENT = "refinement"
-
-
 class StartSegmentationRequest(BaseModel):
     """Request to start a new segmentation run."""
     product_ids: List[int]
@@ -59,20 +52,3 @@ class ProductSegmentAssignment(BaseModel):
     taxonomy_id_initial: int
     taxonomy_id_refined: int
 
-
-class ProductSegmentLLMInteraction(BaseModel):
-    """Data for an LLM interaction record, matching product_segment_llm_interactions table."""
-    run_id: str
-    interaction_type: InteractionType
-    batch_id: int
-    attempt: int = 1
-    file_path: str
-    cache_key: Optional[str] = None
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-
-
-class ProgressEvent(BaseModel):
-    """Event emitted to track segmentation progress."""
-    run_id: str
-    percent: float
-    stage: SegmentationStage
