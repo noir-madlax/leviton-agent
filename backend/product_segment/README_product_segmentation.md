@@ -107,32 +107,6 @@ CREATE TABLE product_segment_assignments (
 );
 ```
 
-*The generic `progress_batches / total_batches / progress_percent` columns have
-been replaced by stage-specific counters so UIs can render three independent
-progress bars.*
-
-### 4.0.a Consolidation batch math
-Given `N₀ = ceil(total_taxonomies / TAXONOMIES_PER_PROMPT)` initial taxonomy batches, we compute
-```
-levels = ceil(log2(N₀))     -- always an integer
-con_batches_total = levels  -- written to run header before consolidation starts
-```
-
-The service then merges **pair-wise**:
-1. `[1,2] → 101`  (where *101* is a new taxonomy batch id)
-2. `[3,4] → 102`
-3. `[101,102] → final`
-
-At each merge the service increments `con_batches_done`.  When it equals
-`con_batches_total` the `stage` flips to `refinement`.
-
-### 4.1 Assignment lifecycle
-1. **Run creation** inserts one `product_segment_taxonomies` row with `segment_name='__UNASSIGNED__'` and stores its ID (`u_id`).
-2. Service bulk-inserts one row per product into `product_segment_assignments` with `taxonomy_id_initial = u_id` and `taxonomy_id_refined = NULL`.
-3. Segmentation batches `UPDATE … SET taxonomy_id_initial = <extracted>`.
-4. Refinement `UPDATE … SET taxonomy_id_refined = <refined>`.
-
-This design keeps referential integrity while allowing "not yet assigned" rows without a null foreign-key.
 
 ## 5. Public API (v6.2)
 ### 5.1 Create & run (single call)
@@ -146,34 +120,6 @@ POST /product-segmentation
 HTTP/1.1 202 Accepted
 Location: /product-segmentation/RUN_20250618T120301Z_8d24/stream
 ```
-
-### 5.3 How `percent` is calculated
-Progress is proportional to the **number of LLM calls** still outstanding.
-For each stage we pre-compute:
-
-| Stage            | Calls per run |
-|------------------|--------------|
-| Segmentation     | seg_batches_total |
-| Consolidation    | `2^x − 1` where `x = ceil(log2(seg_batches_total))` |
-| Refinement       | ref_batches_total |
-
-Total expected calls  
-`C_total = seg_batches_total + (2^x − 1) + ref_batches_total`
-
-After every LLM response we increment `calls_done` and broadcast:  
-`percent = round((calls_done / C_total) * 100, 1)`
-
-Because consolidation merges batches **pair-wise** the call sequence is:
-```
-level 0  : [1,2] [3,4] [5,6] [7,8]         →  2^(x-1)  calls
-level 1  : [9,10] [11,12] …                 →  2^(x-2)
-…
-level x-1: final                             →  1        call
-```
-Sum = `2^(x) − 1` calls.
-
-The result is a smooth, monotonic single bar with no sudden jumps between
-stages, while still reflecting true LLM throughput.
 
 ## 6. Configuration (env / cfg)
 ```
