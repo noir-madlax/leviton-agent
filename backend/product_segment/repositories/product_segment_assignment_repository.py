@@ -74,3 +74,18 @@ class ProductSegmentRepository:
         except Exception as exc:
             logger.exception("Failed to update refined taxonomy: %s", exc)
             return False 
+
+    async def update_segment_name(self, run_id: str, product_id: int, segment_name: str) -> bool:
+        """Update segment name for final assignment."""
+        try:
+            result = (
+                self._client.table(_TABLE)
+                .update({"segment_name": segment_name})
+                .eq("run_id", run_id)
+                .eq("product_id", product_id)
+                .execute()
+            )
+            return bool(result.data)
+        except Exception as exc:
+            logger.exception("Failed to update segment name: %s", exc)
+            return False 

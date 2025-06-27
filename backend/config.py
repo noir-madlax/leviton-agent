@@ -20,15 +20,25 @@ class Settings:
     # Storage settings
     STORAGE_ROOT: Path = Path(os.getenv("STORAGE_ROOT", str(PROJECT_ROOT / "data" / "llm_logs")))
     
-    # 模型设置
-    #测试过程中，便宜考虑用这个flash
-    # MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-flash-preview-05-20")
-    # MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-flash-lite-preview-06-17")
-    # 生成可以用 pro
-    MODEL_ID: str = os.getenv("MODEL_ID", "google/gemini-2.5-pro-preview")
+    # 模型设置 - 根据REGION自动选择
+    REGION: str = os.getenv("REGION", "us")
+    
+    def __init__(self):
+        """初始化Settings，根据REGION设置模型"""
+        if self.REGION.lower() == 'cn':
+            # CN环境使用OpenRouter的Claude模型
+            self.MODEL_ID = os.getenv("MODEL_ID", "anthropic/claude-sonnet-4")
+            self.API_KEY = os.getenv("OPENROUTER_API_KEY")
+        else:
+            # US环境或默认使用Google Gemini
+            #测试过程中，便宜考虑用这个flash
+            # self.MODEL_ID = os.getenv("MODEL_ID", "google/gemini-2.5-flash-preview-05-20")
+            # self.MODEL_ID = os.getenv("MODEL_ID", "google/gemini-2.5-flash-lite-preview-06-17")
+            # 生成可以用 pro
+            self.MODEL_ID = os.getenv("MODEL_ID", "google/gemini-2.5-pro-preview")
+            self.API_KEY = os.getenv("API_KEY")
     
     HF_TOKEN: Optional[str] = os.getenv("HF_TOKEN")
-    API_KEY: str = os.getenv("API_KEY")
     
     # MCP 设置
     MCP_ACCESS_TOKEN: str = os.getenv("MCP_ACCESS_TOKEN")

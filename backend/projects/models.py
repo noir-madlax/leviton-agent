@@ -41,6 +41,11 @@ class Project(BaseModel):
     created_at: datetime
     updated_at: datetime
     status: str
+    segmentation_run_id: Optional[str] = None
+    segmentation_started_at: Optional[datetime] = None
+    segmentation_completed_at: Optional[datetime] = None
+    segmentation_duration_seconds: Optional[int] = None
+    segmentation_status: Optional[str] = "pending"
 
 
 class ProjectCreateResponse(BaseModel):
@@ -53,3 +58,4 @@ class ProjectCreateResponse(BaseModel):
     total_reviews: int
     avg_monthly_sales: float
     status: str 
+    segmentation_status: Optional[str] = "pending" 

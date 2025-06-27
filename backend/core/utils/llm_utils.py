@@ -14,8 +14,11 @@ import json
 from typing import Any, Dict, Optional, Callable, List
 from dotenv import load_dotenv, find_dotenv
 from langchain_anthropic import ChatAnthropic
+from langchain_openai import ChatOpenAI
 import re
 from dataclasses import dataclass
+from abc import ABC, abstractmethod
+from typing import Any
 
 from core.utils.rate_limiter import RateLimiter
 from core.utils import config as cfg
@@ -69,6 +72,108 @@ def create_retry_error_details(error_categories: Dict[str, List[str]]) -> str:
 class LLMCallError(RuntimeError):
     """Raised after *MAX_ATTEMPTS_PER_CALL* unsuccessful attempts."""
 
+
+# 抽象LLM客户端接口
+class LLMClient(ABC):
+    """抽象LLM客户端接口，支持不同的LLM提供商"""
+    
+    @abstractmethod
+    async def ainvoke(self, prompt: str) -> Any:
+        """异步调用LLM"""
+        pass
+        
+    @property
+    @abstractmethod
+    def model_name(self) -> str:
+        """模型名称"""
+        pass
+
+
+class AnthropicLLMClient(LLMClient):
+    """Anthropic Claude客户端实现"""
+    
+    def __init__(self, api_key: str, model: str, temperature: float, max_tokens: int):
+        self.client = ChatAnthropic(
+            model=model,
+            temperature=temperature,
+            max_tokens=max_tokens,
+            anthropic_api_key=api_key,
+        )
+        self._model_name = model
+    
+    async def ainvoke(self, prompt: str) -> Any:
+        return await self.client.ainvoke(prompt)
+        
+    @property
+    def model_name(self) -> str:
+        return self._model_name
+
+
+class OpenRouterLLMClient(LLMClient):
+    """OpenRouter客户端实现，使用OpenAI兼容接口"""
+    
+    def __init__(self, api_key: str, base_url: str, model: str, temperature: float, max_tokens: int):
+        # OpenRouter使用OpenAI兼容接口
+        self.client = ChatOpenAI(
+            model=model,
+            temperature=temperature,
+            max_tokens=max_tokens,
+            openai_api_key=api_key,
+            openai_api_base=base_url,
+        )
+        self._model_name = model
+    
+    async def ainvoke(self, prompt: str) -> Any:
+        return await self.client.ainvoke(prompt)
+        
+    @property  
+    def model_name(self) -> str:
+        return self._model_name
+
+
+class LLMClientFactory:
+    """LLM客户端工厂，根据环境变量创建合适的客户端"""
+    
+    @staticmethod
+    def create_client(region: str, model: str, temperature: float, max_tokens: int) -> LLMClient:
+        if region.lower() == 'cn':
+            # CN环境使用OpenRouter
+            api_key = os.getenv("OPENROUTER_API_KEY")
+            base_url = os.getenv("OPENROUTER_BASE_URL", "https://openrouter.ai/api/v1")
+            if not api_key:
+                raise EnvironmentError(
+                    "OPENROUTER_API_KEY must be set for CN region. "
+                    "Please set OPENROUTER_API_KEY in your environment variables."
+                )
+            
+            # OpenRouter中Claude模型名称映射
+            # claude-sonnet-4-20250514 -> anthropic/claude-sonnet-4
+            if model.startswith("claude-sonnet-4"):
+                openrouter_model = "anthropic/claude-sonnet-4"
+            elif model.startswith("claude-opus-4"):
+                openrouter_model = "anthropic/claude-opus-4"
+            elif model.startswith("claude-3-7-sonnet"):
+                openrouter_model = "anthropic/claude-3.7-sonnet"
+            elif model.startswith("claude-3-5-sonnet"):
+                openrouter_model = "anthropic/claude-3.5-sonnet"
+            else:
+                # 默认映射为anthropic前缀
+                openrouter_model = f"anthropic/{model}"
+            
+            logger.info(f"CN region: Using OpenRouter with model {openrouter_model}")
+            return OpenRouterLLMClient(api_key, base_url, openrouter_model, temperature, max_tokens)
+        else:
+            # US环境或默认使用Anthropic
+            api_key = os.getenv("ANTHROPIC_API_KEY")
+            if not api_key:
+                raise EnvironmentError(
+                    "ANTHROPIC_API_KEY must be set for US region. "
+                    "Unit-tests should monkeypatch 'backend.utils.llm_utils.safe_llm_call' instead."
+                )
+            
+            logger.info(f"US region: Using Anthropic with model {model}")
+            return AnthropicLLMClient(api_key, model, temperature, max_tokens)
+
 class LLMManager:  # pylint: disable=too-few-public-methods
     """Manager for LLM model initialization and configuration.
 
@@ -94,21 +199,15 @@ class LLMManager:  # pylint: disable=too-few-public-methods
         self.rate_limiter = get_global_rate_limiter()
         self.llm = self._initialize_llm()
 
-    def _initialize_llm(self) -> ChatAnthropic:
-        """Initialize Claude model with configuration."""
-        api_key = os.getenv("ANTHROPIC_API_KEY")
-
-        if not api_key:
-            raise EnvironmentError(
-                "ANTHROPIC_API_KEY must be set for production and integration tests. "
-                "Unit-tests should monkeypatch 'backend.utils.llm_utils.safe_llm_call' instead."
-            )
-
-        return ChatAnthropic(
+    def _initialize_llm(self) -> LLMClient:
+        """Initialize LLM client based on region configuration."""
+        region = os.getenv("REGION", "us")  # 默认为us
+        
+        return LLMClientFactory.create_client(
+            region=region,
             model=self.model_name,
             temperature=self.temperature,
-            max_tokens=self.max_tokens,
-            anthropic_api_key=api_key,
+            max_tokens=self.max_tokens
         )
 
     async def safe_call(

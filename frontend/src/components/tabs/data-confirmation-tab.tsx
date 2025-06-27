@@ -8,11 +8,210 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@
 import { Checkbox } from '@/components/ui/checkbox';
 import { Label } from '@/components/ui/label';
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
-import { CheckCircle, Database, TrendingUp, Users, MessageSquare, Filter, Eye, ChevronDown, ChevronRight, Edit2, Check, X, RefreshCw } from 'lucide-react';
+import { CheckCircle, Database, TrendingUp, Users, MessageSquare, Filter, Eye, ChevronDown, ChevronRight, Edit2, Check, X, RefreshCw, Clock, AlertCircle, Loader2 } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { type DataConfirmationData, type DataConfirmationFilters } from '@/components/analysis-db/data/database-service';
 
-export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnalysis?: (projectName: string) => void }) {
+// 进度显示接口
+interface ProjectProgress {
+  project_id: string;
+  project_name: string;
+  status: string;
+  segmentation_status: string;
+  total_products: number;
+  steps: {
+    step: string;
+    name: string;
+    status: string;
+    started_at?: string;
+    completed_at?: string;
+    description: string;
+    sub_steps?: {
+      name: string;
+      status: string;
+    }[];
+    current_stage?: string;
+  }[];
+}
+
+// 项目进度显示组件
+function ProjectProgressDisplay({ projectId, isCreating, onAnalysisReady, totalProducts }: { 
+  projectId: string | null; 
+  isCreating: boolean;
+  onAnalysisReady?: (projectId: string) => void;
+  totalProducts?: number;
+}) {
+  const [progress, setProgress] = useState<ProjectProgress | null>(null);
+  const [loading, setLoading] = useState(false);
+
+  useEffect(() => {
+    if (!isCreating && !projectId) {
+      setProgress(null);
+      return;
+    }
+
+    const fetchProgress = async () => {
+      // 如果正在创建但还没有projectId，显示创建中状态
+      if (isCreating && !projectId) {
+        setProgress({
+          project_id: 'creating',
+          project_name: 'Creating Project...',
+          status: 'creating',
+          segmentation_status: 'pending',
+          total_products: 0,
+          steps: [
+            {
+              step: 'project_creation',
+              name: 'Project Creation',
+              status: 'in_progress',
+              description: 'Creating project and extracting ASINs...'
+            },
+            {
+              step: 'product_selection',
+              name: 'Product Selection',
+              status: 'pending',
+              description: 'Waiting for project creation...'
+            },
+            {
+              step: 'product_segmentation',
+              name: 'Product Segmentation',
+              status: 'pending',
+              description: 'Waiting for product selection...'
+            },
+            {
+              step: 'data_preparation',
+              name: 'Data Preparation',
+              status: 'pending',
+              description: 'Waiting for segmentation...'
+            }
+          ]
+        });
+        return;
+      }
+
+      if (!projectId) return;
+
+      setLoading(true);
+      try {
+        const API_BASE_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://localhost:8000';
+        const response = await fetch(`${API_BASE_URL}/api/v1/projects/progress/${projectId}`);
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        const data = await response.json();
+        setProgress(data);
+        
+        // 如果完成，通知父组件
+        if (data.segmentation_status === 'completed' && onAnalysisReady && projectId) {
+          onAnalysisReady(projectId);
+        }
+      } catch (error) {
+        console.error('Failed to fetch project progress:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProgress();
+    
+    // 如果处理中或正在创建，定期轮询更新
+    const interval = setInterval(() => {
+      if (isCreating || progress?.segmentation_status === 'processing') {
+        fetchProgress();
+      }
+    }, 9000); // 每9秒检查一次
+
+    return () => clearInterval(interval);
+  }, [projectId, isCreating, progress?.segmentation_status]);
+
+  if (!isCreating && !progress) {
+    return null;
+  }
+
+  // 如果没有progress但正在创建，不显示任何内容（等待fetchProgress设置状态）
+  if (!progress) {
+    return null;
+  }
+
+  const getStatusIcon = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return <CheckCircle className="w-4 h-4 text-green-500" />;
+      case 'in_progress':
+        return <Loader2 className="w-4 h-4 text-blue-500 animate-spin" />;
+      case 'failed':
+        return <AlertCircle className="w-4 h-4 text-red-500" />;
+      default:
+        return <Clock className="w-4 h-4 text-gray-400" />;
+    }
+  };
+
+  const getStatusColor = (status: string) => {
+    switch (status) {
+      case 'completed':
+        return 'text-green-700 bg-green-50 border-green-200';
+      case 'in_progress':
+        return 'text-blue-700 bg-blue-50 border-blue-200';
+      case 'failed':
+        return 'text-red-700 bg-red-50 border-red-200';
+      default:
+        return 'text-gray-600 bg-gray-50 border-gray-200';
+    }
+  };
+
+  return (
+    <Card className="mb-6 border-l-4 border-l-blue-500">
+      <CardHeader className="pb-3">
+        <CardTitle className="flex items-center gap-2 text-lg">
+          <Database className="w-5 h-5 text-blue-500" />
+          Project Progress: {progress.project_name}
+          {loading && <RefreshCw className="w-4 h-4 animate-spin text-blue-500" />}
+        </CardTitle>
+        <CardDescription>
+          Processing status for {progress.total_products || totalProducts || 0} products
+        </CardDescription>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-3">
+          {progress.steps.map((step) => (
+            <div key={step.step} className="flex items-start gap-3">
+              <div className="flex-shrink-0 mt-1">
+                {getStatusIcon(step.status)}
+              </div>
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center justify-between">
+                  <h4 className="font-medium text-sm">{step.name}</h4>
+                  <Badge variant="outline" className={`text-xs ${getStatusColor(step.status)}`}>
+                    {step.status.replace('_', ' ')}
+                  </Badge>
+                </div>
+                <p className="text-xs text-gray-600 mt-1">{step.description}</p>
+                
+                {/* 子步骤显示 */}
+                {step.sub_steps && step.sub_steps.length > 0 && (
+                  <div className="mt-2 ml-4 space-y-1">
+                    {step.sub_steps.map((subStep, subIndex) => (
+                      <div key={subIndex} className="flex items-center gap-2 text-xs">
+                        {getStatusIcon(subStep.status)}
+                        <span className={subStep.status === 'completed' ? 'text-green-700' : subStep.status === 'in_progress' ? 'text-blue-700' : 'text-gray-500'}>
+                          {subStep.name}
+                        </span>
+                      </div>
+                    ))}
+                  </div>
+                )}
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
+
+export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnalysis?: (projectId: string) => void }) {
+  // 暂时不使用onNavigateToAnalysis，让用户看到进度后手动跳转
+  console.log('Navigation callback available:', !!onNavigateToAnalysis);
   const [data, setData] = useState<DataConfirmationData | null>(null);
   const [pageLoading, setPageLoading] = useState(true); // 页面初始加载
   const [filterLoading, setFilterLoading] = useState(false); // 筛选数据加载
@@ -27,8 +226,8 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
   const [isEditingName, setIsEditingName] = useState(false);
   const [tempProjectName, setTempProjectName] = useState('');
   const [isBrandsExpanded, setIsBrandsExpanded] = useState(false);
-
-
+  const [createdProjectId, setCreatedProjectId] = useState<string | null>(null);
+  const [isCreatingProject, setIsCreatingProject] = useState(false);
 
   // 生成智能project名字
   const generateSmartProjectName = () => {
@@ -86,7 +285,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       setFilters({
         categories: result.availableCategories, // 明确选中所有类别
         sources: result.availableSources, // 明确选中所有来源
-        brands: result.stats.brands.map((brand: any) => brand.name), // 明确选中所有品牌
+        brands: result.stats.brands.map((brand: { name: string }) => brand.name), // 明确选中所有品牌
         topSalesCount: 100
       });
     } catch (error) {
@@ -177,6 +376,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     if (!filteredStats) return;
     
     setIsConfirmed(true);
+    setIsCreatingProject(true); // 立即显示进度区域
     
     try {
       // 调用后端API创建项目
@@ -207,16 +407,20 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       const savedProject = await response.json();
       console.log('Project saved successfully:', savedProject);
       
-      // 跳转到Analysis by DB tab，传递项目ID
-      if (onNavigateToAnalysis) {
-        onNavigateToAnalysis(savedProject.id);
-      }
+      // 设置项目ID，更新进度显示状态
+      setCreatedProjectId(savedProject.id);
+      
+      // 不自动跳转，让用户看到进度
+      // 可以在进度完成后再跳转
+      // if (onNavigateToAnalysis) {
+      //   onNavigateToAnalysis(savedProject.id);
+      // }
     } catch (error) {
       console.error('Failed to save project:', error);
-      // 可以显示错误提示，但仍然允许继续
-      if (onNavigateToAnalysis) {
-        onNavigateToAnalysis(projectName);
-      }
+      setIsConfirmed(false); // 重置确认状态
+      setIsCreatingProject(false); // 重置创建状态
+      // 显示错误提示
+      alert('Failed to create project. Please try again.');
     }
   };
 
@@ -225,7 +429,7 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
     setFilters({
       categories: data.availableCategories,
       sources: data.availableSources,
-      brands: data.stats.brands.map((brand: any) => brand.name),
+      brands: data.stats.brands.map((brand: { name: string }) => brand.name),
       topSalesCount: 100
     });
     setIsConfirmed(false);
@@ -351,6 +555,18 @@ export function DataConfirmationTab({ onNavigateToAnalysis }: { onNavigateToAnal
       {/* 可滚动内容区域 */}
       <div className="flex-1 overflow-auto">
         <div className="max-w-7xl mx-auto space-y-4 p-4">
+          
+                     {/* 项目进度显示 */}
+           <ProjectProgressDisplay 
+             projectId={createdProjectId} 
+             isCreating={isCreatingProject}
+             totalProducts={filteredStats?.totalProducts}
+             onAnalysisReady={(projectId) => {
+               if (onNavigateToAnalysis) {
+                 onNavigateToAnalysis(projectId);
+               }
+             }}
+           />
           {/* 横向筛选区域 - Data Filters */}
           <Card>
             <CardHeader className="pb-3">

@@ -22,17 +22,39 @@ class MarketInsightsService(BaseDashboardService):
         to ensure compatibility with existing UI components.
         """
         try:
-            # Build query - replicate frontend logic exactly
+            # 构建关联查询，获取项目范围内的产品细分结果
+            # 先从assignments表获取项目的细分结果
+            assignments_query = self.supabase.table('product_segment_assignments').select('''
+                product_id,
+                segment_name
+            ''').eq('project_id', self.project_id).is_('segment_name', 'not.null')
+            
+            assignments_result = assignments_query.execute()
+            
+            if not assignments_result.data:
+                logger.warning(f"No segmentation assignments found for project {self.project_id}")
+                return {
+                    'segmentRevenue': {
+                        'dimmerSwitches': [],
+                        'lightSwitches': []
+                    }
+                }
+            
+            # 构建产品ID到细分名称的映射
+            product_segments = {str(item['product_id']): item['segment_name'] for item in assignments_result.data}
+            segmented_product_ids = list(product_segments.keys())
+            
+            # 查询这些产品的详细信息
             query = self._get_base_product_table().select('''
-                product_segment,
+                platform_id,
                 category,
                 price_usd,
                 monthly_sales_volume,
                 estimated_revenue
-            ''')
+            ''').in_('platform_id', segmented_product_ids)
             
             # Apply base filters
-            query = query.eq('source', 'amazon').neq('product_segment', 'OUT_OF_SCOPE')
+            query = query.eq('source', 'amazon')
             
             # 🔑 CRITICAL: Apply ASIN filtering to prevent data leakage
             query = self._apply_asin_filter(query)
@@ -55,8 +77,8 @@ class MarketInsightsService(BaseDashboardService):
             segment_data = {}
             
             for item in result.data:
-                # Filter in Python: Skip items without segment, category, or revenue data
-                segment = item.get('product_segment')
+                # 从映射中获取细分名称
+                segment = product_segments.get(item.get('platform_id'))
                 category = item.get('category')
                 revenue = item.get('estimated_revenue')
                 

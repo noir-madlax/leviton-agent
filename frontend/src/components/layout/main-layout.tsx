@@ -13,9 +13,10 @@ export function MainLayout() {
   const [leftPanelWidth, setLeftPanelWidth] = useState(50); // 百分比
   const [activeTab, setActiveTab] = useState('step1');
   const [projectName, setProjectName] = useState('');
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null);
 
-  const handleNavigateToAnalysis = (name: string) => {
-    setProjectName(name);
+  const handleNavigateToAnalysis = (projectId: string) => {
+    setSelectedProjectId(projectId);
     setActiveTab('step3-db');
   };
 
@@ -90,7 +91,7 @@ export function MainLayout() {
           {/* Step 3: 分析 */}
           <TabsContent value="step3-db" className="h-full m-0">
             <div className="h-full p-4">
-              <AnalysisDbTab />
+              <AnalysisDbTab selectedProjectId={selectedProjectId} />
             </div>
           </TabsContent>
 

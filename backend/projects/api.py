@@ -1,7 +1,7 @@
 """FastAPI router for Projects module."""
 
 import logging
-from typing import List, Optional
+from typing import List, Optional, Dict, Any
 from fastapi import APIRouter, HTTPException, Depends, Query
 
 from .models import ProjectCreateRequest, ProjectCreateResponse, Project
@@ -84,4 +84,18 @@ async def get_project(
         return await service.get_project(project_id)
     except Exception as e:
         logger.error(f"Error getting project: {e}")
-        raise HTTPException(status_code=404, detail=f"Project not found: {str(e)}") 
+        raise HTTPException(status_code=404, detail=f"Project not found: {str(e)}")
+
+
+@router.get("/progress/{project_id}", response_model=Dict[str, Any])
+async def get_project_progress(
+    project_id: str,
+    service: ProjectService = Depends(get_project_service)
+):
+    """Get project processing progress and status."""
+    try:
+        progress = await service.get_project_progress(project_id)
+        return progress
+    except Exception as e:
+        logger.error(f"Error getting project progress: {e}")
+        raise HTTPException(status_code=500, detail=f"Failed to get project progress: {str(e)}") 

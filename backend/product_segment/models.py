@@ -22,8 +22,9 @@ class SegmentationStage(str, Enum):
 
 class StartSegmentationRequest(BaseModel):
     """Request to start a new segmentation run."""
-    product_ids: List[int]
+    product_ids: List[Union[int, str]]  # 支持ASIN字符串或product_id整数
     product_category: str
+    project_id: Optional[str] = None
 
 
 class ProductSegmentRun(BaseModel):
@@ -31,6 +32,7 @@ class ProductSegmentRun(BaseModel):
     id: str
     created_at: datetime = Field(default_factory=datetime.utcnow)
     stage: SegmentationStage = SegmentationStage.INIT
+    project_id: Optional[str] = None
     
     llm_config: Dict = Field(default_factory=dict)
     processing_params: Dict = Field(default_factory=dict)
@@ -51,4 +53,6 @@ class ProductSegmentAssignment(BaseModel):
     product_id: int
     taxonomy_id_initial: int
     taxonomy_id_refined: int
+    project_id: Optional[str] = None
+    segment_name: Optional[str] = None
 

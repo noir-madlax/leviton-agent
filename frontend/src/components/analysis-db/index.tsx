@@ -470,11 +470,15 @@ async function fetchDatabaseData(projectId?: string): Promise<DashboardData> {
   }
 }
 
-export function AnalysisDbContainer() {
+interface AnalysisDbContainerProps {
+  selectedProjectId?: string | null;
+}
+
+export function AnalysisDbContainer({ selectedProjectId: initialProjectId }: AnalysisDbContainerProps) {
   const [data, setData] = useState<DashboardData | null>(null)
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState<string | null>(null)
-  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(null)
+  const [selectedProjectId, setSelectedProjectId] = useState<string | null>(initialProjectId || null)
 
   const loadData = async (projectId?: string) => {
     try {
@@ -503,10 +507,16 @@ export function AnalysisDbContainer() {
   }
 
   useEffect(() => {
-    // 🎯 NEW APPROACH: Don't load any data initially - wait for user to select project
-    console.log('🏠 Dashboard initialized, waiting for project selection...');
-    setLoading(false); // Stop loading immediately, wait for user action
-  }, [])
+    // 如果有初始项目ID，自动加载数据
+    if (initialProjectId) {
+      console.log(`🏠 Dashboard initialized with project: ${initialProjectId}`);
+      setSelectedProjectId(initialProjectId);
+      loadData(initialProjectId);
+    } else {
+      console.log('🏠 Dashboard initialized, waiting for project selection...');
+      setLoading(false); // Stop loading immediately, wait for user action
+    }
+  }, [initialProjectId])
 
   if (loading) {
     return (

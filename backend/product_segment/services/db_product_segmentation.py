@@ -102,6 +102,7 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
         # 1) Run row ----------------------------------------------------------------
         run = ProductSegmentRun(
             id=run_id,
+            project_id=request.project_id,
             stage=SegmentationStage.INIT,
             llm_config={},  # default global config
             processing_params={"batch_size": seg_cfg.PRODUCTS_PER_TAXONOMY_PROMPT,
@@ -120,14 +121,46 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
         )
 
         # 3) Assignment rows ---------------------------------------------------------
+        # 处理ASIN字符串到product_id的转换 - 批量查询优化
+        converted_product_ids = []
+        asin_list = [pid for pid in request.product_ids if isinstance(pid, str)]
+        int_list = [pid for pid in request.product_ids if isinstance(pid, int)]
+        
+        # 批量查询所有ASIN
+        if asin_list:
+            try:
+                from core.database.connection import get_supabase_client
+                supabase = get_supabase_client()
+                result = supabase.table('product_wide_table')\
+                    .select('id, platform_id')\
+                    .in_('platform_id', asin_list)\
+                    .execute()
+                
+                if result.data:
+                    asin_to_id = {row['platform_id']: row['id'] for row in result.data}
+                    for asin in asin_list:
+                        if asin in asin_to_id:
+                            converted_product_ids.append(asin_to_id[asin])
+                        else:
+                            logger.warning(f"No product found for ASIN {asin}")
+                else:
+                    logger.warning(f"No products found for ASINs: {asin_list}")
+            except Exception as e:
+                logger.error(f"Error converting ASINs to product_ids: {e}")
+        
+        # 添加已经是整数的product_id
+        converted_product_ids.extend(int_list)
+        
         assignments = [
             ProductSegmentAssignment(
                 run_id=run_id,
+                project_id=request.project_id,
                 product_id=pid,
                 taxonomy_id_initial=unassigned_id,
                 taxonomy_id_refined=unassigned_id,
+                segment_name=None
             )
-            for pid in request.product_ids
+            for pid in converted_product_ids
         ]
         await self._segment_repo.batch_create_assignments(assignments)
 
@@ -381,6 +414,11 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
                     )
 
             # ------------------------------------------------------------------
+            # Update segment_name in assignments table
+            # ------------------------------------------------------------------
+            await self._update_final_segment_names(run_id, product_id_to_taxonomy)
+
+            # ------------------------------------------------------------------
             # Done!
             # ------------------------------------------------------------------
             await self._run_repo.update_stage(run_id, SegmentationStage.COMPLETED)
@@ -388,4 +426,9 @@ class DatabaseProductSegmentationService:  # noqa: WPS230 – orchestrator is in
         except Exception as exc:  # pylint: disable=broad-except
             logger.exception("Run %s failed: %s", run_id, exc)
             await self._run_repo.update_stage(run_id, SegmentationStage.FAILED)
-            raise 
+            raise
+
+    async def _update_final_segment_names(self, run_id: str, product_id_to_taxonomy: Dict[int, str]) -> None:
+        """更新最终的细分名称到assignments表"""
+        for product_id, segment_name in product_id_to_taxonomy.items():
+            await self._segment_repo.update_segment_name(run_id, product_id, segment_name) 

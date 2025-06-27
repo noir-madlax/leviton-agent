@@ -54,7 +54,7 @@ CREATE INDEX IF NOT EXISTS idx_product_segment_taxonomies_stage  ON product_segm
 -- ---------------------------------------------------------------------
 CREATE TABLE IF NOT EXISTS product_segment_assignments (
     run_id               VARCHAR(50) REFERENCES product_segment_runs(id) ON DELETE CASCADE,
-    product_id           BIGINT      REFERENCES amazon_products(id),
+    product_id           BIGINT      REFERENCES product_wide_table(id),
     taxonomy_id_initial  BIGINT      REFERENCES product_segment_taxonomies(id),
     taxonomy_id_refined  BIGINT      REFERENCES product_segment_taxonomies(id),
     PRIMARY KEY (run_id, product_id)
