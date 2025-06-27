@@ -66,14 +66,14 @@ class ReviewImporter:
             # 单文件导入暂不支持，建议使用批量导入
             raise NotImplementedError("单文件导入暂不支持，请使用批量导入功能")
             
-            logger.info(f"评论文件导入完成: {result}")
+            # logger.info(f"评论文件导入完成: {result}")
             
             return {
                 "status": "success",
                 "message": f"成功导入评论文件",
                 "file_path": json_file_path,
                 "batch_id": batch_id,
-                **result
+                # **result
             }
             
         except Exception as e:
