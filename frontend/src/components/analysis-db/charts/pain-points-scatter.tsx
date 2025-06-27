@@ -1,7 +1,7 @@
 "use client"
 
 import { ScatterChart, Scatter, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Legend } from 'recharts'
-import { PainPoint } from '@/components/analysis-db/data/review-insights'
+import { PainPoint } from '@/components/analysis-db/types/analysis'
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
 
 interface PainPointsScatterProps {

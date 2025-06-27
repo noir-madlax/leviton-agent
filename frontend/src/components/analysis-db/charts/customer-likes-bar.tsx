@@ -1,7 +1,7 @@
 "use client"
 
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts'
-import { CustomerLike } from '@/components/analysis-db/data/review-insights'
+import { CustomerLike } from '@/components/analysis-db/types/analysis'
 
 interface CustomerLikesBarProps {
   data: CustomerLike[]

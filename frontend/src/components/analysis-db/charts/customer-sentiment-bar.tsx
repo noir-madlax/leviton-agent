@@ -11,13 +11,24 @@ import {
   Tooltip, 
   Cell
 } from "recharts"
-import { ProductPainPoint, getSatisfactionColor, getUseCaseAnalysisData } from "@/components/analysis-db/data/competitor-analysis"
+import { ProductPainPoint, getSatisfactionColor, getUseCaseAnalysisData } from "@/components/analysis-db/types/analysis"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
-import { allReviewData } from "@/components/analysis-db/data/review-data"
 
 interface CustomerSentimentBarProps {
   data: ProductPainPoint[]
   productTotalReviews: Record<string, number>
+  allReviewData?: Record<string, Array<{
+    id: string
+    productId: string
+    text: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    category: string
+    aspect: string
+    rating: number
+    verified: boolean
+    date: string
+    brand: string
+  }>>
 }
 
 interface SentimentData {
@@ -29,7 +40,7 @@ interface SentimentData {
   useCaseMentions: number
 }
 
-export function CustomerSentimentBar({ data, productTotalReviews }: CustomerSentimentBarProps) {
+export function CustomerSentimentBar({ data, productTotalReviews, allReviewData }: CustomerSentimentBarProps) {
   const { openPanel } = useReviewPanel()
   
   // Map product names to their ASINs for precise filtering
@@ -74,9 +85,6 @@ export function CustomerSentimentBar({ data, productTotalReviews }: CustomerSent
   const sentimentData = useMemo(() => {
     if (!data || data.length === 0) return []
 
-    // Get use case data to include in satisfaction calculation
-    const useCaseData = getUseCaseAnalysisData()
-    
     // Group products in the same order as matrices: Leviton first, then others
     const allProducts = Object.keys(productTotalReviews)
     const levitonProducts = allProducts.filter(product => product.startsWith('Leviton'))
@@ -92,40 +100,21 @@ export function CustomerSentimentBar({ data, productTotalReviews }: CustomerSent
       return groups
     }, {} as Record<string, ProductPainPoint[]>)
 
-    // Group use case data by product
-    const useCaseGroups = useCaseData.matrixData.reduce((groups, item) => {
-      if (!groups[item.product]) {
-        groups[item.product] = []
-      }
-      groups[item.product].push(item)
-      return groups
-    }, {} as Record<string, any[]>)
-
     // Calculate sentiment data for each product in the specified order
     const sentimentArray: SentimentData[] = orderedProducts.map(product => {
       const totalReviews = productTotalReviews[product] || 0
       const painPointItems = productGroups[product] || []
-      const useCaseItems = useCaseGroups[product] || []
       
-      // Calculate total mentions across all categories (pain points + use cases)
+      // Calculate total mentions across all categories (pain points only for now)
       const painPointMentions = painPointItems.reduce((sum, item) => sum + item.mentions, 0)
-      const useCaseMentions = useCaseItems.reduce((sum, item) => sum + item.mentions, 0)
-      const totalMentions = painPointMentions + useCaseMentions
+      const totalMentions = painPointMentions
       
-      // Calculate weighted average satisfaction across all aspects (pain points + use cases)
+      // Calculate weighted average satisfaction across all aspects (pain points only)
       let weightedSatisfaction = 0
       let totalWeightedMentions = 0
       
       // Add pain point satisfaction (weighted by mentions)
       painPointItems.forEach(item => {
-        if (item.mentions > 0 && item.totalReviews > 0) {
-          weightedSatisfaction += item.satisfactionRate * item.mentions
-          totalWeightedMentions += item.mentions
-        }
-      })
-      
-      // Add use case satisfaction (weighted by mentions)
-      useCaseItems.forEach(item => {
         if (item.mentions > 0 && item.totalReviews > 0) {
           weightedSatisfaction += item.satisfactionRate * item.mentions
           totalWeightedMentions += item.mentions
@@ -140,7 +129,7 @@ export function CustomerSentimentBar({ data, productTotalReviews }: CustomerSent
         avgSatisfactionRate: Math.round(avgSatisfactionRate * 10) / 10,
         color: getSatisfactionColor(avgSatisfactionRate),
         totalMentions,
-        useCaseMentions
+        useCaseMentions: 0 // No use case data for now
       }
     })
 
@@ -184,8 +173,8 @@ export function CustomerSentimentBar({ data, productTotalReviews }: CustomerSent
               <span className="font-medium">{data.totalMentions - data.useCaseMentions}</span>
             </div>
             <div className="flex justify-between">
-              <span>Use Case Mentions:</span>
-              <span className="font-medium">{data.useCaseMentions}</span>
+              <span>Total Mentions:</span>
+              <span className="font-medium">{data.totalMentions}</span>
             </div>
             <div className="flex justify-between">
               <span>Avg Satisfaction:</span>

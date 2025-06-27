@@ -2,7 +2,7 @@
 
 import { useMemo } from "react"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
-import { allReviewData } from "@/components/analysis-db/data/review-data"
+// allReviewData now passed as prop instead of imported
 
 interface UseCaseData {
   product: string;
@@ -18,9 +18,21 @@ interface UseCaseData {
 interface UseCaseMatrixProps {
   data: UseCaseData[];
   targetProducts: string[];
+  allReviewData?: Record<string, Array<{
+    id: string
+    productId: string
+    text: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    category: string
+    aspect: string
+    rating: number
+    verified: boolean
+    date: string
+    brand: string
+  }>>
 }
 
-export function MissedOpportunitiesMatrix({ data, targetProducts }: UseCaseMatrixProps) {
+export function MissedOpportunitiesMatrix({ data, targetProducts, allReviewData }: UseCaseMatrixProps) {
   const { openPanel } = useReviewPanel()
   
   // Map product names to their ASINs for precise filtering (consistent with DatabaseService)

@@ -2,7 +2,7 @@
 
 import { useMemo } from "react"
 import { useReviewPanel } from "@/components/analysis-db/contexts/review-panel-context"
-import { allReviewData } from "@/components/analysis-db/data/review-data"
+// allReviewData now passed as prop instead of imported
 
 interface MatrixData {
   product: string;
@@ -18,9 +18,21 @@ interface MatrixData {
 interface CompetitorMatrixProps {
   data: MatrixData[];
   targetProducts: string[];
+  allReviewData?: Record<string, Array<{
+    id: string
+    productId: string
+    text: string
+    sentiment: 'positive' | 'negative' | 'neutral'
+    category: string
+    aspect: string
+    rating: number
+    verified: boolean
+    date: string
+    brand: string
+  }>>
 }
 
-export function CompetitorMatrix({ data, targetProducts }: CompetitorMatrixProps) {
+export function CompetitorMatrix({ data, targetProducts, allReviewData }: CompetitorMatrixProps) {
   const { openPanel } = useReviewPanel()
   
   // Map product names to their ASINs for precise filtering

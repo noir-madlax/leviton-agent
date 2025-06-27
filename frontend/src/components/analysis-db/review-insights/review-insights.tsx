@@ -6,7 +6,7 @@ import { CategoryPainPointsBar } from "@/components/analysis-db/charts/category-
 import { CategoryPositiveFeedbackBar } from "@/components/analysis-db/charts/category-positive-feedback-bar"
 import CategoryUseCaseBar from "@/components/analysis-db/shared/category-use-case-bar"
 
-import { CategoryFeedback, UseCaseFeedback, ProductType } from "@/components/analysis-db/data/category-feedback"
+import { CategoryFeedback, UseCaseFeedback, ProductType } from "@/components/analysis-db/types/analysis"
 
 interface ReviewInsightsProps {
   data: {

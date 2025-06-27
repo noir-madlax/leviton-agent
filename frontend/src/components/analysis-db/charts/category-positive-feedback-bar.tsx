@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react'
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts'
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card'
 import { Button } from '@/components/ui/button'
-import { CategoryFeedback, ProductType } from '@/components/analysis-db/data/category-feedback'
+import { CategoryFeedback, ProductType } from '@/components/analysis-db/types/analysis'
 import { getSatisfactionColor, SatisfactionLegend } from '@/components/analysis-db/lib/satisfaction-colors'
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
 

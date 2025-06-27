@@ -10,7 +10,7 @@ import {
   YAxis, 
   Tooltip
 } from "recharts"
-import { ProductPainPoint, getSatisfactionColor, getBubbleSize } from "@/components/analysis-db/data/competitor-analysis"
+import { ProductPainPoint, getSatisfactionColor, getBubbleSize } from "@/components/analysis-db/types/analysis"
 
 interface CompetitorPainPointsMatrixProps {
   data: ProductPainPoint[]

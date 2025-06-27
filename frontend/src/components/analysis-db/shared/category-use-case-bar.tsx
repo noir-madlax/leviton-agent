@@ -5,7 +5,7 @@ import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContaine
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { UseCaseFeedback, ProductType } from '@/components/analysis-db/data/category-feedback';
+import { UseCaseFeedback, ProductType } from '@/components/analysis-db/types/analysis';
 import { getSatisfactionColor, getSatisfactionLevel, SatisfactionLegend } from '@/components/analysis-db/lib/satisfaction-colors';
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context';
 

@@ -1,6 +1,6 @@
 "use client"
 
-import { UnderservedUseCase } from '@/components/analysis-db/data/review-insights'
+import { UnderservedUseCase } from '@/components/analysis-db/types/analysis'
 
 interface UnderservedHeatmapProps {
   data: UnderservedUseCase[]

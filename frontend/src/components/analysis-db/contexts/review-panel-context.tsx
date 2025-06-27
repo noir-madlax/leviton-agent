@@ -1,7 +1,7 @@
 "use client"
 
 import { createContext, useContext, useState, ReactNode } from 'react'
-import { Review } from '@/components/analysis-db/data/review-data'
+import { Review } from '@/components/analysis-db/types/analysis'
 
 interface ReviewPanelContextType {
   isOpen: boolean

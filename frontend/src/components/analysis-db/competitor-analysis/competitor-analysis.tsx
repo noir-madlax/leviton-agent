@@ -43,6 +43,10 @@ interface CompetitorAnalysisProps {
       sentiment: 'positive' | 'negative' | 'neutral'
       category: string
       aspect: string
+      rating: number
+      verified: boolean
+      date: string
+      brand: string
     }>>
   }
 }
@@ -181,6 +185,7 @@ export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
         <CompetitorMatrix 
           data={realMatrixData}
           targetProducts={competitorData.targetProducts}
+          allReviewData={data.allReviewData}
         />
       </section>
 
@@ -203,6 +208,7 @@ export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
         <MissedOpportunitiesMatrix 
           data={realUseCaseData}
           targetProducts={useCaseData.targetProducts}
+          allReviewData={data.allReviewData}
         />
       </section>
 
@@ -219,6 +225,7 @@ export function CompetitorAnalysis({ data }: CompetitorAnalysisProps) {
         <CustomerSentimentBar 
           data={competitorData.matrixData}
           productTotalReviews={competitorData.productTotalReviews}
+          allReviewData={data.allReviewData}
         />
       </section>
     </div>

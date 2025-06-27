@@ -11,7 +11,7 @@ import { Pagination, PaginationContent, PaginationItem, PaginationLink, Paginati
 import { Popover, PopoverContent, PopoverTrigger } from '@/components/ui/popover'
 import { Command, CommandEmpty, CommandGroup, CommandInput, CommandItem, CommandList } from '@/components/ui/command'
 import { useReviewPanel } from '@/components/analysis-db/contexts/review-panel-context'
-import { Review } from '@/components/analysis-db/data/review-data'
+import { Review } from '@/components/analysis-db/types/analysis'
 
 interface ReviewPanelProps {
   showFilters?: {
