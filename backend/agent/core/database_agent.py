@@ -30,7 +30,8 @@ class DatabaseAgent:
                 model_id=settings.MODEL_ID,
                 api_base="https://openrouter.ai/api/v1",
                 api_key=settings.API_KEY,
-                stream_options={"include_usage": True}  # 添加使用情况信息
+                stream_options={"include_usage": True},
+                temperature=0.3
             )
             
             logger.info("初始化数据库相关工具...")
