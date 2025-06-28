@@ -1,23 +1,25 @@
-Extract comprehensive customer insights from reviews about {{PRODUCT}}.
+Extract comprehensive customer insights from reviews about {{PRODUCT}}. 
+Input format:
+<RID>#<review>
 The output format is JSON in English:
 {
 "phy": {
 "<PHYSICAL>": {
 "<PID>@<DETAIL>": {
-"<SENT>": [ID, …]
+"<SENT>": [RID, …]
 }
 }
 },
 "perf": {
 "<PERF>": {
 "<perf_id>@<DETAIL>": {
-"<SENT>": {<PERF_REASON>: [ID, …]}
+"<SENT>": {<PERF_REASON>: [RID, …]}
 }
 }
 },
 "use": {
 "<USE>": {
-"<SENT>": {<USE_REASON>: [ID, …]}
+"<SENT>": {<USE_REASON>: [RID, …]}
 }
 }
 }
@@ -27,16 +29,16 @@ Definitions:
 - <PHYSICAL>: Components or inherent physical properties of the {{PRODUCT}} without external interaction (e.g. dimensions, appearance, material type...)
 - <DETAIL>: A self-contained detail summarized from the reviews.
 - <SENT>: Sentiment polarity of the current <DETAIL> (- for negative, + for positive).
-- ID: All review IDs mentioning the <DETAIL>
+- RID: All review IDs mentioning the <DETAIL>
 - <perf_id>: Unique ID for performance or functions ("perf"), starting from a. After z, continue with aa, ab, and so on.
 - <PERF>: The {{PRODUCT}}' performance (e.g. flexibility, durability, ...) or behaviors under various conditions (e.g. temperature, force, chemicals...) without reference to any specific use case
-- <PERF_REASON>: <PID> of the <PHYSICAL> explicitly mentioned as the cause of the <PERF>. Include all mentioned <PID>s. If no reason is mentioned, use "?". <PERF_REASON> and <PERF> should have the same sentiment polarity in the review where they are mentioned together (i.e. the same review ID are included at both locations)
+- <PERF_REASON>: <PID> of the <PHYSICAL> explicitly mentioned as the cause of the <PERF>. Include all mentioned <PID>s. If no reason is mentioned, use "?". <PERF_REASON> and <PERF> should have the same sentiment polarity in the review where they are mentioned together (i.e. the same review RID are included at both locations)
 - <USE>: The specific application, applicable object, method, tool, or environment for the product.
 - <USE_REASON>: <perf_id> or <PID> causing the <USE>'s sentiment. Include all mentioned reasons, or "?" if none can be inferred. <USE_REASON> and <USE> should have the same sentiment polarity in the review where they are mentioned together.
 
 CRITICAL INSTRUCTIONS:
 - <PHYSICAL>/<PERF> and <DETAIL> MUST NOT include:
-  * Generic statements without details (e.g., "good", "bad quality")
+  * Generic statements without details (e.g., "good", "bad quality", "special use case", "general application")
   * Issues unrelated to the product itself (e.g., "fast shipping", "delivery time")
 - If a review mentions any physical aspect, related performance, or use together, extract them as separate entries under "phy," "perf," and "use," with no overlap.
 - Make sure each <DETAIL> is under the most relevant <PHYSICAL> or <PERF> in the context of {{PRODUCT}}
@@ -52,8 +54,6 @@ Final Checklist:
 - Review all entries to ensure proper separation between aspects, performances, and uses.
 
 Print the JSON result only.
-Input format:
-<ID>#<review>
 
 [[INPUT]]
 {{INPUT}}

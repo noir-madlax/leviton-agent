@@ -7,6 +7,36 @@
 Extract **hierarchical customer insights** from Amazon reviews, then transform them into **business-ready aspect categories** that can be queried by downstream analytics dashboards.  
 Compared with the product-segmentation engine, this module adds an **initial extraction phase** that produces a rich three-level JSON structure (`phy`, `perf`, `use`).  The later *categorize → consolidate → refine* stages re-use the same AI-assisted workflow pattern.
 
+## ✅ Implementation Status
+- **COMPLETED**: Extraction stage with comprehensive validation system
+- **COMPLETED**: Split/merge operations for large review sets
+- **COMPLETED**: Unit tests (7 tests, all passing)
+- **PENDING**: Categorization, consolidation, and refinement stages
+
+## 1.1 Completed Components
+
+### ReviewExtractionStage
+Complete LLM stage following the BaseStage architecture pattern:
+- **Input**: `ReviewExtractionContext` with formatted reviews (RID#text format)
+- **Output**: `ReviewExtractionResult` with hierarchical aspect structure
+- **Features**: Automatic retry, split-and-conquer for large review sets, comprehensive validation
+
+### Validation System (`review_analysis/llm/validation.py`)
+Comprehensive validation covering all prompt requirements:
+- **Cross-reference validation**: RID-sentiment consistency across phy/perf/use sections
+- **Format validation**: PID@detail, perf_id@detail, sentiment structures
+- **Content restrictions**: Generic/non-product content detection
+- **Placeholder-based error messages**: Using exact prompt terminology for retry instructions
+
+### Unit Tests (`review_analysis/tests/llm/test_review_extraction.py`)
+7 comprehensive tests covering:
+- Review formatting (RID#text conversion)
+- Prompt building with template substitution
+- Validation with valid/invalid responses
+- Split/merge operations preserving RID integrity
+- Aspect counting and result conversion
+- Mock responses include single sentiment cases (valid scenarios)
+
 ## 2. High-Level Flow
 1. **Client/UI** calls `POST /review-analysis` with a list of `asin` identifiers.  
 2. The **Service layer** orchestrates four LLM stages per product:
