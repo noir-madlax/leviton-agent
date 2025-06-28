@@ -21,6 +21,12 @@ from .taxonomy_dedup_uitl import (
     DeduplicationResult,
 )
 
+from .refinement_stage import (
+    RefinementStageContext,
+    RefinementStageResult,
+    RefinementStage,
+)
+
 
 __all__ = [
     # Extraction stage
@@ -38,4 +44,8 @@ __all__ = [
     "deduplicate_taxonomy_batches",
     "print_deduplication_summary",
     "DeduplicationResult",
+    # Refinement stage
+    "RefinementStageContext",
+    "RefinementStageResult",
+    "RefinementStage",
 ] 

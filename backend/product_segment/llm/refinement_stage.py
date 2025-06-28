@@ -35,11 +35,14 @@ from pathlib import Path
 from typing import Any, Dict, List, Sequence
 
 from core.utils.llm_utils import extract_json, create_retry_error_details, ValidationResult
-from product_segment.llm.taxonomy_pipeline_stage import (
+from core.llm_taxonomy_pipeline.pipeline_stage import (
     BaseStage,
     StageContext,
     StageResultBase,
     TaxonomyDTO,
+)
+from core.llm_taxonomy_pipeline.refinement_base import (
+    RefinementStage as BaseRefinementStage,
 )
 
 __all__ = [
@@ -52,21 +55,22 @@ __all__ = [
 # Data-transfer objects
 # ---------------------------------------------------------------------------
 
+# Domain-specific context/result matching existing tests
 
 @dataclass(slots=True, frozen=True)
 class RefinementStageContext(StageContext):
-    """Context for taxonomy refinement stage containing taxonomies and current assignments."""
-    
+    """Context for product-segment taxonomy refinement."""
+
     taxonomies: list[TaxonomyDTO]
-    current_assignments: dict[int, str]  # product_id -> taxonomy_name
-    input_texts: list[str]  # product descriptions indexed by product_id
+    current_assignments: dict[int, str]
+    input_texts: list[str]
 
 
 @dataclass(slots=True, frozen=True)
 class RefinementStageResult(StageResultBase):
-    """Result returned by the refinement stage."""
-    
-    reassignments: dict[int, str]  # product_id -> new_taxonomy_name
+    """Result payload mapping product index → new taxonomy name."""
+
+    reassignments: dict[int, str]
 
 # ---------------------------------------------------------------------------
 # Fixed prompt templates
@@ -77,15 +81,17 @@ class RefinementStageResult(StageResultBase):
 
 # Path to prompt template files
 _PROMPTS_DIR = Path(__file__).parent.parent / "prompts"
-_REFINE_PROMPT_PATH = _PROMPTS_DIR / "taxonomy_refinement_prompt_v0.txt"
-_RETRY_PROMPT_PATH = _PROMPTS_DIR / "shared_retry_prompt_v0.txt"
+_FINAL_ASSIGN_PROMPT_PATH = _PROMPTS_DIR / "taxonomy_refinement_prompt_v0.txt"
+_RETRY_PROMPT_PATH = (
+    Path(__file__).resolve().parents[2] / "core" / "prompts" / "shared_retry_prompt_v0.txt"
+)
 
 # Load prompt templates at module level
 try:
-    with open(_REFINE_PROMPT_PATH, 'r', encoding='utf-8') as f:
+    with open(_FINAL_ASSIGN_PROMPT_PATH, 'r', encoding='utf-8') as f:
         _REFINE_PROMPT_TEMPLATE = f.read()
 except FileNotFoundError:
-    raise RuntimeError(f"Required prompt template not found: {_REFINE_PROMPT_PATH}")
+    raise RuntimeError(f"Required prompt template not found: {_FINAL_ASSIGN_PROMPT_PATH}")
 
 try:
     with open(_RETRY_PROMPT_PATH, 'r', encoding='utf-8') as f:
@@ -99,7 +105,7 @@ except FileNotFoundError:
 # ---------------------------------------------------------------------------
 
 
-class RefinementStage(BaseStage):
+class RefinementStage(BaseRefinementStage):
     """Concrete taxonomy-refinement stage built on :class:`BaseStage`."""
 
     # --------------------- BaseStage abstract hooks -------------------------

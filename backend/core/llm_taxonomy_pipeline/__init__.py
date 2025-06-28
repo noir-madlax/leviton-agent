@@ -28,4 +28,7 @@ __all__: list[str] = [
     "ConsolidationStageContext",
     "ConsolidationStageResult",
     "ConsolidationStage",
+    "RefinementStageContext",
+    "RefinementStageResult",
+    "RefinementStage",
 ] 

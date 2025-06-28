@@ -53,12 +53,12 @@ from typing import Dict, List
 from unittest.mock import AsyncMock
 
 from core.utils.llm_utils import ValidationResult
-from product_segment.llm.taxonomy_refinement import (
+from product_segment.llm.refinement_stage import (
     RefinementStage,
     RefinementStageResult,
     RefinementStageContext,
 )
-from product_segment.llm.taxonomy_pipeline_stage import StageContext, TaxonomyDTO
+from core.llm_taxonomy_pipeline.pipeline_stage import StageContext, TaxonomyDTO
 
 
 # Test data paths
